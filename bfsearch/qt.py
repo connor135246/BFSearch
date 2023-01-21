@@ -3,6 +3,7 @@
 
 import json
 import sys
+import math
 
 from PySide6.QtWidgets import QApplication, QVBoxLayout, QHBoxLayout, QGridLayout, QWidget, QTabWidget, QMainWindow, QDockWidget, QToolBar, QMessageBox, QLabel, QComboBox, QTextEdit, QSizePolicy, QPushButton, QSpinBox, QCheckBox
 from PySide6.QtGui import QIcon, QAction, QActionGroup
@@ -10,9 +11,16 @@ from PySide6.QtCore import Qt, QSize
 import pyperclip
 
 
-from core import *
-from data import *
+from bfsearch import core
+from bfsearch import data
 
+
+
+def launch():
+    app = QApplication(sys.argv)
+    window = Window()
+    window.show()
+    sys.exit(app.exec())
 
 
 # translate
@@ -23,11 +31,11 @@ class Window(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.data = DataHolder()
+        self.data = data.DataHolder()
     
         self.resize(750, 450)
         self.setWindowTitle("BFSearch")
-        self.setWindowIcon(QIcon("icon.png"))
+        self.setWindowIcon(QIcon("gui/icon.png"))
         self.setCentralWidget(QTabWidget(self))
 
         # toolbar
@@ -79,12 +87,12 @@ class Window(QMainWindow):
         self.buildButton.setDisabled(False)
 
     def addPages(self):
-        self.browseSetsPage = BrowseAllSetsPage(self, SetProvider(0, 31, [], self.data.sets))
-        self.centralWidget().addTab(self.browseSetsPage, QIcon("pokemon.png"), tr("Browse All Sets"))
+        self.browseSetsPage = BrowseAllSetsPage(self, core.SetProvider(0, 31, [], self.data.sets))
+        self.centralWidget().addTab(self.browseSetsPage, QIcon("gui/pokemon.png"), tr("Browse All Sets"))
         self.centralWidget().setTabToolTip(1, "Browse all possible Pokémon sets.")
         
-        self.browseTrainerSetsPage = BrowseTrainerSetsPage(self, battlenumToGroupedSetProviders(self.data.trainers))
-        self.centralWidget().addTab(self.browseTrainerSetsPage, QIcon("trainers.png"), tr("Browse Sets by Trainer"))
+        self.browseTrainerSetsPage = BrowseTrainerSetsPage(self, data.battlenumToGroupedSetProviders(self.data.trainers))
+        self.centralWidget().addTab(self.browseTrainerSetsPage, QIcon("gui/trainers.png"), tr("Browse Sets by Trainer"))
         self.centralWidget().setTabToolTip(2, "Browse Pokémon sets organized by opposing trainers.")
 
     def about(self):
@@ -257,8 +265,8 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
 
         self.setProvider = setProvider
 
-        self.setsA = setsAlphaSorted(self.getSetProvider().sets)
-        self.setsD = setsDexSorted(self.getSetProvider().sets)
+        self.setsA = data.setsAlphaSorted(self.getSetProvider().sets)
+        self.setsD = data.setsDexSorted(self.getSetProvider().sets)
 
         self.setupIVBox(self.getSetProvider())
 
@@ -337,8 +345,8 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
             if self.tclassCombo.currentText() in self.getTripleDict()[self.battlenumCombo.currentText()].keys():
                 if self.tnameCombo.currentText() in self.getTripleDict()[self.battlenumCombo.currentText()][self.tclassCombo.currentText()].keys():
                     this_provider = self.getTripleDict()[self.battlenumCombo.currentText()][self.tclassCombo.currentText()][self.tnameCombo.currentText()]
-                    self.setsA = setsAlphaSorted(this_provider.sets)
-                    self.setsD = setsDexSorted(this_provider.sets)
+                    self.setsA = data.setsAlphaSorted(this_provider.sets)
+                    self.setsD = data.setsDexSorted(this_provider.sets)
                     # when the trainer selection updates, tells the species combo box to update
                     self.fillComboKeys(self.pokeCombo, self.getSets())
                     self.setupIVBox(this_provider)
@@ -373,11 +381,3 @@ def commaListSimple(alist):
     else:
         return ""
 
-
-def launch():
-    app = QApplication(sys.argv)
-    window = Window()
-    window.show()
-    sys.exit(app.exec())
-
-launch()

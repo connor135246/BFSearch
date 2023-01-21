@@ -5,7 +5,7 @@ from enum import IntEnum
 import json
 from json.decoder import JSONDecodeError
 
-from core import *
+from bfsearch import core
 
 
 # data integrity.
@@ -39,7 +39,7 @@ class JsonException(DataException):
 
 def getFileJson(datafile):
     try:
-        return json.load(open(datafile.name + '.json', 'r', encoding = 'UTF-8'))
+        return json.load(open("data/" + datafile.name + '.json', 'r', encoding = 'UTF-8'))
     except OSError:
         raise FileException(datafile, "Unable to open file! Is it missing?", [])
     except JSONDecodeError as e:
@@ -137,7 +137,7 @@ def buildData():
 
         if name in species.keys():
             raise InvalidDataException(datafile, "Duplicate 'species' (string): '{}'", [name])
-        species[name] = Species(dex, name, speed, abilities)
+        species[name] = core.Species(dex, name, speed, abilities)
 
 
     sets = {}
@@ -159,7 +159,7 @@ def buildData():
 
         pset = verifyInt(getDictKey(set_obj, 'set', datafile, path), InvalidDataException(datafile, "Set id '{}' is missing 'set' (number)", [sid]))
 
-        nature = verifyEnumName(getDictKey(set_obj, 'nature', datafile, path), Nature, InvalidDataException(datafile, "Set id '{}' has invalid 'nature': '{}'", [sid, getDictKey(set_obj, 'nature', datafile, path)]))
+        nature = verifyEnumName(getDictKey(set_obj, 'nature', datafile, path), core.Nature, InvalidDataException(datafile, "Set id '{}' has invalid 'nature': '{}'", [sid, getDictKey(set_obj, 'nature', datafile, path)]))
 
         item = verifyNonEmptyString(getDictKey(set_obj, 'item', datafile, path), InvalidDataException(datafile, "Set id '{}' is missing 'item' (string)", [sid]))
 
@@ -167,13 +167,13 @@ def buildData():
 
         evs = verifyLenRange(verifyList(getDictKey(set_obj, 'evs', datafile, path), InvalidDataException(datafile, "Set id '{}' is missing 'evs' (string list)", [sid])), 2, 3, InvalidDataException(datafile, "Set id '{}' should have 2 to 3 entries in 'evs' (string list)", [sid]))
         for i in range(len(evs)):
-            evs[i] = verifyEnumName(evs[i], Stat, InvalidDataException(datafile, "Set id '{}' has invalid entry '{}' in 'evs' (string list)", [sid, evs[i]]))
+            evs[i] = verifyEnumName(evs[i], core.Stat, InvalidDataException(datafile, "Set id '{}' has invalid entry '{}' in 'evs' (string list)", [sid, evs[i]]))
 
         if name not in sets.keys():
             sets[name] = {}
         if pset in sets[name].keys():
             raise InvalidDataException(datafile, "Duplicate 'set' (number): '{}' for species '{}'", [pset, name])
-        sets[name][pset] = PokeSet(sid, species[name], pset, nature, item, moves, EVStats(evs))
+        sets[name][pset] = core.PokeSet(sid, species[name], pset, nature, item, moves, core.EVStats(evs))
 
 
     trainers = {}
@@ -199,7 +199,7 @@ def buildData():
 
         battles = verifyLen(verifyList(getDictKey(trainer_obj, 'battles', datafile, path), InvalidDataException(datafile, "Trainer id '{}' is missing 'battles' (string list)", [tid])), 1, InvalidDataException(datafile, "Trainer id '{}' has empty 'battles' (string list)", [tid]))
         for i in range(len(battles)):
-            battles[i] = verifyEnumValue(str(battles[i]), BattleNum, InvalidDataException(datafile, "Trainer id '{}' has invalid entry '{}' in 'battles' (string list)", [tid, battles[i]]))
+            battles[i] = verifyEnumValue(str(battles[i]), core.BattleNum, InvalidDataException(datafile, "Trainer id '{}' has invalid entry '{}' in 'battles' (string list)", [tid, battles[i]]))
 
         pokemon = verifyLen(verifyDict(getDictKey(trainer_obj, 'pokemon', datafile, path), InvalidDataException(datafile, "Trainer id '{}' has invalid Pokemon sets object", [tid])), 1, InvalidDataException(datafile, "Trainer id '{}' has empty 'pokemon' (object list)", [tid]))
         pokemondict = {}
@@ -220,7 +220,7 @@ def buildData():
             trainers[tclass] = {}
         if tname in trainers[tclass].keys():
             raise InvalidDataException(datafile, "Duplicate trainer '{} {}'", [tclass, tname])
-        trainers[tclass][tname] = Trainer(tid, iv, tclass, tname, battles, pokemondict)
+        trainers[tclass][tname] = core.Trainer(tid, iv, tclass, tname, battles, pokemondict)
 
 
     return (species, sets, trainers)

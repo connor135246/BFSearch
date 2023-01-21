@@ -3,8 +3,8 @@
 
 from operator import itemgetter
 
-from core import *
-from parsing import *
+from bfsearch import core
+from bfsearch import parsing
 
 
 # data container.
@@ -24,10 +24,10 @@ class DataHolder(object):
     # tries to build data! returns error message.
     def fillerup(self):
         try:
-            self.species, self.sets, self.trainers = buildData()
+            self.species, self.sets, self.trainers = parsing.buildData()
             self.isEmpty = False
             return ""
-        except DataException as e:
+        except parsing.DataException as e:
             self.species, self.sets, self.trainers = {}, {}, {}
             self.isEmpty = True
             return e.__class__.__name__ + ": " + str(e)
@@ -108,7 +108,7 @@ def allItems(sets):
 def battlenumToTrainers(trainers):
     bTT = {}
     bTT["All"] = trainersAlphaSorted(trainers)
-    for battlenum in list(BattleNum):
+    for battlenum in list(core.BattleNum):
         bTT[battlenum.value] = {}
         for trainer in trainersAlphaSortedList(trainers):
             if battlenum in trainer.battlenums:
@@ -140,7 +140,7 @@ def battlenumToGroupedSetProviders(trainers):
     gSP = groupedSetProviders(trainers)
     bTGSP = {}
     bTGSP["All"] = gSP
-    for battlenum in list(BattleNum):
+    for battlenum in list(core.BattleNum):
         bTGSP[battlenum.value] = {}
         for gSPentry in gSP.items():
             for gSPsubentry in gSPentry[1].items():

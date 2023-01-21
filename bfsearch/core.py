@@ -206,7 +206,7 @@ class BattleNum(Enum):
             return list(BattleNum)[list(BattleNum).index(self) + 1]
 
     def isBrainBattle(self):
-        return self == e3 or self == 37
+        return self == e3 or self == e7
 
 # base class of trainer that doesn't have tid, tclass, or tname.
 class SetProvider(object):
