@@ -1,0 +1,3422 @@
+{
+	"species": [
+		{
+			"dex": 1,
+			"name": "Bulbasaur",
+			"speed": 45,
+			"abilities": [
+				"Overgrow"
+			]
+		},
+		{
+			"dex": 2,
+			"name": "Ivysaur",
+			"speed": 60,
+			"abilities": [
+				"Overgrow"
+			]
+		},
+		{
+			"dex": 3,
+			"name": "Venusaur",
+			"speed": 80,
+			"abilities": [
+				"Overgrow"
+			]
+		},
+		{
+			"dex": 4,
+			"name": "Charmander",
+			"speed": 65,
+			"abilities": [
+				"Blaze"
+			]
+		},
+		{
+			"dex": 5,
+			"name": "Charmeleon",
+			"speed": 80,
+			"abilities": [
+				"Blaze"
+			]
+		},
+		{
+			"dex": 6,
+			"name": "Charizard",
+			"speed": 100,
+			"abilities": [
+				"Blaze"
+			]
+		},
+		{
+			"dex": 7,
+			"name": "Squirtle",
+			"speed": 43,
+			"abilities": [
+				"Torrent"
+			]
+		},
+		{
+			"dex": 8,
+			"name": "Wartortle",
+			"speed": 58,
+			"abilities": [
+				"Torrent"
+			]
+		},
+		{
+			"dex": 9,
+			"name": "Blastoise",
+			"speed": 78,
+			"abilities": [
+				"Torrent"
+			]
+		},
+		{
+			"dex": 12,
+			"name": "Butterfree",
+			"speed": 70,
+			"abilities": [
+				"Compound Eyes"
+			]
+		},
+		{
+			"dex": 15,
+			"name": "Beedrill",
+			"speed": 75,
+			"abilities": [
+				"Swarm"
+			]
+		},
+		{
+			"dex": 17,
+			"name": "Pidgeotto",
+			"speed": 71,
+			"abilities": [
+				"Keen Eye",
+				"Tangled Feet"
+			]
+		},
+		{
+			"dex": 18,
+			"name": "Pidgeot",
+			"speed": 91,
+			"abilities": [
+				"Keen Eye",
+				"Tangled Feet"
+			]
+		},
+		{
+			"dex": 20,
+			"name": "Raticate",
+			"speed": 97,
+			"abilities": [
+				"Run Away",
+				"Guts"
+			]
+		},
+		{
+			"dex": 22,
+			"name": "Fearow",
+			"speed": 100,
+			"abilities": [
+				"Keen Eye"
+			]
+		},
+		{
+			"dex": 24,
+			"name": "Arbok",
+			"speed": 80,
+			"abilities": [
+				"Intimidate",
+				"Shed Skin"
+			]
+		},
+		{
+			"dex": 25,
+			"name": "Pikachu",
+			"speed": 90,
+			"abilities": [
+				"Static"
+			]
+		},
+		{
+			"dex": 26,
+			"name": "Raichu",
+			"speed": 100,
+			"abilities": [
+				"Static"
+			]
+		},
+		{
+			"dex": 27,
+			"name": "Sandshrew",
+			"speed": 40,
+			"abilities": [
+				"Sand Veil"
+			]
+		},
+		{
+			"dex": 28,
+			"name": "Sandslash",
+			"speed": 65,
+			"abilities": [
+				"Sand Veil"
+			]
+		},
+		{
+			"dex": 30,
+			"name": "Nidorina",
+			"speed": 56,
+			"abilities": [
+				"Poison Point",
+				"Rivalry"
+			]
+		},
+		{
+			"dex": 31,
+			"name": "Nidoqueen",
+			"speed": 76,
+			"abilities": [
+				"Poison Point",
+				"Rivalry"
+			]
+		},
+		{
+			"dex": 33,
+			"name": "Nidorino",
+			"speed": 65,
+			"abilities": [
+				"Poison Point",
+				"Rivalry"
+			]
+		},
+		{
+			"dex": 34,
+			"name": "Nidoking",
+			"speed": 85,
+			"abilities": [
+				"Poison Point",
+				"Rivalry"
+			]
+		},
+		{
+			"dex": 35,
+			"name": "Clefairy",
+			"speed": 35,
+			"abilities": [
+				"Cute Charm",
+				"Magic Guard"
+			]
+		},
+		{
+			"dex": 36,
+			"name": "Clefable",
+			"speed": 60,
+			"abilities": [
+				"Cute Charm",
+				"Magic Guard"
+			]
+		},
+		{
+			"dex": 37,
+			"name": "Vulpix",
+			"speed": 65,
+			"abilities": [
+				"Flash Fire"
+			]
+		},
+		{
+			"dex": 38,
+			"name": "Ninetales",
+			"speed": 100,
+			"abilities": [
+				"Flash Fire"
+			]
+		},
+		{
+			"dex": 40,
+			"name": "Wigglytuff",
+			"speed": 45,
+			"abilities": [
+				"Cute Charm"
+			]
+		},
+		{
+			"dex": 42,
+			"name": "Golbat",
+			"speed": 90,
+			"abilities": [
+				"Inner Focus"
+			]
+		},
+		{
+			"dex": 43,
+			"name": "Oddish",
+			"speed": 30,
+			"abilities": [
+				"Chlorophyll"
+			]
+		},
+		{
+			"dex": 44,
+			"name": "Gloom",
+			"speed": 40,
+			"abilities": [
+				"Chlorophyll"
+			]
+		},
+		{
+			"dex": 45,
+			"name": "Vileplume",
+			"speed": 50,
+			"abilities": [
+				"Chlorophyll"
+			]
+		},
+		{
+			"dex": 47,
+			"name": "Parasect",
+			"speed": 30,
+			"abilities": [
+				"Effect Spore",
+				"Dry Skin"
+			]
+		},
+		{
+			"dex": 48,
+			"name": "Venonat",
+			"speed": 45,
+			"abilities": [
+				"Compound Eyes",
+				"Tinted Lens"
+			]
+		},
+		{
+			"dex": 49,
+			"name": "Venomoth",
+			"speed": 90,
+			"abilities": [
+				"Shield Dust",
+				"Tinted Lens"
+			]
+		},
+		{
+			"dex": 51,
+			"name": "Dugtrio",
+			"speed": 120,
+			"abilities": [
+				"Sand Veil",
+				"Arena Trap"
+			]
+		},
+		{
+			"dex": 53,
+			"name": "Persian",
+			"speed": 115,
+			"abilities": [
+				"Limber",
+				"Technician"
+			]
+		},
+		{
+			"dex": 54,
+			"name": "Psyduck",
+			"speed": 55,
+			"abilities": [
+				"Damp",
+				"Cloud Nine"
+			]
+		},
+		{
+			"dex": 55,
+			"name": "Golduck",
+			"speed": 85,
+			"abilities": [
+				"Damp",
+				"Cloud Nine"
+			]
+		},
+		{
+			"dex": 57,
+			"name": "Primeape",
+			"speed": 95,
+			"abilities": [
+				"Vital Spirit",
+				"Anger Point"
+			]
+		},
+		{
+			"dex": 58,
+			"name": "Growlithe",
+			"speed": 60,
+			"abilities": [
+				"Intimidate",
+				"Flash Fire"
+			]
+		},
+		{
+			"dex": 59,
+			"name": "Arcanine",
+			"speed": 95,
+			"abilities": [
+				"Intimidate",
+				"Flash Fire"
+			]
+		},
+		{
+			"dex": 61,
+			"name": "Poliwhirl",
+			"speed": 90,
+			"abilities": [
+				"Water Absorb",
+				"Damp"
+			]
+		},
+		{
+			"dex": 62,
+			"name": "Poliwrath",
+			"speed": 70,
+			"abilities": [
+				"Water Absorb",
+				"Damp"
+			]
+		},
+		{
+			"dex": 64,
+			"name": "Kadabra",
+			"speed": 105,
+			"abilities": [
+				"Synchronize",
+				"Inner Focus"
+			]
+		},
+		{
+			"dex": 65,
+			"name": "Alakazam",
+			"speed": 120,
+			"abilities": [
+				"Synchronize",
+				"Inner Focus"
+			]
+		},
+		{
+			"dex": 66,
+			"name": "Machop",
+			"speed": 35,
+			"abilities": [
+				"Guts",
+				"No Guard"
+			]
+		},
+		{
+			"dex": 67,
+			"name": "Machoke",
+			"speed": 45,
+			"abilities": [
+				"Guts",
+				"No Guard"
+			]
+		},
+		{
+			"dex": 68,
+			"name": "Machamp",
+			"speed": 55,
+			"abilities": [
+				"Guts",
+				"No Guard"
+			]
+		},
+		{
+			"dex": 70,
+			"name": "Weepinbell",
+			"speed": 55,
+			"abilities": [
+				"Chlorophyll"
+			]
+		},
+		{
+			"dex": 71,
+			"name": "Victreebel",
+			"speed": 70,
+			"abilities": [
+				"Chlorophyll"
+			]
+		},
+		{
+			"dex": 72,
+			"name": "Tentacool",
+			"speed": 70,
+			"abilities": [
+				"Clear Body",
+				"Liquid Ooze"
+			]
+		},
+		{
+			"dex": 73,
+			"name": "Tentacruel",
+			"speed": 100,
+			"abilities": [
+				"Clear Body",
+				"Liquid Ooze"
+			]
+		},
+		{
+			"dex": 74,
+			"name": "Geodude",
+			"speed": 20,
+			"abilities": [
+				"Rock Head",
+				"Sturdy"
+			]
+		},
+		{
+			"dex": 75,
+			"name": "Graveler",
+			"speed": 35,
+			"abilities": [
+				"Rock Head",
+				"Sturdy"
+			]
+		},
+		{
+			"dex": 76,
+			"name": "Golem",
+			"speed": 45,
+			"abilities": [
+				"Rock Head",
+				"Sturdy"
+			]
+		},
+		{
+			"dex": 77,
+			"name": "Ponyta",
+			"speed": 90,
+			"abilities": [
+				"Run Away",
+				"Flash Fire"
+			]
+		},
+		{
+			"dex": 78,
+			"name": "Rapidash",
+			"speed": 105,
+			"abilities": [
+				"Run Away",
+				"Flash Fire"
+			]
+		},
+		{
+			"dex": 79,
+			"name": "Slowpoke",
+			"speed": 15,
+			"abilities": [
+				"Oblivious",
+				"Own Tempo"
+			]
+		},
+		{
+			"dex": 80,
+			"name": "Slowbro",
+			"speed": 30,
+			"abilities": [
+				"Oblivious",
+				"Own Tempo"
+			]
+		},
+		{
+			"dex": 81,
+			"name": "Magnemite",
+			"speed": 45,
+			"abilities": [
+				"Magnet Pull",
+				"Sturdy"
+			]
+		},
+		{
+			"dex": 82,
+			"name": "Magneton",
+			"speed": 70,
+			"abilities": [
+				"Magnet Pull",
+				"Sturdy"
+			]
+		},
+		{
+			"dex": 83,
+			"name": "Farfetch'd",
+			"speed": 60,
+			"abilities": [
+				"Keen Eye",
+				"Inner Focus"
+			]
+		},
+		{
+			"dex": 84,
+			"name": "Doduo",
+			"speed": 75,
+			"abilities": [
+				"Run Away",
+				"Early Bird"
+			]
+		},
+		{
+			"dex": 85,
+			"name": "Dodrio",
+			"speed": 100,
+			"abilities": [
+				"Run Away",
+				"Early Bird"
+			]
+		},
+		{
+			"dex": 86,
+			"name": "Seel",
+			"speed": 45,
+			"abilities": [
+				"Thick Fat",
+				"Hydration"
+			]
+		},
+		{
+			"dex": 87,
+			"name": "Dewgong",
+			"speed": 70,
+			"abilities": [
+				"Thick Fat",
+				"Hydration"
+			]
+		},
+		{
+			"dex": 88,
+			"name": "Grimer",
+			"speed": 25,
+			"abilities": [
+				"Stench",
+				"Sticky Hold"
+			]
+		},
+		{
+			"dex": 89,
+			"name": "Muk",
+			"speed": 50,
+			"abilities": [
+				"Stench",
+				"Sticky Hold"
+			]
+		},
+		{
+			"dex": 91,
+			"name": "Cloyster",
+			"speed": 70,
+			"abilities": [
+				"Shell Armor",
+				"Skill Link"
+			]
+		},
+		{
+			"dex": 93,
+			"name": "Haunter",
+			"speed": 95,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 94,
+			"name": "Gengar",
+			"speed": 110,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 95,
+			"name": "Onix",
+			"speed": 70,
+			"abilities": [
+				"Rock Head",
+				"Sturdy"
+			]
+		},
+		{
+			"dex": 96,
+			"name": "Drowzee",
+			"speed": 42,
+			"abilities": [
+				"Insomnia",
+				"Forewarn"
+			]
+		},
+		{
+			"dex": 97,
+			"name": "Hypno",
+			"speed": 67,
+			"abilities": [
+				"Insomnia",
+				"Forewarn"
+			]
+		},
+		{
+			"dex": 98,
+			"name": "Krabby",
+			"speed": 50,
+			"abilities": [
+				"Hyper Cutter",
+				"Shell Armor"
+			]
+		},
+		{
+			"dex": 99,
+			"name": "Kingler",
+			"speed": 75,
+			"abilities": [
+				"Hyper Cutter",
+				"Shell Armor"
+			]
+		},
+		{
+			"dex": 100,
+			"name": "Voltorb",
+			"speed": 100,
+			"abilities": [
+				"Soundproof",
+				"Static"
+			]
+		},
+		{
+			"dex": 101,
+			"name": "Electrode",
+			"speed": 140,
+			"abilities": [
+				"Soundproof",
+				"Static"
+			]
+		},
+		{
+			"dex": 102,
+			"name": "Exeggcute",
+			"speed": 40,
+			"abilities": [
+				"Chlorophyll"
+			]
+		},
+		{
+			"dex": 103,
+			"name": "Exeggutor",
+			"speed": 55,
+			"abilities": [
+				"Chlorophyll"
+			]
+		},
+		{
+			"dex": 104,
+			"name": "Cubone",
+			"speed": 35,
+			"abilities": [
+				"Rock Head",
+				"Lightningrod"
+			]
+		},
+		{
+			"dex": 105,
+			"name": "Marowak",
+			"speed": 45,
+			"abilities": [
+				"Rock Head",
+				"Lightningrod"
+			]
+		},
+		{
+			"dex": 106,
+			"name": "Hitmonlee",
+			"speed": 87,
+			"abilities": [
+				"Limber",
+				"Reckless"
+			]
+		},
+		{
+			"dex": 107,
+			"name": "Hitmonchan",
+			"speed": 76,
+			"abilities": [
+				"Keen Eye",
+				"Iron Fist"
+			]
+		},
+		{
+			"dex": 108,
+			"name": "Lickitung",
+			"speed": 30,
+			"abilities": [
+				"Own Tempo",
+				"Oblivious"
+			]
+		},
+		{
+			"dex": 109,
+			"name": "Koffing",
+			"speed": 35,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 110,
+			"name": "Weezing",
+			"speed": 60,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 111,
+			"name": "Rhyhorn",
+			"speed": 25,
+			"abilities": [
+				"Lightningrod",
+				"Rock Head"
+			]
+		},
+		{
+			"dex": 112,
+			"name": "Rhydon",
+			"speed": 40,
+			"abilities": [
+				"Lightningrod",
+				"Rock Head"
+			]
+		},
+		{
+			"dex": 113,
+			"name": "Chansey",
+			"speed": 50,
+			"abilities": [
+				"Natural Cure",
+				"Serene Grace"
+			]
+		},
+		{
+			"dex": 114,
+			"name": "Tangela",
+			"speed": 60,
+			"abilities": [
+				"Chlorophyll",
+				"Leaf Guard"
+			]
+		},
+		{
+			"dex": 115,
+			"name": "Kangaskhan",
+			"speed": 90,
+			"abilities": [
+				"Early Bird",
+				"Scrappy"
+			]
+		},
+		{
+			"dex": 117,
+			"name": "Seadra",
+			"speed": 85,
+			"abilities": [
+				"Poison Point",
+				"Sniper"
+			]
+		},
+		{
+			"dex": 118,
+			"name": "Goldeen",
+			"speed": 63,
+			"abilities": [
+				"Swift Swim",
+				"Water Veil"
+			]
+		},
+		{
+			"dex": 119,
+			"name": "Seaking",
+			"speed": 68,
+			"abilities": [
+				"Swift Swim",
+				"Water Veil"
+			]
+		},
+		{
+			"dex": 120,
+			"name": "Staryu",
+			"speed": 85,
+			"abilities": [
+				"Illuminate",
+				"Natural Cure"
+			]
+		},
+		{
+			"dex": 121,
+			"name": "Starmie",
+			"speed": 115,
+			"abilities": [
+				"Illuminate",
+				"Natural Cure"
+			]
+		},
+		{
+			"dex": 122,
+			"name": "Mr. Mime",
+			"speed": 90,
+			"abilities": [
+				"Soundproof",
+				"Filter"
+			]
+		},
+		{
+			"dex": 123,
+			"name": "Scyther",
+			"speed": 105,
+			"abilities": [
+				"Swarm",
+				"Technician"
+			]
+		},
+		{
+			"dex": 124,
+			"name": "Jynx",
+			"speed": 95,
+			"abilities": [
+				"Oblivious",
+				"Forewarn"
+			]
+		},
+		{
+			"dex": 125,
+			"name": "Electabuzz",
+			"speed": 105,
+			"abilities": [
+				"Static"
+			]
+		},
+		{
+			"dex": 126,
+			"name": "Magmar",
+			"speed": 93,
+			"abilities": [
+				"Flame Body"
+			]
+		},
+		{
+			"dex": 127,
+			"name": "Pinsir",
+			"speed": 85,
+			"abilities": [
+				"Hyper Cutter",
+				"Mold Breaker"
+			]
+		},
+		{
+			"dex": 128,
+			"name": "Tauros",
+			"speed": 110,
+			"abilities": [
+				"Intimidate",
+				"Anger Point"
+			]
+		},
+		{
+			"dex": 130,
+			"name": "Gyarados",
+			"speed": 81,
+			"abilities": [
+				"Intimidate"
+			]
+		},
+		{
+			"dex": 131,
+			"name": "Lapras",
+			"speed": 60,
+			"abilities": [
+				"Water Absorb",
+				"Shell Armor"
+			]
+		},
+		{
+			"dex": 133,
+			"name": "Eevee",
+			"speed": 55,
+			"abilities": [
+				"Run Away",
+				"Adaptability"
+			]
+		},
+		{
+			"dex": 134,
+			"name": "Vaporeon",
+			"speed": 65,
+			"abilities": [
+				"Water Absorb"
+			]
+		},
+		{
+			"dex": 135,
+			"name": "Jolteon",
+			"speed": 130,
+			"abilities": [
+				"Volt Absorb"
+			]
+		},
+		{
+			"dex": 136,
+			"name": "Flareon",
+			"speed": 65,
+			"abilities": [
+				"Flash Fire"
+			]
+		},
+		{
+			"dex": 137,
+			"name": "Porygon",
+			"speed": 40,
+			"abilities": [
+				"Trace",
+				"Download"
+			]
+		},
+		{
+			"dex": 138,
+			"name": "Omanyte",
+			"speed": 35,
+			"abilities": [
+				"Swift Swim",
+				"Shell Armor"
+			]
+		},
+		{
+			"dex": 139,
+			"name": "Omastar",
+			"speed": 55,
+			"abilities": [
+				"Swift Swim",
+				"Shell Armor"
+			]
+		},
+		{
+			"dex": 140,
+			"name": "Kabuto",
+			"speed": 55,
+			"abilities": [
+				"Swift Swim",
+				"Battle Armor"
+			]
+		},
+		{
+			"dex": 141,
+			"name": "Kabutops",
+			"speed": 80,
+			"abilities": [
+				"Swift Swim",
+				"Battle Armor"
+			]
+		},
+		{
+			"dex": 142,
+			"name": "Aerodactyl",
+			"speed": 130,
+			"abilities": [
+				"Rock Head",
+				"Pressure"
+			]
+		},
+		{
+			"dex": 143,
+			"name": "Snorlax",
+			"speed": 30,
+			"abilities": [
+				"Immunity",
+				"Thick Fat"
+			]
+		},
+		{
+			"dex": 144,
+			"name": "Articuno",
+			"speed": 85,
+			"abilities": [
+				"Pressure"
+			]
+		},
+		{
+			"dex": 145,
+			"name": "Zapdos",
+			"speed": 100,
+			"abilities": [
+				"Pressure"
+			]
+		},
+		{
+			"dex": 146,
+			"name": "Moltres",
+			"speed": 90,
+			"abilities": [
+				"Pressure"
+			]
+		},
+		{
+			"dex": 147,
+			"name": "Dratini",
+			"speed": 50,
+			"abilities": [
+				"Shed Skin"
+			]
+		},
+		{
+			"dex": 148,
+			"name": "Dragonair",
+			"speed": 70,
+			"abilities": [
+				"Shed Skin"
+			]
+		},
+		{
+			"dex": 149,
+			"name": "Dragonite",
+			"speed": 80,
+			"abilities": [
+				"Inner Focus"
+			]
+		},
+		{
+			"dex": 152,
+			"name": "Chikorita",
+			"speed": 45,
+			"abilities": [
+				"Overgrow"
+			]
+		},
+		{
+			"dex": 153,
+			"name": "Bayleef",
+			"speed": 60,
+			"abilities": [
+				"Overgrow"
+			]
+		},
+		{
+			"dex": 154,
+			"name": "Meganium",
+			"speed": 80,
+			"abilities": [
+				"Overgrow"
+			]
+		},
+		{
+			"dex": 155,
+			"name": "Cyndaquil",
+			"speed": 65,
+			"abilities": [
+				"Blaze"
+			]
+		},
+		{
+			"dex": 156,
+			"name": "Quilava",
+			"speed": 80,
+			"abilities": [
+				"Blaze"
+			]
+		},
+		{
+			"dex": 157,
+			"name": "Typhlosion",
+			"speed": 100,
+			"abilities": [
+				"Blaze"
+			]
+		},
+		{
+			"dex": 158,
+			"name": "Totodile",
+			"speed": 43,
+			"abilities": [
+				"Torrent"
+			]
+		},
+		{
+			"dex": 159,
+			"name": "Croconaw",
+			"speed": 58,
+			"abilities": [
+				"Torrent"
+			]
+		},
+		{
+			"dex": 160,
+			"name": "Feraligatr",
+			"speed": 78,
+			"abilities": [
+				"Torrent"
+			]
+		},
+		{
+			"dex": 162,
+			"name": "Furret",
+			"speed": 90,
+			"abilities": [
+				"Run Away",
+				"Keen Eye"
+			]
+		},
+		{
+			"dex": 164,
+			"name": "Noctowl",
+			"speed": 70,
+			"abilities": [
+				"Insomnia",
+				"Keen Eye"
+			]
+		},
+		{
+			"dex": 166,
+			"name": "Ledian",
+			"speed": 85,
+			"abilities": [
+				"Swarm",
+				"Early Bird"
+			]
+		},
+		{
+			"dex": 168,
+			"name": "Ariados",
+			"speed": 40,
+			"abilities": [
+				"Swarm",
+				"Insomnia"
+			]
+		},
+		{
+			"dex": 169,
+			"name": "Crobat",
+			"speed": 130,
+			"abilities": [
+				"Inner Focus"
+			]
+		},
+		{
+			"dex": 170,
+			"name": "Chinchou",
+			"speed": 67,
+			"abilities": [
+				"Volt Absorb",
+				"Illuminate"
+			]
+		},
+		{
+			"dex": 171,
+			"name": "Lanturn",
+			"speed": 67,
+			"abilities": [
+				"Volt Absorb",
+				"Illuminate"
+			]
+		},
+		{
+			"dex": 176,
+			"name": "Togetic",
+			"speed": 40,
+			"abilities": [
+				"Hustle",
+				"Serene Grace"
+			]
+		},
+		{
+			"dex": 177,
+			"name": "Natu",
+			"speed": 70,
+			"abilities": [
+				"Synchronize",
+				"Early Bird"
+			]
+		},
+		{
+			"dex": 178,
+			"name": "Xatu",
+			"speed": 95,
+			"abilities": [
+				"Synchronize",
+				"Early Bird"
+			]
+		},
+		{
+			"dex": 180,
+			"name": "Flaaffy",
+			"speed": 45,
+			"abilities": [
+				"Static"
+			]
+		},
+		{
+			"dex": 181,
+			"name": "Ampharos",
+			"speed": 55,
+			"abilities": [
+				"Static"
+			]
+		},
+		{
+			"dex": 182,
+			"name": "Bellossom",
+			"speed": 50,
+			"abilities": [
+				"Chlorophyll"
+			]
+		},
+		{
+			"dex": 184,
+			"name": "Azumarill",
+			"speed": 50,
+			"abilities": [
+				"Thick Fat",
+				"Huge Power"
+			]
+		},
+		{
+			"dex": 185,
+			"name": "Sudowoodo",
+			"speed": 30,
+			"abilities": [
+				"Sturdy",
+				"Rock Head"
+			]
+		},
+		{
+			"dex": 186,
+			"name": "Politoed",
+			"speed": 70,
+			"abilities": [
+				"Water Absorb",
+				"Damp"
+			]
+		},
+		{
+			"dex": 188,
+			"name": "Skiploom",
+			"speed": 80,
+			"abilities": [
+				"Chlorophyll",
+				"Leaf Guard"
+			]
+		},
+		{
+			"dex": 189,
+			"name": "Jumpluff",
+			"speed": 110,
+			"abilities": [
+				"Chlorophyll",
+				"Leaf Guard"
+			]
+		},
+		{
+			"dex": 190,
+			"name": "Aipom",
+			"speed": 85,
+			"abilities": [
+				"Run Away",
+				"Pickup"
+			]
+		},
+		{
+			"dex": 192,
+			"name": "Sunflora",
+			"speed": 30,
+			"abilities": [
+				"Chlorophyll",
+				"Solar Power"
+			]
+		},
+		{
+			"dex": 193,
+			"name": "Yanma",
+			"speed": 95,
+			"abilities": [
+				"Speed Boost",
+				"Compound Eyes"
+			]
+		},
+		{
+			"dex": 195,
+			"name": "Quagsire",
+			"speed": 35,
+			"abilities": [
+				"Damp",
+				"Water Absorb"
+			]
+		},
+		{
+			"dex": 196,
+			"name": "Espeon",
+			"speed": 110,
+			"abilities": [
+				"Synchronize"
+			]
+		},
+		{
+			"dex": 197,
+			"name": "Umbreon",
+			"speed": 65,
+			"abilities": [
+				"Synchronize"
+			]
+		},
+		{
+			"dex": 198,
+			"name": "Murkrow",
+			"speed": 91,
+			"abilities": [
+				"Insomnia",
+				"Super Luck"
+			]
+		},
+		{
+			"dex": 199,
+			"name": "Slowking",
+			"speed": 30,
+			"abilities": [
+				"Oblivious",
+				"Own Tempo"
+			]
+		},
+		{
+			"dex": 200,
+			"name": "Misdreavus",
+			"speed": 85,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 202,
+			"name": "Wobbuffet",
+			"speed": 33,
+			"abilities": [
+				"Shadow Tag"
+			]
+		},
+		{
+			"dex": 203,
+			"name": "Girafarig",
+			"speed": 85,
+			"abilities": [
+				"Inner Focus",
+				"Early Bird"
+			]
+		},
+		{
+			"dex": 205,
+			"name": "Forretress",
+			"speed": 40,
+			"abilities": [
+				"Sturdy"
+			]
+		},
+		{
+			"dex": 206,
+			"name": "Dunsparce",
+			"speed": 45,
+			"abilities": [
+				"Serene Grace",
+				"Run Away"
+			]
+		},
+		{
+			"dex": 207,
+			"name": "Gligar",
+			"speed": 85,
+			"abilities": [
+				"Hyper Cutter",
+				"Sand Veil"
+			]
+		},
+		{
+			"dex": 208,
+			"name": "Steelix",
+			"speed": 30,
+			"abilities": [
+				"Rock Head",
+				"Sturdy"
+			]
+		},
+		{
+			"dex": 209,
+			"name": "Snubbull",
+			"speed": 30,
+			"abilities": [
+				"Intimidate",
+				"Run Away"
+			]
+		},
+		{
+			"dex": 210,
+			"name": "Granbull",
+			"speed": 45,
+			"abilities": [
+				"Intimidate",
+				"Quick Feet"
+			]
+		},
+		{
+			"dex": 211,
+			"name": "Qwilfish",
+			"speed": 85,
+			"abilities": [
+				"Poison Point",
+				"Swift Swim"
+			]
+		},
+		{
+			"dex": 212,
+			"name": "Scizor",
+			"speed": 65,
+			"abilities": [
+				"Swarm",
+				"Technician"
+			]
+		},
+		{
+			"dex": 213,
+			"name": "Shuckle",
+			"speed": 5,
+			"abilities": [
+				"Sturdy",
+				"Gluttony"
+			]
+		},
+		{
+			"dex": 214,
+			"name": "Heracross",
+			"speed": 85,
+			"abilities": [
+				"Swarm",
+				"Guts"
+			]
+		},
+		{
+			"dex": 215,
+			"name": "Sneasel",
+			"speed": 115,
+			"abilities": [
+				"Inner Focus",
+				"Keen Eye"
+			]
+		},
+		{
+			"dex": 216,
+			"name": "Teddiursa",
+			"speed": 40,
+			"abilities": [
+				"Pickup",
+				"Quick Feet"
+			]
+		},
+		{
+			"dex": 217,
+			"name": "Ursaring",
+			"speed": 55,
+			"abilities": [
+				"Guts",
+				"Quick Feet"
+			]
+		},
+		{
+			"dex": 219,
+			"name": "Magcargo",
+			"speed": 30,
+			"abilities": [
+				"Magma Armor",
+				"Flame Body"
+			]
+		},
+		{
+			"dex": 221,
+			"name": "Piloswine",
+			"speed": 50,
+			"abilities": [
+				"Oblivious",
+				"Snow Cloak"
+			]
+		},
+		{
+			"dex": 222,
+			"name": "Corsola",
+			"speed": 35,
+			"abilities": [
+				"Hustle",
+				"Natural Cure"
+			]
+		},
+		{
+			"dex": 223,
+			"name": "Remoraid",
+			"speed": 65,
+			"abilities": [
+				"Hustle",
+				"Sniper"
+			]
+		},
+		{
+			"dex": 224,
+			"name": "Octillery",
+			"speed": 45,
+			"abilities": [
+				"Suction Cups",
+				"Sniper"
+			]
+		},
+		{
+			"dex": 225,
+			"name": "Delibird",
+			"speed": 75,
+			"abilities": [
+				"Vital Spirit",
+				"Hustle"
+			]
+		},
+		{
+			"dex": 226,
+			"name": "Mantine",
+			"speed": 70,
+			"abilities": [
+				"Swift Swim",
+				"Water Absorb"
+			]
+		},
+		{
+			"dex": 227,
+			"name": "Skarmory",
+			"speed": 70,
+			"abilities": [
+				"Keen Eye",
+				"Sturdy"
+			]
+		},
+		{
+			"dex": 228,
+			"name": "Houndour",
+			"speed": 65,
+			"abilities": [
+				"Early Bird",
+				"Flash Fire"
+			]
+		},
+		{
+			"dex": 229,
+			"name": "Houndoom",
+			"speed": 95,
+			"abilities": [
+				"Early Bird",
+				"Flash Fire"
+			]
+		},
+		{
+			"dex": 230,
+			"name": "Kingdra",
+			"speed": 85,
+			"abilities": [
+				"Swift Swim",
+				"Sniper"
+			]
+		},
+		{
+			"dex": 231,
+			"name": "Phanpy",
+			"speed": 40,
+			"abilities": [
+				"Pickup"
+			]
+		},
+		{
+			"dex": 232,
+			"name": "Donphan",
+			"speed": 50,
+			"abilities": [
+				"Sturdy"
+			]
+		},
+		{
+			"dex": 233,
+			"name": "Porygon2",
+			"speed": 60,
+			"abilities": [
+				"Trace",
+				"Download"
+			]
+		},
+		{
+			"dex": 234,
+			"name": "Stantler",
+			"speed": 85,
+			"abilities": [
+				"Intimidate",
+				"Frisk"
+			]
+		},
+		{
+			"dex": 237,
+			"name": "Hitmontop",
+			"speed": 70,
+			"abilities": [
+				"Intimidate",
+				"Technician"
+			]
+		},
+		{
+			"dex": 238,
+			"name": "Smoochum",
+			"speed": 65,
+			"abilities": [
+				"Oblivious",
+				"Forewarn"
+			]
+		},
+		{
+			"dex": 239,
+			"name": "Elekid",
+			"speed": 95,
+			"abilities": [
+				"Static"
+			]
+		},
+		{
+			"dex": 240,
+			"name": "Magby",
+			"speed": 83,
+			"abilities": [
+				"Flame Body"
+			]
+		},
+		{
+			"dex": 241,
+			"name": "Miltank",
+			"speed": 100,
+			"abilities": [
+				"Thick Fat",
+				"Scrappy"
+			]
+		},
+		{
+			"dex": 242,
+			"name": "Blissey",
+			"speed": 55,
+			"abilities": [
+				"Natural Cure",
+				"Serene Grace"
+			]
+		},
+		{
+			"dex": 243,
+			"name": "Raikou",
+			"speed": 115,
+			"abilities": [
+				"Pressure"
+			]
+		},
+		{
+			"dex": 244,
+			"name": "Entei",
+			"speed": 100,
+			"abilities": [
+				"Pressure"
+			]
+		},
+		{
+			"dex": 245,
+			"name": "Suicune",
+			"speed": 85,
+			"abilities": [
+				"Pressure"
+			]
+		},
+		{
+			"dex": 246,
+			"name": "Larvitar",
+			"speed": 41,
+			"abilities": [
+				"Guts"
+			]
+		},
+		{
+			"dex": 247,
+			"name": "Pupitar",
+			"speed": 51,
+			"abilities": [
+				"Shed Skin"
+			]
+		},
+		{
+			"dex": 248,
+			"name": "Tyranitar",
+			"speed": 61,
+			"abilities": [
+				"Sand Stream"
+			]
+		},
+		{
+			"dex": 252,
+			"name": "Treecko",
+			"speed": 70,
+			"abilities": [
+				"Overgrow"
+			]
+		},
+		{
+			"dex": 253,
+			"name": "Grovyle",
+			"speed": 95,
+			"abilities": [
+				"Overgrow"
+			]
+		},
+		{
+			"dex": 254,
+			"name": "Sceptile",
+			"speed": 120,
+			"abilities": [
+				"Overgrow"
+			]
+		},
+		{
+			"dex": 255,
+			"name": "Torchic",
+			"speed": 45,
+			"abilities": [
+				"Blaze"
+			]
+		},
+		{
+			"dex": 256,
+			"name": "Combusken",
+			"speed": 55,
+			"abilities": [
+				"Blaze"
+			]
+		},
+		{
+			"dex": 257,
+			"name": "Blaziken",
+			"speed": 80,
+			"abilities": [
+				"Blaze"
+			]
+		},
+		{
+			"dex": 258,
+			"name": "Mudkip",
+			"speed": 40,
+			"abilities": [
+				"Torrent"
+			]
+		},
+		{
+			"dex": 259,
+			"name": "Marshtomp",
+			"speed": 50,
+			"abilities": [
+				"Torrent"
+			]
+		},
+		{
+			"dex": 260,
+			"name": "Swampert",
+			"speed": 60,
+			"abilities": [
+				"Torrent"
+			]
+		},
+		{
+			"dex": 262,
+			"name": "Mightyena",
+			"speed": 70,
+			"abilities": [
+				"Intimidate",
+				"Quick Feet"
+			]
+		},
+		{
+			"dex": 264,
+			"name": "Linoone",
+			"speed": 100,
+			"abilities": [
+				"Pickup",
+				"Gluttony"
+			]
+		},
+		{
+			"dex": 267,
+			"name": "Beautifly",
+			"speed": 65,
+			"abilities": [
+				"Swarm"
+			]
+		},
+		{
+			"dex": 269,
+			"name": "Dustox",
+			"speed": 65,
+			"abilities": [
+				"Shield Dust"
+			]
+		},
+		{
+			"dex": 271,
+			"name": "Lombre",
+			"speed": 50,
+			"abilities": [
+				"Swift Swim",
+				"Rain Dish"
+			]
+		},
+		{
+			"dex": 272,
+			"name": "Ludicolo",
+			"speed": 70,
+			"abilities": [
+				"Swift Swim",
+				"Rain Dish"
+			]
+		},
+		{
+			"dex": 274,
+			"name": "Nuzleaf",
+			"speed": 60,
+			"abilities": [
+				"Chlorophyll",
+				"Early Bird"
+			]
+		},
+		{
+			"dex": 275,
+			"name": "Shiftry",
+			"speed": 80,
+			"abilities": [
+				"Chlorophyll",
+				"Early Bird"
+			]
+		},
+		{
+			"dex": 277,
+			"name": "Swellow",
+			"speed": 125,
+			"abilities": [
+				"Guts"
+			]
+		},
+		{
+			"dex": 279,
+			"name": "Pelipper",
+			"speed": 65,
+			"abilities": [
+				"Keen Eye"
+			]
+		},
+		{
+			"dex": 282,
+			"name": "Gardevoir",
+			"speed": 80,
+			"abilities": [
+				"Synchronize",
+				"Trace"
+			]
+		},
+		{
+			"dex": 284,
+			"name": "Masquerain",
+			"speed": 60,
+			"abilities": [
+				"Intimidate"
+			]
+		},
+		{
+			"dex": 286,
+			"name": "Breloom",
+			"speed": 70,
+			"abilities": [
+				"Effect Spore",
+				"Poison Heal"
+			]
+		},
+		{
+			"dex": 288,
+			"name": "Vigoroth",
+			"speed": 90,
+			"abilities": [
+				"Vital Spirit"
+			]
+		},
+		{
+			"dex": 289,
+			"name": "Slaking",
+			"speed": 100,
+			"abilities": [
+				"Truant"
+			]
+		},
+		{
+			"dex": 291,
+			"name": "Ninjask",
+			"speed": 160,
+			"abilities": [
+				"Speed Boost"
+			]
+		},
+		{
+			"dex": 292,
+			"name": "Shedinja",
+			"speed": 40,
+			"abilities": [
+				"Wonder Guard"
+			]
+		},
+		{
+			"dex": 294,
+			"name": "Loudred",
+			"speed": 48,
+			"abilities": [
+				"Soundproof"
+			]
+		},
+		{
+			"dex": 295,
+			"name": "Exploud",
+			"speed": 68,
+			"abilities": [
+				"Soundproof"
+			]
+		},
+		{
+			"dex": 297,
+			"name": "Hariyama",
+			"speed": 50,
+			"abilities": [
+				"Thick Fat",
+				"Guts"
+			]
+		},
+		{
+			"dex": 299,
+			"name": "Nosepass",
+			"speed": 30,
+			"abilities": [
+				"Sturdy",
+				"Magnet Pull"
+			]
+		},
+		{
+			"dex": 301,
+			"name": "Delcatty",
+			"speed": 70,
+			"abilities": [
+				"Cute Charm",
+				"Normalize"
+			]
+		},
+		{
+			"dex": 302,
+			"name": "Sableye",
+			"speed": 50,
+			"abilities": [
+				"Keen Eye",
+				"Stall"
+			]
+		},
+		{
+			"dex": 303,
+			"name": "Mawile",
+			"speed": 50,
+			"abilities": [
+				"Hyper Cutter",
+				"Intimidate"
+			]
+		},
+		{
+			"dex": 304,
+			"name": "Aron",
+			"speed": 30,
+			"abilities": [
+				"Sturdy",
+				"Rock Head"
+			]
+		},
+		{
+			"dex": 305,
+			"name": "Lairon",
+			"speed": 40,
+			"abilities": [
+				"Sturdy",
+				"Rock Head"
+			]
+		},
+		{
+			"dex": 306,
+			"name": "Aggron",
+			"speed": 50,
+			"abilities": [
+				"Sturdy",
+				"Rock Head"
+			]
+		},
+		{
+			"dex": 308,
+			"name": "Medicham",
+			"speed": 80,
+			"abilities": [
+				"Pure Power"
+			]
+		},
+		{
+			"dex": 310,
+			"name": "Manectric",
+			"speed": 105,
+			"abilities": [
+				"Static",
+				"Lightningrod"
+			]
+		},
+		{
+			"dex": 311,
+			"name": "Plusle",
+			"speed": 95,
+			"abilities": [
+				"Plus"
+			]
+		},
+		{
+			"dex": 312,
+			"name": "Minun",
+			"speed": 95,
+			"abilities": [
+				"Minus"
+			]
+		},
+		{
+			"dex": 313,
+			"name": "Volbeat",
+			"speed": 85,
+			"abilities": [
+				"Illuminate",
+				"Swarm"
+			]
+		},
+		{
+			"dex": 314,
+			"name": "Illumise",
+			"speed": 85,
+			"abilities": [
+				"Oblivious",
+				"Tinted Lens"
+			]
+		},
+		{
+			"dex": 315,
+			"name": "Roselia",
+			"speed": 65,
+			"abilities": [
+				"Natural Cure",
+				"Poison Point"
+			]
+		},
+		{
+			"dex": 317,
+			"name": "Swalot",
+			"speed": 55,
+			"abilities": [
+				"Liquid Ooze",
+				"Sticky Hold"
+			]
+		},
+		{
+			"dex": 318,
+			"name": "Carvanha",
+			"speed": 65,
+			"abilities": [
+				"Rough Skin"
+			]
+		},
+		{
+			"dex": 319,
+			"name": "Sharpedo",
+			"speed": 95,
+			"abilities": [
+				"Rough Skin"
+			]
+		},
+		{
+			"dex": 320,
+			"name": "Wailmer",
+			"speed": 60,
+			"abilities": [
+				"Water Veil",
+				"Oblivious"
+			]
+		},
+		{
+			"dex": 321,
+			"name": "Wailord",
+			"speed": 60,
+			"abilities": [
+				"Water Veil",
+				"Oblivious"
+			]
+		},
+		{
+			"dex": 322,
+			"name": "Numel",
+			"speed": 35,
+			"abilities": [
+				"Oblivious",
+				"Simple"
+			]
+		},
+		{
+			"dex": 323,
+			"name": "Camerupt",
+			"speed": 40,
+			"abilities": [
+				"Magma Armor",
+				"Solid Rock"
+			]
+		},
+		{
+			"dex": 324,
+			"name": "Torkoal",
+			"speed": 20,
+			"abilities": [
+				"White Smoke"
+			]
+		},
+		{
+			"dex": 325,
+			"name": "Spoink",
+			"speed": 60,
+			"abilities": [
+				"Thick Fat",
+				"Own Tempo"
+			]
+		},
+		{
+			"dex": 326,
+			"name": "Grumpig",
+			"speed": 80,
+			"abilities": [
+				"Thick Fat",
+				"Own Tempo"
+			]
+		},
+		{
+			"dex": 327,
+			"name": "Spinda",
+			"speed": 60,
+			"abilities": [
+				"Own Tempo",
+				"Tangled Feet"
+			]
+		},
+		{
+			"dex": 329,
+			"name": "Vibrava",
+			"speed": 70,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 330,
+			"name": "Flygon",
+			"speed": 100,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 331,
+			"name": "Cacnea",
+			"speed": 35,
+			"abilities": [
+				"Sand Veil"
+			]
+		},
+		{
+			"dex": 332,
+			"name": "Cacturne",
+			"speed": 55,
+			"abilities": [
+				"Sand Veil"
+			]
+		},
+		{
+			"dex": 333,
+			"name": "Swablu",
+			"speed": 50,
+			"abilities": [
+				"Natural Cure"
+			]
+		},
+		{
+			"dex": 334,
+			"name": "Altaria",
+			"speed": 80,
+			"abilities": [
+				"Natural Cure"
+			]
+		},
+		{
+			"dex": 335,
+			"name": "Zangoose",
+			"speed": 90,
+			"abilities": [
+				"Immunity"
+			]
+		},
+		{
+			"dex": 336,
+			"name": "Seviper",
+			"speed": 65,
+			"abilities": [
+				"Shed Skin"
+			]
+		},
+		{
+			"dex": 337,
+			"name": "Lunatone",
+			"speed": 70,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 338,
+			"name": "Solrock",
+			"speed": 70,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 340,
+			"name": "Whiscash",
+			"speed": 60,
+			"abilities": [
+				"Oblivious",
+				"Anticipation"
+			]
+		},
+		{
+			"dex": 341,
+			"name": "Corphish",
+			"speed": 35,
+			"abilities": [
+				"Hyper Cutter",
+				"Shell Armor"
+			]
+		},
+		{
+			"dex": 342,
+			"name": "Crawdaunt",
+			"speed": 55,
+			"abilities": [
+				"Hyper Cutter",
+				"Shell Armor"
+			]
+		},
+		{
+			"dex": 343,
+			"name": "Baltoy",
+			"speed": 55,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 344,
+			"name": "Claydol",
+			"speed": 75,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 345,
+			"name": "Lileep",
+			"speed": 23,
+			"abilities": [
+				"Suction Cups"
+			]
+		},
+		{
+			"dex": 346,
+			"name": "Cradily",
+			"speed": 43,
+			"abilities": [
+				"Suction Cups"
+			]
+		},
+		{
+			"dex": 347,
+			"name": "Anorith",
+			"speed": 75,
+			"abilities": [
+				"Battle Armor"
+			]
+		},
+		{
+			"dex": 348,
+			"name": "Armaldo",
+			"speed": 45,
+			"abilities": [
+				"Battle Armor"
+			]
+		},
+		{
+			"dex": 350,
+			"name": "Milotic",
+			"speed": 81,
+			"abilities": [
+				"Marvel Scale"
+			]
+		},
+		{
+			"dex": 351,
+			"name": "Castform",
+			"speed": 70,
+			"abilities": [
+				"Forecast"
+			]
+		},
+		{
+			"dex": 352,
+			"name": "Kecleon",
+			"speed": 40,
+			"abilities": [
+				"Color Change"
+			]
+		},
+		{
+			"dex": 353,
+			"name": "Shuppet",
+			"speed": 45,
+			"abilities": [
+				"Insomnia",
+				"Frisk"
+			]
+		},
+		{
+			"dex": 354,
+			"name": "Banette",
+			"speed": 65,
+			"abilities": [
+				"Insomnia",
+				"Frisk"
+			]
+		},
+		{
+			"dex": 355,
+			"name": "Duskull",
+			"speed": 25,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 356,
+			"name": "Dusclops",
+			"speed": 25,
+			"abilities": [
+				"Pressure"
+			]
+		},
+		{
+			"dex": 357,
+			"name": "Tropius",
+			"speed": 51,
+			"abilities": [
+				"Chlorophyll",
+				"Solar Power"
+			]
+		},
+		{
+			"dex": 358,
+			"name": "Chimecho",
+			"speed": 65,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 359,
+			"name": "Absol",
+			"speed": 75,
+			"abilities": [
+				"Pressure",
+				"Super Luck"
+			]
+		},
+		{
+			"dex": 361,
+			"name": "Snorunt",
+			"speed": 50,
+			"abilities": [
+				"Inner Focus",
+				"Ice Body"
+			]
+		},
+		{
+			"dex": 362,
+			"name": "Glalie",
+			"speed": 80,
+			"abilities": [
+				"Inner Focus",
+				"Ice Body"
+			]
+		},
+		{
+			"dex": 364,
+			"name": "Sealeo",
+			"speed": 45,
+			"abilities": [
+				"Thick Fat",
+				"Ice Body"
+			]
+		},
+		{
+			"dex": 365,
+			"name": "Walrein",
+			"speed": 65,
+			"abilities": [
+				"Thick Fat",
+				"Ice Body"
+			]
+		},
+		{
+			"dex": 366,
+			"name": "Clamperl",
+			"speed": 32,
+			"abilities": [
+				"Shell Armor"
+			]
+		},
+		{
+			"dex": 367,
+			"name": "Huntail",
+			"speed": 52,
+			"abilities": [
+				"Swift Swim"
+			]
+		},
+		{
+			"dex": 368,
+			"name": "Gorebyss",
+			"speed": 52,
+			"abilities": [
+				"Swift Swim"
+			]
+		},
+		{
+			"dex": 369,
+			"name": "Relicanth",
+			"speed": 55,
+			"abilities": [
+				"Swift Swim",
+				"Rock Head"
+			]
+		},
+		{
+			"dex": 370,
+			"name": "Luvdisc",
+			"speed": 97,
+			"abilities": [
+				"Swift Swim"
+			]
+		},
+		{
+			"dex": 371,
+			"name": "Bagon",
+			"speed": 50,
+			"abilities": [
+				"Rock Head"
+			]
+		},
+		{
+			"dex": 372,
+			"name": "Shelgon",
+			"speed": 50,
+			"abilities": [
+				"Rock Head"
+			]
+		},
+		{
+			"dex": 373,
+			"name": "Salamence",
+			"speed": 100,
+			"abilities": [
+				"Intimidate"
+			]
+		},
+		{
+			"dex": 375,
+			"name": "Metang",
+			"speed": 50,
+			"abilities": [
+				"Clear Body"
+			]
+		},
+		{
+			"dex": 376,
+			"name": "Metagross",
+			"speed": 70,
+			"abilities": [
+				"Clear Body"
+			]
+		},
+		{
+			"dex": 377,
+			"name": "Regirock",
+			"speed": 50,
+			"abilities": [
+				"Clear Body"
+			]
+		},
+		{
+			"dex": 378,
+			"name": "Regice",
+			"speed": 50,
+			"abilities": [
+				"Clear Body"
+			]
+		},
+		{
+			"dex": 379,
+			"name": "Registeel",
+			"speed": 50,
+			"abilities": [
+				"Clear Body"
+			]
+		},
+		{
+			"dex": 380,
+			"name": "Latias",
+			"speed": 110,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 381,
+			"name": "Latios",
+			"speed": 110,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 387,
+			"name": "Turtwig",
+			"speed": 31,
+			"abilities": [
+				"Overgrow"
+			]
+		},
+		{
+			"dex": 388,
+			"name": "Grotle",
+			"speed": 36,
+			"abilities": [
+				"Overgrow"
+			]
+		},
+		{
+			"dex": 389,
+			"name": "Torterra",
+			"speed": 56,
+			"abilities": [
+				"Overgrow"
+			]
+		},
+		{
+			"dex": 390,
+			"name": "Chimchar",
+			"speed": 61,
+			"abilities": [
+				"Blaze"
+			]
+		},
+		{
+			"dex": 391,
+			"name": "Monferno",
+			"speed": 81,
+			"abilities": [
+				"Blaze"
+			]
+		},
+		{
+			"dex": 392,
+			"name": "Infernape",
+			"speed": 108,
+			"abilities": [
+				"Blaze"
+			]
+		},
+		{
+			"dex": 393,
+			"name": "Piplup",
+			"speed": 40,
+			"abilities": [
+				"Torrent"
+			]
+		},
+		{
+			"dex": 394,
+			"name": "Prinplup",
+			"speed": 50,
+			"abilities": [
+				"Torrent"
+			]
+		},
+		{
+			"dex": 395,
+			"name": "Empoleon",
+			"speed": 60,
+			"abilities": [
+				"Torrent"
+			]
+		},
+		{
+			"dex": 396,
+			"name": "Starly",
+			"speed": 60,
+			"abilities": [
+				"Keen Eye"
+			]
+		},
+		{
+			"dex": 397,
+			"name": "Staravia",
+			"speed": 80,
+			"abilities": [
+				"Intimidate"
+			]
+		},
+		{
+			"dex": 398,
+			"name": "Staraptor",
+			"speed": 100,
+			"abilities": [
+				"Intimidate"
+			]
+		},
+		{
+			"dex": 399,
+			"name": "Bidoof",
+			"speed": 31,
+			"abilities": [
+				"Simple",
+				"Unaware"
+			]
+		},
+		{
+			"dex": 400,
+			"name": "Bibarel",
+			"speed": 71,
+			"abilities": [
+				"Simple",
+				"Unaware"
+			]
+		},
+		{
+			"dex": 401,
+			"name": "Kricketot",
+			"speed": 25,
+			"abilities": [
+				"Shed Skin"
+			]
+		},
+		{
+			"dex": 402,
+			"name": "Kricketune",
+			"speed": 65,
+			"abilities": [
+				"Swarm"
+			]
+		},
+		{
+			"dex": 403,
+			"name": "Shinx",
+			"speed": 45,
+			"abilities": [
+				"Rivalry",
+				"Intimidate"
+			]
+		},
+		{
+			"dex": 404,
+			"name": "Luxio",
+			"speed": 60,
+			"abilities": [
+				"Rivalry",
+				"Intimidate"
+			]
+		},
+		{
+			"dex": 405,
+			"name": "Luxray",
+			"speed": 70,
+			"abilities": [
+				"Rivalry",
+				"Intimidate"
+			]
+		},
+		{
+			"dex": 406,
+			"name": "Budew",
+			"speed": 55,
+			"abilities": [
+				"Natural Cure",
+				"Poison Point"
+			]
+		},
+		{
+			"dex": 407,
+			"name": "Roserade",
+			"speed": 90,
+			"abilities": [
+				"Natural Cure",
+				"Poison Point"
+			]
+		},
+		{
+			"dex": 408,
+			"name": "Cranidos",
+			"speed": 58,
+			"abilities": [
+				"Mold Breaker"
+			]
+		},
+		{
+			"dex": 409,
+			"name": "Rampardos",
+			"speed": 58,
+			"abilities": [
+				"Mold Breaker"
+			]
+		},
+		{
+			"dex": 410,
+			"name": "Shieldon",
+			"speed": 30,
+			"abilities": [
+				"Sturdy"
+			]
+		},
+		{
+			"dex": 411,
+			"name": "Bastiodon",
+			"speed": 30,
+			"abilities": [
+				"Sturdy"
+			]
+		},
+		{
+			"dex": 412,
+			"name": "Burmy",
+			"speed": 36,
+			"abilities": [
+				"Shed Skin"
+			]
+		},
+		{
+			"dex": 413,
+			"name": "Wormadam",
+			"speed": 36,
+			"abilities": [
+				"Anticipation"
+			]
+		},
+		{
+			"dex": 414,
+			"name": "Mothim",
+			"speed": 66,
+			"abilities": [
+				"Swarm"
+			]
+		},
+		{
+			"dex": 415,
+			"name": "Combee",
+			"speed": 70,
+			"abilities": [
+				"Honey Gather"
+			]
+		},
+		{
+			"dex": 416,
+			"name": "Vespiquen",
+			"speed": 40,
+			"abilities": [
+				"Pressure"
+			]
+		},
+		{
+			"dex": 417,
+			"name": "Pachirisu",
+			"speed": 95,
+			"abilities": [
+				"Run Away",
+				"Pickup"
+			]
+		},
+		{
+			"dex": 418,
+			"name": "Buizel",
+			"speed": 85,
+			"abilities": [
+				"Swift Swim"
+			]
+		},
+		{
+			"dex": 419,
+			"name": "Floatzel",
+			"speed": 115,
+			"abilities": [
+				"Swift Swim"
+			]
+		},
+		{
+			"dex": 420,
+			"name": "Cherubi",
+			"speed": 35,
+			"abilities": [
+				"Chlorophyll"
+			]
+		},
+		{
+			"dex": 421,
+			"name": "Cherrim",
+			"speed": 85,
+			"abilities": [
+				"Flower Gift"
+			]
+		},
+		{
+			"dex": 422,
+			"name": "Shellos",
+			"speed": 34,
+			"abilities": [
+				"Sticky Hold",
+				"Storm Drain"
+			]
+		},
+		{
+			"dex": 423,
+			"name": "Gastrodon",
+			"speed": 39,
+			"abilities": [
+				"Sticky Hold",
+				"Storm Drain"
+			]
+		},
+		{
+			"dex": 424,
+			"name": "Ambipom",
+			"speed": 115,
+			"abilities": [
+				"Technician",
+				"Pickup"
+			]
+		},
+		{
+			"dex": 425,
+			"name": "Drifloon",
+			"speed": 70,
+			"abilities": [
+				"Aftermath",
+				"Unburden"
+			]
+		},
+		{
+			"dex": 426,
+			"name": "Drifblim",
+			"speed": 80,
+			"abilities": [
+				"Aftermath",
+				"Unburden"
+			]
+		},
+		{
+			"dex": 427,
+			"name": "Buneary",
+			"speed": 85,
+			"abilities": [
+				"Run Away",
+				"Klutz"
+			]
+		},
+		{
+			"dex": 428,
+			"name": "Lopunny",
+			"speed": 105,
+			"abilities": [
+				"Cute Charm",
+				"Klutz"
+			]
+		},
+		{
+			"dex": 429,
+			"name": "Mismagius",
+			"speed": 105,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 430,
+			"name": "Honchkrow",
+			"speed": 71,
+			"abilities": [
+				"Insomnia",
+				"Super Luck"
+			]
+		},
+		{
+			"dex": 431,
+			"name": "Glameow",
+			"speed": 85,
+			"abilities": [
+				"Limber",
+				"Own Tempo"
+			]
+		},
+		{
+			"dex": 432,
+			"name": "Purugly",
+			"speed": 112,
+			"abilities": [
+				"Thick Fat",
+				"Own Tempo"
+			]
+		},
+		{
+			"dex": 433,
+			"name": "Chingling",
+			"speed": 45,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 434,
+			"name": "Stunky",
+			"speed": 74,
+			"abilities": [
+				"Stench",
+				"Aftermath"
+			]
+		},
+		{
+			"dex": 435,
+			"name": "Skuntank",
+			"speed": 84,
+			"abilities": [
+				"Stench",
+				"Aftermath"
+			]
+		},
+		{
+			"dex": 436,
+			"name": "Bronzor",
+			"speed": 23,
+			"abilities": [
+				"Levitate",
+				"Heatproof"
+			]
+		},
+		{
+			"dex": 437,
+			"name": "Bronzong",
+			"speed": 33,
+			"abilities": [
+				"Levitate",
+				"Heatproof"
+			]
+		},
+		{
+			"dex": 438,
+			"name": "Bonsly",
+			"speed": 10,
+			"abilities": [
+				"Sturdy",
+				"Rock Head"
+			]
+		},
+		{
+			"dex": 439,
+			"name": "Mime Jr.",
+			"speed": 60,
+			"abilities": [
+				"Soundproof",
+				"Filter"
+			]
+		},
+		{
+			"dex": 440,
+			"name": "Happiny",
+			"speed": 30,
+			"abilities": [
+				"Natural Cure",
+				"Serene Grace"
+			]
+		},
+		{
+			"dex": 441,
+			"name": "Chatot",
+			"speed": 91,
+			"abilities": [
+				"Keen Eye",
+				"Tangled Feet"
+			]
+		},
+		{
+			"dex": 443,
+			"name": "Gible",
+			"speed": 42,
+			"abilities": [
+				"Sand Veil"
+			]
+		},
+		{
+			"dex": 444,
+			"name": "Gabite",
+			"speed": 82,
+			"abilities": [
+				"Sand Veil"
+			]
+		},
+		{
+			"dex": 445,
+			"name": "Garchomp",
+			"speed": 102,
+			"abilities": [
+				"Sand Veil"
+			]
+		},
+		{
+			"dex": 446,
+			"name": "Munchlax",
+			"speed": 5,
+			"abilities": [
+				"Pickup",
+				"Thick Fat"
+			]
+		},
+		{
+			"dex": 447,
+			"name": "Riolu",
+			"speed": 60,
+			"abilities": [
+				"Steadfast",
+				"Inner Focus"
+			]
+		},
+		{
+			"dex": 448,
+			"name": "Lucario",
+			"speed": 90,
+			"abilities": [
+				"Steadfast",
+				"Inner Focus"
+			]
+		},
+		{
+			"dex": 449,
+			"name": "Hippopotas",
+			"speed": 32,
+			"abilities": [
+				"Sand Stream"
+			]
+		},
+		{
+			"dex": 450,
+			"name": "Hippowdon",
+			"speed": 47,
+			"abilities": [
+				"Sand Stream"
+			]
+		},
+		{
+			"dex": 451,
+			"name": "Skorupi",
+			"speed": 65,
+			"abilities": [
+				"Battle Armor",
+				"Sniper"
+			]
+		},
+		{
+			"dex": 452,
+			"name": "Drapion",
+			"speed": 95,
+			"abilities": [
+				"Battle Armor",
+				"Sniper"
+			]
+		},
+		{
+			"dex": 453,
+			"name": "Croagunk",
+			"speed": 50,
+			"abilities": [
+				"Anticipation",
+				"Dry Skin"
+			]
+		},
+		{
+			"dex": 454,
+			"name": "Toxicroak",
+			"speed": 85,
+			"abilities": [
+				"Anticipation",
+				"Dry Skin"
+			]
+		},
+		{
+			"dex": 455,
+			"name": "Carnivine",
+			"speed": 46,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 456,
+			"name": "Finneon",
+			"speed": 66,
+			"abilities": [
+				"Swift Swim",
+				"Storm Drain"
+			]
+		},
+		{
+			"dex": 457,
+			"name": "Lumineon",
+			"speed": 91,
+			"abilities": [
+				"Swift Swim",
+				"Storm Drain"
+			]
+		},
+		{
+			"dex": 458,
+			"name": "Mantyke",
+			"speed": 50,
+			"abilities": [
+				"Swift Swim",
+				"Water Absorb"
+			]
+		},
+		{
+			"dex": 459,
+			"name": "Snover",
+			"speed": 40,
+			"abilities": [
+				"Snow Warning"
+			]
+		},
+		{
+			"dex": 460,
+			"name": "Abomasnow",
+			"speed": 60,
+			"abilities": [
+				"Snow Warning"
+			]
+		},
+		{
+			"dex": 461,
+			"name": "Weavile",
+			"speed": 125,
+			"abilities": [
+				"Pressure"
+			]
+		},
+		{
+			"dex": 462,
+			"name": "Magnezone",
+			"speed": 60,
+			"abilities": [
+				"Magnet Pull",
+				"Sturdy"
+			]
+		},
+		{
+			"dex": 463,
+			"name": "Lickilicky",
+			"speed": 50,
+			"abilities": [
+				"Own Tempo",
+				"Oblivious"
+			]
+		},
+		{
+			"dex": 464,
+			"name": "Rhyperior",
+			"speed": 40,
+			"abilities": [
+				"Lightningrod",
+				"Solid Rock"
+			]
+		},
+		{
+			"dex": 465,
+			"name": "Tangrowth",
+			"speed": 50,
+			"abilities": [
+				"Chlorophyll",
+				"Leaf Guard"
+			]
+		},
+		{
+			"dex": 466,
+			"name": "Electivire",
+			"speed": 95,
+			"abilities": [
+				"Motor Drive"
+			]
+		},
+		{
+			"dex": 467,
+			"name": "Magmortar",
+			"speed": 83,
+			"abilities": [
+				"Flame Body"
+			]
+		},
+		{
+			"dex": 468,
+			"name": "Togekiss",
+			"speed": 80,
+			"abilities": [
+				"Hustle",
+				"Serene Grace"
+			]
+		},
+		{
+			"dex": 469,
+			"name": "Yanmega",
+			"speed": 95,
+			"abilities": [
+				"Speed Boost",
+				"Tinted Lens"
+			]
+		},
+		{
+			"dex": 470,
+			"name": "Leafeon",
+			"speed": 95,
+			"abilities": [
+				"Leaf Guard"
+			]
+		},
+		{
+			"dex": 471,
+			"name": "Glaceon",
+			"speed": 65,
+			"abilities": [
+				"Snow Cloak"
+			]
+		},
+		{
+			"dex": 472,
+			"name": "Gliscor",
+			"speed": 95,
+			"abilities": [
+				"Hyper Cutter",
+				"Sand Veil"
+			]
+		},
+		{
+			"dex": 473,
+			"name": "Mamoswine",
+			"speed": 80,
+			"abilities": [
+				"Oblivious",
+				"Snow Cloak"
+			]
+		},
+		{
+			"dex": 474,
+			"name": "Porygon-Z",
+			"speed": 90,
+			"abilities": [
+				"Adaptability",
+				"Download"
+			]
+		},
+		{
+			"dex": 475,
+			"name": "Gallade",
+			"speed": 80,
+			"abilities": [
+				"Steadfast"
+			]
+		},
+		{
+			"dex": 476,
+			"name": "Probopass",
+			"speed": 40,
+			"abilities": [
+				"Sturdy",
+				"Magnet Pull"
+			]
+		},
+		{
+			"dex": 477,
+			"name": "Dusknoir",
+			"speed": 45,
+			"abilities": [
+				"Pressure"
+			]
+		},
+		{
+			"dex": 478,
+			"name": "Froslass",
+			"speed": 110,
+			"abilities": [
+				"Snow Cloak"
+			]
+		},
+		{
+			"dex": 479,
+			"name": "Rotom",
+			"speed": 91,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 485,
+			"name": "Heatran",
+			"speed": 77,
+			"abilities": [
+				"Flash Fire"
+			]
+		},
+		{
+			"dex": 486,
+			"name": "Regigigas",
+			"speed": 100,
+			"abilities": [
+				"Slow Start"
+			]
+		},
+		{
+			"dex": 488,
+			"name": "Cresselia",
+			"speed": 85,
+			"abilities": [
+				"Levitate"
+			]
+		}
+	]
+}

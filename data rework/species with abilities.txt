@@ -1,0 +1,400 @@
+1	Bulbasaur	45	Overgrow
+2	Ivysaur	60	Overgrow
+3	Venusaur	80	Overgrow
+4	Charmander	65	Blaze
+5	Charmeleon	80	Blaze
+6	Charizard	100	Blaze
+7	Squirtle	43	Torrent
+8	Wartortle	58	Torrent
+9	Blastoise	78	Torrent
+12	Butterfree	70	Compound Eyes
+15	Beedrill	75	Swarm
+17	Pidgeotto	71	Keen Eye,Tangled Feet
+18	Pidgeot	91	Keen Eye,Tangled Feet
+20	Raticate	97	Run Away,Guts
+22	Fearow	100	Keen Eye
+24	Arbok	80	Intimidate,Shed Skin
+25	Pikachu	90	Static
+26	Raichu	100	Static
+27	Sandshrew	40	Sand Veil
+28	Sandslash	65	Sand Veil
+30	Nidorina	56	Poison Point,Rivalry
+31	Nidoqueen	76	Poison Point,Rivalry
+33	Nidorino	65	Poison Point,Rivalry
+34	Nidoking	85	Poison Point,Rivalry
+35	Clefairy	35	Cute Charm,Magic Guard
+36	Clefable	60	Cute Charm,Magic Guard
+37	Vulpix	65	Flash Fire
+38	Ninetales	100	Flash Fire
+40	Wigglytuff	45	Cute Charm
+42	Golbat	90	Inner Focus
+43	Oddish	30	Chlorophyll
+44	Gloom	40	Chlorophyll
+45	Vileplume	50	Chlorophyll
+47	Parasect	30	Effect Spore,Dry Skin
+48	Venonat	45	Compound Eyes,Tinted Lens
+49	Venomoth	90	Shield Dust,Tinted Lens
+51	Dugtrio	120	Sand Veil,Arena Trap
+53	Persian	115	Limber,Technician
+54	Psyduck	55	Damp,Cloud Nine
+55	Golduck	85	Damp,Cloud Nine
+57	Primeape	95	Vital Spirit,Anger Point
+58	Growlithe	60	Intimidate,Flash Fire
+59	Arcanine	95	Intimidate,Flash Fire
+61	Poliwhirl	90	Water Absorb,Damp
+62	Poliwrath	70	Water Absorb,Damp
+64	Kadabra	105	Synchronize,Inner Focus
+65	Alakazam	120	Synchronize,Inner Focus
+66	Machop	35	Guts,No Guard
+67	Machoke	45	Guts,No Guard
+68	Machamp	55	Guts,No Guard
+70	Weepinbell	55	Chlorophyll
+71	Victreebel	70	Chlorophyll
+72	Tentacool	70	Clear Body,Liquid Ooze
+73	Tentacruel	100	Clear Body,Liquid Ooze
+74	Geodude	20	Rock Head,Sturdy
+75	Graveler	35	Rock Head,Sturdy
+76	Golem	45	Rock Head,Sturdy
+77	Ponyta	90	Run Away,Flash Fire
+78	Rapidash	105	Run Away,Flash Fire
+79	Slowpoke	15	Oblivious,Own Tempo
+80	Slowbro	30	Oblivious,Own Tempo
+81	Magnemite	45	Magnet Pull,Sturdy
+82	Magneton	70	Magnet Pull,Sturdy
+83	Farfetch'd	60	Keen Eye,Inner Focus
+84	Doduo	75	Run Away,Early Bird
+85	Dodrio	100	Run Away,Early Bird
+86	Seel	45	Thick Fat,Hydration
+87	Dewgong	70	Thick Fat,Hydration
+88	Grimer	25	Stench,Sticky Hold
+89	Muk	50	Stench,Sticky Hold
+91	Cloyster	70	Shell Armor,Skill Link
+93	Haunter	95	Levitate
+94	Gengar	110	Levitate
+95	Onix	70	Rock Head,Sturdy
+96	Drowzee	42	Insomnia,Forewarn
+97	Hypno	67	Insomnia,Forewarn
+98	Krabby	50	Hyper Cutter,Shell Armor
+99	Kingler	75	Hyper Cutter,Shell Armor
+100	Voltorb	100	Soundproof,Static
+101	Electrode	140	Soundproof,Static
+102	Exeggcute	40	Chlorophyll
+103	Exeggutor	55	Chlorophyll
+104	Cubone	35	Rock Head,Lightningrod
+105	Marowak	45	Rock Head,Lightningrod
+106	Hitmonlee	87	Limber,Reckless
+107	Hitmonchan	76	Keen Eye,Iron Fist
+108	Lickitung	30	Own Tempo,Oblivious
+109	Koffing	35	Levitate
+110	Weezing	60	Levitate
+111	Rhyhorn	25	Lightningrod,Rock Head
+112	Rhydon	40	Lightningrod,Rock Head
+113	Chansey	50	Natural Cure,Serene Grace
+114	Tangela	60	Chlorophyll,Leaf Guard
+115	Kangaskhan	90	Early Bird,Scrappy
+117	Seadra	85	Poison Point,Sniper
+118	Goldeen	63	Swift Swim,Water Veil
+119	Seaking	68	Swift Swim,Water Veil
+120	Staryu	85	Illuminate,Natural Cure
+121	Starmie	115	Illuminate,Natural Cure
+122	Mr. Mime	90	Soundproof,Filter
+123	Scyther	105	Swarm,Technician
+124	Jynx	95	Oblivious,Forewarn
+125	Electabuzz	105	Static
+126	Magmar	93	Flame Body
+127	Pinsir	85	Hyper Cutter,Mold Breaker
+128	Tauros	110	Intimidate,Anger Point
+130	Gyarados	81	Intimidate
+131	Lapras	60	Water Absorb,Shell Armor
+133	Eevee	55	Run Away,Adaptability
+134	Vaporeon	65	Water Absorb
+135	Jolteon	130	Volt Absorb
+136	Flareon	65	Flash Fire
+137	Porygon	40	Trace,Download
+138	Omanyte	35	Swift Swim,Shell Armor
+139	Omastar	55	Swift Swim,Shell Armor
+140	Kabuto	55	Swift Swim,Battle Armor
+141	Kabutops	80	Swift Swim,Battle Armor
+142	Aerodactyl	130	Rock Head,Pressure
+143	Snorlax	30	Immunity,Thick Fat
+144	Articuno	85	Pressure
+145	Zapdos	100	Pressure
+146	Moltres	90	Pressure
+147	Dratini	50	Shed Skin
+148	Dragonair	70	Shed Skin
+149	Dragonite	80	Inner Focus
+152	Chikorita	45	Overgrow
+153	Bayleef	60	Overgrow
+154	Meganium	80	Overgrow
+155	Cyndaquil	65	Blaze
+156	Quilava	80	Blaze
+157	Typhlosion	100	Blaze
+158	Totodile	43	Torrent
+159	Croconaw	58	Torrent
+160	Feraligatr	78	Torrent
+162	Furret	90	Run Away,Keen Eye
+164	Noctowl	70	Insomnia,Keen Eye
+166	Ledian	85	Swarm,Early Bird
+168	Ariados	40	Swarm,Insomnia
+169	Crobat	130	Inner Focus
+170	Chinchou	67	Volt Absorb,Illuminate
+171	Lanturn	67	Volt Absorb,Illuminate
+176	Togetic	40	Hustle,Serene Grace
+177	Natu	70	Synchronize,Early Bird
+178	Xatu	95	Synchronize,Early Bird
+180	Flaaffy	45	Static
+181	Ampharos	55	Static
+182	Bellossom	50	Chlorophyll
+184	Azumarill	50	Thick Fat,Huge Power
+185	Sudowoodo	30	Sturdy,Rock Head
+186	Politoed	70	Water Absorb,Damp
+188	Skiploom	80	Chlorophyll,Leaf Guard
+189	Jumpluff	110	Chlorophyll,Leaf Guard
+190	Aipom	85	Run Away,Pickup
+192	Sunflora	30	Chlorophyll,Solar Power
+193	Yanma	95	Speed Boost,Compound Eyes
+195	Quagsire	35	Damp,Water Absorb
+196	Espeon	110	Synchronize
+197	Umbreon	65	Synchronize
+198	Murkrow	91	Insomnia,Super Luck
+199	Slowking	30	Oblivious,Own Tempo
+200	Misdreavus	85	Levitate
+202	Wobbuffet	33	Shadow Tag
+203	Girafarig	85	Inner Focus,Early Bird
+205	Forretress	40	Sturdy
+206	Dunsparce	45	Serene Grace,Run Away
+207	Gligar	85	Hyper Cutter,Sand Veil
+208	Steelix	30	Rock Head,Sturdy
+209	Snubbull	30	Intimidate,Run Away
+210	Granbull	45	Intimidate,Quick Feet
+211	Qwilfish	85	Poison Point,Swift Swim
+212	Scizor	65	Swarm,Technician
+213	Shuckle	5	Sturdy,Gluttony
+214	Heracross	85	Swarm,Guts
+215	Sneasel	115	Inner Focus,Keen Eye
+216	Teddiursa	40	Pickup,Quick Feet
+217	Ursaring	55	Guts,Quick Feet
+219	Magcargo	30	Magma Armor,Flame Body
+221	Piloswine	50	Oblivious,Snow Cloak
+222	Corsola	35	Hustle,Natural Cure
+223	Remoraid	65	Hustle,Sniper
+224	Octillery	45	Suction Cups,Sniper
+225	Delibird	75	Vital Spirit,Hustle
+226	Mantine	70	Swift Swim,Water Absorb
+227	Skarmory	70	Keen Eye,Sturdy
+228	Houndour	65	Early Bird,Flash Fire
+229	Houndoom	95	Early Bird,Flash Fire
+230	Kingdra	85	Swift Swim,Sniper
+231	Phanpy	40	Pickup
+232	Donphan	50	Sturdy
+233	Porygon2	60	Trace,Download
+234	Stantler	85	Intimidate,Frisk
+237	Hitmontop	70	Intimidate,Technician
+238	Smoochum	65	Oblivious,Forewarn
+239	Elekid	95	Static
+240	Magby	83	Flame Body
+241	Miltank	100	Thick Fat,Scrappy
+242	Blissey	55	Natural Cure,Serene Grace
+243	Raikou	115	Pressure
+244	Entei	100	Pressure
+245	Suicune	85	Pressure
+246	Larvitar	41	Guts
+247	Pupitar	51	Shed Skin
+248	Tyranitar	61	Sand Stream
+252	Treecko	70	Overgrow
+253	Grovyle	95	Overgrow
+254	Sceptile	120	Overgrow
+255	Torchic	45	Blaze
+256	Combusken	55	Blaze
+257	Blaziken	80	Blaze
+258	Mudkip	40	Torrent
+259	Marshtomp	50	Torrent
+260	Swampert	60	Torrent
+262	Mightyena	70	Intimidate,Quick Feet
+264	Linoone	100	Pickup,Gluttony
+267	Beautifly	65	Swarm
+269	Dustox	65	Shield Dust
+271	Lombre	50	Swift Swim,Rain Dish
+272	Ludicolo	70	Swift Swim,Rain Dish
+274	Nuzleaf	60	Chlorophyll,Early Bird
+275	Shiftry	80	Chlorophyll,Early Bird
+277	Swellow	125	Guts
+279	Pelipper	65	Keen Eye
+282	Gardevoir	80	Synchronize,Trace
+284	Masquerain	60	Intimidate
+286	Breloom	70	Effect Spore,Poison Heal
+288	Vigoroth	90	Vital Spirit
+289	Slaking	100	Truant
+291	Ninjask	160	Speed Boost
+292	Shedinja	40	Wonder Guard
+294	Loudred	48	Soundproof
+295	Exploud	68	Soundproof
+297	Hariyama	50	Thick Fat,Guts
+299	Nosepass	30	Sturdy,Magnet Pull
+301	Delcatty	70	Cute Charm,Normalize
+302	Sableye	50	Keen Eye,Stall
+303	Mawile	50	Hyper Cutter,Intimidate
+304	Aron	30	Sturdy,Rock Head
+305	Lairon	40	Sturdy,Rock Head
+306	Aggron	50	Sturdy,Rock Head
+308	Medicham	80	Pure Power
+310	Manectric	105	Static,Lightningrod
+311	Plusle	95	Plus
+312	Minun	95	Minus
+313	Volbeat	85	Illuminate,Swarm
+314	Illumise	85	Oblivious,Tinted Lens
+315	Roselia	65	Natural Cure,Poison Point
+317	Swalot	55	Liquid Ooze,Sticky Hold
+318	Carvanha	65	Rough Skin
+319	Sharpedo	95	Rough Skin
+320	Wailmer	60	Water Veil,Oblivious
+321	Wailord	60	Water Veil,Oblivious
+322	Numel	35	Oblivious,Simple
+323	Camerupt	40	Magma Armor,Solid Rock
+324	Torkoal	20	White Smoke
+325	Spoink	60	Thick Fat,Own Tempo
+326	Grumpig	80	Thick Fat,Own Tempo
+327	Spinda	60	Own Tempo,Tangled Feet
+329	Vibrava	70	Levitate
+330	Flygon	100	Levitate
+331	Cacnea	35	Sand Veil
+332	Cacturne	55	Sand Veil
+333	Swablu	50	Natural Cure
+334	Altaria	80	Natural Cure
+335	Zangoose	90	Immunity
+336	Seviper	65	Shed Skin
+337	Lunatone	70	Levitate
+338	Solrock	70	Levitate
+340	Whiscash	60	Oblivious,Anticipation
+341	Corphish	35	Hyper Cutter,Shell Armor
+342	Crawdaunt	55	Hyper Cutter,Shell Armor
+343	Baltoy	55	Levitate
+344	Claydol	75	Levitate
+345	Lileep	23	Suction Cups
+346	Cradily	43	Suction Cups
+347	Anorith	75	Battle Armor
+348	Armaldo	45	Battle Armor
+350	Milotic	81	Marvel Scale
+351	Castform	70	Forecast
+352	Kecleon	40	Color Change
+353	Shuppet	45	Insomnia,Frisk
+354	Banette	65	Insomnia,Frisk
+355	Duskull	25	Levitate
+356	Dusclops	25	Pressure
+357	Tropius	51	Chlorophyll,Solar Power
+358	Chimecho	65	Levitate
+359	Absol	75	Pressure,Super Luck
+361	Snorunt	50	Inner Focus,Ice Body
+362	Glalie	80	Inner Focus,Ice Body
+364	Sealeo	45	Thick Fat,Ice Body
+365	Walrein	65	Thick Fat,Ice Body
+366	Clamperl	32	Shell Armor
+367	Huntail	52	Swift Swim
+368	Gorebyss	52	Swift Swim
+369	Relicanth	55	Swift Swim,Rock Head
+370	Luvdisc	97	Swift Swim
+371	Bagon	50	Rock Head
+372	Shelgon	50	Rock Head
+373	Salamence	100	Intimidate
+375	Metang	50	Clear Body
+376	Metagross	70	Clear Body
+377	Regirock	50	Clear Body
+378	Regice	50	Clear Body
+379	Registeel	50	Clear Body
+380	Latias	110	Levitate
+381	Latios	110	Levitate
+387	Turtwig	31	Overgrow
+388	Grotle	36	Overgrow
+389	Torterra	56	Overgrow
+390	Chimchar	61	Blaze
+391	Monferno	81	Blaze
+392	Infernape	108	Blaze
+393	Piplup	40	Torrent
+394	Prinplup	50	Torrent
+395	Empoleon	60	Torrent
+396	Starly	60	Keen Eye
+397	Staravia	80	Intimidate
+398	Staraptor	100	Intimidate
+399	Bidoof	31	Simple,Unaware
+400	Bibarel	71	Simple,Unaware
+401	Kricketot	25	Shed Skin
+402	Kricketune	65	Swarm
+403	Shinx	45	Rivalry,Intimidate
+404	Luxio	60	Rivalry,Intimidate
+405	Luxray	70	Rivalry,Intimidate
+406	Budew	55	Natural Cure,Poison Point
+407	Roserade	90	Natural Cure,Poison Point
+408	Cranidos	58	Mold Breaker
+409	Rampardos	58	Mold Breaker
+410	Shieldon	30	Sturdy
+411	Bastiodon	30	Sturdy
+412	Burmy	36	Shed Skin
+413	Wormadam	36	Anticipation
+414	Mothim	66	Swarm
+415	Combee	70	Honey Gather
+416	Vespiquen	40	Pressure
+417	Pachirisu	95	Run Away,Pickup
+418	Buizel	85	Swift Swim
+419	Floatzel	115	Swift Swim
+420	Cherubi	35	Chlorophyll
+421	Cherrim	85	Flower Gift
+422	Shellos	34	Sticky Hold,Storm Drain
+423	Gastrodon	39	Sticky Hold,Storm Drain
+424	Ambipom	115	Technician,Pickup
+425	Drifloon	70	Aftermath,Unburden
+426	Drifblim	80	Aftermath,Unburden
+427	Buneary	85	Run Away,Klutz
+428	Lopunny	105	Cute Charm,Klutz
+429	Mismagius	105	Levitate
+430	Honchkrow	71	Insomnia,Super Luck
+431	Glameow	85	Limber,Own Tempo
+432	Purugly	112	Thick Fat,Own Tempo
+433	Chingling	45	Levitate
+434	Stunky	74	Stench,Aftermath
+435	Skuntank	84	Stench,Aftermath
+436	Bronzor	23	Levitate,Heatproof
+437	Bronzong	33	Levitate,Heatproof
+438	Bonsly	10	Sturdy,Rock Head
+439	Mime Jr.	60	Soundproof,Filter
+440	Happiny	30	Natural Cure,Serene Grace
+441	Chatot	91	Keen Eye,Tangled Feet
+443	Gible	42	Sand Veil
+444	Gabite	82	Sand Veil
+445	Garchomp	102	Sand Veil
+446	Munchlax	5	Pickup,Thick Fat
+447	Riolu	60	Steadfast,Inner Focus
+448	Lucario	90	Steadfast,Inner Focus
+449	Hippopotas	32	Sand Stream
+450	Hippowdon	47	Sand Stream
+451	Skorupi	65	Battle Armor,Sniper
+452	Drapion	95	Battle Armor,Sniper
+453	Croagunk	50	Anticipation,Dry Skin
+454	Toxicroak	85	Anticipation,Dry Skin
+455	Carnivine	46	Levitate
+456	Finneon	66	Swift Swim,Storm Drain
+457	Lumineon	91	Swift Swim,Storm Drain
+458	Mantyke	50	Swift Swim,Water Absorb
+459	Snover	40	Snow Warning
+460	Abomasnow	60	Snow Warning
+461	Weavile	125	Pressure
+462	Magnezone	60	Magnet Pull,Sturdy
+463	Lickilicky	50	Own Tempo,Oblivious
+464	Rhyperior	40	Lightningrod,Solid Rock
+465	Tangrowth	50	Chlorophyll,Leaf Guard
+466	Electivire	95	Motor Drive
+467	Magmortar	83	Flame Body
+468	Togekiss	80	Hustle,Serene Grace
+469	Yanmega	95	Speed Boost,Tinted Lens
+470	Leafeon	95	Leaf Guard
+471	Glaceon	65	Snow Cloak
+472	Gliscor	95	Hyper Cutter,Sand Veil
+473	Mamoswine	80	Oblivious,Snow Cloak
+474	Porygon-Z	90	Adaptability,Download
+475	Gallade	80	Steadfast
+476	Probopass	40	Sturdy,Magnet Pull
+477	Dusknoir	45	Pressure
+478	Froslass	110	Snow Cloak
+479	Rotom	91	Levitate
+485	Heatran	77	Flash Fire
+486	Regigigas	100	Slow Start
+488	Cresselia	85	Levitate
