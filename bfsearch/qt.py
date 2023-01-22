@@ -6,9 +6,8 @@ import sys
 import math
 
 from PySide6.QtWidgets import QApplication, QVBoxLayout, QHBoxLayout, QGridLayout, QWidget, QTabWidget, QMainWindow, QDockWidget, QToolBar, QMessageBox, QLabel, QComboBox, QTextEdit, QSizePolicy, QPushButton, QSpinBox, QCheckBox
-from PySide6.QtGui import QIcon, QAction, QActionGroup
+from PySide6.QtGui import QIcon, QAction, QActionGroup, QGuiApplication
 from PySide6.QtCore import Qt, QSize
-import pyperclip
 
 
 from bfsearch import core
@@ -261,7 +260,7 @@ class BrowseSetsPageBase(QWidget):
 
     def copyToClipboard(self):
         if self.currentSet != None:
-            pyperclip.copy(self.currentSet.getShowdownFormat(self.ivBox.value(), hideItem = self.itemCheck.isChecked()))
+            QGuiApplication.clipboard().setText(self.currentSet.getShowdownFormat(self.ivBox.value(), hideItem = self.itemCheck.isChecked()))
             self.clipboardButton.setText(tr("page.all_sets.clipboardButton.copied"))
 
 # browse all sets
