@@ -13,6 +13,7 @@ import pyperclip
 
 from bfsearch import core
 from bfsearch import data
+from bfsearch.translate import getTranslation
 
 
 
@@ -24,8 +25,9 @@ def launch():
 
 
 # translate
-def tr(string):
-    return string
+def tr(key, args = []):
+    return getTranslation(key).format(*args)
+
 
 class Window(QMainWindow):
     def __init__(self):
@@ -39,64 +41,64 @@ class Window(QMainWindow):
         self.setCentralWidget(QTabWidget(self))
 
         # toolbar
-        self.toolbar = QToolBar(tr("Buttons"))
+        self.toolbar = QToolBar(tr("toolbar.name"))
         self.addToolBar(Qt.ToolBarArea.BottomToolBarArea, self.toolbar)
         # about
-        aboutAct = QAction(tr("About"), self)
-        aboutAct.setStatusTip(tr("Show this application's About box"))
+        aboutAct = QAction(tr("toolbarbutton.about.name"), self)
+        aboutAct.setStatusTip(tr("toolbarbutton.about.tooltip"))
         aboutAct.triggered.connect(self.about)
         self.toolbar.addAction(aboutAct)
         # about qt
-        aboutQtAct = QAction(tr("About Qt"), self)
-        aboutQtAct.setStatusTip(tr("Show the Qt library's About box"))
-        aboutQtAct.triggered.connect(QApplication.aboutQt)
+        aboutQtAct = QAction(tr("toolbarbutton.about_qt.name"), self)
+        aboutQtAct.setStatusTip(tr("toolbarbutton.about_qt.tooltip"))
+        aboutQtAct.triggered.connect(QApplication.aboutQt) # how does this get translated?
         self.toolbar.addAction(aboutQtAct)
 
         # start page
         self.welcomePage = QWidget(self)
         self.welcomePage.setLayout(QVBoxLayout())
-        self.buildButton = QPushButton("Click to build data")
+        self.buildButton = QPushButton(tr("page.welcome.buildButton"))
         self.buildButton.clicked.connect(self.build)
         self.textLog = QTextEdit()
         self.textLog.setReadOnly(True)
-        self.textLog.setText("Ready.\n")
-        self.welcomePage.layout().addWidget(QLabel(tr("Welcome. Click the button below to get started.\nAfter building data, additional tabs will appear on the top.")))
+        self.textLog.setText(tr("page.welcome.status.ready"))
+        self.welcomePage.layout().addWidget(QLabel(tr("page.welcome.welcome")))
         self.welcomePage.layout().addWidget(self.buildButton)
         self.welcomePage.layout().addWidget(self.textLog)
-        self.centralWidget().addTab(self.welcomePage, tr("Start Page"))
+        self.centralWidget().addTab(self.welcomePage, tr("page.welcome.name"))
 
     def build(self):
         # clear other tabs
         self.centralWidget().clear()
-        self.centralWidget().addTab(self.welcomePage, tr("Start Page"))
+        self.centralWidget().addTab(self.welcomePage, tr("page.welcome.name"))
         
         self.buildButton.setDisabled(True)
 
-        self.textLog.setText("Parsing...\n")
+        self.textLog.setText(tr("page.welcome.status.parsing"))
         # force updates the text log
         self.textLog.repaint()
 
         # builds data
         result = self.data.fillerup()
         if self.data.isEmpty:
-            self.textLog.setText("Encountered an error while building data!\n    " + result + "\n\nPlease fix the error and try again.\n")
+            self.textLog.setText(tr("page.welcome.status.error", [result]))
         else:
-            self.textLog.setText("Data built successfully.\n")
+            self.textLog.setText(tr("page.welcome.status.done"))
             self.addPages()
 
         self.buildButton.setDisabled(False)
 
     def addPages(self):
         self.browseSetsPage = BrowseAllSetsPage(self, core.SetProvider(0, 31, [], self.data.sets))
-        self.centralWidget().addTab(self.browseSetsPage, QIcon("gui/pokemon.png"), tr("Browse All Sets"))
-        self.centralWidget().setTabToolTip(1, "Browse all possible Pokémon sets.")
+        self.centralWidget().addTab(self.browseSetsPage, QIcon("gui/pokemon.png"), tr("page.all_sets.name"))
+        self.centralWidget().setTabToolTip(1, tr("page.all_sets.tooltip"))
         
         self.browseTrainerSetsPage = BrowseTrainerSetsPage(self, data.battlenumToGroupedSetProviders(self.data.trainers))
-        self.centralWidget().addTab(self.browseTrainerSetsPage, QIcon("gui/trainers.png"), tr("Browse Sets by Trainer"))
-        self.centralWidget().setTabToolTip(2, "Browse Pokémon sets organized by opposing trainers.")
+        self.centralWidget().addTab(self.browseTrainerSetsPage, QIcon("gui/trainers.png"), tr("page.all_sets_by_trainer.name"))
+        self.centralWidget().setTabToolTip(2, tr("page.all_sets_by_trainer.tooltip"))
 
     def about(self):
-        QMessageBox.about(self, tr("About"), tr("This application allows you to search through the possible Pokémon that you can face in the Battle Tower in Platinum, HeartGold, and SoulSilver."))
+        QMessageBox.about(self, tr("toolbarbutton.about.name"), tr("toolbarbutton.about.about"))
 
 # base page for single set browsing
 class BrowseSetsPageBase(QWidget):
@@ -116,7 +118,7 @@ class BrowseSetsPageBase(QWidget):
         self.setSortToggleText()
         self.sortToggle.clicked.connect(self.toggleSorting)
         self.layout().addWidget(self.sortToggle)
-        self.sortToggle.setToolTip("Toggle Pokémon sorting")
+        self.sortToggle.setToolTip(tr("page.all_sets.sortToggle.tooltip"))
 
         setSelect = QHBoxLayout()
         self.layout().addLayout(setSelect)
@@ -124,7 +126,7 @@ class BrowseSetsPageBase(QWidget):
         # species combo box
         self.pokeCombo = QComboBox()
         self.pokeCombo.currentTextChanged.connect(self.handlePokeCombo)
-        self.pokeLabel = QLabel("Pokémon:")
+        self.pokeLabel = QLabel(tr("page.all_sets.pokemon"))
         self.pokeLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
         setSelect.addWidget(self.pokeLabel)
         setSelect.addWidget(self.pokeCombo)
@@ -139,7 +141,7 @@ class BrowseSetsPageBase(QWidget):
         self.ivBox.setRange(0, 31)
         self.ivBox.setValue(31)
         self.ivBox.valueChanged.connect(self.handleIVBox)
-        self.ivLabel = QLabel("IVs:")
+        self.ivLabel = QLabel(tr("page.all_sets.ivs"))
         self.ivLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
         setSelect.addWidget(self.ivLabel)
         setSelect.addWidget(self.ivBox)
@@ -153,17 +155,17 @@ class BrowseSetsPageBase(QWidget):
         self.layout().addLayout(bottomOptions)
 
         # copy to clipboard button
-        self.clipboardButton = QPushButton("Copy set to clipboard")
+        self.clipboardButton = QPushButton("")
         self.clipboardButton.clicked.connect(self.copyToClipboard)
         bottomOptions.addWidget(self.clipboardButton, stretch = 1)
         # current set (for copy to clipboard)
         self.currentSet = None
 
         # hide held items checkbox
-        self.itemCheck = QCheckBox("Hide held items")
+        self.itemCheck = QCheckBox(tr("page.all_sets.itemCheck"))
         self.itemCheck.stateChanged.connect(self.handleItemCheck)
         bottomOptions.addWidget(self.itemCheck)
-        self.itemCheck.setToolTip("Check this box if you're in the Battle Castle or Battle Arcade.\nPokémon in those facilities won't use the held items listed here.")
+        self.itemCheck.setToolTip(tr("page.all_sets.itemCheck.tooltip"))
 
         # set up initial state
         self.updateSet()
@@ -182,9 +184,9 @@ class BrowseSetsPageBase(QWidget):
 
     def setSortToggleText(self):
         if self.alpha:
-            self.sortToggle.setText("Sorting Pokémon alphabetically.")
+            self.sortToggle.setText(tr("page.all_sets.sortToggle.alpha"))
         else:
-            self.sortToggle.setText("Sorting Pokémon by Pokédex number.")
+            self.sortToggle.setText(tr("page.all_sets.sortToggle.dex"))
 
     def getSets(self):
         return self.getSetsAlpha() if self.alpha else self.getSetsDex()
@@ -199,7 +201,7 @@ class BrowseSetsPageBase(QWidget):
     def handlePokeCombo(self):
         if self.pokeCombo.currentText() in self.getSets().keys():
             self.fillComboKeys(self.setCombo, self.getSets()[self.pokeCombo.currentText()])
-            self.setCombo.setToolTip(str(self.setCombo.count()) + " possible set(s)")
+            self.setCombo.setToolTip(tr("page.all_sets.setCombo.tooltip", [self.setCombo.count()]))
         else:
             self.updateSet()
 
@@ -212,17 +214,17 @@ class BrowseSetsPageBase(QWidget):
     def setupIVBox(self, setProvider):
         self.ivBox.setRange(setProvider.minIV, setProvider.maxIV)
         if self.ivBox.minimum() == self.ivBox.maximum():
-            self.ivBox.setToolTip("The IV cannot be changed for these sets.")
+            self.ivBox.setToolTip(tr("page.all_sets.ivBox.tooltip.fixed"))
             self.ivBox.setEnabled(False)
         else:
-            self.ivBox.setToolTip(str(self.ivBox.minimum()) + " - " + str(self.ivBox.maximum()))
+            self.ivBox.setToolTip(tr("page.all_sets.ivBox.tooltip.range", [self.ivBox.minimum(), self.ivBox.maximum()]))
             self.ivBox.setEnabled(True)
 
     def handleItemCheck(self):
         self.updateSet()
 
     def updateSet(self):
-        self.clipboardButton.setText("Copy set to clipboard")
+        self.clipboardButton.setText(tr("page.all_sets.clipboardButton"))
         if self.pokeCombo.currentText() in self.getSets().keys():
             if self.setCombo.currentText().isdecimal() and (int(self.setCombo.currentText()) in self.getSets()[self.pokeCombo.currentText()].keys()):
                 self.currentSet = self.getSets()[self.pokeCombo.currentText()][int(self.setCombo.currentText())]
@@ -230,33 +232,37 @@ class BrowseSetsPageBase(QWidget):
                 string = self.currentSet.getShowdownFormat(self.ivBox.value(), hideItem = hideItem)
                 # speed and modifiers
                 speed = self.currentSet.getSpeed(self.ivBox.value())
-                string += f"\nSpeed (before items/modifiers/abilities): {speed}\n"
+                string += "\n" + tr("page.sets.result.speed", [speed]) + "\n"
                 if not hideItem:
                     if self.currentSet.item == "Choice Scarf":
                         speed = math.floor(speed * 1.5)
-                        string += f"Speed (with Choice Scarf): {speed}\n"
+                        string += tr("page.sets.result.speed.item", ["Choice Scarf", speed]) + "\n"
                     if self.currentSet.item == "Iron Ball":
                         speed = math.floor(speed * 0.5)
-                        string += f"Speed (with Iron Ball): {speed}\n"
+                        string += tr("page.sets.result.speed.item", ["Iron Ball", speed]) + "\n"
                 if "Slow Start" in self.currentSet.species.abilities:
                     speed = math.floor(speed * 0.5)
-                    string += f"Speed (during Slow Start): {speed}\n"
+                    string += tr("page.sets.result.speed.ability", ["Slow Start", speed]) + "\n"
+                if "Unburden" in self.currentSet.species.abilities:
+                    speed = math.floor(speed * 2.0)
+                    string += tr("page.sets.result.speed.ability", ["Unburden", speed]) + "\n"
                 # it's important to say specifically what the possible abilities are because some pokemon have gotten new abilities in new games
                 if not self.currentSet.species.hasOneAbility():
-                    string += f"\nThis Pokemon's ability may be {commaList(self.currentSet.species.abilities)}.\n"
+                    string += "\n" + tr("page.sets.result.abilities", self.currentSet.species.abilities) + "\n"
                 self.output.setText(string)
                 self.clipboardButton.setEnabled(True)
                 self.pokeCombo.setToolTip(str(self.currentSet.species))
                 return
         self.currentSet = None
-        self.output.setText("Nothing doing!")
+        self.output.setText(tr("page.all_sets.empty_results"))
         self.clipboardButton.setEnabled(False)
         self.pokeCombo.setToolTip("")
         self.setCombo.setToolTip("")
 
     def copyToClipboard(self):
-        pyperclip.copy(self.currentSet.getShowdownFormat(self.ivBox.value(), hideItem = self.itemCheck.isChecked()))
-        self.clipboardButton.setText("Copied!")
+        if self.currentSet != None:
+            pyperclip.copy(self.currentSet.getShowdownFormat(self.ivBox.value(), hideItem = self.itemCheck.isChecked()))
+            self.clipboardButton.setText(tr("page.all_sets.clipboardButton.copied"))
 
 # browse all sets
 class BrowseAllSetsPage(BrowseSetsPageBase):
@@ -270,8 +276,8 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
 
         self.setupIVBox(self.getSetProvider())
 
-        self.pokeLabel.setToolTip("The number of possible sets depends on the Pokémon.\nMost Pokémon have 4 possible sets.\nWeaker Pokémon like mid-stage starters have 2 possible sets.\nVery weak Pokémon like first-stage starters have just 1 possible set.")
-        self.ivLabel.setToolTip("Not all IVs are possible in the Battle Frontier.\nA Pokémon's IV depends on their trainer.")
+        self.pokeLabel.setToolTip(tr("page.all_sets.pokemon.tooltip"))
+        self.ivLabel.setToolTip(tr("page.all_sets.ivs.tooltip"))
 
         # set up initial state
         self.fillComboKeys(self.pokeCombo, self.getSets())
@@ -292,7 +298,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         # battle number combo box
         self.battlenumCombo = QComboBox()
         self.battlenumCombo.currentTextChanged.connect(self.handleBattlenumCombo)
-        self.battlenumLabel = QLabel("Battle Number:")
+        self.battlenumLabel = QLabel(tr("page.all_sets_by_trainer.battle_number"))
         self.battlenumLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
         trainerSelect.addWidget(self.battlenumLabel)
         trainerSelect.addWidget(self.battlenumCombo)
@@ -300,7 +306,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         # trainer class combo box
         self.tclassCombo = QComboBox()
         self.tclassCombo.currentTextChanged.connect(self.handleTClassCombo)
-        self.trainerLabel = QLabel("Trainer:")
+        self.trainerLabel = QLabel(tr("page.all_sets_by_trainer.trainer"))
         self.trainerLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
         trainerSelect.addWidget(self.trainerLabel)
         trainerSelect.addWidget(self.tclassCombo)
@@ -310,11 +316,11 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         self.tnameCombo.currentTextChanged.connect(self.handleTNameCombo)
         trainerSelect.addWidget(self.tnameCombo)
 
-        self.battlenumLabel.setToolTip("Before battle 50, most trainers appear in two sets of rounds. For example, Idol Basia can appear in battles 1-6 or 7-13.\nThe 7th battle of each round will use a trainer that can appear in the next round. For example, Black Belt Mason can appear in battle 7, or in battles 8-13 or 15-20.\nOnce you reach battle 50, the trainer at the end of a round isn't any different from the others.")
-        self.trainerLabel.setToolTip("Many trainers of the same class use the same sets of Pokémon.\nFor example: Youngsters Casimir, Erroll, and Jim are all the same.")
+        self.battlenumLabel.setToolTip(tr("page.all_sets_by_trainer.battle_number.tooltip"))
+        self.trainerLabel.setToolTip(tr("page.all_sets_by_trainer.trainer.tooltip"))
 
-        self.pokeLabel.setToolTip("Before battle 50, all trainers use just one possible set for each of their Pokémon.\nOnce you reach battle 50, trainers may have multiple possible sets for each of their Pokémon.")
-        self.ivLabel.setToolTip("A Pokémon's IV depends on their trainer.\nBefore battle 50, trainer IVs start at 3 and each round adds some trainers with the next multiple of 3. By the seventh round, you may face trainers with 21 IVs.\nOnce you reach battle 50, you'll usually be facing trainers with 31 IVs.\nAlso, Tower Tycoon Palmer has 31 IVs in both his battles.")
+        self.pokeLabel.setToolTip(tr("page.all_sets_by_trainer.pokemon.tooltip"))
+        self.ivLabel.setToolTip(tr("page.all_sets_by_trainer.ivs.tooltip"))
 
         # set up initial state
         self.fillComboKeys(self.battlenumCombo, self.getTripleDict())
@@ -360,18 +366,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         self.tnameCombo.setToolTip("")
 
 
-def commaList(alist, useAnd = False):
-    if len(alist) > 0:
-        string = str(alist[0])
-        if len(alist) > 1:
-            for i in range(1, len(alist) - 1):
-                string += ", " + str(alist[i])
-            string += (" and " if useAnd else " or ") + str(alist[-1])
-        return string
-    else:
-        return ""
-
-def commaListSimple(alist):
+def commaList(alist):
     if len(alist) > 0:
         string = str(alist[0])
         if len(alist) > 1:
