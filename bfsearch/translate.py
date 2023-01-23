@@ -7,6 +7,10 @@ import json
 from json.decoder import JSONDecodeError
 
 
+def tr(key, args = []):
+    return getTranslation(key).format(*args)
+
+
 _defaultLang = "lang\\en_US.json"
 _currentLang = _defaultLang
 _langFiles = {}
