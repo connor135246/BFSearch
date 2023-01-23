@@ -1,5 +1,9 @@
 {
 	"toolbar.name": "Buttons",
+	"toolbar.button.language.name": "Default Language",
+	"toolbar.button.language.tooltip": "Change this application's default language",
+	"toolbar.button.language.note": "Select a different translation from the 'lang' folder.\nThen the application will restart.",
+	"toolbar.button.language.note.single": " - Unfortunately, there are no other translation files. :(",
 	"toolbar.button.about.name": "About",
 	"toolbar.button.about.tooltip": "Show this application's About box",
 	"toolbar.button.about.about": "This application allows you to search through the possible Pokémon that you can face in the Battle Tower in Platinum, HeartGold, and SoulSilver.",

@@ -3,21 +3,30 @@
 
 import sys
 
-from PySide6.QtWidgets import QApplication, QVBoxLayout, QWidget, QTabWidget, QMainWindow, QToolBar, QMessageBox, QLabel, QTextEdit, QPushButton
+from PySide6.QtWidgets import QApplication, QVBoxLayout, QWidget, QTabWidget, QMainWindow, QToolBar, QMessageBox, QLabel, QTextEdit, QPushButton, QInputDialog
 from PySide6.QtGui import QIcon, QAction
 from PySide6.QtCore import Qt
 
 from bfsearch import core
 from bfsearch import data
 from bfsearch.qt import browse
+from bfsearch import translate
 from bfsearch.translate import tr
 
 
+# code for recreating the main window. if the application exits with this code, the main window will be recreated.
+RECREATE_CODE = 0x16119
+
 def launch():
     app = QApplication(sys.argv)
-    window = Window()
-    window.show()
-    sys.exit(app.exec())
+    currentCode = RECREATE_CODE
+    while currentCode == RECREATE_CODE:
+        window = Window()
+        window.show()
+        currentCode = app.exec()
+        window.hide()
+        del window
+    sys.exit()
 
 
 class Window(QMainWindow):
@@ -34,6 +43,8 @@ class Window(QMainWindow):
         # toolbar buttons #todo: icons
         self.toolBar = QToolBar(tr("toolbar.name"))
         self.addToolBar(Qt.ToolBarArea.BottomToolBarArea, self.toolBar)
+        # language
+        self.addToolBarButton(tr("toolbar.button.language.name"), tr("toolbar.button.language.tooltip"), self.language)
         # about
         self.addToolBarButton(tr("toolbar.button.about.name"), tr("toolbar.button.about.tooltip"), self.about)
         # about qt
@@ -87,6 +98,19 @@ class Window(QMainWindow):
         self.browseTrainerSetsPage = browse.BrowseTrainerSetsPage(self, data.battlenumToGroupedSetProviders(self.data.trainers))
         self.centralWidget().addTab(self.browseTrainerSetsPage, QIcon("gui/trainers.png"), tr("page.all_sets_by_trainer.name"))
         self.centralWidget().setTabToolTip(2, tr("page.all_sets_by_trainer.tooltip"))
+
+    def language(self):
+        prettyDict = translate.prettyLangsDict()
+        note = tr("toolbar.button.language.note")
+        if len(prettyDict) <= 1:
+            note +="\n" + tr("toolbar.button.language.note.single")
+        prettyLang, ok = QInputDialog.getItem(self, tr("toolbar.button.language.tooltip"), note, prettyDict.keys(), translate.currentLangIndex(), False)
+        if ok and prettyLang:
+            lang = prettyDict[prettyLang]
+            if lang != translate.currentLang:
+                translate.currentLang = lang
+                # also put it in a .cfg?
+                QApplication.exit(RECREATE_CODE)
 
     def about(self):
         QMessageBox.about(self, tr("toolbar.button.about.name"), tr("toolbar.button.about.about"))

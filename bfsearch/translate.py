@@ -2,53 +2,68 @@
 
 
 import glob
-
 import json
 from json.decoder import JSONDecodeError
+
+from babel import Locale, UnknownLocaleError
 
 
 def tr(key, args = []):
     return getTranslation(key).format(*args)
 
 
-_defaultLang = "lang\\en_US.json"
-_currentLang = _defaultLang
-_langFiles = {}
+baseLang = "en_US"
+langFiles = {}
+currentLang = baseLang
 
 
 def getTranslation(key):
-    if key in _langFiles[_currentLang].keys():
-        return _langFiles[_currentLang][key]
-    elif _currentLang != _defaultLang and key in _langFiles[_defaultLang]:
-        return _langFiles[_defaultLang][key]
+    if key in langFiles[currentLang].keys():
+        return langFiles[currentLang][key]
+    elif currentLang != baseLang and key in langFiles[baseLang]:
+        return langFiles[baseLang][key]
     else:
         return key
 
 
 def loadLangFiles():
-    _langFiles.clear()
+    langFiles.clear()
     for filename in glob.glob('lang/*.json'):
         try:
             langFile = json.load(open(filename, "r", encoding = "UTF-8"))
-            _langFiles[filename] = langFile
+            identifier = filename[5:-5]
+            if identifier != '':
+                langFiles[identifier] = langFile
         # todo: log.
-        except OSError:
-            pass
+        except OSError as e:
+            print(e)
         except JSONDecodeError as e:
-            pass
+            print(e)
         except TypeError as e:
-            pass
+            print(e)
 
-    if _defaultLang not in _langFiles.keys():
-        raise Exception("Unable to open default lang file '" + _defaultLang + "'!")
-
-
-def availableLangs():
-    return _langFiles.keys()
+    if baseLang not in langFiles.keys():
+        raise Exception("Unable to open base lang file 'lang/" + baseLang + ".json'!")
 
 
-def swapLangFile(newLang):
-    if newLang in availableLangs():
-        _currentLang = newLang
-    else:
-        print("Not an available language!")
+def langs():
+    return langFiles.keys()
+
+def prettyLangsDict():
+    prettyDict = {}
+    for lang in langs():
+        try:
+            locale = Locale.parse(lang)
+            prettyName = locale.get_display_name(locale)
+        except UnknownLocaleError:
+            prettyName = lang
+        except ValueError:
+            prettyName = lang
+        prettyDict[prettyName + " [" + lang + ".json]"] = lang
+    return prettyDict
+
+def currentLangIndex():
+    try:
+        return list(langs()).index(currentLang)
+    except ValueError:
+        return 0
