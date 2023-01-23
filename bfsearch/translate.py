@@ -31,7 +31,7 @@ def loadLangFiles():
         try:
             langFile = json.load(open(filename, "r", encoding = "UTF-8"))
             _langFiles[filename] = langFile
-        # todo: log. 
+        # todo: log.
         except OSError:
             pass
         except JSONDecodeError as e:
@@ -52,5 +52,3 @@ def swapLangFile(newLang):
         _currentLang = newLang
     else:
         print("Not an available language!")
-
-

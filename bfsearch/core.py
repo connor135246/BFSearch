@@ -31,7 +31,7 @@ class Stat(IntEnum):
     SpA = 3
     SpD = 4
     Spe = 5
-    
+
 class Nature(Enum):
     Hardy = (Stat.Atk, Stat.Atk)
     Lonely = (Stat.Atk, Stat.Def)
@@ -173,39 +173,39 @@ class BattleNum(Enum):
         try:
             return BattleNum(str(num))
         except ValueError:
-            if num in range(1,7):
-                return s1
-            elif num in range(8,14):
-                return s2
-            elif num in range(15,21):
-                return s3
-            elif num in range(22,28):
-                return s4
-            elif num in range(29,35):
-                return s5
-            elif num in range(36,42):
-                return s6
-            elif num in range(43,49):
-                return s7
+            if num in range(1, 7):
+                return BattleNum.s1
+            elif num in range(8, 14):
+                return BattleNum.s2
+            elif num in range(15, 21):
+                return BattleNum.s3
+            elif num in range(22, 28):
+                return BattleNum.s4
+            elif num in range(29, 35):
+                return BattleNum.s5
+            elif num in range(36, 42):
+                return BattleNum.s6
+            elif num in range(43, 49):
+                return BattleNum.s7
             elif num > 49:
-                return s99
+                return BattleNum.s99
             else:
                 raise Exception("Unknown battle range!")
 
     def isEnder(self):
-        return self == e1 or self == e2 or self == e3 or self == e4 or self == e5 or self == e6 or self == e7 or self.isBeyond()
+        return self == BattleNum.e1 or self == BattleNum.e2 or self == BattleNum.e3 or self == BattleNum.e4 or self == BattleNum.e5 or self == BattleNum.e6 or self == BattleNum.e7 or self.isBeyond()
 
     def isBeyond(self):
-        return self == s99
+        return self == BattleNum.s99
 
     def toEnder(self):
-        if isEnder(self):
+        if self.isEnder():
             return self
         else:
             return list(BattleNum)[list(BattleNum).index(self) + 1]
 
     def isBrainBattle(self):
-        return self == e3 or self == e7
+        return self == BattleNum.e3 or self == BattleNum.e7
 
 # base class of trainer that doesn't have tid, tclass, or tname.
 class SetProvider(object):
@@ -255,4 +255,3 @@ class TrainersPokeSet(object):
     def getSpeed(self, level = 50):
         return self.pokeset.getSpeed(self.trainer.iv, level = level)
 '''
-

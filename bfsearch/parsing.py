@@ -56,7 +56,7 @@ def getDictKey(adict, key, datafile, path):
         return adict[key]
     except KeyError:
         raise MissingDataException(datafile, "Key '{}' missing from json object {}", [key, path])
-    
+
 
 class InvalidDataException(DataException):
     pass
@@ -124,11 +124,11 @@ def buildData():
 
     for species_obj in verifyLen(verifyList(getDictKey(raw_species_data, 'species', datafile, "{HERE}"), InvalidDataException(datafile, "Missing 'species' (object list)", [])), 1, InvalidDataException(datafile, "Empty 'species' (object list)", [])):
         path = '{"species":[{HERE}]}'
-        
+
         dex = verifyInt(getDictKey(species_obj, 'dex', datafile, path), InvalidDataException(datafile, "Species '{}' is missing 'dex' (number)", [getDictKey(species_obj, 'name', datafile, path)]))
 
         name = verifyNonEmptyString(getDictKey(species_obj, 'name', datafile, path), InvalidDataException(datafile, "Species with Pokedex number '{}' is missing 'species' (string)", [dex]))
-        
+
         speed = verifyInt(getDictKey(species_obj, 'speed', datafile, path), InvalidDataException(datafile, "Species '{}' is missing 'speed' (number)", [name]))
         if speed < 1:
             raise InvalidDataException(datafile, "Species '{}' has negative 'speed' (number)", [name])
@@ -143,7 +143,7 @@ def buildData():
     sets = {}
     datafile = DataFile.sets
     raw_sets_data = getFileJson(datafile)
-    
+
     for set_obj in verifyLen(verifyList(getDictKey(raw_sets_data, 'sets', datafile, "{HERE}"), InvalidDataException(datafile, "Missing 'sets' (object list)", [])), 1, InvalidDataException(datafile, "Empty 'sets' (object list)", [])):
         path = '{"sets":[{HERE}]}'
 
@@ -224,4 +224,3 @@ def buildData():
 
 
     return (species, sets, trainers)
-

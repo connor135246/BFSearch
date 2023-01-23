@@ -3,9 +3,9 @@
 
 import math
 
-from PySide6.QtWidgets import QApplication, QVBoxLayout, QHBoxLayout, QGridLayout, QWidget, QTabWidget, QMainWindow, QDockWidget, QToolBar, QMessageBox, QLabel, QComboBox, QTextEdit, QSizePolicy, QPushButton, QSpinBox, QCheckBox
-from PySide6.QtGui import QIcon, QAction, QActionGroup, QGuiApplication
-from PySide6.QtCore import Qt, QSize
+from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QWidget, QLabel, QComboBox, QTextEdit, QPushButton, QSpinBox, QCheckBox
+from PySide6.QtGui import QGuiApplication
+from PySide6.QtCore import Qt
 
 from bfsearch import data
 from bfsearch.translate import tr
@@ -20,7 +20,7 @@ class BrowseSetsPageBase(QWidget):
         self.setsA = {}
         # dex number organized sets
         self.setsD = {}
-        
+
         self.setLayout(QVBoxLayout(self))
 
         # sort toggle button
@@ -120,7 +120,7 @@ class BrowseSetsPageBase(QWidget):
     # when the species combo box updates, tells the set combo box to update
     def handlePokeCombo(self):
         setsData = data.digForData(self.getSets(), [self.pokeCombo.currentText()])
-        if setsData != None:
+        if setsData is not None:
             self.fillComboKeys(self.setCombo, setsData)
             self.setCombo.setToolTip(tr("page.all_sets.setCombo.tooltip", [self.setCombo.count()]))
         else:
@@ -138,7 +138,7 @@ class BrowseSetsPageBase(QWidget):
     def updateSet(self):
         self.clipboardButton.setText(tr("page.all_sets.clipboardButton"))
         self.currentSet = data.digForData(self.getSets(), [self.pokeCombo.currentText(), int(self.setCombo.currentText())]) if self.setCombo.currentText().isdecimal() else None
-        if self.currentSet != None:
+        if self.currentSet is not None:
             hideItem = self.itemCheck.isChecked()
             string = self.currentSet.getShowdownFormat(self.ivBox.value(), hideItem = hideItem)
             # speed and modifiers
@@ -173,7 +173,7 @@ class BrowseSetsPageBase(QWidget):
         self.setCombo.setToolTip("")
 
     def copyToClipboard(self):
-        if self.currentSet != None:
+        if self.currentSet is not None:
             QGuiApplication.clipboard().setText(self.currentSet.getShowdownFormat(self.ivBox.value(), hideItem = self.itemCheck.isChecked()))
             self.clipboardButton.setText(tr("page.all_sets.clipboardButton.copied"))
 
@@ -230,7 +230,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
     # when the battle number combo box updates, tells the trainer class combo box to update
     def handleBattlenumCombo(self):
         tclassData = data.digForData(self.bTSP(), [self.battlenumCombo.currentText()])
-        if tclassData != None:
+        if tclassData is not None:
             self.fillComboKeys(self.tclassCombo, tclassData)
         else:
             self.clearTrainerResults()
@@ -238,7 +238,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
     # when the trainer class combo box updates, tells the trainer name combo box to update
     def handleTClassCombo(self):
         tnameData = data.digForData(self.bTSP(), [self.battlenumCombo.currentText(), self.tclassCombo.currentText()])
-        if tnameData != None:
+        if tnameData is not None:
             self.fillComboKeys(self.tnameCombo, tnameData)
         else:
             self.clearTrainerResults()
@@ -248,7 +248,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
 
     def updateTrainer(self):
         currentProvider = data.digForData(self.bTSP(), [self.battlenumCombo.currentText(), self.tclassCombo.currentText(), self.tnameCombo.currentText()])
-        if currentProvider != None:
+        if currentProvider is not None:
             self.setsA = data.setsAlphaSorted(currentProvider.sets)
             self.setsD = data.setsDexSorted(currentProvider.sets)
             # when the trainer selection updates, tells the species combo box to update

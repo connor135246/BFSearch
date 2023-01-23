@@ -11,9 +11,9 @@ from bfsearch import parsing
 
 class DataHolder(object):
     def __init__(self):
-        #true if it has data!
+        # true if it has data!
         self.isEmpty = True
-        
+
         # dictionary of '{name}' to Species
         self.species = {}
         # dictionary of '{name}' to dictionary of '{pset}' to Pokeset
@@ -142,7 +142,7 @@ def groupedSetProviders(trainers):
                     gSP[trainer.tclass].pop(entry[0])
                     gSP[trainer.tclass][entry[0] + ", " + trainer.tname] = trainer.asSetProvider()
                     break
-            else: # what the fuck
+            else:  # what the fuck
                 gSP[trainer.tclass][trainer.tname] = trainer.asSetProvider()
     return gSP
 
@@ -160,4 +160,3 @@ def battlenumToGroupedSetProviders(trainers):
                         bTGSP[battlenum.value][gSPentry[0]] = {}
                     bTGSP[battlenum.value][gSPentry[0]][gSPsubentry[0]] = gSPsubentry[1]
     return bTGSP
-

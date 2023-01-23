@@ -3,15 +3,14 @@
 
 import sys
 
-from PySide6.QtWidgets import QApplication, QVBoxLayout, QHBoxLayout, QGridLayout, QWidget, QTabWidget, QMainWindow, QDockWidget, QToolBar, QMessageBox, QLabel, QComboBox, QTextEdit, QSizePolicy, QPushButton, QSpinBox, QCheckBox
-from PySide6.QtGui import QIcon, QAction, QActionGroup, QGuiApplication
-from PySide6.QtCore import Qt, QSize
+from PySide6.QtWidgets import QApplication, QVBoxLayout, QWidget, QTabWidget, QMainWindow, QToolBar, QMessageBox, QLabel, QTextEdit, QPushButton
+from PySide6.QtGui import QIcon, QAction
+from PySide6.QtCore import Qt
 
 from bfsearch import core
 from bfsearch import data
 from bfsearch.qt import browse
 from bfsearch.translate import tr
-
 
 
 def launch():
@@ -26,7 +25,7 @@ class Window(QMainWindow):
         super().__init__()
 
         self.data = data.DataHolder()
-    
+
         self.resize(750, 450)
         self.setWindowTitle("BFSearch")
         self.setWindowIcon(QIcon("gui/icon.png"))
@@ -38,7 +37,7 @@ class Window(QMainWindow):
         # about
         self.addToolBarButton(tr("toolbar.button.about.name"), tr("toolbar.button.about.tooltip"), self.about)
         # about qt
-        self.addToolBarButton(tr("toolbar.button.about_qt.name"), tr("toolbar.button.about_qt.tooltip"), QApplication.aboutQt) # how does this get translated?
+        self.addToolBarButton(tr("toolbar.button.about_qt.name"), tr("toolbar.button.about_qt.tooltip"), QApplication.aboutQt)  # how does this get translated?
 
         # start page
         self.welcomePage = QWidget(self)
@@ -65,7 +64,7 @@ class Window(QMainWindow):
         # clear other tabs
         self.centralWidget().clear()
         self.centralWidget().addTab(self.welcomePage, tr("page.welcome.name"))
-        
+
         self.textLog.setText(tr("page.welcome.status.parsing"))
         # force updates the text log
         self.textLog.repaint()
@@ -84,7 +83,7 @@ class Window(QMainWindow):
         self.browseSetsPage = browse.BrowseAllSetsPage(self, core.SetProvider(0, 31, [], self.data.sets))
         self.centralWidget().addTab(self.browseSetsPage, QIcon("gui/pokemon.png"), tr("page.all_sets.name"))
         self.centralWidget().setTabToolTip(1, tr("page.all_sets.tooltip"))
-        
+
         self.browseTrainerSetsPage = browse.BrowseTrainerSetsPage(self, data.battlenumToGroupedSetProviders(self.data.trainers))
         self.centralWidget().addTab(self.browseTrainerSetsPage, QIcon("gui/trainers.png"), tr("page.all_sets_by_trainer.name"))
         self.centralWidget().setTabToolTip(2, tr("page.all_sets_by_trainer.tooltip"))
@@ -102,4 +101,3 @@ def commaList(alist):
         return string
     else:
         return ""
-
