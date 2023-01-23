@@ -1,10 +1,10 @@
 {
 	"toolbar.name": "Buttons",
-	"toolbarbutton.about.name": "About",
-	"toolbarbutton.about.tooltip": "Show this application's About box",
-	"toolbarbutton.about.about": "This application allows you to search through the possible Pokémon that you can face in the Battle Tower in Platinum, HeartGold, and SoulSilver.",
-	"toolbarbutton.about_qt.name": "About Qt",
-	"toolbarbutton.about_qt.tooltip": "Show the Qt library's About box",
+	"toolbar.button.about.name": "About",
+	"toolbar.button.about.tooltip": "Show this application's About box",
+	"toolbar.button.about.about": "This application allows you to search through the possible Pokémon that you can face in the Battle Tower in Platinum, HeartGold, and SoulSilver.",
+	"toolbar.button.about_qt.name": "About Qt",
+	"toolbar.button.about_qt.tooltip": "Show the Qt library's About box",
 
 	"page.welcome.name": "Start Page",
 	"page.welcome.welcome": "Welcome. Click the button below to get started.\nAfter building data, additional tabs will appear on the top.",
@@ -35,7 +35,7 @@
 	"page.sets.result.speed": "Speed (before items/modifiers/abilities): {0}",
 	"page.sets.result.speed.item": "Speed (with {0}): {1}",
 	"page.sets.result.speed.ability": "Speed (during {0}): {1}",
-	"page.sets.result.abilities": "This Pokemon's ability may be {0} or {1}.",
+	"page.sets.result.abilities": "This Pokémon's ability may be {0} or {1}.",
 
 	"page.all_sets_by_trainer.name": "Browse Sets by Trainer",
 	"page.all_sets_by_trainer.tooltip": "Browse Pokémon sets organized by opposing trainers.",

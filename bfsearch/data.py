@@ -33,7 +33,7 @@ class DataHolder(object):
             return e.__class__.__name__ + ": " + str(e)
 
 
-# general sorters.
+# general methods.
 
 def sorted_dict(adict):
     return dict(sorted(adict.items(), key = itemgetter(0)))
@@ -50,6 +50,17 @@ def list_from_double_dict(doubledict):
         for subdictvalue in list(dictvalues.values()):
             thelist.append(subdictvalue)
     return thelist
+
+# digs through a dict of dicts of dicts (and so on) recursively using the given keys.
+# returns None if a key isn't valid.
+def digForData(data, keys):
+    try:
+        try:
+            return digForData(data[keys[0]], keys[1:])
+        except IndexError:
+            return data[keys[0]]
+    except KeyError:
+        return None
 
 
 # data sorters.
