@@ -30,7 +30,7 @@ class DataHolder(object):
         except parsing.DataException as e:
             self.species, self.sets, self.trainers = {}, {}, {}
             self.isEmpty = True
-            return e.__class__.__name__ + ": " + str(e)
+            return e.__class__.__name__ + " - " + str(e)
 
 
 # general methods.

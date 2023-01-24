@@ -6,6 +6,7 @@ import json
 from json.decoder import JSONDecodeError
 
 from bfsearch import core
+from bfsearch.translate import tr
 
 
 # data integrity.
@@ -22,13 +23,13 @@ class DataException(Exception):
         self.objs = objs
 
     def __str__(self):
-        return f"'{self.getDataFile()}' error: {self.getFormattedMessage()}"
+        return tr("parsing.error", [self.getDataFile(), self.getFormattedMessage()])
 
     def getDataFile(self):
         return f"{self.datafile.name}.json"
 
     def getFormattedMessage(self):
-        return self.message.format(*self.objs)
+        return tr(self.message, self.objs)
 
 
 class FileException(DataException):
@@ -40,12 +41,12 @@ class JsonException(DataException):
 def getFileJson(datafile):
     try:
         return json.load(open("data/" + datafile.name + '.json', 'r', encoding = 'UTF-8'))
-    except OSError:
-        raise FileException(datafile, "Unable to open file! Is it missing?", [])
+    except OSError as e:
+        raise FileException(datafile, "parsing.error.file", [e])
     except JSONDecodeError as e:
-        raise JsonException(datafile, "JSON Error! {}", [e])
+        raise JsonException(datafile, "parsing.error.json", [e])
     except TypeError as e:
-        raise JsonException(datafile, "JSON Error! {}", [e])
+        raise JsonException(datafile, "parsing.error.json", [e])
 
 
 class MissingDataException(DataException):
@@ -55,7 +56,7 @@ def getDictKey(adict, key, datafile, path):
     try:
         return adict[key]
     except KeyError:
-        raise MissingDataException(datafile, "Key '{}' missing from json object {}", [key, path])
+        raise MissingDataException(datafile, "parsing.error.missing_data", [key, path])
 
 
 class InvalidDataException(DataException):
@@ -122,21 +123,21 @@ def buildData():
     datafile = DataFile.species
     raw_species_data = getFileJson(datafile)
 
-    for species_obj in verifyLen(verifyList(getDictKey(raw_species_data, 'species', datafile, "{HERE}"), InvalidDataException(datafile, "Missing 'species' (object list)", [])), 1, InvalidDataException(datafile, "Empty 'species' (object list)", [])):
-        path = '{"species":[{HERE}]}'
+    for species_obj in verifyLen(verifyList(getDictKey(raw_species_data, 'species', datafile, "{*}"), InvalidDataException(datafile, "parsing.error.species.missing", [])), 1, InvalidDataException(datafile, "parsing.error.species.size", [])):
+        path = '{"species":[{*}]}'
 
-        dex = verifyInt(getDictKey(species_obj, 'dex', datafile, path), InvalidDataException(datafile, "Species '{}' is missing 'dex' (number)", [getDictKey(species_obj, 'name', datafile, path)]))
+        dex = verifyInt(getDictKey(species_obj, 'dex', datafile, path), InvalidDataException(datafile, "parsing.error.species.dex.missing", [getDictKey(species_obj, 'name', datafile, path)]))
 
-        name = verifyNonEmptyString(getDictKey(species_obj, 'name', datafile, path), InvalidDataException(datafile, "Species with Pokedex number '{}' is missing 'species' (string)", [dex]))
+        name = verifyNonEmptyString(getDictKey(species_obj, 'name', datafile, path), InvalidDataException(datafile, "parsing.error.species.name.missing", [dex]))
 
-        speed = verifyInt(getDictKey(species_obj, 'speed', datafile, path), InvalidDataException(datafile, "Species '{}' is missing 'speed' (number)", [name]))
+        speed = verifyInt(getDictKey(species_obj, 'speed', datafile, path), InvalidDataException(datafile, "parsing.error.species.speed.missing", [name]))
         if speed < 1:
-            raise InvalidDataException(datafile, "Species '{}' has negative 'speed' (number)", [name])
+            raise InvalidDataException(datafile, "parsing.error.species.speed.invalid", [name, speed])
 
-        abilities = verifyMany(verifyLen(verifyList(getDictKey(species_obj, 'abilities', datafile, path), InvalidDataException(datafile, "Species '{}' is missing 'abilities' (string list)", [name])), 1, InvalidDataException(datafile, "Species '{}' has empty 'abilities' (string list)", [name])), verifyNonEmptyString, InvalidDataException(datafile, "Species '{}' has invalid entry in 'abilities' (string list)", [name]))
+        abilities = verifyMany(verifyLen(verifyList(getDictKey(species_obj, 'abilities', datafile, path), InvalidDataException(datafile, "parsing.error.species.abilities.missing", [name])), 1, InvalidDataException(datafile, "parsing.error.species.abilities.size", [name])), verifyNonEmptyString, InvalidDataException(datafile, "parsing.error.species.abilities.invalid", [name]))
 
         if name in species.keys():
-            raise InvalidDataException(datafile, "Duplicate 'species' (string): '{}'", [name])
+            raise InvalidDataException(datafile, "parsing.error.species.name.duplicate", [name])
         species[name] = core.Species(dex, name, speed, abilities)
 
 
@@ -144,35 +145,35 @@ def buildData():
     datafile = DataFile.sets
     raw_sets_data = getFileJson(datafile)
 
-    for set_obj in verifyLen(verifyList(getDictKey(raw_sets_data, 'sets', datafile, "{HERE}"), InvalidDataException(datafile, "Missing 'sets' (object list)", [])), 1, InvalidDataException(datafile, "Empty 'sets' (object list)", [])):
-        path = '{"sets":[{HERE}]}'
+    for set_obj in verifyLen(verifyList(getDictKey(raw_sets_data, 'sets', datafile, "{*}"), InvalidDataException(datafile, "parsing.error.sets.missing", [])), 1, InvalidDataException(datafile, "parsing.error.sets.size", [])):
+        path = '{"sets":[{*}]}'
 
-        sid = verifyInt(getDictKey(set_obj, 'id', datafile, path), InvalidDataException(datafile, "Set '{} {}' is missing 'id' (number)", [getDictKey(set_obj, 'species', datafile, path), getDictKey(set_obj, 'set', datafile, path)]))
+        sid = verifyInt(getDictKey(set_obj, 'id', datafile, path), InvalidDataException(datafile, "parsing.error.sets.id.missing", [getDictKey(set_obj, 'species', datafile, path), getDictKey(set_obj, 'set', datafile, path)]))
         for aname in sets.keys():
             for apset in sets[aname].keys():
                 if sid == sets[aname][apset].sid:
-                    raise InvalidDataException(datafile, "Duplicate 'id' (number): '{}'", [sid])
+                    raise InvalidDataException(datafile, "parsing.error.sets.id.duplicate", [sid])
 
-        name = verifyNonEmptyString(getDictKey(set_obj, 'species', datafile, path), InvalidDataException(datafile, "Set id '{}' is missing 'species' (string)", [sid]))
+        name = verifyNonEmptyString(getDictKey(set_obj, 'species', datafile, path), InvalidDataException(datafile, "parsing.error.sets.species.missing", [sid]))
         if name not in species.keys():
-            raise InvalidDataException(datafile, "Set id '{}' uses 'species' named '{}' which was not registered 'species.json'", [sid, name])
+            raise InvalidDataException(datafile, "parsing.error.sets.species.unregistered", [sid, name])
 
-        pset = verifyInt(getDictKey(set_obj, 'set', datafile, path), InvalidDataException(datafile, "Set id '{}' is missing 'set' (number)", [sid]))
+        pset = verifyInt(getDictKey(set_obj, 'set', datafile, path), InvalidDataException(datafile, "parsing.error.sets.set.missing", [sid]))
 
-        nature = verifyEnumName(getDictKey(set_obj, 'nature', datafile, path), core.Nature, InvalidDataException(datafile, "Set id '{}' has invalid 'nature': '{}'", [sid, getDictKey(set_obj, 'nature', datafile, path)]))
+        nature = verifyEnumName(getDictKey(set_obj, 'nature', datafile, path), core.Nature, InvalidDataException(datafile, "parsing.error.sets.nature.invalid", [sid, getDictKey(set_obj, 'nature', datafile, path)]))
 
-        item = verifyNonEmptyString(getDictKey(set_obj, 'item', datafile, path), InvalidDataException(datafile, "Set id '{}' is missing 'item' (string)", [sid]))
+        item = verifyNonEmptyString(getDictKey(set_obj, 'item', datafile, path), InvalidDataException(datafile, "parsing.error.sets.item.missing", [sid]))
 
-        moves = verifyMany(verifyLenRange(verifyList(getDictKey(set_obj, 'moves', datafile, path), InvalidDataException(datafile, "Set id '{}' is missing 'moves' (string list)", [sid])), 1, 4, InvalidDataException(datafile, "Set id '{}' should have 1 to 4 entries in 'moves' (string list)", [sid])), verifyNonEmptyString, InvalidDataException(datafile, "Set id '{}' has invalid entry in 'moves' (string list)", [sid]))
+        moves = verifyMany(verifyLenRange(verifyList(getDictKey(set_obj, 'moves', datafile, path), InvalidDataException(datafile, "parsing.error.sets.moves.missing", [sid])), 1, 4, InvalidDataException(datafile, "parsing.error.sets.moves.size", [sid])), verifyNonEmptyString, InvalidDataException(datafile, "parsing.error.sets.moves.invalid", [sid]))
 
-        evs = verifyLenRange(verifyList(getDictKey(set_obj, 'evs', datafile, path), InvalidDataException(datafile, "Set id '{}' is missing 'evs' (string list)", [sid])), 2, 3, InvalidDataException(datafile, "Set id '{}' should have 2 to 3 entries in 'evs' (string list)", [sid]))
+        evs = verifyLenRange(verifyList(getDictKey(set_obj, 'evs', datafile, path), InvalidDataException(datafile, "parsing.error.sets.evs.missing", [sid])), 2, 3, InvalidDataException(datafile, "parsing.error.sets.evs.size", [sid]))
         for i in range(len(evs)):
-            evs[i] = verifyEnumName(evs[i], core.Stat, InvalidDataException(datafile, "Set id '{}' has invalid entry '{}' in 'evs' (string list)", [sid, evs[i]]))
+            evs[i] = verifyEnumName(evs[i], core.Stat, InvalidDataException(datafile, "parsing.error.sets.evs.invalid", [sid, evs[i]]))
 
         if name not in sets.keys():
             sets[name] = {}
         if pset in sets[name].keys():
-            raise InvalidDataException(datafile, "Duplicate 'set' (number): '{}' for species '{}'", [pset, name])
+            raise InvalidDataException(datafile, "parsing.error.sets.set.duplicate", [pset, name])
         sets[name][pset] = core.PokeSet(sid, species[name], pset, nature, item, moves, core.EVStats(evs))
 
 
@@ -180,46 +181,46 @@ def buildData():
     datafile = DataFile.trainers
     raw_trainer_data = getFileJson(datafile)
 
-    for trainer_obj in verifyLen(verifyList(getDictKey(raw_trainer_data, 'trainers', datafile, "{HERE}"), InvalidDataException(datafile, "Missing'trainers' (object list)", [])), 1, InvalidDataException(datafile, "Empty 'trainers' (object list)", [])):
-        path = '{"trainers":[{HERE}]}'
+    for trainer_obj in verifyLen(verifyList(getDictKey(raw_trainer_data, 'trainers', datafile, "{*}"), InvalidDataException(datafile, "parsing.error.trainers.missing", [])), 1, InvalidDataException(datafile, "parsing.error.trainers.size", [])):
+        path = '{"trainers":[{*}]}'
 
-        tid = verifyInt(getDictKey(trainer_obj, 'id', datafile, path), InvalidDataException(datafile, "Trainer '{} {}' is missing 'id' (number)", [getDictKey(trainer_obj, 'class', datafile, path), getDictKey(trainer_obj, 'name', datafile, path)]))
+        tid = verifyInt(getDictKey(trainer_obj, 'id', datafile, path), InvalidDataException(datafile, "parsing.error.trainers.id.missing", [getDictKey(trainer_obj, 'class', datafile, path), getDictKey(trainer_obj, 'name', datafile, path)]))
         for atclass in trainers.keys():
             for atname in trainers[atclass].keys():
                 if tid == trainers[atclass][atname].tid:
-                    raise InvalidDataException(datafile, "Duplicate 'id' (number): '{}'", [tid])
+                    raise InvalidDataException(datafile, "parsing.error.trainers.id.duplicate", [tid])
 
-        iv = verifyInt(getDictKey(trainer_obj, 'iv', datafile, path), InvalidDataException(datafile, "Trainer id '{}' is missing 'iv' (number)", [tid]))
+        iv = verifyInt(getDictKey(trainer_obj, 'iv', datafile, path), InvalidDataException(datafile, "parsing.error.trainers.iv.missing", [tid]))
         if iv < 0 or iv > 31:
-            raise InvalidDataException(datafile, "Trainer id '{}' should have 'iv' (number) between 0 and 31", [tid])
+            raise InvalidDataException(datafile, "parsing.error.trainers.iv.invalid", [tid, iv])
 
-        tclass = verifyNonEmptyString(getDictKey(trainer_obj, 'class', datafile, path), InvalidDataException(datafile, "Trainer id '{}' is missing 'class' (string)", [tid]))
+        tclass = verifyNonEmptyString(getDictKey(trainer_obj, 'class', datafile, path), InvalidDataException(datafile, "parsing.error.trainers.class.missing", [tid]))
 
-        tname = verifyNonEmptyString(getDictKey(trainer_obj, 'name', datafile, path), InvalidDataException(datafile, "Trainer id '{}' is missing 'name' (string)", [tid]))
+        tname = verifyNonEmptyString(getDictKey(trainer_obj, 'name', datafile, path), InvalidDataException(datafile, "parsing.error.trainers.name.missing", [tid]))
 
-        battles = verifyLen(verifyList(getDictKey(trainer_obj, 'battles', datafile, path), InvalidDataException(datafile, "Trainer id '{}' is missing 'battles' (string list)", [tid])), 1, InvalidDataException(datafile, "Trainer id '{}' has empty 'battles' (string list)", [tid]))
+        battles = verifyLen(verifyList(getDictKey(trainer_obj, 'battles', datafile, path), InvalidDataException(datafile, "parsing.error.trainers.battles.missing", [tid])), 1, InvalidDataException(datafile, "parsing.error.trainers.battles.size", [tid]))
         for i in range(len(battles)):
-            battles[i] = verifyEnumValue(str(battles[i]), core.BattleNum, InvalidDataException(datafile, "Trainer id '{}' has invalid entry '{}' in 'battles' (string list)", [tid, battles[i]]))
+            battles[i] = verifyEnumValue(str(battles[i]), core.BattleNum, InvalidDataException(datafile, "parsing.error.trainers.battles.invalid", [tid, battles[i]]))
 
-        pokemon = verifyLen(verifyDict(getDictKey(trainer_obj, 'pokemon', datafile, path), InvalidDataException(datafile, "Trainer id '{}' has invalid Pokemon sets object", [tid])), 1, InvalidDataException(datafile, "Trainer id '{}' has empty 'pokemon' (object list)", [tid]))
+        pokemon = verifyLen(verifyDict(getDictKey(trainer_obj, 'pokemon', datafile, path), InvalidDataException(datafile, "parsing.error.trainers.pokemon.missing", [tid])), 1, InvalidDataException(datafile, "parsing.error.trainers.pokemon.size", [tid]))
         pokemondict = {}
         for entry in pokemon.items():
             if entry[0] in sets.keys():
-                pokemonsets = verifyLen(verifyList(entry[1], InvalidDataException(datafile, "Trainer id '{}' is missing string list of sets for species '{}'", [tid, entry[0]])), 1, InvalidDataException(datafile, "Trainer id '{}' has empty string list of sets for species '{}'", [tid, entry[0]]))
+                pokemonsets = verifyMany(verifyLen(verifyList(entry[1], InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.set.missing", [tid, entry[0]])), 1, InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.set.size", [tid, entry[0]])), verifyInt, InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.set.invalid", [tid, entry[0]])) 
                 if entry[0] not in pokemondict.keys():
                     pokemondict[entry[0]] = {}
                 for pokemonset in pokemonsets:
                     if pokemonset in sets[entry[0]].keys():
                         pokemondict[entry[0]][pokemonset] = sets[entry[0]][pokemonset]
                     else:
-                        raise InvalidDataException(datafile, "Trainer id '{}' uses set '{} {}' which was not registered 'sets.json'", [tid, entry[0], pokemonset])
+                        raise InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.set.unregistered", [tid, entry[0], pokemonset])
             else:
-                raise InvalidDataException(datafile, "Trainer id '{}' uses species '{}' which has no sets in 'sets.json'", [tid, entry[0]])
+                raise InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.unregistered", [tid, entry[0]])
 
         if tclass not in trainers.keys():
             trainers[tclass] = {}
         if tname in trainers[tclass].keys():
-            raise InvalidDataException(datafile, "Duplicate trainer '{} {}'", [tclass, tname])
+            raise InvalidDataException(datafile, "parsing.error.trainers.duplicate", [tclass, tname])
         trainers[tclass][tname] = core.Trainer(tid, iv, tclass, tname, battles, pokemondict)
 
 
