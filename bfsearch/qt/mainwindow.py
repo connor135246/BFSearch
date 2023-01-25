@@ -3,7 +3,7 @@
 
 import sys
 
-from PySide6.QtWidgets import QApplication, QVBoxLayout, QWidget, QTabWidget, QMainWindow, QToolBar, QMessageBox, QLabel, QTextEdit, QPushButton, QInputDialog
+from PySide6.QtWidgets import QApplication, QVBoxLayout, QWidget, QTabWidget, QMainWindow, QToolBar, QMessageBox, QLabel, QTextEdit, QPushButton, QInputDialog, QStyle
 from PySide6.QtGui import QIcon, QAction
 from PySide6.QtCore import Qt
 
@@ -40,15 +40,16 @@ class Window(QMainWindow):
         self.setWindowIcon(QIcon("gui/icon.png"))
         self.setCentralWidget(QTabWidget(self))
 
-        # toolbar buttons #todo: icons
+        # toolbar buttons
         self.toolBar = QToolBar(tr("toolbar.name"))
+        self.toolBar.setToolButtonStyle(Qt.ToolButtonTextUnderIcon)
         self.addToolBar(Qt.ToolBarArea.BottomToolBarArea, self.toolBar)
         # language
-        self.addToolBarButton(tr("toolbar.button.language.name"), tr("toolbar.button.language.tooltip"), self.language)
+        self.addToolBarButton(QIcon("gui/language.png"), tr("toolbar.button.language.name"), tr("toolbar.button.language.tooltip"), self.language)
         # about
-        self.addToolBarButton(tr("toolbar.button.about.name"), tr("toolbar.button.about.tooltip"), self.about)
+        self.addToolBarButton(QIcon("gui/about.png"), tr("toolbar.button.about.name"), tr("toolbar.button.about.tooltip"), self.about)
         # about qt
-        self.addToolBarButton(tr("toolbar.button.about_qt.name"), tr("toolbar.button.about_qt.tooltip"), QApplication.aboutQt)  # how does this get translated?
+        self.addToolBarButton(self.style().standardIcon(QStyle.SP_TitleBarMenuButton), tr("toolbar.button.about_qt.name"), tr("toolbar.button.about_qt.tooltip"), QApplication.aboutQt)  # how does this get translated?
 
         # start page
         self.welcomePage = QWidget(self)
@@ -63,8 +64,8 @@ class Window(QMainWindow):
         self.welcomePage.layout().addWidget(self.textLog)
         self.centralWidget().addTab(self.welcomePage, tr("page.welcome.name"))
 
-    def addToolBarButton(self, name, tooltip, connect):
-        toolBarButton = QAction(name, self)
+    def addToolBarButton(self, icon, name, tooltip, connect):
+        toolBarButton = QAction(icon, name, self)
         toolBarButton.setToolTip(tooltip)
         toolBarButton.triggered.connect(connect)
         self.toolBar.addAction(toolBarButton)

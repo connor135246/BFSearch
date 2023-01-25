@@ -1,6 +1,10 @@
 icon.png
 https://archives.bulbagarden.net/wiki/File:Battle_terrain_Battle_Tower_PtHGSS.png
 pokemon.png
-https://bulbapedia.bulbagarden.net/wiki/File:Spr_4p_460_m.png
+https://archives.bulbagarden.net/wiki/File:Spr_4p_460_m.png
 trainers.png
-https://bulbapedia.bulbagarden.net/wiki/File:Spr_HGSS_Ace_Trainer_F.png
+https://archives.bulbagarden.net/wiki/File:Spr_HGSS_Ace_Trainer_F.png
+language.png
+https://archives.bulbagarden.net/wiki/File:Globe_Sprite_DPPt.png
+about.png
+https://archives.bulbagarden.net/wiki/File:HGSS_Question_Mark_Sprite.png

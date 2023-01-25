@@ -1,7 +1,7 @@
 {
 	"toolbar.name": "Buttons",
-	"toolbar.button.language.name": "Default Language",
-	"toolbar.button.language.tooltip": "Change this application's default language",
+	"toolbar.button.language.name": "Language",
+	"toolbar.button.language.tooltip": "Change this application's language",
 	"toolbar.button.language.note": "Select a different translation from the 'lang' folder.\nThen the application will restart.",
 	"toolbar.button.language.note.single": " - Unfortunately, there are no other translation files. :(",
 	"toolbar.button.about.name": "About",
