@@ -1,0 +1,2 @@
+Errors will be written to log files in this folder.
+Check here if something goes wrong.

@@ -2,16 +2,15 @@
 
 
 import sys
+import logging
 
 from PySide6.QtWidgets import QApplication, QVBoxLayout, QWidget, QTabWidget, QMainWindow, QToolBar, QMessageBox, QLabel, QTextEdit, QPushButton, QInputDialog, QStyle
 from PySide6.QtGui import QIcon, QAction
 from PySide6.QtCore import Qt
 
-from bfsearch import core
-from bfsearch import data
-from bfsearch.qt import browse
-from bfsearch import translate
+from bfsearch import core, data, translate
 from bfsearch.translate import tr
+from bfsearch.qt import browse
 
 
 # code for recreating the main window. if the application exits with this code, the main window will be recreated.
@@ -19,6 +18,7 @@ RECREATE_CODE = 0x16119
 
 def launch():
     app = QApplication(sys.argv)
+    logging.info("Starting!")
     currentCode = RECREATE_CODE
     while currentCode == RECREATE_CODE:
         window = Window()
@@ -26,6 +26,7 @@ def launch():
         currentCode = app.exec()
         window.hide()
         del window
+    logging.info("Stopping!")
     sys.exit()
 
 
@@ -110,7 +111,9 @@ class Window(QMainWindow):
             lang = prettyDict[prettyLang]
             if lang != translate.currentLang:
                 translate.currentLang = lang
+                logging.info("Changed language!")
                 # also put it in a .cfg?
+                logging.info("Restarting!")
                 QApplication.exit(RECREATE_CODE)
 
     def about(self):

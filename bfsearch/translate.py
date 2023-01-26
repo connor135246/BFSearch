@@ -4,6 +4,7 @@
 import glob
 import json
 from json.decoder import JSONDecodeError
+import logging
 
 from babel import Locale, UnknownLocaleError
 
@@ -23,6 +24,7 @@ def getTranslation(key):
     elif currentLang != baseLang and key in langFiles[baseLang]:
         return langFiles[baseLang][key]
     else:
+        logging.warning("Translation key '%s' does not exist in language file", key)
         return key
 
 
@@ -36,14 +38,14 @@ def loadLangFiles():
                 langFiles[identifier] = langFile
         # todo: log.
         except OSError as e:
-            print(e)
+            logging.warning("Unable to open lang file '%s' - %s", filename, e)
         except JSONDecodeError as e:
-            print(e)
+            logging.warning("Json error when parsing lang file '%s' - %s", filename, e)
         except TypeError as e:
-            print(e)
+            logging.warning("Json error when parsing lang file '%s' - %s", filename, e)
 
     if baseLang not in langFiles.keys():
-        raise Exception("Unable to open base lang file 'lang/" + baseLang + ".json'!")
+        raise FileNotFoundError("Unable to open base lang file 'lang\\" + baseLang + ".json'")
 
 
 def langs():

@@ -1,10 +1,10 @@
 # data
 
 
+import logging
 from operator import itemgetter
 
-from bfsearch import core
-from bfsearch import parsing
+from bfsearch import core, parsing
 
 
 # data container.
@@ -26,10 +26,12 @@ class DataHolder(object):
         try:
             self.species, self.sets, self.trainers = parsing.buildData()
             self.isEmpty = False
+            logging.info("Built data!")
             return ""
         except parsing.DataException as e:
             self.species, self.sets, self.trainers = {}, {}, {}
             self.isEmpty = True
+            logging.warning(e, exc_info = True)
             return e.__class__.__name__ + " - " + str(e)
 
 
