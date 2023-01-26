@@ -1,10 +1,8 @@
 # translate
 
 
-import glob
-import json
+import glob, json, logging
 from json.decoder import JSONDecodeError
-import logging
 
 from babel import Locale, UnknownLocaleError
 

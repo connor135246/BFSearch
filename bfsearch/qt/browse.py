@@ -152,11 +152,9 @@ class BrowseSetsPageBase(QWidget):
                     speed = math.floor(speed * 0.5)
                     string += tr("page.sets.result.speed.item", ["Iron Ball", speed]) + "\n"
             if "Slow Start" in self.currentSet.species.abilities:
-                speed = math.floor(speed * 0.5)
-                string += tr("page.sets.result.speed.ability", ["Slow Start", speed]) + "\n"
+                string += tr("page.sets.result.speed.ability", ["Slow Start", math.floor(speed * 0.5)]) + "\n"
             if "Unburden" in self.currentSet.species.abilities:
-                speed = math.floor(speed * 2.0)
-                string += tr("page.sets.result.speed.ability", ["Unburden", speed]) + "\n"
+                string += tr("page.sets.result.speed.ability", ["Unburden", math.floor(speed * 2.0)]) + "\n"
             # it's important to say specifically what the possible abilities are because some pokemon have gotten new abilities in new games
             if not self.currentSet.species.hasOneAbility():
                 string += "\n" + tr("page.sets.result.abilities", self.currentSet.species.abilities) + "\n"

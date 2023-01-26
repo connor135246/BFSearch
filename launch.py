@@ -1,9 +1,7 @@
 # launch
 
 
-import sys
-import logging
-import datetime
+import sys, logging, datetime
 
 from bfsearch.qt import mainwindow
 from bfsearch import translate

@@ -3,7 +3,7 @@
 	"toolbar.button.language.name": "Language",
 	"toolbar.button.language.tooltip": "Change this application's language",
 	"toolbar.button.language.note": "Select a different translation from the 'lang' folder.\nThen the application will restart.",
-	"toolbar.button.language.note.single": " - Unfortunately, there are no other translation files. :(",
+	"toolbar.button.language.note.single": "--- Unfortunately, there are no other translation files. :( ---",
 	"toolbar.button.about.name": "About",
 	"toolbar.button.about.tooltip": "Show this application's About box",
 	"toolbar.button.about.linkButton": "Damage Calculator",

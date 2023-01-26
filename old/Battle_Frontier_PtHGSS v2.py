@@ -618,6 +618,15 @@ def main():
                     alltrainers[trainer[2]] = []
                 alltrainers[trainer[2]].append(trainer[3])
             print(str(alltrainers).replace("],", "]\n   ").replace(":", " ="))
+
+        # count
+        elif x == '5':
+            uniques = []
+            for i in range(len(merged_data)):
+                if [merged_data[i][0], merged_data[i][15][2]] not in uniques:
+                    uniques.append([merged_data[i][0], merged_data[i][15][2]])
+            print("Total individual Pokemon held by all trainers: " + str(len(merged_data))) # 16119
+            print("Total 'unique' (a set with a certain iv) Pokemon: " + str(len(uniques))) # 1585
         '''
         
 
