@@ -5,7 +5,7 @@ import sys
 import logging
 
 from PySide6.QtWidgets import QApplication, QVBoxLayout, QWidget, QTabWidget, QMainWindow, QToolBar, QMessageBox, QLabel, QTextEdit, QPushButton, QInputDialog, QStyle
-from PySide6.QtGui import QIcon, QAction
+from PySide6.QtGui import QIcon, QAction, QGuiApplication
 from PySide6.QtCore import Qt
 
 from bfsearch import core, data, translate
@@ -117,7 +117,12 @@ class Window(QMainWindow):
                 QApplication.exit(RECREATE_CODE)
 
     def about(self):
-        QMessageBox.about(self, tr("toolbar.button.about.name"), tr("toolbar.button.about.about"))
+        about = QMessageBox(QMessageBox.Information, tr("toolbar.button.about.name"), tr("toolbar.button.about.about"), buttons = QMessageBox.StandardButton.Ok, parent = self)
+        linkButton = about.addButton(tr("toolbar.button.about.linkButton"), QMessageBox.ActionRole)
+        about.setEscapeButton(QMessageBox.Ok)
+        about.exec()
+        if about.clickedButton() == linkButton:
+            QGuiApplication.clipboard().setText("https://calc.pokemonshowdown.com/index.html?gen=4")
 
 
 def commaList(alist):
