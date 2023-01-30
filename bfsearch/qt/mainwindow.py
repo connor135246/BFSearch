@@ -7,7 +7,7 @@ from PySide6.QtWidgets import QApplication, QVBoxLayout, QWidget, QTabWidget, QM
 from PySide6.QtGui import QIcon, QAction, QGuiApplication
 from PySide6.QtCore import Qt
 
-from bfsearch import core, data, translate
+from bfsearch import core, data, translate, settings
 from bfsearch.translate import tr
 from bfsearch.qt import browse
 
@@ -111,7 +111,8 @@ class Window(QMainWindow):
             if lang != translate.currentLang:
                 translate.currentLang = lang
                 logging.info("Changed language!")
-                # also put it in a .cfg?
+                settings.settings[translate.settingsKey] = lang
+                settings.save()
                 logging.info("Restarting!")
                 QApplication.exit(RECREATE_CODE)
 
