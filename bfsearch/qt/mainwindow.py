@@ -92,7 +92,7 @@ class Window(QMainWindow):
         self.buildButton.setDisabled(False)
 
     def addOtherPages(self):
-        self.browseSetsPage = browse.BrowseAllSetsPage(self, core.SetProvider(0, 31, [], self.data.sets))
+        self.browseSetsPage = browse.BrowseAllSetsPage(self, data.genericSetProvider(self.data.sets))
         self.centralWidget().addTab(self.browseSetsPage, QIcon("gui/pokemon.png"), tr("page.all_sets.name"))
         self.centralWidget().setTabToolTip(1, tr("page.all_sets.tooltip"))
 

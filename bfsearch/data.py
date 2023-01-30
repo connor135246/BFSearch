@@ -42,8 +42,8 @@ def sorted_dict(adict):
 
 def sorted_double_dict(doubledict):
     sorteddoubledict = {}
-    for adict in doubledict.items():
-        sorteddoubledict[adict[0]] = sorted_dict(adict[1])
+    for key, nextDict in doubledict.items():
+        sorteddoubledict[key] = sorted_dict(nextDict)
     return sorted_dict(sorteddoubledict)
 
 def list_from_double_dict(doubledict):
@@ -63,6 +63,9 @@ def digForData(data, keys):
             return data[keys[0]]
     except KeyError:
         return None
+
+# empty or generic key in a dict
+emptyKey = "---"
 
 
 # data sorters.
@@ -87,8 +90,8 @@ def setsAlphaSortedList(sets):
 
 def setsDexSorted(sets):
     sorteddoubledict = {}
-    for adict in sets.items():
-        sorteddoubledict[adict[0]] = sorted_dict(adict[1])
+    for key, nextDict in sets.items():
+        sorteddoubledict[key] = sorted_dict(nextDict)
     return dict(sorted(sorteddoubledict.items(), key = lambda subdict: subdict[1][list(subdict[1].keys())[0]].species.dex))
 
 def setsDexSortedList(sets):
@@ -116,11 +119,14 @@ def allItems(sets):
         allItems.add(aset.item)
     return sorted(allItems)
 
+def genericSetProvider(sets):
+    return core.SetProvider(0, 31, list(core.BattleNum), sets)
+
 # returns a triple dict of {BattleNum.value} to {tclass} to {tname} to Trainer.
 # trainers that appear in more than one BattleNum will appear multiple times.
 def battlenumToTrainers(trainers):
     bTT = {}
-    bTT["All"] = trainersAlphaSorted(trainers)
+    bTT[emptyKey] = trainersAlphaSorted(trainers)
     for battlenum in list(core.BattleNum):
         bTT[battlenum.value] = {}
         for trainer in trainersAlphaSortedList(trainers):
@@ -139,10 +145,10 @@ def groupedSetProviders(trainers):
             gSP[trainer.tclass] = {}
             gSP[trainer.tclass][trainer.tname] = trainer.asSetProvider()
         else:
-            for entry in gSP[trainer.tclass].items():
-                if entry[1].isIdenticalProvider(trainer):
-                    gSP[trainer.tclass].pop(entry[0])
-                    gSP[trainer.tclass][entry[0] + ", " + trainer.tname] = trainer.asSetProvider()
+            for tnames, setProvider in gSP[trainer.tclass].items():
+                if setProvider.isIdenticalProvider(trainer):
+                    gSP[trainer.tclass].pop(tnames)
+                    gSP[trainer.tclass][tnames + ", " + trainer.tname] = trainer.asSetProvider()
                     break
             else:  # what the fuck
                 gSP[trainer.tclass][trainer.tname] = trainer.asSetProvider()
@@ -152,13 +158,13 @@ def groupedSetProviders(trainers):
 def battlenumToGroupedSetProviders(trainers):
     gSP = groupedSetProviders(trainers)
     bTGSP = {}
-    bTGSP["All"] = gSP
+    bTGSP[emptyKey] = gSP
     for battlenum in list(core.BattleNum):
         bTGSP[battlenum.value] = {}
-        for gSPentry in gSP.items():
-            for gSPsubentry in gSPentry[1].items():
-                if battlenum in gSPsubentry[1].battlenums:
-                    if gSPentry[0] not in bTGSP[battlenum.value].keys():
-                        bTGSP[battlenum.value][gSPentry[0]] = {}
-                    bTGSP[battlenum.value][gSPentry[0]][gSPsubentry[0]] = gSPsubentry[1]
+        for tclass, nextDict in gSP.items():
+            for tnames, setProvider in nextDict.items():
+                if battlenum in setProvider.battlenums:
+                    if tclass not in bTGSP[battlenum.value].keys():
+                        bTGSP[battlenum.value][tclass] = {}
+                    bTGSP[battlenum.value][tclass][tnames] = setProvider
     return bTGSP
