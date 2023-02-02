@@ -484,7 +484,7 @@ def main():
     #print (merged_data[0])
     #print (merged_data[1000])
     #print (merged_data[-1])
-    #print ("total individual pokemon held by all trainers: " + str(len(merged_data))) # 16119 pokemon! there are, of course, many duplicates.
+    #print ("total individual pokemon held by all trainers: " + str(len(merged_data))) # 16117 pokemon! there are, of course, many duplicates.
 
     print ("-Ready!")
     
@@ -603,12 +603,6 @@ def main():
             sets_out.close()
             print ("Output to 'all sets output.txt'.")
 
-        else:
-            print ("-Invalid entry!")
-
-        rewait()
-            
-
         '''
         # print trainers as a dictionary
         elif x == '4':
@@ -625,10 +619,23 @@ def main():
             for i in range(len(merged_data)):
                 if [merged_data[i][0], merged_data[i][15][2]] not in uniques:
                     uniques.append([merged_data[i][0], merged_data[i][15][2]])
-            print("Total individual Pokemon held by all trainers: " + str(len(merged_data))) # 16119
+            print("Total individual Pokemon held by all trainers: " + str(len(merged_data))) # 16117
             print("Total 'unique' (a set with a certain iv) Pokemon: " + str(len(uniques))) # 1585
+
+            count_out = open('count_out.json', 'w')
+            count_out.write('{\n')
+            for i in range(len(merged_data)):
+                count_out.write('"' + merged_data[i][15][1] + "'s " + merged_data[i][3] + '": ""')
+                if i != len(merged_data) - 1:
+                    count_out.write(",\n")
+            count_out.write("\n}")
+            count_out.close()
         '''
-        
+
+        else:
+            print ("-Invalid entry!")
+
+        rewait()        
 
 # run it!
 main()

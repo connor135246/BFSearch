@@ -13,7 +13,7 @@ from bfsearch.qt import browse
 
 
 # code for recreating the main window. if the application exits with this code, the main window will be recreated.
-RECREATE_CODE = 0x16119
+RECREATE_CODE = 0x16117
 
 def launch():
     app = QApplication(sys.argv)
