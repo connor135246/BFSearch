@@ -204,18 +204,18 @@ def buildData():
 
         pokemon = verifyLen(verifyDict(getDictKey(trainer_obj, 'pokemon', datafile, path), InvalidDataException(datafile, "parsing.error.trainers.pokemon.missing", [tid])), 1, InvalidDataException(datafile, "parsing.error.trainers.pokemon.size", [tid]))
         pokemondict = {}
-        for entry in pokemon.items():
-            if entry[0] in sets.keys():
-                pokemonsets = verifyMany(verifyLen(verifyList(entry[1], InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.set.missing", [tid, entry[0]])), 1, InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.set.size", [tid, entry[0]])), verifyInt, InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.set.invalid", [tid, entry[0]])) 
-                if entry[0] not in pokemondict.keys():
-                    pokemondict[entry[0]] = {}
+        for pname, pentries in pokemon.items():
+            if pname in sets.keys():
+                pokemonsets = verifyMany(verifyLen(verifyList(pentries, InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.set.missing", [tid, pname])), 1, InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.set.size", [tid, pname])), verifyInt, InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.set.invalid", [tid, pname])) 
+                if pname not in pokemondict.keys():
+                    pokemondict[pname] = {}
                 for pokemonset in pokemonsets:
-                    if pokemonset in sets[entry[0]].keys():
-                        pokemondict[entry[0]][pokemonset] = sets[entry[0]][pokemonset]
+                    if pokemonset in sets[pname].keys():
+                        pokemondict[pname][pokemonset] = sets[pname][pokemonset]
                     else:
-                        raise InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.set.unregistered", [tid, entry[0], pokemonset])
+                        raise InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.set.unregistered", [tid, pname, pokemonset])
             else:
-                raise InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.unregistered", [tid, entry[0]])
+                raise InvalidDataException(datafile, "parsing.error.trainers.pokemon.species.unregistered", [tid, pname])
 
         if tclass not in trainers.keys():
             trainers[tclass] = {}
