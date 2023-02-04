@@ -5,7 +5,7 @@ from enum import IntEnum
 import json
 from json.decoder import JSONDecodeError
 
-from bfsearch import core
+from bfsearch import core, data
 from bfsearch.translate import tr
 
 
@@ -64,9 +64,10 @@ class InvalidDataException(DataException):
 
 def verifyInt(value, excep):
     if type(value) is int or (type(value) is str and value.isdecimal()):
-        return int(value)
-    else:
-        raise excep
+        num = int(value)
+        if num > 0:
+            return num
+    raise excep
 
 def verifyList(value, excep):
     if type(value) is list:
@@ -80,10 +81,10 @@ def verifyDict(value, excep):
     else:
         raise excep
 
-def verifyNonEmptyString(value, excep):
+def verifyValidString(value, excep):
     if type(value) is str:
         value = value.strip()
-        if value != '':
+        if value != '' and value != data.emptyKey: # data.emptyKey is reserved
             return value
     raise excep
 
@@ -128,13 +129,11 @@ def buildData():
 
         dex = verifyInt(getDictKey(species_obj, 'dex', datafile, path), InvalidDataException(datafile, "parsing.error.species.dex.missing", [getDictKey(species_obj, 'name', datafile, path)]))
 
-        name = verifyNonEmptyString(getDictKey(species_obj, 'name', datafile, path), InvalidDataException(datafile, "parsing.error.species.name.missing", [dex]))
+        name = verifyValidString(getDictKey(species_obj, 'name', datafile, path), InvalidDataException(datafile, "parsing.error.species.name.missing", [dex]))
 
         speed = verifyInt(getDictKey(species_obj, 'speed', datafile, path), InvalidDataException(datafile, "parsing.error.species.speed.missing", [name]))
-        if speed < 1:
-            raise InvalidDataException(datafile, "parsing.error.species.speed.invalid", [name, speed])
 
-        abilities = verifyMany(verifyLen(verifyList(getDictKey(species_obj, 'abilities', datafile, path), InvalidDataException(datafile, "parsing.error.species.abilities.missing", [name])), 1, InvalidDataException(datafile, "parsing.error.species.abilities.size", [name])), verifyNonEmptyString, InvalidDataException(datafile, "parsing.error.species.abilities.invalid", [name]))
+        abilities = verifyMany(verifyLen(verifyList(getDictKey(species_obj, 'abilities', datafile, path), InvalidDataException(datafile, "parsing.error.species.abilities.missing", [name])), 1, InvalidDataException(datafile, "parsing.error.species.abilities.size", [name])), verifyValidString, InvalidDataException(datafile, "parsing.error.species.abilities.invalid", [name]))
 
         if name in species.keys():
             raise InvalidDataException(datafile, "parsing.error.species.name.duplicate", [name])
@@ -154,7 +153,7 @@ def buildData():
                 if sid == sets[aname][apset].sid:
                     raise InvalidDataException(datafile, "parsing.error.sets.id.duplicate", [sid])
 
-        name = verifyNonEmptyString(getDictKey(set_obj, 'species', datafile, path), InvalidDataException(datafile, "parsing.error.sets.species.missing", [sid]))
+        name = verifyValidString(getDictKey(set_obj, 'species', datafile, path), InvalidDataException(datafile, "parsing.error.sets.species.missing", [sid]))
         if name not in species.keys():
             raise InvalidDataException(datafile, "parsing.error.sets.species.unregistered", [sid, name])
 
@@ -162,9 +161,9 @@ def buildData():
 
         nature = verifyEnumName(getDictKey(set_obj, 'nature', datafile, path), core.Nature, InvalidDataException(datafile, "parsing.error.sets.nature.invalid", [sid, getDictKey(set_obj, 'nature', datafile, path)]))
 
-        item = verifyNonEmptyString(getDictKey(set_obj, 'item', datafile, path), InvalidDataException(datafile, "parsing.error.sets.item.missing", [sid]))
+        item = verifyValidString(getDictKey(set_obj, 'item', datafile, path), InvalidDataException(datafile, "parsing.error.sets.item.missing", [sid]))
 
-        moves = verifyMany(verifyLenRange(verifyList(getDictKey(set_obj, 'moves', datafile, path), InvalidDataException(datafile, "parsing.error.sets.moves.missing", [sid])), 1, 4, InvalidDataException(datafile, "parsing.error.sets.moves.size", [sid])), verifyNonEmptyString, InvalidDataException(datafile, "parsing.error.sets.moves.invalid", [sid]))
+        moves = verifyMany(verifyLenRange(verifyList(getDictKey(set_obj, 'moves', datafile, path), InvalidDataException(datafile, "parsing.error.sets.moves.missing", [sid])), 1, 4, InvalidDataException(datafile, "parsing.error.sets.moves.size", [sid])), verifyValidString, InvalidDataException(datafile, "parsing.error.sets.moves.invalid", [sid]))
 
         evs = verifyLenRange(verifyList(getDictKey(set_obj, 'evs', datafile, path), InvalidDataException(datafile, "parsing.error.sets.evs.missing", [sid])), 2, 3, InvalidDataException(datafile, "parsing.error.sets.evs.size", [sid]))
         for i in range(len(evs)):
@@ -194,9 +193,9 @@ def buildData():
         if iv < 0 or iv > 31:
             raise InvalidDataException(datafile, "parsing.error.trainers.iv.invalid", [tid, iv])
 
-        tclass = verifyNonEmptyString(getDictKey(trainer_obj, 'class', datafile, path), InvalidDataException(datafile, "parsing.error.trainers.class.missing", [tid]))
+        tclass = verifyValidString(getDictKey(trainer_obj, 'class', datafile, path), InvalidDataException(datafile, "parsing.error.trainers.class.missing", [tid]))
 
-        tname = verifyNonEmptyString(getDictKey(trainer_obj, 'name', datafile, path), InvalidDataException(datafile, "parsing.error.trainers.name.missing", [tid]))
+        tname = verifyValidString(getDictKey(trainer_obj, 'name', datafile, path), InvalidDataException(datafile, "parsing.error.trainers.name.missing", [tid]))
 
         battles = verifyLen(verifyList(getDictKey(trainer_obj, 'battles', datafile, path), InvalidDataException(datafile, "parsing.error.trainers.battles.missing", [tid])), 1, InvalidDataException(datafile, "parsing.error.trainers.battles.size", [tid]))
         for i in range(len(battles)):
