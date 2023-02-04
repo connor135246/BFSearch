@@ -23,9 +23,10 @@ def getTranslation(key):
     if key in langFiles[currentLang].keys():
         return langFiles[currentLang][key]
     elif currentLang != defaultLang and key in langFiles[defaultLang].keys():
+        logging.info("Translation key '%s' does not exist in current language file, using default language file instead", key)
         return langFiles[defaultLang][key]
     else:
-        logging.warning("Translation key '%s' does not exist in language file", key)
+        logging.warning("Translation key '%s' does not exist", key)
         return key
 
 

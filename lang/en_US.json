@@ -61,12 +61,13 @@
 	"parsing.error.trainers.duplicate": "Duplicate trainer '{0} {1}'",
 
 	"page.welcome.name": "Start Page",
-	"page.welcome.welcome": "Welcome. Click the button below to get started.\nAfter building data, additional tabs will appear on the top.",
-	"page.welcome.buildButton": "Click to build data",
+	"page.welcome.welcome": "Welcome. Click the button below to load data.\nOnce completed, additional tabs will appear on the top.",
+	"page.welcome.buildButton": "Click to load data",
 	"page.welcome.status.ready": "Ready.\n",
 	"page.welcome.status.parsing": "Parsing...\n",
-	"page.welcome.status.done": "Data built successfully.\n",
-	"page.welcome.status.error": "Encountered an error while building data!\n    {0}\n\nPlease fix the error and try again.\n",
+	"page.welcome.status.building": "Building...\n",
+	"page.welcome.status.done": "Loading complete.\n",
+	"page.welcome.status.error": "Encountered an error while parsing data!\n    {0}\n\nPlease fix the error and try again.\n",
 
 	"page.all_sets.name": "Browse All Sets",
 	"page.all_sets.tooltip": "Browse all possible Pokémon sets.",

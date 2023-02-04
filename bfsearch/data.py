@@ -26,7 +26,7 @@ class DataHolder(object):
         try:
             self.species, self.sets, self.trainers = parsing.buildData()
             self.isEmpty = False
-            logging.info("Built data!")
+            logging.info("Parsed data!")
             return ""
         except parsing.DataException as e:
             self.species, self.sets, self.trainers = {}, {}, {}

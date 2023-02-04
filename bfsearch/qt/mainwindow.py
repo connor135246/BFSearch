@@ -78,7 +78,6 @@ class Window(QMainWindow):
         self.centralWidget().addTab(self.welcomePage, tr("page.welcome.name"))
 
         self.textLog.setText(tr("page.welcome.status.parsing"))
-        # force updates the text log
         self.textLog.repaint()
 
         # builds data
@@ -86,8 +85,10 @@ class Window(QMainWindow):
         if self.data.isEmpty:
             self.textLog.setText(tr("page.welcome.status.error", [result]))
         else:
-            self.textLog.setText(tr("page.welcome.status.done"))
+            self.textLog.setText(tr("page.welcome.status.building"))
+            self.textLog.repaint()
             self.addOtherPages()
+            self.textLog.setText(tr("page.welcome.status.done"))
 
         self.buildButton.setDisabled(False)
 
@@ -99,6 +100,8 @@ class Window(QMainWindow):
         self.browseTrainerSetsPage = browse.BrowseTrainerSetsPage(self, data.battlenumToGroupedSetProviders(self.data.trainers))
         self.centralWidget().addTab(self.browseTrainerSetsPage, QIcon("gui/trainers.png"), tr("page.all_sets_by_trainer.name"))
         self.centralWidget().setTabToolTip(2, tr("page.all_sets_by_trainer.tooltip"))
+
+        logging.info("Built data!")
 
     def language(self):
         prettyDict = translate.prettyLangsDict()
