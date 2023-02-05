@@ -11,31 +11,115 @@ from bfsearch import data
 from bfsearch.translate import tr
 
 
-# base page for single set browsing
-class BrowseSetsPageBase(QWidget):
+def getSetResultString(the_set, iv, hideItem):
+    string = the_set.getShowdownFormat(iv, hideItem = hideItem)
+    speed = the_set.getSpeed(iv)
+    string += "\n" + tr("page.generic.result.speed", [speed]) + "\n"
+    if not hideItem:
+        if the_set.item == "Choice Scarf":
+            speed = math.floor(speed * 1.5)
+            string += tr("page.generic.result.speed.item", ["Choice Scarf", speed]) + "\n"
+        if the_set.item == "Iron Ball":
+            speed = math.floor(speed * 0.5)
+            string += tr("page.generic.result.speed.item", ["Iron Ball", speed]) + "\n"
+    if "Slow Start" in the_set.species.abilities:
+        string += tr("page.generic.result.speed.ability", ["Slow Start", math.floor(speed * 0.5)]) + "\n"
+    if "Unburden" in the_set.species.abilities:
+        string += tr("page.generic.result.speed.ability", ["Unburden", math.floor(speed * 2.0)]) + "\n"
+    # it's important to say specifically what the possible abilities are because some pokemon have gotten new abilities in new games
+    if not the_set.species.hasOneAbility():
+        string += "\n" + tr("page.generic.result.abilities", the_set.species.abilities) + "\n"
+    return string
+
+
+# base class for functional pages
+# contains an alpha/dex sortable, an output, and a copy to clipboard button with item check
+class SharedPageElements(QWidget):
     def __init__(self, parent):
         super().__init__(parent)
 
         # alphabetically organized sets
-        self.setsA = {}
+        self.sortedAlpha = None
         # dex number organized sets
-        self.setsD = {}
-
-        self.setLayout(QVBoxLayout(self))
-
+        self.sortedDex = None
         # sort toggle button
         self.sortToggle = QPushButton("")
         self.alpha = True
         self.setSortToggleText()
         self.sortToggle.clicked.connect(self.toggleSorting)
-        self.layout().addWidget(self.sortToggle)
-        self.sortToggle.setToolTip(tr("page.all_sets.sortToggle.tooltip"))
+        self.sortToggle.setToolTip(tr("page.generic.sortToggle.tooltip"))
 
+        # output
+        self.output = QTextEdit()
+        self.output.setReadOnly(True)
+
+        # clipboard options
+        self.clipboardOptions = QHBoxLayout()
+        # copy to clipboard button
+        self.clipboardButton = QPushButton("")
+        self.clipboardButton.clicked.connect(self.copyToClipboard)
+        self.clipboardOptions.addWidget(self.clipboardButton, stretch = 1)
+        # current set (for copy to clipboard)
+        self.currentSet = None
+        # hide held items checkbox
+        self.itemCheck = QCheckBox(tr("page.generic.itemCheck"))
+        self.itemCheck.stateChanged.connect(self.handleItemCheck)
+        self.clipboardOptions.addWidget(self.itemCheck)
+        self.itemCheck.setToolTip(tr("page.generic.itemCheck.tooltip"))
+
+    ### override and call super to add functionality
+    def toggleSorting(self):
+        self.alpha = not self.alpha
+        self.setSortToggleText()
+
+    def setSortToggleText(self):
+        if self.alpha:
+            self.sortToggle.setText(tr("page.generic.sortToggle.alpha"))
+        else:
+            self.sortToggle.setText(tr("page.generic.sortToggle.dex"))
+
+    def getSorted(self):
+        return self.getSortedAlpha() if self.alpha else self.getSortedDex()
+
+    def getSortedAlpha(self):
+        return self.sortedAlpha
+
+    def getSortedDex(self):
+        return self.sortedDex
+
+    def handleItemCheck(self):
+        self.updateSet()
+
+    ### override and call super to add functionality
+    def updateSet(self):
+        self.clipboardButton.setText(tr("page.generic.clipboardButton"))
+
+    ### override to add functionality
+    def getIV(self):
+        return 31
+
+    def copyToClipboard(self):
+        if self.currentSet is not None:
+            QGuiApplication.clipboard().setText(self.currentSet.getShowdownFormat(self.getIV(), hideItem = self.itemCheck.isChecked()))
+            self.clipboardButton.setText(tr("page.generic.clipboardButton.copied"))
+
+
+# base page for single set browsing
+class BrowseSetsPageBase(SharedPageElements):
+    def __init__(self, parent):
+        super().__init__(parent)
+
+        self.setLayout(QVBoxLayout(self))
+
+        # sort toggle
+        self.layout().addWidget(self.sortToggle)
+
+        ## set selector
         setSelect = QHBoxLayout()
         self.layout().addLayout(setSelect)
 
         # species & set combo boxes
-        self.pokeLabel = QLabel(tr("page.all_sets.pokemon"))
+        self.pokeLabel = QLabel(tr("page.generic.pokemon"))
         self.pokeLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
         setSelect.addWidget(self.pokeLabel)
         self.pokeCombo = self.addComboBox(self.handlePokeCombo, setSelect)
@@ -52,25 +136,10 @@ class BrowseSetsPageBase(QWidget):
         setSelect.addWidget(self.ivBox)
 
         # output
-        self.output = QTextEdit()
-        self.output.setReadOnly(True)
         self.layout().addWidget(self.output)
 
-        bottomOptions = QHBoxLayout()
-        self.layout().addLayout(bottomOptions)
-
-        # copy to clipboard button
-        self.clipboardButton = QPushButton("")
-        self.clipboardButton.clicked.connect(self.copyToClipboard)
-        bottomOptions.addWidget(self.clipboardButton, stretch = 1)
-        # current set (for copy to clipboard)
-        self.currentSet = None
-
-        # hide held items checkbox
-        self.itemCheck = QCheckBox(tr("page.all_sets.itemCheck"))
-        self.itemCheck.stateChanged.connect(self.handleItemCheck)
-        bottomOptions.addWidget(self.itemCheck)
-        self.itemCheck.setToolTip(tr("page.all_sets.itemCheck.tooltip"))
+        # clipboard options
+        self.layout().addLayout(self.clipboardOptions)
 
         # set up initial state
         self.updateSet()
@@ -81,12 +150,16 @@ class BrowseSetsPageBase(QWidget):
         layout.addWidget(combo)
         return combo
 
-    # sets the combo box data to the keys of the data
-    def fillComboKeys(self, combo, data):
+    # sets the combo box to the keys of contents
+    def fillComboKeys(self, combo, contents):
         combo.clear()
-        for key in data.keys():
+        for key in contents.keys():
             combo.addItem(str(key))
         combo.setEnabled(combo.count() > 1)
+
+    def toggleSorting(self):
+        super().toggleSorting()
+        self.fillComboKeys(self.pokeCombo, self.getSorted())
 
     def setupIVBox(self, setProvider):
         self.ivBox.setRange(setProvider.minIV, setProvider.maxIV)
@@ -97,29 +170,12 @@ class BrowseSetsPageBase(QWidget):
             self.ivBox.setToolTip(tr("page.all_sets.ivBox.tooltip.range", [self.ivBox.minimum(), self.ivBox.maximum()]))
             self.ivBox.setEnabled(True)
 
-    def toggleSorting(self):
-        self.alpha = not self.alpha
-        self.fillComboKeys(self.pokeCombo, self.getSets())
-        self.setSortToggleText()
-
-    def setSortToggleText(self):
-        if self.alpha:
-            self.sortToggle.setText(tr("page.all_sets.sortToggle.alpha"))
-        else:
-            self.sortToggle.setText(tr("page.all_sets.sortToggle.dex"))
-
-    def getSets(self):
-        return self.getSetsAlpha() if self.alpha else self.getSetsDex()
-
-    def getSetsAlpha(self):
-        return self.setsA
-
-    def getSetsDex(self):
-        return self.setsD
+    def getIV(self):
+        return self.ivBox.value()
 
     # when the species combo box updates, tells the set combo box to update
     def handlePokeCombo(self):
-        setsData = data.digForData(self.getSets(), [self.pokeCombo.currentText()])
+        setsData = data.digForData(self.getSorted(), [self.pokeCombo.currentText()])
         if setsData is not None:
             self.fillComboKeys(self.setCombo, setsData)
             self.setCombo.setToolTip(tr("page.all_sets.setCombo.tooltip", [self.setCombo.count()]))
@@ -132,33 +188,11 @@ class BrowseSetsPageBase(QWidget):
     def handleIVBox(self):
         self.updateSet()
 
-    def handleItemCheck(self):
-        self.updateSet()
-
     def updateSet(self):
-        self.clipboardButton.setText(tr("page.all_sets.clipboardButton"))
-        self.currentSet = data.digForData(self.getSets(), [self.pokeCombo.currentText(), int(self.setCombo.currentText())]) if self.setCombo.currentText().isdecimal() else None
+        super().updateSet()
+        self.currentSet = data.digForData(self.getSorted(), [self.pokeCombo.currentText(), int(self.setCombo.currentText())]) if self.setCombo.currentText().isdecimal() else None
         if self.currentSet is not None:
-            hideItem = self.itemCheck.isChecked()
-            string = self.currentSet.getShowdownFormat(self.ivBox.value(), hideItem = hideItem)
-            # speed and modifiers
-            speed = self.currentSet.getSpeed(self.ivBox.value())
-            string += "\n" + tr("page.sets.result.speed", [speed]) + "\n"
-            if not hideItem:
-                if self.currentSet.item == "Choice Scarf":
-                    speed = math.floor(speed * 1.5)
-                    string += tr("page.sets.result.speed.item", ["Choice Scarf", speed]) + "\n"
-                if self.currentSet.item == "Iron Ball":
-                    speed = math.floor(speed * 0.5)
-                    string += tr("page.sets.result.speed.item", ["Iron Ball", speed]) + "\n"
-            if "Slow Start" in self.currentSet.species.abilities:
-                string += tr("page.sets.result.speed.ability", ["Slow Start", math.floor(speed * 0.5)]) + "\n"
-            if "Unburden" in self.currentSet.species.abilities:
-                string += tr("page.sets.result.speed.ability", ["Unburden", math.floor(speed * 2.0)]) + "\n"
-            # it's important to say specifically what the possible abilities are because some pokemon have gotten new abilities in new games
-            if not self.currentSet.species.hasOneAbility():
-                string += "\n" + tr("page.sets.result.abilities", self.currentSet.species.abilities) + "\n"
-            self.output.setText(string)
+            self.output.setText(getSetResultString(self.currentSet, self.ivBox.value(), self.itemCheck.isChecked()))
             self.clipboardButton.setEnabled(True)
             self.pokeCombo.setToolTip(str(self.currentSet.species))
         else:
@@ -170,10 +204,6 @@ class BrowseSetsPageBase(QWidget):
         self.pokeCombo.setToolTip("")
         self.setCombo.setToolTip("")
 
-    def copyToClipboard(self):
-        if self.currentSet is not None:
-            QGuiApplication.clipboard().setText(self.currentSet.getShowdownFormat(self.ivBox.value(), hideItem = self.itemCheck.isChecked()))
-            self.clipboardButton.setText(tr("page.all_sets.clipboardButton.copied"))
 
 # browse all sets
 class BrowseAllSetsPage(BrowseSetsPageBase):
@@ -181,15 +211,16 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
         super().__init__(parent)
 
         self.setProvider = setProvider
-        self.setsA = data.setsAlphaSorted(self.setProvider.sets)
-        self.setsD = data.setsDexSorted(self.setProvider.sets)
+        self.sortedAlpha = data.setsAlphaSorted(self.setProvider.sets)
+        self.sortedDex = data.setsDexSorted(self.setProvider.sets)
         self.setupIVBox(self.setProvider)
 
         self.pokeLabel.setToolTip(tr("page.all_sets.pokemon.tooltip"))
         self.ivLabel.setToolTip(tr("page.all_sets.ivs.tooltip"))
 
         # set up initial state
-        self.fillComboKeys(self.pokeCombo, self.getSets())
+        self.fillComboKeys(self.pokeCombo, self.getSorted())
+
 
 # browse sets by trainer
 class BrowseTrainerSetsPage(BrowseSetsPageBase):
@@ -198,18 +229,19 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
 
         self.battlenumToSetProviders = battlenumToSetProviders
 
+        ## trainer selector
         trainerSelect = QHBoxLayout()
         self.layout().insertLayout(0, trainerSelect)
 
         # battle number combo box
-        self.battlenumLabel = QLabel(tr("page.all_sets_by_trainer.battle_number"))
+        self.battlenumLabel = QLabel(tr("page.generic.battle_number"))
         self.battlenumLabel.setToolTip(tr("page.all_sets_by_trainer.battle_number.tooltip"))
         self.battlenumLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
         trainerSelect.addWidget(self.battlenumLabel)
         self.battlenumCombo = self.addComboBox(self.handleBattlenumCombo, trainerSelect)
 
         # trainer class & name combo boxes
-        self.trainerLabel = QLabel(tr("page.all_sets_by_trainer.trainer"))
+        self.trainerLabel = QLabel(tr("page.generic.trainer"))
         self.trainerLabel.setToolTip(tr("page.all_sets_by_trainer.trainer.tooltip"))
         self.trainerLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
         trainerSelect.addWidget(self.trainerLabel)
@@ -247,10 +279,10 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
     def updateTrainer(self):
         currentProvider = data.digForData(self.bTSP(), [self.battlenumCombo.currentText(), self.tclassCombo.currentText(), self.tnameCombo.currentText()])
         if currentProvider is not None:
-            self.setsA = data.setsAlphaSorted(currentProvider.sets)
-            self.setsD = data.setsDexSorted(currentProvider.sets)
+            self.sortedAlpha = data.setsAlphaSorted(currentProvider.sets)
+            self.sortedDex = data.setsDexSorted(currentProvider.sets)
             # when the trainer selection updates, tells the species combo box to update
-            self.fillComboKeys(self.pokeCombo, self.getSets())
+            self.fillComboKeys(self.pokeCombo, self.getSorted())
             self.setupIVBox(currentProvider)
             self.battlenumCombo.setToolTip(self.battlenumCombo.currentText())
             self.tclassCombo.setToolTip(self.tclassCombo.currentText())

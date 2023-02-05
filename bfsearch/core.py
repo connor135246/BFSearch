@@ -234,24 +234,44 @@ class Trainer(SetProvider):
     def asSetProvider(self):
         return SetProvider(self.iv, self.iv, self.battlenums, self.sets)
 
-'''
+
 # a pokemon set owned by a trainer.
 
-class TrainersPokeSet(object):
-    # pokeset - a PokeSet, trainer - a Trainer
-    def __init__(self, pokeset, trainer):
+# base class of TrainersPokeSet that just has a pokeset and an iv
+class PokeSetWithIV(object):
+    # pokeset - a PokeSet, iv - a number
+    def __init__(self, pokeset, iv):
         self.pokeset = pokeset
-        self.trainer = trainer
+        self.iv = iv
 
     def __str__(self):
-        return f"{self.trainer.name()}'s {self.pokeset.name()}"
+        return self.getShowdownNickname()
 
     def getShowdownNickname(self):
-        return self.pokeset.getShowdownNickname(self.trainer.iv)
+        return self.pokeset.getShowdownNickname(self.iv)
 
     def getShowdownFormat(self, abilitySlot = -1, level = 50, hideItem = False):
-        return self.pokeset.getShowdownFormat(self.trainer.iv, abilitySlot = abilitySlot, level = level, hideItem = hideItem)
+        return self.pokeset.getShowdownFormat(self.iv, abilitySlot = abilitySlot, level = level, hideItem = hideItem)
 
     def getSpeed(self, level = 50):
-        return self.pokeset.getSpeed(self.trainer.iv, level = level)
-'''
+        return self.pokeset.getSpeed(self.iv, level = level)
+
+    def isIdenticalSet(self, other):
+        return self.pokeset == other.pokeset and self.iv == other.iv
+
+    # for sorting PSIWs by dex number. for alphabetical sorting, just use getShowdownNickname.
+    def dexSortValue(self):
+        return self.pokeset.species.dex * 10000 + self.pokeset.pset * 100 + 1 + (-1 if self.iv == 31 else self.iv) # put 31 IVs at the start
+
+class TrainersPokeSet(PokeSetWithIV):
+    # trainer - a Trainer, pokeset - a PokeSet
+    def __init__(self, trainer, pokeset):
+        PokeSetWithIV.__init__(self, pokeset, trainer.iv)
+        self.trainer = trainer
+        self.pokeset = pokeset
+
+    def __str__(self):
+        return f"{str(self.trainer)}'s {str(self.pokeset)}"
+
+    def asPokeSetWithIV(self):
+        return PokeSetWithIV(self.pokeset, self.iv)

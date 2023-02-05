@@ -106,18 +106,34 @@ def trainersAlphaSortedList(trainers):
 
 # derived data.
 
+def allPokemonAlpha(sets):
+    return setsAlphaSorted(sets).keys()
+
+def allPokemonDex(sets):
+    return setsDexSorted(sets).keys()
+
 def allMoves(sets):
     allMoves = set()
-    for aset in sets:
+    for aset in setsAlphaSortedList(sets):
         for move in aset.moves:
             allMoves.add(move)
     return sorted(allMoves)
 
 def allItems(sets):
-    allItems = set()
-    for aset in sets:
-        allItems.add(aset.item)
-    return sorted(allItems)
+    return sorted({aset.item for aset in setsDexSortedList(sets)})
+
+def allTrainerClasses(trainers):
+    return trainersAlphaSorted(trainers).keys()
+
+def allTrainerNames(trainers):
+    return sorted({trainer.tname for trainer in trainersAlphaSortedList(trainers)})
+
+# returns a dict of {tclass} to a list of possible {tnames}. no actual Trainer objects involved.
+def tclassToTName(trainers):
+    tTT = {}
+    for tclass, nextDict in trainersAlphaSorted(trainers).items():
+        tTT[tclass] = list(nextDict.keys())
+    return tTT
 
 def genericSetProvider(sets):
     return core.SetProvider(0, 31, list(core.BattleNum), sets)
@@ -168,3 +184,30 @@ def battlenumToGroupedSetProviders(trainers):
                         bTGSP[battlenum.value][tclass] = {}
                     bTGSP[battlenum.value][tclass][tnames] = setProvider
     return bTGSP
+
+# returns a list of every single individual pokemon held by every trainer.
+# total: 16117; there are a lot of duplicates.
+def everyIndividualPokemon(trainers):
+    the_list = []
+    for tclass, nextDict in trainers.items():
+        for tname, trainer in nextDict.items():
+            for aset in setsAlphaSortedList(trainer.sets):
+                the_list.append(core.TrainersPokeSet(trainer, aset))
+    return the_list
+
+# returns a list of (PokeSetWithIV, count) from the list of TrainersPokeSet.
+def countUniquePokemon(listTrainersPokeSet):
+    uniques = []
+    for tps in listTrainersPokeSet:
+        for i in range(len(uniques)):
+            if uniques[i][0].isIdenticalSet(tps):
+                uniques[i] = (uniques[i][0], uniques[i][1] + 1)
+                break
+        else:
+            uniques.append((tps.asPokeSetWithIV(), 1))
+    return uniques
+
+# returns a list of every unique pokemon held by trainers. a unique pokemon is a particular set with a particular iv.
+# total: 1585
+def everyUniquePokemon(trainers):
+    return [pswi for pswi, _ in countUniquePokemon(everyIndividualPokemon(trainers))]

@@ -9,7 +9,7 @@ from PySide6.QtCore import Qt
 
 from bfsearch import core, data, translate, settings
 from bfsearch.translate import tr
-from bfsearch.qt import browse
+from bfsearch.qt import browse, search
 
 
 # code for recreating the main window. if the application exits with this code, the main window will be recreated.
@@ -35,7 +35,7 @@ class Window(QMainWindow):
 
         self.data = data.DataHolder()
 
-        self.resize(750, 450)
+        self.resize(750, 639)
         self.setWindowTitle("BFSearch")
         self.setWindowIcon(QIcon("gui/icon.png"))
         self.setCentralWidget(QTabWidget(self))
@@ -100,6 +100,10 @@ class Window(QMainWindow):
         self.browseTrainerSetsPage = browse.BrowseTrainerSetsPage(self, data.battlenumToGroupedSetProviders(self.data.trainers))
         self.centralWidget().addTab(self.browseTrainerSetsPage, QIcon("gui/trainers.png"), tr("page.all_sets_by_trainer.name"))
         self.centralWidget().setTabToolTip(2, tr("page.all_sets_by_trainer.tooltip"))
+
+        self.searchPage = search.SearchPage(self, self.data)
+        self.centralWidget().addTab(self.searchPage, QIcon("gui/search.png"), tr("page.search.name"))
+        self.centralWidget().setTabToolTip(3, tr("page.search.tooltip"))
 
         logging.info("Built data!")
 
