@@ -186,7 +186,7 @@ def battlenumToGroupedSetProviders(trainers):
     return bTGSP
 
 # returns a list of every single individual pokemon held by every trainer.
-# total: 16117; there are a lot of duplicates.
+# total: 16111 (16135 including brains); there are a lot of duplicates.
 def everyIndividualPokemon(trainers):
     the_list = []
     for tclass, nextDict in trainers.items():
