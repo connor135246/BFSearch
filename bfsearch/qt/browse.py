@@ -178,7 +178,10 @@ class BrowseSetsPageBase(SharedPageElements):
         setsData = data.digForData(self.getSorted(), [self.pokeCombo.currentText()])
         if setsData is not None:
             self.fillComboKeys(self.setCombo, setsData)
-            self.setCombo.setToolTip(tr("page.all_sets.setCombo.tooltip", [self.setCombo.count()]))
+            if self.setCombo.count() == 1:
+                self.setCombo.setToolTip(tr("page.all_sets.setCombo.tooltip.singular", [self.setCombo.count()]))
+            else:
+                self.setCombo.setToolTip(tr("page.all_sets.setCombo.tooltip.plural", [self.setCombo.count()]))
         else:
             self.clearResults()
 
