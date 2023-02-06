@@ -267,9 +267,13 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
 
     # when the trainer class combo box updates, tells the trainer name combo box to update
     def handleTClassCombo(self):
+        self.pokeLabel.setToolTip(tr("page.all_sets_by_trainer.pokemon.tooltip"))
         tnameData = data.digForData(self.bTSP(), [self.battlenumCombo.currentText(), self.tclassCombo.currentText()])
         if tnameData is not None:
             self.fillComboKeys(self.tnameCombo, tnameData)
+            # darach works differently from every other trainer.
+            if "Castle Valet" in self.tclassCombo.currentText():
+                self.pokeLabel.setToolTip(tr("page.all_sets_by_trainer.pokemon.tooltip") + "\n\n" + tr("page.all_sets_by_trainer.pokemon.tooltip.darach"))
         else:
             self.clearTrainerResults()
 

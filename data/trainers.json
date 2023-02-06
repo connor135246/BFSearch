@@ -46236,6 +46236,92 @@
 					4
 				]
 			}
+		},
+		{
+			"id": 303,
+			"iv": 31,
+			"class": "Arcade Star",
+			"name": "Dahlia (Silver Print)",
+			"battles": [
+				"21"
+			],
+			"pokemon": {
+				"Ludicolo": [
+					1
+				],
+				"Medicham": [
+					1
+				],
+				"Dusknoir": [
+					1
+				]
+			}
+		},
+		{
+			"id": 304,
+			"iv": 31,
+			"class": "Arcade Star",
+			"name": "Dahlia (Gold Print)",
+			"battles": [
+				"49"
+			],
+			"pokemon": {
+				"Zapdos": [
+					4
+				],
+				"Blaziken": [
+					4
+				],
+				"Togekiss": [
+					4
+				]
+			}
+		},
+		{
+			"id": 305,
+			"iv": 31,
+			"class": "Castle Valet",
+			"name": "Darach (Silver Print)",
+			"battles": [
+				"21"
+			],
+			"pokemon": {
+				"Houndoom": [
+					1,
+					2
+				],
+				"Empoleon": [
+					1,
+					2
+				],
+				"Staraptor": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 306,
+			"iv": 31,
+			"class": "Castle Valet",
+			"name": "Darach (Gold Print)",
+			"battles": [
+				"49"
+			],
+			"pokemon": {
+				"Entei": [
+					3,
+					4
+				],
+				"Empoleon": [
+					3,
+					4
+				],
+				"Gallade": [
+					3,
+					4
+				]
+			}
 		}
 	]
 }
