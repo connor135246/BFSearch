@@ -131,13 +131,17 @@ def buildData():
 
         name = verifyValidString(getDictKey(species_obj, 'name', datafile, path), InvalidDataException(datafile, "parsing.error.species.name.missing", [dex]))
 
+        types = verifyLenRange(verifyList(getDictKey(species_obj, 'types', datafile, path), InvalidDataException(datafile, "parsing.error.species.types.missing", [name])), 1, 2, InvalidDataException(datafile, "parsing.error.species.types.size", [name]))
+        for i in range(len(types)):
+            types[i] = verifyEnumName(types[i], core.Type, InvalidDataException(datafile, "parsing.error.species.types.invalid", [name, types[i]]))
+
         speed = verifyInt(getDictKey(species_obj, 'speed', datafile, path), InvalidDataException(datafile, "parsing.error.species.speed.missing", [name]))
 
         abilities = verifyMany(verifyLen(verifyList(getDictKey(species_obj, 'abilities', datafile, path), InvalidDataException(datafile, "parsing.error.species.abilities.missing", [name])), 1, InvalidDataException(datafile, "parsing.error.species.abilities.size", [name])), verifyValidString, InvalidDataException(datafile, "parsing.error.species.abilities.invalid", [name]))
 
         if name in species.keys():
             raise InvalidDataException(datafile, "parsing.error.species.name.duplicate", [name])
-        species[name] = core.Species(dex, name, speed, abilities)
+        species[name] = core.Species(dex, name, types, speed, abilities)
 
 
     sets = {}
@@ -153,11 +157,15 @@ def buildData():
                 if sid == sets[aname][apset].sid:
                     raise InvalidDataException(datafile, "parsing.error.sets.id.duplicate", [sid])
 
+        setgroup = verifyEnumName(getDictKey(set_obj, 'set_group', datafile, path), core.SetGroup, InvalidDataException(datafile, "parsing.error.sets.set_group.invalid", [sid, getDictKey(set_obj, 'set_group', datafile, path)]))
+
         name = verifyValidString(getDictKey(set_obj, 'species', datafile, path), InvalidDataException(datafile, "parsing.error.sets.species.missing", [sid]))
         if name not in species.keys():
             raise InvalidDataException(datafile, "parsing.error.sets.species.unregistered", [sid, name])
 
         pset = verifyInt(getDictKey(set_obj, 'set', datafile, path), InvalidDataException(datafile, "parsing.error.sets.set.missing", [sid]))
+        if pset != setgroup.setNumber():
+            raise InvalidDataException(datafile, "parsing.error.sets.set.invalid", [sid, setgroup.setNumber(), pset])
 
         nature = verifyEnumName(getDictKey(set_obj, 'nature', datafile, path), core.Nature, InvalidDataException(datafile, "parsing.error.sets.nature.invalid", [sid, getDictKey(set_obj, 'nature', datafile, path)]))
 
@@ -173,7 +181,7 @@ def buildData():
             sets[name] = {}
         if pset in sets[name].keys():
             raise InvalidDataException(datafile, "parsing.error.sets.set.duplicate", [pset, name])
-        sets[name][pset] = core.PokeSet(sid, species[name], pset, nature, item, moves, core.EVStats(evs))
+        sets[name][pset] = core.PokeSet(sid, setgroup, species[name], pset, nature, item, moves, core.EVStats(evs))
 
 
     trainers = {}

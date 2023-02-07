@@ -7,11 +7,31 @@ import math
 
 # a pokemon species.
 
+class Type(IntEnum):
+    Normal = 0
+    Fighting = 1
+    Flying = 2
+    Poison = 3
+    Ground = 4
+    Rock = 5
+    Bug = 6
+    Ghost = 7
+    Steel = 8
+    Fire = 9
+    Water = 10
+    Grass = 11
+    Electric = 12
+    Psychic = 13
+    Ice = 14
+    Dragon = 15
+    Dark = 16
+
 class Species(object):
-    # dex - a number, name - a string, baseSpeed - a positive number, abilities - a string list of length 1 or 2
-    def __init__(self, dex, name, baseSpeed, abilities):
+    # dex - a number, name - a string, types - a Type list of length 1 or 2, baseSpeed - a positive number, abilities - a string list of length 1 or 2
+    def __init__(self, dex, name, types, baseSpeed, abilities):
         self.dex = dex
         self.name = name
+        self.types = types
         self.baseSpeed = baseSpeed
         self.abilities = abilities
 
@@ -20,6 +40,9 @@ class Species(object):
 
     def hasOneAbility(self):
         return len(self.abilities) == 1
+
+    def hasType(self, atype):
+        return atype in self.types
 
 
 # a pokemon set.
@@ -106,10 +129,39 @@ def calculateStat(stat, base, iv, evs, level, nature):
     else:
         return calculateNonHP(base, iv, evs, level, nature.modForStat(stat))
 
+# set group is a useful way of grouping sets together based on set id.
+# group A contains very weak pokemon with only 1 possible set.
+# group B contains somewhat weak pokemon with 2 possible sets.
+# group C contains most pokemon with 4 possible sets.
+# group D contains legendaries with 4 possible sets.
+# the set number indicates which set number this is for the pokemon.
+# these groupings are used in various places in the battle frontier.
+class SetGroup(Enum):
+    A = ('A', 1, range(1, 151))
+    B1 = ('B', 1, range(151, 251))
+    B2 = ('B', 2, range(251, 351))
+    C1 = ('C', 1, range(351, 487))
+    C2 = ('C', 2, range(487, 623))
+    C3 = ('C', 3, range(623, 759))
+    C4 = ('C', 4, range(759, 895))
+    D1 = ('D', 1, range(895, 909))
+    D2 = ('D', 2, range(909, 923))
+    D3 = ('D', 3, range(923, 937))
+    D4 = ('D', 4, range(937, 951))
+
+    def group(self):
+        return self.value[0]
+    def setNumber(self):
+        return self.value[1]
+    # for reference
+    def defaultRange(self):
+        return self.value[2]
+
 class PokeSet(object):
-    # sid - a number, species - a Species, pset - a number, nature - a Nature, item - a string, moves - a string list length 1 to 4, evstats - a EVStats
-    def __init__(self, sid, species, pset, nature, item, moves, evstats):
+    # sid - a number, setgroup - a SetGroup, species - a Species, pset - a number, nature - a Nature, item - a string, moves - a string list length 1 to 4, evstats - a EVStats
+    def __init__(self, sid, setgroup, species, pset, nature, item, moves, evstats):
         self.sid = sid
+        self.setgroup = setgroup
         self.species = species
         self.pset = pset
         self.nature = nature
@@ -215,6 +267,10 @@ class SetProvider(object):
         self.maxIV = maxIV
         self.battlenums = battlenums
         self.sets = sets
+        self.setgroups = []
+        for pname, nextDict in self.sets.items():
+            for pset, pokeset in nextDict.items():
+                self.setgroups.append(pokeset.setgroup)
 
     def isIdenticalProvider(self, other):
         return self.minIV == other.minIV and self.maxIV == other.maxIV and self.battlenums == other.battlenums and self.sets == other.sets

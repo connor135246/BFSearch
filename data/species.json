@@ -3,6 +3,10 @@
 		{
 			"dex": 1,
 			"name": "Bulbasaur",
+			"types": [
+				"Grass",
+				"Poison"
+			],
 			"speed": 45,
 			"abilities": [
 				"Overgrow"
@@ -11,6 +15,10 @@
 		{
 			"dex": 2,
 			"name": "Ivysaur",
+			"types": [
+				"Grass",
+				"Poison"
+			],
 			"speed": 60,
 			"abilities": [
 				"Overgrow"
@@ -19,6 +27,10 @@
 		{
 			"dex": 3,
 			"name": "Venusaur",
+			"types": [
+				"Grass",
+				"Poison"
+			],
 			"speed": 80,
 			"abilities": [
 				"Overgrow"
@@ -27,6 +39,9 @@
 		{
 			"dex": 4,
 			"name": "Charmander",
+			"types": [
+				"Fire"
+			],
 			"speed": 65,
 			"abilities": [
 				"Blaze"
@@ -35,6 +50,9 @@
 		{
 			"dex": 5,
 			"name": "Charmeleon",
+			"types": [
+				"Fire"
+			],
 			"speed": 80,
 			"abilities": [
 				"Blaze"
@@ -43,6 +61,10 @@
 		{
 			"dex": 6,
 			"name": "Charizard",
+			"types": [
+				"Fire",
+				"Flying"
+			],
 			"speed": 100,
 			"abilities": [
 				"Blaze"
@@ -51,6 +73,9 @@
 		{
 			"dex": 7,
 			"name": "Squirtle",
+			"types": [
+				"Water"
+			],
 			"speed": 43,
 			"abilities": [
 				"Torrent"
@@ -59,6 +84,9 @@
 		{
 			"dex": 8,
 			"name": "Wartortle",
+			"types": [
+				"Water"
+			],
 			"speed": 58,
 			"abilities": [
 				"Torrent"
@@ -67,6 +95,9 @@
 		{
 			"dex": 9,
 			"name": "Blastoise",
+			"types": [
+				"Water"
+			],
 			"speed": 78,
 			"abilities": [
 				"Torrent"
@@ -75,6 +106,10 @@
 		{
 			"dex": 12,
 			"name": "Butterfree",
+			"types": [
+				"Bug",
+				"Flying"
+			],
 			"speed": 70,
 			"abilities": [
 				"Compound Eyes"
@@ -83,6 +118,10 @@
 		{
 			"dex": 15,
 			"name": "Beedrill",
+			"types": [
+				"Bug",
+				"Poison"
+			],
 			"speed": 75,
 			"abilities": [
 				"Swarm"
@@ -91,6 +130,10 @@
 		{
 			"dex": 17,
 			"name": "Pidgeotto",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 71,
 			"abilities": [
 				"Keen Eye",
@@ -100,6 +143,10 @@
 		{
 			"dex": 18,
 			"name": "Pidgeot",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 91,
 			"abilities": [
 				"Keen Eye",
@@ -109,6 +156,9 @@
 		{
 			"dex": 20,
 			"name": "Raticate",
+			"types": [
+				"Normal"
+			],
 			"speed": 97,
 			"abilities": [
 				"Run Away",
@@ -118,6 +168,10 @@
 		{
 			"dex": 22,
 			"name": "Fearow",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 100,
 			"abilities": [
 				"Keen Eye"
@@ -126,6 +180,9 @@
 		{
 			"dex": 24,
 			"name": "Arbok",
+			"types": [
+				"Poison"
+			],
 			"speed": 80,
 			"abilities": [
 				"Intimidate",
@@ -135,6 +192,9 @@
 		{
 			"dex": 25,
 			"name": "Pikachu",
+			"types": [
+				"Electric"
+			],
 			"speed": 90,
 			"abilities": [
 				"Static"
@@ -143,6 +203,9 @@
 		{
 			"dex": 26,
 			"name": "Raichu",
+			"types": [
+				"Electric"
+			],
 			"speed": 100,
 			"abilities": [
 				"Static"
@@ -151,6 +214,9 @@
 		{
 			"dex": 27,
 			"name": "Sandshrew",
+			"types": [
+				"Ground"
+			],
 			"speed": 40,
 			"abilities": [
 				"Sand Veil"
@@ -159,6 +225,9 @@
 		{
 			"dex": 28,
 			"name": "Sandslash",
+			"types": [
+				"Ground"
+			],
 			"speed": 65,
 			"abilities": [
 				"Sand Veil"
@@ -167,6 +236,9 @@
 		{
 			"dex": 30,
 			"name": "Nidorina",
+			"types": [
+				"Poison"
+			],
 			"speed": 56,
 			"abilities": [
 				"Poison Point",
@@ -176,6 +248,10 @@
 		{
 			"dex": 31,
 			"name": "Nidoqueen",
+			"types": [
+				"Poison",
+				"Ground"
+			],
 			"speed": 76,
 			"abilities": [
 				"Poison Point",
@@ -185,6 +261,9 @@
 		{
 			"dex": 33,
 			"name": "Nidorino",
+			"types": [
+				"Poison"
+			],
 			"speed": 65,
 			"abilities": [
 				"Poison Point",
@@ -194,6 +273,10 @@
 		{
 			"dex": 34,
 			"name": "Nidoking",
+			"types": [
+				"Poison",
+				"Ground"
+			],
 			"speed": 85,
 			"abilities": [
 				"Poison Point",
@@ -203,6 +286,9 @@
 		{
 			"dex": 35,
 			"name": "Clefairy",
+			"types": [
+				"Normal"
+			],
 			"speed": 35,
 			"abilities": [
 				"Cute Charm",
@@ -212,6 +298,9 @@
 		{
 			"dex": 36,
 			"name": "Clefable",
+			"types": [
+				"Normal"
+			],
 			"speed": 60,
 			"abilities": [
 				"Cute Charm",
@@ -221,6 +310,9 @@
 		{
 			"dex": 37,
 			"name": "Vulpix",
+			"types": [
+				"Fire"
+			],
 			"speed": 65,
 			"abilities": [
 				"Flash Fire"
@@ -229,6 +321,9 @@
 		{
 			"dex": 38,
 			"name": "Ninetales",
+			"types": [
+				"Fire"
+			],
 			"speed": 100,
 			"abilities": [
 				"Flash Fire"
@@ -237,6 +332,9 @@
 		{
 			"dex": 40,
 			"name": "Wigglytuff",
+			"types": [
+				"Normal"
+			],
 			"speed": 45,
 			"abilities": [
 				"Cute Charm"
@@ -245,6 +343,10 @@
 		{
 			"dex": 42,
 			"name": "Golbat",
+			"types": [
+				"Poison",
+				"Flying"
+			],
 			"speed": 90,
 			"abilities": [
 				"Inner Focus"
@@ -253,6 +355,10 @@
 		{
 			"dex": 43,
 			"name": "Oddish",
+			"types": [
+				"Grass",
+				"Poison"
+			],
 			"speed": 30,
 			"abilities": [
 				"Chlorophyll"
@@ -261,6 +367,10 @@
 		{
 			"dex": 44,
 			"name": "Gloom",
+			"types": [
+				"Grass",
+				"Poison"
+			],
 			"speed": 40,
 			"abilities": [
 				"Chlorophyll"
@@ -269,6 +379,10 @@
 		{
 			"dex": 45,
 			"name": "Vileplume",
+			"types": [
+				"Grass",
+				"Poison"
+			],
 			"speed": 50,
 			"abilities": [
 				"Chlorophyll"
@@ -277,6 +391,10 @@
 		{
 			"dex": 47,
 			"name": "Parasect",
+			"types": [
+				"Bug",
+				"Grass"
+			],
 			"speed": 30,
 			"abilities": [
 				"Effect Spore",
@@ -286,6 +404,10 @@
 		{
 			"dex": 48,
 			"name": "Venonat",
+			"types": [
+				"Bug",
+				"Poison"
+			],
 			"speed": 45,
 			"abilities": [
 				"Compound Eyes",
@@ -295,6 +417,10 @@
 		{
 			"dex": 49,
 			"name": "Venomoth",
+			"types": [
+				"Bug",
+				"Poison"
+			],
 			"speed": 90,
 			"abilities": [
 				"Shield Dust",
@@ -304,6 +430,9 @@
 		{
 			"dex": 51,
 			"name": "Dugtrio",
+			"types": [
+				"Ground"
+			],
 			"speed": 120,
 			"abilities": [
 				"Sand Veil",
@@ -313,6 +442,9 @@
 		{
 			"dex": 53,
 			"name": "Persian",
+			"types": [
+				"Normal"
+			],
 			"speed": 115,
 			"abilities": [
 				"Limber",
@@ -322,6 +454,9 @@
 		{
 			"dex": 54,
 			"name": "Psyduck",
+			"types": [
+				"Water"
+			],
 			"speed": 55,
 			"abilities": [
 				"Damp",
@@ -331,6 +466,9 @@
 		{
 			"dex": 55,
 			"name": "Golduck",
+			"types": [
+				"Water"
+			],
 			"speed": 85,
 			"abilities": [
 				"Damp",
@@ -340,6 +478,9 @@
 		{
 			"dex": 57,
 			"name": "Primeape",
+			"types": [
+				"Fighting"
+			],
 			"speed": 95,
 			"abilities": [
 				"Vital Spirit",
@@ -349,6 +490,9 @@
 		{
 			"dex": 58,
 			"name": "Growlithe",
+			"types": [
+				"Fire"
+			],
 			"speed": 60,
 			"abilities": [
 				"Intimidate",
@@ -358,6 +502,9 @@
 		{
 			"dex": 59,
 			"name": "Arcanine",
+			"types": [
+				"Fire"
+			],
 			"speed": 95,
 			"abilities": [
 				"Intimidate",
@@ -367,6 +514,9 @@
 		{
 			"dex": 61,
 			"name": "Poliwhirl",
+			"types": [
+				"Water"
+			],
 			"speed": 90,
 			"abilities": [
 				"Water Absorb",
@@ -376,6 +526,10 @@
 		{
 			"dex": 62,
 			"name": "Poliwrath",
+			"types": [
+				"Water",
+				"Fighting"
+			],
 			"speed": 70,
 			"abilities": [
 				"Water Absorb",
@@ -385,6 +539,9 @@
 		{
 			"dex": 64,
 			"name": "Kadabra",
+			"types": [
+				"Psychic"
+			],
 			"speed": 105,
 			"abilities": [
 				"Synchronize",
@@ -394,6 +551,9 @@
 		{
 			"dex": 65,
 			"name": "Alakazam",
+			"types": [
+				"Psychic"
+			],
 			"speed": 120,
 			"abilities": [
 				"Synchronize",
@@ -403,6 +563,9 @@
 		{
 			"dex": 66,
 			"name": "Machop",
+			"types": [
+				"Fighting"
+			],
 			"speed": 35,
 			"abilities": [
 				"Guts",
@@ -412,6 +575,9 @@
 		{
 			"dex": 67,
 			"name": "Machoke",
+			"types": [
+				"Fighting"
+			],
 			"speed": 45,
 			"abilities": [
 				"Guts",
@@ -421,6 +587,9 @@
 		{
 			"dex": 68,
 			"name": "Machamp",
+			"types": [
+				"Fighting"
+			],
 			"speed": 55,
 			"abilities": [
 				"Guts",
@@ -430,6 +599,10 @@
 		{
 			"dex": 70,
 			"name": "Weepinbell",
+			"types": [
+				"Grass",
+				"Poison"
+			],
 			"speed": 55,
 			"abilities": [
 				"Chlorophyll"
@@ -438,6 +611,10 @@
 		{
 			"dex": 71,
 			"name": "Victreebel",
+			"types": [
+				"Grass",
+				"Poison"
+			],
 			"speed": 70,
 			"abilities": [
 				"Chlorophyll"
@@ -446,6 +623,10 @@
 		{
 			"dex": 72,
 			"name": "Tentacool",
+			"types": [
+				"Water",
+				"Poison"
+			],
 			"speed": 70,
 			"abilities": [
 				"Clear Body",
@@ -455,6 +636,10 @@
 		{
 			"dex": 73,
 			"name": "Tentacruel",
+			"types": [
+				"Water",
+				"Poison"
+			],
 			"speed": 100,
 			"abilities": [
 				"Clear Body",
@@ -464,6 +649,10 @@
 		{
 			"dex": 74,
 			"name": "Geodude",
+			"types": [
+				"Rock",
+				"Ground"
+			],
 			"speed": 20,
 			"abilities": [
 				"Rock Head",
@@ -473,6 +662,10 @@
 		{
 			"dex": 75,
 			"name": "Graveler",
+			"types": [
+				"Rock",
+				"Ground"
+			],
 			"speed": 35,
 			"abilities": [
 				"Rock Head",
@@ -482,6 +675,10 @@
 		{
 			"dex": 76,
 			"name": "Golem",
+			"types": [
+				"Rock",
+				"Ground"
+			],
 			"speed": 45,
 			"abilities": [
 				"Rock Head",
@@ -491,6 +688,9 @@
 		{
 			"dex": 77,
 			"name": "Ponyta",
+			"types": [
+				"Fire"
+			],
 			"speed": 90,
 			"abilities": [
 				"Run Away",
@@ -500,6 +700,9 @@
 		{
 			"dex": 78,
 			"name": "Rapidash",
+			"types": [
+				"Fire"
+			],
 			"speed": 105,
 			"abilities": [
 				"Run Away",
@@ -509,6 +712,10 @@
 		{
 			"dex": 79,
 			"name": "Slowpoke",
+			"types": [
+				"Water",
+				"Psychic"
+			],
 			"speed": 15,
 			"abilities": [
 				"Oblivious",
@@ -518,6 +725,10 @@
 		{
 			"dex": 80,
 			"name": "Slowbro",
+			"types": [
+				"Water",
+				"Psychic"
+			],
 			"speed": 30,
 			"abilities": [
 				"Oblivious",
@@ -527,6 +738,10 @@
 		{
 			"dex": 81,
 			"name": "Magnemite",
+			"types": [
+				"Electric",
+				"Steel"
+			],
 			"speed": 45,
 			"abilities": [
 				"Magnet Pull",
@@ -536,6 +751,10 @@
 		{
 			"dex": 82,
 			"name": "Magneton",
+			"types": [
+				"Electric",
+				"Steel"
+			],
 			"speed": 70,
 			"abilities": [
 				"Magnet Pull",
@@ -545,6 +764,10 @@
 		{
 			"dex": 83,
 			"name": "Farfetch'd",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 60,
 			"abilities": [
 				"Keen Eye",
@@ -554,6 +777,10 @@
 		{
 			"dex": 84,
 			"name": "Doduo",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 75,
 			"abilities": [
 				"Run Away",
@@ -563,6 +790,10 @@
 		{
 			"dex": 85,
 			"name": "Dodrio",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 100,
 			"abilities": [
 				"Run Away",
@@ -572,6 +803,9 @@
 		{
 			"dex": 86,
 			"name": "Seel",
+			"types": [
+				"Water"
+			],
 			"speed": 45,
 			"abilities": [
 				"Thick Fat",
@@ -581,6 +815,10 @@
 		{
 			"dex": 87,
 			"name": "Dewgong",
+			"types": [
+				"Water",
+				"Ice"
+			],
 			"speed": 70,
 			"abilities": [
 				"Thick Fat",
@@ -590,6 +828,9 @@
 		{
 			"dex": 88,
 			"name": "Grimer",
+			"types": [
+				"Poison"
+			],
 			"speed": 25,
 			"abilities": [
 				"Stench",
@@ -599,6 +840,9 @@
 		{
 			"dex": 89,
 			"name": "Muk",
+			"types": [
+				"Poison"
+			],
 			"speed": 50,
 			"abilities": [
 				"Stench",
@@ -608,6 +852,10 @@
 		{
 			"dex": 91,
 			"name": "Cloyster",
+			"types": [
+				"Water",
+				"Ice"
+			],
 			"speed": 70,
 			"abilities": [
 				"Shell Armor",
@@ -617,6 +865,10 @@
 		{
 			"dex": 93,
 			"name": "Haunter",
+			"types": [
+				"Ghost",
+				"Poison"
+			],
 			"speed": 95,
 			"abilities": [
 				"Levitate"
@@ -625,6 +877,10 @@
 		{
 			"dex": 94,
 			"name": "Gengar",
+			"types": [
+				"Ghost",
+				"Poison"
+			],
 			"speed": 110,
 			"abilities": [
 				"Levitate"
@@ -633,6 +889,10 @@
 		{
 			"dex": 95,
 			"name": "Onix",
+			"types": [
+				"Rock",
+				"Ground"
+			],
 			"speed": 70,
 			"abilities": [
 				"Rock Head",
@@ -642,6 +902,9 @@
 		{
 			"dex": 96,
 			"name": "Drowzee",
+			"types": [
+				"Psychic"
+			],
 			"speed": 42,
 			"abilities": [
 				"Insomnia",
@@ -651,6 +914,9 @@
 		{
 			"dex": 97,
 			"name": "Hypno",
+			"types": [
+				"Psychic"
+			],
 			"speed": 67,
 			"abilities": [
 				"Insomnia",
@@ -660,6 +926,9 @@
 		{
 			"dex": 98,
 			"name": "Krabby",
+			"types": [
+				"Water"
+			],
 			"speed": 50,
 			"abilities": [
 				"Hyper Cutter",
@@ -669,6 +938,9 @@
 		{
 			"dex": 99,
 			"name": "Kingler",
+			"types": [
+				"Water"
+			],
 			"speed": 75,
 			"abilities": [
 				"Hyper Cutter",
@@ -678,6 +950,9 @@
 		{
 			"dex": 100,
 			"name": "Voltorb",
+			"types": [
+				"Electric"
+			],
 			"speed": 100,
 			"abilities": [
 				"Soundproof",
@@ -687,6 +962,9 @@
 		{
 			"dex": 101,
 			"name": "Electrode",
+			"types": [
+				"Electric"
+			],
 			"speed": 140,
 			"abilities": [
 				"Soundproof",
@@ -696,6 +974,10 @@
 		{
 			"dex": 102,
 			"name": "Exeggcute",
+			"types": [
+				"Grass",
+				"Psychic"
+			],
 			"speed": 40,
 			"abilities": [
 				"Chlorophyll"
@@ -704,6 +986,10 @@
 		{
 			"dex": 103,
 			"name": "Exeggutor",
+			"types": [
+				"Grass",
+				"Psychic"
+			],
 			"speed": 55,
 			"abilities": [
 				"Chlorophyll"
@@ -712,6 +998,9 @@
 		{
 			"dex": 104,
 			"name": "Cubone",
+			"types": [
+				"Ground"
+			],
 			"speed": 35,
 			"abilities": [
 				"Rock Head",
@@ -721,6 +1010,9 @@
 		{
 			"dex": 105,
 			"name": "Marowak",
+			"types": [
+				"Ground"
+			],
 			"speed": 45,
 			"abilities": [
 				"Rock Head",
@@ -730,6 +1022,9 @@
 		{
 			"dex": 106,
 			"name": "Hitmonlee",
+			"types": [
+				"Fighting"
+			],
 			"speed": 87,
 			"abilities": [
 				"Limber",
@@ -739,6 +1034,9 @@
 		{
 			"dex": 107,
 			"name": "Hitmonchan",
+			"types": [
+				"Fighting"
+			],
 			"speed": 76,
 			"abilities": [
 				"Keen Eye",
@@ -748,6 +1046,9 @@
 		{
 			"dex": 108,
 			"name": "Lickitung",
+			"types": [
+				"Normal"
+			],
 			"speed": 30,
 			"abilities": [
 				"Own Tempo",
@@ -757,6 +1058,9 @@
 		{
 			"dex": 109,
 			"name": "Koffing",
+			"types": [
+				"Poison"
+			],
 			"speed": 35,
 			"abilities": [
 				"Levitate"
@@ -765,6 +1069,9 @@
 		{
 			"dex": 110,
 			"name": "Weezing",
+			"types": [
+				"Poison"
+			],
 			"speed": 60,
 			"abilities": [
 				"Levitate"
@@ -773,6 +1080,10 @@
 		{
 			"dex": 111,
 			"name": "Rhyhorn",
+			"types": [
+				"Ground",
+				"Rock"
+			],
 			"speed": 25,
 			"abilities": [
 				"Lightningrod",
@@ -782,6 +1093,10 @@
 		{
 			"dex": 112,
 			"name": "Rhydon",
+			"types": [
+				"Ground",
+				"Rock"
+			],
 			"speed": 40,
 			"abilities": [
 				"Lightningrod",
@@ -791,6 +1106,9 @@
 		{
 			"dex": 113,
 			"name": "Chansey",
+			"types": [
+				"Normal"
+			],
 			"speed": 50,
 			"abilities": [
 				"Natural Cure",
@@ -800,6 +1118,9 @@
 		{
 			"dex": 114,
 			"name": "Tangela",
+			"types": [
+				"Grass"
+			],
 			"speed": 60,
 			"abilities": [
 				"Chlorophyll",
@@ -809,6 +1130,9 @@
 		{
 			"dex": 115,
 			"name": "Kangaskhan",
+			"types": [
+				"Normal"
+			],
 			"speed": 90,
 			"abilities": [
 				"Early Bird",
@@ -818,6 +1142,9 @@
 		{
 			"dex": 117,
 			"name": "Seadra",
+			"types": [
+				"Water"
+			],
 			"speed": 85,
 			"abilities": [
 				"Poison Point",
@@ -827,6 +1154,9 @@
 		{
 			"dex": 118,
 			"name": "Goldeen",
+			"types": [
+				"Water"
+			],
 			"speed": 63,
 			"abilities": [
 				"Swift Swim",
@@ -836,6 +1166,9 @@
 		{
 			"dex": 119,
 			"name": "Seaking",
+			"types": [
+				"Water"
+			],
 			"speed": 68,
 			"abilities": [
 				"Swift Swim",
@@ -845,6 +1178,9 @@
 		{
 			"dex": 120,
 			"name": "Staryu",
+			"types": [
+				"Water"
+			],
 			"speed": 85,
 			"abilities": [
 				"Illuminate",
@@ -854,6 +1190,10 @@
 		{
 			"dex": 121,
 			"name": "Starmie",
+			"types": [
+				"Water",
+				"Psychic"
+			],
 			"speed": 115,
 			"abilities": [
 				"Illuminate",
@@ -863,6 +1203,9 @@
 		{
 			"dex": 122,
 			"name": "Mr. Mime",
+			"types": [
+				"Psychic"
+			],
 			"speed": 90,
 			"abilities": [
 				"Soundproof",
@@ -872,6 +1215,10 @@
 		{
 			"dex": 123,
 			"name": "Scyther",
+			"types": [
+				"Bug",
+				"Flying"
+			],
 			"speed": 105,
 			"abilities": [
 				"Swarm",
@@ -881,6 +1228,10 @@
 		{
 			"dex": 124,
 			"name": "Jynx",
+			"types": [
+				"Ice",
+				"Psychic"
+			],
 			"speed": 95,
 			"abilities": [
 				"Oblivious",
@@ -890,6 +1241,9 @@
 		{
 			"dex": 125,
 			"name": "Electabuzz",
+			"types": [
+				"Electric"
+			],
 			"speed": 105,
 			"abilities": [
 				"Static"
@@ -898,6 +1252,9 @@
 		{
 			"dex": 126,
 			"name": "Magmar",
+			"types": [
+				"Fire"
+			],
 			"speed": 93,
 			"abilities": [
 				"Flame Body"
@@ -906,6 +1263,9 @@
 		{
 			"dex": 127,
 			"name": "Pinsir",
+			"types": [
+				"Bug"
+			],
 			"speed": 85,
 			"abilities": [
 				"Hyper Cutter",
@@ -915,6 +1275,9 @@
 		{
 			"dex": 128,
 			"name": "Tauros",
+			"types": [
+				"Normal"
+			],
 			"speed": 110,
 			"abilities": [
 				"Intimidate",
@@ -924,6 +1287,10 @@
 		{
 			"dex": 130,
 			"name": "Gyarados",
+			"types": [
+				"Water",
+				"Flying"
+			],
 			"speed": 81,
 			"abilities": [
 				"Intimidate"
@@ -932,6 +1299,10 @@
 		{
 			"dex": 131,
 			"name": "Lapras",
+			"types": [
+				"Water",
+				"Ice"
+			],
 			"speed": 60,
 			"abilities": [
 				"Water Absorb",
@@ -941,6 +1312,9 @@
 		{
 			"dex": 133,
 			"name": "Eevee",
+			"types": [
+				"Normal"
+			],
 			"speed": 55,
 			"abilities": [
 				"Run Away",
@@ -950,6 +1324,9 @@
 		{
 			"dex": 134,
 			"name": "Vaporeon",
+			"types": [
+				"Water"
+			],
 			"speed": 65,
 			"abilities": [
 				"Water Absorb"
@@ -958,6 +1335,9 @@
 		{
 			"dex": 135,
 			"name": "Jolteon",
+			"types": [
+				"Electric"
+			],
 			"speed": 130,
 			"abilities": [
 				"Volt Absorb"
@@ -966,6 +1346,9 @@
 		{
 			"dex": 136,
 			"name": "Flareon",
+			"types": [
+				"Fire"
+			],
 			"speed": 65,
 			"abilities": [
 				"Flash Fire"
@@ -974,6 +1357,9 @@
 		{
 			"dex": 137,
 			"name": "Porygon",
+			"types": [
+				"Normal"
+			],
 			"speed": 40,
 			"abilities": [
 				"Trace",
@@ -983,6 +1369,10 @@
 		{
 			"dex": 138,
 			"name": "Omanyte",
+			"types": [
+				"Rock",
+				"Water"
+			],
 			"speed": 35,
 			"abilities": [
 				"Swift Swim",
@@ -992,6 +1382,10 @@
 		{
 			"dex": 139,
 			"name": "Omastar",
+			"types": [
+				"Rock",
+				"Water"
+			],
 			"speed": 55,
 			"abilities": [
 				"Swift Swim",
@@ -1001,6 +1395,10 @@
 		{
 			"dex": 140,
 			"name": "Kabuto",
+			"types": [
+				"Rock",
+				"Water"
+			],
 			"speed": 55,
 			"abilities": [
 				"Swift Swim",
@@ -1010,6 +1408,10 @@
 		{
 			"dex": 141,
 			"name": "Kabutops",
+			"types": [
+				"Rock",
+				"Water"
+			],
 			"speed": 80,
 			"abilities": [
 				"Swift Swim",
@@ -1019,6 +1421,10 @@
 		{
 			"dex": 142,
 			"name": "Aerodactyl",
+			"types": [
+				"Rock",
+				"Flying"
+			],
 			"speed": 130,
 			"abilities": [
 				"Rock Head",
@@ -1028,6 +1434,9 @@
 		{
 			"dex": 143,
 			"name": "Snorlax",
+			"types": [
+				"Normal"
+			],
 			"speed": 30,
 			"abilities": [
 				"Immunity",
@@ -1037,6 +1446,10 @@
 		{
 			"dex": 144,
 			"name": "Articuno",
+			"types": [
+				"Ice",
+				"Flying"
+			],
 			"speed": 85,
 			"abilities": [
 				"Pressure"
@@ -1045,6 +1458,10 @@
 		{
 			"dex": 145,
 			"name": "Zapdos",
+			"types": [
+				"Electric",
+				"Flying"
+			],
 			"speed": 100,
 			"abilities": [
 				"Pressure"
@@ -1053,6 +1470,10 @@
 		{
 			"dex": 146,
 			"name": "Moltres",
+			"types": [
+				"Fire",
+				"Flying"
+			],
 			"speed": 90,
 			"abilities": [
 				"Pressure"
@@ -1061,6 +1482,9 @@
 		{
 			"dex": 147,
 			"name": "Dratini",
+			"types": [
+				"Dragon"
+			],
 			"speed": 50,
 			"abilities": [
 				"Shed Skin"
@@ -1069,6 +1493,9 @@
 		{
 			"dex": 148,
 			"name": "Dragonair",
+			"types": [
+				"Dragon"
+			],
 			"speed": 70,
 			"abilities": [
 				"Shed Skin"
@@ -1077,6 +1504,10 @@
 		{
 			"dex": 149,
 			"name": "Dragonite",
+			"types": [
+				"Dragon",
+				"Flying"
+			],
 			"speed": 80,
 			"abilities": [
 				"Inner Focus"
@@ -1085,6 +1516,9 @@
 		{
 			"dex": 152,
 			"name": "Chikorita",
+			"types": [
+				"Grass"
+			],
 			"speed": 45,
 			"abilities": [
 				"Overgrow"
@@ -1093,6 +1527,9 @@
 		{
 			"dex": 153,
 			"name": "Bayleef",
+			"types": [
+				"Grass"
+			],
 			"speed": 60,
 			"abilities": [
 				"Overgrow"
@@ -1101,6 +1538,9 @@
 		{
 			"dex": 154,
 			"name": "Meganium",
+			"types": [
+				"Grass"
+			],
 			"speed": 80,
 			"abilities": [
 				"Overgrow"
@@ -1109,6 +1549,9 @@
 		{
 			"dex": 155,
 			"name": "Cyndaquil",
+			"types": [
+				"Fire"
+			],
 			"speed": 65,
 			"abilities": [
 				"Blaze"
@@ -1117,6 +1560,9 @@
 		{
 			"dex": 156,
 			"name": "Quilava",
+			"types": [
+				"Fire"
+			],
 			"speed": 80,
 			"abilities": [
 				"Blaze"
@@ -1125,6 +1571,9 @@
 		{
 			"dex": 157,
 			"name": "Typhlosion",
+			"types": [
+				"Fire"
+			],
 			"speed": 100,
 			"abilities": [
 				"Blaze"
@@ -1133,6 +1582,9 @@
 		{
 			"dex": 158,
 			"name": "Totodile",
+			"types": [
+				"Water"
+			],
 			"speed": 43,
 			"abilities": [
 				"Torrent"
@@ -1141,6 +1593,9 @@
 		{
 			"dex": 159,
 			"name": "Croconaw",
+			"types": [
+				"Water"
+			],
 			"speed": 58,
 			"abilities": [
 				"Torrent"
@@ -1149,6 +1604,9 @@
 		{
 			"dex": 160,
 			"name": "Feraligatr",
+			"types": [
+				"Water"
+			],
 			"speed": 78,
 			"abilities": [
 				"Torrent"
@@ -1157,6 +1615,9 @@
 		{
 			"dex": 162,
 			"name": "Furret",
+			"types": [
+				"Normal"
+			],
 			"speed": 90,
 			"abilities": [
 				"Run Away",
@@ -1166,6 +1627,10 @@
 		{
 			"dex": 164,
 			"name": "Noctowl",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 70,
 			"abilities": [
 				"Insomnia",
@@ -1175,6 +1640,10 @@
 		{
 			"dex": 166,
 			"name": "Ledian",
+			"types": [
+				"Bug",
+				"Flying"
+			],
 			"speed": 85,
 			"abilities": [
 				"Swarm",
@@ -1184,6 +1653,10 @@
 		{
 			"dex": 168,
 			"name": "Ariados",
+			"types": [
+				"Bug",
+				"Poison"
+			],
 			"speed": 40,
 			"abilities": [
 				"Swarm",
@@ -1193,6 +1666,10 @@
 		{
 			"dex": 169,
 			"name": "Crobat",
+			"types": [
+				"Poison",
+				"Flying"
+			],
 			"speed": 130,
 			"abilities": [
 				"Inner Focus"
@@ -1201,6 +1678,10 @@
 		{
 			"dex": 170,
 			"name": "Chinchou",
+			"types": [
+				"Water",
+				"Electric"
+			],
 			"speed": 67,
 			"abilities": [
 				"Volt Absorb",
@@ -1210,6 +1691,10 @@
 		{
 			"dex": 171,
 			"name": "Lanturn",
+			"types": [
+				"Water",
+				"Electric"
+			],
 			"speed": 67,
 			"abilities": [
 				"Volt Absorb",
@@ -1219,6 +1704,10 @@
 		{
 			"dex": 176,
 			"name": "Togetic",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 40,
 			"abilities": [
 				"Hustle",
@@ -1228,6 +1717,10 @@
 		{
 			"dex": 177,
 			"name": "Natu",
+			"types": [
+				"Psychic",
+				"Flying"
+			],
 			"speed": 70,
 			"abilities": [
 				"Synchronize",
@@ -1237,6 +1730,10 @@
 		{
 			"dex": 178,
 			"name": "Xatu",
+			"types": [
+				"Psychic",
+				"Flying"
+			],
 			"speed": 95,
 			"abilities": [
 				"Synchronize",
@@ -1246,6 +1743,9 @@
 		{
 			"dex": 180,
 			"name": "Flaaffy",
+			"types": [
+				"Electric"
+			],
 			"speed": 45,
 			"abilities": [
 				"Static"
@@ -1254,6 +1754,9 @@
 		{
 			"dex": 181,
 			"name": "Ampharos",
+			"types": [
+				"Electric"
+			],
 			"speed": 55,
 			"abilities": [
 				"Static"
@@ -1262,6 +1765,9 @@
 		{
 			"dex": 182,
 			"name": "Bellossom",
+			"types": [
+				"Grass"
+			],
 			"speed": 50,
 			"abilities": [
 				"Chlorophyll"
@@ -1270,6 +1776,9 @@
 		{
 			"dex": 184,
 			"name": "Azumarill",
+			"types": [
+				"Water"
+			],
 			"speed": 50,
 			"abilities": [
 				"Thick Fat",
@@ -1279,6 +1788,9 @@
 		{
 			"dex": 185,
 			"name": "Sudowoodo",
+			"types": [
+				"Rock"
+			],
 			"speed": 30,
 			"abilities": [
 				"Sturdy",
@@ -1288,6 +1800,9 @@
 		{
 			"dex": 186,
 			"name": "Politoed",
+			"types": [
+				"Water"
+			],
 			"speed": 70,
 			"abilities": [
 				"Water Absorb",
@@ -1297,6 +1812,10 @@
 		{
 			"dex": 188,
 			"name": "Skiploom",
+			"types": [
+				"Grass",
+				"Flying"
+			],
 			"speed": 80,
 			"abilities": [
 				"Chlorophyll",
@@ -1306,6 +1825,10 @@
 		{
 			"dex": 189,
 			"name": "Jumpluff",
+			"types": [
+				"Grass",
+				"Flying"
+			],
 			"speed": 110,
 			"abilities": [
 				"Chlorophyll",
@@ -1315,6 +1838,9 @@
 		{
 			"dex": 190,
 			"name": "Aipom",
+			"types": [
+				"Normal"
+			],
 			"speed": 85,
 			"abilities": [
 				"Run Away",
@@ -1324,6 +1850,9 @@
 		{
 			"dex": 192,
 			"name": "Sunflora",
+			"types": [
+				"Grass"
+			],
 			"speed": 30,
 			"abilities": [
 				"Chlorophyll",
@@ -1333,6 +1862,10 @@
 		{
 			"dex": 193,
 			"name": "Yanma",
+			"types": [
+				"Bug",
+				"Flying"
+			],
 			"speed": 95,
 			"abilities": [
 				"Speed Boost",
@@ -1342,6 +1875,10 @@
 		{
 			"dex": 195,
 			"name": "Quagsire",
+			"types": [
+				"Water",
+				"Ground"
+			],
 			"speed": 35,
 			"abilities": [
 				"Damp",
@@ -1351,6 +1888,9 @@
 		{
 			"dex": 196,
 			"name": "Espeon",
+			"types": [
+				"Psychic"
+			],
 			"speed": 110,
 			"abilities": [
 				"Synchronize"
@@ -1359,6 +1899,9 @@
 		{
 			"dex": 197,
 			"name": "Umbreon",
+			"types": [
+				"Dark"
+			],
 			"speed": 65,
 			"abilities": [
 				"Synchronize"
@@ -1367,6 +1910,10 @@
 		{
 			"dex": 198,
 			"name": "Murkrow",
+			"types": [
+				"Dark",
+				"Flying"
+			],
 			"speed": 91,
 			"abilities": [
 				"Insomnia",
@@ -1376,6 +1923,10 @@
 		{
 			"dex": 199,
 			"name": "Slowking",
+			"types": [
+				"Water",
+				"Psychic"
+			],
 			"speed": 30,
 			"abilities": [
 				"Oblivious",
@@ -1385,6 +1936,9 @@
 		{
 			"dex": 200,
 			"name": "Misdreavus",
+			"types": [
+				"Ghost"
+			],
 			"speed": 85,
 			"abilities": [
 				"Levitate"
@@ -1393,6 +1947,9 @@
 		{
 			"dex": 202,
 			"name": "Wobbuffet",
+			"types": [
+				"Psychic"
+			],
 			"speed": 33,
 			"abilities": [
 				"Shadow Tag"
@@ -1401,6 +1958,10 @@
 		{
 			"dex": 203,
 			"name": "Girafarig",
+			"types": [
+				"Normal",
+				"Psychic"
+			],
 			"speed": 85,
 			"abilities": [
 				"Inner Focus",
@@ -1410,6 +1971,10 @@
 		{
 			"dex": 205,
 			"name": "Forretress",
+			"types": [
+				"Bug",
+				"Steel"
+			],
 			"speed": 40,
 			"abilities": [
 				"Sturdy"
@@ -1418,6 +1983,9 @@
 		{
 			"dex": 206,
 			"name": "Dunsparce",
+			"types": [
+				"Normal"
+			],
 			"speed": 45,
 			"abilities": [
 				"Serene Grace",
@@ -1427,6 +1995,10 @@
 		{
 			"dex": 207,
 			"name": "Gligar",
+			"types": [
+				"Ground",
+				"Flying"
+			],
 			"speed": 85,
 			"abilities": [
 				"Hyper Cutter",
@@ -1436,6 +2008,10 @@
 		{
 			"dex": 208,
 			"name": "Steelix",
+			"types": [
+				"Steel",
+				"Ground"
+			],
 			"speed": 30,
 			"abilities": [
 				"Rock Head",
@@ -1445,6 +2021,9 @@
 		{
 			"dex": 209,
 			"name": "Snubbull",
+			"types": [
+				"Normal"
+			],
 			"speed": 30,
 			"abilities": [
 				"Intimidate",
@@ -1454,6 +2033,9 @@
 		{
 			"dex": 210,
 			"name": "Granbull",
+			"types": [
+				"Normal"
+			],
 			"speed": 45,
 			"abilities": [
 				"Intimidate",
@@ -1463,6 +2045,10 @@
 		{
 			"dex": 211,
 			"name": "Qwilfish",
+			"types": [
+				"Water",
+				"Poison"
+			],
 			"speed": 85,
 			"abilities": [
 				"Poison Point",
@@ -1472,6 +2058,10 @@
 		{
 			"dex": 212,
 			"name": "Scizor",
+			"types": [
+				"Bug",
+				"Steel"
+			],
 			"speed": 65,
 			"abilities": [
 				"Swarm",
@@ -1481,6 +2071,10 @@
 		{
 			"dex": 213,
 			"name": "Shuckle",
+			"types": [
+				"Bug",
+				"Rock"
+			],
 			"speed": 5,
 			"abilities": [
 				"Sturdy",
@@ -1490,6 +2084,10 @@
 		{
 			"dex": 214,
 			"name": "Heracross",
+			"types": [
+				"Bug",
+				"Fighting"
+			],
 			"speed": 85,
 			"abilities": [
 				"Swarm",
@@ -1499,6 +2097,10 @@
 		{
 			"dex": 215,
 			"name": "Sneasel",
+			"types": [
+				"Dark",
+				"Ice"
+			],
 			"speed": 115,
 			"abilities": [
 				"Inner Focus",
@@ -1508,6 +2110,9 @@
 		{
 			"dex": 216,
 			"name": "Teddiursa",
+			"types": [
+				"Normal"
+			],
 			"speed": 40,
 			"abilities": [
 				"Pickup",
@@ -1517,6 +2122,9 @@
 		{
 			"dex": 217,
 			"name": "Ursaring",
+			"types": [
+				"Normal"
+			],
 			"speed": 55,
 			"abilities": [
 				"Guts",
@@ -1526,6 +2134,10 @@
 		{
 			"dex": 219,
 			"name": "Magcargo",
+			"types": [
+				"Fire",
+				"Rock"
+			],
 			"speed": 30,
 			"abilities": [
 				"Magma Armor",
@@ -1535,6 +2147,10 @@
 		{
 			"dex": 221,
 			"name": "Piloswine",
+			"types": [
+				"Ice",
+				"Ground"
+			],
 			"speed": 50,
 			"abilities": [
 				"Oblivious",
@@ -1544,6 +2160,10 @@
 		{
 			"dex": 222,
 			"name": "Corsola",
+			"types": [
+				"Water",
+				"Rock"
+			],
 			"speed": 35,
 			"abilities": [
 				"Hustle",
@@ -1553,6 +2173,9 @@
 		{
 			"dex": 223,
 			"name": "Remoraid",
+			"types": [
+				"Water"
+			],
 			"speed": 65,
 			"abilities": [
 				"Hustle",
@@ -1562,6 +2185,9 @@
 		{
 			"dex": 224,
 			"name": "Octillery",
+			"types": [
+				"Water"
+			],
 			"speed": 45,
 			"abilities": [
 				"Suction Cups",
@@ -1571,6 +2197,10 @@
 		{
 			"dex": 225,
 			"name": "Delibird",
+			"types": [
+				"Ice",
+				"Flying"
+			],
 			"speed": 75,
 			"abilities": [
 				"Vital Spirit",
@@ -1580,6 +2210,10 @@
 		{
 			"dex": 226,
 			"name": "Mantine",
+			"types": [
+				"Water",
+				"Flying"
+			],
 			"speed": 70,
 			"abilities": [
 				"Swift Swim",
@@ -1589,6 +2223,10 @@
 		{
 			"dex": 227,
 			"name": "Skarmory",
+			"types": [
+				"Steel",
+				"Flying"
+			],
 			"speed": 70,
 			"abilities": [
 				"Keen Eye",
@@ -1598,6 +2236,10 @@
 		{
 			"dex": 228,
 			"name": "Houndour",
+			"types": [
+				"Dark",
+				"Fire"
+			],
 			"speed": 65,
 			"abilities": [
 				"Early Bird",
@@ -1607,6 +2249,10 @@
 		{
 			"dex": 229,
 			"name": "Houndoom",
+			"types": [
+				"Dark",
+				"Fire"
+			],
 			"speed": 95,
 			"abilities": [
 				"Early Bird",
@@ -1616,6 +2262,10 @@
 		{
 			"dex": 230,
 			"name": "Kingdra",
+			"types": [
+				"Water",
+				"Dragon"
+			],
 			"speed": 85,
 			"abilities": [
 				"Swift Swim",
@@ -1625,6 +2275,9 @@
 		{
 			"dex": 231,
 			"name": "Phanpy",
+			"types": [
+				"Ground"
+			],
 			"speed": 40,
 			"abilities": [
 				"Pickup"
@@ -1633,6 +2286,9 @@
 		{
 			"dex": 232,
 			"name": "Donphan",
+			"types": [
+				"Ground"
+			],
 			"speed": 50,
 			"abilities": [
 				"Sturdy"
@@ -1641,6 +2297,9 @@
 		{
 			"dex": 233,
 			"name": "Porygon2",
+			"types": [
+				"Normal"
+			],
 			"speed": 60,
 			"abilities": [
 				"Trace",
@@ -1650,6 +2309,9 @@
 		{
 			"dex": 234,
 			"name": "Stantler",
+			"types": [
+				"Normal"
+			],
 			"speed": 85,
 			"abilities": [
 				"Intimidate",
@@ -1659,6 +2321,9 @@
 		{
 			"dex": 237,
 			"name": "Hitmontop",
+			"types": [
+				"Fighting"
+			],
 			"speed": 70,
 			"abilities": [
 				"Intimidate",
@@ -1668,6 +2333,10 @@
 		{
 			"dex": 238,
 			"name": "Smoochum",
+			"types": [
+				"Ice",
+				"Psychic"
+			],
 			"speed": 65,
 			"abilities": [
 				"Oblivious",
@@ -1677,6 +2346,9 @@
 		{
 			"dex": 239,
 			"name": "Elekid",
+			"types": [
+				"Electric"
+			],
 			"speed": 95,
 			"abilities": [
 				"Static"
@@ -1685,6 +2357,9 @@
 		{
 			"dex": 240,
 			"name": "Magby",
+			"types": [
+				"Fire"
+			],
 			"speed": 83,
 			"abilities": [
 				"Flame Body"
@@ -1693,6 +2368,9 @@
 		{
 			"dex": 241,
 			"name": "Miltank",
+			"types": [
+				"Normal"
+			],
 			"speed": 100,
 			"abilities": [
 				"Thick Fat",
@@ -1702,6 +2380,9 @@
 		{
 			"dex": 242,
 			"name": "Blissey",
+			"types": [
+				"Normal"
+			],
 			"speed": 55,
 			"abilities": [
 				"Natural Cure",
@@ -1711,6 +2392,9 @@
 		{
 			"dex": 243,
 			"name": "Raikou",
+			"types": [
+				"Electric"
+			],
 			"speed": 115,
 			"abilities": [
 				"Pressure"
@@ -1719,6 +2403,9 @@
 		{
 			"dex": 244,
 			"name": "Entei",
+			"types": [
+				"Fire"
+			],
 			"speed": 100,
 			"abilities": [
 				"Pressure"
@@ -1727,6 +2414,9 @@
 		{
 			"dex": 245,
 			"name": "Suicune",
+			"types": [
+				"Water"
+			],
 			"speed": 85,
 			"abilities": [
 				"Pressure"
@@ -1735,6 +2425,10 @@
 		{
 			"dex": 246,
 			"name": "Larvitar",
+			"types": [
+				"Rock",
+				"Ground"
+			],
 			"speed": 41,
 			"abilities": [
 				"Guts"
@@ -1743,6 +2437,10 @@
 		{
 			"dex": 247,
 			"name": "Pupitar",
+			"types": [
+				"Rock",
+				"Ground"
+			],
 			"speed": 51,
 			"abilities": [
 				"Shed Skin"
@@ -1751,6 +2449,10 @@
 		{
 			"dex": 248,
 			"name": "Tyranitar",
+			"types": [
+				"Rock",
+				"Dark"
+			],
 			"speed": 61,
 			"abilities": [
 				"Sand Stream"
@@ -1759,6 +2461,9 @@
 		{
 			"dex": 252,
 			"name": "Treecko",
+			"types": [
+				"Grass"
+			],
 			"speed": 70,
 			"abilities": [
 				"Overgrow"
@@ -1767,6 +2472,9 @@
 		{
 			"dex": 253,
 			"name": "Grovyle",
+			"types": [
+				"Grass"
+			],
 			"speed": 95,
 			"abilities": [
 				"Overgrow"
@@ -1775,6 +2483,9 @@
 		{
 			"dex": 254,
 			"name": "Sceptile",
+			"types": [
+				"Grass"
+			],
 			"speed": 120,
 			"abilities": [
 				"Overgrow"
@@ -1783,6 +2494,9 @@
 		{
 			"dex": 255,
 			"name": "Torchic",
+			"types": [
+				"Fire"
+			],
 			"speed": 45,
 			"abilities": [
 				"Blaze"
@@ -1791,6 +2505,10 @@
 		{
 			"dex": 256,
 			"name": "Combusken",
+			"types": [
+				"Fire",
+				"Fighting"
+			],
 			"speed": 55,
 			"abilities": [
 				"Blaze"
@@ -1799,6 +2517,10 @@
 		{
 			"dex": 257,
 			"name": "Blaziken",
+			"types": [
+				"Fire",
+				"Fighting"
+			],
 			"speed": 80,
 			"abilities": [
 				"Blaze"
@@ -1807,6 +2529,9 @@
 		{
 			"dex": 258,
 			"name": "Mudkip",
+			"types": [
+				"Water"
+			],
 			"speed": 40,
 			"abilities": [
 				"Torrent"
@@ -1815,6 +2540,10 @@
 		{
 			"dex": 259,
 			"name": "Marshtomp",
+			"types": [
+				"Water",
+				"Ground"
+			],
 			"speed": 50,
 			"abilities": [
 				"Torrent"
@@ -1823,6 +2552,10 @@
 		{
 			"dex": 260,
 			"name": "Swampert",
+			"types": [
+				"Water",
+				"Ground"
+			],
 			"speed": 60,
 			"abilities": [
 				"Torrent"
@@ -1831,6 +2564,9 @@
 		{
 			"dex": 262,
 			"name": "Mightyena",
+			"types": [
+				"Dark"
+			],
 			"speed": 70,
 			"abilities": [
 				"Intimidate",
@@ -1840,6 +2576,9 @@
 		{
 			"dex": 264,
 			"name": "Linoone",
+			"types": [
+				"Normal"
+			],
 			"speed": 100,
 			"abilities": [
 				"Pickup",
@@ -1849,6 +2588,10 @@
 		{
 			"dex": 267,
 			"name": "Beautifly",
+			"types": [
+				"Bug",
+				"Flying"
+			],
 			"speed": 65,
 			"abilities": [
 				"Swarm"
@@ -1857,6 +2600,10 @@
 		{
 			"dex": 269,
 			"name": "Dustox",
+			"types": [
+				"Bug",
+				"Poison"
+			],
 			"speed": 65,
 			"abilities": [
 				"Shield Dust"
@@ -1865,6 +2612,10 @@
 		{
 			"dex": 271,
 			"name": "Lombre",
+			"types": [
+				"Water",
+				"Grass"
+			],
 			"speed": 50,
 			"abilities": [
 				"Swift Swim",
@@ -1874,6 +2625,10 @@
 		{
 			"dex": 272,
 			"name": "Ludicolo",
+			"types": [
+				"Water",
+				"Grass"
+			],
 			"speed": 70,
 			"abilities": [
 				"Swift Swim",
@@ -1883,6 +2638,10 @@
 		{
 			"dex": 274,
 			"name": "Nuzleaf",
+			"types": [
+				"Grass",
+				"Dark"
+			],
 			"speed": 60,
 			"abilities": [
 				"Chlorophyll",
@@ -1892,6 +2651,10 @@
 		{
 			"dex": 275,
 			"name": "Shiftry",
+			"types": [
+				"Grass",
+				"Dark"
+			],
 			"speed": 80,
 			"abilities": [
 				"Chlorophyll",
@@ -1901,6 +2664,10 @@
 		{
 			"dex": 277,
 			"name": "Swellow",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 125,
 			"abilities": [
 				"Guts"
@@ -1909,6 +2676,10 @@
 		{
 			"dex": 279,
 			"name": "Pelipper",
+			"types": [
+				"Water",
+				"Flying"
+			],
 			"speed": 65,
 			"abilities": [
 				"Keen Eye"
@@ -1917,6 +2688,9 @@
 		{
 			"dex": 282,
 			"name": "Gardevoir",
+			"types": [
+				"Psychic"
+			],
 			"speed": 80,
 			"abilities": [
 				"Synchronize",
@@ -1926,6 +2700,10 @@
 		{
 			"dex": 284,
 			"name": "Masquerain",
+			"types": [
+				"Bug",
+				"Flying"
+			],
 			"speed": 60,
 			"abilities": [
 				"Intimidate"
@@ -1934,6 +2712,10 @@
 		{
 			"dex": 286,
 			"name": "Breloom",
+			"types": [
+				"Grass",
+				"Fighting"
+			],
 			"speed": 70,
 			"abilities": [
 				"Effect Spore",
@@ -1943,6 +2725,9 @@
 		{
 			"dex": 288,
 			"name": "Vigoroth",
+			"types": [
+				"Normal"
+			],
 			"speed": 90,
 			"abilities": [
 				"Vital Spirit"
@@ -1951,6 +2736,9 @@
 		{
 			"dex": 289,
 			"name": "Slaking",
+			"types": [
+				"Normal"
+			],
 			"speed": 100,
 			"abilities": [
 				"Truant"
@@ -1959,6 +2747,10 @@
 		{
 			"dex": 291,
 			"name": "Ninjask",
+			"types": [
+				"Bug",
+				"Flying"
+			],
 			"speed": 160,
 			"abilities": [
 				"Speed Boost"
@@ -1967,6 +2759,10 @@
 		{
 			"dex": 292,
 			"name": "Shedinja",
+			"types": [
+				"Bug",
+				"Ghost"
+			],
 			"speed": 40,
 			"abilities": [
 				"Wonder Guard"
@@ -1975,6 +2771,9 @@
 		{
 			"dex": 294,
 			"name": "Loudred",
+			"types": [
+				"Normal"
+			],
 			"speed": 48,
 			"abilities": [
 				"Soundproof"
@@ -1983,6 +2782,9 @@
 		{
 			"dex": 295,
 			"name": "Exploud",
+			"types": [
+				"Normal"
+			],
 			"speed": 68,
 			"abilities": [
 				"Soundproof"
@@ -1991,6 +2793,9 @@
 		{
 			"dex": 297,
 			"name": "Hariyama",
+			"types": [
+				"Fighting"
+			],
 			"speed": 50,
 			"abilities": [
 				"Thick Fat",
@@ -2000,6 +2805,9 @@
 		{
 			"dex": 299,
 			"name": "Nosepass",
+			"types": [
+				"Rock"
+			],
 			"speed": 30,
 			"abilities": [
 				"Sturdy",
@@ -2009,6 +2817,9 @@
 		{
 			"dex": 301,
 			"name": "Delcatty",
+			"types": [
+				"Normal"
+			],
 			"speed": 70,
 			"abilities": [
 				"Cute Charm",
@@ -2018,6 +2829,10 @@
 		{
 			"dex": 302,
 			"name": "Sableye",
+			"types": [
+				"Dark",
+				"Ghost"
+			],
 			"speed": 50,
 			"abilities": [
 				"Keen Eye",
@@ -2027,6 +2842,9 @@
 		{
 			"dex": 303,
 			"name": "Mawile",
+			"types": [
+				"Steel"
+			],
 			"speed": 50,
 			"abilities": [
 				"Hyper Cutter",
@@ -2036,6 +2854,10 @@
 		{
 			"dex": 304,
 			"name": "Aron",
+			"types": [
+				"Steel",
+				"Rock"
+			],
 			"speed": 30,
 			"abilities": [
 				"Sturdy",
@@ -2045,6 +2867,10 @@
 		{
 			"dex": 305,
 			"name": "Lairon",
+			"types": [
+				"Steel",
+				"Rock"
+			],
 			"speed": 40,
 			"abilities": [
 				"Sturdy",
@@ -2054,6 +2880,10 @@
 		{
 			"dex": 306,
 			"name": "Aggron",
+			"types": [
+				"Steel",
+				"Rock"
+			],
 			"speed": 50,
 			"abilities": [
 				"Sturdy",
@@ -2063,6 +2893,10 @@
 		{
 			"dex": 308,
 			"name": "Medicham",
+			"types": [
+				"Fighting",
+				"Psychic"
+			],
 			"speed": 80,
 			"abilities": [
 				"Pure Power"
@@ -2071,6 +2905,9 @@
 		{
 			"dex": 310,
 			"name": "Manectric",
+			"types": [
+				"Electric"
+			],
 			"speed": 105,
 			"abilities": [
 				"Static",
@@ -2080,6 +2917,9 @@
 		{
 			"dex": 311,
 			"name": "Plusle",
+			"types": [
+				"Electric"
+			],
 			"speed": 95,
 			"abilities": [
 				"Plus"
@@ -2088,6 +2928,9 @@
 		{
 			"dex": 312,
 			"name": "Minun",
+			"types": [
+				"Electric"
+			],
 			"speed": 95,
 			"abilities": [
 				"Minus"
@@ -2096,6 +2939,9 @@
 		{
 			"dex": 313,
 			"name": "Volbeat",
+			"types": [
+				"Bug"
+			],
 			"speed": 85,
 			"abilities": [
 				"Illuminate",
@@ -2105,6 +2951,9 @@
 		{
 			"dex": 314,
 			"name": "Illumise",
+			"types": [
+				"Bug"
+			],
 			"speed": 85,
 			"abilities": [
 				"Oblivious",
@@ -2114,6 +2963,10 @@
 		{
 			"dex": 315,
 			"name": "Roselia",
+			"types": [
+				"Grass",
+				"Poison"
+			],
 			"speed": 65,
 			"abilities": [
 				"Natural Cure",
@@ -2123,6 +2976,9 @@
 		{
 			"dex": 317,
 			"name": "Swalot",
+			"types": [
+				"Poison"
+			],
 			"speed": 55,
 			"abilities": [
 				"Liquid Ooze",
@@ -2132,6 +2988,10 @@
 		{
 			"dex": 318,
 			"name": "Carvanha",
+			"types": [
+				"Water",
+				"Dark"
+			],
 			"speed": 65,
 			"abilities": [
 				"Rough Skin"
@@ -2140,6 +3000,10 @@
 		{
 			"dex": 319,
 			"name": "Sharpedo",
+			"types": [
+				"Water",
+				"Dark"
+			],
 			"speed": 95,
 			"abilities": [
 				"Rough Skin"
@@ -2148,6 +3012,9 @@
 		{
 			"dex": 320,
 			"name": "Wailmer",
+			"types": [
+				"Water"
+			],
 			"speed": 60,
 			"abilities": [
 				"Water Veil",
@@ -2157,6 +3024,9 @@
 		{
 			"dex": 321,
 			"name": "Wailord",
+			"types": [
+				"Water"
+			],
 			"speed": 60,
 			"abilities": [
 				"Water Veil",
@@ -2166,6 +3036,10 @@
 		{
 			"dex": 322,
 			"name": "Numel",
+			"types": [
+				"Fire",
+				"Ground"
+			],
 			"speed": 35,
 			"abilities": [
 				"Oblivious",
@@ -2175,6 +3049,10 @@
 		{
 			"dex": 323,
 			"name": "Camerupt",
+			"types": [
+				"Fire",
+				"Ground"
+			],
 			"speed": 40,
 			"abilities": [
 				"Magma Armor",
@@ -2184,6 +3062,9 @@
 		{
 			"dex": 324,
 			"name": "Torkoal",
+			"types": [
+				"Fire"
+			],
 			"speed": 20,
 			"abilities": [
 				"White Smoke"
@@ -2192,6 +3073,9 @@
 		{
 			"dex": 325,
 			"name": "Spoink",
+			"types": [
+				"Psychic"
+			],
 			"speed": 60,
 			"abilities": [
 				"Thick Fat",
@@ -2201,6 +3085,9 @@
 		{
 			"dex": 326,
 			"name": "Grumpig",
+			"types": [
+				"Psychic"
+			],
 			"speed": 80,
 			"abilities": [
 				"Thick Fat",
@@ -2210,6 +3097,9 @@
 		{
 			"dex": 327,
 			"name": "Spinda",
+			"types": [
+				"Normal"
+			],
 			"speed": 60,
 			"abilities": [
 				"Own Tempo",
@@ -2219,6 +3109,10 @@
 		{
 			"dex": 329,
 			"name": "Vibrava",
+			"types": [
+				"Ground",
+				"Dragon"
+			],
 			"speed": 70,
 			"abilities": [
 				"Levitate"
@@ -2227,6 +3121,10 @@
 		{
 			"dex": 330,
 			"name": "Flygon",
+			"types": [
+				"Ground",
+				"Dragon"
+			],
 			"speed": 100,
 			"abilities": [
 				"Levitate"
@@ -2235,6 +3133,9 @@
 		{
 			"dex": 331,
 			"name": "Cacnea",
+			"types": [
+				"Grass"
+			],
 			"speed": 35,
 			"abilities": [
 				"Sand Veil"
@@ -2243,6 +3144,10 @@
 		{
 			"dex": 332,
 			"name": "Cacturne",
+			"types": [
+				"Grass",
+				"Dark"
+			],
 			"speed": 55,
 			"abilities": [
 				"Sand Veil"
@@ -2251,6 +3156,10 @@
 		{
 			"dex": 333,
 			"name": "Swablu",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 50,
 			"abilities": [
 				"Natural Cure"
@@ -2259,6 +3168,10 @@
 		{
 			"dex": 334,
 			"name": "Altaria",
+			"types": [
+				"Dragon",
+				"Flying"
+			],
 			"speed": 80,
 			"abilities": [
 				"Natural Cure"
@@ -2267,6 +3180,9 @@
 		{
 			"dex": 335,
 			"name": "Zangoose",
+			"types": [
+				"Normal"
+			],
 			"speed": 90,
 			"abilities": [
 				"Immunity"
@@ -2275,6 +3191,9 @@
 		{
 			"dex": 336,
 			"name": "Seviper",
+			"types": [
+				"Poison"
+			],
 			"speed": 65,
 			"abilities": [
 				"Shed Skin"
@@ -2283,6 +3202,10 @@
 		{
 			"dex": 337,
 			"name": "Lunatone",
+			"types": [
+				"Rock",
+				"Psychic"
+			],
 			"speed": 70,
 			"abilities": [
 				"Levitate"
@@ -2291,6 +3214,10 @@
 		{
 			"dex": 338,
 			"name": "Solrock",
+			"types": [
+				"Rock",
+				"Psychic"
+			],
 			"speed": 70,
 			"abilities": [
 				"Levitate"
@@ -2299,6 +3226,10 @@
 		{
 			"dex": 340,
 			"name": "Whiscash",
+			"types": [
+				"Water",
+				"Ground"
+			],
 			"speed": 60,
 			"abilities": [
 				"Oblivious",
@@ -2308,6 +3239,9 @@
 		{
 			"dex": 341,
 			"name": "Corphish",
+			"types": [
+				"Water"
+			],
 			"speed": 35,
 			"abilities": [
 				"Hyper Cutter",
@@ -2317,6 +3251,10 @@
 		{
 			"dex": 342,
 			"name": "Crawdaunt",
+			"types": [
+				"Water",
+				"Dark"
+			],
 			"speed": 55,
 			"abilities": [
 				"Hyper Cutter",
@@ -2326,6 +3264,10 @@
 		{
 			"dex": 343,
 			"name": "Baltoy",
+			"types": [
+				"Ground",
+				"Psychic"
+			],
 			"speed": 55,
 			"abilities": [
 				"Levitate"
@@ -2334,6 +3276,10 @@
 		{
 			"dex": 344,
 			"name": "Claydol",
+			"types": [
+				"Ground",
+				"Psychic"
+			],
 			"speed": 75,
 			"abilities": [
 				"Levitate"
@@ -2342,6 +3288,10 @@
 		{
 			"dex": 345,
 			"name": "Lileep",
+			"types": [
+				"Rock",
+				"Grass"
+			],
 			"speed": 23,
 			"abilities": [
 				"Suction Cups"
@@ -2350,6 +3300,10 @@
 		{
 			"dex": 346,
 			"name": "Cradily",
+			"types": [
+				"Rock",
+				"Grass"
+			],
 			"speed": 43,
 			"abilities": [
 				"Suction Cups"
@@ -2358,6 +3312,10 @@
 		{
 			"dex": 347,
 			"name": "Anorith",
+			"types": [
+				"Rock",
+				"Bug"
+			],
 			"speed": 75,
 			"abilities": [
 				"Battle Armor"
@@ -2366,6 +3324,10 @@
 		{
 			"dex": 348,
 			"name": "Armaldo",
+			"types": [
+				"Rock",
+				"Bug"
+			],
 			"speed": 45,
 			"abilities": [
 				"Battle Armor"
@@ -2374,6 +3336,9 @@
 		{
 			"dex": 350,
 			"name": "Milotic",
+			"types": [
+				"Water"
+			],
 			"speed": 81,
 			"abilities": [
 				"Marvel Scale"
@@ -2382,6 +3347,9 @@
 		{
 			"dex": 351,
 			"name": "Castform",
+			"types": [
+				"Normal"
+			],
 			"speed": 70,
 			"abilities": [
 				"Forecast"
@@ -2390,6 +3358,9 @@
 		{
 			"dex": 352,
 			"name": "Kecleon",
+			"types": [
+				"Normal"
+			],
 			"speed": 40,
 			"abilities": [
 				"Color Change"
@@ -2398,6 +3369,9 @@
 		{
 			"dex": 353,
 			"name": "Shuppet",
+			"types": [
+				"Ghost"
+			],
 			"speed": 45,
 			"abilities": [
 				"Insomnia",
@@ -2407,6 +3381,9 @@
 		{
 			"dex": 354,
 			"name": "Banette",
+			"types": [
+				"Ghost"
+			],
 			"speed": 65,
 			"abilities": [
 				"Insomnia",
@@ -2416,6 +3393,9 @@
 		{
 			"dex": 355,
 			"name": "Duskull",
+			"types": [
+				"Ghost"
+			],
 			"speed": 25,
 			"abilities": [
 				"Levitate"
@@ -2424,6 +3404,9 @@
 		{
 			"dex": 356,
 			"name": "Dusclops",
+			"types": [
+				"Ghost"
+			],
 			"speed": 25,
 			"abilities": [
 				"Pressure"
@@ -2432,6 +3415,10 @@
 		{
 			"dex": 357,
 			"name": "Tropius",
+			"types": [
+				"Grass",
+				"Flying"
+			],
 			"speed": 51,
 			"abilities": [
 				"Chlorophyll",
@@ -2441,6 +3428,9 @@
 		{
 			"dex": 358,
 			"name": "Chimecho",
+			"types": [
+				"Psychic"
+			],
 			"speed": 65,
 			"abilities": [
 				"Levitate"
@@ -2449,6 +3439,9 @@
 		{
 			"dex": 359,
 			"name": "Absol",
+			"types": [
+				"Dark"
+			],
 			"speed": 75,
 			"abilities": [
 				"Pressure",
@@ -2458,6 +3451,9 @@
 		{
 			"dex": 361,
 			"name": "Snorunt",
+			"types": [
+				"Ice"
+			],
 			"speed": 50,
 			"abilities": [
 				"Inner Focus",
@@ -2467,6 +3463,9 @@
 		{
 			"dex": 362,
 			"name": "Glalie",
+			"types": [
+				"Ice"
+			],
 			"speed": 80,
 			"abilities": [
 				"Inner Focus",
@@ -2476,6 +3475,10 @@
 		{
 			"dex": 364,
 			"name": "Sealeo",
+			"types": [
+				"Ice",
+				"Water"
+			],
 			"speed": 45,
 			"abilities": [
 				"Thick Fat",
@@ -2485,6 +3488,10 @@
 		{
 			"dex": 365,
 			"name": "Walrein",
+			"types": [
+				"Ice",
+				"Water"
+			],
 			"speed": 65,
 			"abilities": [
 				"Thick Fat",
@@ -2494,6 +3501,9 @@
 		{
 			"dex": 366,
 			"name": "Clamperl",
+			"types": [
+				"Water"
+			],
 			"speed": 32,
 			"abilities": [
 				"Shell Armor"
@@ -2502,6 +3512,9 @@
 		{
 			"dex": 367,
 			"name": "Huntail",
+			"types": [
+				"Water"
+			],
 			"speed": 52,
 			"abilities": [
 				"Swift Swim"
@@ -2510,6 +3523,9 @@
 		{
 			"dex": 368,
 			"name": "Gorebyss",
+			"types": [
+				"Water"
+			],
 			"speed": 52,
 			"abilities": [
 				"Swift Swim"
@@ -2518,6 +3534,10 @@
 		{
 			"dex": 369,
 			"name": "Relicanth",
+			"types": [
+				"Water",
+				"Rock"
+			],
 			"speed": 55,
 			"abilities": [
 				"Swift Swim",
@@ -2527,6 +3547,9 @@
 		{
 			"dex": 370,
 			"name": "Luvdisc",
+			"types": [
+				"Water"
+			],
 			"speed": 97,
 			"abilities": [
 				"Swift Swim"
@@ -2535,6 +3558,9 @@
 		{
 			"dex": 371,
 			"name": "Bagon",
+			"types": [
+				"Dragon"
+			],
 			"speed": 50,
 			"abilities": [
 				"Rock Head"
@@ -2543,6 +3569,9 @@
 		{
 			"dex": 372,
 			"name": "Shelgon",
+			"types": [
+				"Dragon"
+			],
 			"speed": 50,
 			"abilities": [
 				"Rock Head"
@@ -2551,6 +3580,10 @@
 		{
 			"dex": 373,
 			"name": "Salamence",
+			"types": [
+				"Dragon",
+				"Flying"
+			],
 			"speed": 100,
 			"abilities": [
 				"Intimidate"
@@ -2559,6 +3592,10 @@
 		{
 			"dex": 375,
 			"name": "Metang",
+			"types": [
+				"Steel",
+				"Psychic"
+			],
 			"speed": 50,
 			"abilities": [
 				"Clear Body"
@@ -2567,6 +3604,10 @@
 		{
 			"dex": 376,
 			"name": "Metagross",
+			"types": [
+				"Steel",
+				"Psychic"
+			],
 			"speed": 70,
 			"abilities": [
 				"Clear Body"
@@ -2575,6 +3616,9 @@
 		{
 			"dex": 377,
 			"name": "Regirock",
+			"types": [
+				"Rock"
+			],
 			"speed": 50,
 			"abilities": [
 				"Clear Body"
@@ -2583,6 +3627,9 @@
 		{
 			"dex": 378,
 			"name": "Regice",
+			"types": [
+				"Ice"
+			],
 			"speed": 50,
 			"abilities": [
 				"Clear Body"
@@ -2591,6 +3638,9 @@
 		{
 			"dex": 379,
 			"name": "Registeel",
+			"types": [
+				"Steel"
+			],
 			"speed": 50,
 			"abilities": [
 				"Clear Body"
@@ -2599,6 +3649,10 @@
 		{
 			"dex": 380,
 			"name": "Latias",
+			"types": [
+				"Dragon",
+				"Psychic"
+			],
 			"speed": 110,
 			"abilities": [
 				"Levitate"
@@ -2607,6 +3661,10 @@
 		{
 			"dex": 381,
 			"name": "Latios",
+			"types": [
+				"Dragon",
+				"Psychic"
+			],
 			"speed": 110,
 			"abilities": [
 				"Levitate"
@@ -2615,6 +3673,9 @@
 		{
 			"dex": 387,
 			"name": "Turtwig",
+			"types": [
+				"Grass"
+			],
 			"speed": 31,
 			"abilities": [
 				"Overgrow"
@@ -2623,6 +3684,9 @@
 		{
 			"dex": 388,
 			"name": "Grotle",
+			"types": [
+				"Grass"
+			],
 			"speed": 36,
 			"abilities": [
 				"Overgrow"
@@ -2631,6 +3695,10 @@
 		{
 			"dex": 389,
 			"name": "Torterra",
+			"types": [
+				"Grass",
+				"Ground"
+			],
 			"speed": 56,
 			"abilities": [
 				"Overgrow"
@@ -2639,6 +3707,9 @@
 		{
 			"dex": 390,
 			"name": "Chimchar",
+			"types": [
+				"Fire"
+			],
 			"speed": 61,
 			"abilities": [
 				"Blaze"
@@ -2647,6 +3718,10 @@
 		{
 			"dex": 391,
 			"name": "Monferno",
+			"types": [
+				"Fire",
+				"Fighting"
+			],
 			"speed": 81,
 			"abilities": [
 				"Blaze"
@@ -2655,6 +3730,10 @@
 		{
 			"dex": 392,
 			"name": "Infernape",
+			"types": [
+				"Fire",
+				"Fighting"
+			],
 			"speed": 108,
 			"abilities": [
 				"Blaze"
@@ -2663,6 +3742,9 @@
 		{
 			"dex": 393,
 			"name": "Piplup",
+			"types": [
+				"Water"
+			],
 			"speed": 40,
 			"abilities": [
 				"Torrent"
@@ -2671,6 +3753,9 @@
 		{
 			"dex": 394,
 			"name": "Prinplup",
+			"types": [
+				"Water"
+			],
 			"speed": 50,
 			"abilities": [
 				"Torrent"
@@ -2679,6 +3764,10 @@
 		{
 			"dex": 395,
 			"name": "Empoleon",
+			"types": [
+				"Water",
+				"Steel"
+			],
 			"speed": 60,
 			"abilities": [
 				"Torrent"
@@ -2687,6 +3776,10 @@
 		{
 			"dex": 396,
 			"name": "Starly",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 60,
 			"abilities": [
 				"Keen Eye"
@@ -2695,6 +3788,10 @@
 		{
 			"dex": 397,
 			"name": "Staravia",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 80,
 			"abilities": [
 				"Intimidate"
@@ -2703,6 +3800,10 @@
 		{
 			"dex": 398,
 			"name": "Staraptor",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 100,
 			"abilities": [
 				"Intimidate"
@@ -2711,6 +3812,9 @@
 		{
 			"dex": 399,
 			"name": "Bidoof",
+			"types": [
+				"Normal"
+			],
 			"speed": 31,
 			"abilities": [
 				"Simple",
@@ -2720,6 +3824,10 @@
 		{
 			"dex": 400,
 			"name": "Bibarel",
+			"types": [
+				"Normal",
+				"Water"
+			],
 			"speed": 71,
 			"abilities": [
 				"Simple",
@@ -2729,6 +3837,9 @@
 		{
 			"dex": 401,
 			"name": "Kricketot",
+			"types": [
+				"Bug"
+			],
 			"speed": 25,
 			"abilities": [
 				"Shed Skin"
@@ -2737,6 +3848,9 @@
 		{
 			"dex": 402,
 			"name": "Kricketune",
+			"types": [
+				"Bug"
+			],
 			"speed": 65,
 			"abilities": [
 				"Swarm"
@@ -2745,6 +3859,9 @@
 		{
 			"dex": 403,
 			"name": "Shinx",
+			"types": [
+				"Electric"
+			],
 			"speed": 45,
 			"abilities": [
 				"Rivalry",
@@ -2754,6 +3871,9 @@
 		{
 			"dex": 404,
 			"name": "Luxio",
+			"types": [
+				"Electric"
+			],
 			"speed": 60,
 			"abilities": [
 				"Rivalry",
@@ -2763,6 +3883,9 @@
 		{
 			"dex": 405,
 			"name": "Luxray",
+			"types": [
+				"Electric"
+			],
 			"speed": 70,
 			"abilities": [
 				"Rivalry",
@@ -2772,6 +3895,10 @@
 		{
 			"dex": 406,
 			"name": "Budew",
+			"types": [
+				"Grass",
+				"Poison"
+			],
 			"speed": 55,
 			"abilities": [
 				"Natural Cure",
@@ -2781,6 +3908,10 @@
 		{
 			"dex": 407,
 			"name": "Roserade",
+			"types": [
+				"Grass",
+				"Poison"
+			],
 			"speed": 90,
 			"abilities": [
 				"Natural Cure",
@@ -2790,6 +3921,9 @@
 		{
 			"dex": 408,
 			"name": "Cranidos",
+			"types": [
+				"Rock"
+			],
 			"speed": 58,
 			"abilities": [
 				"Mold Breaker"
@@ -2798,6 +3932,9 @@
 		{
 			"dex": 409,
 			"name": "Rampardos",
+			"types": [
+				"Rock"
+			],
 			"speed": 58,
 			"abilities": [
 				"Mold Breaker"
@@ -2806,6 +3943,10 @@
 		{
 			"dex": 410,
 			"name": "Shieldon",
+			"types": [
+				"Rock",
+				"Steel"
+			],
 			"speed": 30,
 			"abilities": [
 				"Sturdy"
@@ -2814,6 +3955,10 @@
 		{
 			"dex": 411,
 			"name": "Bastiodon",
+			"types": [
+				"Rock",
+				"Steel"
+			],
 			"speed": 30,
 			"abilities": [
 				"Sturdy"
@@ -2822,6 +3967,9 @@
 		{
 			"dex": 412,
 			"name": "Burmy",
+			"types": [
+				"Bug"
+			],
 			"speed": 36,
 			"abilities": [
 				"Shed Skin"
@@ -2830,6 +3978,34 @@
 		{
 			"dex": 413,
 			"name": "Wormadam",
+			"types": [
+				"Bug",
+				"Grass"
+			],
+			"speed": 36,
+			"abilities": [
+				"Anticipation"
+			]
+		},
+		{
+			"dex": 413,
+			"name": "Wormadam-Sandy",
+			"types": [
+				"Bug",
+				"Ground"
+			],
+			"speed": 36,
+			"abilities": [
+				"Anticipation"
+			]
+		},
+		{
+			"dex": 413,
+			"name": "Wormadam-Trash",
+			"types": [
+				"Bug",
+				"Steel"
+			],
 			"speed": 36,
 			"abilities": [
 				"Anticipation"
@@ -2838,6 +4014,10 @@
 		{
 			"dex": 414,
 			"name": "Mothim",
+			"types": [
+				"Bug",
+				"Flying"
+			],
 			"speed": 66,
 			"abilities": [
 				"Swarm"
@@ -2846,6 +4026,10 @@
 		{
 			"dex": 415,
 			"name": "Combee",
+			"types": [
+				"Bug",
+				"Flying"
+			],
 			"speed": 70,
 			"abilities": [
 				"Honey Gather"
@@ -2854,6 +4038,10 @@
 		{
 			"dex": 416,
 			"name": "Vespiquen",
+			"types": [
+				"Bug",
+				"Flying"
+			],
 			"speed": 40,
 			"abilities": [
 				"Pressure"
@@ -2862,6 +4050,9 @@
 		{
 			"dex": 417,
 			"name": "Pachirisu",
+			"types": [
+				"Electric"
+			],
 			"speed": 95,
 			"abilities": [
 				"Run Away",
@@ -2871,6 +4062,9 @@
 		{
 			"dex": 418,
 			"name": "Buizel",
+			"types": [
+				"Water"
+			],
 			"speed": 85,
 			"abilities": [
 				"Swift Swim"
@@ -2879,6 +4073,9 @@
 		{
 			"dex": 419,
 			"name": "Floatzel",
+			"types": [
+				"Water"
+			],
 			"speed": 115,
 			"abilities": [
 				"Swift Swim"
@@ -2887,6 +4084,9 @@
 		{
 			"dex": 420,
 			"name": "Cherubi",
+			"types": [
+				"Grass"
+			],
 			"speed": 35,
 			"abilities": [
 				"Chlorophyll"
@@ -2895,6 +4095,9 @@
 		{
 			"dex": 421,
 			"name": "Cherrim",
+			"types": [
+				"Grass"
+			],
 			"speed": 85,
 			"abilities": [
 				"Flower Gift"
@@ -2903,6 +4106,9 @@
 		{
 			"dex": 422,
 			"name": "Shellos",
+			"types": [
+				"Water"
+			],
 			"speed": 34,
 			"abilities": [
 				"Sticky Hold",
@@ -2912,6 +4118,10 @@
 		{
 			"dex": 423,
 			"name": "Gastrodon",
+			"types": [
+				"Water",
+				"Ground"
+			],
 			"speed": 39,
 			"abilities": [
 				"Sticky Hold",
@@ -2921,6 +4131,9 @@
 		{
 			"dex": 424,
 			"name": "Ambipom",
+			"types": [
+				"Normal"
+			],
 			"speed": 115,
 			"abilities": [
 				"Technician",
@@ -2930,6 +4143,10 @@
 		{
 			"dex": 425,
 			"name": "Drifloon",
+			"types": [
+				"Ghost",
+				"Flying"
+			],
 			"speed": 70,
 			"abilities": [
 				"Aftermath",
@@ -2939,6 +4156,10 @@
 		{
 			"dex": 426,
 			"name": "Drifblim",
+			"types": [
+				"Ghost",
+				"Flying"
+			],
 			"speed": 80,
 			"abilities": [
 				"Aftermath",
@@ -2948,6 +4169,9 @@
 		{
 			"dex": 427,
 			"name": "Buneary",
+			"types": [
+				"Normal"
+			],
 			"speed": 85,
 			"abilities": [
 				"Run Away",
@@ -2957,6 +4181,9 @@
 		{
 			"dex": 428,
 			"name": "Lopunny",
+			"types": [
+				"Normal"
+			],
 			"speed": 105,
 			"abilities": [
 				"Cute Charm",
@@ -2966,6 +4193,9 @@
 		{
 			"dex": 429,
 			"name": "Mismagius",
+			"types": [
+				"Ghost"
+			],
 			"speed": 105,
 			"abilities": [
 				"Levitate"
@@ -2974,6 +4204,10 @@
 		{
 			"dex": 430,
 			"name": "Honchkrow",
+			"types": [
+				"Dark",
+				"Flying"
+			],
 			"speed": 71,
 			"abilities": [
 				"Insomnia",
@@ -2983,6 +4217,9 @@
 		{
 			"dex": 431,
 			"name": "Glameow",
+			"types": [
+				"Normal"
+			],
 			"speed": 85,
 			"abilities": [
 				"Limber",
@@ -2992,6 +4229,9 @@
 		{
 			"dex": 432,
 			"name": "Purugly",
+			"types": [
+				"Normal"
+			],
 			"speed": 112,
 			"abilities": [
 				"Thick Fat",
@@ -3001,6 +4241,9 @@
 		{
 			"dex": 433,
 			"name": "Chingling",
+			"types": [
+				"Psychic"
+			],
 			"speed": 45,
 			"abilities": [
 				"Levitate"
@@ -3009,6 +4252,10 @@
 		{
 			"dex": 434,
 			"name": "Stunky",
+			"types": [
+				"Poison",
+				"Dark"
+			],
 			"speed": 74,
 			"abilities": [
 				"Stench",
@@ -3018,6 +4265,10 @@
 		{
 			"dex": 435,
 			"name": "Skuntank",
+			"types": [
+				"Poison",
+				"Dark"
+			],
 			"speed": 84,
 			"abilities": [
 				"Stench",
@@ -3027,6 +4278,10 @@
 		{
 			"dex": 436,
 			"name": "Bronzor",
+			"types": [
+				"Steel",
+				"Psychic"
+			],
 			"speed": 23,
 			"abilities": [
 				"Levitate",
@@ -3036,6 +4291,10 @@
 		{
 			"dex": 437,
 			"name": "Bronzong",
+			"types": [
+				"Steel",
+				"Psychic"
+			],
 			"speed": 33,
 			"abilities": [
 				"Levitate",
@@ -3045,6 +4304,9 @@
 		{
 			"dex": 438,
 			"name": "Bonsly",
+			"types": [
+				"Rock"
+			],
 			"speed": 10,
 			"abilities": [
 				"Sturdy",
@@ -3054,6 +4316,9 @@
 		{
 			"dex": 439,
 			"name": "Mime Jr.",
+			"types": [
+				"Psychic"
+			],
 			"speed": 60,
 			"abilities": [
 				"Soundproof",
@@ -3063,6 +4328,9 @@
 		{
 			"dex": 440,
 			"name": "Happiny",
+			"types": [
+				"Normal"
+			],
 			"speed": 30,
 			"abilities": [
 				"Natural Cure",
@@ -3072,6 +4340,10 @@
 		{
 			"dex": 441,
 			"name": "Chatot",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 91,
 			"abilities": [
 				"Keen Eye",
@@ -3081,6 +4353,10 @@
 		{
 			"dex": 443,
 			"name": "Gible",
+			"types": [
+				"Dragon",
+				"Ground"
+			],
 			"speed": 42,
 			"abilities": [
 				"Sand Veil"
@@ -3089,6 +4365,10 @@
 		{
 			"dex": 444,
 			"name": "Gabite",
+			"types": [
+				"Dragon",
+				"Ground"
+			],
 			"speed": 82,
 			"abilities": [
 				"Sand Veil"
@@ -3097,6 +4377,10 @@
 		{
 			"dex": 445,
 			"name": "Garchomp",
+			"types": [
+				"Dragon",
+				"Ground"
+			],
 			"speed": 102,
 			"abilities": [
 				"Sand Veil"
@@ -3105,6 +4389,9 @@
 		{
 			"dex": 446,
 			"name": "Munchlax",
+			"types": [
+				"Normal"
+			],
 			"speed": 5,
 			"abilities": [
 				"Pickup",
@@ -3114,6 +4401,9 @@
 		{
 			"dex": 447,
 			"name": "Riolu",
+			"types": [
+				"Fighting"
+			],
 			"speed": 60,
 			"abilities": [
 				"Steadfast",
@@ -3123,6 +4413,10 @@
 		{
 			"dex": 448,
 			"name": "Lucario",
+			"types": [
+				"Fighting",
+				"Steel"
+			],
 			"speed": 90,
 			"abilities": [
 				"Steadfast",
@@ -3132,6 +4426,9 @@
 		{
 			"dex": 449,
 			"name": "Hippopotas",
+			"types": [
+				"Ground"
+			],
 			"speed": 32,
 			"abilities": [
 				"Sand Stream"
@@ -3140,6 +4437,9 @@
 		{
 			"dex": 450,
 			"name": "Hippowdon",
+			"types": [
+				"Ground"
+			],
 			"speed": 47,
 			"abilities": [
 				"Sand Stream"
@@ -3148,6 +4448,10 @@
 		{
 			"dex": 451,
 			"name": "Skorupi",
+			"types": [
+				"Poison",
+				"Bug"
+			],
 			"speed": 65,
 			"abilities": [
 				"Battle Armor",
@@ -3157,6 +4461,10 @@
 		{
 			"dex": 452,
 			"name": "Drapion",
+			"types": [
+				"Poison",
+				"Dark"
+			],
 			"speed": 95,
 			"abilities": [
 				"Battle Armor",
@@ -3166,6 +4474,10 @@
 		{
 			"dex": 453,
 			"name": "Croagunk",
+			"types": [
+				"Poison",
+				"Fighting"
+			],
 			"speed": 50,
 			"abilities": [
 				"Anticipation",
@@ -3175,6 +4487,10 @@
 		{
 			"dex": 454,
 			"name": "Toxicroak",
+			"types": [
+				"Poison",
+				"Fighting"
+			],
 			"speed": 85,
 			"abilities": [
 				"Anticipation",
@@ -3184,6 +4500,9 @@
 		{
 			"dex": 455,
 			"name": "Carnivine",
+			"types": [
+				"Grass"
+			],
 			"speed": 46,
 			"abilities": [
 				"Levitate"
@@ -3192,6 +4511,9 @@
 		{
 			"dex": 456,
 			"name": "Finneon",
+			"types": [
+				"Water"
+			],
 			"speed": 66,
 			"abilities": [
 				"Swift Swim",
@@ -3201,6 +4523,9 @@
 		{
 			"dex": 457,
 			"name": "Lumineon",
+			"types": [
+				"Water"
+			],
 			"speed": 91,
 			"abilities": [
 				"Swift Swim",
@@ -3210,6 +4535,10 @@
 		{
 			"dex": 458,
 			"name": "Mantyke",
+			"types": [
+				"Water",
+				"Flying"
+			],
 			"speed": 50,
 			"abilities": [
 				"Swift Swim",
@@ -3219,6 +4548,10 @@
 		{
 			"dex": 459,
 			"name": "Snover",
+			"types": [
+				"Grass",
+				"Ice"
+			],
 			"speed": 40,
 			"abilities": [
 				"Snow Warning"
@@ -3227,6 +4560,10 @@
 		{
 			"dex": 460,
 			"name": "Abomasnow",
+			"types": [
+				"Grass",
+				"Ice"
+			],
 			"speed": 60,
 			"abilities": [
 				"Snow Warning"
@@ -3235,6 +4572,10 @@
 		{
 			"dex": 461,
 			"name": "Weavile",
+			"types": [
+				"Dark",
+				"Ice"
+			],
 			"speed": 125,
 			"abilities": [
 				"Pressure"
@@ -3243,6 +4584,10 @@
 		{
 			"dex": 462,
 			"name": "Magnezone",
+			"types": [
+				"Electric",
+				"Steel"
+			],
 			"speed": 60,
 			"abilities": [
 				"Magnet Pull",
@@ -3252,6 +4597,9 @@
 		{
 			"dex": 463,
 			"name": "Lickilicky",
+			"types": [
+				"Normal"
+			],
 			"speed": 50,
 			"abilities": [
 				"Own Tempo",
@@ -3261,6 +4609,10 @@
 		{
 			"dex": 464,
 			"name": "Rhyperior",
+			"types": [
+				"Ground",
+				"Rock"
+			],
 			"speed": 40,
 			"abilities": [
 				"Lightningrod",
@@ -3270,6 +4622,9 @@
 		{
 			"dex": 465,
 			"name": "Tangrowth",
+			"types": [
+				"Grass"
+			],
 			"speed": 50,
 			"abilities": [
 				"Chlorophyll",
@@ -3279,6 +4634,9 @@
 		{
 			"dex": 466,
 			"name": "Electivire",
+			"types": [
+				"Electric"
+			],
 			"speed": 95,
 			"abilities": [
 				"Motor Drive"
@@ -3287,6 +4645,9 @@
 		{
 			"dex": 467,
 			"name": "Magmortar",
+			"types": [
+				"Fire"
+			],
 			"speed": 83,
 			"abilities": [
 				"Flame Body"
@@ -3295,6 +4656,10 @@
 		{
 			"dex": 468,
 			"name": "Togekiss",
+			"types": [
+				"Normal",
+				"Flying"
+			],
 			"speed": 80,
 			"abilities": [
 				"Hustle",
@@ -3304,6 +4669,10 @@
 		{
 			"dex": 469,
 			"name": "Yanmega",
+			"types": [
+				"Bug",
+				"Flying"
+			],
 			"speed": 95,
 			"abilities": [
 				"Speed Boost",
@@ -3313,6 +4682,9 @@
 		{
 			"dex": 470,
 			"name": "Leafeon",
+			"types": [
+				"Grass"
+			],
 			"speed": 95,
 			"abilities": [
 				"Leaf Guard"
@@ -3321,6 +4693,9 @@
 		{
 			"dex": 471,
 			"name": "Glaceon",
+			"types": [
+				"Ice"
+			],
 			"speed": 65,
 			"abilities": [
 				"Snow Cloak"
@@ -3329,6 +4704,10 @@
 		{
 			"dex": 472,
 			"name": "Gliscor",
+			"types": [
+				"Ground",
+				"Flying"
+			],
 			"speed": 95,
 			"abilities": [
 				"Hyper Cutter",
@@ -3338,6 +4717,10 @@
 		{
 			"dex": 473,
 			"name": "Mamoswine",
+			"types": [
+				"Ice",
+				"Ground"
+			],
 			"speed": 80,
 			"abilities": [
 				"Oblivious",
@@ -3347,6 +4730,9 @@
 		{
 			"dex": 474,
 			"name": "Porygon-Z",
+			"types": [
+				"Normal"
+			],
 			"speed": 90,
 			"abilities": [
 				"Adaptability",
@@ -3356,6 +4742,10 @@
 		{
 			"dex": 475,
 			"name": "Gallade",
+			"types": [
+				"Psychic",
+				"Fighting"
+			],
 			"speed": 80,
 			"abilities": [
 				"Steadfast"
@@ -3364,6 +4754,10 @@
 		{
 			"dex": 476,
 			"name": "Probopass",
+			"types": [
+				"Rock",
+				"Steel"
+			],
 			"speed": 40,
 			"abilities": [
 				"Sturdy",
@@ -3373,6 +4767,9 @@
 		{
 			"dex": 477,
 			"name": "Dusknoir",
+			"types": [
+				"Ghost"
+			],
 			"speed": 45,
 			"abilities": [
 				"Pressure"
@@ -3381,6 +4778,10 @@
 		{
 			"dex": 478,
 			"name": "Froslass",
+			"types": [
+				"Ice",
+				"Ghost"
+			],
 			"speed": 110,
 			"abilities": [
 				"Snow Cloak"
@@ -3389,6 +4790,10 @@
 		{
 			"dex": 479,
 			"name": "Rotom",
+			"types": [
+				"Electric",
+				"Ghost"
+			],
 			"speed": 91,
 			"abilities": [
 				"Levitate"
@@ -3397,6 +4802,10 @@
 		{
 			"dex": 485,
 			"name": "Heatran",
+			"types": [
+				"Fire",
+				"Steel"
+			],
 			"speed": 77,
 			"abilities": [
 				"Flash Fire"
@@ -3405,6 +4814,9 @@
 		{
 			"dex": 486,
 			"name": "Regigigas",
+			"types": [
+				"Normal"
+			],
 			"speed": 100,
 			"abilities": [
 				"Slow Start"
@@ -3413,6 +4825,9 @@
 		{
 			"dex": 488,
 			"name": "Cresselia",
+			"types": [
+				"Psychic"
+			],
 			"speed": 85,
 			"abilities": [
 				"Levitate"
