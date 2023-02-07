@@ -3,7 +3,8 @@
 
 from enum import Enum
 
-from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QGroupBox, QWidget, QLabel, QComboBox, QPushButton
+from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QGroupBox, QWidget, QLabel, QComboBox, QPushButton, QListView, QSizePolicy
+from PySide6.QtGui import QStandardItemModel, QStandardItem
 from PySide6.QtCore import Qt
 
 from bfsearch import core, data
@@ -103,11 +104,21 @@ class SearchPage(browse.SharedPageElements):
         self.resultsCombo.setEnabled(False)
 
         # output
-        self.resultsBox.layout().addWidget(self.output)
+        self.output.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.MinimumExpanding)
+        self.resultsBox.layout().addWidget(self.output, stretch = 1)
 
         # clipboard options
         self.currentIV = 31
         self.resultsBox.layout().addLayout(self.clipboardOptions)
+
+        # trainer output
+        self.trainerInfo = QLabel(tr("page.search.resultsBox.default"))
+        self.resultsBox.layout().addWidget(self.trainerInfo)
+        self.trainerOutput = QStandardItemModel(0, 1, self.resultsBox)
+        trainerOutputView = QListView()
+        trainerOutputView.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+        trainerOutputView.setModel(self.trainerOutput)
+        self.resultsBox.layout().addWidget(trainerOutputView)
 
         # set up initial state
         self.tclassCombo.addItems(self.trainerDict.keys())
@@ -170,13 +181,8 @@ class SearchPage(browse.SharedPageElements):
 
     def fillResultsCombo(self):
         self.resultsCombo.clear()
-        for pswi, count in self.getResults():
-            string = pswi.getShowdownNickname() + " "
-            if count == 1:
-                string += tr("page.search.result_count.singular", [count])
-            else:
-                string += tr("page.search.result_count.plural", [count])
-            self.resultsCombo.addItem(string)
+        for pswi, _ in self.getResults():
+            self.resultsCombo.addItem(pswi.getShowdownNickname())
         self.resultsCombo.setEnabled(self.resultsCombo.count() > 1)
 
     def handleResultsCombo(self):
@@ -188,10 +194,17 @@ class SearchPage(browse.SharedPageElements):
     def updateSet(self):
         super().updateSet()
         if self.resultsCombo.count() > 0 and self.resultsCombo.currentIndex() < len(self.getResults()):
-            pswi, _ = self.getResults()[self.resultsCombo.currentIndex()]
+            pswi, trainers = self.getResults()[self.resultsCombo.currentIndex()]
             self.currentSet = pswi.pokeset
             self.currentIV = pswi.iv
             self.output.setText(browse.getSetResultString(self.currentSet, self.currentIV, self.itemCheck.isChecked()))
+            self.trainerOutput.clear()
+            for trainer in trainers:
+                self.trainerOutput.appendRow(QStandardItem(str(trainer)))
+            if len(trainers) == 1:
+                self.trainerInfo.setText(tr("page.search.resultsBox.trainerInfo.singular", [len(trainers)]))
+            else:
+                self.trainerInfo.setText(tr("page.search.resultsBox.trainerInfo.plural", [len(trainers)]))
             self.clipboardButton.setEnabled(True)
             self.resultsCombo.setToolTip(self.resultsCombo.currentText())
         else:
@@ -200,6 +213,8 @@ class SearchPage(browse.SharedPageElements):
     def clearResults(self):
         self.clipboardButton.setEnabled(False)
         self.resultsCombo.setToolTip("")
+        self.trainerOutput.clear()
+        self.trainerInfo.setText(tr("page.search.resultsBox.trainerInfo.plural", [0]))
 
     def searchChanged(self):
         self.searchButton.setText(tr("page.search.searchButton.changed"))
@@ -239,7 +254,7 @@ class SearchPage(browse.SharedPageElements):
                     break
 
         searchResults = searchByStage[-1][2]
-        currentResults = data.countUniquePokemon(searchResults)
+        currentResults = data.groupUniquePokemon(searchResults)
         self.currentResultsA = sorted(currentResults, key = lambda unique : unique[0].getShowdownNickname())
         self.currentResultsD = sorted(currentResults, key = lambda unique : unique[0].dexSortValue())
         self.fillResultsCombo()

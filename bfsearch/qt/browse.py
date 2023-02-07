@@ -14,21 +14,24 @@ from bfsearch.translate import tr
 def getSetResultString(the_set, iv, hideItem):
     string = the_set.getShowdownFormat(iv, hideItem = hideItem)
     speed = the_set.getSpeed(iv)
-    string += "\n" + tr("page.generic.result.speed", [speed]) + "\n"
+    string += "\n" + tr("page.generic.result.speed", [speed])
     if not hideItem:
         if the_set.item == "Choice Scarf":
             speed = math.floor(speed * 1.5)
-            string += tr("page.generic.result.speed.item", ["Choice Scarf", speed]) + "\n"
+            string += "\n" + tr("page.generic.result.speed.item", ["Choice Scarf", speed])
         if the_set.item == "Iron Ball":
             speed = math.floor(speed * 0.5)
-            string += tr("page.generic.result.speed.item", ["Iron Ball", speed]) + "\n"
+            string += "\n" + tr("page.generic.result.speed.item", ["Iron Ball", speed])
     if "Slow Start" in the_set.species.abilities:
-        string += tr("page.generic.result.speed.ability", ["Slow Start", math.floor(speed * 0.5)]) + "\n"
+        string += "\n" + tr("page.generic.result.speed.ability", ["Slow Start", math.floor(speed * 0.5)])
     if "Unburden" in the_set.species.abilities:
-        string += tr("page.generic.result.speed.ability", ["Unburden", math.floor(speed * 2.0)]) + "\n"
+        string += "\n" + tr("page.generic.result.speed.ability", ["Unburden", math.floor(speed * 2.0)])
     # it's important to say specifically what the possible abilities are because some pokemon have gotten new abilities in new games
     if not the_set.species.hasOneAbility():
-        string += "\n" + tr("page.generic.result.abilities", the_set.species.abilities) + "\n"
+        string += "\n\n" + tr("page.generic.result.abilities", the_set.species.abilities)
+    #string += "\nID: " + str(the_set.sid) + "\n"
+    #string += "Set Group: " + the_set.setgroup.name + "\n"
+    #string += "Types: " + str(the_set.species.types) + "\n"
     return string
 
 

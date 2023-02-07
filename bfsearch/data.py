@@ -195,19 +195,21 @@ def everyIndividualPokemon(trainers):
                 the_list.append(core.TrainersPokeSet(trainer, aset))
     return the_list
 
-# returns a list of (PokeSetWithIV, count) from the list of TrainersPokeSet.
-def countUniquePokemon(listTrainersPokeSet):
+# returns a list of (PokeSetWithIV, [Trainer,...]) from the list of TrainersPokeSet.
+def groupUniquePokemon(listTrainersPokeSet):
     uniques = []
     for tps in listTrainersPokeSet:
         for i in range(len(uniques)):
             if uniques[i][0].isIdenticalSet(tps):
-                uniques[i] = (uniques[i][0], uniques[i][1] + 1)
+                uniques[i] = (uniques[i][0], uniques[i][1] + [tps.trainer])
                 break
         else:
-            uniques.append((tps.asPokeSetWithIV(), 1))
+            uniques.append((tps.asPokeSetWithIV(), [tps.trainer]))
+    for i in range(len(uniques)):
+        uniques[i] = (uniques[i][0], sorted(uniques[i][1], key = lambda trainer: str(trainer)))
     return uniques
 
 # returns a list of every unique pokemon held by trainers. a unique pokemon is a particular set with a particular iv.
 # total: 1585
 def everyUniquePokemon(trainers):
-    return [pswi for pswi, _ in countUniquePokemon(everyIndividualPokemon(trainers))]
+    return [pswi for pswi, _ in groupUniquePokemon(everyIndividualPokemon(trainers))]

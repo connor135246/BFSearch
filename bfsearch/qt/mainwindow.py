@@ -35,7 +35,7 @@ class Window(QMainWindow):
 
         self.data = data.DataHolder()
 
-        self.resize(750, 639)
+        self.resize(750, 623)
         self.setWindowTitle("BFSearch")
         self.setWindowIcon(QIcon("gui/icon.png"))
         self.setCentralWidget(QTabWidget(self))
