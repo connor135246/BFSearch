@@ -112,7 +112,7 @@ class SearchPage(browse.SharedPageElements):
         self.resultsBox.layout().addLayout(self.clipboardOptions)
 
         # trainer output
-        self.trainerInfo = QLabel(tr("page.search.resultsBox.default"))
+        self.trainerInfo = QLabel()
         self.resultsBox.layout().addWidget(self.trainerInfo)
         self.trainerOutput = QStandardItemModel(0, 1, self.resultsBox)
         trainerOutputView = QListView()
@@ -124,6 +124,7 @@ class SearchPage(browse.SharedPageElements):
         self.tclassCombo.addItems(self.trainerDict.keys())
         self.updateSet()
         self.searchButton.setText(tr("page.search.searchButton"))
+        self.trainerInfo.setText(tr("page.search.resultsBox.default"))
 
     def addComboBox(self, layout, contents):
         combo = QComboBox()
@@ -229,6 +230,7 @@ class SearchPage(browse.SharedPageElements):
         self.moveCombo2.setCurrentIndex(0)
         self.moveCombo3.setCurrentIndex(0)
         self.moveCombo4.setCurrentIndex(0)
+        self.searchButton.setText(tr("page.search.searchButton"))
 
     def search(self):
         # grouping of combobox, reducer, and nice name

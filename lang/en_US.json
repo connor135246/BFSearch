@@ -7,7 +7,7 @@
 	"toolbar.button.about.name": "About",
 	"toolbar.button.about.tooltip": "Show this application's About box",
 	"toolbar.button.about.linkButton": "Damage Calculator",
-	"toolbar.button.about.about": "This application allows you to search through the possible Pokémon that you can face in the Battle Tower in Platinum, HeartGold, and SoulSilver.\nResults are returned in Pokémon Showdown format.\n\nIf an error occurs, check the log files in the ‘logs’ folder.\n\nClick the 'Damage Calculator' button to copy the link to Pokémon Showdown's damage calculator to your clipboard.",
+	"toolbar.button.about.about": "This application allows you to search through the possible Pokémon that you can face in the Battle Tower/Arcade/Castle in Platinum, HeartGold, and SoulSilver. Note: the trainer data listed here is inaccurate for the Battle Factory, and the Battle Hall uses a completely different set of Pokémon. These may be added in a future update.\nResults are returned in Pokémon Showdown format.\n\nIf an error occurs, check the log files in the ‘logs’ folder.\n\nClick the 'Damage Calculator' button to copy the link to Pokémon Showdown's damage calculator to your clipboard.",
 	"toolbar.button.about_qt.name": "About Qt",
 	"toolbar.button.about_qt.tooltip": "Show the Qt library's About box",
 
@@ -76,6 +76,7 @@
 
 	"page.all_sets.name": "Browse All Sets",
 	"page.all_sets.tooltip": "Browse all possible Pokémon sets.",
+	"page.all_sets.info": "This page simply lets you browse all the possible Pokémon sets in the Battle Frontier.\nSelect a Pokémon and a set number from the dropdown menus and have a look at the set!\nHover over the labels for some extra info.",
 	"page.all_sets.pokemon.tooltip": "The number of possible sets depends on the Pokémon.\nMost Pokémon have 4 possible sets.\nWeaker Pokémon like mid-stage starters have 2 possible sets.\nVery weak Pokémon like first-stage starters have just 1 possible set.",
 	"page.all_sets.ivs": "IVs:",
 	"page.all_sets.ivs.tooltip": "Not all IVs are possible in the Battle Frontier.\nA Pokémon's IV depends on their trainer.",
@@ -87,10 +88,11 @@
 
 	"page.all_sets_by_trainer.name": "Browse Sets by Trainer",
 	"page.all_sets_by_trainer.tooltip": "Browse Pokémon sets organized by opposing trainers.",
+	"page.all_sets_by_trainer.info": "This page groups Pokémon sets by trainer. Each trainer has a particular selection of Pokémon they use.\nSelect a battle number, a trainer class, a trainer name, and then have a look at their Pokémon!\nHover over the labels for some extra info.",
 	"page.all_sets_by_trainer.battle_number.tooltip": "Before battle 50, most trainers appear in multiple rounds. For example, Idol Basia can appear in battles 1 - 6 or 7 - 13.\nThe 7th battle of each round will use a trainer that can appear in the next round. For example, Black Belt Mason can appear in battle 7, or in battles 8 - 13 or 15 - 20.\nStarting at battle 50, the trainer at the end of a round isn't any different from the others.",
 	"page.all_sets_by_trainer.trainer.tooltip": "Many trainers of the same class use the same sets of Pokémon.\nFor example: Youngsters Casimir, Erroll, and Jim are all the same.",
 	"page.all_sets_by_trainer.pokemon.tooltip": "Before battle 50, all trainers use just one possible set for each of their Pokémon.\nStarting at battle 50, trainers may have multiple possible sets for each of their Pokémon.",
-	"page.all_sets_by_trainer.pokemon.tooltip.darach": "Castle Valet Darach chooses which set number to use for all his Pokémon when the battle starts.\nFor example: he may have only set 1 Pokémon or only set 2 Pokémon, but never a mix of the two.",
+	"page.all_sets_by_trainer.darach": "Note:\nCastle Valet Darach chooses which set number to use for all his Pokémon when the battle starts.\nFor example: he may have only set 1 Pokémon or only set 2 Pokémon, but never a mix of the two.",
 	"page.all_sets_by_trainer.ivs.tooltip": "A Pokémon's IV depends on their trainer.\nBefore battle 50, trainer IVs start at 3 and each round adds some trainers with the next multiple of 3. By the seventh round, you may face trainers with 21 IVs.\nStarting at battle 50, you'll usually be facing trainers with 31 IVs.\nAlso, Frontier Brains always have 31 IVs in their battles.",
 
 	"page.generic.sortToggle.alpha": "Sorting Pokémon alphabetically.",
@@ -110,7 +112,7 @@
 
 	"page.search.name": "Search Sets",
 	"page.search.tooltip": "Figure out what you're battling against.",
-	"page.search.info": "This page allows you to search through each individual Pokémon owned by each trainer.\nMany trainers have the exact same sets, so duplicate results are grouped together.",
+	"page.search.info": "This page allows you to search through each individual Pokémon owned by each trainer.\nMany trainers have the exact same sets, so only unique results are shown.",
 	"page.search.searchBox": "Search Options",
 	"page.search.item": "Item:",
 	"page.search.moves": "Moves:",
@@ -120,8 +122,8 @@
 	"page.search.resultsBox": "Search Results",
 	"page.search.resultsBox.default": "No search done yet.",
 	"page.search.resultsBox.done": "Search done: {0} sets found, {1} of which are unique.",
-	"page.search.resultsBox.trainerInfo.singular": "{0} Trainer can use this set.",
-	"page.search.resultsBox.trainerInfo.plural": "{0} Trainers can use this set.",
+	"page.search.resultsBox.trainerInfo.singular": "{0} trainer can use this set.",
+	"page.search.resultsBox.trainerInfo.plural": "{0} trainers can use this set.",
 	"page.search.result.none": "No results! Try a different search.",
 	"page.search.result.initial": "Started with {0} sets",
 	"page.search.result.initial.none": "I think something's gone wrong.",

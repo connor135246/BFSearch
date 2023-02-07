@@ -3,7 +3,7 @@
 
 import math
 
-from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QWidget, QLabel, QComboBox, QTextEdit, QPushButton, QSpinBox, QCheckBox
+from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QWidget, QLabel, QComboBox, QTextEdit, QPushButton, QSpinBox, QCheckBox, QGroupBox
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtCore import Qt
 
@@ -114,12 +114,17 @@ class BrowseSetsPageBase(SharedPageElements):
 
         self.setLayout(QVBoxLayout(self))
 
+        mainBox = QGroupBox("")
+        self.mainLayout = QVBoxLayout(mainBox)
+        mainBox.setLayout(self.mainLayout)
+        self.layout().addWidget(mainBox)
+
         # sort toggle
-        self.layout().addWidget(self.sortToggle)
+        self.mainLayout.addWidget(self.sortToggle)
 
         ## set selector
         setSelect = QHBoxLayout()
-        self.layout().addLayout(setSelect)
+        self.mainLayout.addLayout(setSelect)
 
         # species & set combo boxes
         self.pokeLabel = QLabel(tr("page.generic.pokemon"))
@@ -139,10 +144,10 @@ class BrowseSetsPageBase(SharedPageElements):
         setSelect.addWidget(self.ivBox)
 
         # output
-        self.layout().addWidget(self.output)
+        self.mainLayout.addWidget(self.output)
 
         # clipboard options
-        self.layout().addLayout(self.clipboardOptions)
+        self.mainLayout.addLayout(self.clipboardOptions)
 
         # set up initial state
         self.updateSet()
@@ -221,6 +226,7 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
         self.sortedDex = data.setsDexSorted(self.setProvider.sets)
         self.setupIVBox(self.setProvider)
 
+        self.layout().insertWidget(0, QLabel(tr("page.all_sets.info")))
         self.pokeLabel.setToolTip(tr("page.all_sets.pokemon.tooltip"))
         self.ivLabel.setToolTip(tr("page.all_sets.ivs.tooltip"))
 
@@ -237,7 +243,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
 
         ## trainer selector
         trainerSelect = QHBoxLayout()
-        self.layout().insertLayout(0, trainerSelect)
+        self.mainLayout.insertLayout(0, trainerSelect)
 
         # battle number combo box
         self.battlenumLabel = QLabel(tr("page.generic.battle_number"))
@@ -254,8 +260,12 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         self.tclassCombo = self.addComboBox(self.handleTClassCombo, trainerSelect)
         self.tnameCombo = self.addComboBox(self.handleTNameCombo, trainerSelect)
 
+        self.layout().insertWidget(0, QLabel(tr("page.all_sets_by_trainer.info")))
         self.pokeLabel.setToolTip(tr("page.all_sets_by_trainer.pokemon.tooltip"))
         self.ivLabel.setToolTip(tr("page.all_sets_by_trainer.ivs.tooltip"))
+        self.darachLabel = QLabel(tr("page.all_sets_by_trainer.darach"))
+        self.mainLayout.addWidget(self.darachLabel)
+        self.darachLabel.hide()
 
         # set up initial state
         self.fillComboKeys(self.battlenumCombo, self.bTSP())
@@ -273,13 +283,13 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
 
     # when the trainer class combo box updates, tells the trainer name combo box to update
     def handleTClassCombo(self):
-        self.pokeLabel.setToolTip(tr("page.all_sets_by_trainer.pokemon.tooltip"))
+        self.darachLabel.hide()
         tnameData = data.digForData(self.bTSP(), [self.battlenumCombo.currentText(), self.tclassCombo.currentText()])
         if tnameData is not None:
             self.fillComboKeys(self.tnameCombo, tnameData)
             # darach works differently from every other trainer.
             if "Castle Valet" in self.tclassCombo.currentText():
-                self.pokeLabel.setToolTip(tr("page.all_sets_by_trainer.pokemon.tooltip") + "\n\n" + tr("page.all_sets_by_trainer.pokemon.tooltip.darach"))
+                self.darachLabel.show()
         else:
             self.clearTrainerResults()
 
