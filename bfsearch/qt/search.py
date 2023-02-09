@@ -203,9 +203,9 @@ class SearchPage(browse.SharedPageElements):
             for trainer in trainers:
                 self.trainerOutput.appendRow(QStandardItem(str(trainer)))
             if len(trainers) == 1:
-                self.trainerInfo.setText(tr("page.search.resultsBox.trainerInfo.singular", [len(trainers)]))
+                self.trainerInfo.setText(tr("page.search.resultsBox.trainerInfo.singular", len(trainers)))
             else:
-                self.trainerInfo.setText(tr("page.search.resultsBox.trainerInfo.plural", [len(trainers)]))
+                self.trainerInfo.setText(tr("page.search.resultsBox.trainerInfo.plural", len(trainers)))
             self.clipboardButton.setEnabled(True)
             self.resultsCombo.setToolTip(self.resultsCombo.currentText())
         else:
@@ -215,7 +215,7 @@ class SearchPage(browse.SharedPageElements):
         self.clipboardButton.setEnabled(False)
         self.resultsCombo.setToolTip("")
         self.trainerOutput.clear()
-        self.trainerInfo.setText(tr("page.search.resultsBox.trainerInfo.plural", [0]))
+        self.trainerInfo.setText(tr("page.search.resultsBox.trainerInfo.plural", 0))
 
     def searchChanged(self):
         self.searchButton.setText(tr("page.search.searchButton.changed"))
@@ -261,7 +261,7 @@ class SearchPage(browse.SharedPageElements):
         self.currentResultsD = sorted(currentResults, key = lambda unique : unique[0].dexSortValue())
         self.fillResultsCombo()
 
-        self.resultsInfo.setText(tr("page.search.resultsBox.done", [len(searchResults), len(currentResults)]))
+        self.resultsInfo.setText(tr("page.search.resultsBox.done", len(searchResults), len(currentResults)))
         self.searchButton.setText(tr("page.search.searchButton"))
 
     def checkAndReduce(self, searchoption, searchByStage):
@@ -282,12 +282,12 @@ class SearchPage(browse.SharedPageElements):
         count = 1
         for searchoption, check, result in searchByStage:
             if searchoption is None:
-                string += tr("page.search.result.initial", [len(result)]) + "\n"
+                string += tr("page.search.result.initial", len(result)) + "\n"
                 if not check:
                     string += "  "*count + "-> " + tr("page.search.result.initial.none") + "\n"
                     count += 1
             elif check:
-                string += "  "*count + "-> " + tr("page.search.result.option", [len(result), searchoption.value[2], searchoption.value[0].currentText()]) + "\n"
+                string += "  "*count + "-> " + tr("page.search.result.option", len(result), searchoption.value[2], searchoption.value[0].currentText()) + "\n"
                 count += 1
         self.output.setText(string)
 

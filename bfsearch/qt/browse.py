@@ -14,21 +14,21 @@ from bfsearch.translate import tr
 def getSetResultString(the_set, iv, hideItem):
     string = the_set.getShowdownFormat(iv, hideItem = hideItem)
     speed = the_set.getSpeed(iv)
-    string += "\n" + tr("page.generic.result.speed", [speed])
+    string += "\n" + tr("page.generic.result.speed", speed)
     if not hideItem:
         if the_set.item == "Choice Scarf":
             speed = math.floor(speed * 1.5)
-            string += "\n" + tr("page.generic.result.speed.item", ["Choice Scarf", speed])
+            string += "\n" + tr("page.generic.result.speed.item", "Choice Scarf", speed)
         if the_set.item == "Iron Ball":
             speed = math.floor(speed * 0.5)
-            string += "\n" + tr("page.generic.result.speed.item", ["Iron Ball", speed])
+            string += "\n" + tr("page.generic.result.speed.item", "Iron Ball", speed)
     if "Slow Start" in the_set.species.abilities:
-        string += "\n" + tr("page.generic.result.speed.ability", ["Slow Start", math.floor(speed * 0.5)])
+        string += "\n" + tr("page.generic.result.speed.ability", "Slow Start", math.floor(speed * 0.5))
     if "Unburden" in the_set.species.abilities:
-        string += "\n" + tr("page.generic.result.speed.ability", ["Unburden", math.floor(speed * 2.0)])
+        string += "\n" + tr("page.generic.result.speed.ability", "Unburden", math.floor(speed * 2.0))
     # it's important to say specifically what the possible abilities are because some pokemon have gotten new abilities in new games
     if not the_set.species.hasOneAbility():
-        string += "\n\n" + tr("page.generic.result.abilities", the_set.species.abilities)
+        string += "\n\n" + tr("page.generic.result.abilities", *the_set.species.abilities)
     #string += "\nID: " + str(the_set.sid) + "\n"
     #string += "Set Group: " + the_set.setgroup.name + "\n"
     #string += "Types: " + str(the_set.species.types) + "\n"
@@ -175,7 +175,7 @@ class BrowseSetsPageBase(SharedPageElements):
             self.ivBox.setToolTip(tr("page.all_sets.ivBox.tooltip.fixed"))
             self.ivBox.setEnabled(False)
         else:
-            self.ivBox.setToolTip(tr("page.all_sets.ivBox.tooltip.range", [self.ivBox.minimum(), self.ivBox.maximum()]))
+            self.ivBox.setToolTip(tr("page.all_sets.ivBox.tooltip.range", self.ivBox.minimum(), self.ivBox.maximum()))
             self.ivBox.setEnabled(True)
 
     def getIV(self):
@@ -187,9 +187,9 @@ class BrowseSetsPageBase(SharedPageElements):
         if setsData is not None:
             self.fillComboKeys(self.setCombo, setsData)
             if self.setCombo.count() == 1:
-                self.setCombo.setToolTip(tr("page.all_sets.setCombo.tooltip.singular", [self.setCombo.count()]))
+                self.setCombo.setToolTip(tr("page.all_sets.setCombo.tooltip.singular", self.setCombo.count()))
             else:
-                self.setCombo.setToolTip(tr("page.all_sets.setCombo.tooltip.plural", [self.setCombo.count()]))
+                self.setCombo.setToolTip(tr("page.all_sets.setCombo.tooltip.plural", self.setCombo.count()))
         else:
             self.clearResults()
 

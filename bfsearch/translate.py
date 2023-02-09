@@ -9,7 +9,7 @@ from babel import Locale, UnknownLocaleError
 from bfsearch import settings
 
 
-def tr(key, args = []):
+def tr(key, *args):
     return getTranslation(key).format(*args)
 
 

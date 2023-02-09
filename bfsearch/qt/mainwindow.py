@@ -83,7 +83,7 @@ class Window(QMainWindow):
         # builds data
         result = self.data.fillerup()
         if self.data.isEmpty:
-            self.textLog.setText(tr("page.welcome.status.error", [result]))
+            self.textLog.setText(tr("page.welcome.status.error", result))
         else:
             self.textLog.setText(tr("page.welcome.status.building"))
             self.textLog.repaint()

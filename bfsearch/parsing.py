@@ -24,13 +24,13 @@ class DataException(Exception):
         self.args = args
 
     def __str__(self):
-        return tr("parsing.error", [self.getDataFile(), self.getFormattedMessage()])
+        return tr("parsing.error", self.getDataFile(), self.getFormattedMessage())
 
     def getDataFile(self):
         return f"{self.datafile.name}.json"
 
     def getFormattedMessage(self):
-        return tr(self.message, self.args)
+        return tr(self.message, *self.args)
 
 
 class FileException(DataException):
