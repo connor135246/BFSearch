@@ -15,6 +15,7 @@ class DataFile(IntEnum):
     species = 0
     sets = 1
     trainers = 2
+    hall_sets = 3
 
 class DataException(Exception):
     def __init__(self, datafile, messagepart, *args):
@@ -128,6 +129,12 @@ def verifyEnumName(value, aenum, excep):
     try:
         return aenum[str(value)]
     except KeyError:
+        raise excep
+
+def verifyFunc(value, verifier, excep):
+    try:
+        return verifier(value)
+    except ValueError:
         raise excep
 
 
@@ -261,4 +268,46 @@ def buildData():
         trainers[tclass][tname] = core.Trainer(tid, iv, tclass, tname, battles, pokemondict)
 
 
-    return (species, sets, trainers)
+    hall_sets = {}
+    datafile = DataFile.hall_sets
+    raw_hall_sets_data = getFileJson(datafile)
+
+    for hall_set_obj in verifyNonEmptyList(getDictKey(raw_hall_sets_data, 'hall_sets', datafile, "{*}"), IDE(datafile, "datafile", 'hall_sets', trOL)):
+        path = '{"hall_sets":[{*}]}'
+
+        hid = verifyIntPos(getDictKey(hall_set_obj, 'hall_id', datafile, path), IDE(datafile, "hall_sets.missing.by_name", getDictKey(hall_set_obj, 'species', datafile, path), 'hall_id', trPN))
+        for aname in hall_sets.keys():
+            if hid == hall_sets[aname].hid:
+                raise IDE(datafile, "hall_sets.duplicate", 'hall_id', hid)
+
+        hallsetgroup = verifyFunc(getDictKey(hall_set_obj, 'hall_set_group', datafile, path), core.HallSetGroup.fromFullName, IDE(datafile, "hall_sets.invalid", hid, 'hall_set_group', getDictKey(hall_set_obj, 'hall_set_group', datafile, path)))
+
+        name = verifyValidString(getDictKey(hall_set_obj, 'species', datafile, path), IDE(datafile, "hall_sets.missing", hid, 'species', trS))
+        if name not in species.keys():
+            raise IDE(datafile, "hall_sets.unregistered", hid, 'species', name)
+
+        nature = verifyEnumName(getDictKey(hall_set_obj, 'nature', datafile, path), core.Nature, IDE(datafile, "hall_sets.invalid", hid, 'nature', getDictKey(hall_set_obj, 'nature', datafile, path)))
+
+        item = verifyValidString(getDictKey(hall_set_obj, 'item', datafile, path), IDE(datafile, "hall_sets.missing", hid, 'item', trS))
+
+        moves = verifyMany(verifyLenRange(verifyList(getDictKey(hall_set_obj, 'moves', datafile, path), IDE(datafile, "hall_sets.missing", hid, 'moves', trSL)), 1, 4, IDE(datafile, "hall_sets.size", hid, 1, 4, 'moves', trSL)), verifyValidString, IDE(datafile, "hall_sets.invalid_entry", hid, 'moves', trSL))
+        if len(set(moves)) < len(moves):
+            raise IDE(datafile, "hall_sets.duplicate_entry", name, 'moves', trSL)
+
+        evs = verifyLenRange(verifyList(getDictKey(hall_set_obj, 'evs', datafile, path), IDE(datafile, "hall_sets.missing", hid, 'evs', trSL)), 2, 3, IDE(datafile, "hall_sets.size", hid, 2, 3, 'evs', trSL))
+        for i in range(len(evs)):
+            evs[i] = verifyEnumName(evs[i], core.Stat, IDE(datafile, "hall_sets.invalid_entry.of", hid, evs[i], 'evs', trSL))
+        # TODO: Battle Hall Flareon has only 1 EV in the data??? Is this a typo? For now, I've given it SpA twice and made this exception.
+        if name != 'Flareon':
+            if len(set(evs)) < len(evs):
+                raise IDE(datafile, "hall_sets.duplicate_entry", name, 'evs', trSL)
+
+        if len(evs) == 3:
+            print(hid)
+
+        if name in hall_sets.keys():
+            raise IDE(datafile, "hall_sets.duplicate", 'species', name)
+        hall_sets[name] = core.HallPokeSet(hid, hallsetgroup, species[name], nature, item, moves, core.EVStats(evs))
+
+
+    return (species, sets, trainers, hall_sets)

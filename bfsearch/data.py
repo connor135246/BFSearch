@@ -16,20 +16,22 @@ class DataHolder(object):
 
         # dictionary of '{name}' to Species
         self.species = {}
-        # dictionary of '{name}' to dictionary of '{pset}' to Pokeset
+        # dictionary of '{name}' to dictionary of '{pset}' to PokeSet
         self.sets = {}
         # dictionary of '{tclass}' to dictionary of '{tname}' to Trainer
         self.trainers = {}
+        # dictionary of '{name}' to HallPokeSet
+        self.hall_sets = {}
 
     # tries to build data! returns error message.
     def fillerup(self):
         try:
-            self.species, self.sets, self.trainers = parsing.buildData()
+            self.species, self.sets, self.trainers, self.hall_sets = parsing.buildData()
             self.isEmpty = False
             logging.info("Parsed data!")
             return ""
         except parsing.DataException as e:
-            self.species, self.sets, self.trainers = {}, {}, {}
+            self.species, self.sets, self.trainers, self.hall_sets = {}, {}, {}, {}
             self.isEmpty = True
             logging.warning(e, exc_info = True)
             return e.__class__.__name__ + " - " + str(e)
@@ -102,6 +104,18 @@ def trainersAlphaSorted(trainers):
 
 def trainersAlphaSortedList(trainers):
     return list_from_double_dict(trainersAlphaSorted(trainers))
+
+def hallSetsAlphaSorted(hall_sets):
+    return sorted_dict(hall_sets)
+
+def hallSetsAlphaSortedList(hall_sets):
+    return list(hallSetsAlphaSorted(hall_sets).values())
+
+def hallSetsDexSorted(hall_sets):
+    return dict(sorted(hall_sets.items(), key = lambda item: item[1].species.dex))
+
+def hallSetsDexSortedList(hall_sets):
+    return list(hallSetsDexSorted(hall_sets).values())
 
 
 # derived data.

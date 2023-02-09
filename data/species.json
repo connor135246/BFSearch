@@ -104,6 +104,28 @@
 			]
 		},
 		{
+			"dex": 10,
+			"name": "Caterpie",
+			"types": [
+				"Bug"
+			],
+			"speed": 45,
+			"abilities": [
+				"Shield Dust"
+			]
+		},
+		{
+			"dex": 11,
+			"name": "Metapod",
+			"types": [
+				"Bug"
+			],
+			"speed": 30,
+			"abilities": [
+				"Shed Skin"
+			]
+		},
+		{
 			"dex": 12,
 			"name": "Butterfree",
 			"types": [
@@ -116,6 +138,30 @@
 			]
 		},
 		{
+			"dex": 13,
+			"name": "Weedle",
+			"types": [
+				"Bug",
+				"Poison"
+			],
+			"speed": 50,
+			"abilities": [
+				"Shield Dust"
+			]
+		},
+		{
+			"dex": 14,
+			"name": "Kakuna",
+			"types": [
+				"Bug",
+				"Poison"
+			],
+			"speed": 35,
+			"abilities": [
+				"Shed Skin"
+			]
+		},
+		{
 			"dex": 15,
 			"name": "Beedrill",
 			"types": [
@@ -125,6 +171,19 @@
 			"speed": 75,
 			"abilities": [
 				"Swarm"
+			]
+		},
+		{
+			"dex": 16,
+			"name": "Pidgey",
+			"types": [
+				"Normal",
+				"Flying"
+			],
+			"speed": 56,
+			"abilities": [
+				"Keen Eye",
+				"Tangled Feet"
 			]
 		},
 		{
@@ -154,6 +213,18 @@
 			]
 		},
 		{
+			"dex": 19,
+			"name": "Rattata",
+			"types": [
+				"Normal"
+			],
+			"speed": 72,
+			"abilities": [
+				"Run Away",
+				"Guts"
+			]
+		},
+		{
 			"dex": 20,
 			"name": "Raticate",
 			"types": [
@@ -166,6 +237,18 @@
 			]
 		},
 		{
+			"dex": 21,
+			"name": "Spearow",
+			"types": [
+				"Normal",
+				"Flying"
+			],
+			"speed": 70,
+			"abilities": [
+				"Keen Eye"
+			]
+		},
+		{
 			"dex": 22,
 			"name": "Fearow",
 			"types": [
@@ -175,6 +258,18 @@
 			"speed": 100,
 			"abilities": [
 				"Keen Eye"
+			]
+		},
+		{
+			"dex": 23,
+			"name": "Ekans",
+			"types": [
+				"Poison"
+			],
+			"speed": 55,
+			"abilities": [
+				"Intimidate",
+				"Shed Skin"
 			]
 		},
 		{
@@ -234,6 +329,18 @@
 			]
 		},
 		{
+			"dex": 29,
+			"name": "Nidoran-F",
+			"types": [
+				"Poison"
+			],
+			"speed": 41,
+			"abilities": [
+				"Poison Point",
+				"Rivalry"
+			]
+		},
+		{
 			"dex": 30,
 			"name": "Nidorina",
 			"types": [
@@ -253,6 +360,18 @@
 				"Ground"
 			],
 			"speed": 76,
+			"abilities": [
+				"Poison Point",
+				"Rivalry"
+			]
+		},
+		{
+			"dex": 32,
+			"name": "Nidoran-M",
+			"types": [
+				"Poison"
+			],
+			"speed": 50,
 			"abilities": [
 				"Poison Point",
 				"Rivalry"
@@ -330,6 +449,17 @@
 			]
 		},
 		{
+			"dex": 39,
+			"name": "Jigglypuff",
+			"types": [
+				"Normal"
+			],
+			"speed": 20,
+			"abilities": [
+				"Cute Charm"
+			]
+		},
+		{
 			"dex": 40,
 			"name": "Wigglytuff",
 			"types": [
@@ -338,6 +468,18 @@
 			"speed": 45,
 			"abilities": [
 				"Cute Charm"
+			]
+		},
+		{
+			"dex": 41,
+			"name": "Zubat",
+			"types": [
+				"Poison",
+				"Flying"
+			],
+			"speed": 55,
+			"abilities": [
+				"Inner Focus"
 			]
 		},
 		{
@@ -389,6 +531,19 @@
 			]
 		},
 		{
+			"dex": 46,
+			"name": "Paras",
+			"types": [
+				"Bug",
+				"Grass"
+			],
+			"speed": 25,
+			"abilities": [
+				"Effect Spore",
+				"Dry Skin"
+			]
+		},
+		{
 			"dex": 47,
 			"name": "Parasect",
 			"types": [
@@ -428,6 +583,18 @@
 			]
 		},
 		{
+			"dex": 50,
+			"name": "Diglett",
+			"types": [
+				"Ground"
+			],
+			"speed": 95,
+			"abilities": [
+				"Sand Veil",
+				"Arena Trap"
+			]
+		},
+		{
 			"dex": 51,
 			"name": "Dugtrio",
 			"types": [
@@ -437,6 +604,18 @@
 			"abilities": [
 				"Sand Veil",
 				"Arena Trap"
+			]
+		},
+		{
+			"dex": 52,
+			"name": "Meowth",
+			"types": [
+				"Normal"
+			],
+			"speed": 90,
+			"abilities": [
+				"Pickup",
+				"Technician"
 			]
 		},
 		{
@@ -476,6 +655,18 @@
 			]
 		},
 		{
+			"dex": 56,
+			"name": "Mankey",
+			"types": [
+				"Fighting"
+			],
+			"speed": 70,
+			"abilities": [
+				"Vital Spirit",
+				"Anger Point"
+			]
+		},
+		{
 			"dex": 57,
 			"name": "Primeape",
 			"types": [
@@ -512,6 +703,18 @@
 			]
 		},
 		{
+			"dex": 60,
+			"name": "Poliwag",
+			"types": [
+				"Water"
+			],
+			"speed": 90,
+			"abilities": [
+				"Water Absorb",
+				"Damp"
+			]
+		},
+		{
 			"dex": 61,
 			"name": "Poliwhirl",
 			"types": [
@@ -534,6 +737,18 @@
 			"abilities": [
 				"Water Absorb",
 				"Damp"
+			]
+		},
+		{
+			"dex": 63,
+			"name": "Abra",
+			"types": [
+				"Psychic"
+			],
+			"speed": 90,
+			"abilities": [
+				"Synchronize",
+				"Inner Focus"
 			]
 		},
 		{
@@ -594,6 +809,18 @@
 			"abilities": [
 				"Guts",
 				"No Guard"
+			]
+		},
+		{
+			"dex": 69,
+			"name": "Bellsprout",
+			"types": [
+				"Grass",
+				"Poison"
+			],
+			"speed": 40,
+			"abilities": [
+				"Chlorophyll"
 			]
 		},
 		{
@@ -850,6 +1077,18 @@
 			]
 		},
 		{
+			"dex": 90,
+			"name": "Shellder",
+			"types": [
+				"Water"
+			],
+			"speed": 40,
+			"abilities": [
+				"Shell Armor",
+				"Skill Link"
+			]
+		},
+		{
 			"dex": 91,
 			"name": "Cloyster",
 			"types": [
@@ -860,6 +1099,18 @@
 			"abilities": [
 				"Shell Armor",
 				"Skill Link"
+			]
+		},
+		{
+			"dex": 92,
+			"name": "Gastly",
+			"types": [
+				"Ghost",
+				"Poison"
+			],
+			"speed": 80,
+			"abilities": [
+				"Levitate"
 			]
 		},
 		{
@@ -1140,6 +1391,18 @@
 			]
 		},
 		{
+			"dex": 116,
+			"name": "Horsea",
+			"types": [
+				"Water"
+			],
+			"speed": 60,
+			"abilities": [
+				"Swift Swim",
+				"Sniper"
+			]
+		},
+		{
 			"dex": 117,
 			"name": "Seadra",
 			"types": [
@@ -1285,6 +1548,17 @@
 			]
 		},
 		{
+			"dex": 129,
+			"name": "Magikarp",
+			"types": [
+				"Water"
+			],
+			"speed": 80,
+			"abilities": [
+				"Swift Swim"
+			]
+		},
+		{
 			"dex": 130,
 			"name": "Gyarados",
 			"types": [
@@ -1307,6 +1581,17 @@
 			"abilities": [
 				"Water Absorb",
 				"Shell Armor"
+			]
+		},
+		{
+			"dex": 132,
+			"name": "Ditto",
+			"types": [
+				"Normal"
+			],
+			"speed": 48,
+			"abilities": [
+				"Limber"
 			]
 		},
 		{
@@ -1613,6 +1898,18 @@
 			]
 		},
 		{
+			"dex": 161,
+			"name": "Sentret",
+			"types": [
+				"Normal"
+			],
+			"speed": 20,
+			"abilities": [
+				"Run Away",
+				"Keen Eye"
+			]
+		},
+		{
 			"dex": 162,
 			"name": "Furret",
 			"types": [
@@ -1621,6 +1918,19 @@
 			"speed": 90,
 			"abilities": [
 				"Run Away",
+				"Keen Eye"
+			]
+		},
+		{
+			"dex": 163,
+			"name": "Hoothoot",
+			"types": [
+				"Normal",
+				"Flying"
+			],
+			"speed": 50,
+			"abilities": [
+				"Insomnia",
 				"Keen Eye"
 			]
 		},
@@ -1638,6 +1948,19 @@
 			]
 		},
 		{
+			"dex": 165,
+			"name": "Ledyba",
+			"types": [
+				"Bug",
+				"Flying"
+			],
+			"speed": 55,
+			"abilities": [
+				"Swarm",
+				"Early Bird"
+			]
+		},
+		{
 			"dex": 166,
 			"name": "Ledian",
 			"types": [
@@ -1648,6 +1971,19 @@
 			"abilities": [
 				"Swarm",
 				"Early Bird"
+			]
+		},
+		{
+			"dex": 167,
+			"name": "Spinarak",
+			"types": [
+				"Bug",
+				"Poison"
+			],
+			"speed": 30,
+			"abilities": [
+				"Swarm",
+				"Insomnia"
 			]
 		},
 		{
@@ -1702,6 +2038,52 @@
 			]
 		},
 		{
+			"dex": 172,
+			"name": "Pichu",
+			"types": [
+				"Electric"
+			],
+			"speed": 60,
+			"abilities": [
+				"Static"
+			]
+		},
+		{
+			"dex": 173,
+			"name": "Cleffa",
+			"types": [
+				"Normal"
+			],
+			"speed": 15,
+			"abilities": [
+				"Cute Charm",
+				"Magic Guard"
+			]
+		},
+		{
+			"dex": 174,
+			"name": "Igglybuff",
+			"types": [
+				"Normal"
+			],
+			"speed": 15,
+			"abilities": [
+				"Cute Charm"
+			]
+		},
+		{
+			"dex": 175,
+			"name": "Togepi",
+			"types": [
+				"Normal"
+			],
+			"speed": 20,
+			"abilities": [
+				"Hustle",
+				"Serene Grace"
+			]
+		},
+		{
 			"dex": 176,
 			"name": "Togetic",
 			"types": [
@@ -1741,6 +2123,17 @@
 			]
 		},
 		{
+			"dex": 179,
+			"name": "Mareep",
+			"types": [
+				"Electric"
+			],
+			"speed": 35,
+			"abilities": [
+				"Static"
+			]
+		},
+		{
 			"dex": 180,
 			"name": "Flaaffy",
 			"types": [
@@ -1771,6 +2164,18 @@
 			"speed": 50,
 			"abilities": [
 				"Chlorophyll"
+			]
+		},
+		{
+			"dex": 183,
+			"name": "Marill",
+			"types": [
+				"Water"
+			],
+			"speed": 40,
+			"abilities": [
+				"Thick Fat",
+				"Huge Power"
 			]
 		},
 		{
@@ -1807,6 +2212,19 @@
 			"abilities": [
 				"Water Absorb",
 				"Damp"
+			]
+		},
+		{
+			"dex": 187,
+			"name": "Hoppip",
+			"types": [
+				"Grass",
+				"Flying"
+			],
+			"speed": 50,
+			"abilities": [
+				"Chlorophyll",
+				"Leaf Guard"
 			]
 		},
 		{
@@ -1848,6 +2266,18 @@
 			]
 		},
 		{
+			"dex": 191,
+			"name": "Sunkern",
+			"types": [
+				"Grass"
+			],
+			"speed": 30,
+			"abilities": [
+				"Chlorophyll",
+				"Solar Power"
+			]
+		},
+		{
 			"dex": 192,
 			"name": "Sunflora",
 			"types": [
@@ -1870,6 +2300,19 @@
 			"abilities": [
 				"Speed Boost",
 				"Compound Eyes"
+			]
+		},
+		{
+			"dex": 194,
+			"name": "Wooper",
+			"types": [
+				"Water",
+				"Ground"
+			],
+			"speed": 15,
+			"abilities": [
+				"Damp",
+				"Water Absorb"
 			]
 		},
 		{
@@ -1945,6 +2388,17 @@
 			]
 		},
 		{
+			"dex": 201,
+			"name": "Unown",
+			"types": [
+				"Psychic"
+			],
+			"speed": 48,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
 			"dex": 202,
 			"name": "Wobbuffet",
 			"types": [
@@ -1966,6 +2420,17 @@
 			"abilities": [
 				"Inner Focus",
 				"Early Bird"
+			]
+		},
+		{
+			"dex": 204,
+			"name": "Pineco",
+			"types": [
+				"Bug"
+			],
+			"speed": 15,
+			"abilities": [
+				"Sturdy"
 			]
 		},
 		{
@@ -2132,6 +2597,18 @@
 			]
 		},
 		{
+			"dex": 218,
+			"name": "Slugma",
+			"types": [
+				"Fire"
+			],
+			"speed": 20,
+			"abilities": [
+				"Magma Armor",
+				"Flame Body"
+			]
+		},
+		{
 			"dex": 219,
 			"name": "Magcargo",
 			"types": [
@@ -2142,6 +2619,19 @@
 			"abilities": [
 				"Magma Armor",
 				"Flame Body"
+			]
+		},
+		{
+			"dex": 220,
+			"name": "Swinub",
+			"types": [
+				"Ice",
+				"Ground"
+			],
+			"speed": 50,
+			"abilities": [
+				"Oblivious",
+				"Snow Cloak"
 			]
 		},
 		{
@@ -2316,6 +2806,30 @@
 			"abilities": [
 				"Intimidate",
 				"Frisk"
+			]
+		},
+		{
+			"dex": 235,
+			"name": "Smeargle",
+			"types": [
+				"Normal"
+			],
+			"speed": 75,
+			"abilities": [
+				"Own Tempo",
+				"Technician"
+			]
+		},
+		{
+			"dex": 236,
+			"name": "Tyrogue",
+			"types": [
+				"Fighting"
+			],
+			"speed": 35,
+			"abilities": [
+				"Guts",
+				"Steadfast"
 			]
 		},
 		{
@@ -2562,6 +3076,18 @@
 			]
 		},
 		{
+			"dex": 261,
+			"name": "Poochyena",
+			"types": [
+				"Dark"
+			],
+			"speed": 35,
+			"abilities": [
+				"Run Away",
+				"Quick Feet"
+			]
+		},
+		{
 			"dex": 262,
 			"name": "Mightyena",
 			"types": [
@@ -2571,6 +3097,18 @@
 			"abilities": [
 				"Intimidate",
 				"Quick Feet"
+			]
+		},
+		{
+			"dex": 263,
+			"name": "Zigzagoon",
+			"types": [
+				"Normal"
+			],
+			"speed": 60,
+			"abilities": [
+				"Pickup",
+				"Gluttony"
 			]
 		},
 		{
@@ -2586,6 +3124,28 @@
 			]
 		},
 		{
+			"dex": 265,
+			"name": "Wurmple",
+			"types": [
+				"Bug"
+			],
+			"speed": 20,
+			"abilities": [
+				"Shield Dust"
+			]
+		},
+		{
+			"dex": 266,
+			"name": "Silcoon",
+			"types": [
+				"Bug"
+			],
+			"speed": 15,
+			"abilities": [
+				"Shed Skin"
+			]
+		},
+		{
 			"dex": 267,
 			"name": "Beautifly",
 			"types": [
@@ -2598,6 +3158,17 @@
 			]
 		},
 		{
+			"dex": 268,
+			"name": "Cascoon",
+			"types": [
+				"Bug"
+			],
+			"speed": 15,
+			"abilities": [
+				"Shed Skin"
+			]
+		},
+		{
 			"dex": 269,
 			"name": "Dustox",
 			"types": [
@@ -2607,6 +3178,19 @@
 			"speed": 65,
 			"abilities": [
 				"Shield Dust"
+			]
+		},
+		{
+			"dex": 270,
+			"name": "Lotad",
+			"types": [
+				"Water",
+				"Grass"
+			],
+			"speed": 30,
+			"abilities": [
+				"Swift Swim",
+				"Rain Dish"
 			]
 		},
 		{
@@ -2636,6 +3220,18 @@
 			]
 		},
 		{
+			"dex": 273,
+			"name": "Seedot",
+			"types": [
+				"Grass"
+			],
+			"speed": 30,
+			"abilities": [
+				"Chlorophyll",
+				"Early Bird"
+			]
+		},
+		{
 			"dex": 274,
 			"name": "Nuzleaf",
 			"types": [
@@ -2662,6 +3258,18 @@
 			]
 		},
 		{
+			"dex": 276,
+			"name": "Taillow",
+			"types": [
+				"Normal",
+				"Flying"
+			],
+			"speed": 85,
+			"abilities": [
+				"Guts"
+			]
+		},
+		{
 			"dex": 277,
 			"name": "Swellow",
 			"types": [
@@ -2671,6 +3279,18 @@
 			"speed": 125,
 			"abilities": [
 				"Guts"
+			]
+		},
+		{
+			"dex": 278,
+			"name": "Wingull",
+			"types": [
+				"Water",
+				"Flying"
+			],
+			"speed": 85,
+			"abilities": [
+				"Wingull"
 			]
 		},
 		{
@@ -2686,6 +3306,30 @@
 			]
 		},
 		{
+			"dex": 280,
+			"name": "Ralts",
+			"types": [
+				"Psychic"
+			],
+			"speed": 40,
+			"abilities": [
+				"Synchronize",
+				"Trace"
+			]
+		},
+		{
+			"dex": 281,
+			"name": "Kirlia",
+			"types": [
+				"Psychic"
+			],
+			"speed": 50,
+			"abilities": [
+				"Synchronize",
+				"Trace"
+			]
+		},
+		{
 			"dex": 282,
 			"name": "Gardevoir",
 			"types": [
@@ -2695,6 +3339,18 @@
 			"abilities": [
 				"Synchronize",
 				"Trace"
+			]
+		},
+		{
+			"dex": 283,
+			"name": "Surskit",
+			"types": [
+				"Bug",
+				"Water"
+			],
+			"speed": 65,
+			"abilities": [
+				"Swift Swim"
 			]
 		},
 		{
@@ -2710,6 +3366,18 @@
 			]
 		},
 		{
+			"dex": 285,
+			"name": "Shroomish",
+			"types": [
+				"Grass"
+			],
+			"speed": 35,
+			"abilities": [
+				"Effect Spore",
+				"Poison Heal"
+			]
+		},
+		{
 			"dex": 286,
 			"name": "Breloom",
 			"types": [
@@ -2720,6 +3388,17 @@
 			"abilities": [
 				"Effect Spore",
 				"Poison Heal"
+			]
+		},
+		{
+			"dex": 287,
+			"name": "Slakoth",
+			"types": [
+				"Normal"
+			],
+			"speed": 30,
+			"abilities": [
+				"Truant"
 			]
 		},
 		{
@@ -2742,6 +3421,18 @@
 			"speed": 100,
 			"abilities": [
 				"Truant"
+			]
+		},
+		{
+			"dex": 290,
+			"name": "Nincada",
+			"types": [
+				"Bug",
+				"Ground"
+			],
+			"speed": 40,
+			"abilities": [
+				"Compound Eyes"
 			]
 		},
 		{
@@ -2769,6 +3460,17 @@
 			]
 		},
 		{
+			"dex": 293,
+			"name": "Whismur",
+			"types": [
+				"Normal"
+			],
+			"speed": 28,
+			"abilities": [
+				"Soundproof"
+			]
+		},
+		{
 			"dex": 294,
 			"name": "Loudred",
 			"types": [
@@ -2791,6 +3493,18 @@
 			]
 		},
 		{
+			"dex": 296,
+			"name": "Makuhita",
+			"types": [
+				"Fighting"
+			],
+			"speed": 25,
+			"abilities": [
+				"Thick Fat",
+				"Guts"
+			]
+		},
+		{
 			"dex": 297,
 			"name": "Hariyama",
 			"types": [
@@ -2803,6 +3517,18 @@
 			]
 		},
 		{
+			"dex": 298,
+			"name": "Azurill",
+			"types": [
+				"Normal"
+			],
+			"speed": 20,
+			"abilities": [
+				"Thick Fat",
+				"Huge Power"
+			]
+		},
+		{
 			"dex": 299,
 			"name": "Nosepass",
 			"types": [
@@ -2812,6 +3538,18 @@
 			"abilities": [
 				"Sturdy",
 				"Magnet Pull"
+			]
+		},
+		{
+			"dex": 300,
+			"name": "Skitty",
+			"types": [
+				"Normal"
+			],
+			"speed": 50,
+			"abilities": [
+				"Cute Charm",
+				"Normalize"
 			]
 		},
 		{
@@ -2891,6 +3629,18 @@
 			]
 		},
 		{
+			"dex": 307,
+			"name": "Meditite",
+			"types": [
+				"Fighting",
+				"Psychic"
+			],
+			"speed": 60,
+			"abilities": [
+				"Pure Power"
+			]
+		},
+		{
 			"dex": 308,
 			"name": "Medicham",
 			"types": [
@@ -2900,6 +3650,18 @@
 			"speed": 80,
 			"abilities": [
 				"Pure Power"
+			]
+		},
+		{
+			"dex": 309,
+			"name": "Electrike",
+			"types": [
+				"Electric"
+			],
+			"speed": 65,
+			"abilities": [
+				"Static",
+				"Lightningrod"
 			]
 		},
 		{
@@ -2971,6 +3733,18 @@
 			"abilities": [
 				"Natural Cure",
 				"Poison Point"
+			]
+		},
+		{
+			"dex": 316,
+			"name": "Gulpin",
+			"types": [
+				"Poison"
+			],
+			"speed": 40,
+			"abilities": [
+				"Liquid Ooze",
+				"Sticky Hold"
 			]
 		},
 		{
@@ -3107,6 +3881,18 @@
 			]
 		},
 		{
+			"dex": 328,
+			"name": "Trapinch",
+			"types": [
+				"Ground"
+			],
+			"speed": 10,
+			"abilities": [
+				"Hyper Cutter",
+				"Arena Trap"
+			]
+		},
+		{
 			"dex": 329,
 			"name": "Vibrava",
 			"types": [
@@ -3224,6 +4010,19 @@
 			]
 		},
 		{
+			"dex": 339,
+			"name": "Barboach",
+			"types": [
+				"Water",
+				"Ground"
+			],
+			"speed": 60,
+			"abilities": [
+				"Oblivious",
+				"Anticipation"
+			]
+		},
+		{
 			"dex": 340,
 			"name": "Whiscash",
 			"types": [
@@ -3331,6 +4130,17 @@
 			"speed": 45,
 			"abilities": [
 				"Battle Armor"
+			]
+		},
+		{
+			"dex": 349,
+			"name": "Feebas",
+			"types": [
+				"Water"
+			],
+			"speed": 80,
+			"abilities": [
+				"Swift Swim"
 			]
 		},
 		{
@@ -3449,6 +4259,17 @@
 			]
 		},
 		{
+			"dex": 360,
+			"name": "Wynaut",
+			"types": [
+				"Psychic"
+			],
+			"speed": 23,
+			"abilities": [
+				"Shadow Tag"
+			]
+		},
+		{
 			"dex": 361,
 			"name": "Snorunt",
 			"types": [
@@ -3469,6 +4290,19 @@
 			"speed": 80,
 			"abilities": [
 				"Inner Focus",
+				"Ice Body"
+			]
+		},
+		{
+			"dex": 363,
+			"name": "Spheal",
+			"types": [
+				"Ice",
+				"Water"
+			],
+			"speed": 25,
+			"abilities": [
+				"Thick Fat",
 				"Ice Body"
 			]
 		},
@@ -3587,6 +4421,18 @@
 			"speed": 100,
 			"abilities": [
 				"Intimidate"
+			]
+		},
+		{
+			"dex": 374,
+			"name": "Beldum",
+			"types": [
+				"Steel",
+				"Psychic"
+			],
+			"speed": 30,
+			"abilities": [
+				"Clear Body"
 			]
 		},
 		{
@@ -4351,6 +5197,18 @@
 			]
 		},
 		{
+			"dex": 442,
+			"name": "Spiritomb",
+			"types": [
+				"Ghost",
+				"Dark"
+			],
+			"speed": 35,
+			"abilities": [
+				"Pressure"
+			]
+		},
+		{
 			"dex": 443,
 			"name": "Gible",
 			"types": [
@@ -4795,6 +5653,39 @@
 				"Ghost"
 			],
 			"speed": 91,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 480,
+			"name": "Uxie",
+			"types": [
+				"Psychic"
+			],
+			"speed": 95,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 481,
+			"name": "Mesprit",
+			"types": [
+				"Psychic"
+			],
+			"speed": 80,
+			"abilities": [
+				"Levitate"
+			]
+		},
+		{
+			"dex": 482,
+			"name": "Azelf",
+			"types": [
+				"Psychic"
+			],
+			"speed": 115,
 			"abilities": [
 				"Levitate"
 			]

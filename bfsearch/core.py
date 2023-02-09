@@ -129,48 +129,74 @@ def calculateStat(stat, base, iv, evs, level, nature):
     else:
         return calculateNonHP(base, iv, evs, level, nature.modForStat(stat))
 
-# set group is a useful way of grouping sets together based on set id.
-# group A contains very weak pokemon with only 1 possible set.
-# group B contains somewhat weak pokemon with 2 possible sets.
-# group C contains most pokemon with 4 possible sets.
-# group D contains legendaries with 4 possible sets.
-# the set number indicates which set number this is for the pokemon.
-# these groupings are used in various places in the battle frontier.
+# set group is a useful way of grouping sets together.
 class SetGroup(Enum):
+    # very weak pokemon with only 1 possible set
     A = ('A', 1, range(1, 151))
+    # somewhat weak pokemon with 2 possible sets
     B1 = ('B', 1, range(151, 251))
     B2 = ('B', 2, range(251, 351))
+    # pokemon with 4 possible sets
     C1 = ('C', 1, range(351, 487))
     C2 = ('C', 2, range(487, 623))
     C3 = ('C', 3, range(623, 759))
     C4 = ('C', 4, range(759, 895))
+    # legendaries with 4 possible sets
     D1 = ('D', 1, range(895, 909))
     D2 = ('D', 2, range(909, 923))
     D3 = ('D', 3, range(923, 937))
     D4 = ('D', 4, range(937, 951))
+    # the set number indicates which set number this is for the pokemon.
+
+    def fullname(self):
+        return self.name
 
     def group(self):
         return self.value[0]
     def setNumber(self):
         return self.value[1]
+
     # for reference
-    def defaultRange(self):
+    def defaultIDRange(self):
         return self.value[2]
 
-class PokeSet(object):
-    # sid - a number, setgroup - a SetGroup, species - a Species, pset - a number, nature - a Nature, item - a string, moves - a string list length 1 to 4, evstats - a EVStats
-    def __init__(self, sid, setgroup, species, pset, nature, item, moves, evstats):
-        self.sid = sid
-        self.setgroup = setgroup
+# hall set group is a useful way of grouping battle hall sets together.
+class HallSetGroup(Enum):
+    sub339 = ("339-", range(1, 6), range(1, 155))
+    from340to439 = ("340 - 439", range(3, 9), range(155, 271))
+    from440to499 = ("440 - 499", range(6, 11), range(271, 376))
+    plus500 = ("500+", range(9, 11), range(376, 478))
+
+    def fullname(self):
+        return self.value[0]
+
+    def ranks(self):
+        return self.value[1]
+    def appearsInRank(self, rank):
+        return rank in self.ranks()
+
+    # for reference
+    def defaultIDRange(self):
+        return self.value[2]
+
+    def fromFullName(value):
+        for hallsetgroup in list(HallSetGroup):
+            if value == hallsetgroup.fullname():
+                return hallsetgroup
+        raise ValueError(f"Unknown hall set group '{value}'")
+
+# base class of pokeset
+class PokeSetBase(object):
+    # species - a Species, nature - a Nature, item - a string, moves - a string list length 1 to 4, evstats - a EVStats
+    def __init__(self, species, nature, item, moves, evstats):
         self.species = species
-        self.pset = pset
         self.nature = nature
         self.item = item
         self.moves = moves
         self.evstats = evstats
 
     def __str__(self):
-        return f"{self.species.name} {self.pset}"
+        return self.species.name
 
     def getShowdownNickname(self, iv):
         if iv == 31:
@@ -201,6 +227,28 @@ class PokeSet(object):
     def getSpeed(self, iv, level = 50):
         return calculateStat(Stat.Spe, self.species.baseSpeed, iv, self.evstats.getEVs(Stat.Spe), level, self.nature)
 
+# your average pokeset
+class PokeSet(PokeSetBase):
+    # sid - a number, setgroup - a SetGroup, species - a Species, pset - a number, nature - a Nature, item - a string, moves - a string list length 1 to 4, evstats - a EVStats
+    def __init__(self, sid, setgroup, species, pset, nature, item, moves, evstats):
+        PokeSetBase.__init__(self, species, nature, item, moves, evstats)
+        self.sid = sid
+        self.setgroup = setgroup
+        self.pset = pset
+
+    def __str__(self):
+        return f"{self.species.name} {self.pset}"
+
+# pokeset in the battle hall
+class HallPokeSet(PokeSetBase):
+    # hid - a number, hallsetgroup - a HallSetGroup, species - a Species, nature - a Nature, item - a string, moves - a string list length 1 to 4, evstats - a EVStats
+    def __init__(self, hid, hallsetgroup, species, nature, item, moves, evstats):
+        PokeSetBase.__init__(self, species, nature, item, moves, evstats)
+        self.hid = hid
+        self.hallsetgroup = hallsetgroup
+
+    def __str__(self):
+        return f"{self.species.name} (Hall)"
 
 # a trainer.
 
@@ -242,7 +290,7 @@ class BattleNum(Enum):
             elif num > 49:
                 return BattleNum.s99
             else:
-                raise Exception("Unknown battle range!")
+                raise ValueError(f"Unknown battle range '{num}'")
 
     def isEnder(self):
         return self == BattleNum.e1 or self == BattleNum.e2 or self == BattleNum.e3 or self == BattleNum.e4 or self == BattleNum.e5 or self == BattleNum.e6 or self == BattleNum.e7 or self.isBeyond()

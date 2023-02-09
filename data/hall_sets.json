@@ -1,0 +1,8098 @@
+{
+	"hall_sets": [
+		{
+			"hall_id": 1,
+			"hall_set_group": "339-",
+			"species": "Bulbasaur",
+			"nature": "Mild",
+			"item": "Miracle Seed",
+			"moves": [
+				"Energy Ball",
+				"Sludge Bomb",
+				"Charm",
+				"Razor Leaf"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 2,
+			"hall_set_group": "339-",
+			"species": "Charmander",
+			"nature": "Lonely",
+			"item": "Charcoal",
+			"moves": [
+				"Slash",
+				"Fire Fang",
+				"Swords Dance",
+				"Flamethrower"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 3,
+			"hall_set_group": "339-",
+			"species": "Squirtle",
+			"nature": "Adamant",
+			"item": "Mystic Water",
+			"moves": [
+				"Facade",
+				"Aqua Tail",
+				"Iron Defense",
+				"Aqua Jet"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 4,
+			"hall_set_group": "339-",
+			"species": "Caterpie",
+			"nature": "Jolly",
+			"item": "Silver Powder",
+			"moves": [
+				"Tackle",
+				"String Shot",
+				"Bug Bite"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 5,
+			"hall_set_group": "339-",
+			"species": "Metapod",
+			"nature": "Impish",
+			"item": "Silver Powder",
+			"moves": [
+				"Tackle",
+				"String Shot",
+				"Bug Bite",
+				"Iron Defense"
+			],
+			"evs": [
+				"HP",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 6,
+			"hall_set_group": "339-",
+			"species": "Weedle",
+			"nature": "Jolly",
+			"item": "Silver Powder",
+			"moves": [
+				"Poison Sting",
+				"String Shot",
+				"Bug Bite"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 7,
+			"hall_set_group": "339-",
+			"species": "Kakuna",
+			"nature": "Impish",
+			"item": "Silver Powder",
+			"moves": [
+				"Poison Sting",
+				"String Shot",
+				"Bug Bite",
+				"Iron Defense"
+			],
+			"evs": [
+				"HP",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 8,
+			"hall_set_group": "339-",
+			"species": "Pidgey",
+			"nature": "Mild",
+			"item": "Sharp Beak",
+			"moves": [
+				"Quick Attack",
+				"Air Slash",
+				"Feather Dance",
+				"Aerial Ace"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 9,
+			"hall_set_group": "339-",
+			"species": "Rattata",
+			"nature": "Jolly",
+			"item": "Silk Scarf",
+			"moves": [
+				"Hyper Fang",
+				"Endeavor",
+				"Screech",
+				"Crunch"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 10,
+			"hall_set_group": "339-",
+			"species": "Spearow",
+			"nature": "Adamant",
+			"item": "Sharp Beak",
+			"moves": [
+				"Drill Peck",
+				"Quick Attack",
+				"Scary Face",
+				"Aerial Ace"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 11,
+			"hall_set_group": "339-",
+			"species": "Ekans",
+			"nature": "Hasty",
+			"item": "Poison Barb",
+			"moves": [
+				"Gunk Shot",
+				"Screech",
+				"Slam",
+				"Sludge Bomb"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 12,
+			"hall_set_group": "339-",
+			"species": "Pikachu",
+			"nature": "Naughty",
+			"item": "Magnet",
+			"moves": [
+				"Thunderbolt",
+				"Quick Attack",
+				"Charm",
+				"Volt Tackle"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 13,
+			"hall_set_group": "339-",
+			"species": "Sandshrew",
+			"nature": "Jolly",
+			"item": "Soft Sand",
+			"moves": [
+				"Dig",
+				"Slash",
+				"Swords Dance",
+				"Sandstorm"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 14,
+			"hall_set_group": "339-",
+			"species": "Nidoran-F",
+			"nature": "Mild",
+			"item": "Poison Barb",
+			"moves": [
+				"Sludge Bomb",
+				"Fury Swipes",
+				"Charm",
+				"Poison Fang"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 15,
+			"hall_set_group": "339-",
+			"species": "Nidoran-M",
+			"nature": "Naughty",
+			"item": "Poison Barb",
+			"moves": [
+				"Poison Jab",
+				"Amnesia",
+				"Fury Attack",
+				"Sludge Bomb"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 16,
+			"hall_set_group": "339-",
+			"species": "Clefairy",
+			"nature": "Relaxed",
+			"item": "Silk Scarf",
+			"moves": [
+				"Return",
+				"Moonlight",
+				"Meteor Mash",
+				"Cosmic Power"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 17,
+			"hall_set_group": "339-",
+			"species": "Vulpix",
+			"nature": "Modest",
+			"item": "Charcoal",
+			"moves": [
+				"Fire Blast",
+				"Quick Attack",
+				"Double Team",
+				"Swift"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 18,
+			"hall_set_group": "339-",
+			"species": "Jigglypuff",
+			"nature": "Rash",
+			"item": "Silk Scarf",
+			"moves": [
+				"Hyper Voice",
+				"Charm",
+				"Rollout",
+				"Fake Tears"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 19,
+			"hall_set_group": "339-",
+			"species": "Zubat",
+			"nature": "Hasty",
+			"item": "Poison Barb",
+			"moves": [
+				"Poison Fang",
+				"Air Slash",
+				"Sludge Bomb",
+				"Nasty Plot"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 20,
+			"hall_set_group": "339-",
+			"species": "Oddish",
+			"nature": "Mild",
+			"item": "Miracle Seed",
+			"moves": [
+				"Petal Dance",
+				"Razor Leaf",
+				"Sludge Bomb",
+				"Charm"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 21,
+			"hall_set_group": "339-",
+			"species": "Paras",
+			"nature": "Brave",
+			"item": "Silver Powder",
+			"moves": [
+				"X-Scissor",
+				"Bullet Seed",
+				"Screech",
+				"Giga Drain"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 22,
+			"hall_set_group": "339-",
+			"species": "Venonat",
+			"nature": "Mild",
+			"item": "Silver Powder",
+			"moves": [
+				"Signal Beam",
+				"Sludge Bomb",
+				"Agility",
+				"Bug Bite"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 23,
+			"hall_set_group": "339-",
+			"species": "Diglett",
+			"nature": "Adamant",
+			"item": "Soft Sand",
+			"moves": [
+				"Earthquake",
+				"Slash",
+				"Screech",
+				"Sandstorm"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 24,
+			"hall_set_group": "339-",
+			"species": "Meowth",
+			"nature": "Adamant",
+			"item": "Silk Scarf",
+			"moves": [
+				"Slash",
+				"U-turn",
+				"Fake Out",
+				"Charm"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 25,
+			"hall_set_group": "339-",
+			"species": "Psyduck",
+			"nature": "Mild",
+			"item": "Mystic Water",
+			"moves": [
+				"Hydro Pump",
+				"Fury Swipes",
+				"Amnesia",
+				"Brine"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 26,
+			"hall_set_group": "339-",
+			"species": "Mankey",
+			"nature": "Adamant",
+			"item": "Black Belt",
+			"moves": [
+				"Cross Chop",
+				"Screech",
+				"Foresight",
+				"Seismic Toss"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 27,
+			"hall_set_group": "339-",
+			"species": "Poliwag",
+			"nature": "Hasty",
+			"item": "Mystic Water",
+			"moves": [
+				"Waterfall",
+				"Return",
+				"Bubble Beam",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 28,
+			"hall_set_group": "339-",
+			"species": "Abra",
+			"nature": "Naive",
+			"item": "Twisted Spoon",
+			"moves": [
+				"Psychic",
+				"Facade",
+				"Calm Mind",
+				"Zen Headbutt"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 29,
+			"hall_set_group": "339-",
+			"species": "Machop",
+			"nature": "Jolly",
+			"item": "Black Belt",
+			"moves": [
+				"Dynamic Punch",
+				"Foresight",
+				"Scary Face",
+				"Brick Break"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 30,
+			"hall_set_group": "339-",
+			"species": "Bellsprout",
+			"nature": "Rash",
+			"item": "Miracle Seed",
+			"moves": [
+				"Razor Leaf",
+				"Sludge Bomb",
+				"Tickle",
+				"Energy Ball"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 31,
+			"hall_set_group": "339-",
+			"species": "Tentacool",
+			"nature": "Mild",
+			"item": "Mystic Water",
+			"moves": [
+				"Waterfall",
+				"Poison Jab",
+				"Barrier",
+				"Brine"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 32,
+			"hall_set_group": "339-",
+			"species": "Geodude",
+			"nature": "Brave",
+			"item": "Hard Stone",
+			"moves": [
+				"Stone Edge",
+				"Dig",
+				"Rock Polish",
+				"Ancient Power"
+			],
+			"evs": [
+				"Atk",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 33,
+			"hall_set_group": "339-",
+			"species": "Slowpoke",
+			"nature": "Sassy",
+			"item": "Twisted Spoon",
+			"moves": [
+				"Zen Headbutt",
+				"Aqua Tail",
+				"Amnesia",
+				"Brine"
+			],
+			"evs": [
+				"Atk",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 34,
+			"hall_set_group": "339-",
+			"species": "Magnemite",
+			"nature": "Rash",
+			"item": "Metal Coat",
+			"moves": [
+				"Flash Cannon",
+				"Thunder",
+				"Metal Sound",
+				"Gyro Ball"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 35,
+			"hall_set_group": "339-",
+			"species": "Doduo",
+			"nature": "Jolly",
+			"item": "Sharp Beak",
+			"moves": [
+				"Drill Peck",
+				"Fury Attack",
+				"Aerial Ace",
+				"Acupressure"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 36,
+			"hall_set_group": "339-",
+			"species": "Seel",
+			"nature": "Jolly",
+			"item": "Mystic Water",
+			"moves": [
+				"Waterfall",
+				"Headbutt",
+				"Aqua Jet",
+				"Aqua Ring"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 37,
+			"hall_set_group": "339-",
+			"species": "Grimer",
+			"nature": "Lonely",
+			"item": "Poison Barb",
+			"moves": [
+				"Gunk Shot",
+				"Frustration",
+				"Screech",
+				"Sludge Bomb"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 38,
+			"hall_set_group": "339-",
+			"species": "Shellder",
+			"nature": "Sassy",
+			"item": "Mystic Water",
+			"moves": [
+				"Clamp",
+				"Brine",
+				"Take Down",
+				"Iron Defense"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 39,
+			"hall_set_group": "339-",
+			"species": "Gastly",
+			"nature": "Modest",
+			"item": "Spell Tag",
+			"moves": [
+				"Shadow Ball",
+				"Sludge Bomb",
+				"Astonish",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 40,
+			"hall_set_group": "339-",
+			"species": "Drowzee",
+			"nature": "Rash",
+			"item": "Twisted Spoon",
+			"moves": [
+				"Frustration",
+				"Psychic",
+				"Nasty Plot",
+				"Future Sight"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 41,
+			"hall_set_group": "339-",
+			"species": "Krabby",
+			"nature": "Naughty",
+			"item": "Mystic Water",
+			"moves": [
+				"Crabhammer",
+				"Slam",
+				"Swords Dance",
+				"Brine"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 42,
+			"hall_set_group": "339-",
+			"species": "Voltorb",
+			"nature": "Modest",
+			"item": "Magnet",
+			"moves": [
+				"Thunderbolt",
+				"Swift",
+				"Double Team",
+				"Shock Wave"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 43,
+			"hall_set_group": "339-",
+			"species": "Exeggcute",
+			"nature": "Quiet",
+			"item": "Miracle Seed",
+			"moves": [
+				"Leaf Storm",
+				"Psychic",
+				"Leech Seed",
+				"Seed Bomb"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 44,
+			"hall_set_group": "339-",
+			"species": "Cubone",
+			"nature": "Adamant",
+			"item": "Soft Sand",
+			"moves": [
+				"Bonemerang",
+				"Facade",
+				"Double-Edge",
+				"Swords Dance"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 45,
+			"hall_set_group": "339-",
+			"species": "Horsea",
+			"nature": "Jolly",
+			"item": "Mystic Water",
+			"moves": [
+				"Waterfall",
+				"Rain Dance",
+				"Dragon Dance",
+				"Return"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 46,
+			"hall_set_group": "339-",
+			"species": "Goldeen",
+			"nature": "Jolly",
+			"item": "Mystic Water",
+			"moves": [
+				"Waterfall",
+				"Fury Attack",
+				"Agility",
+				"Rain Dance"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 47,
+			"hall_set_group": "339-",
+			"species": "Magikarp",
+			"nature": "Jolly",
+			"item": "Scope Lens",
+			"moves": [
+				"Tackle",
+				"Flail",
+				"Bounce"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 48,
+			"hall_set_group": "339-",
+			"species": "Ditto",
+			"nature": "Naive",
+			"item": "Quick Powder",
+			"moves": [
+				"Transform"
+			],
+			"evs": [
+				"HP",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 49,
+			"hall_set_group": "339-",
+			"species": "Eevee",
+			"nature": "Naughty",
+			"item": "Silk Scarf",
+			"moves": [
+				"Return",
+				"Quick Attack",
+				"Charm",
+				"Shadow Ball"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 50,
+			"hall_set_group": "339-",
+			"species": "Dratini",
+			"nature": "Jolly",
+			"item": "Dragon Fang",
+			"moves": [
+				"Dragon Rush",
+				"Dragon Dance",
+				"Slam",
+				"Dragon Rage"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 51,
+			"hall_set_group": "339-",
+			"species": "Chikorita",
+			"nature": "Quiet",
+			"item": "Miracle Seed",
+			"moves": [
+				"Energy Ball",
+				"Return",
+				"Ingrain",
+				"Razor Leaf"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 52,
+			"hall_set_group": "339-",
+			"species": "Cyndaquil",
+			"nature": "Hasty",
+			"item": "Charcoal",
+			"moves": [
+				"Overheat",
+				"Quick Attack",
+				"Flare Blitz",
+				"Smokescreen"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 53,
+			"hall_set_group": "339-",
+			"species": "Totodile",
+			"nature": "Lonely",
+			"item": "Mystic Water",
+			"moves": [
+				"Aqua Tail",
+				"Slash",
+				"Scary Face",
+				"Brine"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 54,
+			"hall_set_group": "339-",
+			"species": "Sentret",
+			"nature": "Rash",
+			"item": "Silk Scarf",
+			"moves": [
+				"Hyper Voice",
+				"Charge Beam",
+				"Quick Attack",
+				"Charm"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 55,
+			"hall_set_group": "339-",
+			"species": "Hoothoot",
+			"nature": "Mild",
+			"item": "Sharp Beak",
+			"moves": [
+				"Swift",
+				"Air Slash",
+				"Aerial Ace",
+				"Feather Dance"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 56,
+			"hall_set_group": "339-",
+			"species": "Ledyba",
+			"nature": "Hasty",
+			"item": "Silver Powder",
+			"moves": [
+				"Bug Buzz",
+				"Air Cutter",
+				"Bug Bite",
+				"Double Team"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 57,
+			"hall_set_group": "339-",
+			"species": "Spinarak",
+			"nature": "Jolly",
+			"item": "Silver Powder",
+			"moves": [
+				"Pin Missile",
+				"Poison Jab",
+				"Agility",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 58,
+			"hall_set_group": "339-",
+			"species": "Chinchou",
+			"nature": "Modest",
+			"item": "Mystic Water",
+			"moves": [
+				"Discharge",
+				"Brine",
+				"Amnesia",
+				"Aqua Ring"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 59,
+			"hall_set_group": "339-",
+			"species": "Pichu",
+			"nature": "Naive",
+			"item": "Magnet",
+			"moves": [
+				"Nasty Plot",
+				"Thunderbolt",
+				"Shock Wave",
+				"Facade"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 60,
+			"hall_set_group": "339-",
+			"species": "Cleffa",
+			"nature": "Relaxed",
+			"item": "Silk Scarf",
+			"moves": [
+				"Return",
+				"Magical Leaf",
+				"Charm",
+				"Amnesia"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 61,
+			"hall_set_group": "339-",
+			"species": "Igglybuff",
+			"nature": "Naughty",
+			"item": "Silk Scarf",
+			"moves": [
+				"Return",
+				"Faint Attack",
+				"Charm",
+				"Fake Tears"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 62,
+			"hall_set_group": "339-",
+			"species": "Togepi",
+			"nature": "Naive",
+			"item": "Silk Scarf",
+			"moves": [
+				"Return",
+				"Zen Headbutt",
+				"Charm",
+				"Swift"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 63,
+			"hall_set_group": "339-",
+			"species": "Natu",
+			"nature": "Modest",
+			"item": "Twisted Spoon",
+			"moves": [
+				"Psychic",
+				"Air Cutter",
+				"Feather Dance",
+				"Future Sight"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 64,
+			"hall_set_group": "339-",
+			"species": "Mareep",
+			"nature": "Rash",
+			"item": "Magnet",
+			"moves": [
+				"Thunder",
+				"Take Down",
+				"Cotton Spore",
+				"Screech"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 65,
+			"hall_set_group": "339-",
+			"species": "Marill",
+			"nature": "Lonely",
+			"item": "Mystic Water",
+			"moves": [
+				"Aqua Tail",
+				"Bubble Beam",
+				"Double-Edge",
+				"Aqua Ring"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 66,
+			"hall_set_group": "339-",
+			"species": "Hoppip",
+			"nature": "Hasty",
+			"item": "Miracle Seed",
+			"moves": [
+				"Seed Bomb",
+				"Bounce",
+				"Amnesia",
+				"Giga Drain"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 67,
+			"hall_set_group": "339-",
+			"species": "Sunkern",
+			"nature": "Jolly",
+			"item": "Miracle Seed",
+			"moves": [
+				"Seed Bomb",
+				"Sunny Day",
+				"Ingrain",
+				"Facade"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 68,
+			"hall_set_group": "339-",
+			"species": "Wooper",
+			"nature": "Gentle",
+			"item": "Mystic Water",
+			"moves": [
+				"Aqua Tail",
+				"Surf",
+				"Amnesia",
+				"Mud Shot"
+			],
+			"evs": [
+				"Atk",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 69,
+			"hall_set_group": "339-",
+			"species": "Unown",
+			"nature": "Hasty",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Hidden Power"
+			],
+			"evs": [
+				"HP",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 70,
+			"hall_set_group": "339-",
+			"species": "Pineco",
+			"nature": "Relaxed",
+			"item": "Silver Powder",
+			"moves": [
+				"Pin Missile",
+				"Facade",
+				"Iron Defense",
+				"Swift"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 71,
+			"hall_set_group": "339-",
+			"species": "Snubbull",
+			"nature": "Naughty",
+			"item": "Silk Scarf",
+			"moves": [
+				"Return",
+				"Fire Fang",
+				"Charm",
+				"Facade"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 72,
+			"hall_set_group": "339-",
+			"species": "Teddiursa",
+			"nature": "Jolly",
+			"item": "Silk Scarf",
+			"moves": [
+				"Charm",
+				"Slash",
+				"Aerial Ace",
+				"Facade"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 73,
+			"hall_set_group": "339-",
+			"species": "Slugma",
+			"nature": "Hasty",
+			"item": "Charcoal",
+			"moves": [
+				"Heat Wave",
+				"Acid Armor",
+				"Amnesia",
+				"Facade"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 74,
+			"hall_set_group": "339-",
+			"species": "Swinub",
+			"nature": "Quiet",
+			"item": "Never-Melt Ice",
+			"moves": [
+				"Blizzard",
+				"Earth Power",
+				"Ice Shard",
+				"Curse"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 75,
+			"hall_set_group": "339-",
+			"species": "Remoraid",
+			"nature": "Timid",
+			"item": "Mystic Water",
+			"moves": [
+				"Octazooka",
+				"Hyper Beam",
+				"Focus Energy",
+				"Double Team"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 76,
+			"hall_set_group": "339-",
+			"species": "Delibird",
+			"nature": "Adamant",
+			"item": "Never-Melt Ice",
+			"moves": [
+				"Ice Shard",
+				"Double Team",
+				"Ice Punch",
+				"Aerial Ace"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 77,
+			"hall_set_group": "339-",
+			"species": "Houndour",
+			"nature": "Hasty",
+			"item": "Black Glasses",
+			"moves": [
+				"Dark Pulse",
+				"Flamethrower",
+				"Nasty Plot",
+				"Sucker Punch"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 78,
+			"hall_set_group": "339-",
+			"species": "Phanpy",
+			"nature": "Naive",
+			"item": "Soft Sand",
+			"moves": [
+				"Earthquake",
+				"Earth Power",
+				"Facade",
+				"Charm"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 79,
+			"hall_set_group": "339-",
+			"species": "Smeargle",
+			"nature": "Timid",
+			"item": "Silk Scarf",
+			"moves": [
+				"Hyper Voice",
+				"Dragon Pulse",
+				"Nasty Plot",
+				"Quick Attack"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 80,
+			"hall_set_group": "339-",
+			"species": "Tyrogue",
+			"nature": "Adamant",
+			"item": "Black Belt",
+			"moves": [
+				"Mach Punch",
+				"Foresight",
+				"Bulk Up",
+				"Brick Break"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 81,
+			"hall_set_group": "339-",
+			"species": "Smoochum",
+			"nature": "Mild",
+			"item": "Never-Melt Ice",
+			"moves": [
+				"Blizzard",
+				"Psychic",
+				"Fake Tears",
+				"Ice Punch"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 82,
+			"hall_set_group": "339-",
+			"species": "Larvitar",
+			"nature": "Lonely",
+			"item": "Hard Stone",
+			"moves": [
+				"Stone Edge",
+				"Dig",
+				"Screech",
+				"Earth Power"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 83,
+			"hall_set_group": "339-",
+			"species": "Treecko",
+			"nature": "Naive",
+			"item": "Miracle Seed",
+			"moves": [
+				"Leaf Storm",
+				"Crush Claw",
+				"Quick Attack",
+				"Screech"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 84,
+			"hall_set_group": "339-",
+			"species": "Torchic",
+			"nature": "Hasty",
+			"item": "Charcoal",
+			"moves": [
+				"Flamethrower",
+				"Quick Attack",
+				"Slash",
+				"Swords Dance"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 85,
+			"hall_set_group": "339-",
+			"species": "Mudkip",
+			"nature": "Brave",
+			"item": "Mystic Water",
+			"moves": [
+				"Waterfall",
+				"Facade",
+				"Strength",
+				"Curse"
+			],
+			"evs": [
+				"Atk",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 86,
+			"hall_set_group": "339-",
+			"species": "Poochyena",
+			"nature": "Naive",
+			"item": "Black Glasses",
+			"moves": [
+				"Crunch",
+				"Dark Pulse",
+				"Frustration",
+				"Scary Face"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 87,
+			"hall_set_group": "339-",
+			"species": "Zigzagoon",
+			"nature": "Jolly",
+			"item": "Silk Scarf",
+			"moves": [
+				"Mud-Slap",
+				"Headbutt",
+				"Tickle",
+				"Facade"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 88,
+			"hall_set_group": "339-",
+			"species": "Wurmple",
+			"nature": "Jolly",
+			"item": "Silver Powder",
+			"moves": [
+				"Tackle",
+				"String Shot",
+				"Bug Bite"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 89,
+			"hall_set_group": "339-",
+			"species": "Silcoon",
+			"nature": "Impish",
+			"item": "Silver Powder",
+			"moves": [
+				"Tackle",
+				"String Shot",
+				"Bug Bite",
+				"Iron Defense"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 90,
+			"hall_set_group": "339-",
+			"species": "Cascoon",
+			"nature": "Impish",
+			"item": "Silver Powder",
+			"moves": [
+				"Tackle",
+				"String Shot",
+				"Bug Bite",
+				"Iron Defense"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 91,
+			"hall_set_group": "339-",
+			"species": "Lotad",
+			"nature": "Hasty",
+			"item": "Miracle Seed",
+			"moves": [
+				"Energy Ball",
+				"Bubble Beam",
+				"Razor Leaf",
+				"Rain Dance"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 92,
+			"hall_set_group": "339-",
+			"species": "Seedot",
+			"nature": "Quiet",
+			"item": "Miracle Seed",
+			"moves": [
+				"Seed Bomb",
+				"Nasty Plot",
+				"Frustration",
+				"Energy Ball"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 93,
+			"hall_set_group": "339-",
+			"species": "Taillow",
+			"nature": "Lonely",
+			"item": "Sharp Beak",
+			"moves": [
+				"Brave Bird",
+				"Air Slash",
+				"Quick Attack",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 94,
+			"hall_set_group": "339-",
+			"species": "Wingull",
+			"nature": "Timid",
+			"item": "Sharp Beak",
+			"moves": [
+				"Brine",
+				"Air Slash",
+				"Aqua Ring",
+				"Agility"
+			],
+			"evs": [
+				"HP",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 95,
+			"hall_set_group": "339-",
+			"species": "Ralts",
+			"nature": "Mild",
+			"item": "Twisted Spoon",
+			"moves": [
+				"Psychic",
+				"Facade",
+				"Charm",
+				"Future Sight"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 96,
+			"hall_set_group": "339-",
+			"species": "Kirlia",
+			"nature": "Rash",
+			"item": "Twisted Spoon",
+			"moves": [
+				"Psychic",
+				"Facade",
+				"Calm Mind",
+				"Future Sight"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 97,
+			"hall_set_group": "339-",
+			"species": "Surskit",
+			"nature": "Mild",
+			"item": "Silver Powder",
+			"moves": [
+				"Signal Beam",
+				"Bubble Beam",
+				"Agility",
+				"Bug Bite"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 98,
+			"hall_set_group": "339-",
+			"species": "Shroomish",
+			"nature": "Rash",
+			"item": "Miracle Seed",
+			"moves": [
+				"Seed Bomb",
+				"Headbutt",
+				"Charm",
+				"Giga Drain"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 99,
+			"hall_set_group": "339-",
+			"species": "Slakoth",
+			"nature": "Adamant",
+			"item": "Silk Scarf",
+			"moves": [
+				"Facade",
+				"Night Slash",
+				"Bulk Up",
+				"Slash"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 100,
+			"hall_set_group": "339-",
+			"species": "Nincada",
+			"nature": "Hasty",
+			"item": "Silver Powder",
+			"moves": [
+				"X-Scissor",
+				"Dig",
+				"Mud-Slap",
+				"Silver Wind"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 101,
+			"hall_set_group": "339-",
+			"species": "Shedinja",
+			"nature": "Adamant",
+			"item": "Silver Powder",
+			"moves": [
+				"X-Scissor",
+				"Shadow Claw",
+				"Shadow Sneak",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 102,
+			"hall_set_group": "339-",
+			"species": "Whismur",
+			"nature": "Naughty",
+			"item": "Silk Scarf",
+			"moves": [
+				"Hyper Voice",
+				"Extrasensory",
+				"Screech",
+				"Facade"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 103,
+			"hall_set_group": "339-",
+			"species": "Makuhita",
+			"nature": "Adamant",
+			"item": "Black Belt",
+			"moves": [
+				"Close Combat",
+				"Foresight",
+				"Bulk Up",
+				"Seismic Toss"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 104,
+			"hall_set_group": "339-",
+			"species": "Azurill",
+			"nature": "Mild",
+			"item": "Silk Scarf",
+			"moves": [
+				"Waterfall",
+				"Charm",
+				"Return",
+				"Tail Whip"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 105,
+			"hall_set_group": "339-",
+			"species": "Skitty",
+			"nature": "Jolly",
+			"item": "Silk Scarf",
+			"moves": [
+				"Return",
+				"Iron Tail",
+				"Charm",
+				"Fake Out"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 106,
+			"hall_set_group": "339-",
+			"species": "Aron",
+			"nature": "Adamant",
+			"item": "Metal Coat",
+			"moves": [
+				"Iron Head",
+				"Iron Defense",
+				"Rock Slide",
+				"Screech"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 107,
+			"hall_set_group": "339-",
+			"species": "Meditite",
+			"nature": "Rash",
+			"item": "Black Belt",
+			"moves": [
+				"Vacuum Wave",
+				"Psychic",
+				"Calm Mind",
+				"Recover"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 108,
+			"hall_set_group": "339-",
+			"species": "Electrike",
+			"nature": "Rash",
+			"item": "Magnet",
+			"moves": [
+				"Thunder",
+				"Swift",
+				"Quick Attack",
+				"Thunder Fang"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 109,
+			"hall_set_group": "339-",
+			"species": "Gulpin",
+			"nature": "Brave",
+			"item": "Poison Barb",
+			"moves": [
+				"Gunk Shot",
+				"Amnesia",
+				"Frustration",
+				"Acid Armor"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 110,
+			"hall_set_group": "339-",
+			"species": "Carvanha",
+			"nature": "Adamant",
+			"item": "Mystic Water",
+			"moves": [
+				"Crunch",
+				"Aqua Jet",
+				"Screech",
+				"Waterfall"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 111,
+			"hall_set_group": "339-",
+			"species": "Numel",
+			"nature": "Mild",
+			"item": "Charcoal",
+			"moves": [
+				"Heat Wave",
+				"Earth Power",
+				"Amnesia",
+				"Dig"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 112,
+			"hall_set_group": "339-",
+			"species": "Spoink",
+			"nature": "Hasty",
+			"item": "Twisted Spoon",
+			"moves": [
+				"Extrasensory",
+				"Psywave",
+				"Facade",
+				"Calm Mind"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 113,
+			"hall_set_group": "339-",
+			"species": "Trapinch",
+			"nature": "Jolly",
+			"item": "Soft Sand",
+			"moves": [
+				"Earthquake",
+				"Quick Attack",
+				"Strength",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 114,
+			"hall_set_group": "339-",
+			"species": "Cacnea",
+			"nature": "Hasty",
+			"item": "Miracle Seed",
+			"moves": [
+				"Needle Arm",
+				"Sandstorm",
+				"Giga Drain",
+				"Frustration"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 115,
+			"hall_set_group": "339-",
+			"species": "Swablu",
+			"nature": "Lonely",
+			"item": "Sharp Beak",
+			"moves": [
+				"Aerial Ace",
+				"Feather Dance",
+				"Return",
+				"Roost"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 116,
+			"hall_set_group": "339-",
+			"species": "Barboach",
+			"nature": "Mild",
+			"item": "Mystic Water",
+			"moves": [
+				"Earth Power",
+				"Aqua Tail",
+				"Amnesia",
+				"Hydro Pump"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 117,
+			"hall_set_group": "339-",
+			"species": "Corphish",
+			"nature": "Jolly",
+			"item": "Mystic Water",
+			"moves": [
+				"Crabhammer",
+				"Swords Dance",
+				"Strength",
+				"Iron Defense"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 118,
+			"hall_set_group": "339-",
+			"species": "Baltoy",
+			"nature": "Mild",
+			"item": "Soft Sand",
+			"moves": [
+				"Earth Power",
+				"Cosmic Power",
+				"Psychic",
+				"Earthquake"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 119,
+			"hall_set_group": "339-",
+			"species": "Feebas",
+			"nature": "Adamant",
+			"item": "Mystic Water",
+			"moves": [
+				"Waterfall",
+				"Facade",
+				"Tickle",
+				"Flail"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 120,
+			"hall_set_group": "339-",
+			"species": "Shuppet",
+			"nature": "Jolly",
+			"item": "Spell Tag",
+			"moves": [
+				"Shadow Sneak",
+				"Frustration",
+				"Double Team",
+				"Screech"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 121,
+			"hall_set_group": "339-",
+			"species": "Duskull",
+			"nature": "Mild",
+			"item": "Spell Tag",
+			"moves": [
+				"Frustration",
+				"Shadow Ball",
+				"Double Team",
+				"Night Shade"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 122,
+			"hall_set_group": "339-",
+			"species": "Wynaut",
+			"nature": "Bold",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Counter",
+				"Mirror Coat",
+				"Safeguard",
+				"Charm"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 123,
+			"hall_set_group": "339-",
+			"species": "Snorunt",
+			"nature": "Brave",
+			"item": "Never-Melt Ice",
+			"moves": [
+				"Avalanche",
+				"Ice Shard",
+				"Frustration",
+				"Hail"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 124,
+			"hall_set_group": "339-",
+			"species": "Spheal",
+			"nature": "Rash",
+			"item": "Never-Melt Ice",
+			"moves": [
+				"Blizzard",
+				"Ice Ball",
+				"Waterfall",
+				"Hail"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 125,
+			"hall_set_group": "339-",
+			"species": "Luvdisc",
+			"nature": "Lonely",
+			"item": "Mystic Water",
+			"moves": [
+				"Aqua Ring",
+				"Dive",
+				"Return",
+				"Brine"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 126,
+			"hall_set_group": "339-",
+			"species": "Bagon",
+			"nature": "Jolly",
+			"item": "Dragon Fang",
+			"moves": [
+				"Headbutt",
+				"Dragon Dance",
+				"Dragon Claw",
+				"Dragon Rage"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 127,
+			"hall_set_group": "339-",
+			"species": "Beldum",
+			"nature": "Adamant",
+			"item": "Metal Coat",
+			"moves": [
+				"Iron Head",
+				"Zen Headbutt",
+				"Iron Defense"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 128,
+			"hall_set_group": "339-",
+			"species": "Turtwig",
+			"nature": "Lonely",
+			"item": "Miracle Seed",
+			"moves": [
+				"Seed Bomb",
+				"Strength",
+				"Tickle",
+				"Mega Drain"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 129,
+			"hall_set_group": "339-",
+			"species": "Chimchar",
+			"nature": "Mild",
+			"item": "Charcoal",
+			"moves": [
+				"Rock Climb",
+				"Nasty Plot",
+				"Flame Wheel",
+				"Swords Dance"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 130,
+			"hall_set_group": "339-",
+			"species": "Piplup",
+			"nature": "Mild",
+			"item": "Mystic Water",
+			"moves": [
+				"Hydro Pump",
+				"Growl",
+				"Brine",
+				"Facade"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 131,
+			"hall_set_group": "339-",
+			"species": "Starly",
+			"nature": "Adamant",
+			"item": "Sharp Beak",
+			"moves": [
+				"Brave Bird",
+				"Feather Dance",
+				"Quick Attack",
+				"Aerial Ace"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 132,
+			"hall_set_group": "339-",
+			"species": "Bidoof",
+			"nature": "Impish",
+			"item": "Silk Scarf",
+			"moves": [
+				"Hyper Fang",
+				"Aqua Tail",
+				"Quick Attack",
+				"Defense Curl"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 133,
+			"hall_set_group": "339-",
+			"species": "Kricketot",
+			"nature": "Impish",
+			"item": "Silver Powder",
+			"moves": [
+				"Bug Bite",
+				"Bide",
+				"Growl",
+				"Endeavor"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 134,
+			"hall_set_group": "339-",
+			"species": "Shinx",
+			"nature": "Naughty",
+			"item": "Magnet",
+			"moves": [
+				"Quick Attack",
+				"Scary Face",
+				"Thunder",
+				"Thunder Fang"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 135,
+			"hall_set_group": "339-",
+			"species": "Budew",
+			"nature": "Quiet",
+			"item": "Miracle Seed",
+			"moves": [
+				"Razor Leaf",
+				"Sludge Bomb",
+				"Protect",
+				"Energy Ball"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 136,
+			"hall_set_group": "339-",
+			"species": "Burmy",
+			"nature": "Adamant",
+			"item": "Silver Powder",
+			"moves": [
+				"Tackle",
+				"Bug Bite"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 137,
+			"hall_set_group": "339-",
+			"species": "Combee",
+			"nature": "Naughty",
+			"item": "Silver Powder",
+			"moves": [
+				"Bug Bite",
+				"Gust"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 138,
+			"hall_set_group": "339-",
+			"species": "Buizel",
+			"nature": "Hasty",
+			"item": "Mystic Water",
+			"moves": [
+				"Aqua Jet",
+				"Swift",
+				"Agility",
+				"Waterfall"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 139,
+			"hall_set_group": "339-",
+			"species": "Cherubi",
+			"nature": "Naughty",
+			"item": "Miracle Seed",
+			"moves": [
+				"Razor Leaf",
+				"Magical Leaf",
+				"Tickle",
+				"Return"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 140,
+			"hall_set_group": "339-",
+			"species": "Shellos",
+			"nature": "Gentle",
+			"item": "Mystic Water",
+			"moves": [
+				"Brine",
+				"Facade",
+				"Amnesia",
+				"Recover"
+			],
+			"evs": [
+				"HP",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 141,
+			"hall_set_group": "339-",
+			"species": "Glameow",
+			"nature": "Adamant",
+			"item": "Silk Scarf",
+			"moves": [
+				"Slash",
+				"U-turn",
+				"Quick Attack",
+				"Charm"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 142,
+			"hall_set_group": "339-",
+			"species": "Chingling",
+			"nature": "Modest",
+			"item": "Twisted Spoon",
+			"moves": [
+				"Psychic",
+				"Growl",
+				"Recover",
+				"Uproar"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 143,
+			"hall_set_group": "339-",
+			"species": "Stunky",
+			"nature": "Modest",
+			"item": "Poison Barb",
+			"moves": [
+				"Sludge Bomb",
+				"Dark Pulse",
+				"Scary Face",
+				"Smokescreen"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 144,
+			"hall_set_group": "339-",
+			"species": "Bronzor",
+			"nature": "Quiet",
+			"item": "Metal Coat",
+			"moves": [
+				"Flash Cannon",
+				"Extrasensory",
+				"Iron Defense",
+				"Gyro Ball"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 145,
+			"hall_set_group": "339-",
+			"species": "Bonsly",
+			"nature": "Jolly",
+			"item": "Hard Stone",
+			"moves": [
+				"Double-Edge",
+				"Rock Slide",
+				"Flail",
+				"Sandstorm"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 146,
+			"hall_set_group": "339-",
+			"species": "Mime Jr.",
+			"nature": "Calm",
+			"item": "Twisted Spoon",
+			"moves": [
+				"Psychic",
+				"Facade",
+				"Barrier",
+				"Future Sight"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 147,
+			"hall_set_group": "339-",
+			"species": "Happiny",
+			"nature": "Lax",
+			"item": "Silk Scarf",
+			"moves": [
+				"Return",
+				"Grass Knot",
+				"Charm",
+				"Double Team"
+			],
+			"evs": [
+				"HP",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 148,
+			"hall_set_group": "339-",
+			"species": "Gible",
+			"nature": "Adamant",
+			"item": "Dragon Fang",
+			"moves": [
+				"Dragon Claw",
+				"Dig",
+				"Dragon Rage",
+				"Scary Face"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 149,
+			"hall_set_group": "339-",
+			"species": "Riolu",
+			"nature": "Jolly",
+			"item": "Black Belt",
+			"moves": [
+				"Quick Attack",
+				"Low Kick",
+				"Screech",
+				"Foresight"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 150,
+			"hall_set_group": "339-",
+			"species": "Hippopotas",
+			"nature": "Careful",
+			"item": "Soft Sand",
+			"moves": [
+				"Sand Tomb",
+				"Double-Edge",
+				"Mud-Slap",
+				"Slack Off"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 151,
+			"hall_set_group": "339-",
+			"species": "Skorupi",
+			"nature": "Jolly",
+			"item": "Silver Powder",
+			"moves": [
+				"Cross Poison",
+				"Bug Bite",
+				"Screech",
+				"Scary Face"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 152,
+			"hall_set_group": "339-",
+			"species": "Croagunk",
+			"nature": "Modest",
+			"item": "Black Belt",
+			"moves": [
+				"Nasty Plot",
+				"Vacuum Wave",
+				"Sludge Bomb",
+				"Double Team"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 153,
+			"hall_set_group": "339-",
+			"species": "Finneon",
+			"nature": "Gentle",
+			"item": "Mystic Water",
+			"moves": [
+				"Aqua Ring",
+				"Brine",
+				"Return",
+				"Dive"
+			],
+			"evs": [
+				"HP",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 154,
+			"hall_set_group": "339-",
+			"species": "Snover",
+			"nature": "Brave",
+			"item": "Never-Melt Ice",
+			"moves": [
+				"Wood Hammer",
+				"Avalanche",
+				"Ingrain",
+				"Giga Drain"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 155,
+			"hall_set_group": "340 - 439",
+			"species": "Ivysaur",
+			"nature": "Bold",
+			"item": "Miracle Seed",
+			"moves": [
+				"Sludge Bomb",
+				"Giga Drain",
+				"Poison Powder",
+				"Protect"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 156,
+			"hall_set_group": "340 - 439",
+			"species": "Charmeleon",
+			"nature": "Hasty",
+			"item": "Charcoal",
+			"moves": [
+				"Will-O-Wisp",
+				"Flare Blitz",
+				"Protect",
+				"Slash"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 157,
+			"hall_set_group": "340 - 439",
+			"species": "Wartortle",
+			"nature": "Calm",
+			"item": "Mystic Water",
+			"moves": [
+				"Water Pulse",
+				"Protect",
+				"Aqua Ring",
+				"Facade"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 158,
+			"hall_set_group": "340 - 439",
+			"species": "Butterfree",
+			"nature": "Timid",
+			"item": "Silver Powder",
+			"moves": [
+				"Silver Wind",
+				"Sleep Powder",
+				"Air Cutter",
+				"Double Team"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 159,
+			"hall_set_group": "340 - 439",
+			"species": "Beedrill",
+			"nature": "Jolly",
+			"item": "Silver Powder",
+			"moves": [
+				"Poison Jab",
+				"Toxic",
+				"Bug Bite",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 160,
+			"hall_set_group": "340 - 439",
+			"species": "Pidgeotto",
+			"nature": "Adamant",
+			"item": "Sharp Beak",
+			"moves": [
+				"Quick Attack",
+				"Sand Attack",
+				"Double Team",
+				"Aerial Ace"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 161,
+			"hall_set_group": "340 - 439",
+			"species": "Raticate",
+			"nature": "Jolly",
+			"item": "Focus Band",
+			"moves": [
+				"Super Fang",
+				"Endeavor",
+				"Flame Wheel",
+				"Quick Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 162,
+			"hall_set_group": "340 - 439",
+			"species": "Arbok",
+			"nature": "Jolly",
+			"item": "Poison Barb",
+			"moves": [
+				"Glare",
+				"Gunk Shot",
+				"Strength",
+				"Screech"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 163,
+			"hall_set_group": "340 - 439",
+			"species": "Nidorina",
+			"nature": "Adamant",
+			"item": "Poison Barb",
+			"moves": [
+				"Poison Fang",
+				"Attract",
+				"Return",
+				"Captivate"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 164,
+			"hall_set_group": "340 - 439",
+			"species": "Nidorino",
+			"nature": "Adamant",
+			"item": "Poison Barb",
+			"moves": [
+				"Poison Jab",
+				"Attract",
+				"Frustration",
+				"Captivate"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 165,
+			"hall_set_group": "340 - 439",
+			"species": "Wigglytuff",
+			"nature": "Modest",
+			"item": "Silk Scarf",
+			"moves": [
+				"Sing",
+				"Hyper Voice",
+				"Icy Wind",
+				"Fake Tears"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 166,
+			"hall_set_group": "340 - 439",
+			"species": "Gloom",
+			"nature": "Modest",
+			"item": "Miracle Seed",
+			"moves": [
+				"Poison Powder",
+				"Giga Drain",
+				"Energy Ball",
+				"Sludge Bomb"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 167,
+			"hall_set_group": "340 - 439",
+			"species": "Parasect",
+			"nature": "Hasty",
+			"item": "Silver Powder",
+			"moves": [
+				"X-Scissor",
+				"Spore",
+				"Giga Drain",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 168,
+			"hall_set_group": "340 - 439",
+			"species": "Dugtrio",
+			"nature": "Jolly",
+			"item": "Soft Sand",
+			"moves": [
+				"Earthquake",
+				"Slash",
+				"Sandstorm",
+				"Mud-Slap"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 169,
+			"hall_set_group": "340 - 439",
+			"species": "Growlithe",
+			"nature": "Adamant",
+			"item": "Charcoal",
+			"moves": [
+				"Flare Blitz",
+				"Return",
+				"Will-O-Wisp",
+				"Flame Wheel"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 170,
+			"hall_set_group": "340 - 439",
+			"species": "Poliwhirl",
+			"nature": "Lonely",
+			"item": "Mystic Water",
+			"moves": [
+				"Waterfall",
+				"Body Slam",
+				"Bubble Beam",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 171,
+			"hall_set_group": "340 - 439",
+			"species": "Kadabra",
+			"nature": "Rash",
+			"item": "Twisted Spoon",
+			"moves": [
+				"Psychic",
+				"Facade",
+				"Calm Mind",
+				"Thunder Wave"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 172,
+			"hall_set_group": "340 - 439",
+			"species": "Machoke",
+			"nature": "Jolly",
+			"item": "Black Belt",
+			"moves": [
+				"Cross Chop",
+				"Fire Punch",
+				"Bulk Up",
+				"Light Screen"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 173,
+			"hall_set_group": "340 - 439",
+			"species": "Weepinbell",
+			"nature": "Modest",
+			"item": "Miracle Seed",
+			"moves": [
+				"Poison Powder",
+				"Sludge Bomb",
+				"Energy Ball",
+				"Synthesis"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 174,
+			"hall_set_group": "340 - 439",
+			"species": "Graveler",
+			"nature": "Adamant",
+			"item": "Hard Stone",
+			"moves": [
+				"Dig",
+				"Stone Edge",
+				"Rock Polish",
+				"Double-Edge"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 175,
+			"hall_set_group": "340 - 439",
+			"species": "Ponyta",
+			"nature": "Jolly",
+			"item": "Charcoal",
+			"moves": [
+				"Tail Whip",
+				"Flare Blitz",
+				"Will-O-Wisp",
+				"Return"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 176,
+			"hall_set_group": "340 - 439",
+			"species": "Farfetch'd",
+			"nature": "Adamant",
+			"item": "Stick",
+			"moves": [
+				"Slash",
+				"Swords Dance",
+				"Aerial Ace",
+				"Swagger"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 177,
+			"hall_set_group": "340 - 439",
+			"species": "Haunter",
+			"nature": "Timid",
+			"item": "Spell Tag",
+			"moves": [
+				"Shadow Ball",
+				"Sludge Bomb",
+				"Confuse Ray",
+				"Hypnosis"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 178,
+			"hall_set_group": "340 - 439",
+			"species": "Onix",
+			"nature": "Impish",
+			"item": "Hard Stone",
+			"moves": [
+				"Stone Edge",
+				"Dig",
+				"Sandstorm",
+				"Protect"
+			],
+			"evs": [
+				"HP",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 179,
+			"hall_set_group": "340 - 439",
+			"species": "Marowak",
+			"nature": "Hasty",
+			"item": "Soft Sand",
+			"moves": [
+				"Bone Rush",
+				"Swords Dance",
+				"Double-Edge",
+				"Earth Power"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 180,
+			"hall_set_group": "340 - 439",
+			"species": "Lickitung",
+			"nature": "Adamant",
+			"item": "Silk Scarf",
+			"moves": [
+				"Body Slam",
+				"Power Whip",
+				"Curse",
+				"Screech"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 181,
+			"hall_set_group": "340 - 439",
+			"species": "Koffing",
+			"nature": "Timid",
+			"item": "Poison Barb",
+			"moves": [
+				"Smog",
+				"Sludge Bomb",
+				"Frustration",
+				"Smokescreen"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 182,
+			"hall_set_group": "340 - 439",
+			"species": "Rhyhorn",
+			"nature": "Impish",
+			"item": "Soft Sand",
+			"moves": [
+				"Stone Edge",
+				"Dig",
+				"Counter",
+				"Curse"
+			],
+			"evs": [
+				"HP",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 183,
+			"hall_set_group": "340 - 439",
+			"species": "Tangela",
+			"nature": "Modest",
+			"item": "Miracle Seed",
+			"moves": [
+				"Giga Drain",
+				"Stun Spore",
+				"Energy Ball",
+				"Wring Out"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 184,
+			"hall_set_group": "340 - 439",
+			"species": "Staryu",
+			"nature": "Modest",
+			"item": "Mystic Water",
+			"moves": [
+				"Water Pulse",
+				"Swift",
+				"Light Screen",
+				"Cosmic Power"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 185,
+			"hall_set_group": "340 - 439",
+			"species": "Porygon",
+			"nature": "Quiet",
+			"item": "Silk Scarf",
+			"moves": [
+				"Tri Attack",
+				"Signal Beam",
+				"Trick Room",
+				"Recover"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 186,
+			"hall_set_group": "340 - 439",
+			"species": "Omanyte",
+			"nature": "Rash",
+			"item": "Hard Stone",
+			"moves": [
+				"Ancient Power",
+				"Water Pulse",
+				"Iron Defense",
+				"Brine"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 187,
+			"hall_set_group": "340 - 439",
+			"species": "Kabuto",
+			"nature": "Jolly",
+			"item": "Hard Stone",
+			"moves": [
+				"Waterfall",
+				"Rock Slide",
+				"Confuse Ray",
+				"Rock Tomb"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 188,
+			"hall_set_group": "340 - 439",
+			"species": "Dragonair",
+			"nature": "Jolly",
+			"item": "Dragon Fang",
+			"moves": [
+				"Thunder Wave",
+				"Dragon Rush",
+				"Light Screen",
+				"Return"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 189,
+			"hall_set_group": "340 - 439",
+			"species": "Bayleef",
+			"nature": "Adamant",
+			"item": "Miracle Seed",
+			"moves": [
+				"Body Slam",
+				"Reflect",
+				"Ingrain",
+				"Seed Bomb"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 190,
+			"hall_set_group": "340 - 439",
+			"species": "Quilava",
+			"nature": "Timid",
+			"item": "Charcoal",
+			"moves": [
+				"Will-O-Wisp",
+				"Eruption",
+				"Swift",
+				"Smokescreen"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 191,
+			"hall_set_group": "340 - 439",
+			"species": "Croconaw",
+			"nature": "Adamant",
+			"item": "Mystic Water",
+			"moves": [
+				"Aqua Tail",
+				"Mud Sport",
+				"Slash",
+				"Scary Face"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 192,
+			"hall_set_group": "340 - 439",
+			"species": "Furret",
+			"nature": "Rash",
+			"item": "Silk Scarf",
+			"moves": [
+				"Hyper Voice",
+				"Mud-Slap",
+				"Charm",
+				"Double Team"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 193,
+			"hall_set_group": "340 - 439",
+			"species": "Ledian",
+			"nature": "Timid",
+			"item": "Silver Powder",
+			"moves": [
+				"Bug Buzz",
+				"Reflect",
+				"Air Cutter",
+				"Light Screen"
+			],
+			"evs": [
+				"HP",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 194,
+			"hall_set_group": "340 - 439",
+			"species": "Ariados",
+			"nature": "Jolly",
+			"item": "Silver Powder",
+			"moves": [
+				"Poison Jab",
+				"Bug Bite",
+				"Double Team",
+				"Disable"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 195,
+			"hall_set_group": "340 - 439",
+			"species": "Togetic",
+			"nature": "Jolly",
+			"item": "Silk Scarf",
+			"moves": [
+				"Return",
+				"Aerial Ace",
+				"Roost",
+				"Yawn"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 196,
+			"hall_set_group": "340 - 439",
+			"species": "Flaaffy",
+			"nature": "Lax",
+			"item": "Magnet",
+			"moves": [
+				"Thunder",
+				"Body Slam",
+				"Reflect",
+				"Flash"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 197,
+			"hall_set_group": "340 - 439",
+			"species": "Azumarill",
+			"nature": "Gentle",
+			"item": "Mystic Water",
+			"moves": [
+				"Water Pulse",
+				"Aqua Ring",
+				"Return",
+				"Light Screen"
+			],
+			"evs": [
+				"HP",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 198,
+			"hall_set_group": "340 - 439",
+			"species": "Sudowoodo",
+			"nature": "Impish",
+			"item": "Hard Stone",
+			"moves": [
+				"Double-Edge",
+				"Stone Edge",
+				"Sandstorm",
+				"Mimic"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 199,
+			"hall_set_group": "340 - 439",
+			"species": "Skiploom",
+			"nature": "Quiet",
+			"item": "Miracle Seed",
+			"moves": [
+				"Bounce",
+				"Poison Powder",
+				"Sunny Day",
+				"Solar Beam"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 200,
+			"hall_set_group": "340 - 439",
+			"species": "Aipom",
+			"nature": "Adamant",
+			"item": "Silk Scarf",
+			"moves": [
+				"Frustration",
+				"Iron Tail",
+				"Fake Out",
+				"Swagger"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 201,
+			"hall_set_group": "340 - 439",
+			"species": "Sunflora",
+			"nature": "Quiet",
+			"item": "Miracle Seed",
+			"moves": [
+				"Sunny Day",
+				"Solar Beam",
+				"Facade",
+				"Leech Seed"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 202,
+			"hall_set_group": "340 - 439",
+			"species": "Yanma",
+			"nature": "Modest",
+			"item": "Silver Powder",
+			"moves": [
+				"Bug Buzz",
+				"Air Slash",
+				"Double Team",
+				"Supersonic"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 203,
+			"hall_set_group": "340 - 439",
+			"species": "Quagsire",
+			"nature": "Modest",
+			"item": "Mystic Water",
+			"moves": [
+				"Earth Power",
+				"Muddy Water",
+				"Yawn",
+				"Endure"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 204,
+			"hall_set_group": "340 - 439",
+			"species": "Murkrow",
+			"nature": "Adamant",
+			"item": "Sharp Beak",
+			"moves": [
+				"Confuse Ray",
+				"Psycho Shift",
+				"Drill Peck",
+				"Faint Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 205,
+			"hall_set_group": "340 - 439",
+			"species": "Misdreavus",
+			"nature": "Hasty",
+			"item": "Spell Tag",
+			"moves": [
+				"Shadow Ball",
+				"Frustration",
+				"Pain Split",
+				"Confuse Ray"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 206,
+			"hall_set_group": "340 - 439",
+			"species": "Wobbuffet",
+			"nature": "Calm",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Counter",
+				"Mirror Coat",
+				"Safeguard",
+				"Charm"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 207,
+			"hall_set_group": "340 - 439",
+			"species": "Dunsparce",
+			"nature": "Jolly",
+			"item": "Silk Scarf",
+			"moves": [
+				"Ancient Power",
+				"Headbutt",
+				"Yawn",
+				"Roost"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 208,
+			"hall_set_group": "340 - 439",
+			"species": "Gligar",
+			"nature": "Jolly",
+			"item": "Soft Sand",
+			"moves": [
+				"Sandstorm",
+				"Earthquake",
+				"Aerial Ace",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 209,
+			"hall_set_group": "340 - 439",
+			"species": "Qwilfish",
+			"nature": "Careful",
+			"item": "Mystic Water",
+			"moves": [
+				"Poison Jab",
+				"Dive",
+				"Stockpile",
+				"Minimize"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 210,
+			"hall_set_group": "340 - 439",
+			"species": "Sneasel",
+			"nature": "Jolly",
+			"item": "Black Glasses",
+			"moves": [
+				"Ice Shard",
+				"Payback",
+				"Punishment",
+				"Ice Punch"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 211,
+			"hall_set_group": "340 - 439",
+			"species": "Magcargo",
+			"nature": "Sassy",
+			"item": "Charcoal",
+			"moves": [
+				"Ancient Power",
+				"Light Screen",
+				"Recover",
+				"Flamethrower"
+			],
+			"evs": [
+				"HP",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 212,
+			"hall_set_group": "340 - 439",
+			"species": "Corsola",
+			"nature": "Modest",
+			"item": "Mystic Water",
+			"moves": [
+				"Power Gem",
+				"Brine",
+				"Amnesia",
+				"Aqua Ring"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 213,
+			"hall_set_group": "340 - 439",
+			"species": "Elekid",
+			"nature": "Adamant",
+			"item": "Magnet",
+			"moves": [
+				"Thunder Punch",
+				"Facade",
+				"Thunder Wave",
+				"Quick Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 214,
+			"hall_set_group": "340 - 439",
+			"species": "Magby",
+			"nature": "Jolly",
+			"item": "Charcoal",
+			"moves": [
+				"Fire Punch",
+				"Will-O-Wisp",
+				"Confuse Ray",
+				"Return"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 215,
+			"hall_set_group": "340 - 439",
+			"species": "Pupitar",
+			"nature": "Adamant",
+			"item": "Hard Stone",
+			"moves": [
+				"Stone Edge",
+				"Dig",
+				"Sandstorm",
+				"Protect"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 216,
+			"hall_set_group": "340 - 439",
+			"species": "Grovyle",
+			"nature": "Jolly",
+			"item": "Miracle Seed",
+			"moves": [
+				"Leaf Blade",
+				"Crush Claw",
+				"Swords Dance",
+				"Swagger"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 217,
+			"hall_set_group": "340 - 439",
+			"species": "Combusken",
+			"nature": "Jolly",
+			"item": "Charcoal",
+			"moves": [
+				"Sky Uppercut",
+				"Fire Punch",
+				"Will-O-Wisp",
+				"Bulk Up"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 218,
+			"hall_set_group": "340 - 439",
+			"species": "Marshtomp",
+			"nature": "Mild",
+			"item": "Mystic Water",
+			"moves": [
+				"Muddy Water",
+				"Earth Power",
+				"Dive",
+				"Dig"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 219,
+			"hall_set_group": "340 - 439",
+			"species": "Mightyena",
+			"nature": "Jolly",
+			"item": "Black Glasses",
+			"moves": [
+				"Crunch",
+				"Frustration",
+				"Sand Attack",
+				"Swagger"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 220,
+			"hall_set_group": "340 - 439",
+			"species": "Linoone",
+			"nature": "Jolly",
+			"item": "Silk Scarf",
+			"moves": [
+				"Slash",
+				"Gunk Shot",
+				"Charm",
+				"Last Resort"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 221,
+			"hall_set_group": "340 - 439",
+			"species": "Beautifly",
+			"nature": "Modest",
+			"item": "Silver Powder",
+			"moves": [
+				"Stun Spore",
+				"Bug Buzz",
+				"Air Cutter",
+				"Roost"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 222,
+			"hall_set_group": "340 - 439",
+			"species": "Dustox",
+			"nature": "Calm",
+			"item": "Silver Powder",
+			"moves": [
+				"Toxic",
+				"Sludge Bomb",
+				"Bug Buzz",
+				"Roost"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 223,
+			"hall_set_group": "340 - 439",
+			"species": "Lombre",
+			"nature": "Bold",
+			"item": "Mystic Water",
+			"moves": [
+				"Rain Dance",
+				"Giga Drain",
+				"Water Pulse",
+				"Leech Seed"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 224,
+			"hall_set_group": "340 - 439",
+			"species": "Nuzleaf",
+			"nature": "Modest",
+			"item": "Miracle Seed",
+			"moves": [
+				"Dark Pulse",
+				"Nasty Plot",
+				"Energy Ball",
+				"Swagger"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 225,
+			"hall_set_group": "340 - 439",
+			"species": "Swellow",
+			"nature": "Adamant",
+			"item": "Sharp Beak",
+			"moves": [
+				"Double Team",
+				"Roost",
+				"Facade",
+				"Sky Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 226,
+			"hall_set_group": "340 - 439",
+			"species": "Pelipper",
+			"nature": "Timid",
+			"item": "Sharp Beak",
+			"moves": [
+				"Air Slash",
+				"Water Pulse",
+				"Aqua Ring",
+				"Hydro Pump"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 227,
+			"hall_set_group": "340 - 439",
+			"species": "Masquerain",
+			"nature": "Mild",
+			"item": "Silver Powder",
+			"moves": [
+				"Air Slash",
+				"Bug Buzz",
+				"Stun Spore",
+				"Double Team"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 228,
+			"hall_set_group": "340 - 439",
+			"species": "Loudred",
+			"nature": "Modest",
+			"item": "Silk Scarf",
+			"moves": [
+				"Hyper Voice",
+				"Water Pulse",
+				"Rest",
+				"Snore"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 229,
+			"hall_set_group": "340 - 439",
+			"species": "Nosepass",
+			"nature": "Impish",
+			"item": "Hard Stone",
+			"moves": [
+				"Stone Edge",
+				"Double-Edge",
+				"Thunder Wave",
+				"Magnet Rise"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 230,
+			"hall_set_group": "340 - 439",
+			"species": "Delcatty",
+			"nature": "Modest",
+			"item": "Silk Scarf",
+			"moves": [
+				"Foresight",
+				"Mud-Slap",
+				"Charge Beam",
+				"Ice Beam"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 231,
+			"hall_set_group": "340 - 439",
+			"species": "Sableye",
+			"nature": "Gentle",
+			"item": "Spell Tag",
+			"moves": [
+				"Shadow Claw",
+				"Torment",
+				"Payback",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 232,
+			"hall_set_group": "340 - 439",
+			"species": "Mawile",
+			"nature": "Impish",
+			"item": "Metal Coat",
+			"moves": [
+				"Iron Head",
+				"Strength",
+				"Sandstorm",
+				"Tickle"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 233,
+			"hall_set_group": "340 - 439",
+			"species": "Lairon",
+			"nature": "Impish",
+			"item": "Metal Coat",
+			"moves": [
+				"Metal Burst",
+				"Iron Tail",
+				"Stone Edge",
+				"Iron Defense"
+			],
+			"evs": [
+				"HP",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 234,
+			"hall_set_group": "340 - 439",
+			"species": "Medicham",
+			"nature": "Adamant",
+			"item": "Black Belt",
+			"moves": [
+				"Psycho Cut",
+				"Force Palm",
+				"Recover",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 235,
+			"hall_set_group": "340 - 439",
+			"species": "Plusle",
+			"nature": "Timid",
+			"item": "Magnet",
+			"moves": [
+				"Nasty Plot",
+				"Swift",
+				"Thunderbolt",
+				"Thunder Wave"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 236,
+			"hall_set_group": "340 - 439",
+			"species": "Minun",
+			"nature": "Timid",
+			"item": "Magnet",
+			"moves": [
+				"Fake Tears",
+				"Swift",
+				"Thunderbolt",
+				"Thunder Wave"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 237,
+			"hall_set_group": "340 - 439",
+			"species": "Volbeat",
+			"nature": "Rash",
+			"item": "Silver Powder",
+			"moves": [
+				"Bug Buzz",
+				"Tail Glow",
+				"Quick Attack",
+				"Attract"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 238,
+			"hall_set_group": "340 - 439",
+			"species": "Illumise",
+			"nature": "Mild",
+			"item": "Silver Powder",
+			"moves": [
+				"Bug Buzz",
+				"Attract",
+				"Charm",
+				"Frustration"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 239,
+			"hall_set_group": "340 - 439",
+			"species": "Roselia",
+			"nature": "Modest",
+			"item": "Miracle Seed",
+			"moves": [
+				"Synthesis",
+				"Giga Drain",
+				"Sludge",
+				"Ingrain"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 240,
+			"hall_set_group": "340 - 439",
+			"species": "Wailmer",
+			"nature": "Modest",
+			"item": "Mystic Water",
+			"moves": [
+				"Water Spout",
+				"Sleep Talk",
+				"Body Slam",
+				"Rest"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 241,
+			"hall_set_group": "340 - 439",
+			"species": "Spinda",
+			"nature": "Adamant",
+			"item": "Silk Scarf",
+			"moves": [
+				"Teeter Dance",
+				"Zen Headbutt",
+				"Frustration",
+				"Fake Out"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 242,
+			"hall_set_group": "340 - 439",
+			"species": "Vibrava",
+			"nature": "Adamant",
+			"item": "Soft Sand",
+			"moves": [
+				"Outrage",
+				"Earthquake",
+				"Screech",
+				"Sandstorm"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 243,
+			"hall_set_group": "340 - 439",
+			"species": "Lileep",
+			"nature": "Modest",
+			"item": "Hard Stone",
+			"moves": [
+				"Giga Drain",
+				"Ancient Power",
+				"Ingrain",
+				"Confuse Ray"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 244,
+			"hall_set_group": "340 - 439",
+			"species": "Anorith",
+			"nature": "Adamant",
+			"item": "Hard Stone",
+			"moves": [
+				"X-Scissor",
+				"Protect",
+				"Stone Edge",
+				"Sandstorm"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 245,
+			"hall_set_group": "340 - 439",
+			"species": "Castform",
+			"nature": "Modest",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Weather Ball",
+				"Rain Dance",
+				"Sunny Day",
+				"Hail"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 246,
+			"hall_set_group": "340 - 439",
+			"species": "Chimecho",
+			"nature": "Hasty",
+			"item": "Twisted Spoon",
+			"moves": [
+				"Psychic",
+				"Calm Mind",
+				"Yawn",
+				"Double-Edge"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 247,
+			"hall_set_group": "340 - 439",
+			"species": "Sealeo",
+			"nature": "Modest",
+			"item": "Never-Melt Ice",
+			"moves": [
+				"Blizzard",
+				"Waterfall",
+				"Rest",
+				"Snore"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 248,
+			"hall_set_group": "340 - 439",
+			"species": "Clamperl",
+			"nature": "Gentle",
+			"item": "Mystic Water",
+			"moves": [
+				"Mud Sport",
+				"Aqua Ring",
+				"Dive",
+				"Body Slam"
+			],
+			"evs": [
+				"HP",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 249,
+			"hall_set_group": "340 - 439",
+			"species": "Shelgon",
+			"nature": "Adamant",
+			"item": "Dragon Fang",
+			"moves": [
+				"Dragon Rush",
+				"Double-Edge",
+				"Iron Defense",
+				"Swagger"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 250,
+			"hall_set_group": "340 - 439",
+			"species": "Metang",
+			"nature": "Timid",
+			"item": "Metal Coat",
+			"moves": [
+				"Flash Cannon",
+				"Psychic",
+				"Reflect",
+				"Magnet Rise"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 251,
+			"hall_set_group": "340 - 439",
+			"species": "Grotle",
+			"nature": "Brave",
+			"item": "Miracle Seed",
+			"moves": [
+				"Leaf Storm",
+				"Body Slam",
+				"Seed Bomb",
+				"Leech Seed"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 252,
+			"hall_set_group": "340 - 439",
+			"species": "Monferno",
+			"nature": "Adamant",
+			"item": "Charcoal",
+			"moves": [
+				"Flare Blitz",
+				"Close Combat",
+				"Mach Punch",
+				"Will-O-Wisp"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 253,
+			"hall_set_group": "340 - 439",
+			"species": "Prinplup",
+			"nature": "Hasty",
+			"item": "Mystic Water",
+			"moves": [
+				"Swagger",
+				"Brine",
+				"Facade",
+				"Aqua Ring"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 254,
+			"hall_set_group": "340 - 439",
+			"species": "Staravia",
+			"nature": "Adamant",
+			"item": "Sharp Beak",
+			"moves": [
+				"Brave Bird",
+				"Facade",
+				"Feather Dance",
+				"Quick Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 255,
+			"hall_set_group": "340 - 439",
+			"species": "Bibarel",
+			"nature": "Jolly",
+			"item": "Silk Scarf",
+			"moves": [
+				"Super Fang",
+				"Waterfall",
+				"Yawn",
+				"Amnesia"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 256,
+			"hall_set_group": "340 - 439",
+			"species": "Kricketune",
+			"nature": "Jolly",
+			"item": "Silver Powder",
+			"moves": [
+				"X-Scissor",
+				"Slash",
+				"Screech",
+				"Sing"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 257,
+			"hall_set_group": "340 - 439",
+			"species": "Luxio",
+			"nature": "Adamant",
+			"item": "Magnet",
+			"moves": [
+				"Thunder Fang",
+				"Quick Attack",
+				"Thunder Wave",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 258,
+			"hall_set_group": "340 - 439",
+			"species": "Cranidos",
+			"nature": "Jolly",
+			"item": "Hard Stone",
+			"moves": [
+				"Head Smash",
+				"Headbutt",
+				"Scary Face",
+				"Stone Edge"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 259,
+			"hall_set_group": "340 - 439",
+			"species": "Shieldon",
+			"nature": "Careful",
+			"item": "Hard Stone",
+			"moves": [
+				"Metal Burst",
+				"Iron Head",
+				"Stone Edge",
+				"Taunt"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 260,
+			"hall_set_group": "340 - 439",
+			"species": "Wormadam",
+			"nature": "Quiet",
+			"item": "Silver Powder",
+			"moves": [
+				"Leaf Storm",
+				"Razor Leaf",
+				"Bug Bite",
+				"Captivate"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 261,
+			"hall_set_group": "340 - 439",
+			"species": "Mothim",
+			"nature": "Timid",
+			"item": "Silver Powder",
+			"moves": [
+				"Silver Wind",
+				"Air Slash",
+				"Poison Powder",
+				"Roost"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 262,
+			"hall_set_group": "340 - 439",
+			"species": "Pachirisu",
+			"nature": "Modest",
+			"item": "Magnet",
+			"moves": [
+				"Super Fang",
+				"Swift",
+				"Thunder",
+				"Thunder Wave"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 263,
+			"hall_set_group": "340 - 439",
+			"species": "Drifloon",
+			"nature": "Modest",
+			"item": "Spell Tag",
+			"moves": [
+				"Ominous Wind",
+				"Air Cutter",
+				"Will-O-Wisp",
+				"Substitute"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 264,
+			"hall_set_group": "340 - 439",
+			"species": "Buneary",
+			"nature": "Jolly",
+			"item": "Silk Scarf",
+			"moves": [
+				"Dizzy Punch",
+				"Bounce",
+				"Attract",
+				"Charm"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 265,
+			"hall_set_group": "340 - 439",
+			"species": "Chatot",
+			"nature": "Modest",
+			"item": "Sharp Beak",
+			"moves": [
+				"Hyper Voice",
+				"Chatter",
+				"Roost",
+				"Nasty Plot"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 266,
+			"hall_set_group": "340 - 439",
+			"species": "Gabite",
+			"nature": "Jolly",
+			"item": "Dragon Fang",
+			"moves": [
+				"Sandstorm",
+				"Dig",
+				"Dragon Claw",
+				"Twister"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 267,
+			"hall_set_group": "340 - 439",
+			"species": "Munchlax",
+			"nature": "Adamant",
+			"item": "Silk Scarf",
+			"moves": [
+				"Body Slam",
+				"Rock Tomb",
+				"Rest",
+				"Sleep Talk"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 268,
+			"hall_set_group": "340 - 439",
+			"species": "Mantyke",
+			"nature": "Jolly",
+			"item": "Mystic Water",
+			"moves": [
+				"Bounce",
+				"Dive",
+				"Aqua Ring",
+				"Double Team"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 269,
+			"hall_set_group": "340 - 439",
+			"species": "Wormadam-Sandy",
+			"nature": "Brave",
+			"item": "Silver Powder",
+			"moves": [
+				"Dig",
+				"Bug Bite",
+				"Earth Power",
+				"Captivate"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 270,
+			"hall_set_group": "340 - 439",
+			"species": "Wormadam-Trash",
+			"nature": "Relaxed",
+			"item": "Silver Powder",
+			"moves": [
+				"Iron Head",
+				"Flash Cannon",
+				"Bug Bite",
+				"Captivate"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 271,
+			"hall_set_group": "440 - 499",
+			"species": "Raichu",
+			"nature": "Adamant",
+			"item": "Muscle Band",
+			"moves": [
+				"Thunder Punch",
+				"Brick Break",
+				"Iron Tail",
+				"Quick Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 272,
+			"hall_set_group": "440 - 499",
+			"species": "Sandslash",
+			"nature": "Adamant",
+			"item": "Bright Powder",
+			"moves": [
+				"Sandstorm",
+				"Slash",
+				"Night Slash",
+				"Dig"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 273,
+			"hall_set_group": "440 - 499",
+			"species": "Nidoqueen",
+			"nature": "Modest",
+			"item": "Wise Glasses",
+			"moves": [
+				"Earth Power",
+				"Sludge Bomb",
+				"Attract",
+				"Shadow Ball"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 274,
+			"hall_set_group": "440 - 499",
+			"species": "Nidoking",
+			"nature": "Adamant",
+			"item": "Muscle Band",
+			"moves": [
+				"Dig",
+				"Poison Jab",
+				"Attract",
+				"Megahorn"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 275,
+			"hall_set_group": "440 - 499",
+			"species": "Clefable",
+			"nature": "Adamant",
+			"item": "Lum Berry",
+			"moves": [
+				"Return",
+				"Ice Punch",
+				"Fire Punch",
+				"Thunder Punch"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 276,
+			"hall_set_group": "440 - 499",
+			"species": "Golbat",
+			"nature": "Modest",
+			"item": "Razor Fang",
+			"moves": [
+				"Sludge Bomb",
+				"Ominous Wind",
+				"Giga Drain",
+				"Air Slash"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 277,
+			"hall_set_group": "440 - 499",
+			"species": "Vileplume",
+			"nature": "Modest",
+			"item": "Heat Rock",
+			"moves": [
+				"Sludge Bomb",
+				"Solar Beam",
+				"Sunny Day",
+				"Synthesis"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 278,
+			"hall_set_group": "440 - 499",
+			"species": "Venomoth",
+			"nature": "Modest",
+			"item": "Choice Specs",
+			"moves": [
+				"Bug Buzz",
+				"Psychic",
+				"Sludge Bomb",
+				"Energy Ball"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 279,
+			"hall_set_group": "440 - 499",
+			"species": "Persian",
+			"nature": "Modest",
+			"item": "King's Rock",
+			"moves": [
+				"Power Gem",
+				"Water Pulse",
+				"Swift",
+				"Icy Wind"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 280,
+			"hall_set_group": "440 - 499",
+			"species": "Primeape",
+			"nature": "Adamant",
+			"item": "Expert Belt",
+			"moves": [
+				"Cross Chop",
+				"Gunk Shot",
+				"Seed Bomb",
+				"Stone Edge"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 281,
+			"hall_set_group": "440 - 499",
+			"species": "Alakazam",
+			"nature": "Timid",
+			"item": "Expert Belt",
+			"moves": [
+				"Psychic",
+				"Focus Blast",
+				"Energy Ball",
+				"Signal Beam"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 282,
+			"hall_set_group": "440 - 499",
+			"species": "Victreebel",
+			"nature": "Modest",
+			"item": "White Herb",
+			"moves": [
+				"Leaf Storm",
+				"Grass Knot",
+				"Toxic",
+				"Worry Seed"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 283,
+			"hall_set_group": "440 - 499",
+			"species": "Golem",
+			"nature": "Brave",
+			"item": "Quick Claw",
+			"moves": [
+				"Stone Edge",
+				"Earth Power",
+				"Hammer Arm",
+				"Sucker Punch"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 284,
+			"hall_set_group": "440 - 499",
+			"species": "Slowbro",
+			"nature": "Modest",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Water Pulse",
+				"Psychic",
+				"Ice Beam",
+				"Flamethrower"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 285,
+			"hall_set_group": "440 - 499",
+			"species": "Magneton",
+			"nature": "Modest",
+			"item": "Scope Lens",
+			"moves": [
+				"Tri Attack",
+				"Flash Cannon",
+				"Thunderbolt",
+				"Signal Beam"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 286,
+			"hall_set_group": "440 - 499",
+			"species": "Dodrio",
+			"nature": "Jolly",
+			"item": "Liechi Berry",
+			"moves": [
+				"Drill Peck",
+				"Rest",
+				"Steel Wing",
+				"Tri Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 287,
+			"hall_set_group": "440 - 499",
+			"species": "Dewgong",
+			"nature": "Modest",
+			"item": "Chesto Berry",
+			"moves": [
+				"Signal Beam",
+				"Ice Beam",
+				"Brine",
+				"Rest"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 288,
+			"hall_set_group": "440 - 499",
+			"species": "Hypno",
+			"nature": "Quiet",
+			"item": "Zoom Lens",
+			"moves": [
+				"Hypnosis",
+				"Focus Blast",
+				"Psychic",
+				"Nightmare"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 289,
+			"hall_set_group": "440 - 499",
+			"species": "Kingler",
+			"nature": "Adamant",
+			"item": "Focus Sash",
+			"moves": [
+				"Crabhammer",
+				"X-Scissor",
+				"Superpower",
+				"Dig"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 290,
+			"hall_set_group": "440 - 499",
+			"species": "Electrode",
+			"nature": "Naive",
+			"item": "King's Rock",
+			"moves": [
+				"Swift",
+				"Thunderbolt",
+				"Rollout",
+				"Signal Beam"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 291,
+			"hall_set_group": "440 - 499",
+			"species": "Hitmonlee",
+			"nature": "Jolly",
+			"item": "Salac Berry",
+			"moves": [
+				"Endure",
+				"Reversal",
+				"Hi Jump Kick",
+				"Bounce"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 292,
+			"hall_set_group": "440 - 499",
+			"species": "Hitmonchan",
+			"nature": "Adamant",
+			"item": "Choice Band",
+			"moves": [
+				"Sky Uppercut",
+				"Thunder Punch",
+				"Fire Punch",
+				"Ice Punch"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 293,
+			"hall_set_group": "440 - 499",
+			"species": "Weezing",
+			"nature": "Calm",
+			"item": "Black Sludge",
+			"moves": [
+				"Toxic",
+				"Dark Pulse",
+				"Flamethrower",
+				"Thunderbolt"
+			],
+			"evs": [
+				"HP",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 294,
+			"hall_set_group": "440 - 499",
+			"species": "Rhydon",
+			"nature": "Adamant",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Dig",
+				"Stone Edge",
+				"Rock Slide",
+				"Megahorn"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 295,
+			"hall_set_group": "440 - 499",
+			"species": "Chansey",
+			"nature": "Quiet",
+			"item": "Zoom Lens",
+			"moves": [
+				"Blizzard",
+				"Thunder",
+				"Fire Blast",
+				"Return"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 296,
+			"hall_set_group": "440 - 499",
+			"species": "Kangaskhan",
+			"nature": "Adamant",
+			"item": "Persim Berry",
+			"moves": [
+				"Dizzy Punch",
+				"Outrage",
+				"Sucker Punch",
+				"Rest"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 297,
+			"hall_set_group": "440 - 499",
+			"species": "Seadra",
+			"nature": "Modest",
+			"item": "Scope Lens",
+			"moves": [
+				"Dragon Pulse",
+				"Hydro Pump",
+				"Flash Cannon",
+				"Ice Beam"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 298,
+			"hall_set_group": "440 - 499",
+			"species": "Seaking",
+			"nature": "Adamant",
+			"item": "Bright Powder",
+			"moves": [
+				"Megahorn",
+				"Waterfall",
+				"Poison Jab",
+				"Bounce"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 299,
+			"hall_set_group": "440 - 499",
+			"species": "Mr. Mime",
+			"nature": "Adamant",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Power Swap",
+				"Fire Punch",
+				"Ice Punch",
+				"Thunder Punch"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 300,
+			"hall_set_group": "440 - 499",
+			"species": "Jynx",
+			"nature": "Timid",
+			"item": "Bright Powder",
+			"moves": [
+				"Lovely Kiss",
+				"Blizzard",
+				"Dream Eater",
+				"Energy Ball"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 301,
+			"hall_set_group": "440 - 499",
+			"species": "Electabuzz",
+			"nature": "Adamant",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Thunder Punch",
+				"Iron Tail",
+				"Brick Break",
+				"Thief"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 302,
+			"hall_set_group": "440 - 499",
+			"species": "Magmar",
+			"nature": "Adamant",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Fire Punch",
+				"Iron Tail",
+				"Brick Break",
+				"Thief"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 303,
+			"hall_set_group": "440 - 499",
+			"species": "Tauros",
+			"nature": "Adamant",
+			"item": "Persim Berry",
+			"moves": [
+				"Frustration",
+				"Iron Tail",
+				"Outrage",
+				"Zen Headbutt"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 304,
+			"hall_set_group": "440 - 499",
+			"species": "Omastar",
+			"nature": "Modest",
+			"item": "Wise Glasses",
+			"moves": [
+				"Ancient Power",
+				"Hydro Pump",
+				"Ice Beam",
+				"Earth Power"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 305,
+			"hall_set_group": "440 - 499",
+			"species": "Kabutops",
+			"nature": "Adamant",
+			"item": "Muscle Band",
+			"moves": [
+				"Night Slash",
+				"Waterfall",
+				"Stone Edge",
+				"X-Scissor"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 306,
+			"hall_set_group": "440 - 499",
+			"species": "Noctowl",
+			"nature": "Modest",
+			"item": "Leftovers",
+			"moves": [
+				"Extrasensory",
+				"Air Slash",
+				"Silver Wind",
+				"Ominous Wind"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 307,
+			"hall_set_group": "440 - 499",
+			"species": "Lanturn",
+			"nature": "Modest",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Discharge",
+				"Brine",
+				"Signal Beam",
+				"Ice Beam"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 308,
+			"hall_set_group": "440 - 499",
+			"species": "Xatu",
+			"nature": "Modest",
+			"item": "Leftovers",
+			"moves": [
+				"Psychic",
+				"Air Cutter",
+				"Ominous Wind",
+				"Silver Wind"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 309,
+			"hall_set_group": "440 - 499",
+			"species": "Bellossom",
+			"nature": "Brave",
+			"item": "Big Root",
+			"moves": [
+				"Leaf Blade",
+				"Drain Punch",
+				"Stun Spore",
+				"Leaf Storm"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 310,
+			"hall_set_group": "440 - 499",
+			"species": "Jumpluff",
+			"nature": "Adamant",
+			"item": "Bright Powder",
+			"moves": [
+				"Seed Bomb",
+				"Leech Seed",
+				"U-turn",
+				"Bounce"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 311,
+			"hall_set_group": "440 - 499",
+			"species": "Slowking",
+			"nature": "Modest",
+			"item": "Leftovers",
+			"moves": [
+				"Psychic",
+				"Water Pulse",
+				"Power Gem",
+				"Shadow Ball"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 312,
+			"hall_set_group": "440 - 499",
+			"species": "Girafarig",
+			"nature": "Adamant",
+			"item": "Lum Berry",
+			"moves": [
+				"Crunch",
+				"Zen Headbutt",
+				"Return",
+				"Mirror Coat"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 313,
+			"hall_set_group": "440 - 499",
+			"species": "Forretress",
+			"nature": "Brave",
+			"item": "Lum Berry",
+			"moves": [
+				"Gyro Ball",
+				"Payback",
+				"Bug Bite",
+				"Counter"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 314,
+			"hall_set_group": "440 - 499",
+			"species": "Granbull",
+			"nature": "Adamant",
+			"item": "Focus Band",
+			"moves": [
+				"Return",
+				"Crunch",
+				"Close Combat",
+				"Stone Edge"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 315,
+			"hall_set_group": "440 - 499",
+			"species": "Piloswine",
+			"nature": "Adamant",
+			"item": "Bright Powder",
+			"moves": [
+				"Ice Fang",
+				"Dig",
+				"Body Slam",
+				"Hail"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 316,
+			"hall_set_group": "440 - 499",
+			"species": "Octillery",
+			"nature": "Brave",
+			"item": "Scope Lens",
+			"moves": [
+				"Octazooka",
+				"Gunk Shot",
+				"Rock Blast",
+				"Seed Bomb"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 317,
+			"hall_set_group": "440 - 499",
+			"species": "Mantine",
+			"nature": "Mild",
+			"item": "Expert Belt",
+			"moves": [
+				"Signal Beam",
+				"Earthquake",
+				"Surf",
+				"Aerial Ace"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 318,
+			"hall_set_group": "440 - 499",
+			"species": "Skarmory",
+			"nature": "Adamant",
+			"item": "Razor Claw",
+			"moves": [
+				"Rock Slide",
+				"Night Slash",
+				"Steel Wing",
+				"Drill Peck"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 319,
+			"hall_set_group": "440 - 499",
+			"species": "Stantler",
+			"nature": "Rash",
+			"item": "King's Rock",
+			"moves": [
+				"Extrasensory",
+				"Thunder",
+				"Facade",
+				"Shadow Ball"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 320,
+			"hall_set_group": "440 - 499",
+			"species": "Hitmontop",
+			"nature": "Adamant",
+			"item": "Salac Berry",
+			"moves": [
+				"Triple Kick",
+				"Aerial Ace",
+				"Thief",
+				"Twister"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 321,
+			"hall_set_group": "440 - 499",
+			"species": "Miltank",
+			"nature": "Adamant",
+			"item": "Leftovers",
+			"moves": [
+				"Body Slam",
+				"Zen Headbutt",
+				"Hammer Arm",
+				"Iron Tail"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 322,
+			"hall_set_group": "440 - 499",
+			"species": "Ludicolo",
+			"nature": "Modest",
+			"item": "Leftovers",
+			"moves": [
+				"Giga Drain",
+				"Water Pulse",
+				"Rain Dance",
+				"Ice Beam"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 323,
+			"hall_set_group": "440 - 499",
+			"species": "Shiftry",
+			"nature": "Modest",
+			"item": "White Herb",
+			"moves": [
+				"Leaf Storm",
+				"Extrasensory",
+				"Dark Pulse",
+				"Focus Blast"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 324,
+			"hall_set_group": "440 - 499",
+			"species": "Breloom",
+			"nature": "Adamant",
+			"item": "Expert Belt",
+			"moves": [
+				"Sky Uppercut",
+				"Seed Bomb",
+				"Stone Edge",
+				"Thunder Punch"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 325,
+			"hall_set_group": "440 - 499",
+			"species": "Vigoroth",
+			"nature": "Adamant",
+			"item": "Razor Claw",
+			"moves": [
+				"Slash",
+				"Night Slash",
+				"Shadow Claw",
+				"Thunder Punch"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 326,
+			"hall_set_group": "440 - 499",
+			"species": "Ninjask",
+			"nature": "Adamant",
+			"item": "Liechi Berry",
+			"moves": [
+				"X-Scissor",
+				"Aerial Ace",
+				"Dig",
+				"Slash"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 327,
+			"hall_set_group": "440 - 499",
+			"species": "Exploud",
+			"nature": "Modest",
+			"item": "Metronome",
+			"moves": [
+				"Hyper Voice",
+				"Water Pulse",
+				"Flamethrower",
+				"Ice Beam"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 328,
+			"hall_set_group": "440 - 499",
+			"species": "Hariyama",
+			"nature": "Brave",
+			"item": "Focus Band",
+			"moves": [
+				"Vital Throw",
+				"Payback",
+				"Fake Out",
+				"Thunder Punch"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 329,
+			"hall_set_group": "440 - 499",
+			"species": "Manectric",
+			"nature": "Modest",
+			"item": "Focus Sash",
+			"moves": [
+				"Thunder",
+				"Flamethrower",
+				"Swift",
+				"Signal Beam"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 330,
+			"hall_set_group": "440 - 499",
+			"species": "Swalot",
+			"nature": "Adamant",
+			"item": "Expert Belt",
+			"moves": [
+				"Toxic",
+				"Ice Punch",
+				"Fire Punch",
+				"Thunder Punch"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 331,
+			"hall_set_group": "440 - 499",
+			"species": "Sharpedo",
+			"nature": "Adamant",
+			"item": "Focus Sash",
+			"moves": [
+				"Crunch",
+				"Waterfall",
+				"Ice Fang",
+				"Zen Headbutt"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 332,
+			"hall_set_group": "440 - 499",
+			"species": "Camerupt",
+			"nature": "Modest",
+			"item": "Power Herb",
+			"moves": [
+				"Eruption",
+				"Earth Power",
+				"Ancient Power",
+				"Solar Beam"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 333,
+			"hall_set_group": "440 - 499",
+			"species": "Torkoal",
+			"nature": "Quiet",
+			"item": "White Herb",
+			"moves": [
+				"Overheat",
+				"Body Slam",
+				"Earth Power",
+				"Stone Edge"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 334,
+			"hall_set_group": "440 - 499",
+			"species": "Grumpig",
+			"nature": "Modest",
+			"item": "Wise Glasses",
+			"moves": [
+				"Psychic",
+				"Power Gem",
+				"Energy Ball",
+				"Focus Blast"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 335,
+			"hall_set_group": "440 - 499",
+			"species": "Cacturne",
+			"nature": "Adamant",
+			"item": "Metronome",
+			"moves": [
+				"Sucker Punch",
+				"Needle Arm",
+				"Drain Punch",
+				"Thunder Punch"
+			],
+			"evs": [
+				"Atk",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 336,
+			"hall_set_group": "440 - 499",
+			"species": "Altaria",
+			"nature": "Modest",
+			"item": "Leftovers",
+			"moves": [
+				"Dragon Pulse",
+				"Air Cutter",
+				"Flamethrower",
+				"Ominous Wind"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 337,
+			"hall_set_group": "440 - 499",
+			"species": "Zangoose",
+			"nature": "Adamant",
+			"item": "Razor Claw",
+			"moves": [
+				"Crush Claw",
+				"Shadow Claw",
+				"Close Combat",
+				"Fire Punch"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 338,
+			"hall_set_group": "440 - 499",
+			"species": "Seviper",
+			"nature": "Adamant",
+			"item": "Leftovers",
+			"moves": [
+				"Poison Fang",
+				"Night Slash",
+				"Aqua Tail",
+				"Iron Tail"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 339,
+			"hall_set_group": "440 - 499",
+			"species": "Lunatone",
+			"nature": "Modest",
+			"item": "Wise Glasses",
+			"moves": [
+				"Psychic",
+				"Ancient Power",
+				"Signal Beam",
+				"Earth Power"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 340,
+			"hall_set_group": "440 - 499",
+			"species": "Solrock",
+			"nature": "Adamant",
+			"item": "Muscle Band",
+			"moves": [
+				"Stone Edge",
+				"Zen Headbutt",
+				"Earthquake",
+				"Iron Head"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 341,
+			"hall_set_group": "440 - 499",
+			"species": "Whiscash",
+			"nature": "Quiet",
+			"item": "Lax Incense",
+			"moves": [
+				"Earth Power",
+				"Water Pulse",
+				"Future Sight",
+				"Blizzard"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 342,
+			"hall_set_group": "440 - 499",
+			"species": "Crawdaunt",
+			"nature": "Adamant",
+			"item": "Quick Claw",
+			"moves": [
+				"Crunch",
+				"Crabhammer",
+				"Body Slam",
+				"Aerial Ace"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 343,
+			"hall_set_group": "440 - 499",
+			"species": "Cradily",
+			"nature": "Modest",
+			"item": "Big Root",
+			"moves": [
+				"Ancient Power",
+				"Giga Drain",
+				"Sludge Bomb",
+				"Earth Power"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 344,
+			"hall_set_group": "440 - 499",
+			"species": "Armaldo",
+			"nature": "Adamant",
+			"item": "Razor Claw",
+			"moves": [
+				"X-Scissor",
+				"Stone Edge",
+				"Aqua Tail",
+				"Aerial Ace"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 345,
+			"hall_set_group": "440 - 499",
+			"species": "Kecleon",
+			"nature": "Jolly",
+			"item": "Expert Belt",
+			"moves": [
+				"Dizzy Punch",
+				"Drain Punch",
+				"Shadow Claw",
+				"Aerial Ace"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 346,
+			"hall_set_group": "440 - 499",
+			"species": "Banette",
+			"nature": "Lonely",
+			"item": "Wise Glasses",
+			"moves": [
+				"Shadow Claw",
+				"Sucker Punch",
+				"Thunderbolt",
+				"Icy Wind"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 347,
+			"hall_set_group": "440 - 499",
+			"species": "Dusclops",
+			"nature": "Adamant",
+			"item": "Quick Claw",
+			"moves": [
+				"Shadow Punch",
+				"Ice Punch",
+				"Thunder Punch",
+				"Fire Punch"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 348,
+			"hall_set_group": "440 - 499",
+			"species": "Tropius",
+			"nature": "Modest",
+			"item": "White Herb",
+			"moves": [
+				"Leaf Storm",
+				"Air Slash",
+				"Twister",
+				"Ominous Wind"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 349,
+			"hall_set_group": "440 - 499",
+			"species": "Absol",
+			"nature": "Jolly",
+			"item": "Focus Sash",
+			"moves": [
+				"Psycho Cut",
+				"Night Slash",
+				"Shadow Claw",
+				"Slash"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 350,
+			"hall_set_group": "440 - 499",
+			"species": "Glalie",
+			"nature": "Modest",
+			"item": "Lum Berry",
+			"moves": [
+				"Ice Beam",
+				"Dark Pulse",
+				"Water Pulse",
+				"Signal Beam"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 351,
+			"hall_set_group": "440 - 499",
+			"species": "Huntail",
+			"nature": "Adamant",
+			"item": "Muscle Band",
+			"moves": [
+				"Aqua Tail",
+				"Crunch",
+				"Body Slam",
+				"Bounce"
+			],
+			"evs": [
+				"Atk",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 352,
+			"hall_set_group": "440 - 499",
+			"species": "Gorebyss",
+			"nature": "Modest",
+			"item": "Wise Glasses",
+			"moves": [
+				"Psychic",
+				"Brine",
+				"Signal Beam",
+				"Shadow Ball"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 353,
+			"hall_set_group": "440 - 499",
+			"species": "Relicanth",
+			"nature": "Brave",
+			"item": "Shell Bell",
+			"moves": [
+				"Head Smash",
+				"Aqua Tail",
+				"Earth Power",
+				"Double-Edge"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 354,
+			"hall_set_group": "440 - 499",
+			"species": "Staraptor",
+			"nature": "Adamant",
+			"item": "Liechi Berry",
+			"moves": [
+				"Brave Bird",
+				"Close Combat",
+				"Quick Attack",
+				"U-turn"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 355,
+			"hall_set_group": "440 - 499",
+			"species": "Rampardos",
+			"nature": "Adamant",
+			"item": "Shell Bell",
+			"moves": [
+				"Head Smash",
+				"Zen Headbutt",
+				"Avalanche",
+				"Fire Punch"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 356,
+			"hall_set_group": "440 - 499",
+			"species": "Bastiodon",
+			"nature": "Quiet",
+			"item": "Quick Claw",
+			"moves": [
+				"Metal Burst",
+				"Blizzard",
+				"Thunder",
+				"Fire Blast"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 357,
+			"hall_set_group": "440 - 499",
+			"species": "Vespiquen",
+			"nature": "Brave",
+			"item": "Bright Powder",
+			"moves": [
+				"Power Gem",
+				"Attack Order",
+				"Ominous Wind",
+				"Air Cutter"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 358,
+			"hall_set_group": "440 - 499",
+			"species": "Floatzel",
+			"nature": "Adamant",
+			"item": "Liechi Berry",
+			"moves": [
+				"Waterfall",
+				"Crunch",
+				"Ice Punch",
+				"Brick Break"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 359,
+			"hall_set_group": "440 - 499",
+			"species": "Cherrim",
+			"nature": "Naive",
+			"item": "Heat Rock",
+			"moves": [
+				"Sunny Day",
+				"Solar Beam",
+				"Synthesis",
+				"Return"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 360,
+			"hall_set_group": "440 - 499",
+			"species": "Gastrodon",
+			"nature": "Modest",
+			"item": "Lax Incense",
+			"moves": [
+				"Muddy Water",
+				"Earth Power",
+				"Blizzard",
+				"Sludge Bomb"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 361,
+			"hall_set_group": "440 - 499",
+			"species": "Ambipom",
+			"nature": "Naughty",
+			"item": "Expert Belt",
+			"moves": [
+				"Double Hit",
+				"Shock Wave",
+				"Aerial Ace",
+				"Water Pulse"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 362,
+			"hall_set_group": "440 - 499",
+			"species": "Drifblim",
+			"nature": "Modest",
+			"item": "Petaya Berry",
+			"moves": [
+				"Shadow Ball",
+				"Psychic",
+				"Thunderbolt",
+				"Air Cutter"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 363,
+			"hall_set_group": "440 - 499",
+			"species": "Lopunny",
+			"nature": "Jolly",
+			"item": "Sticky Barb",
+			"moves": [
+				"Switcheroo",
+				"Dizzy Punch",
+				"Bounce",
+				"Protect"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 364,
+			"hall_set_group": "440 - 499",
+			"species": "Mismagius",
+			"nature": "Modest",
+			"item": "Petaya Berry",
+			"moves": [
+				"Shadow Ball",
+				"Energy Ball",
+				"Thunderbolt",
+				"Psychic"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 365,
+			"hall_set_group": "440 - 499",
+			"species": "Purugly",
+			"nature": "Adamant",
+			"item": "King's Rock",
+			"moves": [
+				"Body Slam",
+				"Shadow Claw",
+				"U-turn",
+				"Iron Tail"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 366,
+			"hall_set_group": "440 - 499",
+			"species": "Skuntank",
+			"nature": "Naughty",
+			"item": "Expert Belt",
+			"moves": [
+				"Flamethrower",
+				"Poison Jab",
+				"Dark Pulse",
+				"Iron Tail"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 367,
+			"hall_set_group": "440 - 499",
+			"species": "Spiritomb",
+			"nature": "Modest",
+			"item": "Petaya Berry",
+			"moves": [
+				"Dark Pulse",
+				"Ominous Wind",
+				"Silver Wind",
+				"Icy Wind"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 368,
+			"hall_set_group": "440 - 499",
+			"species": "Toxicroak",
+			"nature": "Brave",
+			"item": "Liechi Berry",
+			"moves": [
+				"Poison Jab",
+				"Revenge",
+				"Bullet Punch",
+				"X-Scissor"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 369,
+			"hall_set_group": "440 - 499",
+			"species": "Carnivine",
+			"nature": "Adamant",
+			"item": "Leftovers",
+			"moves": [
+				"Power Whip",
+				"Crunch",
+				"Ingrain",
+				"Leech Seed"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 370,
+			"hall_set_group": "440 - 499",
+			"species": "Lumineon",
+			"nature": "Timid",
+			"item": "Bright Powder",
+			"moves": [
+				"Silver Wind",
+				"Ominous Wind",
+				"Water Pulse",
+				"Air Cutter"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 371,
+			"hall_set_group": "440 - 499",
+			"species": "Abomasnow",
+			"nature": "Adamant",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Wood Hammer",
+				"Avalanche",
+				"Brick Break",
+				"Iron Tail"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 372,
+			"hall_set_group": "440 - 499",
+			"species": "Froslass",
+			"nature": "Calm",
+			"item": "Bright Powder",
+			"moves": [
+				"Hail",
+				"Blizzard",
+				"Ominous Wind",
+				"Psychic"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 373,
+			"hall_set_group": "440 - 499",
+			"species": "Rotom",
+			"nature": "Timid",
+			"item": "Petaya Berry",
+			"moves": [
+				"Shadow Ball",
+				"Thunderbolt",
+				"Signal Beam",
+				"Swift"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 374,
+			"hall_set_group": "440 - 499",
+			"species": "Pidgeot",
+			"nature": "Modest",
+			"item": "Wise Glasses",
+			"moves": [
+				"Ominous Wind",
+				"Heat Wave",
+				"Air Slash",
+				"Uproar"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 375,
+			"hall_set_group": "440 - 499",
+			"species": "Fearow",
+			"nature": "Jolly",
+			"item": "Muscle Band",
+			"moves": [
+				"Drill Peck",
+				"U-turn",
+				"Steel Wing",
+				"Faint Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 376,
+			"hall_set_group": "500+",
+			"species": "Blastoise",
+			"nature": "Quiet",
+			"item": "Focus Sash",
+			"moves": [
+				"Yawn",
+				"Hydro Cannon",
+				"Return",
+				"Protect"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 377,
+			"hall_set_group": "500+",
+			"species": "Ninetales",
+			"nature": "Mild",
+			"item": "White Herb",
+			"moves": [
+				"Will-O-Wisp",
+				"Confuse Ray",
+				"Quick Attack",
+				"Overheat"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 378,
+			"hall_set_group": "500+",
+			"species": "Golduck",
+			"nature": "Mild",
+			"item": "Petaya Berry",
+			"moves": [
+				"Brine",
+				"Aqua Jet",
+				"Hydro Pump",
+				"Return"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 379,
+			"hall_set_group": "500+",
+			"species": "Arcanine",
+			"nature": "Adamant",
+			"item": "Razor Claw",
+			"moves": [
+				"Extreme Speed",
+				"Flare Blitz",
+				"Facade",
+				"Will-O-Wisp"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 380,
+			"hall_set_group": "500+",
+			"species": "Poliwrath",
+			"nature": "Quiet",
+			"item": "Zoom Lens",
+			"moves": [
+				"Focus Blast",
+				"Surf",
+				"Hypnosis",
+				"Vacuum Wave"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 381,
+			"hall_set_group": "500+",
+			"species": "Machamp",
+			"nature": "Brave",
+			"item": "Focus Band",
+			"moves": [
+				"Dynamic Punch",
+				"Vacuum Wave",
+				"Foresight",
+				"Revenge"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 382,
+			"hall_set_group": "500+",
+			"species": "Tentacruel",
+			"nature": "Adamant",
+			"item": "Bright Powder",
+			"moves": [
+				"Waterfall",
+				"Poison Jab",
+				"Toxic",
+				"Dive"
+			],
+			"evs": [
+				"Atk",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 383,
+			"hall_set_group": "500+",
+			"species": "Rapidash",
+			"nature": "Lonely",
+			"item": "Razor Fang",
+			"moves": [
+				"Flare Blitz",
+				"Quick Attack",
+				"Stomp",
+				"Overheat"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 384,
+			"hall_set_group": "500+",
+			"species": "Muk",
+			"nature": "Careful",
+			"item": "Black Sludge",
+			"moves": [
+				"Gunk Shot",
+				"Frustration",
+				"Toxic",
+				"Acid Armor"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 385,
+			"hall_set_group": "500+",
+			"species": "Cloyster",
+			"nature": "Rash",
+			"item": "Scope Lens",
+			"moves": [
+				"Ice Beam",
+				"Iron Defense",
+				"Spike Cannon",
+				"Brine"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 386,
+			"hall_set_group": "500+",
+			"species": "Gengar",
+			"nature": "Timid",
+			"item": "Razor Fang",
+			"moves": [
+				"Shadow Ball",
+				"Sludge Bomb",
+				"Hypnosis",
+				"Nightmare"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 387,
+			"hall_set_group": "500+",
+			"species": "Exeggutor",
+			"nature": "Adamant",
+			"item": "Liechi Berry",
+			"moves": [
+				"Wood Hammer",
+				"Zen Headbutt",
+				"Rest",
+				"Sleep Talk"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 388,
+			"hall_set_group": "500+",
+			"species": "Starmie",
+			"nature": "Timid",
+			"item": "Bright Powder",
+			"moves": [
+				"Hydro Pump",
+				"Psychic",
+				"Recover",
+				"Double Team"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 389,
+			"hall_set_group": "500+",
+			"species": "Scyther",
+			"nature": "Jolly",
+			"item": "Focus Sash",
+			"moves": [
+				"X-Scissor",
+				"Aerial Ace",
+				"Swords Dance",
+				"Quick Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 390,
+			"hall_set_group": "500+",
+			"species": "Pinsir",
+			"nature": "Jolly",
+			"item": "Salac Berry",
+			"moves": [
+				"X-Scissor",
+				"Giga Impact",
+				"Swords Dance",
+				"Quick Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 391,
+			"hall_set_group": "500+",
+			"species": "Gyarados",
+			"nature": "Lonely",
+			"item": "Life Orb",
+			"moves": [
+				"Bounce",
+				"Waterfall",
+				"Dragon Dance",
+				"Brine"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 392,
+			"hall_set_group": "500+",
+			"species": "Lapras",
+			"nature": "Modest",
+			"item": "Lum Berry",
+			"moves": [
+				"Blizzard",
+				"Surf",
+				"Rest",
+				"Sleep Talk"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 393,
+			"hall_set_group": "500+",
+			"species": "Vaporeon",
+			"nature": "Mild",
+			"item": "Expert Belt",
+			"moves": [
+				"Surf",
+				"Quick Attack",
+				"Aqua Ring",
+				"Yawn"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 394,
+			"hall_set_group": "500+",
+			"species": "Jolteon",
+			"nature": "Rash",
+			"item": "Expert Belt",
+			"moves": [
+				"Discharge",
+				"Quick Attack",
+				"Double Team",
+				"Thunder Wave"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 395,
+			"hall_set_group": "500+",
+			"species": "Flareon",
+			"nature": "Mild",
+			"item": "Expert Belt",
+			"moves": [
+				"Lava Plume",
+				"Quick Attack",
+				"Protect",
+				"Will-O-Wisp"
+			],
+			"evs": [
+				"SpA",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 396,
+			"hall_set_group": "500+",
+			"species": "Aerodactyl",
+			"nature": "Adamant",
+			"item": "Leftovers",
+			"moves": [
+				"Stone Edge",
+				"Aerial Ace",
+				"Sandstorm",
+				"Fly"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 397,
+			"hall_set_group": "500+",
+			"species": "Snorlax",
+			"nature": "Brave",
+			"item": "Choice Band",
+			"moves": [
+				"Crunch",
+				"Giga Impact",
+				"Zen Headbutt",
+				"Brick Break"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 398,
+			"hall_set_group": "500+",
+			"species": "Articuno",
+			"nature": "Modest",
+			"item": "Apicot Berry",
+			"moves": [
+				"Blizzard",
+				"Air Cutter",
+				"Reflect",
+				"Roost"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 399,
+			"hall_set_group": "500+",
+			"species": "Zapdos",
+			"nature": "Modest",
+			"item": "Ganlon Berry",
+			"moves": [
+				"Thunder",
+				"Air Cutter",
+				"Light Screen",
+				"Roost"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 400,
+			"hall_set_group": "500+",
+			"species": "Moltres",
+			"nature": "Modest",
+			"item": "Razor Claw",
+			"moves": [
+				"Fire Blast",
+				"Air Cutter",
+				"Sky Attack",
+				"Roost"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 401,
+			"hall_set_group": "500+",
+			"species": "Dragonite",
+			"nature": "Adamant",
+			"item": "Lum Berry",
+			"moves": [
+				"Roost",
+				"Outrage",
+				"Aerial Ace",
+				"Dragon Dance"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 402,
+			"hall_set_group": "500+",
+			"species": "Meganium",
+			"nature": "Quiet",
+			"item": "Focus Sash",
+			"moves": [
+				"Energy Ball",
+				"Magical Leaf",
+				"Body Slam",
+				"Counter"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 403,
+			"hall_set_group": "500+",
+			"species": "Typhlosion",
+			"nature": "Timid",
+			"item": "White Herb",
+			"moves": [
+				"Eruption",
+				"Quick Attack",
+				"Overheat",
+				"Swift"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 404,
+			"hall_set_group": "500+",
+			"species": "Feraligatr",
+			"nature": "Naive",
+			"item": "Salac Berry",
+			"moves": [
+				"Aqua Tail",
+				"Slash",
+				"Endure",
+				"Rain Dance"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 405,
+			"hall_set_group": "500+",
+			"species": "Crobat",
+			"nature": "Jolly",
+			"item": "Bright Powder",
+			"moves": [
+				"Brave Bird",
+				"Cross Poison",
+				"Double Team",
+				"Toxic"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 406,
+			"hall_set_group": "500+",
+			"species": "Ampharos",
+			"nature": "Quiet",
+			"item": "Light Clay",
+			"moves": [
+				"Light Screen",
+				"Rest",
+				"Thunder",
+				"Snore"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 407,
+			"hall_set_group": "500+",
+			"species": "Politoed",
+			"nature": "Modest",
+			"item": "Lax Incense",
+			"moves": [
+				"Hyper Voice",
+				"Surf",
+				"Rest",
+				"Snore"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 408,
+			"hall_set_group": "500+",
+			"species": "Espeon",
+			"nature": "Modest",
+			"item": "Bright Powder",
+			"moves": [
+				"Psychic",
+				"Swift",
+				"Double Team",
+				"Morning Sun"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 409,
+			"hall_set_group": "500+",
+			"species": "Umbreon",
+			"nature": "Relaxed",
+			"item": "Leftovers",
+			"moves": [
+				"Facade",
+				"Sucker Punch",
+				"Confuse Ray",
+				"Moonlight"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 410,
+			"hall_set_group": "500+",
+			"species": "Steelix",
+			"nature": "Brave",
+			"item": "Iron Ball",
+			"moves": [
+				"Gyro Ball",
+				"Dig",
+				"Sandstorm",
+				"Curse"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 411,
+			"hall_set_group": "500+",
+			"species": "Scizor",
+			"nature": "Brave",
+			"item": "Focus Sash",
+			"moves": [
+				"Swords Dance",
+				"X-Scissor",
+				"Counter",
+				"Bullet Punch"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 412,
+			"hall_set_group": "500+",
+			"species": "Shuckle",
+			"nature": "Careful",
+			"item": "Smooth Rock",
+			"moves": [
+				"Bug Bite",
+				"Rollout",
+				"Sandstorm",
+				"Protect"
+			],
+			"evs": [
+				"HP",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 413,
+			"hall_set_group": "500+",
+			"species": "Heracross",
+			"nature": "Jolly",
+			"item": "Salac Berry",
+			"moves": [
+				"Megahorn",
+				"Close Combat",
+				"Facade",
+				"Reversal"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 414,
+			"hall_set_group": "500+",
+			"species": "Ursaring",
+			"nature": "Adamant",
+			"item": "Focus Band",
+			"moves": [
+				"Frustration",
+				"Rest",
+				"Sleep Talk",
+				"Thunder Punch"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 415,
+			"hall_set_group": "500+",
+			"species": "Houndoom",
+			"nature": "Mild",
+			"item": "Choice Scarf",
+			"moves": [
+				"Dark Pulse",
+				"Flamethrower",
+				"Crunch",
+				"Fire Fang"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 416,
+			"hall_set_group": "500+",
+			"species": "Kingdra",
+			"nature": "Modest",
+			"item": "Scope Lens",
+			"moves": [
+				"Dragon Pulse",
+				"Hydro Pump",
+				"Yawn",
+				"Brine"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 417,
+			"hall_set_group": "500+",
+			"species": "Donphan",
+			"nature": "Adamant",
+			"item": "Leftovers",
+			"moves": [
+				"Earthquake",
+				"Giga Impact",
+				"Protect",
+				"Sandstorm"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 418,
+			"hall_set_group": "500+",
+			"species": "Porygon2",
+			"nature": "Rash",
+			"item": "Quick Claw",
+			"moves": [
+				"Tri Attack",
+				"Return",
+				"Psychic",
+				"Zen Headbutt"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 419,
+			"hall_set_group": "500+",
+			"species": "Blissey",
+			"nature": "Sassy",
+			"item": "Lum Berry",
+			"moves": [
+				"Return",
+				"Soft-Boiled",
+				"Fire Blast",
+				"Minimize"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 420,
+			"hall_set_group": "500+",
+			"species": "Raikou",
+			"nature": "Naive",
+			"item": "Scope Lens",
+			"moves": [
+				"Thunder",
+				"Quick Attack",
+				"Reflect",
+				"Thunder Fang"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 421,
+			"hall_set_group": "500+",
+			"species": "Entei",
+			"nature": "Rash",
+			"item": "Quick Claw",
+			"moves": [
+				"Eruption",
+				"Rock Climb",
+				"Flamethrower",
+				"Fire Fang"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 422,
+			"hall_set_group": "500+",
+			"species": "Suicune",
+			"nature": "Bold",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Mirror Coat",
+				"Facade",
+				"Hydro Pump",
+				"Reflect"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 423,
+			"hall_set_group": "500+",
+			"species": "Tyranitar",
+			"nature": "Brave",
+			"item": "Quick Claw",
+			"moves": [
+				"Stone Edge",
+				"Crunch",
+				"Dark Pulse",
+				"Ancient Power"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 424,
+			"hall_set_group": "500+",
+			"species": "Sceptile",
+			"nature": "Naughty",
+			"item": "Scope Lens",
+			"moves": [
+				"Leaf Blade",
+				"Quick Attack",
+				"Leaf Storm",
+				"Grass Knot"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 425,
+			"hall_set_group": "500+",
+			"species": "Blaziken",
+			"nature": "Lonely",
+			"item": "Liechi Berry",
+			"moves": [
+				"Blaze Kick",
+				"Sky Uppercut",
+				"Focus Blast",
+				"Quick Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 426,
+			"hall_set_group": "500+",
+			"species": "Swampert",
+			"nature": "Quiet",
+			"item": "Bright Powder",
+			"moves": [
+				"Muddy Water",
+				"Mud Bomb",
+				"Substitute",
+				"Rest"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 427,
+			"hall_set_group": "500+",
+			"species": "Gardevoir",
+			"nature": "Timid",
+			"item": "Sticky Barb",
+			"moves": [
+				"Psychic",
+				"Trick",
+				"Swift",
+				"Protect"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 428,
+			"hall_set_group": "500+",
+			"species": "Slaking",
+			"nature": "Adamant",
+			"item": "Leftovers",
+			"moves": [
+				"Encore",
+				"Counter",
+				"Frustration",
+				"Faint Attack"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 429,
+			"hall_set_group": "500+",
+			"species": "Aggron",
+			"nature": "Adamant",
+			"item": "Zoom Lens",
+			"moves": [
+				"Stone Edge",
+				"Iron Tail",
+				"Metal Burst",
+				"Sandstorm"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 430,
+			"hall_set_group": "500+",
+			"species": "Wailord",
+			"nature": "Quiet",
+			"item": "Bright Powder",
+			"moves": [
+				"Water Spout",
+				"Sleep Talk",
+				"Body Slam",
+				"Rest"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 431,
+			"hall_set_group": "500+",
+			"species": "Flygon",
+			"nature": "Modest",
+			"item": "Wise Glasses",
+			"moves": [
+				"Earth Power",
+				"Dragon Pulse",
+				"Sandstorm",
+				"Roost"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 432,
+			"hall_set_group": "500+",
+			"species": "Claydol",
+			"nature": "Rash",
+			"item": "Choice Scarf",
+			"moves": [
+				"Earth Power",
+				"Psychic",
+				"Earthquake",
+				"Zen Headbutt"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 433,
+			"hall_set_group": "500+",
+			"species": "Milotic",
+			"nature": "Quiet",
+			"item": "Life Orb",
+			"moves": [
+				"Rest",
+				"Sleep Talk",
+				"Hydro Pump",
+				"Facade"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 434,
+			"hall_set_group": "500+",
+			"species": "Walrein",
+			"nature": "Quiet",
+			"item": "Icy Rock",
+			"moves": [
+				"Blizzard",
+				"Dive",
+				"Hail",
+				"Brine"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 435,
+			"hall_set_group": "500+",
+			"species": "Cresselia",
+			"nature": "Lonely",
+			"item": "Leftovers",
+			"moves": [
+				"Psychic",
+				"Psycho Cut",
+				"Slash",
+				"Psycho Shift"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 436,
+			"hall_set_group": "500+",
+			"species": "Salamence",
+			"nature": "Adamant",
+			"item": "Liechi Berry",
+			"moves": [
+				"Dragon Claw",
+				"Aerial Ace",
+				"Frustration",
+				"Roost"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 437,
+			"hall_set_group": "500+",
+			"species": "Metagross",
+			"nature": "Adamant",
+			"item": "Quick Claw",
+			"moves": [
+				"Meteor Mash",
+				"Zen Headbutt",
+				"Bullet Punch",
+				"Light Screen"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 438,
+			"hall_set_group": "500+",
+			"species": "Regirock",
+			"nature": "Brave",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Stone Edge",
+				"Ancient Power",
+				"Giga Impact",
+				"Thunder Wave"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 439,
+			"hall_set_group": "500+",
+			"species": "Regice",
+			"nature": "Quiet",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Blizzard",
+				"Avalanche",
+				"Hyper Beam",
+				"Thunder Wave"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 440,
+			"hall_set_group": "500+",
+			"species": "Registeel",
+			"nature": "Brave",
+			"item": "Sitrus Berry",
+			"moves": [
+				"Iron Head",
+				"Flash Cannon",
+				"Giga Impact",
+				"Thunder Wave"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 441,
+			"hall_set_group": "500+",
+			"species": "Latias",
+			"nature": "Modest",
+			"item": "Salac Berry",
+			"moves": [
+				"Mist Ball",
+				"Dragon Pulse",
+				"Recover",
+				"Captivate"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 442,
+			"hall_set_group": "500+",
+			"species": "Latios",
+			"nature": "Modest",
+			"item": "Salac Berry",
+			"moves": [
+				"Luster Purge",
+				"Dragon Pulse",
+				"Recover",
+				"Captivate"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 443,
+			"hall_set_group": "500+",
+			"species": "Torterra",
+			"nature": "Brave",
+			"item": "Lax Incense",
+			"moves": [
+				"Wood Hammer",
+				"Mud-Slap",
+				"Rest",
+				"Sleep Talk"
+			],
+			"evs": [
+				"HP",
+				"Atk"
+			]
+		},
+		{
+			"hall_id": 444,
+			"hall_set_group": "500+",
+			"species": "Infernape",
+			"nature": "Adamant",
+			"item": "Life Orb",
+			"moves": [
+				"Close Combat",
+				"Flare Blitz",
+				"Mach Punch",
+				"Fake Out"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 445,
+			"hall_set_group": "500+",
+			"species": "Empoleon",
+			"nature": "Mild",
+			"item": "Petaya Berry",
+			"moves": [
+				"Flash Cannon",
+				"Hydro Pump",
+				"Aqua Jet",
+				"Yawn"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 446,
+			"hall_set_group": "500+",
+			"species": "Luxray",
+			"nature": "Naive",
+			"item": "King's Rock",
+			"moves": [
+				"Spark",
+				"Thunderbolt",
+				"Quick Attack",
+				"Thunder Wave"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 447,
+			"hall_set_group": "500+",
+			"species": "Roserade",
+			"nature": "Modest",
+			"item": "White Herb",
+			"moves": [
+				"Weather Ball",
+				"Leaf Storm",
+				"Protect",
+				"Toxic"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 448,
+			"hall_set_group": "500+",
+			"species": "Honchkrow",
+			"nature": "Lonely",
+			"item": "Quick Claw",
+			"moves": [
+				"Dark Pulse",
+				"Night Slash",
+				"Drill Peck",
+				"Air Cutter"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 449,
+			"hall_set_group": "500+",
+			"species": "Bronzong",
+			"nature": "Quiet",
+			"item": "Leftovers",
+			"moves": [
+				"Extrasensory",
+				"Flash Cannon",
+				"Trick Room",
+				"Protect"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 450,
+			"hall_set_group": "500+",
+			"species": "Garchomp",
+			"nature": "Adamant",
+			"item": "Persim Berry",
+			"moves": [
+				"Outrage",
+				"Sandstorm",
+				"Dig",
+				"Twister"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 451,
+			"hall_set_group": "500+",
+			"species": "Lucario",
+			"nature": "Brave",
+			"item": "Liechi Berry",
+			"moves": [
+				"Aura Sphere",
+				"Focus Punch",
+				"Extreme Speed",
+				"Substitute"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 452,
+			"hall_set_group": "500+",
+			"species": "Hippowdon",
+			"nature": "Adamant",
+			"item": "Liechi Berry",
+			"moves": [
+				"Double-Edge",
+				"Earthquake",
+				"Yawn",
+				"Slack Off"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 453,
+			"hall_set_group": "500+",
+			"species": "Drapion",
+			"nature": "Adamant",
+			"item": "Razor Claw",
+			"moves": [
+				"Cross Poison",
+				"Night Slash",
+				"Slash",
+				"Acupressure"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 454,
+			"hall_set_group": "500+",
+			"species": "Weavile",
+			"nature": "Adamant",
+			"item": "Focus Sash",
+			"moves": [
+				"Night Slash",
+				"Ice Punch",
+				"Ice Shard",
+				"Quick Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 455,
+			"hall_set_group": "500+",
+			"species": "Magnezone",
+			"nature": "Bold",
+			"item": "Ganlon Berry",
+			"moves": [
+				"Flash Cannon",
+				"Tri Attack",
+				"Thunder",
+				"Mirror Coat"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 456,
+			"hall_set_group": "500+",
+			"species": "Lickilicky",
+			"nature": "Adamant",
+			"item": "Expert Belt",
+			"moves": [
+				"Thunder Punch",
+				"Ice Punch",
+				"Fire Punch",
+				"Body Slam"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 457,
+			"hall_set_group": "500+",
+			"species": "Rhyperior",
+			"nature": "Brave",
+			"item": "Quick Claw",
+			"moves": [
+				"Rock Wrecker",
+				"Earth Power",
+				"Giga Impact",
+				"Reversal"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		},
+		{
+			"hall_id": 458,
+			"hall_set_group": "500+",
+			"species": "Tangrowth",
+			"nature": "Lonely",
+			"item": "Lax Incense",
+			"moves": [
+				"Wring Out",
+				"Grass Knot",
+				"Sunny Day",
+				"Solar Beam"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 459,
+			"hall_set_group": "500+",
+			"species": "Electivire",
+			"nature": "Naughty",
+			"item": "Life Orb",
+			"moves": [
+				"Thunder Punch",
+				"Giga Impact",
+				"Discharge",
+				"Quick Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 460,
+			"hall_set_group": "500+",
+			"species": "Magmortar",
+			"nature": "Mild",
+			"item": "Lax Incense",
+			"moves": [
+				"Fire Blast",
+				"Hyper Beam",
+				"Smokescreen",
+				"Protect"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 461,
+			"hall_set_group": "500+",
+			"species": "Togekiss",
+			"nature": "Modest",
+			"item": "Bright Powder",
+			"moves": [
+				"Air Slash",
+				"Aura Sphere",
+				"Thunder Wave",
+				"Roost"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 462,
+			"hall_set_group": "500+",
+			"species": "Yanmega",
+			"nature": "Rash",
+			"item": "Petaya Berry",
+			"moves": [
+				"Bug Buzz",
+				"Air Slash",
+				"Endure",
+				"Reversal"
+			],
+			"evs": [
+				"Def",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 463,
+			"hall_set_group": "500+",
+			"species": "Leafeon",
+			"nature": "Naughty",
+			"item": "Scope Lens",
+			"moves": [
+				"Quick Attack",
+				"Leaf Blade",
+				"Grass Knot",
+				"Razor Leaf"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 464,
+			"hall_set_group": "500+",
+			"species": "Glaceon",
+			"nature": "Rash",
+			"item": "Icy Rock",
+			"moves": [
+				"Hail",
+				"Blizzard",
+				"Ice Shard",
+				"Swift"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 465,
+			"hall_set_group": "500+",
+			"species": "Gliscor",
+			"nature": "Adamant",
+			"item": "Liechi Berry",
+			"moves": [
+				"Earthquake",
+				"Sandstorm",
+				"Aerial Ace",
+				"Quick Attack"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 466,
+			"hall_set_group": "500+",
+			"species": "Mamoswine",
+			"nature": "Modest",
+			"item": "Leftovers",
+			"moves": [
+				"Blizzard",
+				"Hail",
+				"Earth Power",
+				"Amnesia"
+			],
+			"evs": [
+				"HP",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 467,
+			"hall_set_group": "500+",
+			"species": "Porygon-Z",
+			"nature": "Modest",
+			"item": "Expert Belt",
+			"moves": [
+				"Tri Attack",
+				"Dark Pulse",
+				"Psychic",
+				"Signal Beam"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 468,
+			"hall_set_group": "500+",
+			"species": "Gallade",
+			"nature": "Adamant",
+			"item": "Salac Berry",
+			"moves": [
+				"Psycho Cut",
+				"Close Combat",
+				"Swords Dance",
+				"Vacuum Wave"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 469,
+			"hall_set_group": "500+",
+			"species": "Probopass",
+			"nature": "Calm",
+			"item": "Focus Band",
+			"moves": [
+				"Flash Cannon",
+				"Power Gem",
+				"Substitute",
+				"Sandstorm"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 470,
+			"hall_set_group": "500+",
+			"species": "Dusknoir",
+			"nature": "Careful",
+			"item": "Quick Claw",
+			"moves": [
+				"Rest",
+				"Curse",
+				"Shadow Punch",
+				"Brick Break"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 471,
+			"hall_set_group": "500+",
+			"species": "Uxie",
+			"nature": "Bold",
+			"item": "Focus Band",
+			"moves": [
+				"Extrasensory",
+				"Yawn",
+				"Dream Eater",
+				"Swift"
+			],
+			"evs": [
+				"Def",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 472,
+			"hall_set_group": "500+",
+			"species": "Mesprit",
+			"nature": "Timid",
+			"item": "Light Clay",
+			"moves": [
+				"Extrasensory",
+				"Light Screen",
+				"Reflect",
+				"Swift"
+			],
+			"evs": [
+				"SpA",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 473,
+			"hall_set_group": "500+",
+			"species": "Azelf",
+			"nature": "Adamant",
+			"item": "Flame Orb",
+			"moves": [
+				"Zen Headbutt",
+				"Return",
+				"Trick",
+				"Facade"
+			],
+			"evs": [
+				"Atk",
+				"Spe"
+			]
+		},
+		{
+			"hall_id": 474,
+			"hall_set_group": "500+",
+			"species": "Heatran",
+			"nature": "Modest",
+			"item": "Focus Band",
+			"moves": [
+				"Magma Storm",
+				"Flash Cannon",
+				"Lava Plume",
+				"Metal Sound"
+			],
+			"evs": [
+				"SpA",
+				"SpD"
+			]
+		},
+		{
+			"hall_id": 475,
+			"hall_set_group": "500+",
+			"species": "Venusaur",
+			"nature": "Quiet",
+			"item": "Focus Sash",
+			"moves": [
+				"Toxic",
+				"Frenzy Plant",
+				"Sludge",
+				"Protect"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 476,
+			"hall_set_group": "500+",
+			"species": "Charizard",
+			"nature": "Quiet",
+			"item": "Focus Sash",
+			"moves": [
+				"Will-O-Wisp",
+				"Air Slash",
+				"Protect",
+				"Blast Burn"
+			],
+			"evs": [
+				"Atk",
+				"SpA"
+			]
+		},
+		{
+			"hall_id": 477,
+			"hall_set_group": "500+",
+			"species": "Regigigas",
+			"nature": "Impish",
+			"item": "Lum Berry",
+			"moves": [
+				"Zen Headbutt",
+				"Confuse Ray",
+				"Drain Punch",
+				"Dizzy Punch"
+			],
+			"evs": [
+				"Atk",
+				"Def"
+			]
+		}
+	]
+}
