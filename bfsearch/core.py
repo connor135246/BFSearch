@@ -161,6 +161,7 @@ class SetGroup(Enum):
         return self.value[2]
 
 # hall set group is a useful way of grouping battle hall sets together.
+# group is determined by bst.
 class HallSetGroup(Enum):
     sub339 = ("339-", range(1, 6), range(1, 155))
     from340to439 = ("340 - 439", range(3, 9), range(155, 271))
@@ -315,10 +316,12 @@ class SetProvider(object):
         self.maxIV = maxIV
         self.battlenums = battlenums
         self.sets = sets
+        '''
         self.setgroups = []
         for pname, nextDict in self.sets.items():
             for pset, pokeset in nextDict.items():
                 self.setgroups.append(pokeset.setgroup)
+        '''
 
     def isIdenticalProvider(self, other):
         return self.minIV == other.minIV and self.maxIV == other.maxIV and self.battlenums == other.battlenums and self.sets == other.sets

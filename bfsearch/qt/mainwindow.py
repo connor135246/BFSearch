@@ -9,7 +9,7 @@ from PySide6.QtCore import Qt
 
 from bfsearch import core, data, translate, settings
 from bfsearch.translate import tr
-from bfsearch.qt import browse, search
+from bfsearch.qt import browse, search, browsehall
 
 
 # code for recreating the main window. if the application exits with this code, the main window will be recreated.
@@ -104,6 +104,10 @@ class Window(QMainWindow):
         self.searchPage = search.SearchPage(self, self.data)
         self.centralWidget().addTab(self.searchPage, QIcon("gui/search.png"), tr("page.search.name"))
         self.centralWidget().setTabToolTip(3, tr("page.search.tooltip"))
+
+        self.browseHallSetsPage = browsehall.BrowseAllHallSetsPage(self, data.genericSetProvider(self.data.hall_sets))
+        self.centralWidget().addTab(self.browseHallSetsPage, QIcon("gui/hallpokemon.png"), tr("page.hall_sets.name"))
+        self.centralWidget().setTabToolTip(4, tr("page.hall_sets.tooltip"))
 
         logging.info("Built data!")
 

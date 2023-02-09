@@ -11,9 +11,9 @@ from bfsearch import data
 from bfsearch.translate import tr
 
 
-def getSetResultString(the_set, iv, hideItem):
-    string = the_set.getShowdownFormat(iv, hideItem = hideItem)
-    speed = the_set.getSpeed(iv)
+def getSetResultString(the_set, iv, hideItem, level = 50):
+    string = the_set.getShowdownFormat(iv, level = level, hideItem = hideItem)
+    speed = the_set.getSpeed(iv, level = level)
     string += "\n" + tr("page.generic.result.speed", speed)
     if not hideItem:
         if the_set.item == "Choice Scarf":
@@ -175,7 +175,7 @@ class BrowseSetsPageBase(SharedPageElements):
             self.ivBox.setToolTip(tr("page.all_sets.ivBox.tooltip.fixed"))
             self.ivBox.setEnabled(False)
         else:
-            self.ivBox.setToolTip(tr("page.all_sets.ivBox.tooltip.range", self.ivBox.minimum(), self.ivBox.maximum()))
+            self.ivBox.setToolTip(tr("page.generic.range", self.ivBox.minimum(), self.ivBox.maximum()))
             self.ivBox.setEnabled(True)
 
     def getIV(self):
