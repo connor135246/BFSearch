@@ -110,11 +110,12 @@ class EVStats(object):
     def getShowdownEVs(self):
         result = ""
         first = True
-        for ev in self.evs:
-            if not first:
-                result += " / "
-            result += str(self.num) + " " + ev.name
-            first = False
+        for stat in list(Stat):
+            if stat in self.evs:
+                if not first:
+                    result += " / "
+                result += str(self.num) + " " + stat.name
+                first = False
         return result
 
 def calculateHP(base, iv, evs, level):

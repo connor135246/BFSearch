@@ -227,3 +227,36 @@ def groupUniquePokemon(listTrainersPokeSet):
 # total: 1585
 def everyUniquePokemon(trainers):
     return [pswi for pswi, _ in groupUniquePokemon(everyIndividualPokemon(trainers))]
+
+# returns a dict of {rank} to {name} to HallPokeSet
+def rankToHallSets(hall_sets):
+    rTHS = {}
+    for rank in range(1, 11):
+        rTHS[rank] = {}
+        for name, hall_set in hall_sets.items():
+            if hall_set.hallsetgroup.appearsInRank(rank):
+                rTHS[rank][name] = hall_set
+    return rTHS
+
+# returns a dict of {Type} to {rank} to {name} to HallPokeSet
+def typeToRankToHallSets(hall_sets):
+    rTHS = rankToHallSets(hall_sets)
+    tTRTHS = {}
+    for atype in list(core.Type):
+        tTRTHS[atype.name] = {}
+        for rank, nextDict in rTHS.items():
+            for name, hall_set in nextDict.items():
+                if hall_set.species.hasType(atype):
+                    if rank not in tTRTHS[atype.name].keys():
+                        tTRTHS[atype.name][rank] = {}
+                    tTRTHS[atype.name][rank][name] = hall_set
+    return tTRTHS
+
+# returns a dict of {HallSetGroup.fullname()} to {name} to HallPokeSet
+def hallSetGroupToHallSets(hall_sets):
+    hSGTHS = {}
+    for name, hall_set in hall_sets.items():
+        if hall_set.hallsetgroup.fullname() not in hSGTHS.keys():
+            hSGTHS[hall_set.hallsetgroup.fullname()] = {}
+        hSGTHS[hall_set.hallsetgroup.fullname()][name] = hall_set
+    return hSGTHS

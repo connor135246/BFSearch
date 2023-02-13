@@ -141,5 +141,23 @@
 	"page.hall_sets.pokemon.tooltip": "The Pokémon you face depends on the rank of the type you're challenging.\nIn early ranks, you will face Pokémon with lower BST.\nIn late ranks, you will face Pokémon with higher BST.",
 	"page.hall_sets.ivs.tooltip": "Not all IVs are possible in the Battle Hall.\nA Pokémon's IV depends on the rank of the type you're challenging.",
 	"page.hall_sets.level": "Level:",
-	"page.hall_sets.level.tooltip": "The opposing Pokémon's level depends on your Pokémon's level and how far you've progressed in the Battle Hall."
+	"page.hall_sets.level.tooltip": "The opposing Pokémon's level depends on your Pokémon's level and how far you've progressed in the Battle Hall.",
+
+	"page.hall_calc.name": "Hall Sets by Type/Rank",
+	"page.hall_calc.tooltip": "View Battle Hall Pokémon sets organized by type and rank.",
+	"page.hall_calc.info": "This page groups Battle Hall Pokémon sets by which type and rank they can appear in.\nPut in your Pokémon's level and BST, select a type and rank, and then have a look at the possible Pokémon!\nHover over the labels for some extra info.",
+	"page.hall_calc.pokemon.tooltip": "In her Silver Print battle, Hall Matron Argenta will use a Pokémon in the same BST range as yours.\nIn her Gold Print battle, Hall Matron Argenta will always use a Pokémon with 500 BST or above.",
+	"page.hall_calc.ivs.tooltip": "A Pokémon's IV depends on the rank of the type you're challenging.\nIt's 8 at rank 1 and increases by 2 each rank, up to 26 in rank 10.\nHall Matron Argenta will always have 31 IVs.",
+	"page.hall_calc.level.tooltip": "The opponent's level is automatically calculated based on your Pokémon's level, the rank, and the number of types that are at rank 2 or higher.\nHall Matron Argenta's Pokémon are always the same level as yours.",
+	"page.hall_calc.your_bst": "Your Pokémon's BST:",
+	"page.hall_calc.your_bst.tooltip": "In her Silver Print battle, Hall Matron Argenta will use a Pokémon in the same BST range as yours.",
+	"page.hall_calc.your_level": "Your Pokémon's Level:",
+	"page.hall_calc.your_level.tooltip": "The opposing Pokémon's base level depends on your Pokémon's level.",
+	"page.hall_calc.type": "Type:",
+	"page.hall_calc.type.tooltip": "You can also select Hall Matron Argenta here.",
+	"page.hall_calc.rank": "Rank:",
+	"page.hall_calc.rank.tooltip": "Pokémon at 339 BST and below appear in ranks 1 - 5.\nPokémon between 340 and 439 BST appear in ranks 3 - 8.\nPokémon between 440 and 499 BST appear in ranks 6 - 10.\nPokémon at 500 BST and above appear in ranks 9 - 10.",
+	"page.hall_calc.visited_types": "Number of Types at Rank 2 or higher:",
+	"page.hall_calc.visited_types.tooltip": "The level of the opposing Pokémon is affected by how many types you've gotten to rank 2 or higher.",
+	"page.hall_calc.levelBox.tooltip.fixed": "The level cannot be changed for these sets."
 }

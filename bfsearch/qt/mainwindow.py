@@ -109,6 +109,10 @@ class Window(QMainWindow):
         self.centralWidget().addTab(self.browseHallSetsPage, QIcon("gui/hallpokemon.png"), tr("page.hall_sets.name"))
         self.centralWidget().setTabToolTip(4, tr("page.hall_sets.tooltip"))
 
+        self.calcHallSetsPage = browsehall.CalcHallSetsPage(self, data.typeToRankToHallSets(self.data.hall_sets), data.hallSetGroupToHallSets(self.data.hall_sets))
+        self.centralWidget().addTab(self.calcHallSetsPage, QIcon("gui/hallcalc.png"), tr("page.hall_calc.name"))
+        self.centralWidget().setTabToolTip(5, tr("page.hall_calc.tooltip"))
+
         logging.info("Built data!")
 
     def language(self):

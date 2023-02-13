@@ -12,3 +12,5 @@ search.png
 https://archives.bulbagarden.net/wiki/File:Bag_Wide_Lens_Sprite.png
 hallpokemon.png
 https://archives.bulbagarden.net/wiki/File:Spr_4p_461_m.png
+hallcalc.png
+https://archives.bulbagarden.net/wiki/File:Spr_Pt_Argenta.png
