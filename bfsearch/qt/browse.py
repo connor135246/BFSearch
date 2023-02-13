@@ -169,8 +169,8 @@ class BrowseSetsPageBase(SharedPageElements):
         super().toggleSorting()
         self.fillComboKeys(self.pokeCombo, self.getSorted())
 
-    def setupIVBox(self, setProvider):
-        self.ivBox.setRange(setProvider.minIV, setProvider.maxIV)
+    def setupIVBox(self, minIV, maxIV):
+        self.ivBox.setRange(minIV, maxIV)
         if self.ivBox.minimum() == self.ivBox.maximum():
             self.ivBox.setToolTip(tr("page.all_sets.ivBox.tooltip.fixed"))
             self.ivBox.setEnabled(False)
@@ -224,7 +224,7 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
         self.setProvider = setProvider
         self.sortedAlpha = data.setsAlphaSorted(self.setProvider.sets)
         self.sortedDex = data.setsDexSorted(self.setProvider.sets)
-        self.setupIVBox(self.setProvider)
+        self.setupIVBox(0, 31)
 
         self.layout().insertWidget(0, QLabel(tr("page.all_sets.info")))
         self.pokeLabel.setToolTip(tr("page.all_sets.pokemon.tooltip"))
@@ -303,7 +303,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
             self.sortedDex = data.setsDexSorted(currentProvider.sets)
             # when the trainer selection updates, tells the species combo box to update
             self.fillComboKeys(self.pokeCombo, self.getSorted())
-            self.setupIVBox(currentProvider)
+            self.setupIVBox(currentProvider.iv, currentProvider.iv)
             self.battlenumCombo.setToolTip(self.battlenumCombo.currentText())
             self.tclassCombo.setToolTip(self.tclassCombo.currentText())
             self.tnameCombo.setToolTip(self.tnameCombo.currentText())

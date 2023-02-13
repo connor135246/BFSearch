@@ -1,7 +1,7 @@
 # launch
 
 
-import sys, logging, datetime, os
+import logging, datetime, os
 
 from bfsearch.qt import mainwindow
 from bfsearch import translate, settings
@@ -24,7 +24,7 @@ def main():
     try:
         translate.loadLangFiles()
         mainwindow.launch()
-    except Exception as e:
+    except Exception:
         logging.exception("An exception occurred that forced the application to close")
         raise
 

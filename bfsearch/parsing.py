@@ -110,7 +110,7 @@ def verifyNonEmptyDict(value, excep):
 def verifyValidString(value, excep):
     if type(value) is str:
         value = value.strip()
-        if value != '' and value != data.emptyKey: # data.emptyKey is reserved
+        if value != '' and value != data.emptyKey:  # data.emptyKey is reserved
             return value
     raise excep
 
@@ -250,7 +250,7 @@ def buildData():
         pokemondict = {}
         for pname, pentries in pokemon.items():
             if pname in sets.keys():
-                pokemonsets = verifyMany(verifyNonEmptyList(pentries, IDE(datafile, "trainers.empty.set_list", tid, pname)), verifyIntPos, IDE(datafile, "trainers.invalid.set_list", tid, pname)) 
+                pokemonsets = verifyMany(verifyNonEmptyList(pentries, IDE(datafile, "trainers.empty.set_list", tid, pname)), verifyIntPos, IDE(datafile, "trainers.invalid.set_list", tid, pname))
                 if pname not in pokemondict.keys():
                     pokemondict[pname] = {}
                 for pokemonset in pokemonsets:

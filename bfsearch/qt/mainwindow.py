@@ -7,7 +7,7 @@ from PySide6.QtWidgets import QApplication, QVBoxLayout, QWidget, QTabWidget, QM
 from PySide6.QtGui import QIcon, QAction, QGuiApplication
 from PySide6.QtCore import Qt
 
-from bfsearch import core, data, translate, settings
+from bfsearch import data, translate, settings
 from bfsearch.translate import tr
 from bfsearch.qt import browse, search, browsehall
 
@@ -119,7 +119,7 @@ class Window(QMainWindow):
         prettyDict = translate.prettyLangsDict()
         note = tr("toolbar.button.language.note")
         if len(prettyDict) <= 1:
-            note +="\n" + tr("toolbar.button.language.note.single")
+            note += "\n" + tr("toolbar.button.language.note.single")
         prettyLang, ok = QInputDialog.getItem(self, tr("toolbar.button.language.tooltip"), note, prettyDict.keys(), translate.currentLangIndex(), False)
         if ok and prettyLang:
             lang = prettyDict[prettyLang]

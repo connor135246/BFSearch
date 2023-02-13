@@ -3,7 +3,7 @@
 
 from enum import Enum
 
-from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QGroupBox, QWidget, QLabel, QComboBox, QPushButton, QListView, QSizePolicy
+from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QGroupBox, QLabel, QComboBox, QPushButton, QListView, QSizePolicy
 from PySide6.QtGui import QStandardItemModel, QStandardItem
 from PySide6.QtCore import Qt
 
@@ -257,8 +257,8 @@ class SearchPage(browse.SharedPageElements):
 
         searchResults = searchByStage[-1][2]
         currentResults = data.groupUniquePokemon(searchResults)
-        self.currentResultsA = sorted(currentResults, key = lambda unique : unique[0].getShowdownNickname())
-        self.currentResultsD = sorted(currentResults, key = lambda unique : unique[0].dexSortValue())
+        self.currentResultsA = sorted(currentResults, key = lambda unique: unique[0].getShowdownNickname())
+        self.currentResultsD = sorted(currentResults, key = lambda unique: unique[0].dexSortValue())
         self.fillResultsCombo()
 
         self.resultsInfo.setText(tr("page.search.resultsBox.done", len(searchResults), len(currentResults)))
@@ -278,7 +278,6 @@ class SearchPage(browse.SharedPageElements):
 
     def emptyResults(self, searchByStage):
         string = tr("page.search.result.none") + "\n\n"
-        prefixCharacter = ">"
         count = 1
         for searchoption, check, result in searchByStage:
             if searchoption is None:

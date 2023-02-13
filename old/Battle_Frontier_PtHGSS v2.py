@@ -603,6 +603,9 @@ def main():
             sets_out.close()
             print ("Output to 'all sets output.txt'.")
 
+        else:
+            print ("-Invalid entry!")
+
         '''
         # print trainers as a dictionary
         elif x == '4':
@@ -631,9 +634,6 @@ def main():
             count_out.write("\n}")
             count_out.close()
         '''
-
-        else:
-            print ("-Invalid entry!")
 
         rewait()        
 

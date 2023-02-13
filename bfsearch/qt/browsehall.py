@@ -3,7 +3,7 @@
 
 import math
 
-from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QLabel, QComboBox, QPushButton, QSpinBox, QGroupBox
+from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QLabel, QComboBox, QSpinBox, QGroupBox
 from PySide6.QtCore import Qt
 
 from bfsearch import core, data

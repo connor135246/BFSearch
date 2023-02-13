@@ -110,11 +110,11 @@
 	"page.generic.clipboardButton": "Copy set to clipboard",
 	"page.generic.clipboardButton.copied": "Copied!",
 	"page.generic.itemCheck": "Hide held items",
-	"page.generic.itemCheck.tooltip": "Check this box if you're in the Battle Castle or Battle Arcade.\nPokémon in those facilities won't use the held items listed here.",
+	"page.generic.itemCheck.tooltip": "Check this box if you're in the Battle Arcade or Battle Castle.\nPokémon in those facilities won't use the held items listed here.",
 	"page.generic.range": "{0} to {1}",
 
 	"page.search.name": "Search Sets",
-	"page.search.tooltip": "Figure out what you're battling against.",
+	"page.search.tooltip": "Figure out what you're battling against in the Battle Tower/Arcade/Castle.",
 	"page.search.info": "This page allows you to search through each individual Pokémon owned by each trainer in the Battle Tower/Arcade/Castle.\nMany trainers have the exact same sets, so only unique results are shown.",
 	"page.search.searchBox": "Search Options",
 	"page.search.item": "Item:",
