@@ -303,7 +303,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
             self.sortedDex = data.setsDexSorted(currentProvider.sets)
             # when the trainer selection updates, tells the species combo box to update
             self.fillComboKeys(self.pokeCombo, self.getSorted())
-            self.setupIVBox(currentProvider.iv, currentProvider.iv)
+            self.setupIVBox(currentProvider.minIV, currentProvider.maxIV)
             self.battlenumCombo.setToolTip(self.battlenumCombo.currentText())
             self.tclassCombo.setToolTip(self.tclassCombo.currentText())
             self.tnameCombo.setToolTip(self.tnameCombo.currentText())
