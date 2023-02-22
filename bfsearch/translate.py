@@ -7,6 +7,7 @@ from json.decoder import JSONDecodeError
 from babel import Locale, UnknownLocaleError
 
 from bfsearch import settings
+from launch import df
 
 
 def tr(key, *args):
@@ -35,8 +36,8 @@ def loadLangFiles():
     currentLang = settings.settings.get(settingsKey, defaultLang)
 
     langFiles.clear()
-    os.makedirs("lang", exist_ok = True)
-    with os.scandir("lang") as iterator:
+    os.makedirs(df("lang"), exist_ok = True)
+    with os.scandir(df("lang")) as iterator:
         for entry in iterator:
             if entry.is_file() and entry.name.endswith(".json"):
                 try:

@@ -7,6 +7,7 @@ from json.decoder import JSONDecodeError
 
 from bfsearch import core, data
 from bfsearch.translate import tr
+from launch import df
 
 
 # data integrity.
@@ -41,7 +42,7 @@ class JsonException(DataException):
 
 def getFileJson(datafile):
     try:
-        return json.load(open("data/" + datafile.name + '.json', 'r', encoding = 'UTF-8'))
+        return json.load(open(df("data/" + datafile.name + '.json'), 'r', encoding = 'UTF-8'))
     except OSError as e:
         raise FileException(datafile, "file", e)
     except JSONDecodeError as e:

@@ -10,6 +10,7 @@ from PySide6.QtCore import Qt
 from bfsearch import data, translate, settings
 from bfsearch.translate import tr
 from bfsearch.qt import browse, search, browsehall
+from launch import df
 
 
 # code for recreating the main window. if the application exits with this code, the main window will be recreated.
@@ -37,7 +38,7 @@ class Window(QMainWindow):
 
         self.resize(750, 623)
         self.setWindowTitle("BFSearch")
-        self.setWindowIcon(QIcon("gui/icon.png"))
+        self.setWindowIcon(QIcon(df("gui/icon.png")))
         self.setCentralWidget(QTabWidget(self))
 
         # toolbar buttons
@@ -45,9 +46,9 @@ class Window(QMainWindow):
         self.toolBar.setToolButtonStyle(Qt.ToolButtonTextUnderIcon)
         self.addToolBar(Qt.ToolBarArea.BottomToolBarArea, self.toolBar)
         # language
-        self.addToolBarButton(QIcon("gui/language.png"), tr("toolbar.button.language.name"), tr("toolbar.button.language.tooltip"), self.language)
+        self.addToolBarButton(QIcon(df("gui/language.png")), tr("toolbar.button.language.name"), tr("toolbar.button.language.tooltip"), self.language)
         # about
-        self.addToolBarButton(QIcon("gui/about.png"), tr("toolbar.button.about.name"), tr("toolbar.button.about.tooltip"), self.about)
+        self.addToolBarButton(QIcon(df("gui/about.png")), tr("toolbar.button.about.name"), tr("toolbar.button.about.tooltip"), self.about)
         # about qt
         self.addToolBarButton(self.style().standardIcon(QStyle.SP_TitleBarMenuButton), tr("toolbar.button.about_qt.name"), tr("toolbar.button.about_qt.tooltip"), QApplication.aboutQt)  # how does this get translated?
 
@@ -94,23 +95,23 @@ class Window(QMainWindow):
 
     def addOtherPages(self):
         self.browseSetsPage = browse.BrowseAllSetsPage(self, data.genericSetProvider(self.data.sets))
-        self.centralWidget().addTab(self.browseSetsPage, QIcon("gui/pokemon.png"), tr("page.all_sets.name"))
+        self.centralWidget().addTab(self.browseSetsPage, QIcon(df("gui/pokemon.png")), tr("page.all_sets.name"))
         self.centralWidget().setTabToolTip(1, tr("page.all_sets.tooltip"))
 
         self.browseTrainerSetsPage = browse.BrowseTrainerSetsPage(self, data.battlenumToGroupedSetProviders(self.data.trainers))
-        self.centralWidget().addTab(self.browseTrainerSetsPage, QIcon("gui/trainers.png"), tr("page.all_sets_by_trainer.name"))
+        self.centralWidget().addTab(self.browseTrainerSetsPage, QIcon(df("gui/trainers.png")), tr("page.all_sets_by_trainer.name"))
         self.centralWidget().setTabToolTip(2, tr("page.all_sets_by_trainer.tooltip"))
 
         self.searchPage = search.SearchPage(self, self.data)
-        self.centralWidget().addTab(self.searchPage, QIcon("gui/search.png"), tr("page.search.name"))
+        self.centralWidget().addTab(self.searchPage, QIcon(df("gui/search.png")), tr("page.search.name"))
         self.centralWidget().setTabToolTip(3, tr("page.search.tooltip"))
 
         self.browseHallSetsPage = browsehall.BrowseAllHallSetsPage(self, data.genericSetProvider(self.data.hall_sets))
-        self.centralWidget().addTab(self.browseHallSetsPage, QIcon("gui/hallpokemon.png"), tr("page.hall_sets.name"))
+        self.centralWidget().addTab(self.browseHallSetsPage, QIcon(df("gui/hallpokemon.png")), tr("page.hall_sets.name"))
         self.centralWidget().setTabToolTip(4, tr("page.hall_sets.tooltip"))
 
         self.calcHallSetsPage = browsehall.CalcHallSetsPage(self, data.typeToRankToHallSets(self.data.hall_sets), data.hallSetGroupToHallSets(self.data.hall_sets))
-        self.centralWidget().addTab(self.calcHallSetsPage, QIcon("gui/hallcalc.png"), tr("page.hall_calc.name"))
+        self.centralWidget().addTab(self.calcHallSetsPage, QIcon(df("gui/hallcalc.png")), tr("page.hall_calc.name"))
         self.centralWidget().setTabToolTip(5, tr("page.hall_calc.tooltip"))
 
         logging.info("Built data!")

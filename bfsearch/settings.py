@@ -2,6 +2,8 @@
 
 import json, logging
 
+from launch import df
+
 
 settings = {}
 
@@ -10,7 +12,7 @@ def load():
     global settings
     try:
         createFile()
-        settings = json.load(open("settings.json", "r", encoding = "UTF-8"))
+        settings = json.load(open(df("settings.json"), "r", encoding = "UTF-8"))
     except Exception:
         logging.exception("Unable to load settings file 'settings.json'")
         settings = {}
@@ -18,7 +20,7 @@ def load():
 
 def createFile():
     try:
-        newConfig = open("settings.json", "x", encoding = "UTF-8")
+        newConfig = open(df("settings.json"), "x", encoding = "UTF-8")
         newConfig.write("{}")
         newConfig.close()
     except FileExistsError:
@@ -27,6 +29,6 @@ def createFile():
 def save():
     global settings
     try:
-        json.dump(settings, open("settings.json", "w", encoding = "UTF-8"), indent = 4)
+        json.dump(settings, open(df("settings.json"), "w", encoding = "UTF-8"), indent = 4)
     except Exception:
         logging.exception("Unable to save settings file 'settings.json'")
