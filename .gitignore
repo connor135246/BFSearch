@@ -3,3 +3,5 @@ __pycache__/
 /data rework/
 /logs/*.log
 settings.json
+/env/
+/build/
