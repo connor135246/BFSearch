@@ -1,7 +1,7 @@
 # translate
 
 
-import glob, json, logging, os
+import json, logging, os
 from json.decoder import JSONDecodeError
 
 from babel import Locale, UnknownLocaleError
@@ -36,24 +36,26 @@ def loadLangFiles():
 
     langFiles.clear()
     os.makedirs("lang", exist_ok = True)
-    for filename in glob.glob('lang/*.json'):
-        try:
-            langFile = json.load(open(filename, "r", encoding = "UTF-8"))
-            identifier = filename[5:-5]
-            if identifier != '':
-                langFiles[identifier] = langFile
-        except OSError as e:
-            logging.warning("Unable to open lang file '%s' - %s", filename, e)
-        except JSONDecodeError as e:
-            logging.warning("Json error when parsing lang file '%s' - %s", filename, e)
-        except TypeError as e:
-            logging.warning("Json error when parsing lang file '%s' - %s", filename, e)
+    with os.scandir("lang") as iterator:
+        for entry in iterator:
+            if entry.is_file() and entry.name.endswith(".json"):
+                try:
+                    langFile = json.load(open(entry.path, "r", encoding = "UTF-8"))
+                    identifier = entry.name[:-5]
+                    if identifier != '':
+                        langFiles[identifier] = langFile
+                except OSError as e:
+                    logging.warning("Unable to open lang file '%s' - %s", entry.name, e)
+                except JSONDecodeError as e:
+                    logging.warning("Json error when parsing lang file '%s' - %s", entry.name, e)
+                except TypeError as e:
+                    logging.warning("Json error when parsing lang file '%s' - %s", entry.name, e)
 
     if defaultLang not in langFiles.keys():
-        raise FileNotFoundError("Missing default language file 'lang\\" + defaultLang + ".json'")
+        raise FileNotFoundError("Missing default language file '" + defaultLang + ".json'")
 
     if currentLang not in langFiles.keys():
-        logging.warning("Missing expected previous language file 'lang\\" + currentLang + ".json', going back to default")
+        logging.warning("Missing expected previous language file '" + currentLang + ".json', going back to default")
         currentLang = defaultLang
         settings.settings[settingsKey] = defaultLang
         settings.save()
