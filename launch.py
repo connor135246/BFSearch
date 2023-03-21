@@ -3,7 +3,7 @@
 
 import logging, datetime, os
 
-from bfsearch.qt import mainwindow
+from bfsearch.tkinter import mainwindow
 from bfsearch import translate, settings
 
 

@@ -367,10 +367,6 @@ class PokeSetWithIV(object):
     def isIdenticalSet(self, other):
         return self.pokeset == other.pokeset and self.iv == other.iv
 
-    # for sorting PSIWs by dex number. for alphabetical sorting, just use getShowdownNickname.
-    def dexSortValue(self):
-        return self.pokeset.species.dex * 10000 + self.pokeset.pset * 100 + 1 + (-1 if self.iv == 31 else self.iv) # put 31 IVs at the start
-
 class TrainersPokeSet(PokeSetWithIV):
     # trainer - a Trainer, pokeset - a PokeSet
     def __init__(self, trainer, pokeset):

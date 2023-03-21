@@ -11,7 +11,7 @@ from bfsearch import core, parsing
 
 class DataHolder(object):
     def __init__(self):
-        # true if it has data!
+        # true if it has no data!
         self.isEmpty = True
 
         # dictionary of '{name}' to Species
@@ -56,8 +56,10 @@ def list_from_double_dict(doubledict):
     return thelist
 
 # digs through a dict of dicts of dicts (and so on) recursively using the given keys.
-# returns None if a key isn't valid.
+# returns None if something isn't valid.
 def digForData(data, keys):
+    if data is None or keys is None:
+        return None
     try:
         try:
             return digForData(data[keys[0]], keys[1:])
