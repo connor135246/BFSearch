@@ -42,7 +42,7 @@ class Window(Tk):
         self.data = data.DataHolder()
 
         self.title("BFSearch")
-        self.bficon = PhotoImage(file = "gui/icon.png")
+        self.bficon = PhotoImage(file = "gui/frontier.png")
         self.wm_iconphoto(True, self.bficon)
         self.minsize(750, 607)
         self.columnconfigure(0, weight = 1)
@@ -57,7 +57,8 @@ class Window(Tk):
         self.tabs = ttk.Notebook(self.mainframe)
         self.tabs.enable_traversal()
         self.tabs.grid(column = 0, row = 0, sticky = (W, N, E, S))
-        self.tabs.add(self.createStartPage(), text = tr("page.welcome.name"), image = self.bficon, compound = 'left')
+        self.starticon = PhotoImage(file = "gui/icon.png")
+        self.tabs.add(self.createStartPage(), text = tr("page.welcome.name"), image = self.starticon, compound = 'left')
 
         self.toolbar = Toolbar(self.mainframe)
         self.toolbar.grid(column = 0, row = 1, sticky = (W, N, E, S))

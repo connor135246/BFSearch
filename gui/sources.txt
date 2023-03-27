@@ -14,3 +14,5 @@ hallpokemon.png
 https://archives.bulbagarden.net/wiki/File:Spr_4p_461_m.png
 hallcalc.png
 https://archives.bulbagarden.net/wiki/File:Spr_Pt_Argenta.png
+frontier.png
+https://archives.bulbagarden.net/wiki/File:JohtoSinnoh_BF.png
