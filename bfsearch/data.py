@@ -2,7 +2,7 @@
 
 
 import logging
-from operator import itemgetter
+from operator import itemgetter, attrgetter
 
 from bfsearch import core, parsing
 
@@ -81,7 +81,7 @@ def speciesAlphaSortedList(species):
     return list(speciesAlphaSorted(species).values())
 
 def speciesDexSorted(species):
-    return dict(sorted(species.items(), key = lambda item: item[1].dex))
+    return dict(sorted(species.items(), key = lambda item: attrgetter("dex", "name")(item[1])))
 
 def speciesDexSortedList(species):
     return list(speciesDexSorted(species).values())
@@ -96,7 +96,7 @@ def setsDexSorted(sets):
     sorteddoubledict = {}
     for key, nextDict in sets.items():
         sorteddoubledict[key] = sorted_dict(nextDict)
-    return dict(sorted(sorteddoubledict.items(), key = lambda subdict: subdict[1][list(subdict[1].keys())[0]].species.dex))
+    return dict(sorted(sorteddoubledict.items(), key = lambda subdict: attrgetter("species.dex", "species.name")(list(subdict[1].values())[0])))
 
 def setsDexSortedList(sets):
     return list_from_double_dict(setsDexSorted(sets))
@@ -114,7 +114,7 @@ def hallSetsAlphaSortedList(hall_sets):
     return list(hallSetsAlphaSorted(hall_sets).values())
 
 def hallSetsDexSorted(hall_sets):
-    return dict(sorted(hall_sets.items(), key = lambda item: item[1].species.dex))
+    return dict(sorted(hall_sets.items(), key = lambda item: attrgetter("species.dex", "species.name")(item[1])))
 
 def hallSetsDexSortedList(hall_sets):
     return list(hallSetsDexSorted(hall_sets).values())
