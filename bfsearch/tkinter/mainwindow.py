@@ -166,21 +166,23 @@ class Toolbar(ttk.Frame):
             self.clipboard_append("https://calc.pokemonshowdown.com/index.html?gen=4")
 
     def showLang(self):
-        prettyDict = translate.prettyLangsDict()
+        langs = translate.langs()
         note = tr("toolbar.button.language.note")
-        if len(prettyDict) <= 1:
+        if len(langs) <= 1:
             note += "\n" + tr("toolbar.button.language.note.single")
-        langdialog = ComboboxDialog(self._root(), tr("toolbar.button.language.name"), note, "gui/language.png", [tr("toolbar.button.ok"), tr("toolbar.button.cancel")], contents = prettyDict.keys(), default = translate.currentLangIndex())
+        langdialog = ComboboxDialog(self._root(), tr("toolbar.button.language.name"), note, "gui/language.png", [tr("toolbar.button.ok"), tr("toolbar.button.cancel")], contents = langs, default = translate.currentLangIndex())
         pressed, combo = langdialog.show()
-        if pressed == 0 and combo in prettyDict.keys():
-            lang = prettyDict[combo]
-            if lang != translate.currentLang:
-                translate.currentLang = lang
-                logging.info("Changed language!")
-                settings.settings[translate.settingsKey] = lang
-                settings.save()
-                CURRENT_CODE[0] = RECREATE_CODE
-                self._root().destroy()
+        if pressed == 0:
+            if combo in langs:
+                if combo != translate.currentLang:
+                    translate.currentLang = combo
+                    logging.info("Changed language!")
+                    settings.settings[translate.settingsKey] = combo
+                    settings.save()
+                    CURRENT_CODE[0] = RECREATE_CODE
+                    self._root().destroy()
+            else:
+                logging.warning(f"Invalid language selection: '{combo}'")
 
 
 # a dialog with text, and image, and buttons. inspired by/copied from tkinter.simpledialog.SimpleDialog.

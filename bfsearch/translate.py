@@ -4,8 +4,6 @@
 import json, logging, os
 from json.decoder import JSONDecodeError
 
-from babel import Locale, UnknownLocaleError
-
 from bfsearch import settings
 
 
@@ -14,7 +12,7 @@ def tr(key, *args):
 
 
 settingsKey = "previous_language"
-defaultLang = "en_US"
+defaultLang = "English (United States)"
 langFiles = {}
 currentLang = defaultLang
 
@@ -64,19 +62,6 @@ def loadLangFiles():
 
 def langs():
     return langFiles.keys()
-
-def prettyLangsDict():
-    prettyDict = {}
-    for lang in langs():
-        try:
-            locale = Locale.parse(lang)
-            prettyName = locale.get_display_name(locale)
-        except UnknownLocaleError:
-            prettyName = lang
-        except ValueError:
-            prettyName = lang
-        prettyDict[prettyName + " [" + lang + ".json]"] = lang
-    return prettyDict
 
 def currentLangIndex():
     try:
