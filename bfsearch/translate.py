@@ -31,7 +31,7 @@ def getTranslation(key):
 
 
 def loadLangFiles():
-    global settingsKey, defaultLang, langFiles, currentLang
+    global currentLang
     currentLang = settings.settings.get(settingsKey, defaultLang)
 
     langFiles.clear()
@@ -40,10 +40,11 @@ def loadLangFiles():
         for entry in iterator:
             if entry.is_file() and entry.name.endswith(".json"):
                 try:
-                    langFile = json.load(open(entry.path, "r", encoding = "UTF-8"))
-                    identifier = entry.name[:-5]
-                    if identifier != '':
-                        langFiles[identifier] = langFile
+                    with open(entry.path, "r", encoding = "UTF-8") as file:
+                        langFile = json.load(file)
+                        identifier = entry.name[:-5]
+                        if identifier != '':
+                            langFiles[identifier] = langFile
                 except OSError as e:
                     logging.warning("Unable to open lang file '%s' - %s", entry.name, e)
                 except JSONDecodeError as e:

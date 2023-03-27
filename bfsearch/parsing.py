@@ -41,7 +41,8 @@ class JsonException(DataException):
 
 def getFileJson(datafile):
     try:
-        return json.load(open("data/" + datafile.name + '.json', 'r', encoding = 'UTF-8'))
+        with open("data/" + datafile.name + '.json', 'r', encoding = 'UTF-8') as file:
+            return json.load(file)
     except OSError as e:
         raise FileException(datafile, "file", e)
     except JSONDecodeError as e:
