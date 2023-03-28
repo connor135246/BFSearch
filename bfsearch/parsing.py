@@ -303,9 +303,6 @@ def buildData():
             if len(set(evs)) < len(evs):
                 raise IDE(datafile, "hall_sets.duplicate_entry", name, 'evs', trSL)
 
-        if len(evs) == 3:
-            print(hid)
-
         if name in hall_sets.keys():
             raise IDE(datafile, "hall_sets.duplicate", 'species', name)
         hall_sets[name] = core.HallPokeSet(hid, hallsetgroup, species[name], nature, item, moves, core.EVStats(evs))
