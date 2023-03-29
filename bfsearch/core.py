@@ -309,6 +309,29 @@ class BattleNum(Enum):
     def isBrainBattle(self):
         return self == BattleNum.e3 or self == BattleNum.e7
 
+# a facility and its rules
+
+class Facility(Enum):
+    # normal facilities - Any_Normal represents all 3
+    Tower = 0
+    Arcade = 1
+    Castle = 2
+    Any_Normal = 3
+    # factory
+    Factory_50 = 4
+    Factory_Open = 5
+    # hall is not necessary - trainer doesn't matter in hall
+
+    def level(self):
+        return 100 if self == Facility.Factory_Open else 50
+    def hideItem(self):
+        return self == Facility.Arcade or self == Facility.Castle
+
+    def isNormal(self):
+        return self == Facility.Tower or self == Facility.Arcade or self == Facility.Castle or self == Facility.Any_Normal
+    def isFactory(self):
+        return self == Facility.Factory_50 or self == Facility.Factory_Open
+
 # base class of trainer that doesn't have tid, tclass, or tname.
 class SetProvider(object):
     # minIV - a number, maxIV - a number, battlenums - a list of BattleNum, sets - a dictionary of '{name}' to dictionary of '{pset}' to PokeSet
@@ -328,13 +351,14 @@ class SetProvider(object):
         return self.minIV == other.minIV and self.maxIV == other.maxIV and self.battlenums == other.battlenums and self.sets == other.sets
 
 class Trainer(SetProvider):
-    # tid - a number, iv - a number, tclass - a string, tname - a string, battlenums - a list of BattleNum, sets - a dictionary of '{name}' to dictionary of '{pset}' to PokeSet
-    def __init__(self, tid, iv, tclass, tname, battlenums, sets):
+    # tid - a number, iv - a number, tclass - a string, tname - a string, battlenums - a list of BattleNum, sets - a dictionary of '{name}' to dictionary of '{pset}' to PokeSet, facility - a Facility
+    def __init__(self, tid, iv, tclass, tname, battlenums, sets, facility):
         SetProvider.__init__(self, iv, iv, battlenums, sets)
         self.tid = tid
         self.iv = iv
         self.tclass = tclass
         self.tname = tname
+        self.facility = facility
 
     def __str__(self):
         return f"{self.tclass} {self.tname}"

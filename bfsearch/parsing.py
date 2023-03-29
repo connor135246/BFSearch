@@ -16,6 +16,7 @@ class DataFile(IntEnum):
     sets = 1
     trainers = 2
     hall_sets = 3
+    factory_trainers = 4
 
 class DataException(Exception):
     def __init__(self, datafile, messagepart, *args):
@@ -154,7 +155,7 @@ def buildData():
     trSL = tr("parsing.error.piece.string_list")
     trPN = tr("parsing.error.piece.positive_number")
 
-    species = {}
+    species = data.ndict()
     datafile = DataFile.species
     raw_species_data = getFileJson(datafile)
 
@@ -180,7 +181,7 @@ def buildData():
         species[name] = core.Species(dex, name, types, speed, abilities)
 
 
-    sets = {}
+    sets = data.ndict()
     datafile = DataFile.sets
     raw_sets_data = getFileJson(datafile)
 
@@ -217,14 +218,22 @@ def buildData():
         if len(set(evs)) < len(evs):
             raise IDE(datafile, "sets.duplicate_entry", name, 'evs', trSL)
 
-        if name not in sets.keys():
-            sets[name] = {}
         if pset in sets[name].keys():
             raise IDE(datafile, "sets.duplicate.for_species", 'set', pset, name)
         sets[name][pset] = core.PokeSet(sid, setgroup, species[name], pset, nature, item, moves, core.EVStats(evs))
 
 
-    trainers = {}
+    facilities = data.ndict()
+
+    def putTrainer(facility, trainer):
+        for tclass, nextDict in facilities[facility].items():
+            for tname, other_trainer in nextDict.items():
+                if trainer.tclass == other_trainer.tclass and trainer.tname == other_trainer.tname:
+                    raise IDE(datafile, f"{datafile.name}.duplicate.for_class", 'name', trainer.tname, trainer.tclass)
+                if trainer.tid == other_trainer.tid:
+                    raise IDE(datafile, f"{datafile.name}.duplicate", 'id', trainer.tid)
+        facilities[facility][trainer.tclass][trainer.tname] = trainer
+
     datafile = DataFile.trainers
     raw_trainer_data = getFileJson(datafile)
 
@@ -232,10 +241,13 @@ def buildData():
         path = '{"trainers":[{*}]}'
 
         tid = verifyIntPos(getDictKey(trainer_obj, 'id', datafile, path), IDE(datafile, "trainers.missing.by_name", getDictKey(trainer_obj, 'class', datafile, path), getDictKey(trainer_obj, 'name', datafile, path), 'id', trPN))
-        for atclass in trainers.keys():
-            for atname in trainers[atclass].keys():
-                if tid == trainers[atclass][atname].tid:
-                    raise IDE(datafile, "trainers.duplicate", 'id', tid)
+
+        try:
+            facility = verifyEnumName(getDictKey(trainer_obj, 'facility', datafile, path), core.Facility, IDE(datafile, "trainers.invalid", tid, 'facility', getDictKey(trainer_obj, 'facility', datafile, path)))
+            if not facility.isNormal():
+                raise IDE(datafile, "trainers.invalid", tid, 'facility', facility)
+        except MissingDataException:
+            facility = core.Facility.Any_Normal
 
         iv = verifyIntRange(getDictKey(trainer_obj, 'iv', datafile, path), 0, 31, IDE(datafile, "trainers.missing.range", tid, 'iv', 0, 31))
 
@@ -248,12 +260,10 @@ def buildData():
             battles[i] = verifyEnumValue(str(battles[i]), core.BattleNum, IDE(datafile, "trainers.invalid_entry.of", tid, battles[i], 'battles', trSL))
 
         pokemon = verifyNonEmptyDict(getDictKey(trainer_obj, 'pokemon', datafile, path), IDE(datafile, "trainers.empty", tid, 'pokemon', trOL))
-        pokemondict = {}
+        pokemondict = data.ndict()
         for pname, pentries in pokemon.items():
             if pname in sets.keys():
                 pokemonsets = verifyMany(verifyNonEmptyList(pentries, IDE(datafile, "trainers.empty.set_list", tid, pname)), verifyIntPos, IDE(datafile, "trainers.invalid.set_list", tid, pname))
-                if pname not in pokemondict.keys():
-                    pokemondict[pname] = {}
                 for pokemonset in pokemonsets:
                     if pokemonset in sets[pname].keys():
                         pokemondict[pname][pokemonset] = sets[pname][pokemonset]
@@ -262,14 +272,16 @@ def buildData():
             else:
                 raise IDE(datafile, "trainers.unregistered.species", tid, pname)
 
-        if tclass not in trainers.keys():
-            trainers[tclass] = {}
-        if tname in trainers[tclass].keys():
-            raise IDE(datafile, "trainers.duplicate.for_class", 'name', tname, tclass)
-        trainers[tclass][tname] = core.Trainer(tid, iv, tclass, tname, battles, pokemondict)
+        trainer = core.Trainer(tid, iv, tclass, tname, battles, pokemondict, facility)
+        if facility == core.Facility.Any_Normal:
+            putTrainer(core.Facility.Tower, trainer)
+            putTrainer(core.Facility.Arcade, trainer)
+            putTrainer(core.Facility.Castle, trainer)
+        else:
+            putTrainer(facility, trainer)
 
 
-    hall_sets = {}
+    hall_sets = data.ndict()
     datafile = DataFile.hall_sets
     raw_hall_sets_data = getFileJson(datafile)
 
@@ -308,4 +320,48 @@ def buildData():
         hall_sets[name] = core.HallPokeSet(hid, hallsetgroup, species[name], nature, item, moves, core.EVStats(evs))
 
 
-    return (species, sets, trainers, hall_sets)
+    datafile = DataFile.factory_trainers
+    raw_factory_trainer_data = getFileJson(datafile)
+
+    for factory_trainer_obj in verifyNonEmptyList(getDictKey(raw_factory_trainer_data, 'factory_trainers', datafile, "{*}"), IDE(datafile, "datafile", 'factory_trainers', trOL)):
+        path = '{"factory_trainers":[{*}]}'
+
+        fid = verifyIntPos(getDictKey(factory_trainer_obj, 'id', datafile, path), IDE(datafile, "factory_trainers.missing.by_name", getDictKey(factory_trainer_obj, 'class', datafile, path), getDictKey(factory_trainer_obj, 'name', datafile, path), 'id', trPN))
+
+        iv = verifyIntRange(getDictKey(factory_trainer_obj, 'iv', datafile, path), 0, 31, IDE(datafile, "factory_trainers.missing.range", fid, 'iv', 0, 31))
+
+        tclass = verifyValidString(getDictKey(factory_trainer_obj, 'class', datafile, path), IDE(datafile, "factory_trainers.missing", fid, 'class', trS))
+
+        tname = verifyValidString(getDictKey(factory_trainer_obj, 'name', datafile, path), IDE(datafile, "factory_trainers.missing", fid, 'name', trS))
+
+        battles = verifyNonEmptyList(getDictKey(factory_trainer_obj, 'battles', datafile, path), IDE(datafile, "factory_trainers.empty", fid, 'battles', trSL))
+        for i in range(len(battles)):
+            battles[i] = verifyEnumValue(str(battles[i]), core.BattleNum, IDE(datafile, "factory_trainers.invalid_entry.of", fid, battles[i], 'battles', trSL))
+
+        def getBySetGroups(setgroups):
+            result = data.ndict()
+            for name, nextDict in sets.items():
+                for pset, pokeset in nextDict.items():
+                    if pokeset.setgroup in setgroups:
+                        result[name][pset] = pokeset
+            return result
+
+        setgroups50 = verifyNonEmptyList(getDictKey(factory_trainer_obj, 'set_groups_level_50', datafile, path), IDE(datafile, "factory_trainers.empty", fid, 'set_groups_level_50', trSL))
+        for i in range(len(setgroups50)):
+            setgroups50[i] = verifyEnumName(str(setgroups50[i]), core.SetGroup, IDE(datafile, "factory_trainers.invalid_entry.of", fid, setgroups50[i], 'set_groups_level_50', trSL))
+        initSetGroups50 = getBySetGroups(setgroups50)
+        initSetGroups50 = verifyLen(initSetGroups50, 1, IDE(datafile, "factory_trainers.empty.sets", fid, 'set_groups_level_50'))
+
+        setgroupsOpen = verifyNonEmptyList(getDictKey(factory_trainer_obj, 'set_groups_open_level', datafile, path), IDE(datafile, "factory_trainers.empty", fid, 'set_groups_open_level', trSL))
+        for i in range(len(setgroupsOpen)):
+            setgroupsOpen[i] = verifyEnumName(str(setgroupsOpen[i]), core.SetGroup, IDE(datafile, "factory_trainers.invalid_entry.of", fid, setgroupsOpen[i], 'set_groups_open_level', trSL))
+        initSetGroupsOpen = getBySetGroups(setgroupsOpen)
+        initSetGroupsOpen = verifyLen(initSetGroupsOpen, 1, IDE(datafile, "factory_trainers.empty.sets", fid, 'set_groups_open_level'))
+
+        factory_trainer_50 = core.Trainer(fid, iv, tclass, tname, battles, initSetGroups50, core.Facility.Factory_50)
+        putTrainer(core.Facility.Factory_50, factory_trainer_50)
+        factory_trainer_open = core.Trainer(fid, iv, tclass, tname, battles, initSetGroupsOpen, core.Facility.Factory_Open)
+        putTrainer(core.Facility.Factory_Open, factory_trainer_open)
+
+
+    return (species, sets, facilities, hall_sets)

@@ -1,0 +1,6364 @@
+{
+	"factory_trainers": [
+		{
+			"id": 1,
+			"iv": 0,
+			"class": "Youngster",
+			"name": "Jim",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 2,
+			"iv": 0,
+			"class": "Youngster",
+			"name": "Erroll",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 3,
+			"iv": 0,
+			"class": "Youngster",
+			"name": "Casimir",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 4,
+			"iv": 0,
+			"class": "Lass",
+			"name": "Cameron",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 5,
+			"iv": 0,
+			"class": "Lass",
+			"name": "Peaches",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 6,
+			"iv": 0,
+			"class": "Lass",
+			"name": "Yasmin",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 7,
+			"iv": 0,
+			"class": "School Kid ♂",
+			"name": "Foster",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 8,
+			"iv": 0,
+			"class": "School Kid ♂",
+			"name": "Ken",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 9,
+			"iv": 0,
+			"class": "School Kid ♂",
+			"name": "Owen",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 10,
+			"iv": 0,
+			"class": "School Kid ♀",
+			"name": "Marcy",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 11,
+			"iv": 0,
+			"class": "School Kid ♀",
+			"name": "Shelly",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 12,
+			"iv": 0,
+			"class": "School Kid ♀",
+			"name": "Aspen",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 13,
+			"iv": 0,
+			"class": "Rich Boy",
+			"name": "Matt",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 14,
+			"iv": 0,
+			"class": "Rich Boy",
+			"name": "Alvan",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 15,
+			"iv": 0,
+			"class": "Rich Boy",
+			"name": "Asa",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 16,
+			"iv": 0,
+			"class": "Lady",
+			"name": "Isabel",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 17,
+			"iv": 0,
+			"class": "Lady",
+			"name": "Nichole",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 18,
+			"iv": 0,
+			"class": "Lady",
+			"name": "Juanita",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 19,
+			"iv": 0,
+			"class": "Camper",
+			"name": "Bernard",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 20,
+			"iv": 0,
+			"class": "Camper",
+			"name": "Herbert",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 21,
+			"iv": 0,
+			"class": "Camper",
+			"name": "Colbert",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 22,
+			"iv": 0,
+			"class": "Picnicker",
+			"name": "Maggie",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 23,
+			"iv": 0,
+			"class": "Picnicker",
+			"name": "Melanie",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 24,
+			"iv": 0,
+			"class": "Picnicker",
+			"name": "Ann",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 25,
+			"iv": 0,
+			"class": "Tuber ♂",
+			"name": "Manford",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 26,
+			"iv": 0,
+			"class": "Tuber ♂",
+			"name": "Hank",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 27,
+			"iv": 0,
+			"class": "Tuber ♂",
+			"name": "Percy",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 28,
+			"iv": 0,
+			"class": "Tuber ♀",
+			"name": "Dakota",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 29,
+			"iv": 0,
+			"class": "Tuber ♀",
+			"name": "Jenny",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 30,
+			"iv": 0,
+			"class": "Tuber ♀",
+			"name": "Tia",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 31,
+			"iv": 0,
+			"class": "Guitarist",
+			"name": "Malcolm",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 32,
+			"iv": 0,
+			"class": "Guitarist",
+			"name": "Tad",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 33,
+			"iv": 0,
+			"class": "Guitarist",
+			"name": "Concord",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 34,
+			"iv": 0,
+			"class": "Idol",
+			"name": "Penny",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 35,
+			"iv": 0,
+			"class": "Idol",
+			"name": "Lana",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 36,
+			"iv": 0,
+			"class": "Idol",
+			"name": "Crimson",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 37,
+			"iv": 0,
+			"class": "Pokéfan ♂",
+			"name": "Ewan",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 38,
+			"iv": 0,
+			"class": "Pokéfan ♂",
+			"name": "Kane",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 39,
+			"iv": 0,
+			"class": "Pokéfan ♂",
+			"name": "Theo",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 40,
+			"iv": 0,
+			"class": "Pokéfan ♀",
+			"name": "Alexia",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 41,
+			"iv": 0,
+			"class": "Pokéfan ♀",
+			"name": "Luna",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 42,
+			"iv": 0,
+			"class": "Pokéfan ♀",
+			"name": "Celene",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 43,
+			"iv": 0,
+			"class": "Waiter",
+			"name": "Cyan",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 44,
+			"iv": 0,
+			"class": "Waiter",
+			"name": "Indigo",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 45,
+			"iv": 0,
+			"class": "Waiter",
+			"name": "Orin",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 46,
+			"iv": 0,
+			"class": "Waitress",
+			"name": "Ashley",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 47,
+			"iv": 0,
+			"class": "Waitress",
+			"name": "Noelle",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 48,
+			"iv": 0,
+			"class": "Waitress",
+			"name": "Kandace",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 49,
+			"iv": 0,
+			"class": "Bug Catcher",
+			"name": "Floyd",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 50,
+			"iv": 0,
+			"class": "Bug Catcher",
+			"name": "Hoffman",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 51,
+			"iv": 0,
+			"class": "Bug Catcher",
+			"name": "Amadeus",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 52,
+			"iv": 0,
+			"class": "Ninja Boy",
+			"name": "Shia",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 53,
+			"iv": 0,
+			"class": "Ninja Boy",
+			"name": "Vincent",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 54,
+			"iv": 0,
+			"class": "Ninja Boy",
+			"name": "Pierre",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 55,
+			"iv": 0,
+			"class": "Poké Kid",
+			"name": "Alice",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 56,
+			"iv": 0,
+			"class": "Poké Kid",
+			"name": "Anita",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 57,
+			"iv": 0,
+			"class": "Poké Kid",
+			"name": "Allison",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 58,
+			"iv": 0,
+			"class": "Fisherman",
+			"name": "Kiefer",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 59,
+			"iv": 0,
+			"class": "Fisherman",
+			"name": "Basil",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 60,
+			"iv": 0,
+			"class": "Ruin Maniac",
+			"name": "Henrik",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 61,
+			"iv": 0,
+			"class": "Ruin Maniac",
+			"name": "Aubry",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 62,
+			"iv": 0,
+			"class": "Collector",
+			"name": "Upton",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 63,
+			"iv": 0,
+			"class": "Collector",
+			"name": "Emil",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 64,
+			"iv": 0,
+			"class": "Parasol Lady",
+			"name": "Bridget",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 65,
+			"iv": 0,
+			"class": "Parasol Lady",
+			"name": "Blanche",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 66,
+			"iv": 0,
+			"class": "Parasol Lady",
+			"name": "Colette",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 67,
+			"iv": 0,
+			"class": "Beauty",
+			"name": "Tiffany",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 68,
+			"iv": 0,
+			"class": "Beauty",
+			"name": "Britney",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 69,
+			"iv": 0,
+			"class": "Beauty",
+			"name": "Harmony",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 70,
+			"iv": 0,
+			"class": "Aroma Lady",
+			"name": "Lucy",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 71,
+			"iv": 0,
+			"class": "Aroma Lady",
+			"name": "Jackie",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 72,
+			"iv": 0,
+			"class": "Aroma Lady",
+			"name": "Kara",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 73,
+			"iv": 0,
+			"class": "Guitarist",
+			"name": "Bernie",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 74,
+			"iv": 0,
+			"class": "Guitarist",
+			"name": "Curtis",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 75,
+			"iv": 0,
+			"class": "Bird Keeper",
+			"name": "Nancy",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 76,
+			"iv": 0,
+			"class": "Bird Keeper",
+			"name": "Trinity",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 77,
+			"iv": 0,
+			"class": "Bird Keeper",
+			"name": "Shawna",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 78,
+			"iv": 0,
+			"class": "Sailor",
+			"name": "Layton",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 79,
+			"iv": 0,
+			"class": "Sailor",
+			"name": "Godwin",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 80,
+			"iv": 0,
+			"class": "Hiker",
+			"name": "Everett",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 81,
+			"iv": 0,
+			"class": "Hiker",
+			"name": "Raiden",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 82,
+			"iv": 0,
+			"class": "Idol",
+			"name": "Ada",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 83,
+			"iv": 0,
+			"class": "Idol",
+			"name": "Annie",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 84,
+			"iv": 0,
+			"class": "Idol",
+			"name": "Basia",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 85,
+			"iv": 0,
+			"class": "Jogger",
+			"name": "Steve",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 86,
+			"iv": 0,
+			"class": "Jogger",
+			"name": "Dave",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 87,
+			"iv": 0,
+			"class": "Worker",
+			"name": "Shane",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 88,
+			"iv": 0,
+			"class": "Worker",
+			"name": "Benji",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 89,
+			"iv": 0,
+			"class": "Rancher",
+			"name": "Pierce",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 90,
+			"iv": 0,
+			"class": "Rancher",
+			"name": "Etienne",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 91,
+			"iv": 0,
+			"class": "Rancher",
+			"name": "Leon",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 92,
+			"iv": 0,
+			"class": "Cowgirl",
+			"name": "Doris",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 93,
+			"iv": 0,
+			"class": "Cowgirl",
+			"name": "Paisley",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 94,
+			"iv": 0,
+			"class": "Cowgirl",
+			"name": "Leslie",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 95,
+			"iv": 0,
+			"class": "Cameraman",
+			"name": "Hudson",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 96,
+			"iv": 0,
+			"class": "Cameraman",
+			"name": "Xenon",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 97,
+			"iv": 0,
+			"class": "Cameraman",
+			"name": "Amleth",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 98,
+			"iv": 0,
+			"class": "Reporter",
+			"name": "Dot",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 99,
+			"iv": 0,
+			"class": "Reporter",
+			"name": "Marble",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 100,
+			"iv": 0,
+			"class": "Reporter",
+			"name": "Gingham",
+			"battles": [
+				"1 - 6",
+				"8 - 13"
+			],
+			"set_groups_level_50": [
+				"A"
+			],
+			"set_groups_open_level": [
+				"C1"
+			]
+		},
+		{
+			"id": 101,
+			"iv": 4,
+			"class": "Cyclist ♂",
+			"name": "Gaspar",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 102,
+			"iv": 4,
+			"class": "Cyclist ♂",
+			"name": "Ignatio",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 103,
+			"iv": 4,
+			"class": "Cyclist ♀",
+			"name": "Kaylene",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 104,
+			"iv": 4,
+			"class": "Cyclist ♀",
+			"name": "Kaya",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 105,
+			"iv": 4,
+			"class": "Black Belt",
+			"name": "Clement",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 106,
+			"iv": 4,
+			"class": "Black Belt",
+			"name": "Mason",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 107,
+			"iv": 4,
+			"class": "Battle Girl",
+			"name": "Kodi",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 108,
+			"iv": 4,
+			"class": "Battle Girl",
+			"name": "Aileen",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 109,
+			"iv": 4,
+			"class": "Black Belt",
+			"name": "Jericho",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 110,
+			"iv": 4,
+			"class": "Black Belt",
+			"name": "Harris",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 111,
+			"iv": 4,
+			"class": "Black Belt",
+			"name": "Soren",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 112,
+			"iv": 4,
+			"class": "Battle Girl",
+			"name": "Trina",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 113,
+			"iv": 4,
+			"class": "Battle Girl",
+			"name": "Alta",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 114,
+			"iv": 4,
+			"class": "Battle Girl",
+			"name": "Ingrid",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 115,
+			"iv": 4,
+			"class": "Veteran",
+			"name": "Beck",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 116,
+			"iv": 4,
+			"class": "Veteran",
+			"name": "Eric",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 117,
+			"iv": 4,
+			"class": "Veteran",
+			"name": "Padgett",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 118,
+			"iv": 4,
+			"class": "Socialite",
+			"name": "Barbara",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 119,
+			"iv": 4,
+			"class": "Socialite",
+			"name": "Isabel",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 120,
+			"iv": 4,
+			"class": "Socialite",
+			"name": "Carmen",
+			"battles": [
+				"7",
+				"8 - 13",
+				"15 - 20"
+			],
+			"set_groups_level_50": [
+				"B1"
+			],
+			"set_groups_open_level": [
+				"C2"
+			]
+		},
+		{
+			"id": 121,
+			"iv": 8,
+			"class": "Psychic ♂",
+			"name": "Alpha",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 122,
+			"iv": 8,
+			"class": "Psychic ♂",
+			"name": "Beta",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 123,
+			"iv": 8,
+			"class": "Psychic ♂",
+			"name": "Essie",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 124,
+			"iv": 8,
+			"class": "Psychic ♀",
+			"name": "Amelia",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 125,
+			"iv": 8,
+			"class": "Psychic ♀",
+			"name": "Celine",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 126,
+			"iv": 8,
+			"class": "Psychic ♀",
+			"name": "Jillian",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 127,
+			"iv": 8,
+			"class": "Pokémon Breeder ♂",
+			"name": "Howard",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 128,
+			"iv": 8,
+			"class": "Pokémon Breeder ♂",
+			"name": "Derrell",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 129,
+			"iv": 8,
+			"class": "Pokémon Breeder ♂",
+			"name": "Baldwin",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 130,
+			"iv": 8,
+			"class": "Pokémon Breeder ♀",
+			"name": "Adriana",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 131,
+			"iv": 8,
+			"class": "Pokémon Breeder ♀",
+			"name": "Sonya",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 132,
+			"iv": 8,
+			"class": "Pokémon Breeder ♀",
+			"name": "Tatyana",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 133,
+			"iv": 8,
+			"class": "Gentleman",
+			"name": "Zante",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 134,
+			"iv": 8,
+			"class": "Gentleman",
+			"name": "Giliam",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 135,
+			"iv": 8,
+			"class": "Roughneck",
+			"name": "Rodney",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 136,
+			"iv": 8,
+			"class": "Roughneck",
+			"name": "Rainier",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 137,
+			"iv": 8,
+			"class": "Scientist",
+			"name": "Jean",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 138,
+			"iv": 8,
+			"class": "Scientist",
+			"name": "Brad",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 139,
+			"iv": 8,
+			"class": "Clown",
+			"name": "Francis",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 140,
+			"iv": 8,
+			"class": "Clown",
+			"name": "Prescot",
+			"battles": [
+				"14",
+				"15 - 20",
+				"22 - 27"
+			],
+			"set_groups_level_50": [
+				"B2"
+			],
+			"set_groups_open_level": [
+				"C3"
+			]
+		},
+		{
+			"id": 141,
+			"iv": 12,
+			"class": "Ace Trainer ♂",
+			"name": "Yardley",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 142,
+			"iv": 12,
+			"class": "Ace Trainer ♂",
+			"name": "Stavros",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 143,
+			"iv": 12,
+			"class": "Ace Trainer ♂",
+			"name": "Zane",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 144,
+			"iv": 12,
+			"class": "Ace Trainer ♀",
+			"name": "Kim",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 145,
+			"iv": 12,
+			"class": "Ace Trainer ♀",
+			"name": "Macy",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 146,
+			"iv": 12,
+			"class": "Ace Trainer ♀",
+			"name": "Faun",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 147,
+			"iv": 12,
+			"class": "Pokémon Ranger ♂",
+			"name": "Doyle",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 148,
+			"iv": 12,
+			"class": "Pokémon Ranger ♂",
+			"name": "Duke",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 149,
+			"iv": 12,
+			"class": "Pokémon Ranger ♂",
+			"name": "Deacon",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 150,
+			"iv": 12,
+			"class": "Pokémon Ranger ♀",
+			"name": "Mena",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 151,
+			"iv": 12,
+			"class": "Pokémon Ranger ♀",
+			"name": "Mercy",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 152,
+			"iv": 12,
+			"class": "Pokémon Ranger ♀",
+			"name": "Evita",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 153,
+			"iv": 12,
+			"class": "Dragon Tamer",
+			"name": "Harold",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 154,
+			"iv": 12,
+			"class": "Dragon Tamer",
+			"name": "Herman",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 155,
+			"iv": 12,
+			"class": "Dragon Tamer",
+			"name": "Emmett",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 156,
+			"iv": 12,
+			"class": "Dragon Tamer",
+			"name": "Erich",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 157,
+			"iv": 12,
+			"class": "Ace Trainer ♂ (Snow)",
+			"name": "Garvey",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 158,
+			"iv": 12,
+			"class": "Ace Trainer ♂ (Snow)",
+			"name": "Cruz",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 159,
+			"iv": 12,
+			"class": "Ace Trainer ♀ (Snow)",
+			"name": "Pamela",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 160,
+			"iv": 12,
+			"class": "Ace Trainer ♀ (Snow)",
+			"name": "Daniela",
+			"battles": [
+				"22 - 27",
+				"29 - 34"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4"
+			]
+		},
+		{
+			"id": 161,
+			"iv": 16,
+			"class": "Youngster",
+			"name": "Kaden",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 162,
+			"iv": 16,
+			"class": "Youngster",
+			"name": "Kolby",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 163,
+			"iv": 16,
+			"class": "Lass",
+			"name": "Karissa",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 164,
+			"iv": 16,
+			"class": "Lass",
+			"name": "Liliana",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 165,
+			"iv": 16,
+			"class": "School Kid ♂",
+			"name": "Jonas",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 166,
+			"iv": 16,
+			"class": "School Kid ♂",
+			"name": "Keon",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 167,
+			"iv": 16,
+			"class": "School Kid ♀",
+			"name": "Chelsie",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 168,
+			"iv": 16,
+			"class": "School Kid ♀",
+			"name": "Regina",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 169,
+			"iv": 16,
+			"class": "Rich Boy",
+			"name": "Daulton",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 170,
+			"iv": 16,
+			"class": "Rich Boy",
+			"name": "Hanson",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 171,
+			"iv": 16,
+			"class": "Lady",
+			"name": "Amory",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 172,
+			"iv": 16,
+			"class": "Lady",
+			"name": "Juliana",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 173,
+			"iv": 16,
+			"class": "Bug Catcher",
+			"name": "Camui",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 174,
+			"iv": 16,
+			"class": "Bug Catcher",
+			"name": "Orlando",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 175,
+			"iv": 16,
+			"class": "Ninja Boy",
+			"name": "Zack",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 176,
+			"iv": 16,
+			"class": "Ninja Boy",
+			"name": "Vance",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 177,
+			"iv": 16,
+			"class": "Poké Kid",
+			"name": "Kyla",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 178,
+			"iv": 16,
+			"class": "Poké Kid",
+			"name": "Ruby",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 179,
+			"iv": 16,
+			"class": "Idol",
+			"name": "Kiley",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 180,
+			"iv": 16,
+			"class": "Idol",
+			"name": "Utah",
+			"battles": [
+				"28",
+				"29 - 34",
+				"36 - 41"
+			],
+			"set_groups_level_50": [
+				"C2"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 181,
+			"iv": 20,
+			"class": "Jogger",
+			"name": "Colt",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 182,
+			"iv": 20,
+			"class": "Jogger",
+			"name": "Tory",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 183,
+			"iv": 20,
+			"class": "Fisherman",
+			"name": "Farley",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 184,
+			"iv": 20,
+			"class": "Fisherman",
+			"name": "Mark",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 185,
+			"iv": 20,
+			"class": "Ruin Maniac",
+			"name": "Samuel",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 186,
+			"iv": 20,
+			"class": "Ruin Maniac",
+			"name": "Penn",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 187,
+			"iv": 20,
+			"class": "Collector",
+			"name": "Marquez",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 188,
+			"iv": 20,
+			"class": "Collector",
+			"name": "Arnold",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 189,
+			"iv": 20,
+			"class": "Guitarist",
+			"name": "Fred",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 190,
+			"iv": 20,
+			"class": "Guitarist",
+			"name": "Chase",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 191,
+			"iv": 20,
+			"class": "Bird Keeper",
+			"name": "McKenna",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 192,
+			"iv": 20,
+			"class": "Bird Keeper",
+			"name": "Sally",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 193,
+			"iv": 20,
+			"class": "Sailor",
+			"name": "Casper",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 194,
+			"iv": 20,
+			"class": "Sailor",
+			"name": "Derrian",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 195,
+			"iv": 20,
+			"class": "Hiker",
+			"name": "Monty",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 196,
+			"iv": 20,
+			"class": "Hiker",
+			"name": "Rocky",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 197,
+			"iv": 20,
+			"class": "Policeman",
+			"name": "Reggie",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 198,
+			"iv": 20,
+			"class": "Policeman",
+			"name": "Quincy",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 199,
+			"iv": 20,
+			"class": "PI",
+			"name": "Neil",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 200,
+			"iv": 20,
+			"class": "PI",
+			"name": "Sergei",
+			"battles": [
+				"35",
+				"36 - 41",
+				"43 - 48"
+			],
+			"set_groups_level_50": [
+				"C3"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 201,
+			"iv": 24,
+			"class": "Camper",
+			"name": "Freddy",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 202,
+			"iv": 24,
+			"class": "Camper",
+			"name": "Andre",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 203,
+			"iv": 24,
+			"class": "Picnicker",
+			"name": "Inga",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 204,
+			"iv": 24,
+			"class": "Picnicker",
+			"name": "Tonya",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 205,
+			"iv": 24,
+			"class": "Guitarist",
+			"name": "Tobias",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 206,
+			"iv": 24,
+			"class": "Guitarist",
+			"name": "Cecil",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 207,
+			"iv": 24,
+			"class": "Idol",
+			"name": "Maranda",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 208,
+			"iv": 24,
+			"class": "Idol",
+			"name": "Helene",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 209,
+			"iv": 24,
+			"class": "Pokéfan ♂",
+			"name": "Simon",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 210,
+			"iv": 24,
+			"class": "Pokéfan ♂",
+			"name": "Turner",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 211,
+			"iv": 24,
+			"class": "Pokéfan ♀",
+			"name": "Europa",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 212,
+			"iv": 24,
+			"class": "Pokéfan ♀",
+			"name": "Pandora",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 213,
+			"iv": 24,
+			"class": "Rancher",
+			"name": "Vern",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 214,
+			"iv": 24,
+			"class": "Rancher",
+			"name": "Boris",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 215,
+			"iv": 24,
+			"class": "Cowgirl",
+			"name": "Carly",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 216,
+			"iv": 24,
+			"class": "Cowgirl",
+			"name": "Ginger",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 217,
+			"iv": 24,
+			"class": "Pokémon Breeder ♂",
+			"name": "Peter",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 218,
+			"iv": 24,
+			"class": "Pokémon Breeder ♂",
+			"name": "Tyron",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 219,
+			"iv": 24,
+			"class": "Pokémon Breeder ♀",
+			"name": "Zorya",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 220,
+			"iv": 24,
+			"class": "Pokémon Breeder ♀",
+			"name": "Antonia",
+			"battles": [
+				"42",
+				"43 - 48",
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 221,
+			"iv": 31,
+			"class": "Ace Trainer ♂",
+			"name": "Sawyer",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 222,
+			"iv": 31,
+			"class": "Ace Trainer ♂",
+			"name": "Charlie",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 223,
+			"iv": 31,
+			"class": "Ace Trainer ♀",
+			"name": "Chloe",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 224,
+			"iv": 31,
+			"class": "Ace Trainer ♀",
+			"name": "Daphne",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 225,
+			"iv": 31,
+			"class": "Ace Trainer ♂ (Snow)",
+			"name": "Thad",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 226,
+			"iv": 31,
+			"class": "Ace Trainer ♂ (Snow)",
+			"name": "Lew",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 227,
+			"iv": 31,
+			"class": "Ace Trainer ♀ (Snow)",
+			"name": "Opal",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 228,
+			"iv": 31,
+			"class": "Ace Trainer ♀ (Snow)",
+			"name": "Leda",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 229,
+			"iv": 31,
+			"class": "Pokémon Ranger ♂",
+			"name": "Geoff",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 230,
+			"iv": 31,
+			"class": "Pokémon Ranger ♂",
+			"name": "Gunther",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 231,
+			"iv": 31,
+			"class": "Pokémon Ranger ♀",
+			"name": "Alma",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 232,
+			"iv": 31,
+			"class": "Pokémon Ranger ♀",
+			"name": "Elise",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 233,
+			"iv": 31,
+			"class": "Dragon Tamer",
+			"name": "Harvey",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 234,
+			"iv": 31,
+			"class": "Dragon Tamer",
+			"name": "Nicolas",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 235,
+			"iv": 31,
+			"class": "Black Belt",
+			"name": "Fergus",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 236,
+			"iv": 31,
+			"class": "Black Belt",
+			"name": "Ronni",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 237,
+			"iv": 31,
+			"class": "Battle Girl",
+			"name": "Eve",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 238,
+			"iv": 31,
+			"class": "Battle Girl",
+			"name": "Mariane",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 239,
+			"iv": 31,
+			"class": "Veteran",
+			"name": "Costin",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 240,
+			"iv": 31,
+			"class": "Veteran",
+			"name": "Alfred",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 241,
+			"iv": 31,
+			"class": "Socialite",
+			"name": "Rioha",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 242,
+			"iv": 31,
+			"class": "Socialite",
+			"name": "Janice",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 243,
+			"iv": 31,
+			"class": "Psychic ♂",
+			"name": "Denver",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 244,
+			"iv": 31,
+			"class": "Psychic ♂",
+			"name": "Berkley",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 245,
+			"iv": 31,
+			"class": "Psychic ♀",
+			"name": "Irene",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 246,
+			"iv": 31,
+			"class": "Psychic ♀",
+			"name": "Sylvie",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 247,
+			"iv": 31,
+			"class": "Waiter",
+			"name": "Xander",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 248,
+			"iv": 31,
+			"class": "Waiter",
+			"name": "Warren",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 249,
+			"iv": 31,
+			"class": "Waitress",
+			"name": "Leslie",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 250,
+			"iv": 31,
+			"class": "Waitress",
+			"name": "Kathy",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 251,
+			"iv": 31,
+			"class": "Cameraman",
+			"name": "Darren",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 252,
+			"iv": 31,
+			"class": "Cameraman",
+			"name": "Skip",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 253,
+			"iv": 31,
+			"class": "Reporter",
+			"name": "Katie",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 254,
+			"iv": 31,
+			"class": "Reporter",
+			"name": "Elaine",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 255,
+			"iv": 31,
+			"class": "Cyclist ♂",
+			"name": "Clive",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 256,
+			"iv": 31,
+			"class": "Cyclist ♂",
+			"name": "Ward",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 257,
+			"iv": 31,
+			"class": "Cyclist ♀",
+			"name": "Hilda",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 258,
+			"iv": 31,
+			"class": "Cyclist ♀",
+			"name": "Vanita",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 259,
+			"iv": 31,
+			"class": "PI",
+			"name": "Ralph",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 260,
+			"iv": 31,
+			"class": "PI",
+			"name": "Conway",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 261,
+			"iv": 31,
+			"class": "Idol",
+			"name": "Kristi",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 262,
+			"iv": 31,
+			"class": "Idol",
+			"name": "Trista",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 263,
+			"iv": 31,
+			"class": "Jogger",
+			"name": "Austin",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 264,
+			"iv": 31,
+			"class": "Jogger",
+			"name": "Dimitri",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 265,
+			"iv": 31,
+			"class": "Fisherman",
+			"name": "Delaney",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 266,
+			"iv": 31,
+			"class": "Fisherman",
+			"name": "Keaton",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 267,
+			"iv": 31,
+			"class": "Sailor",
+			"name": "Carlo",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 268,
+			"iv": 31,
+			"class": "Sailor",
+			"name": "Horatio",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 269,
+			"iv": 31,
+			"class": "Hiker",
+			"name": "Lyle",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 270,
+			"iv": 31,
+			"class": "Hiker",
+			"name": "Glen",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 271,
+			"iv": 31,
+			"class": "Ruin Maniac",
+			"name": "Isadore",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 272,
+			"iv": 31,
+			"class": "Ruin Maniac",
+			"name": "Walton",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 273,
+			"iv": 31,
+			"class": "Guitarist",
+			"name": "Roget",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 274,
+			"iv": 31,
+			"class": "Guitarist",
+			"name": "Iggy",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 275,
+			"iv": 31,
+			"class": "Collector",
+			"name": "Leroy",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 276,
+			"iv": 31,
+			"class": "Collector",
+			"name": "Newman",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 277,
+			"iv": 31,
+			"class": "Roughneck",
+			"name": "Ross",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 278,
+			"iv": 31,
+			"class": "Roughneck",
+			"name": "Ron",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 279,
+			"iv": 31,
+			"class": "Scientist",
+			"name": "Irwin",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 280,
+			"iv": 31,
+			"class": "Scientist",
+			"name": "Flynn",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 281,
+			"iv": 31,
+			"class": "Gentleman",
+			"name": "Joachim",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 282,
+			"iv": 31,
+			"class": "Gentleman",
+			"name": "Karston",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 283,
+			"iv": 31,
+			"class": "Worker",
+			"name": "Boyce",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 284,
+			"iv": 31,
+			"class": "Worker",
+			"name": "Tyrell",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 285,
+			"iv": 31,
+			"class": "Clown",
+			"name": "Frank",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 286,
+			"iv": 31,
+			"class": "Clown",
+			"name": "Enzo",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 287,
+			"iv": 31,
+			"class": "Policeman",
+			"name": "Hugh",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 288,
+			"iv": 31,
+			"class": "Policeman",
+			"name": "Kegan",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 289,
+			"iv": 31,
+			"class": "PI",
+			"name": "Chester",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 290,
+			"iv": 31,
+			"class": "PI",
+			"name": "River",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 291,
+			"iv": 31,
+			"class": "Bird Keeper",
+			"name": "Kira",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 292,
+			"iv": 31,
+			"class": "Bird Keeper",
+			"name": "Eliza",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 293,
+			"iv": 31,
+			"class": "Parasol Lady",
+			"name": "Angie",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 294,
+			"iv": 31,
+			"class": "Parasol Lady",
+			"name": "Sami",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 295,
+			"iv": 31,
+			"class": "Beauty",
+			"name": "Nadia",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 296,
+			"iv": 31,
+			"class": "Beauty",
+			"name": "Becky",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 297,
+			"iv": 31,
+			"class": "Aroma Lady",
+			"name": "Elisha",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 298,
+			"iv": 31,
+			"class": "Aroma Lady",
+			"name": "Ambre",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 299,
+			"iv": 31,
+			"class": "Idol",
+			"name": "Cocoa",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 300,
+			"iv": 31,
+			"class": "Idol",
+			"name": "Nissa",
+			"battles": [
+				"50+"
+			],
+			"set_groups_level_50": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			],
+			"set_groups_open_level": [
+				"C1",
+				"C2",
+				"C3",
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		}
+	]
+}

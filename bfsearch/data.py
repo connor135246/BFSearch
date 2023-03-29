@@ -15,24 +15,24 @@ class DataHolder(object):
         # true if it has no data!
         self.isEmpty = True
 
-        # dictionary of '{name}' to Species
+        # dictionary of {name} to Species
         self.species = {}
-        # dictionary of '{name}' to dictionary of '{pset}' to PokeSet
+        # dictionary of {name} to dictionary of {pset} to PokeSet
         self.sets = {}
-        # dictionary of '{tclass}' to dictionary of '{tname}' to Trainer
-        self.trainers = {}
-        # dictionary of '{name}' to HallPokeSet
+        # dictionary of {name} to HallPokeSet
         self.hall_sets = {}
+        # dictionary of {Facility} to dictionary of {tclass} to dictionary of {tname} to Trainer
+        self.facilities = {}
 
     # tries to build data! returns error message.
     def fillerup(self):
         try:
-            self.species, self.sets, self.trainers, self.hall_sets = parsing.buildData()
+            self.species, self.sets, self.facilities, self.hall_sets = parsing.buildData()
             self.isEmpty = False
             logging.info("Parsed data!")
             return ""
         except parsing.DataException as e:
-            self.species, self.sets, self.trainers, self.hall_sets = {}, {}, {}, {}
+            self.species, self.sets, self.facilities, self.hall_sets = {}, {}, {}, {}
             self.isEmpty = True
             logging.warning(e, exc_info = True)
             return e.__class__.__name__ + " - " + str(e)

@@ -46199,6 +46199,7 @@
 		},
 		{
 			"id": 301,
+			"facility": "Tower",
 			"iv": 31,
 			"class": "Tower Tycoon",
 			"name": "Palmer (Silver Print)",
@@ -46219,6 +46220,7 @@
 		},
 		{
 			"id": 302,
+			"facility": "Tower",
 			"iv": 31,
 			"class": "Tower Tycoon",
 			"name": "Palmer (Gold Print)",
@@ -46239,6 +46241,7 @@
 		},
 		{
 			"id": 303,
+			"facility": "Arcade",
 			"iv": 31,
 			"class": "Arcade Star",
 			"name": "Dahlia (Silver Print)",
@@ -46259,6 +46262,7 @@
 		},
 		{
 			"id": 304,
+			"facility": "Arcade",
 			"iv": 31,
 			"class": "Arcade Star",
 			"name": "Dahlia (Gold Print)",
@@ -46279,6 +46283,7 @@
 		},
 		{
 			"id": 305,
+			"facility": "Castle",
 			"iv": 31,
 			"class": "Castle Valet",
 			"name": "Darach (Silver Print)",
@@ -46302,6 +46307,7 @@
 		},
 		{
 			"id": 306,
+			"facility": "Castle",
 			"iv": 31,
 			"class": "Castle Valet",
 			"name": "Darach (Gold Print)",
