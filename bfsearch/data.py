@@ -3,6 +3,7 @@
 
 import logging
 from operator import itemgetter, attrgetter
+from collections import defaultdict
 
 from bfsearch import core, parsing
 
@@ -40,10 +41,10 @@ class DataHolder(object):
 # general methods.
 
 def sorted_dict(adict):
-    return dict(sorted(adict.items(), key = itemgetter(0)))
+    return defaultdict(ndict, sorted(adict.items(), key = itemgetter(0)))
 
 def sorted_double_dict(doubledict):
-    sorteddoubledict = {}
+    sorteddoubledict = ndict()
     for key, nextDict in doubledict.items():
         sorteddoubledict[key] = sorted_dict(nextDict)
     return sorted_dict(sorteddoubledict)
@@ -71,6 +72,9 @@ def digForData(data, keys):
 # empty or generic key in a dict
 emptyKey = "---"
 
+# wow! an auto-nesting dictionary!
+ndict = lambda: defaultdict(ndict)
+
 
 # data sorters.
 
@@ -81,7 +85,7 @@ def speciesAlphaSortedList(species):
     return list(speciesAlphaSorted(species).values())
 
 def speciesDexSorted(species):
-    return dict(sorted(species.items(), key = lambda item: attrgetter("dex", "name")(item[1])))
+    return defaultdict(ndict, sorted(species.items(), key = lambda item: attrgetter("dex", "name")(item[1])))
 
 def speciesDexSortedList(species):
     return list(speciesDexSorted(species).values())
@@ -93,10 +97,10 @@ def setsAlphaSortedList(sets):
     return list_from_double_dict(setsAlphaSorted(sets))
 
 def setsDexSorted(sets):
-    sorteddoubledict = {}
+    sorteddoubledict = ndict()
     for key, nextDict in sets.items():
         sorteddoubledict[key] = sorted_dict(nextDict)
-    return dict(sorted(sorteddoubledict.items(), key = lambda subdict: attrgetter("species.dex", "species.name")(list(subdict[1].values())[0])))
+    return defaultdict(ndict, sorted(sorteddoubledict.items(), key = lambda subdict: attrgetter("species.dex", "species.name")(list(subdict[1].values())[0])))
 
 def setsDexSortedList(sets):
     return list_from_double_dict(setsDexSorted(sets))
@@ -114,7 +118,7 @@ def hallSetsAlphaSortedList(hall_sets):
     return list(hallSetsAlphaSorted(hall_sets).values())
 
 def hallSetsDexSorted(hall_sets):
-    return dict(sorted(hall_sets.items(), key = lambda item: attrgetter("species.dex", "species.name")(item[1])))
+    return defaultdict(ndict, sorted(hall_sets.items(), key = lambda item: attrgetter("species.dex", "species.name")(item[1])))
 
 def hallSetsDexSortedList(hall_sets):
     return list(hallSetsDexSorted(hall_sets).values())
@@ -146,7 +150,7 @@ def allTrainerNames(trainers):
 
 # returns a dict of {tclass} to a list of possible {tnames}. no actual Trainer objects involved.
 def tclassToTName(trainers):
-    tTT = {}
+    tTT = ndict()
     for tclass, nextDict in trainersAlphaSorted(trainers).items():
         tTT[tclass] = list(nextDict.keys())
     return tTT
@@ -157,24 +161,20 @@ def genericSetProvider(sets):
 # returns a triple dict of {BattleNum.value} to {tclass} to {tname} to Trainer.
 # trainers that appear in more than one BattleNum will appear multiple times.
 def battlenumToTrainers(trainers):
-    bTT = {}
+    bTT = ndict()
     bTT[emptyKey] = trainersAlphaSorted(trainers)
     for battlenum in list(core.BattleNum):
-        bTT[battlenum.value] = {}
         for trainer in trainersAlphaSortedList(trainers):
             if battlenum in trainer.battlenums:
-                if trainer.tclass not in bTT[battlenum.value].keys():
-                    bTT[battlenum.value][trainer.tclass] = {}
                 bTT[battlenum.value][trainer.tclass][trainer.tname] = trainer
     return bTT
 
 # returns a dict of {tclass} to "{tname1}, {tname2}, ..." to SetProvider.
 # the purpose is to group together trainers with identical iv, battlenums, and sets. which is quite common.
 def groupedSetProviders(trainers):
-    gSP = {}
+    gSP = ndict()
     for trainer in trainersAlphaSortedList(trainers):
         if trainer.tclass not in gSP.keys():
-            gSP[trainer.tclass] = {}
             gSP[trainer.tclass][trainer.tname] = trainer.asSetProvider()
         else:
             for tnames, setProvider in gSP[trainer.tclass].items():
@@ -189,15 +189,12 @@ def groupedSetProviders(trainers):
 # the unholy combination
 def battlenumToGroupedSetProviders(trainers):
     gSP = groupedSetProviders(trainers)
-    bTGSP = {}
+    bTGSP = ndict()
     bTGSP[emptyKey] = gSP
     for battlenum in list(core.BattleNum):
-        bTGSP[battlenum.value] = {}
         for tclass, nextDict in gSP.items():
             for tnames, setProvider in nextDict.items():
                 if battlenum in setProvider.battlenums:
-                    if tclass not in bTGSP[battlenum.value].keys():
-                        bTGSP[battlenum.value][tclass] = {}
                     bTGSP[battlenum.value][tclass][tnames] = setProvider
     return bTGSP
 
@@ -232,9 +229,8 @@ def everyUniquePokemon(trainers):
 
 # returns a dict of {rank} to {name} to HallPokeSet
 def rankToHallSets(hall_sets):
-    rTHS = {}
+    rTHS = ndict()
     for rank in range(1, 11):
-        rTHS[rank] = {}
         for name, hall_set in hall_sets.items():
             if hall_set.hallsetgroup.appearsInRank(rank):
                 rTHS[rank][name] = hall_set
@@ -243,22 +239,17 @@ def rankToHallSets(hall_sets):
 # returns a dict of {Type} to {rank} to {name} to HallPokeSet
 def typeToRankToHallSets(hall_sets):
     rTHS = rankToHallSets(hall_sets)
-    tTRTHS = {}
+    tTRTHS = ndict()
     for atype in list(core.Type):
-        tTRTHS[atype.name] = {}
         for rank, nextDict in rTHS.items():
             for name, hall_set in nextDict.items():
                 if hall_set.species.hasType(atype):
-                    if rank not in tTRTHS[atype.name].keys():
-                        tTRTHS[atype.name][rank] = {}
                     tTRTHS[atype.name][rank][name] = hall_set
     return tTRTHS
 
 # returns a dict of {HallSetGroup.fullname()} to {name} to HallPokeSet
 def hallSetGroupToHallSets(hall_sets):
-    hSGTHS = {}
+    hSGTHS = ndict()
     for name, hall_set in hall_sets.items():
-        if hall_set.hallsetgroup.fullname() not in hSGTHS.keys():
-            hSGTHS[hall_set.hallsetgroup.fullname()] = {}
         hSGTHS[hall_set.hallsetgroup.fullname()][name] = hall_set
     return hSGTHS
