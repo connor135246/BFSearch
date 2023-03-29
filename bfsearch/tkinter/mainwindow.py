@@ -114,7 +114,7 @@ class Window(Tk):
         self.tabs.add(self.browseSetsPage, text = tr("page.all_sets.name"), image = self.browseImage, compound = 'left')
         #tr("page.all_sets.tooltip")
 
-        self.browseTrainerSetsPage = browse.BrowseTrainerSetsPage(self.tabs, data.battlenumToGroupedSetProviders(self.data.trainers))
+        self.browseTrainerSetsPage = browse.BrowseTrainerSetsPage(self.tabs, self.data.facilities)
         self.trainerImage = PhotoImage(file = "gui/trainers.png")
         self.tabs.add(self.browseTrainerSetsPage, text = tr("page.all_sets_by_trainer.name"), image = self.trainerImage, compound = 'left')
         #tr("page.all_sets_by_trainer.tooltip")

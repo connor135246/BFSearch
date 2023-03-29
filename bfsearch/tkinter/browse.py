@@ -8,7 +8,9 @@ from tkinter.scrolledtext import ScrolledText
 from tkinter import ttk
 from idlelib.tooltip import Hovertip
 
-from bfsearch import data
+from bfsearch import core, data
+from bfsearch.core import Facility
+from bfsearch.data import ndict
 from bfsearch.translate import tr
 
 
@@ -37,18 +39,21 @@ def getSetResultString(the_set, iv, hideItem = False, level = 50):
 
 
 # base class for functional pages
-# contains an alpha/dex sortable, an iv spin box, an output and a copy to clipboard button with item check, and other useful things
+# contains an alpha/dex sortable, an iv spin box, an output and a copy to clipboard button, the facility radiobuttons, and other useful things
 class SharedPageElements(ttk.Frame):
     def __init__(self, parent, *args, **kwargs):
         ttk.Frame.__init__(self, parent, *args, **kwargs)
 
         # alphabetically organized sets
-        self.sortedAlpha = None
+        self.sortedAlpha = ndict()
         # dex number organized sets
-        self.sortedDex = None
+        self.sortedDex = ndict()
 
         # current set (for copy to clipboard)
         self.currentSet = None
+
+        # facility
+        self.facility = Facility.Tower
 
     def buildSortToggle(self, parent):
         # sort toggle button
@@ -66,19 +71,32 @@ class SharedPageElements(ttk.Frame):
     def buildOutput(self, parent):
         # output
         self.output = ScrolledText(parent, width = 1, height = 1, wrap = 'word', state = 'disabled')
-
-        # clipboard options
-        self.clipboardOptions = ttk.Frame(parent, padding = (5, 0, 5, 5))
-        self.clipboardOptions.columnconfigure(0, weight = 1)
-        self.clipboardOptions.rowconfigure(0, weight = 1)
         # copy to clipboard button
-        self.clipboardButton = ttk.Button(self.clipboardOptions, command = self.copyToClipboard)
-        self.clipboardButton.grid(column = 0, row = 0, sticky = (W, E))
-        # hide held items checkbox
-        self.hideItem = BooleanVar(self.clipboardOptions, value = False)
-        self.itemCheck = ttk.Checkbutton(self.clipboardOptions, text = tr("page.generic.itemCheck"), command = self.handleItemCheck, variable = self.hideItem)
-        self.itemCheck.grid(column = 1, row = 0)
-        self.setToolTip(self.itemCheck, tr("page.generic.itemCheck.tooltip"))
+        self.clipboardButton = ttk.Button(parent, command = self.copyToClipboard)
+
+    def buildFacility(self, parent):
+        # facility selector
+        self.facilitySelect = ttk.Frame(parent, padding = (5, 0, 5, 5))
+        for i in range(0, 5):
+            self.facilitySelect.columnconfigure(i, weight = 1)
+        self.facilitySelect.rowconfigure(0, weight = 1)
+
+        self.facilityVar = IntVar(self.facilitySelect, value = Facility.Tower.value)
+        self.towerRadio = ttk.Radiobutton(self.facilitySelect, text = tr("page.generic.facility.tower"), variable = self.facilityVar, value = Facility.Tower.value, command = self.setFacility)
+        self.towerRadio.grid(column = 0, row = 0, sticky = (W, E), padx = 5)
+        self.setToolTip(self.towerRadio, tr("page.generic.facility.tower.tooltip"))
+        self.arcadeRadio = ttk.Radiobutton(self.facilitySelect, text = tr("page.generic.facility.arcade"), variable = self.facilityVar, value = Facility.Arcade.value, command = self.setFacility)
+        self.arcadeRadio.grid(column = 1, row = 0, sticky = (W, E), padx = 5)
+        self.setToolTip(self.arcadeRadio, tr("page.generic.facility.arcade.tooltip"))
+        self.castleRadio = ttk.Radiobutton(self.facilitySelect, text = tr("page.generic.facility.castle"), variable = self.facilityVar, value = Facility.Castle.value, command = self.setFacility)
+        self.castleRadio.grid(column = 2, row = 0, sticky = (W, E), padx = 5)
+        self.setToolTip(self.castleRadio, tr("page.generic.facility.castle.tooltip"))
+        self.factory50Radio = ttk.Radiobutton(self.facilitySelect, text = tr("page.generic.facility.factory_50"), variable = self.facilityVar, value = Facility.Factory_50.value, command = self.setFacility)
+        self.factory50Radio.grid(column = 3, row = 0, sticky = (W, E), padx = 5)
+        self.setToolTip(self.factory50Radio, tr("page.generic.facility.factory_50.tooltip"))
+        self.factoryOpenRadio = ttk.Radiobutton(self.facilitySelect, text = tr("page.generic.facility.factory_open"), variable = self.facilityVar, value = Facility.Factory_Open.value, command = self.setFacility)
+        self.factoryOpenRadio.grid(column = 4, row = 0, sticky = (W, E), padx = 5)
+        self.setToolTip(self.factoryOpenRadio, tr("page.generic.facility.factory_open.tooltip"))
 
     def gridSortToggle(self, column, row):
         self.sortToggle.grid(column = column, row = row, sticky = (W, E), padx = 5)
@@ -89,7 +107,10 @@ class SharedPageElements(ttk.Frame):
 
     def gridOutput(self, column, row):
         self.output.grid(column = column, row = row, sticky = (W, N, E, S), padx = 5, pady = 5)
-        self.clipboardOptions.grid(column = column, row = row + 1, sticky = (W, N, E, S))
+        self.clipboardButton.grid(column = column, row = row + 1, sticky = (W, N, E, S))
+
+    def gridFacility(self, column, row):
+        self.facilitySelect.grid(column = column, row = row, sticky = (W, N, E, S))
 
     # adds a simple combobox with default padx 1
     def addSimpleCombobox(self, var, command, parent, column, row, padx = 1):
@@ -187,22 +208,34 @@ class SharedPageElements(ttk.Frame):
         # manually notify the spinbox that it changed
         self.handleIVBox()
 
+    def setFacility(self):
+        try:
+            self.facility = Facility(self.facilityVar.get())
+        except ValueError:
+            self.facility = Facility.Tower
+            self.facilityVar.set(Facility.Tower.value)
+        self.handleFacility()
+
     def getIV(self):
         return self.iv.get()
 
     def getHideItem(self):
-        return self.hideItem.get()
+        return self.facility.hideItem()
 
     def getLevel(self):
-        return 50
+        return self.facility.level()
 
-    def updateOutputSet(self):
-        self.setOutputText(getSetResultString(self.currentSet, self.getIV(), hideItem = self.getHideItem(), level = self.getLevel()))
+    def validCurrentSet(self):
+        return isinstance(self.currentSet, core.PokeSetBase)
+
+    def updateOutput(self):
+        if self.validCurrentSet():
+            self.setOutputText(getSetResultString(self.currentSet, self.getIV(), hideItem = self.getHideItem(), level = self.getLevel()))
 
     def handleIVBox(self):
         self.updateSet()
 
-    def handleItemCheck(self):
+    def handleFacility(self):
         self.updateSet()
 
     ### override and call super to add functionality
@@ -210,7 +243,7 @@ class SharedPageElements(ttk.Frame):
         self.clipboardButton['text'] = tr("page.generic.clipboardButton")
 
     def copyToClipboard(self):
-        if self.currentSet is not None:
+        if self.validCurrentSet():
             self.clipboard_clear()
             self.clipboard_append(self.currentSet.getShowdownFormat(self.getIV(), hideItem = self.getHideItem(), level = self.getLevel()))
             self.clipboardButton['text'] = tr("page.generic.clipboardButton.copied")
@@ -246,6 +279,9 @@ class BrowseSetsPageBase(SharedPageElements):
         # output & clipboard options
         self.buildOutput(self.mainBox)
 
+        # facility selector
+        self.buildFacility(self.mainBox)
+
         # set up initial state
         self.updateSet()
 
@@ -257,26 +293,23 @@ class BrowseSetsPageBase(SharedPageElements):
         self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
 
     # when the species combo box updates, tells the set combo box to update
-    def handlePokeCombo(self, event):
-        setsData = data.digForData(self.getSorted(), [self.poke.get()])
-        if setsData is not None:
-            self.fillComboboxKeys(self.setCombo, setsData, self.set)
-            count = len(self.setCombo['values'])
-            if count == 1:
-                self.setToolTip(self.setCombo, tr("page.all_sets.setCombo.tooltip.singular", count))
-            else:
-                self.setToolTip(self.setCombo, tr("page.all_sets.setCombo.tooltip.plural", count))
+    def handlePokeCombo(self, event = None):
+        setsData = self.getSorted()[self.poke.get()]
+        self.fillComboboxKeys(self.setCombo, setsData, self.set)
+        count = len(self.setCombo['values'])
+        if count == 1:
+            self.setToolTip(self.setCombo, tr("page.all_sets.setCombo.tooltip.singular", count))
         else:
-            self.clearResults()
+            self.setToolTip(self.setCombo, tr("page.all_sets.setCombo.tooltip.plural", count))
 
-    def handleSetCombo(self, event):
+    def handleSetCombo(self, event = None):
         self.updateSet()
 
     def updateSet(self):
         super().updateSet()
-        self.currentSet = data.digForData(self.getSorted(), [self.poke.get(), self.set.get()])
-        if self.currentSet is not None:
-            self.updateOutputSet()
+        self.currentSet = self.getSorted()[self.poke.get()][self.set.get()]
+        if self.validCurrentSet():
+            self.updateOutput()
             self.clipboardButton.state(["!disabled"])
             self.setToolTip(self.pokeCombo, str(self.currentSet.species))
         else:
@@ -301,11 +334,12 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
         self.setIVBox(0, 31)
 
         # place the main box
-        self.gridSortToggle(0, 0)
-        self.gridSetSelect(0, 1)
-        self.gridOutput(0, 2)
+        self.gridFacility(0, 0)
+        self.gridSortToggle(0, 1)
+        self.gridSetSelect(0, 2)
+        self.gridOutput(0, 3)
         self.mainBox.columnconfigure(0, weight = 1)
-        self.mainBox.rowconfigure(2, weight = 1)
+        self.mainBox.rowconfigure(3, weight = 1)
 
         # place this tab
         infoLabel = ttk.Label(self, text = tr("page.all_sets.info"))
@@ -323,11 +357,11 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
 
 # browse sets by trainer
 class BrowseTrainerSetsPage(BrowseSetsPageBase):
-    def __init__(self, parent, battlenumToSetProviders):
+    def __init__(self, parent, facilities):
         super().__init__(parent)
 
         # build
-        self.battlenumToSetProviders = battlenumToSetProviders
+        self.facilities = facilities
 
         # place the main box
         ## trainer selector
@@ -348,13 +382,15 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         self.tname = StringVar(trainerSelect)
         self.tnameCombo = self.addSimpleCombobox(self.tname, self.handleTNameCombo, trainerSelect, 4, 0)
 
-        trainerSelect.grid(column = 0, row = 0, sticky = (W, N, E, S))
-        self.gridSortToggle(0, 1)
-        self.gridSetSelect(0, 2)
-        self.gridOutput(0, 3)
+        self.gridFacility(0, 0)
+        trainerSelect.grid(column = 0, row = 1, sticky = (W, N, E, S))
+        self.gridSortToggle(0, 2)
+        self.gridSetSelect(0, 3)
+        self.gridOutput(0, 4)
         self.darachLabel = ttk.Label(self.mainBox, text = tr("page.all_sets_by_trainer.darach"))
+        self.thortonLabel = ttk.Label(self.mainBox, text = tr("page.all_sets_by_trainer.thorton"))
         self.mainBox.columnconfigure(0, weight = 1)
-        self.mainBox.rowconfigure(3, weight = 1)
+        self.mainBox.rowconfigure(4, weight = 1)
 
         # place this tab
         infoLabel = ttk.Label(self, text = tr("page.all_sets_by_trainer.info"))
@@ -367,37 +403,46 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         self.setToolTip(self.ivLabel, tr("page.all_sets_by_trainer.ivs.tooltip"))
 
         # set up initial state
+        self.prepFacility()
         self.fillComboboxKeys(self.battlenumCombo, self.bTSP(), self.battlenum)
 
     def bTSP(self):
         return self.battlenumToSetProviders
 
+    def prepFacility(self):
+        self.battlenumToSetProviders = data.battlenumToGroupedSetProviders(self.facilities[self.facility])
+
+    # when the facility selection changes, tells the trainer class combo box to update
+    def handleFacility(self):
+        self.prepFacility()
+        self.handleBattlenumCombo()
+
     # when the battle number combo box updates, tells the trainer class combo box to update
-    def handleBattlenumCombo(self, event):
-        tclassData = data.digForData(self.bTSP(), [self.battlenum.get()])
-        if tclassData is not None:
-            self.fillComboboxKeys(self.tclassCombo, tclassData, self.tclass)
-        else:
-            self.clearTrainerResults()
+    def handleBattlenumCombo(self, event = None):
+        tclassData = self.bTSP()[self.battlenum.get()]
+        self.fillComboboxKeys(self.tclassCombo, tclassData, self.tclass)
 
     # when the trainer class combo box updates, tells the trainer name combo box to update
-    def handleTClassCombo(self, event):
-        self.darachLabel.grid_forget()
-        tnameData = data.digForData(self.bTSP(), [self.battlenum.get(), self.tclass.get()])
-        if tnameData is not None:
-            self.fillComboboxKeys(self.tnameCombo, tnameData, self.tname)
-            # darach works differently from every other trainer.
-            if "Castle Valet" in self.tclass.get():
-                self.darachLabel.grid(column = 0, row = 5, sticky = (W, N, E, S), padx = 5, pady = 5)
+    def handleTClassCombo(self, event = None):
+        tnameData = self.bTSP()[self.battlenum.get()][self.tclass.get()]
+        self.fillComboboxKeys(self.tnameCombo, tnameData, self.tname)
+        # darach works differently from every other trainer.
+        if "Castle Valet" in self.tclass.get():
+            self.darachLabel.grid(column = 0, row = 6, sticky = (W, N, E, S), padx = 5, pady = 5)
         else:
-            self.clearTrainerResults()
+            self.darachLabel.grid_forget()
+        # missing thorton data...
+        if "Factory Head" in self.tclass.get():
+            self.thortonLabel.grid(column = 0, row = 6, sticky = (W, N, E, S), padx = 5, pady = 5)
+        else:
+            self.thortonLabel.grid_forget()
 
-    def handleTNameCombo(self, event):
+    def handleTNameCombo(self, event = None):
         self.updateTrainer()
 
     def updateTrainer(self):
-        currentProvider = data.digForData(self.bTSP(), [self.battlenum.get(), self.tclass.get(), self.tname.get()])
-        if currentProvider is not None:
+        currentProvider = self.bTSP()[self.battlenum.get()][self.tclass.get()][self.tname.get()]
+        if isinstance(currentProvider, core.SetProvider):
             self.sortedAlpha = data.setsAlphaSorted(currentProvider.sets)
             self.sortedDex = data.setsDexSorted(currentProvider.sets)
             # when the trainer selection updates, tells the species combo box to update
@@ -410,7 +455,10 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
             self.clearTrainerResults()
 
     def clearTrainerResults(self):
-        self.fillComboboxKeys(self.pokeCombo, {}, self.poke)
+        self.sortedAlpha = ndict()
+        self.sortedDex = ndict()
+        self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
+        self.setIVBox(0, 0)
         self.setToolTip(self.battlenumCombo, "")
         self.setToolTip(self.tclassCombo, "")
         self.setToolTip(self.tnameCombo, "")

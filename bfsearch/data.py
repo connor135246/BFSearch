@@ -56,19 +56,6 @@ def list_from_double_dict(doubledict):
             thelist.append(subdictvalue)
     return thelist
 
-# digs through a dict of dicts of dicts (and so on) recursively using the given keys.
-# returns None if something isn't valid.
-def digForData(data, keys):
-    if data is None or keys is None:
-        return None
-    try:
-        try:
-            return digForData(data[keys[0]], keys[1:])
-        except IndexError:
-            return data[keys[0]]
-    except KeyError:
-        return None
-
 # empty or generic key in a dict
 emptyKey = "---"
 
