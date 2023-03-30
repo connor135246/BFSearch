@@ -124,12 +124,12 @@ class Window(Tk):
         self.tabs.add(self.searchPage, text = tr("page.search.name"), image = self.searchImage, compound = 'left')
         #tr("page.search.tooltip")
 
-        self.browseHallSetsPage = browsehall.BrowseAllHallSetsPage(self, data.genericSetProvider(self.data.hall_sets))
+        self.browseHallSetsPage = browsehall.BrowseAllHallSetsPage(self.tabs, data.genericSetProvider(self.data.hall_sets))
         self.hallImage = PhotoImage(file = "gui/hallpokemon.png")
         self.tabs.add(self.browseHallSetsPage, text = tr("page.hall_sets.name"), image = self.hallImage, compound = 'left')
         #tr("page.hall_sets.tooltip")
 
-        self.calcHallSetsPage = browsehall.CalcHallSetsPage(self, data.typeToRankToHallSets(self.data.hall_sets), data.hallSetGroupToHallSets(self.data.hall_sets))
+        self.calcHallSetsPage = browsehall.CalcHallSetsPage(self.tabs, data.typeToRankToHallSets(self.data.hall_sets), data.hallSetGroupToHallSets(self.data.hall_sets))
         self.hallcalcImage = PhotoImage(file = "gui/hallcalc.png")
         self.tabs.add(self.calcHallSetsPage, text = tr("page.hall_calc.name"), image = self.hallcalcImage, compound = 'left')
         #tr("page.hall_calc.tooltip")

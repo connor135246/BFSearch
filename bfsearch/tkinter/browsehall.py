@@ -49,11 +49,6 @@ class BrowseHallSetsPageBase(browse.SharedPageElements):
         # set up initial state
         self.updateSet()
 
-    # itemCheck isn't needed
-    def gridOutput(self, column, row):
-        super().gridOutput(column, row)
-        self.itemCheck.grid_forget()
-
     def gridSetSelect(self, column, row):
         self.setSelect.grid(column = column, row = row, sticky = (W, N, E, S))
 
@@ -89,9 +84,9 @@ class BrowseHallSetsPageBase(browse.SharedPageElements):
 
     def updateSet(self):
         super().updateSet()
-        self.currentSet = data.digForData(self.getSorted(), [self.poke.get()])
-        if self.currentSet is not None:
-            self.updateOutputSet()
+        self.currentSet = self.getSorted()[self.poke.get()]
+        if self.currentSet:
+            self.updateOutput()
             self.clipboardButton.state(["!disabled"])
             self.setToolTip(self.pokeCombo, str(self.currentSet.species))
         else:
@@ -289,12 +284,12 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
 
     def updateCalcSets(self):
         if self.type.get() == self.HALL_BRAIN_GOLD:
-            currentHallSets = data.digForData(self.hSGTHS(), [core.HallSetGroup.plus500.fullname()])
+            currentHallSets = self.hSGTHS()[core.HallSetGroup.plus500.fullname()]
         elif self.type.get() == self.HALL_BRAIN_SILVER:
-            currentHallSets = data.digForData(self.hSGTHS(), [self.yourBST.get()])
+            currentHallSets = self.hSGTHS()[self.yourBST.get()]
         else:
-            currentHallSets = data.digForData(self.tTRTHS(), [self.type.get(), self.rank.get()])
-        if currentHallSets is not None:
+            currentHallSets = self.tTRTHS()[self.type.get()][self.rank.get()]
+        if currentHallSets:
             self.sortedAlpha = data.hallSetsAlphaSorted(currentHallSets)
             self.sortedDex = data.hallSetsDexSorted(currentHallSets)
             # when the type/rank/brain selection updates, tells the poke combo box to update
