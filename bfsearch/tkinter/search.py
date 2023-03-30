@@ -187,13 +187,7 @@ class SearchPage(browse.SharedPageElements):
             self.resultSortToggle['text'] = tr("page.search.sortToggle.dex")
 
     def getResults(self):
-        return self.getResultsAlpha() if self.resultsAlpha else self.getResultsDex()
-
-    def getResultsAlpha(self):
-        return self.currentResultsA
-
-    def getResultsDex(self):
-        return self.currentResultsD
+        return self.currentResultsA if self.resultsAlpha else self.currentResultsD
 
     # when the trainer class combo box updates, tells the trainer name combo box to update
     def handleTClassCombo(self, event):

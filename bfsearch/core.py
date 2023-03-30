@@ -309,8 +309,10 @@ class BattleNum(Enum):
     def isBrainBattle(self):
         return self == BattleNum.e3 or self == BattleNum.e7
 
-# a facility and its rules
-
+# a facility and its rules.
+# it's here next to the trainer class, but facilities aren't really a property of trainers. they're used at a higher level.
+# it seemed unnecessary to have 3 identical copies of all 300 trainers for the 3 facilities that are identical for my purposes.
+# if it becomes useful to do so, it would probably become a property of SetProvider.
 class Facility(Enum):
     # normal facilities - Any_Normal represents all 3
     Tower = 0
@@ -358,7 +360,8 @@ class Trainer(SetProvider):
         self.iv = iv
         self.tclass = tclass
         self.tname = tname
-        self.facility = facility
+        # you shouldn't use this at all.
+        self._facility = facility
 
     def __str__(self):
         return f"{self.tclass} {self.tname}"
@@ -396,7 +399,6 @@ class TrainersPokeSet(PokeSetWithIV):
     def __init__(self, trainer, pokeset):
         PokeSetWithIV.__init__(self, pokeset, trainer.iv)
         self.trainer = trainer
-        self.pokeset = pokeset
 
     def __str__(self):
         return f"{str(self.trainer)}'s {str(self.pokeset)}"

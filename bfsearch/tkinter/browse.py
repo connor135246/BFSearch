@@ -183,13 +183,7 @@ class SharedPageElements(ttk.Frame):
             self.sortToggle['text'] = tr("page.generic.sortToggle.dex")
 
     def getSorted(self):
-        return self.getSortedAlpha() if self.alpha else self.getSortedDex()
-
-    def getSortedAlpha(self):
-        return self.sortedAlpha
-
-    def getSortedDex(self):
-        return self.sortedDex
+        return self.sortedAlpha if self.alpha else self.sortedDex
 
     def setIVBox(self, minIV, maxIV):
         self.ivBox['from_'] = minIV
@@ -328,7 +322,6 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
         self.setProvider = setProvider
         self.sortedAlpha = data.setsAlphaSorted(self.setProvider.sets)
         self.sortedDex = data.setsDexSorted(self.setProvider.sets)
-        self.setIVBox(0, 31)
 
         # place the main box
         self.gridFacility(0, 0)
@@ -350,6 +343,7 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
 
         # set up initial state
         self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
+        self.setIVBox(0, 31)
 
 
 # browse sets by trainer

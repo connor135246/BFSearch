@@ -44,7 +44,7 @@ class Window(Tk):
         self.title("BFSearch")
         self.bficon = PhotoImage(file = "gui/frontier.png")
         self.wm_iconphoto(True, self.bficon)
-        self.minsize(750, 607)
+        self.minsize(750, 633)
         self.columnconfigure(0, weight = 1)
         self.rowconfigure(0, weight = 1)
         #ttk.Style().theme_use("alt")

@@ -107,8 +107,6 @@ class BrowseAllHallSetsPage(BrowseHallSetsPageBase):
         self.hallSetProvider = hallSetProvider
         self.sortedAlpha = data.hallSetsAlphaSorted(self.hallSetProvider.sets)
         self.sortedDex = data.hallSetsDexSorted(self.hallSetProvider.sets)
-        self.setIVBox(0, 31)
-        self.setLevelBox(14, 100)
 
         # place the main box
         self.gridSortToggle(0, 0)
@@ -133,6 +131,8 @@ class BrowseAllHallSetsPage(BrowseHallSetsPageBase):
         if "Weavile" in self.getSorted().keys():
             self.poke.set("Weavile")
             self.updateSet()
+        self.setIVBox(0, 31)
+        self.setLevelBox(14, 100)
 
 
 # browse hall sets by type and rank, plus argenta
