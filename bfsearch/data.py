@@ -185,32 +185,33 @@ def battlenumToGroupedSetProviders(trainers):
                     bTGSP[battlenum.value][tclass][tnames] = setProvider
     return bTGSP
 
-# returns a list of every single individual pokemon held by every trainer.
-# total: 16111 (16135 including brains); there are a lot of duplicates.
+# returns a list of every single individual pokemon held by every trainer. there are a lot of duplicates.
+# totals: 
+# tower/arcade/castle: 16111 + 6 (palmer) + 6 (dahlia) + 12 (darach)
+# factory (50): 77880
+# factory (open): 105760
 def everyIndividualPokemon(trainers):
-    the_list = []
-    for tclass, nextDict in trainers.items():
-        for tname, trainer in nextDict.items():
-            for aset in setsAlphaSortedList(trainer.sets):
-                the_list.append(core.TrainersPokeSet(trainer, aset))
-    return the_list
+    # exclude thorton's placeholder pokemon from search
+    return [core.TrainersPokeSet(trainer, aset) for tclass, nextDict in trainers.items() if tclass != 'Factory Head' for tname, trainer in nextDict.items() for aset in setsAlphaSortedList(trainer.sets)]
 
-# returns a list of (PokeSetWithIV, [Trainer,...]) from the list of TrainersPokeSet.
+# returns a dict of {PokeSetWithIV} to {[Trainer,...]} from the list of TrainersPokeSet.
 def groupUniquePokemon(listTrainersPokeSet):
-    uniques = []
+    uniques = ndict()
     for tps in listTrainersPokeSet:
-        for i in range(len(uniques)):
-            if uniques[i][0].isIdenticalSet(tps):
-                uniques[i] = (uniques[i][0], uniques[i][1] + [tps.trainer])
+        # slight optimization: trainer data is pretty nicely ordered by default, so pswis basically get added in order.
+        for pswi in reversed(uniques.keys()):
+            if pswi.isIdenticalSet(tps):
+                uniques[pswi].append(tps.trainer)
                 break
         else:
-            uniques.append((tps.asPokeSetWithIV(), [tps.trainer]))
-    for i in range(len(uniques)):
-        uniques[i] = (uniques[i][0], sorted(uniques[i][1], key = lambda trainer: str(trainer)))
+            uniques[tps.asPokeSetWithIV()] = [tps.trainer]
     return uniques
 
 # returns a list of every unique pokemon held by trainers. a unique pokemon is a particular set with a particular iv.
-# total: 1585
+# totals:
+# tower/arcade/castle: 1585
+# factory (50): 1494
+# factory (open): 2944
 def everyUniquePokemon(trainers):
     return [pswi for pswi, _ in groupUniquePokemon(everyIndividualPokemon(trainers))]
 

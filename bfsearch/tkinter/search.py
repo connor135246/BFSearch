@@ -3,13 +3,15 @@
 
 from enum import Enum
 from operator import attrgetter
+from collections import defaultdict
 
 from tkinter import *
 from tkinter.scrolledtext import ScrolledText
 from tkinter import ttk
 
 from bfsearch import core, data
-from bfsearch.tkinter import browse
+from bfsearch.data import ndict
+from bfsearch.tkinter import browse, mainwindow
 from bfsearch.translate import tr
 
 
@@ -19,8 +21,6 @@ class SearchPage(browse.SharedPageElements):
         super().__init__(parent)
 
         self.data = the_data
-
-        self.the_list = data.everyIndividualPokemon(self.data.trainers)
 
         ## search box
         self.searchBox = ttk.Labelframe(self, text = tr("page.search.searchBox"))
@@ -36,8 +36,6 @@ class SearchPage(browse.SharedPageElements):
         # trainer class and name
         # this is the only one that updates as you select it. tclass links to possible tnames.
         self.addSimpleLabel(self.searchBox, tr("page.generic.trainer"), 0, 2)
-        self.trainerDict = {data.emptyKey : data.allTrainerNames(self.data.trainers)}
-        self.trainerDict.update(data.tclassToTName(self.data.trainers))
         self.tclass = StringVar(self.searchBox)
         self.tclassCombo = self.addSimpleCombobox(self.tclass, self.handleTClassCombo, self.searchBox, 0, 3, padx = 5)
         self.tname = StringVar(self.searchBox)
@@ -121,19 +119,21 @@ class SearchPage(browse.SharedPageElements):
         self.trainerViewFrame.grid(column = 0, row = 6, sticky = (W, N, E, S), padx= 5)
 
         # set up initial state
-        self.fillComboboxKeys(self.tclassCombo, self.trainerDict, self.tclass)
-        self.updateSet()
-        self.searchButton['text'] = tr("page.search.searchButton")
-        self.trainerInfo['text'] = tr("page.search.resultsBox.default")
-        self.resultsCombo.state(["disabled"])
+        self.prepFacility()
 
         # place this tab
         infoLabel = ttk.Label(self, text = tr("page.search.info"))
         infoLabel.grid(column = 0, row = 0, columnspan = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
-        self.searchBox.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 5, pady = 5)
-        self.resultsBox.grid(column = 1, row = 1, sticky = (W, N, E, S), padx = 5, pady = 5)
+        facilityBox = ttk.Labelframe(self)
+        facilityBox.columnconfigure(0, weight = 1)
+        facilityBox.rowconfigure(0, weight = 1)        
+        self.buildFacility(facilityBox)
+        self.gridFacility(0, 0)
+        facilityBox.grid(column = 0, row = 1, columnspan = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
+        self.searchBox.grid(column = 0, row = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
+        self.resultsBox.grid(column = 1, row = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.columnconfigure(1, weight = 1)
-        self.rowconfigure(1, weight = 1)
+        self.rowconfigure(2, weight = 1)
 
     # adds a search combobox connected to searchChanged
     def addSearchCombobox(self, var, parent, contents, column, row):
@@ -147,6 +147,25 @@ class SearchPage(browse.SharedPageElements):
     def fillComboboxPlusEmpty(self, combo, contents, var):
         contents = (data.emptyKey, *contents)
         self.fillCombobox(combo, contents, var)
+
+    def prepFacility(self):
+        self.trainerDict = ndict()
+        self.trainerDict[data.emptyKey] = data.allTrainerNames(self.data.facilities[self.facility])
+        self.trainerDict.update(data.tclassToTName(self.data.facilities[self.facility]))
+        self.fillComboboxKeys(self.tclassCombo, self.trainerDict, self.tclass)
+        self.updateSet()
+        self.searchButton['text'] = tr("page.search.searchButton")
+        self.trainerInfo['text'] = tr("page.search.resultsBox.default")
+        self.resultsCombo.state(["disabled"])
+
+    # when the facility selection changes, tells everything to update
+    def handleFacility(self):
+        self.currentResultsA = ndict()
+        self.currentResultsD = ndict()
+        self.fillCombobox(self.resultsCombo, tuple(), self.result)
+        self.prepFacility()
+        self.resultsInfo['text'] = tr("page.search.resultsBox.default")
+        self.setOutputText("")
 
     def toggleSorting(self):
         super().toggleSorting()
@@ -179,20 +198,16 @@ class SearchPage(browse.SharedPageElements):
     # when the trainer class combo box updates, tells the trainer name combo box to update
     def handleTClassCombo(self, event):
         self.searchChanged(event)
-        tnameData = data.digForData(self.trainerDict, [self.tclass.get()])
-        if tnameData is not None:
-            self.fillComboboxPlusEmpty(self.tnameCombo, tnameData, self.tname)
-        else:
-            self.fillComboboxPlusEmpty(self.tnameCombo, data.allTrainerNames(self.data.trainers), self.tname)
+        tnameData = self.trainerDict[self.tclass.get()]
+        self.fillComboboxPlusEmpty(self.tnameCombo, tnameData, self.tname)
 
     def fillResultsCombo(self):
-        self.fillCombobox(self.resultsCombo, [pswi.getShowdownNickname() for pswi, _ in self.getResults()], self.result)
+        self.fillCombobox(self.resultsCombo, [pswi.getShowdownNickname() for pswi in self.getResults().keys()], self.result)
 
     def fillTrainerView(self, trainers):
         self.trainerView.delete(*self.trainerView.get_children())
-        for count, trainer in enumerate(trainers):
+        for trainer in trainers:
             self.trainerView.insert('', 'end', text = str(trainer))
-
         if len(trainers) == 1:
             self.trainerInfo['text'] = tr("page.search.resultsBox.trainerInfo.singular", len(trainers))
         else:
@@ -207,10 +222,10 @@ class SearchPage(browse.SharedPageElements):
     def updateSet(self):
         super().updateSet()
         if len(self.resultsCombo['values']) > 0 and self.resultsCombo.current() < len(self.getResults()):
-            pswi, trainers = self.getResults()[self.resultsCombo.current()]
+            pswi, trainers = list(self.getResults().items())[self.resultsCombo.current()]
             self.currentSet = pswi.pokeset
             self.currentIV = pswi.iv
-            self.updateOutputSet()
+            self.updateOutput()
             self.fillTrainerView(trainers)
             self.clipboardButton.state(["!disabled"])
             self.setToolTip(self.resultsCombo, self.result.get())
@@ -241,6 +256,17 @@ class SearchPage(browse.SharedPageElements):
         self.searchButton['text'] = tr("page.search.searchButton")
 
     def search(self):
+        # clicking search with no selection can cause the program to hang - especially for battle factory.
+        # so first ask if you're sure.
+        for combo in [self.battlenumCombo, self.tclassCombo, self.tnameCombo, self.pokeCombo, self.itemCombo, self.moveCombo1, self.moveCombo2, self.moveCombo3, self.moveCombo4]:
+            if combo.current() != 0:
+                break
+        else:  # what the fuck
+            suredialog = mainwindow.ButtonDialog(self._root(), tr("page.search.name"), tr("page.search.searchButton.sure"), "gui/search.png", [tr("toolbar.button.ok"), tr("toolbar.button.cancel")])
+            pressed = suredialog.show()
+            if pressed != 0:
+                return
+
         # grouping of combobox var, reducer, and nice name
         class SearchOption(Enum):
             BattleNum = (self.battlenum, self.reduceBattleNum, "Battle Number")
@@ -260,7 +286,8 @@ class SearchPage(browse.SharedPageElements):
             def nicename(self):
                 return self.value[2]
 
-        searchByStage = [(None, len(self.the_list) > 0, self.the_list)]
+        the_list = data.everyIndividualPokemon(self.data.facilities[self.facility])
+        searchByStage = [(None, len(the_list) > 0, the_list)]
         if not searchByStage[-1][1]:
             self.emptyResults(searchByStage)
         else:
@@ -273,14 +300,18 @@ class SearchPage(browse.SharedPageElements):
 
         searchResults = searchByStage[-1][2]
         currentResults = data.groupUniquePokemon(searchResults)
-        # alphabetical sort 
-        # simply by showdown nickname
-        self.currentResultsA = sorted(currentResults, key = lambda unique: unique[0].getShowdownNickname())
+        for pswi, trainers in currentResults.items():
+            currentResults[pswi] = sorted(trainers, key = str)
+        # alphabetical sort
+        # sort by iv - putting 31 first
+        self.currentResultsA = defaultdict(ndict, sorted(currentResults.items(), key = lambda unique: -1 if unique[0].iv == 31 else unique[0].iv))
+        # sort by name, then set number
+        self.currentResultsA = defaultdict(ndict, sorted(self.currentResultsA.items(), key = lambda unique: attrgetter('pokeset.species.name', 'pokeset.pset')(unique[0])))
         # dex sort
         # sort by iv - putting 31 first
-        self.currentResultsD = sorted(currentResults, key = lambda unique: -1 if unique[0].iv == 31 else unique[0].iv)
+        self.currentResultsD = defaultdict(ndict, sorted(currentResults.items(), key = lambda unique: -1 if unique[0].iv == 31 else unique[0].iv))
         # sort by dex, then form, then set number
-        self.currentResultsD = sorted(self.currentResultsD, key = lambda unique: attrgetter('pokeset.species.dex', 'pokeset.species.name', 'pokeset.pset')(unique[0]))
+        self.currentResultsD = defaultdict(ndict, sorted(self.currentResultsD.items(), key = lambda unique: attrgetter('pokeset.species.dex', 'pokeset.species.name', 'pokeset.pset')(unique[0])))
         self.fillResultsCombo()
 
         self.resultsInfo['text'] = tr("page.search.resultsBox.done", len(searchResults), len(currentResults))

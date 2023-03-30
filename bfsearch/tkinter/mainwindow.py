@@ -119,7 +119,7 @@ class Window(Tk):
         self.tabs.add(self.browseTrainerSetsPage, text = tr("page.all_sets_by_trainer.name"), image = self.trainerImage, compound = 'left')
         #tr("page.all_sets_by_trainer.tooltip")
 
-        self.searchPage = search.SearchPage(self, self.data)
+        self.searchPage = search.SearchPage(self.tabs, self.data)
         self.searchImage = PhotoImage(file = "gui/search.png")
         self.tabs.add(self.searchPage, text = tr("page.search.name"), image = self.searchImage, compound = 'left')
         #tr("page.search.tooltip")
