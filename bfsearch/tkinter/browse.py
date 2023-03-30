@@ -225,11 +225,8 @@ class SharedPageElements(ttk.Frame):
     def getLevel(self):
         return self.facility.level()
 
-    def validCurrentSet(self):
-        return isinstance(self.currentSet, core.PokeSetBase)
-
     def updateOutput(self):
-        if self.validCurrentSet():
+        if self.currentSet:
             self.setOutputText(getSetResultString(self.currentSet, self.getIV(), hideItem = self.getHideItem(), level = self.getLevel()))
 
     def handleIVBox(self):
@@ -243,7 +240,7 @@ class SharedPageElements(ttk.Frame):
         self.clipboardButton['text'] = tr("page.generic.clipboardButton")
 
     def copyToClipboard(self):
-        if self.validCurrentSet():
+        if self.currentSet:
             self.clipboard_clear()
             self.clipboard_append(self.currentSet.getShowdownFormat(self.getIV(), hideItem = self.getHideItem(), level = self.getLevel()))
             self.clipboardButton['text'] = tr("page.generic.clipboardButton.copied")
@@ -308,7 +305,7 @@ class BrowseSetsPageBase(SharedPageElements):
     def updateSet(self):
         super().updateSet()
         self.currentSet = self.getSorted()[self.poke.get()][self.set.get()]
-        if self.validCurrentSet():
+        if self.currentSet:
             self.updateOutput()
             self.clipboardButton.state(["!disabled"])
             self.setToolTip(self.pokeCombo, str(self.currentSet.species))
@@ -442,7 +439,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
 
     def updateTrainer(self):
         currentProvider = self.bTSP()[self.battlenum.get()][self.tclass.get()][self.tname.get()]
-        if isinstance(currentProvider, core.SetProvider):
+        if currentProvider:
             self.sortedAlpha = data.setsAlphaSorted(currentProvider.sets)
             self.sortedDex = data.setsDexSorted(currentProvider.sets)
             # when the trainer selection updates, tells the species combo box to update
