@@ -133,7 +133,7 @@ def calculateStat(stat, base, iv, evs, level, nature):
 # set group is a useful way of grouping sets together.
 class SetGroup(Enum):
     # very weak pokemon with only 1 possible set
-    A = ('A', 1, range(1, 151))
+    A1 = ('A', 1, range(1, 151))
     # somewhat weak pokemon with 2 possible sets
     B1 = ('B', 1, range(151, 251))
     B2 = ('B', 2, range(251, 351))

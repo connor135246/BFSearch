@@ -2,7 +2,7 @@
 	"sets": [
 		{
 			"id": 1,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Bulbasaur",
 			"set": 1,
 			"nature": "Modest",
@@ -20,7 +20,7 @@
 		},
 		{
 			"id": 2,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Charmander",
 			"set": 1,
 			"nature": "Adamant",
@@ -38,7 +38,7 @@
 		},
 		{
 			"id": 3,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Squirtle",
 			"set": 1,
 			"nature": "Adamant",
@@ -56,7 +56,7 @@
 		},
 		{
 			"id": 4,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Chikorita",
 			"set": 1,
 			"nature": "Adamant",
@@ -74,7 +74,7 @@
 		},
 		{
 			"id": 5,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Cyndaquil",
 			"set": 1,
 			"nature": "Adamant",
@@ -92,7 +92,7 @@
 		},
 		{
 			"id": 6,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Totodile",
 			"set": 1,
 			"nature": "Adamant",
@@ -110,7 +110,7 @@
 		},
 		{
 			"id": 7,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Treecko",
 			"set": 1,
 			"nature": "Timid",
@@ -128,7 +128,7 @@
 		},
 		{
 			"id": 8,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Torchic",
 			"set": 1,
 			"nature": "Hardy",
@@ -146,7 +146,7 @@
 		},
 		{
 			"id": 9,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Mudkip",
 			"set": 1,
 			"nature": "Modest",
@@ -164,7 +164,7 @@
 		},
 		{
 			"id": 10,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Turtwig",
 			"set": 1,
 			"nature": "Adamant",
@@ -182,7 +182,7 @@
 		},
 		{
 			"id": 11,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Chimchar",
 			"set": 1,
 			"nature": "Adamant",
@@ -200,7 +200,7 @@
 		},
 		{
 			"id": 12,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Piplup",
 			"set": 1,
 			"nature": "Bashful",
@@ -218,7 +218,7 @@
 		},
 		{
 			"id": 13,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Kricketot",
 			"set": 1,
 			"nature": "Relaxed",
@@ -237,7 +237,7 @@
 		},
 		{
 			"id": 14,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Happiny",
 			"set": 1,
 			"nature": "Adamant",
@@ -255,7 +255,7 @@
 		},
 		{
 			"id": 15,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Burmy",
 			"set": 1,
 			"nature": "Adamant",
@@ -273,7 +273,7 @@
 		},
 		{
 			"id": 16,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Shedinja",
 			"set": 1,
 			"nature": "Adamant",
@@ -291,7 +291,7 @@
 		},
 		{
 			"id": 17,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Starly",
 			"set": 1,
 			"nature": "Adamant",
@@ -309,7 +309,7 @@
 		},
 		{
 			"id": 18,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Combee",
 			"set": 1,
 			"nature": "Serious",
@@ -328,7 +328,7 @@
 		},
 		{
 			"id": 19,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Bidoof",
 			"set": 1,
 			"nature": "Adamant",
@@ -346,7 +346,7 @@
 		},
 		{
 			"id": 20,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Shinx",
 			"set": 1,
 			"nature": "Adamant",
@@ -364,7 +364,7 @@
 		},
 		{
 			"id": 21,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Cherubi",
 			"set": 1,
 			"nature": "Modest",
@@ -382,7 +382,7 @@
 		},
 		{
 			"id": 22,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Budew",
 			"set": 1,
 			"nature": "Calm",
@@ -400,7 +400,7 @@
 		},
 		{
 			"id": 23,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Chingling",
 			"set": 1,
 			"nature": "Modest",
@@ -418,7 +418,7 @@
 		},
 		{
 			"id": 24,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Riolu",
 			"set": 1,
 			"nature": "Adamant",
@@ -436,7 +436,7 @@
 		},
 		{
 			"id": 25,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Bonsly",
 			"set": 1,
 			"nature": "Adamant",
@@ -454,7 +454,7 @@
 		},
 		{
 			"id": 26,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Shuppet",
 			"set": 1,
 			"nature": "Adamant",
@@ -472,7 +472,7 @@
 		},
 		{
 			"id": 27,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Duskull",
 			"set": 1,
 			"nature": "Adamant",
@@ -490,7 +490,7 @@
 		},
 		{
 			"id": 28,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Vulpix",
 			"set": 1,
 			"nature": "Calm",
@@ -508,7 +508,7 @@
 		},
 		{
 			"id": 29,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Pikachu",
 			"set": 1,
 			"nature": "Modest",
@@ -526,7 +526,7 @@
 		},
 		{
 			"id": 30,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Sandshrew",
 			"set": 1,
 			"nature": "Adamant",
@@ -544,7 +544,7 @@
 		},
 		{
 			"id": 31,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Geodude",
 			"set": 1,
 			"nature": "Adamant",
@@ -562,7 +562,7 @@
 		},
 		{
 			"id": 32,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Dratini",
 			"set": 1,
 			"nature": "Modest",
@@ -580,7 +580,7 @@
 		},
 		{
 			"id": 33,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Snubbull",
 			"set": 1,
 			"nature": "Adamant",
@@ -598,7 +598,7 @@
 		},
 		{
 			"id": 34,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Remoraid",
 			"set": 1,
 			"nature": "Modest",
@@ -616,7 +616,7 @@
 		},
 		{
 			"id": 35,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Larvitar",
 			"set": 1,
 			"nature": "Adamant",
@@ -634,7 +634,7 @@
 		},
 		{
 			"id": 36,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Baltoy",
 			"set": 1,
 			"nature": "Modest",
@@ -652,7 +652,7 @@
 		},
 		{
 			"id": 37,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Snorunt",
 			"set": 1,
 			"nature": "Adamant",
@@ -670,7 +670,7 @@
 		},
 		{
 			"id": 38,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Bagon",
 			"set": 1,
 			"nature": "Naughty",
@@ -688,7 +688,7 @@
 		},
 		{
 			"id": 39,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Bronzor",
 			"set": 1,
 			"nature": "Brave",
@@ -706,7 +706,7 @@
 		},
 		{
 			"id": 40,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Gible",
 			"set": 1,
 			"nature": "Adamant",
@@ -724,7 +724,7 @@
 		},
 		{
 			"id": 41,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Croagunk",
 			"set": 1,
 			"nature": "Adamant",
@@ -742,7 +742,7 @@
 		},
 		{
 			"id": 42,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Venonat",
 			"set": 1,
 			"nature": "Relaxed",
@@ -760,7 +760,7 @@
 		},
 		{
 			"id": 43,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Machop",
 			"set": 1,
 			"nature": "Adamant",
@@ -778,7 +778,7 @@
 		},
 		{
 			"id": 44,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Smoochum",
 			"set": 1,
 			"nature": "Mild",
@@ -796,7 +796,7 @@
 		},
 		{
 			"id": 45,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Carvanha",
 			"set": 1,
 			"nature": "Adamant",
@@ -814,7 +814,7 @@
 		},
 		{
 			"id": 46,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Numel",
 			"set": 1,
 			"nature": "Serious",
@@ -832,7 +832,7 @@
 		},
 		{
 			"id": 47,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Corphish",
 			"set": 1,
 			"nature": "Brave",
@@ -850,7 +850,7 @@
 		},
 		{
 			"id": 48,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Doduo",
 			"set": 1,
 			"nature": "Jolly",
@@ -868,7 +868,7 @@
 		},
 		{
 			"id": 49,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Swablu",
 			"set": 1,
 			"nature": "Modest",
@@ -886,7 +886,7 @@
 		},
 		{
 			"id": 50,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Glameow",
 			"set": 1,
 			"nature": "Jolly",
@@ -904,7 +904,7 @@
 		},
 		{
 			"id": 51,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Mime Jr.",
 			"set": 1,
 			"nature": "Bold",
@@ -922,7 +922,7 @@
 		},
 		{
 			"id": 52,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Slowpoke",
 			"set": 1,
 			"nature": "Modest",
@@ -940,7 +940,7 @@
 		},
 		{
 			"id": 53,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Oddish",
 			"set": 1,
 			"nature": "Bold",
@@ -958,7 +958,7 @@
 		},
 		{
 			"id": 54,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Psyduck",
 			"set": 1,
 			"nature": "Modest",
@@ -976,7 +976,7 @@
 		},
 		{
 			"id": 55,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Cubone",
 			"set": 1,
 			"nature": "Adamant",
@@ -994,7 +994,7 @@
 		},
 		{
 			"id": 56,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Goldeen",
 			"set": 1,
 			"nature": "Modest",
@@ -1012,7 +1012,7 @@
 		},
 		{
 			"id": 57,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Natu",
 			"set": 1,
 			"nature": "Timid",
@@ -1030,7 +1030,7 @@
 		},
 		{
 			"id": 58,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Clefairy",
 			"set": 1,
 			"nature": "Adamant",
@@ -1048,7 +1048,7 @@
 		},
 		{
 			"id": 59,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Magnemite",
 			"set": 1,
 			"nature": "Bold",
@@ -1066,7 +1066,7 @@
 		},
 		{
 			"id": 60,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Seel",
 			"set": 1,
 			"nature": "Adamant",
@@ -1084,7 +1084,7 @@
 		},
 		{
 			"id": 61,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Grimer",
 			"set": 1,
 			"nature": "Adamant",
@@ -1102,7 +1102,7 @@
 		},
 		{
 			"id": 62,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Krabby",
 			"set": 1,
 			"nature": "Quiet",
@@ -1120,7 +1120,7 @@
 		},
 		{
 			"id": 63,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Exeggcute",
 			"set": 1,
 			"nature": "Modest",
@@ -1138,7 +1138,7 @@
 		},
 		{
 			"id": 64,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Eevee",
 			"set": 1,
 			"nature": "Jolly",
@@ -1156,7 +1156,7 @@
 		},
 		{
 			"id": 65,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Shellos",
 			"set": 1,
 			"nature": "Bold",
@@ -1174,7 +1174,7 @@
 		},
 		{
 			"id": 66,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Drowzee",
 			"set": 1,
 			"nature": "Modest",
@@ -1192,7 +1192,7 @@
 		},
 		{
 			"id": 67,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Stunky",
 			"set": 1,
 			"nature": "Adamant",
@@ -1210,7 +1210,7 @@
 		},
 		{
 			"id": 68,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Voltorb",
 			"set": 1,
 			"nature": "Modest",
@@ -1228,7 +1228,7 @@
 		},
 		{
 			"id": 69,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Chinchou",
 			"set": 1,
 			"nature": "Modest",
@@ -1246,7 +1246,7 @@
 		},
 		{
 			"id": 70,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Teddiursa",
 			"set": 1,
 			"nature": "Impish",
@@ -1264,7 +1264,7 @@
 		},
 		{
 			"id": 71,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Delibird",
 			"set": 1,
 			"nature": "Adamant",
@@ -1282,7 +1282,7 @@
 		},
 		{
 			"id": 72,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Houndour",
 			"set": 1,
 			"nature": "Adamant",
@@ -1300,7 +1300,7 @@
 		},
 		{
 			"id": 73,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Phanpy",
 			"set": 1,
 			"nature": "Adamant",
@@ -1318,7 +1318,7 @@
 		},
 		{
 			"id": 74,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Aron",
 			"set": 1,
 			"nature": "Impish",
@@ -1336,7 +1336,7 @@
 		},
 		{
 			"id": 75,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Spoink",
 			"set": 1,
 			"nature": "Modest",
@@ -1354,7 +1354,7 @@
 		},
 		{
 			"id": 76,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Luvdisc",
 			"set": 1,
 			"nature": "Timid",
@@ -1372,7 +1372,7 @@
 		},
 		{
 			"id": 77,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Buizel",
 			"set": 1,
 			"nature": "Jolly",
@@ -1390,7 +1390,7 @@
 		},
 		{
 			"id": 78,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Hippopotas",
 			"set": 1,
 			"nature": "Adamant",
@@ -1408,7 +1408,7 @@
 		},
 		{
 			"id": 79,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Skorupi",
 			"set": 1,
 			"nature": "Impish",
@@ -1426,7 +1426,7 @@
 		},
 		{
 			"id": 80,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Finneon",
 			"set": 1,
 			"nature": "Modest",
@@ -1444,7 +1444,7 @@
 		},
 		{
 			"id": 81,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Snover",
 			"set": 1,
 			"nature": "Adamant",
@@ -1462,7 +1462,7 @@
 		},
 		{
 			"id": 82,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Tentacool",
 			"set": 1,
 			"nature": "Modest",
@@ -1480,7 +1480,7 @@
 		},
 		{
 			"id": 83,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Cacnea",
 			"set": 1,
 			"nature": "Adamant",
@@ -1498,7 +1498,7 @@
 		},
 		{
 			"id": 84,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Koffing",
 			"set": 1,
 			"nature": "Modest",
@@ -1516,7 +1516,7 @@
 		},
 		{
 			"id": 85,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Staryu",
 			"set": 1,
 			"nature": "Timid",
@@ -1534,7 +1534,7 @@
 		},
 		{
 			"id": 86,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Skiploom",
 			"set": 1,
 			"nature": "Hardy",
@@ -1552,7 +1552,7 @@
 		},
 		{
 			"id": 87,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Lombre",
 			"set": 1,
 			"nature": "Quiet",
@@ -1570,7 +1570,7 @@
 		},
 		{
 			"id": 88,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Nuzleaf",
 			"set": 1,
 			"nature": "Adamant",
@@ -1588,7 +1588,7 @@
 		},
 		{
 			"id": 89,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Vibrava",
 			"set": 1,
 			"nature": "Modest",
@@ -1606,7 +1606,7 @@
 		},
 		{
 			"id": 90,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Staravia",
 			"set": 1,
 			"nature": "Adamant",
@@ -1624,7 +1624,7 @@
 		},
 		{
 			"id": 91,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Rhyhorn",
 			"set": 1,
 			"nature": "Adamant",
@@ -1643,7 +1643,7 @@
 		},
 		{
 			"id": 92,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Clamperl",
 			"set": 1,
 			"nature": "Bold",
@@ -1661,7 +1661,7 @@
 		},
 		{
 			"id": 93,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Mantyke",
 			"set": 1,
 			"nature": "Hardy",
@@ -1679,7 +1679,7 @@
 		},
 		{
 			"id": 94,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Drifloon",
 			"set": 1,
 			"nature": "Modest",
@@ -1697,7 +1697,7 @@
 		},
 		{
 			"id": 95,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Pidgeotto",
 			"set": 1,
 			"nature": "Adamant",
@@ -1715,7 +1715,7 @@
 		},
 		{
 			"id": 96,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Growlithe",
 			"set": 1,
 			"nature": "Adamant",
@@ -1733,7 +1733,7 @@
 		},
 		{
 			"id": 97,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Cranidos",
 			"set": 1,
 			"nature": "Careful",
@@ -1751,7 +1751,7 @@
 		},
 		{
 			"id": 98,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Shieldon",
 			"set": 1,
 			"nature": "Sassy",
@@ -1769,7 +1769,7 @@
 		},
 		{
 			"id": 99,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Buneary",
 			"set": 1,
 			"nature": "Adamant",
@@ -1787,7 +1787,7 @@
 		},
 		{
 			"id": 100,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Farfetch'd",
 			"set": 1,
 			"nature": "Adamant",
@@ -1805,7 +1805,7 @@
 		},
 		{
 			"id": 101,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Omanyte",
 			"set": 1,
 			"nature": "Bold",
@@ -1823,7 +1823,7 @@
 		},
 		{
 			"id": 102,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Kabuto",
 			"set": 1,
 			"nature": "Adamant",
@@ -1841,7 +1841,7 @@
 		},
 		{
 			"id": 103,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Lileep",
 			"set": 1,
 			"nature": "Calm",
@@ -1860,7 +1860,7 @@
 		},
 		{
 			"id": 104,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Anorith",
 			"set": 1,
 			"nature": "Adamant",
@@ -1878,7 +1878,7 @@
 		},
 		{
 			"id": 105,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Aipom",
 			"set": 1,
 			"nature": "Adamant",
@@ -1896,7 +1896,7 @@
 		},
 		{
 			"id": 106,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Elekid",
 			"set": 1,
 			"nature": "Jolly",
@@ -1914,7 +1914,7 @@
 		},
 		{
 			"id": 107,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Loudred",
 			"set": 1,
 			"nature": "Adamant",
@@ -1932,7 +1932,7 @@
 		},
 		{
 			"id": 108,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Spinda",
 			"set": 1,
 			"nature": "Adamant",
@@ -1950,7 +1950,7 @@
 		},
 		{
 			"id": 109,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Dunsparce",
 			"set": 1,
 			"nature": "Adamant",
@@ -1968,7 +1968,7 @@
 		},
 		{
 			"id": 110,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Nidorina",
 			"set": 1,
 			"nature": "Adamant",
@@ -1986,7 +1986,7 @@
 		},
 		{
 			"id": 111,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Nidorino",
 			"set": 1,
 			"nature": "Adamant",
@@ -2004,7 +2004,7 @@
 		},
 		{
 			"id": 112,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Flaaffy",
 			"set": 1,
 			"nature": "Modest",
@@ -2022,7 +2022,7 @@
 		},
 		{
 			"id": 113,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Magby",
 			"set": 1,
 			"nature": "Adamant",
@@ -2040,7 +2040,7 @@
 		},
 		{
 			"id": 114,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Nosepass",
 			"set": 1,
 			"nature": "Modest",
@@ -2058,7 +2058,7 @@
 		},
 		{
 			"id": 115,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Corsola",
 			"set": 1,
 			"nature": "Modest",
@@ -2076,7 +2076,7 @@
 		},
 		{
 			"id": 116,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Delcatty",
 			"set": 1,
 			"nature": "Adamant",
@@ -2094,7 +2094,7 @@
 		},
 		{
 			"id": 117,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Sableye",
 			"set": 1,
 			"nature": "Impish",
@@ -2112,7 +2112,7 @@
 		},
 		{
 			"id": 118,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Mawile",
 			"set": 1,
 			"nature": "Impish",
@@ -2130,7 +2130,7 @@
 		},
 		{
 			"id": 119,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Kricketune",
 			"set": 1,
 			"nature": "Adamant",
@@ -2148,7 +2148,7 @@
 		},
 		{
 			"id": 120,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Butterfree",
 			"set": 1,
 			"nature": "Modest",
@@ -2166,7 +2166,7 @@
 		},
 		{
 			"id": 121,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Beedrill",
 			"set": 1,
 			"nature": "Jolly",
@@ -2184,7 +2184,7 @@
 		},
 		{
 			"id": 122,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Poliwhirl",
 			"set": 1,
 			"nature": "Quirky",
@@ -2202,7 +2202,7 @@
 		},
 		{
 			"id": 123,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Onix",
 			"set": 1,
 			"nature": "Adamant",
@@ -2220,7 +2220,7 @@
 		},
 		{
 			"id": 124,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Lickitung",
 			"set": 1,
 			"nature": "Adamant",
@@ -2238,7 +2238,7 @@
 		},
 		{
 			"id": 125,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Beautifly",
 			"set": 1,
 			"nature": "Modest",
@@ -2256,7 +2256,7 @@
 		},
 		{
 			"id": 126,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Dustox",
 			"set": 1,
 			"nature": "Modest",
@@ -2274,7 +2274,7 @@
 		},
 		{
 			"id": 127,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Weepinbell",
 			"set": 1,
 			"nature": "Quiet",
@@ -2292,7 +2292,7 @@
 		},
 		{
 			"id": 128,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Graveler",
 			"set": 1,
 			"nature": "Adamant",
@@ -2310,7 +2310,7 @@
 		},
 		{
 			"id": 129,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Ledian",
 			"set": 1,
 			"nature": "Timid",
@@ -2328,7 +2328,7 @@
 		},
 		{
 			"id": 130,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Ariados",
 			"set": 1,
 			"nature": "Adamant",
@@ -2346,7 +2346,7 @@
 		},
 		{
 			"id": 131,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Yanma",
 			"set": 1,
 			"nature": "Timid",
@@ -2364,7 +2364,7 @@
 		},
 		{
 			"id": 132,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Munchlax",
 			"set": 1,
 			"nature": "Relaxed",
@@ -2382,7 +2382,7 @@
 		},
 		{
 			"id": 133,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Gloom",
 			"set": 1,
 			"nature": "Modest",
@@ -2400,7 +2400,7 @@
 		},
 		{
 			"id": 134,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Porygon",
 			"set": 1,
 			"nature": "Modest",
@@ -2418,7 +2418,7 @@
 		},
 		{
 			"id": 135,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Castform",
 			"set": 1,
 			"nature": "Timid",
@@ -2436,7 +2436,7 @@
 		},
 		{
 			"id": 136,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Volbeat",
 			"set": 1,
 			"nature": "Jolly",
@@ -2454,7 +2454,7 @@
 		},
 		{
 			"id": 137,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Illumise",
 			"set": 1,
 			"nature": "Timid",
@@ -2472,7 +2472,7 @@
 		},
 		{
 			"id": 138,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Roselia",
 			"set": 1,
 			"nature": "Modest",
@@ -2490,7 +2490,7 @@
 		},
 		{
 			"id": 139,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Wailmer",
 			"set": 1,
 			"nature": "Modest",
@@ -2508,7 +2508,7 @@
 		},
 		{
 			"id": 140,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Parasect",
 			"set": 1,
 			"nature": "Jolly",
@@ -2526,7 +2526,7 @@
 		},
 		{
 			"id": 141,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Chatot",
 			"set": 1,
 			"nature": "Calm",
@@ -2544,7 +2544,7 @@
 		},
 		{
 			"id": 142,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Haunter",
 			"set": 1,
 			"nature": "Timid",
@@ -2562,7 +2562,7 @@
 		},
 		{
 			"id": 143,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Togetic",
 			"set": 1,
 			"nature": "Calm",
@@ -2580,7 +2580,7 @@
 		},
 		{
 			"id": 144,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Murkrow",
 			"set": 1,
 			"nature": "Jolly",
@@ -2598,7 +2598,7 @@
 		},
 		{
 			"id": 145,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Wobbuffet",
 			"set": 1,
 			"nature": "Jolly",
@@ -2617,7 +2617,7 @@
 		},
 		{
 			"id": 146,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Plusle",
 			"set": 1,
 			"nature": "Timid",
@@ -2635,7 +2635,7 @@
 		},
 		{
 			"id": 147,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Minun",
 			"set": 1,
 			"nature": "Timid",
@@ -2653,7 +2653,7 @@
 		},
 		{
 			"id": 148,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Pachirisu",
 			"set": 1,
 			"nature": "Jolly",
@@ -2671,7 +2671,7 @@
 		},
 		{
 			"id": 149,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Ponyta",
 			"set": 1,
 			"nature": "Adamant",
@@ -2689,7 +2689,7 @@
 		},
 		{
 			"id": 150,
-			"set_group": "A",
+			"set_group": "A1",
 			"species": "Azumarill",
 			"set": 1,
 			"nature": "Quiet",
