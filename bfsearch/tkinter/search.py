@@ -11,7 +11,7 @@ from tkinter import ttk
 
 from bfsearch import core, data
 from bfsearch.data import ndict
-from bfsearch.tkinter import browse, mainwindow
+from bfsearch.tkinter import browse, dialogs
 from bfsearch.translate import tr
 
 
@@ -256,7 +256,7 @@ class SearchPage(browse.SharedPageElements):
             if combo.current() != 0:
                 break
         else:  # what the fuck
-            suredialog = mainwindow.ButtonDialog(self._root(), tr("page.search.name"), tr("page.search.searchButton.sure"), "gui/search.png", [tr("toolbar.button.ok"), tr("toolbar.button.cancel")])
+            suredialog = dialogs.ButtonDialog(self._root(), tr("page.search.name"), tr("page.search.searchButton.sure"), "gui/search.png", [tr("toolbar.button.ok"), tr("toolbar.button.cancel")])
             pressed = suredialog.show()
             if pressed != 0:
                 return
