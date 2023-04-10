@@ -256,7 +256,7 @@ class SearchPage(browse.SharedPageElements):
             if combo.current() != 0:
                 break
         else:  # what the fuck
-            suredialog = dialogs.ButtonDialog(self._root(), tr("page.search.name"), tr("page.search.searchButton.sure"), "gui/search.png", [tr("toolbar.button.ok"), tr("toolbar.button.cancel")])
+            suredialog = dialogs.InfoDialog(self._root(), tr("page.search.name"), [tr("toolbar.button.ok"), tr("toolbar.button.cancel")], tr("page.search.searchButton.sure"), "gui/search.png")
             pressed = suredialog.show()
             if pressed != 0:
                 return

@@ -37,8 +37,8 @@ class Dialog(object):
         self.buttonframe.columnconfigure(0, weight = 1)
         self.buttonframe.grid(column = 0, row = 1, sticky = (W, N, E, S))
         for index, name in enumerate(kwargs['buttons']):
-            button = Button(self.buttonframe, text = name, command = (lambda self = self, index = index: self.finish(index)))
-            button.grid(column = index, row = 0, sticky = (E, S), padx = 5, ipadx = 20)
+            button = ttk.Button(self.buttonframe, text = name, command = (lambda self = self, index = index: self.finish(index)))
+            button.grid(column = index, row = 0, sticky = (E, S), padx = 5, ipadx = 10)
             if index == 0:
                 button.focus_set()
 
@@ -139,3 +139,14 @@ class ComboboxDialog(InfoDialog):
     def output(self):
         return self.pressed, self.combo.get()
 
+
+# a custom dialog.
+class CustomDialog(Dialog):
+    # builder is a method to call that adds widgets to the dialog.
+    def __init__(self, parent, title, buttons, builder, **kwargs):
+        self.builder = builder
+        Dialog.__init__(self, parent, title, buttons, **kwargs)
+
+    def buildDialog(self, **kwargs):
+        super().buildDialog(**kwargs)
+        self.builder.__call__(self, **kwargs)

@@ -9,7 +9,7 @@ from idlelib.tooltip import Hovertip
 
 from bfsearch import data, translate, settings
 from bfsearch.translate import tr
-from bfsearch.tkinter import browse, search, browsehall, dialogs
+from bfsearch.tkinter import browse, search, browsehall, dialogs, helpdialogs
 
 
 
@@ -159,6 +159,11 @@ class Toolbar(ttk.Frame):
         Hovertip(self.about, tr("toolbar.button.about.tooltip"), hover_delay = 1000)
         self.about.pack(side = LEFT, padx = 5)
 
+        self.helpImage = PhotoImage(file = "gui/help.png")
+        self.help = ttk.Button(self, text = tr("toolbar.button.help.name"), image = self.helpImage, compound = 'top', command = self.showHelp, takefocus = 0)
+        Hovertip(self.help, tr("toolbar.button.help.tooltip"), hover_delay = 1000)
+        self.help.pack(side = LEFT, padx = 5)
+
     def showAbout(self):
         aboutdialog = dialogs.InfoDialog(self._root(), tr("toolbar.button.about.name"), [tr("toolbar.button.ok"), tr("toolbar.button.about.linkButton")], tr("toolbar.button.about.about"), "gui/about.png")
         pressed = aboutdialog.show()
@@ -184,3 +189,6 @@ class Toolbar(ttk.Frame):
                     self._root().destroy()
             else:
                 logging.warning(f"Invalid language selection: '{combo}'")
+
+    def showHelp(self):
+        helpdialogs.mainHelp(self._root())

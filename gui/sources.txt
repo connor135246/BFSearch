@@ -16,3 +16,5 @@ hallcalc.png
 https://archives.bulbagarden.net/wiki/File:Spr_Pt_Argenta.png
 frontier.png
 https://archives.bulbagarden.net/wiki/File:JohtoSinnoh_BF.png
+help.png
+https://archives.bulbagarden.net/wiki/File:Bag_Vs._Recorder_Sprite.png
