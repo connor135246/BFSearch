@@ -143,7 +143,7 @@ def tclassToTName(trainers):
     return tTT
 
 def genericSetProvider(sets):
-    return core.SetProvider(0, 31, list(core.BattleNum), sets)
+    return core.SetProvider(31, list(core.BattleNum), sets)
 
 # returns a triple dict of {BattleNum.value} to {tclass} to {tname} to Trainer.
 # trainers that appear in more than one BattleNum will appear multiple times.

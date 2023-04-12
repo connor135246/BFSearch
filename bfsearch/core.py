@@ -328,6 +328,8 @@ class Facility(Enum):
         return 100 if self == Facility.Factory_Open else 50
     def hideItem(self):
         return self == Facility.Arcade or self == Facility.Castle
+    def ivValues(self):
+        return [0, 4, 8, 12, 16, 20, 24, 31] if self.isFactory() else [3, 6, 9, 12, 15, 18, 21, 31]
 
     def isNormal(self):
         return self == Facility.Tower or self == Facility.Arcade or self == Facility.Castle or self == Facility.Any_Normal
@@ -336,10 +338,9 @@ class Facility(Enum):
 
 # base class of trainer that doesn't have tid, tclass, or tname.
 class SetProvider(object):
-    # minIV - a number, maxIV - a number, battlenums - a list of BattleNum, sets - a dictionary of '{name}' to dictionary of '{pset}' to PokeSet
-    def __init__(self, minIV, maxIV, battlenums, sets):
-        self.minIV = minIV
-        self.maxIV = maxIV
+    # iv - a number, battlenums - a list of BattleNum, sets - a dictionary of '{name}' to dictionary of '{pset}' to PokeSet
+    def __init__(self, iv, battlenums, sets):
+        self.iv = iv
         self.battlenums = battlenums
         self.sets = sets
         '''
@@ -350,14 +351,13 @@ class SetProvider(object):
         '''
 
     def isIdenticalProvider(self, other):
-        return self.minIV == other.minIV and self.maxIV == other.maxIV and self.battlenums == other.battlenums and self.sets == other.sets
+        return self.iv == other.iv and self.battlenums == other.battlenums and self.sets == other.sets
 
 class Trainer(SetProvider):
     # tid - a number, iv - a number, tclass - a string, tname - a string, battlenums - a list of BattleNum, sets - a dictionary of '{name}' to dictionary of '{pset}' to PokeSet, facility - a Facility
     def __init__(self, tid, iv, tclass, tname, battlenums, sets, facility):
-        SetProvider.__init__(self, iv, iv, battlenums, sets)
+        SetProvider.__init__(self, iv, battlenums, sets)
         self.tid = tid
-        self.iv = iv
         self.tclass = tclass
         self.tname = tname
         # you shouldn't use this at all.
@@ -367,7 +367,7 @@ class Trainer(SetProvider):
         return f"{self.tclass} {self.tname}"
 
     def asSetProvider(self):
-        return SetProvider(self.iv, self.iv, self.battlenums, self.sets)
+        return SetProvider(self.iv, self.battlenums, self.sets)
 
 
 # a pokemon set owned by a trainer.

@@ -127,7 +127,7 @@ class BrowseAllHallSetsPage(BrowseHallSetsPageBase):
         if "Weavile" in self.getSorted().keys():
             self.poke.set("Weavile")
             self.updateSet()
-        self.setIVBox(0, 31)
+        self.setIVBox([8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 31])
         self.setLevelBox(14, 100)
 
 
@@ -273,7 +273,7 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
             iv = 31
         else:
             iv = ivFromRank(self.rank.get())
-        self.setIVBox(iv, iv)
+        self.setIVBox([iv])
 
     def updateCalcSets(self):
         if self.type.get() == self.HALL_BRAIN_GOLD:

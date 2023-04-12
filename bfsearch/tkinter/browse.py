@@ -185,20 +185,31 @@ class SharedPageElements(ttk.Frame):
     def getSorted(self):
         return self.sortedAlpha if self.alpha else self.sortedDex
 
-    def setIVBox(self, minIV, maxIV):
-        self.ivBox['from_'] = minIV
-        self.ivBox['to'] = maxIV
-        if minIV == maxIV:
+    def setIVBox(self, values):
+        oldValues = self.ivBox['values']
+        self.ivBox['values'] = values
+        if len(values) > 1:
+            # tooltip
+            self.setToolTip(self.ivBox, ", ".join(self.ivBox['values']))
+            self.ivBox.state(["!disabled"])
+            # spinbox var
+            index = -1
+            if oldValues and len(oldValues) == len(values):
+                try:
+                    # tkinter turns the values into strings.
+                    index = oldValues.index(str(self.iv.get()))
+                except ValueError:
+                    pass
+            self.iv.set(values[index])
+        else:
+            # tooltip
             self.setToolTip(self.ivBox, tr("page.all_sets.ivBox.tooltip.fixed"))
             self.ivBox.state(["disabled"])
-        else:
-            self.setToolTip(self.ivBox, tr("page.generic.range", self.ivBox['from'], self.ivBox['to']))
-            self.ivBox.state(["!disabled"])
-        # manually ensure the spinbox var is valid
-        if self.iv.get() > maxIV:
-            self.iv.set(maxIV)
-        if self.iv.get() < minIV:
-            self.iv.set(minIV)
+            # spinbox var
+            if len(values) == 1:
+                self.iv.set(values[0])
+            else:
+                self.iv.set(31)
         # manually notify the spinbox that it changed
         self.handleIVBox()
 
@@ -209,6 +220,14 @@ class SharedPageElements(ttk.Frame):
             self.facility = Facility.Tower
             self.facilityVar.set(Facility.Tower.value)
         self.handleFacility()
+
+    ### override if using facility
+    def prepFacility(self):
+        pass
+
+    ### override if using facility
+    def handleFacility(self):
+        pass
 
     def getIV(self):
         return self.iv.get()
@@ -224,9 +243,6 @@ class SharedPageElements(ttk.Frame):
             self.setOutputText(getSetResultString(self.currentSet, self.getIV(), hideItem = self.getHideItem(), level = self.getLevel()))
 
     def handleIVBox(self):
-        self.updateSet()
-
-    def handleFacility(self):
         self.updateSet()
 
     ### override and call super to add functionality
@@ -340,7 +356,14 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
 
         # set up initial state
         self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
-        self.setIVBox(0, 31)
+        self.prepFacility()
+
+    def prepFacility(self):
+        self.setIVBox(self.facility.ivValues())
+
+    # when the facility selection changes, update the possible ivs
+    def handleFacility(self):
+        self.prepFacility()
 
 
 # browse sets by trainer
@@ -432,7 +455,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
             self.sortedDex = data.setsDexSorted(currentProvider.sets)
             # when the trainer selection updates, tells the species combo box to update
             self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
-            self.setIVBox(currentProvider.minIV, currentProvider.maxIV)
+            self.setIVBox([currentProvider.iv])
             self.setToolTip(self.battlenumCombo, self.battlenum.get())
             self.setToolTip(self.tclassCombo, self.tclass.get())
             self.setToolTip(self.tnameCombo, self.tname.get())
@@ -443,7 +466,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         self.sortedAlpha = ndict()
         self.sortedDex = ndict()
         self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
-        self.setIVBox(0, 0)
+        self.setIVBox([0])
         self.setToolTip(self.battlenumCombo, "")
         self.setToolTip(self.tclassCombo, "")
         self.setToolTip(self.tnameCombo, "")
