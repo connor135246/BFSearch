@@ -18,8 +18,12 @@ Click to see a screenshot.
  - [Battle Tower/Arcade/Castle/Factory sets](https://www.smogon.com/forums/threads/pokemon-platinum-the-definitive-thread-mark-5-battle-frontier-discussion.45802/#post-1489122)  
  - [Battle Tower/Arcade/Castle trainer info](https://bulbapedia.bulbagarden.net/wiki/List_of_Battle_Frontier_Trainers_(Generation_IV))  
  - [Battle Factory trainer info](https://www.smogon.com/forums/threads/platinum-hg-ss-battle-frontier-and-dp-battle-tower-records.52858/page-117#post-2861763)  
+ - [Battle Factory swapping info](https://www.smogon.com/forums/threads/platinum-hg-ss-battle-frontier-and-dp-battle-tower-records.52858/page-66#post-2365842)  
+ - [Battle Factory clauses info](https://www.smogon.com/forums/threads/platinum-hg-ss-battle-frontier-and-dp-battle-tower-records.52858/page-43#post-2210563)  
  - [Battle Hall sets](https://www.smogon.com/forums/threads/platinum-hg-ss-battle-frontier-and-dp-battle-tower-records.52858/page-2#post-1850704)  
  - [Battle Hall type/rank info](https://bulbapedia.bulbagarden.net/wiki/Battle_Hall)  
+ - [Battle Arcade roulette info](https://bulbapedia.bulbagarden.net/wiki/Battle_Arcade)  
+ - [Battle Castle point info](https://bulbapedia.bulbagarden.net/wiki/Battle_Castle)  
 
 ## Errors / Missing Data
  If you know of any errors in the source data used, please let me know!  

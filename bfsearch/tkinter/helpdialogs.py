@@ -17,7 +17,7 @@ def mainHelp(parent):
     helpoptions.append((tr("help.basics"), basicHelp))
     helpoptions.append((tr("help.nonhall"), nonhallHelp))
     helpoptions.append((tr("help.hall"), hallHelp))
-    helpoptions.append((tr("help.tricks"), tricksHelp))
+    helpoptions.append((tr("help.mechanics"), mechanicsHelp))
     HelpDialog(parent, tr("toolbar.button.help.name"), tr("help"), helpoptions).show()
     parent.grab_set()
 
@@ -39,13 +39,14 @@ def hallHelp(parent):
     HelpDialog(parent, tr("help.hall"), tr("help"), helpoptions).show()
     parent.grab_set()
 
-def tricksHelp(parent):
+def mechanicsHelp(parent):
     helpoptions = []
-    helpoptions.append((tr("help.tricks.castle.earning_points"), tricksCastleEarn))
-    helpoptions.append((tr("help.tricks.castle.spending_points"), tricksCastleSpend))
-    helpoptions.append((tr("help.tricks.factory.swapping"), tricksFactorySwap))
-    helpoptions.append((tr("help.tricks.factory.clauses"), tricksFactoryClauses))
-    HelpDialog(parent, tr("help.tricks"), tr("help"), helpoptions).show()
+    helpoptions.append((tr("help.mechanics.arcade.roulette"), mechanicsArcadeRoulette))
+    helpoptions.append((tr("help.mechanics.castle.earning_points"), mechanicsCastleEarn))
+    helpoptions.append((tr("help.mechanics.castle.spending_points"), mechanicsCastleSpend))
+    helpoptions.append((tr("help.mechanics.factory.swapping"), mechanicsFactorySwap))
+    helpoptions.append((tr("help.mechanics.factory.clauses"), mechanicsFactoryClauses))
+    HelpDialog(parent, tr("help.mechanics"), tr("help"), helpoptions).show()
     parent.grab_set()
 
 class HelpDialog(dialogs.InfoDialog):
@@ -145,13 +146,9 @@ def nonhallStreaks(parent):
         label2 = ttk.Label(self.mainframe, text = tr("help.nonhall.streaks.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
-        streak50 = ttk.Treeview(self.mainframe, height = 2, columns = ('groups'), takefocus = 0)
-        streak50.heading('#0', text = tr("help.nonhall.streaks.tree.battle"))
-        streak50.column('#0', width = width)
-        streak50.heading('groups', text = tr("help.nonhall.streaks.tree.groups"))
-        streak50.column('groups', width = width)
-        streak50.insert('', 'end', text = f"{core.BattleNum.s99.value} [Tower/Arcade/Castle]", values = ["B2, C1-C4, D1-D4"])
-        streak50.insert('', 'end', text = f"{core.BattleNum.s99.value} [Factory]", values = ["C1-C4, D1-D4"])
+        values = [core.BattleNum.s99.value + " " + tr("help.nonhall.streaks.tree.normal"), core.BattleNum.s99.value + " " + tr("help.nonhall.streaks.tree.factory")]
+        colvalues = ["B2, C1-C4, D1-D4", "C1-C4, D1-D4"]
+        streak50 = oneColTree(self.mainframe, width, tr("help.nonhall.streaks.tree.battle"), tr("help.nonhall.streaks.tree.groups"), values, colvalues)
         streak50.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
         label3 = ttk.Label(self.mainframe, text = tr("help.nonhall.streaks.info.3"), wraplength = wraplength, padding = (10, 5, 10, 5))
@@ -210,11 +207,8 @@ def hallGroups(parent):
         label = ttk.Label(self.mainframe, text = tr("help.hall.groups.info"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-        groupView = ttk.Treeview(self.mainframe, height = 4, columns = ('examples'), takefocus = 0)
-        groupView.heading('#0', text = tr("help.nonhall.groups.tree.name"))
-        groupView.column('#0', width = width)
-        groupView.heading('examples', text = tr("help.nonhall.groups.tree.examples"))
-        groupView.column('examples', width = width)
+        groupView = oneColTree(self.mainframe, width, tr("help.nonhall.groups.tree.name"), tr("help.nonhall.groups.tree.examples"))
+        groupView['height'] = 4
         for hallsetgroup in list(core.HallSetGroup):
             groupView.insert('', 'end', text = hallsetgroup.fullname(), values = [tr(f"help.hall.groups.{hallsetgroup.name}.examples")])
         groupView.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
@@ -232,16 +226,16 @@ def hallRank(parent):
         label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
         values = []
-        values.append([core.HallSetGroup.sub339.fullname()])
-        values.append([core.HallSetGroup.sub339.fullname()])
-        values.append([core.HallSetGroup.sub339.fullname() + ", " + core.HallSetGroup.from340to439.fullname()])
-        values.append([core.HallSetGroup.sub339.fullname() + ", " + core.HallSetGroup.from340to439.fullname()])
-        values.append([core.HallSetGroup.sub339.fullname() + ", " + core.HallSetGroup.from340to439.fullname()])
-        values.append([core.HallSetGroup.from340to439.fullname() + ", " + core.HallSetGroup.from440to499.fullname()])
-        values.append([core.HallSetGroup.from340to439.fullname() + ", " + core.HallSetGroup.from440to499.fullname()])
-        values.append([core.HallSetGroup.from340to439.fullname() + ", " + core.HallSetGroup.from440to499.fullname()])
-        values.append([core.HallSetGroup.from440to499.fullname() + ", " + core.HallSetGroup.plus500.fullname()])
-        values.append([core.HallSetGroup.from440to499.fullname() + ", " + core.HallSetGroup.plus500.fullname()])
+        values.append(core.HallSetGroup.sub339.fullname())
+        values.append(core.HallSetGroup.sub339.fullname())
+        values.append(core.HallSetGroup.sub339.fullname() + ", " + core.HallSetGroup.from340to439.fullname())
+        values.append(core.HallSetGroup.sub339.fullname() + ", " + core.HallSetGroup.from340to439.fullname())
+        values.append(core.HallSetGroup.sub339.fullname() + ", " + core.HallSetGroup.from340to439.fullname())
+        values.append(core.HallSetGroup.from340to439.fullname() + ", " + core.HallSetGroup.from440to499.fullname())
+        values.append(core.HallSetGroup.from340to439.fullname() + ", " + core.HallSetGroup.from440to499.fullname())
+        values.append(core.HallSetGroup.from340to439.fullname() + ", " + core.HallSetGroup.from440to499.fullname())
+        values.append(core.HallSetGroup.from440to499.fullname() + ", " + core.HallSetGroup.plus500.fullname())
+        values.append(core.HallSetGroup.from440to499.fullname() + ", " + core.HallSetGroup.plus500.fullname())
         tree = makeRankTrees(self.mainframe, width, tr("help.nonhall.streaks.tree.groups"), values)
         tree.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
@@ -267,104 +261,122 @@ def hallLevel(parent):
     dialogs.CustomDialog(parent, tr("help.hall.level"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
-def tricksCastleEarn(parent):
+def mechanicsArcadeRoulette(parent):
+    def builder(self, **kwargs):
+        self.mainframe.columnconfigure(0, weight = 1)
+        wraplength = 450
+        width = 100
+
+        label = ttk.Label(self.mainframe, text = tr("help.mechanics.arcade.roulette.info"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label.grid(column = 0, row = 0, sticky = (W, N, E, S))
+
+        def trEffect(effect):
+            return tr(f"help.mechanics.arcade.roulette.tree.{effect}")
+
+        values = list(map(trEffect, ["lower_hp", "poison", "paralyze", "burn", "sleep", "freeze", "berry", "item", "level_up"]))
+        rouletteView1 = noColTree(self.mainframe, width, tr("help.mechanics.arcade.roulette.tree.targeted"), values)
+        rouletteView1.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
+
+        values = list(map(trEffect, ["sun", "rain", "sandstorm", "hail", "fog", "trick_room"]))
+        rouletteView2 = noColTree(self.mainframe, width, tr("help.mechanics.arcade.roulette.tree.field"), values)
+        rouletteView2.grid(column = 0, row = 2, sticky = (W, N, E, S), padx = 10, pady = 5)
+
+        values = list(map(trEffect, ["nothing", "swap", "skip", "get_1", "get_3", "speed_up", "speed_down", "random"]))
+        rouletteView3 = noColTree(self.mainframe, width, tr("help.mechanics.arcade.roulette.tree.other"), values)
+        rouletteView3.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
+
+    dialogs.CustomDialog(parent, tr("help.mechanics.arcade.roulette"), [tr("toolbar.button.ok")], builder).show()
+    parent.grab_set()
+
+def mechanicsCastleEarn(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
         wraplength = 350
 
-        label = ttk.Label(self.mainframe, text = tr("help.tricks.castle.earning_points.info"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label = ttk.Label(self.mainframe, text = tr("help.mechanics.castle.earning_points.info"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-        earnView = ttk.Treeview(self.mainframe, height = 9, columns = ('earned'), takefocus = 0)
-        earnView.heading('#0', text = tr("help.tricks.castle.earning_points.tree.earned"))
-        earnView.column('#0', width = 50)
-        earnView.heading('earned', text = tr("help.tricks.castle.earning_points.tree.condition"))
-        earnView.column('earned', width = 250)
-        conditions = [("not_fainted", 3), ("full_hp", 3), ("more_than_half_hp", 2), ("less_than_half_hp", 1), ("no_status", 1), ("under_5_pp", 8), ("under_10_pp", 6), ("under_15_pp", 4), ("leveled_up", 7)]
-        for condition, earned in conditions:
-            earnView.insert('', 'end', text = earned, values = [tr(f"help.tricks.castle.earning_points.tree.{condition}")])
+        values = [3, 3, 2, 1, 1, 8, 6, 4, 7]
+        conditions = ["not_fainted", "full_hp", "more_than_half_hp", "less_than_half_hp", "no_status", "under_5_pp", "under_10_pp", "under_15_pp", "leveled_up"]
+        colvalues = list(map(lambda condition: tr(f"help.mechanics.castle.earning_points.tree.{condition}"), conditions))
+        earnView = oneColTree(self.mainframe, 50, tr("help.mechanics.castle.earning_points.tree.earned"), tr("help.mechanics.castle.earning_points.tree.condition"), values, colvalues)
+        earnView.column('col', width = 250)
         earnView.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-    dialogs.CustomDialog(parent, tr("help.tricks.castle.earning_points"), [tr("toolbar.button.ok")], builder).show()
+    dialogs.CustomDialog(parent, tr("help.mechanics.castle.earning_points"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
-def tricksCastleSpend(parent):
+def mechanicsCastleSpend(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
         wraplength = 400
         width = 75
 
-        label1 = ttk.Label(self.mainframe, text = tr("help.tricks.castle.spending_points.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label1 = ttk.Label(self.mainframe, text = tr("help.mechanics.castle.spending_points.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
         infoView = makeSpendTree(self.mainframe, width, 6, [100, 100], [[("hp", 10)], [("pp", 8)], [("hppp", 12)]])
         infoView.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label2 = ttk.Label(self.mainframe, text = tr("help.tricks.castle.spending_points.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label2 = ttk.Label(self.mainframe, text = tr("help.mechanics.castle.spending_points.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
         infoView = makeSpendTree(self.mainframe, width, 7, [50], [[("identify", 1), ("stats", 2), ("level_up", 1), ("level_down", 15)], [("moves", 5)]])
         infoView.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label3 = ttk.Label(self.mainframe, text = tr("help.tricks.castle.spending_points.info.3"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label3 = ttk.Label(self.mainframe, text = tr("help.mechanics.castle.spending_points.info.3"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label3.grid(column = 0, row = 4, sticky = (W, N, E, S))
 
-        passView = ttk.Treeview(self.mainframe, height = 1, columns = ('cost'), takefocus = 0)
-        passView.heading('#0', text = tr("help.tricks.castle.spending_points.tree.feature"))
-        passView.column('#0', width = width)
-        passView.heading('cost', text = tr("help.tricks.castle.spending_points.tree.cost"))
-        passView.column('cost', width = 25)
-        passView.insert('', 'end', text = tr(f"help.tricks.castle.spending_points.tree.pass"), values = [50])
+        passView = oneColTree(self.mainframe, width, tr("help.mechanics.castle.spending_points.tree.feature"), tr("help.mechanics.castle.spending_points.tree.cost"), [tr(f"help.mechanics.castle.spending_points.tree.pass")], [50])
+        passView.column('col', width = 25)
         passView.grid(column = 0, row = 5, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label4 = ttk.Label(self.mainframe, text = tr("help.tricks.castle.spending_points.info.4"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label4 = ttk.Label(self.mainframe, text = tr("help.mechanics.castle.spending_points.info.4"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label4.grid(column = 0, row = 6, sticky = (W, N, E, S))
 
-    pressed = dialogs.CustomDialog(parent, tr("help.tricks.castle.spending_points"), [tr("toolbar.button.next"), tr("toolbar.button.ok")], builder).show()
+    pressed = dialogs.CustomDialog(parent, tr("help.mechanics.castle.spending_points"), [tr("toolbar.button.next"), tr("toolbar.button.ok")], builder).show()
     if pressed == 0:
-        parent._root().after_idle(tricksCastleSpendItems, parent)
+        parent._root().after_idle(mechanicsCastleSpendItems, parent)
     parent.grab_set()
 
-def tricksCastleSpendItems(parent):
+def mechanicsCastleSpendItems(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
         wraplength = 450
 
-        label1 = ttk.Label(self.mainframe, text = tr("help.tricks.castle.spending_points.items.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label1 = ttk.Label(self.mainframe, text = tr("help.mechanics.castle.spending_points.items.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
         itemViewFrame = ttk.Frame(self.mainframe)
         itemViewFrame.columnconfigure(0, weight = 1)
 
-        itemView = ttk.Treeview(itemViewFrame, height = 20, columns = ('cost'), takefocus = 0)
-        itemView.heading('#0', text = tr("help.tricks.castle.spending_points.tree.feature"))
-        itemView.column('#0', width = 250)
-        itemView.heading('cost', text = tr("help.tricks.castle.spending_points.tree.cost"))
-        itemView.column('cost', width = 50)
+        itemView = oneColTree(itemViewFrame, 250, tr("help.mechanics.castle.spending_points.tree.feature"), tr("help.mechanics.castle.spending_points.tree.cost"))
+        itemView['height'] = 20
+        itemView.column('col', width = 50)
 
         def insertItemCosts(level, value, *items):
             for item in items:
                 itemView.insert(level, 'end', text = tr(f"item.{item}"), values = [value])
 
         # level 1
-        level = itemView.insert('', 'end', text = tr("help.tricks.castle.spending_points.tree.unlock.1"), values = ["---"], open = True)
-        sublevel = itemView.insert(level, 'end', text = tr("help.tricks.castle.spending_points.items.tree.status_berries"), values = [2])
+        level = itemView.insert('', 'end', text = tr("help.mechanics.castle.spending_points.tree.unlock.1"), values = ["---"], open = True)
+        sublevel = itemView.insert(level, 'end', text = tr("help.mechanics.castle.spending_points.items.tree.status_berries"), values = [2])
         insertItemCosts(sublevel, 2, "cheri_berry", "chesto_berry", "pecha_berry", "rawst_berry", "aspear_berry", "persim_berry")
         insertItemCosts(level, 5, "lum_berry", "sitrus_berry")
         # level 2
-        level = itemView.insert('', 'end', text = tr("help.tricks.castle.spending_points.tree.unlock.2"), values = [100], open = True)
+        level = itemView.insert('', 'end', text = tr("help.mechanics.castle.spending_points.tree.unlock.2"), values = [100], open = True)
         insertItemCosts(level, 5, "power_herb")
         insertItemCosts(level, 10, "kings_rock", "metronome", "light_clay", "grip_claw", "big_root", "toxic_orb", "flame_orb")
         insertItemCosts(level, 15, "quick_claw", "shell_bell", "light_ball", "thick_club")
         # level 3
-        level = itemView.insert('', 'end', text = tr("help.tricks.castle.spending_points.tree.unlock.3"), values = [150], open = True)
+        level = itemView.insert('', 'end', text = tr("help.mechanics.castle.spending_points.tree.unlock.3"), values = [150], open = True)
         insertItemCosts(level, 5, "white_herb")
         insertItemCosts(level, 10, "focus_sash")
         insertItemCosts(level, 15, "focus_band")
         insertItemCosts(level, 20, "leftovers", "bright_powder", "scope_lens", "wide_lens", "zoom_lens", "choice_band", "choice_specs", "choice_scarf", "muscle_band", "wise_glasses", "expert_belt", "life_orb")
-        sublevel = itemView.insert(level, 'end', text = tr("help.tricks.castle.spending_points.items.tree.stat_pinch_berries"), values = [5])
+        sublevel = itemView.insert(level, 'end', text = tr("help.mechanics.castle.spending_points.items.tree.stat_pinch_berries"), values = [5])
         insertItemCosts(sublevel, 5, "liechi_berry", "ganlon_berry", "salac_berry", "petaya_berry", "apicot_berry", "lansat_berry", "starf_berry")
-        sublevel = itemView.insert(level, 'end', text = tr("help.tricks.castle.spending_points.items.tree.damage_reducing_berries"), values = [5])
+        sublevel = itemView.insert(level, 'end', text = tr("help.mechanics.castle.spending_points.items.tree.damage_reducing_berries"), values = [5])
         insertItemCosts(sublevel, 5, "occa_berry", "passho_berry", "wacan_berry", "rindo_berry", "yache_berry", "chople_berry", "kebia_berry", "shuca_berry", "coba_berry", "payapa_berry", "tanga_berry", "charti_berry", "kasib_berry", "haban_berry", "colbur_berry", "babiri_berry", "chilan_berry")
 
         scrollbar = ttk.Scrollbar(itemViewFrame, orient = 'vertical', command = itemView.yview)
@@ -375,73 +387,69 @@ def tricksCastleSpendItems(parent):
 
         itemViewFrame.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label2 = ttk.Label(self.mainframe, text = tr("help.tricks.castle.spending_points.items.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label2 = ttk.Label(self.mainframe, text = tr("help.mechanics.castle.spending_points.items.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
-    pressed = dialogs.CustomDialog(parent, tr("help.tricks.castle.spending_points.items"), [tr("toolbar.button.prev"), tr("toolbar.button.ok")], builder).show()
+    pressed = dialogs.CustomDialog(parent, tr("help.mechanics.castle.spending_points.items"), [tr("toolbar.button.prev"), tr("toolbar.button.ok")], builder).show()
     if pressed == 0:
-        parent._root().after_idle(tricksCastleSpend, parent)
+        parent._root().after_idle(mechanicsCastleSpend, parent)
     parent.grab_set()
 
-def tricksFactorySwap(parent):
+def mechanicsFactorySwap(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
 
-        label = ttk.Label(self.mainframe, text = tr("help.tricks.factory.swapping.info"), wraplength = 450, padding = (10, 5, 10, 5))
+        label = ttk.Label(self.mainframe, text = tr("help.mechanics.factory.swapping.info"), wraplength = 450, padding = (10, 5, 10, 5))
         label.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-    dialogs.CustomDialog(parent, tr("help.tricks.factory.swapping"), [tr("toolbar.button.ok")], builder).show()
+    dialogs.CustomDialog(parent, tr("help.mechanics.factory.swapping"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
-def tricksFactoryClauses(parent):
+def mechanicsFactoryClauses(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
 
-        label = ttk.Label(self.mainframe, text = tr("help.tricks.factory.clauses.info"), wraplength = 450, padding = (10, 5, 10, 5))
+        label = ttk.Label(self.mainframe, text = tr("help.mechanics.factory.clauses.info"), wraplength = 450, padding = (10, 5, 10, 5))
         label.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-    dialogs.CustomDialog(parent, tr("help.tricks.factory.clauses"), [tr("toolbar.button.ok")], builder).show()
+    dialogs.CustomDialog(parent, tr("help.mechanics.factory.clauses"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
 
+
+def oneColTree(parent, width, name, heading, values = [], colvalues = []):
+    tree = ttk.Treeview(parent, height = len(values), columns = ('col'), takefocus = 0)
+    tree.heading('#0', text = name)
+    tree.column('#0', width = width)
+    tree.heading('col', text = heading)
+    tree.column('col', width = width)
+    for value, colvalue in zip(values, colvalues):
+        tree.insert('', 'end', text = value, values = [colvalue])
+    return tree
+
+def noColTree(parent, width, name, values = []):
+    tree = ttk.Treeview(parent, height = len(values), takefocus = 0)
+    tree.heading('#0', text = name)
+    tree.column('#0', width = width)
+    for value in values:
+        tree.insert('', 'end', text = value)
+    return tree
 
 # returns a frame with two treeviews next to each other containg the values for the battlenums
 def makeBattleNumTrees(parent, width, heading, svalues, evalues):
 
-    include50 = len(svalues) > 7
-
     frame = ttk.Frame(parent)
     frame.columnconfigure(0, weight = 1)
-    frame.columnconfigure(1, weight = 1) 
+    frame.columnconfigure(1, weight = 1)
 
-    treeS = ttk.Treeview(frame, height = 8 if include50 else 7, columns = ('col'), takefocus = 0)
-    treeS.heading('#0', text = tr("help.nonhall.streaks.tree.battle"))
-    treeS.column('#0', width = width)
-    treeS.heading('col', text = heading)
-    treeS.column('col', width = width)
-    treeS.insert('', 'end', text = core.BattleNum.s1.value, values = [svalues[0]])
-    treeS.insert('', 'end', text = core.BattleNum.s2.value, values = [svalues[1]])
-    treeS.insert('', 'end', text = core.BattleNum.s3.value, values = [svalues[2]])
-    treeS.insert('', 'end', text = core.BattleNum.s4.value, values = [svalues[3]])
-    treeS.insert('', 'end', text = core.BattleNum.s5.value, values = [svalues[4]])
-    treeS.insert('', 'end', text = core.BattleNum.s6.value, values = [svalues[5]])
-    treeS.insert('', 'end', text = core.BattleNum.s7.value, values = [svalues[6]])
-    if include50:
-        treeS.insert('', 'end', text = core.BattleNum.s99.value, values = [svalues[7]])
+    values = [core.BattleNum.s1.value, core.BattleNum.s2.value, core.BattleNum.s3.value, core.BattleNum.s4.value, core.BattleNum.s5.value, core.BattleNum.s6.value, core.BattleNum.s7.value]
+    if len(svalues) > 7:
+        values.append(core.BattleNum.s99.value)
+    treeS = oneColTree(frame, width, tr("help.nonhall.streaks.tree.battle"), heading, values, svalues)
     treeS.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-    treeE = ttk.Treeview(frame, height = 7, columns = ('col'), takefocus = 0)
-    treeE.heading('#0', text = tr("help.nonhall.streaks.tree.battle.ender"))
-    treeE.column('#0', width = width)
-    treeE.heading('col', text = heading)
-    treeE.column('col', width = width)
-    treeE.insert('', 'end', text = core.BattleNum.e1.value, values = [evalues[0]])
-    treeE.insert('', 'end', text = core.BattleNum.e2.value, values = [evalues[1]])
-    treeE.insert('', 'end', text = core.BattleNum.e3.value, values = [evalues[2]])
-    treeE.insert('', 'end', text = core.BattleNum.e4.value, values = [evalues[3]])
-    treeE.insert('', 'end', text = core.BattleNum.e5.value, values = [evalues[4]])
-    treeE.insert('', 'end', text = core.BattleNum.e6.value, values = [evalues[5]])
-    treeE.insert('', 'end', text = core.BattleNum.e7.value, values = [evalues[6]])
+    values = [core.BattleNum.e1.value, core.BattleNum.e2.value, core.BattleNum.e3.value, core.BattleNum.e4.value, core.BattleNum.e5.value, core.BattleNum.e6.value, core.BattleNum.e7.value]
+    treeE = oneColTree(frame, width, tr("help.nonhall.streaks.tree.battle.ender"), heading, values, evalues)
     treeE.grid(column = 1, row = 0, sticky = (W, N, E, S))
 
     return frame
@@ -451,41 +459,28 @@ def makeRankTrees(parent, width, heading, values):
 
     frame = ttk.Frame(parent)
     frame.columnconfigure(0, weight = 1)
-    frame.columnconfigure(1, weight = 1) 
+    frame.columnconfigure(1, weight = 1)
 
-    tree1 = ttk.Treeview(frame, height = 5, columns = ('col'), takefocus = 0)
-    tree1.heading('#0', text = tr("help.hall.rank.tree.rank"))
-    tree1.column('#0', width = width)
-    tree1.heading('col', text = heading)
-    tree1.column('col', width = width)
+    tree1 = oneColTree(frame, width, tr("help.hall.rank.tree.rank"), heading, range(1, 6), values[0:5])
     tree1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-    tree2 = ttk.Treeview(frame, height = 5, columns = ('col'), takefocus = 0)
-    tree2.heading('#0', text = tr("help.hall.rank.tree.rank"))
-    tree2.column('#0', width = width)
-    tree2.heading('col', text = heading)
-    tree2.column('col', width = width)
+    tree2 = oneColTree(frame, width, tr("help.hall.rank.tree.rank"), heading, range(6, 11), values[5:])
     tree2.grid(column = 1, row = 0, sticky = (W, N, E, S))
-
-    for rank, value in enumerate(values, start = 1):
-        tree = tree1 if rank < 6 else tree2
-        tree.insert('', 'end', text = rank, values = value)
 
     return frame
 
+# returns a tree containing levels and costs and values for castle points
 def makeSpendTree(parent, width, height, level_costs, level_values):
 
-    tree = ttk.Treeview(parent, height = height, columns = ('cost'), takefocus = 0)
-    tree.heading('#0', text = tr("help.tricks.castle.spending_points.tree.feature"))
-    tree.column('#0', width = width)
-    tree.heading('cost', text = tr("help.tricks.castle.spending_points.tree.cost"))
-    tree.column('cost', width = 25)
+    tree = oneColTree(parent, width, tr("help.mechanics.castle.spending_points.tree.feature"), tr("help.mechanics.castle.spending_points.tree.cost"))
+    tree['height'] = height
+    tree.column('col', width = 25)
     level_ids = []
-    level_ids.append(tree.insert('', 'end', text = tr("help.tricks.castle.spending_points.tree.unlock.1"), values = ["---"], open = True))
+    level_ids.append(tree.insert('', 'end', text = tr("help.mechanics.castle.spending_points.tree.unlock.1"), values = ["---"], open = True))
     for level, cost in enumerate(level_costs, start = 2):
-        level_ids.append(tree.insert('', 'end', text = tr(f"help.tricks.castle.spending_points.tree.unlock.{level}"), values = [cost], open = True))
+        level_ids.append(tree.insert('', 'end', text = tr(f"help.mechanics.castle.spending_points.tree.unlock.{level}"), values = [cost], open = True))
     for level, values in enumerate(level_values):
         for feature, cost in values:
-            tree.insert(level_ids[level], 'end', text = tr(f"help.tricks.castle.spending_points.tree.{feature}"), values = [cost])
+            tree.insert(level_ids[level], 'end', text = tr(f"help.mechanics.castle.spending_points.tree.{feature}"), values = [cost])
 
     return tree
