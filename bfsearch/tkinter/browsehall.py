@@ -122,10 +122,6 @@ class BrowseAllHallSetsPage(BrowseHallSetsPageBase):
         self.columnconfigure(0, weight = 1)
         self.rowconfigure(1, weight = 1)
 
-        self.setToolTip(self.pokeLabel, tr("page.hall_sets.pokemon.tooltip"))
-        self.setToolTip(self.levelLabel, tr("page.hall_sets.level.tooltip"))
-        self.setToolTip(self.ivLabel, tr("page.hall_sets.ivs.tooltip"))
-
         # initial state
         self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
         if "Weavile" in self.getSorted().keys():
@@ -156,7 +152,7 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
         pokeInfo.rowconfigure(0, weight = 1)
 
         # your level spin box
-        self.yourLevelLabel = self.addSimpleLabel(pokeInfo, tr("page.hall_calc.your_level"), 0, 0, tooltip = tr("page.hall_calc.your_level.tooltip"))
+        self.yourLevelLabel = self.addSimpleLabel(pokeInfo, tr("page.hall_calc.your_level"), 0, 0)
         self.yourLevel = IntVar(pokeInfo, value = 50)
         self.yourLevelBox = ttk.Spinbox(pokeInfo, from_ = 30, to = 100, textvariable = self.yourLevel, command = self.handleYourLevelBox)
         self.yourLevelBox.grid(column = 1, row = 0, sticky = (W, E), padx = 1)
@@ -179,13 +175,13 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
         #self.typeCombo['width'] = max(len(self.HALL_BRAIN_SILVER), len(self.HALL_BRAIN_GOLD))
 
         # rank spin box
-        self.rankLabel = self.addSimpleLabel(battleSelect, tr("page.hall_calc.rank"), 2, 0, tooltip = tr("page.hall_calc.rank.tooltip"))
+        self.rankLabel = self.addSimpleLabel(battleSelect, tr("page.hall_calc.rank"), 2, 0)
         self.rank = IntVar(battleSelect, value = 1)
         self.rankBox = ttk.Spinbox(battleSelect, from_ = 1, to = 10, textvariable = self.rank, command = self.handleRankBox)
         self.rankBox.grid(column = 3, row = 0, sticky = (W, E), padx = 1)
 
         # visited types spin box
-        self.visitedTypesLabel = self.addSimpleLabel(battleSelect, tr("page.hall_calc.visited_types"), 4, 0, tooltip = tr("page.hall_calc.visited_types.tooltip"))
+        self.visitedTypesLabel = self.addSimpleLabel(battleSelect, tr("page.hall_calc.visited_types"), 4, 0)
         self.visitedTypes = IntVar(battleSelect, value = 0)
         self.visitedTypesBox = ttk.Spinbox(battleSelect, from_ = 0, to = 17, textvariable = self.visitedTypes, command = self.handleVisitedTypesBox)
         self.visitedTypesBox.grid(column = 5, row = 0, sticky = (W, E), padx = 1)
@@ -205,13 +201,10 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
         self.mainBox.grid(column = 0, row = 1, sticky = (N, S, E, W), padx = 5, pady = 5)
         self.columnconfigure(0, weight = 1)
         self.rowconfigure(1, weight = 1)
-        
-        self.setToolTip(self.pokeLabel, tr("page.hall_calc.pokemon.tooltip"))
-        self.setToolTip(self.levelLabel, tr("page.hall_calc.level.tooltip"))
+
         self.setToolTip(self.yourLevelBox, tr("page.generic.range", self.yourLevelBox['from'], self.yourLevelBox['to']))
         self.setToolTip(self.rankBox, tr("page.generic.range", self.rankBox['from'], self.rankBox['to']))
         self.setToolTip(self.visitedTypesBox, tr("page.generic.range", self.visitedTypesBox['from'], self.visitedTypesBox['to']))
-        self.setToolTip(self.ivLabel, tr("page.hall_calc.ivs.tooltip"))
 
         # initial state
 

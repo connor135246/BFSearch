@@ -338,9 +338,6 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
         self.columnconfigure(0, weight = 1)
         self.rowconfigure(1, weight = 1)
 
-        self.setToolTip(self.pokeLabel, tr("page.all_sets.pokemon.tooltip"))
-        self.setToolTip(self.ivLabel, tr("page.all_sets.ivs.tooltip"))
-
         # set up initial state
         self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
         self.setIVBox(0, 31)
@@ -362,12 +359,12 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         trainerSelect.rowconfigure(0, weight = 1)
 
         # battle number combo box
-        self.battlenumLabel = self.addSimpleLabel(trainerSelect, tr("page.generic.battle_number"), 0, 0, tooltip = tr("page.all_sets_by_trainer.battle_number.tooltip"))
+        self.battlenumLabel = self.addSimpleLabel(trainerSelect, tr("page.generic.battle_number"), 0, 0)
         self.battlenum = StringVar(trainerSelect)
         self.battlenumCombo = self.addSimpleCombobox(self.battlenum, self.handleBattlenumCombo, trainerSelect, 1, 0)
 
         # trainer class & name combo boxes
-        self.trainerLabel = self.addSimpleLabel(trainerSelect, tr("page.generic.trainer"), 2, 0, tooltip = tr("page.all_sets_by_trainer.trainer.tooltip"))
+        self.trainerLabel = self.addSimpleLabel(trainerSelect, tr("page.generic.trainer"), 2, 0)
         self.tclass = StringVar(trainerSelect)
         self.tclassCombo = self.addSimpleCombobox(self.tclass, self.handleTClassCombo, trainerSelect, 3, 0)
         self.tname = StringVar(trainerSelect)
@@ -389,9 +386,6 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         self.mainBox.grid(column = 0, row = 1, sticky = (N, S, E, W), padx = 5, pady = 5)
         self.columnconfigure(0, weight = 1)
         self.rowconfigure(1, weight = 1)
-
-        self.setToolTip(self.pokeLabel, tr("page.all_sets_by_trainer.pokemon.tooltip"))
-        self.setToolTip(self.ivLabel, tr("page.all_sets_by_trainer.ivs.tooltip"))
 
         # set up initial state
         self.prepFacility()
