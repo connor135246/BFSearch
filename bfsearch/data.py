@@ -60,7 +60,8 @@ def list_from_double_dict(doubledict):
 emptyKey = "---"
 
 # wow! an auto-nesting dictionary!
-ndict = lambda: defaultdict(ndict)
+def ndict():
+    return defaultdict(ndict)
 
 
 # data sorters.
@@ -186,7 +187,7 @@ def battlenumToGroupedSetProviders(trainers):
     return bTGSP
 
 # returns a list of every single individual pokemon held by every trainer. there are a lot of duplicates.
-# totals: 
+# totals:
 # tower/arcade/castle: 16111 + 6 (palmer) + 6 (dahlia) + 12 (darach)
 # factory (50): 77880
 # factory (open): 105760

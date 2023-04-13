@@ -8,7 +8,7 @@ from tkinter.scrolledtext import ScrolledText
 from tkinter import ttk
 from idlelib.tooltip import Hovertip
 
-from bfsearch import core, data
+from bfsearch import data
 from bfsearch.core import Facility
 from bfsearch.data import ndict
 from bfsearch.translate import tr
@@ -33,8 +33,8 @@ def getSetResultString(the_set, iv, hideItem = False, level = 50):
     if not the_set.species.hasOneAbility():
         string += "\n\n" + tr("page.generic.result.abilities", *the_set.species.abilities)
     #string += "\nID: " + str(the_set.sid) + "\n"
-    #string += "Set Group: " + the_set.setgroup.name + "\n"
-    #string += "Types: " + str(the_set.species.types) + "\n"
+    #string += "\nSet Group: " + the_set.setgroup.name + "\n"
+    #string += "\nTypes: " + str(the_set.species.types) + "\n"
     return string
 
 

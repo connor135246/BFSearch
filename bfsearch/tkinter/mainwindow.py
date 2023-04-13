@@ -12,7 +12,6 @@ from bfsearch.translate import tr
 from bfsearch.tkinter import browse, search, browsehall, dialogs, helpdialogs
 
 
-
 # code for recreating the main window. if CURRENT_CODE is this when the application exits code, the main window will be recreated.
 RECREATE_CODE = 0x16111
 # the current code

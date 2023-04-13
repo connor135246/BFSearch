@@ -172,7 +172,6 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
         self.typeLabel = self.addSimpleLabel(battleSelect, tr("page.hall_calc.type"), 0, 0, tooltip = tr("page.hall_calc.type.tooltip"))
         self.type = StringVar(battleSelect)
         self.typeCombo = self.addSimpleCombobox(self.type, self.handleTypeCombo, battleSelect, 1, 0)
-        #self.typeCombo['width'] = max(len(self.HALL_BRAIN_SILVER), len(self.HALL_BRAIN_GOLD))
 
         # rank spin box
         self.rankLabel = self.addSimpleLabel(battleSelect, tr("page.hall_calc.rank"), 2, 0)
@@ -195,7 +194,7 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
         self.mainBox.rowconfigure(4, weight = 1)
 
         # place this tab
-        
+
         infoLabel = ttk.Label(self, text = tr("page.hall_calc.info"))
         infoLabel.grid(column = 0, row = 0, sticky = (N, S, E, W), padx = 5, pady = 5)
         self.mainBox.grid(column = 0, row = 1, sticky = (N, S, E, W), padx = 5, pady = 5)

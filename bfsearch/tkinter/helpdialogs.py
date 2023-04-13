@@ -9,7 +9,6 @@ from bfsearch.translate import tr
 from bfsearch.tkinter import dialogs
 
 
-
 # general dialogs
 
 def mainHelp(parent):
@@ -327,7 +326,7 @@ def mechanicsCastleSpend(parent):
         label3 = ttk.Label(self.mainframe, text = tr("help.mechanics.castle.spending_points.info.3"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label3.grid(column = 0, row = 4, sticky = (W, N, E, S))
 
-        passView = oneColTree(self.mainframe, width, tr("help.mechanics.castle.spending_points.tree.feature"), tr("help.mechanics.castle.spending_points.tree.cost"), [tr(f"help.mechanics.castle.spending_points.tree.pass")], [50])
+        passView = oneColTree(self.mainframe, width, tr("help.mechanics.castle.spending_points.tree.feature"), tr("help.mechanics.castle.spending_points.tree.cost"), [tr("help.mechanics.castle.spending_points.tree.pass")], [50])
         passView.column('col', width = 25)
         passView.grid(column = 0, row = 5, sticky = (W, N, E, S), padx = 10, pady = 5)
 

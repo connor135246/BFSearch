@@ -6,7 +6,6 @@ from operator import attrgetter
 from collections import defaultdict
 
 from tkinter import *
-from tkinter.scrolledtext import ScrolledText
 from tkinter import ttk
 
 from bfsearch import core, data
@@ -126,7 +125,7 @@ class SearchPage(browse.SharedPageElements):
         infoLabel.grid(column = 0, row = 0, columnspan = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
         facilityBox = ttk.Labelframe(self)
         facilityBox.columnconfigure(0, weight = 1)
-        facilityBox.rowconfigure(0, weight = 1)        
+        facilityBox.rowconfigure(0, weight = 1)
         self.buildFacility(facilityBox)
         self.gridFacility(0, 0)
         facilityBox.grid(column = 0, row = 1, columnspan = 2, sticky = (W, N, E, S), padx = 5, pady = 5)

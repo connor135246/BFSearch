@@ -311,7 +311,7 @@ class BattleNum(Enum):
 
 # a facility and its rules.
 # it's here next to the trainer class, but facilities aren't really a property of trainers. they're used at a higher level.
-# it seemed unnecessary to have 3 identical copies of all 300 trainers for the 3 facilities that are identical for my purposes.
+# it seemed unnecessary to have 3 nearly identical copies of all 300 trainers for the 3 facilities that are identical for my purposes.
 # if it becomes useful to do so, it would probably become a property of SetProvider.
 class Facility(Enum):
     # normal facilities - Any_Normal represents all 3
@@ -343,12 +343,6 @@ class SetProvider(object):
         self.iv = iv
         self.battlenums = battlenums
         self.sets = sets
-        '''
-        self.setgroups = []
-        for pname, nextDict in self.sets.items():
-            for pset, pokeset in nextDict.items():
-                self.setgroups.append(pokeset.setgroup)
-        '''
 
     def isIdenticalProvider(self, other):
         return self.iv == other.iv and self.battlenums == other.battlenums and self.sets == other.sets

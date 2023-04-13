@@ -5,7 +5,6 @@ from tkinter import *
 from tkinter import ttk
 
 
-
 # an abstract dialog with buttons. inspired by/copied from tkinter.simpledialog.SimpleDialog.
 # returns the index of the button pressed, or -1 if the window was closed with the X button or by pressing escape.
 class Dialog(object):
@@ -116,7 +115,7 @@ class InfoDialog(Dialog):
         self.mainlabel.grid(column = 1, row = 0, sticky = (W, N, E, S))
 
 
-# info dialog that also has a combobox. 
+# info dialog that also has a combobox.
 # along with the index of the button pressed, returns the selection in the combobox.
 class ComboboxDialog(InfoDialog):
     # contents is a list of values to put in the combobox. default is the index the combobox should start at.
