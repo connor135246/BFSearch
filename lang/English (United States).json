@@ -362,6 +362,8 @@
 	"page.hall_calc.name": "Hall Sets by Type/Rank",
 	"page.hall_calc.tooltip": "View Battle Hall Pokémon sets organized by type and rank.",
 	"page.hall_calc.info": "This page groups Battle Hall Pokémon sets by which type and rank they can appear in.\nPut in your Pokémon's level and BST, select a type and rank, and then have a look at the possible Pokémon!",
+	"page.hall_calc.brain_silver": "Hall Matron Argenta (Silver Print)",
+	"page.hall_calc.brain_gold": "Hall Matron Argenta (Gold Print)",
 	"page.hall_calc.your_bst": "Your Pokémon's BST:",
 	"page.hall_calc.your_bst.tooltip": "In her Silver Print battle, Hall Matron Argenta will use a Pokémon in the same BST range as yours.\nThat's the only reason this box is here.",
 	"page.hall_calc.your_level": "Your Pokémon's Level:",

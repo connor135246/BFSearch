@@ -133,12 +133,11 @@ class BrowseAllHallSetsPage(BrowseHallSetsPageBase):
 
 # browse hall sets by type and rank, plus argenta
 class CalcHallSetsPage(BrowseHallSetsPageBase):
-
-    HALL_BRAIN_SILVER = "Hall Matron Argenta (Silver Print)"
-    HALL_BRAIN_GOLD = "Hall Matron Argenta (Gold Print)"
-
     def __init__(self, parent, typeToRankToHallSets, hallSetGroupToHallSets):
         super().__init__(parent)
+
+        self.HALL_BRAIN_SILVER = tr("page.hall_calc.brain_silver")
+        self.HALL_BRAIN_GOLD = tr("page.hall_calc.brain_gold")
 
         # build
         self.typeToRankToHallSets = typeToRankToHallSets
