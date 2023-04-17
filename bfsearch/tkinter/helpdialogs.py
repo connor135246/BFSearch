@@ -8,6 +8,13 @@ from bfsearch import core
 from bfsearch.translate import tr
 from bfsearch.tkinter import dialogs
 
+### help dialogs todo
+# ensure i use the same terms/language that the game uses for facility mechanics
+# 'about trainer classes' page that generalizes the kinds of pokemon each trainer class uses
+# get icons for arcade roulette
+# verify castle point values
+# factory starting rentals possibilities depending on # of swaps
+
 
 # general dialogs
 
@@ -97,29 +104,20 @@ def nonhallGroups(parent):
         label1 = ttk.Label(self.mainframe, text = tr("help.nonhall.groups.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-        groupView = ttk.Treeview(self.mainframe, height = 4, columns = ('desc', 'examples'), takefocus = 0)
-        groupView.heading('#0', text = tr("help.nonhall.groups.tree.name"))
-        groupView.column('#0', width = width)
-        groupView.heading('desc', text = tr("help.nonhall.groups.tree.desc"))
-        groupView.column('desc', width = width)
-        groupView.heading('examples', text = tr("help.nonhall.groups.tree.examples"))
-        groupView.column('examples', width = width)
-        for group in ['a', 'b', 'c', 'd']:
-            groupView.insert('', 'end', text = tr(f"help.nonhall.groups.{group}.name"), values = (tr(f"help.nonhall.groups.{group}.desc"), tr(f"help.nonhall.groups.{group}.examples")))
+        groups = ['a', 'b', 'c', 'd']
+        values = list(map(lambda group: tr(f"help.nonhall.groups.{group}.name"), groups))
+
+        headings = [tr("help.nonhall.groups.tree.desc"), tr("help.nonhall.groups.tree.examples")]
+        colsvalues = list(map(lambda group: [tr(f"help.nonhall.groups.{group}.desc"), tr(f"help.nonhall.groups.{group}.examples")], groups))
+        groupView = multiColTree(self.mainframe, width, tr("help.nonhall.groups.tree.name"), headings, values, colsvalues)
         groupView.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
         label2 = ttk.Label(self.mainframe, text = tr("help.nonhall.groups.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
-        groupViewSets = ttk.Treeview(self.mainframe, height = 4, columns = ('sets', 'subs'), takefocus = 0)
-        groupViewSets.heading('#0', text = tr("help.nonhall.groups.tree.name"))
-        groupViewSets.column('#0', width = width)
-        groupViewSets.heading('sets', text = tr("help.nonhall.groups.tree.sets"))
-        groupViewSets.column('sets', width = width)
-        groupViewSets.heading('subs', text = tr("help.nonhall.groups.tree.subs"))
-        groupViewSets.column('subs', width = width)
-        for group in ['a', 'b', 'c', 'd']:
-            groupViewSets.insert('', 'end', text = tr(f"help.nonhall.groups.{group}.name"), values = (tr(f"help.nonhall.groups.{group}.sets"), tr(f"help.nonhall.groups.{group}.subs")))
+        headings = [tr("help.nonhall.groups.tree.sets"), tr("help.nonhall.groups.tree.subs")]
+        colsvalues = list(map(lambda group: [tr(f"help.nonhall.groups.{group}.sets"), tr(f"help.nonhall.groups.{group}.subs")], groups))
+        groupViewSets = multiColTree(self.mainframe, width, tr("help.nonhall.groups.tree.name"), headings, values, colsvalues)
         groupViewSets.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
         label3 = ttk.Label(self.mainframe, text = tr("help.nonhall.groups.info.3"), wraplength = wraplength, padding = (10, 5, 10, 5))
@@ -138,7 +136,7 @@ def nonhallStreaks(parent):
         label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
         svalues = ["A1", "A1, B1", "B1, B2", "B2, C1", "C1, C2", "C2, C3", "C3, C4"]
-        evalues = ["B1", "B2", tr("help.nonhall.streaks.tree.brain"), "C2", "C3", "C4", tr("help.nonhall.streaks.tree.brain")]
+        evalues = ["B1", "B2", tr("help.nonhall.streaks.tree.silver"), "C2", "C3", "C4", tr("help.nonhall.streaks.tree.gold")]
         streaks = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.streaks.tree.groups"), svalues, evalues)
         streaks.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
@@ -154,7 +152,7 @@ def nonhallStreaks(parent):
         label3.grid(column = 0, row = 4, sticky = (W, N, E, S))
 
         svalues = ["C1", "C1, C2", "C2, C3", "C3, C4", "C1-C4, D1-D4", "C1-C4, D1-D4", "C1-C4, D1-D4"]
-        evalues = ["C2", "C3", tr("help.nonhall.streaks.tree.brain"), "C1-C4, D1-D4", "C1-C4, D1-D4", "C1-C4, D1-D4", tr("help.nonhall.streaks.tree.brain")]
+        evalues = ["C2", "C3", tr("help.nonhall.streaks.tree.silver"), "C1-C4, D1-D4", "C1-C4, D1-D4", "C1-C4, D1-D4", tr("help.nonhall.streaks.tree.gold")]
         streaksOpen = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.streaks.tree.groups"), svalues, evalues)
         streaksOpen.grid(column = 0, row = 5, sticky = (W, N, E, S), padx = 10, pady = 5)
 
@@ -235,17 +233,25 @@ def hallRank(parent):
         values.append(core.HallSetGroup.from340to439.fullname() + ", " + core.HallSetGroup.from440to499.fullname())
         values.append(core.HallSetGroup.from440to499.fullname() + ", " + core.HallSetGroup.plus500.fullname())
         values.append(core.HallSetGroup.from440to499.fullname() + ", " + core.HallSetGroup.plus500.fullname())
-        tree = makeRankTrees(self.mainframe, width, tr("help.nonhall.streaks.tree.groups"), values)
-        tree.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
+        rankGroups = makeRankTrees(self.mainframe, width, tr("help.nonhall.streaks.tree.groups"), values)
+        rankGroups.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
         label2 = ttk.Label(self.mainframe, text = tr("help.hall.rank.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
-        tree = makeRankTrees(self.mainframe, width, tr("help.hall.rank.tree.ivs"), range(8, 28, 2))
-        tree.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
+        values = [tr("help.nonhall.streaks.tree.silver"), tr("help.nonhall.streaks.tree.gold")]
+        colsvalues = [[50, tr("help.hall.rank.tree.same")], [170, core.HallSetGroup.plus500.fullname()]]
+        brainTree = multiColTree(self.mainframe, width, "", [tr("help.nonhall.streaks.tree.battle"), tr("help.nonhall.streaks.tree.groups")], values, colsvalues)
+        brainTree.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
         label3 = ttk.Label(self.mainframe, text = tr("help.hall.rank.info.3"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label3.grid(column = 0, row = 4, sticky = (W, N, E, S))
+
+        rankIVs = makeRankTrees(self.mainframe, width, tr("help.hall.rank.tree.ivs"), range(8, 28, 2))
+        rankIVs.grid(column = 0, row = 5, sticky = (W, N, E, S), padx = 10, pady = 5)
+
+        label4 = ttk.Label(self.mainframe, text = tr("help.hall.rank.info.4"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label4.grid(column = 0, row = 6, sticky = (W, N, E, S))
 
     dialogs.CustomDialog(parent, tr("help.hall.rank"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
@@ -424,6 +430,17 @@ def oneColTree(parent, width, name, heading, values = [], colvalues = []):
     tree.column('col', width = width)
     for value, colvalue in zip(values, colvalues):
         tree.insert('', 'end', text = value, values = [colvalue])
+    return tree
+
+def multiColTree(parent, width, name, headings, values = [], colsvalues = []):
+    tree = ttk.Treeview(parent, height = len(values), columns = range(len(headings)), takefocus = 0)
+    tree.heading('#0', text = name)
+    tree.column('#0', width = width)
+    for colnum, heading in enumerate(headings):
+        tree.heading(colnum, text = heading)
+        tree.column(colnum, width = width)
+    for value, colvalues in zip(values, colsvalues):
+        tree.insert('', 'end', text = value, values = colvalues)
     return tree
 
 def noColTree(parent, width, name, values = []):
