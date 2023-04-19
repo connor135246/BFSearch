@@ -398,7 +398,6 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         self.gridSortToggle(0, 2)
         self.gridSetSelect(0, 3)
         self.gridOutput(0, 4)
-        self.darachLabel = ttk.Label(self.mainBox, text = tr("page.all_sets_by_trainer.darach"))
         self.thortonLabel = ttk.Label(self.mainBox, text = tr("page.all_sets_by_trainer.thorton"))
         self.mainBox.columnconfigure(0, weight = 1)
         self.mainBox.rowconfigure(4, weight = 1)
@@ -434,11 +433,6 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
     def handleTClassCombo(self, event = None):
         tnameData = self.bTSP()[self.battlenum.get()][self.tclass.get()]
         self.fillComboboxKeys(self.tnameCombo, tnameData, self.tname)
-        # darach works differently from every other trainer.
-        if "Castle Valet" in self.tclass.get():
-            self.darachLabel.grid(column = 0, row = 6, sticky = (W, N, E, S), padx = 5, pady = 5)
-        else:
-            self.darachLabel.grid_forget()
         # missing thorton data...
         if "Factory Head" in self.tclass.get():
             self.thortonLabel.grid(column = 0, row = 6, sticky = (W, N, E, S), padx = 5, pady = 5)

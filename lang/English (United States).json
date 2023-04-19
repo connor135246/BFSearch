@@ -307,7 +307,6 @@
 	"page.all_sets_by_trainer.name": "Sets by Trainer",
 	"page.all_sets_by_trainer.tooltip": "View Pokémon sets organized by opposing trainers for the Battle Tower/Arcade/Castle.",
 	"page.all_sets_by_trainer.info": "This page groups Pokémon sets by trainer for the Battle Tower/Arcade/Castle/Factory. Each trainer uses a particular selection of Pokémon.\nSelect a battle number, a trainer class, a trainer name, and then have a look at their Pokémon!",
-	"page.all_sets_by_trainer.darach": "Note:\nCastle Valet Darach chooses which set number to use for all his Pokémon when the battle starts.\nFor example: he may have only set 1 Pokémon or only set 2 Pokémon, but never a mix of the two.",
 	"page.all_sets_by_trainer.thorton": "Note:\nMissing data for Factory Head Thorton!\nThe listed Pokémon are placeholders!",
 
 	"page.generic.sortToggle.alpha": "Sorting Pokémon alphabetically.",
