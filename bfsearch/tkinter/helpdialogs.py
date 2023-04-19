@@ -9,10 +9,9 @@ from bfsearch.translate import tr
 from bfsearch.tkinter import dialogs
 
 ### help dialogs todo
-# ensure i use the same terms/language that the game uses for facility mechanics
 # 'about trainer classes' page that generalizes the kinds of pokemon each trainer class uses
-# get icons for arcade roulette
-# verify castle point values
+# get icons for arcade board
+# arcade board: possibilities at each streak, possible random items
 # factory starting rentals possibilities depending on # of swaps
 
 
@@ -47,10 +46,10 @@ def hallHelp(parent):
 
 def mechanicsHelp(parent):
     helpoptions = []
-    helpoptions.append((tr("help.mechanics.arcade.roulette"), mechanicsArcadeRoulette))
+    helpoptions.append((tr("help.mechanics.arcade.board"), mechanicsArcadeBoard))
     helpoptions.append((tr("help.mechanics.castle.earning_points"), mechanicsCastleEarn))
     helpoptions.append((tr("help.mechanics.castle.spending_points"), mechanicsCastleSpend))
-    helpoptions.append((tr("help.mechanics.factory.swapping"), mechanicsFactorySwap))
+    helpoptions.append((tr("help.mechanics.factory.trading"), mechanicsFactorySwap))
     helpoptions.append((tr("help.mechanics.factory.clauses"), mechanicsFactoryClauses))
     HelpDialog(parent, tr("help.mechanics"), tr("help"), helpoptions).show()
     parent.grab_set()
@@ -266,43 +265,40 @@ def hallLevel(parent):
     dialogs.CustomDialog(parent, tr("help.hall.level"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
-def mechanicsArcadeRoulette(parent):
+def mechanicsArcadeBoard(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
         wraplength = 450
         width = 100
 
-        label = ttk.Label(self.mainframe, text = tr("help.mechanics.arcade.roulette.info"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label = ttk.Label(self.mainframe, text = tr("help.mechanics.arcade.board.info"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
         def trEffect(effect):
-            return tr(f"help.mechanics.arcade.roulette.tree.{effect}")
+            return tr(f"help.mechanics.arcade.board.tree.{effect}")
 
         values = list(map(trEffect, ["lower_hp", "poison", "paralyze", "burn", "sleep", "freeze", "berry", "item", "level_up"]))
-        rouletteView1 = noColTree(self.mainframe, width, tr("help.mechanics.arcade.roulette.tree.targeted"), values)
-        rouletteView1.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
+        boardView1 = noColTree(self.mainframe, width, tr("help.mechanics.arcade.board.tree.targeted"), values)
+        boardView1.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
         values = list(map(trEffect, ["sun", "rain", "sandstorm", "hail", "fog", "trick_room"]))
-        rouletteView2 = noColTree(self.mainframe, width, tr("help.mechanics.arcade.roulette.tree.field"), values)
-        rouletteView2.grid(column = 0, row = 2, sticky = (W, N, E, S), padx = 10, pady = 5)
+        colvalues = list(map(trEffect, ["nothing", "swap", "skip", "get_1", "get_3", "speed_up", "speed_down", "random"]))
+        boardView2 = oneColTree(self.mainframe, width, tr("help.mechanics.arcade.board.tree.field"), tr("help.mechanics.arcade.board.tree.other"), values, colvalues)
+        boardView2.grid(column = 0, row = 2, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        values = list(map(trEffect, ["nothing", "swap", "skip", "get_1", "get_3", "speed_up", "speed_down", "random"]))
-        rouletteView3 = noColTree(self.mainframe, width, tr("help.mechanics.arcade.roulette.tree.other"), values)
-        rouletteView3.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
-
-    dialogs.CustomDialog(parent, tr("help.mechanics.arcade.roulette"), [tr("toolbar.button.ok")], builder).show()
+    dialogs.CustomDialog(parent, tr("help.mechanics.arcade.board"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
 def mechanicsCastleEarn(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
-        wraplength = 350
+        wraplength = 400
 
         label = ttk.Label(self.mainframe, text = tr("help.mechanics.castle.earning_points.info"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
         values = [3, 3, 2, 1, 1, 8, 6, 4, 7]
-        conditions = ["not_fainted", "full_hp", "more_than_half_hp", "less_than_half_hp", "no_status", "under_5_pp", "under_10_pp", "under_15_pp", "leveled_up"]
+        conditions = ["not_fainted", "full_hp", "more_than_half_hp", "less_than_half_hp", "no_status", "5_pp", "10_pp", "15_pp", "leveled_up"]
         colvalues = list(map(lambda condition: tr(f"help.mechanics.castle.earning_points.tree.{condition}"), conditions))
         earnView = oneColTree(self.mainframe, 50, tr("help.mechanics.castle.earning_points.tree.earned"), tr("help.mechanics.castle.earning_points.tree.condition"), values, colvalues)
         earnView.column('col', width = 250)
@@ -314,7 +310,7 @@ def mechanicsCastleEarn(parent):
 def mechanicsCastleSpend(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
-        wraplength = 400
+        wraplength = 450
         width = 75
 
         label1 = ttk.Label(self.mainframe, text = tr("help.mechanics.castle.spending_points.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
@@ -332,7 +328,7 @@ def mechanicsCastleSpend(parent):
         label3 = ttk.Label(self.mainframe, text = tr("help.mechanics.castle.spending_points.info.3"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label3.grid(column = 0, row = 4, sticky = (W, N, E, S))
 
-        passView = oneColTree(self.mainframe, width, tr("help.mechanics.castle.spending_points.tree.feature"), tr("help.mechanics.castle.spending_points.tree.cost"), [tr("help.mechanics.castle.spending_points.tree.pass")], [50])
+        passView = oneColTree(self.mainframe, width, tr("help.mechanics.castle.spending_points.tree.option"), tr("help.mechanics.castle.spending_points.tree.cost"), [tr("help.mechanics.castle.spending_points.tree.pass")], [50])
         passView.column('col', width = 25)
         passView.grid(column = 0, row = 5, sticky = (W, N, E, S), padx = 10, pady = 5)
 
@@ -355,7 +351,7 @@ def mechanicsCastleSpendItems(parent):
         itemViewFrame = ttk.Frame(self.mainframe)
         itemViewFrame.columnconfigure(0, weight = 1)
 
-        itemView = oneColTree(itemViewFrame, 250, tr("help.mechanics.castle.spending_points.tree.feature"), tr("help.mechanics.castle.spending_points.tree.cost"))
+        itemView = oneColTree(itemViewFrame, 250, tr("help.mechanics.castle.spending_points.tree.option"), tr("help.mechanics.castle.spending_points.tree.cost"))
         itemView['height'] = 20
         itemView.column('col', width = 50)
 
@@ -404,10 +400,10 @@ def mechanicsFactorySwap(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
 
-        label = ttk.Label(self.mainframe, text = tr("help.mechanics.factory.swapping.info"), wraplength = 450, padding = (10, 5, 10, 5))
+        label = ttk.Label(self.mainframe, text = tr("help.mechanics.factory.trading.info"), wraplength = 450, padding = (10, 5, 10, 5))
         label.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-    dialogs.CustomDialog(parent, tr("help.mechanics.factory.swapping"), [tr("toolbar.button.ok")], builder).show()
+    dialogs.CustomDialog(parent, tr("help.mechanics.factory.trading"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
 def mechanicsFactoryClauses(parent):
@@ -488,7 +484,7 @@ def makeRankTrees(parent, width, heading, values):
 # returns a tree containing levels and costs and values for castle points
 def makeSpendTree(parent, width, height, level_costs, level_values):
 
-    tree = oneColTree(parent, width, tr("help.mechanics.castle.spending_points.tree.feature"), tr("help.mechanics.castle.spending_points.tree.cost"))
+    tree = oneColTree(parent, width, tr("help.mechanics.castle.spending_points.tree.option"), tr("help.mechanics.castle.spending_points.tree.cost"))
     tree['height'] = height
     tree.column('col', width = 25)
     level_ids = []
@@ -496,7 +492,7 @@ def makeSpendTree(parent, width, height, level_costs, level_values):
     for level, cost in enumerate(level_costs, start = 2):
         level_ids.append(tree.insert('', 'end', text = tr(f"help.mechanics.castle.spending_points.tree.unlock.{level}"), values = [cost], open = True))
     for level, values in enumerate(level_values):
-        for feature, cost in values:
-            tree.insert(level_ids[level], 'end', text = tr(f"help.mechanics.castle.spending_points.tree.{feature}"), values = [cost])
+        for option, cost in values:
+            tree.insert(level_ids[level], 'end', text = tr(f"help.mechanics.castle.spending_points.tree.{option}"), values = [cost])
 
     return tree

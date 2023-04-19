@@ -327,7 +327,7 @@ class Facility(Enum):
     def level(self):
         return 100 if self == Facility.Factory_Open else 50
     def hideItem(self):
-        return self == Facility.Arcade or self == Facility.Castle
+        return self == Facility.Arcade
     def ivValues(self):
         return [0, 4, 8, 12, 16, 20, 24, 31] if self.isFactory() else [3, 6, 9, 12, 15, 18, 21, 31]
 
