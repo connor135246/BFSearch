@@ -187,6 +187,9 @@ class HallSetGroup(Enum):
                 return hallsetgroup
         raise ValueError(f"Unknown hall set group '{value}'")
 
+    def groupsFromRank(rank):
+        return [hallsetgroup for hallsetgroup in list(HallSetGroup) if hallsetgroup.appearsInRank(rank)]
+
 # base class of pokeset
 class PokeSetBase(object):
     # species - a Species, nature - a Nature, item - a string, moves - a string list length 1 to 4, evstats - a EVStats

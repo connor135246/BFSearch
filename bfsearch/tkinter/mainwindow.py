@@ -133,6 +133,11 @@ class Window(Tk):
         self.tabs.add(self.calcHallSetsPage, text = tr("page.hall_calc.name"), image = self.hallcalcImage, compound = 'left')
         #tr("page.hall_calc.tooltip")
 
+        self.hallSearchPage = search.HallSearchPage(self.tabs, self.data)
+        self.hallSearchImage = PhotoImage(file = "gui/hallsearch.png")
+        self.tabs.add(self.hallSearchPage, text = tr("page.hall_search.name"), image = self.hallSearchImage, compound = 'left')
+        #tr("page.hall_search.tooltip")
+
         logging.info("Built data!")
 
 

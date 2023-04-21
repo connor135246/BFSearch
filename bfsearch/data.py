@@ -136,6 +136,22 @@ def allTrainerClasses(trainers):
 def allTrainerNames(trainers):
     return sorted({trainer.tname for trainer in trainersAlphaSortedList(trainers)})
 
+def allHallPokemonAlpha(hall_sets):
+    return hallSetsAlphaSorted(hall_sets).keys()
+
+def allHallPokemonDex(hall_sets):
+    return hallSetsDexSorted(hall_sets).keys()
+
+def allHallMoves(hall_sets):
+    allMoves = set()
+    for ahallset in hallSetsAlphaSortedList(hall_sets):
+        for move in ahallset.moves:
+            allMoves.add(move)
+    return sorted(allMoves)
+
+def allHallItems(hall_sets):
+    return sorted({ahallset.item for ahallset in hallSetsDexSortedList(hall_sets)})
+
 # returns a dict of {tclass} to a list of possible {tnames}. no actual Trainer objects involved.
 def tclassToTName(trainers):
     tTT = ndict()

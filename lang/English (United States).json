@@ -305,7 +305,7 @@
 	"page.all_sets.empty_results": "Nothing doing!",
 
 	"page.all_sets_by_trainer.name": "Sets by Trainer",
-	"page.all_sets_by_trainer.tooltip": "View Pokémon sets organized by opposing trainers for the Battle Tower/Arcade/Castle.",
+	"page.all_sets_by_trainer.tooltip": "View Pokémon sets organized by opposing trainers for the Battle Tower/Arcade/Castle/Factory.",
 	"page.all_sets_by_trainer.info": "This page groups Pokémon sets by trainer for the Battle Tower/Arcade/Castle/Factory. Each trainer uses a particular selection of Pokémon.\nSelect a battle number, a trainer class, a trainer name, and then have a look at their Pokémon!",
 	"page.all_sets_by_trainer.thorton": "Note:\nMissing data for Factory Head Thorton!\nThe listed Pokémon are placeholders!",
 
@@ -325,7 +325,7 @@
 	"page.generic.facility.tower": "Battle Tower",
 	"page.generic.facility.tower.tooltip": "The default.",
 	"page.generic.facility.arcade": "Battle Arcade",
-	"page.generic.facility.arcade.tooltip": "Pokémon can't bring held items.\nYou get a preview of the opponent's team before each battle.",
+	"page.generic.facility.arcade.tooltip": "Pokémon can't bring held items.",
 	"page.generic.facility.castle": "Battle Castle",
 	"page.generic.facility.castle.tooltip": "Your Pokémon can't bring held items, but opposing Pokémon can.",
 	"page.generic.facility.factory_50": "Battle Factory (Level 50)",
@@ -334,7 +334,7 @@
 	"page.generic.facility.factory_open.tooltip": "Pokémon have different IVs.\nTrainers aren't limited to their normal roster of Pokémon.\nPokémon are level 100.\nEarly rounds have strong Pokémon.",
 
 	"page.search.name": "Search Sets",
-	"page.search.tooltip": "Figure out what you're battling against in the Battle Tower/Arcade/Castle.",
+	"page.search.tooltip": "Search for what's possible in the Battle Tower/Arcade/Castle/Factory.",
 	"page.search.info": "This page allows you to search through each individual Pokémon owned by each trainer in the Battle Tower/Arcade/Castle/Factory.\nMany trainers have the exact same sets, so only unique results are shown.",
 	"page.search.searchBox": "Search Options",
 	"page.search.item": "Item:",
@@ -373,5 +373,10 @@
 	"page.hall_calc.type.tooltip": "You can also select Hall Matron Argenta here.",
 	"page.hall_calc.rank": "Rank:",
 	"page.hall_calc.visited_types": "Number of Types at Rank 2 or higher:",
-	"page.hall_calc.levelBox.tooltip.fixed": "The level cannot be changed for these sets."
+	"page.hall_calc.levelBox.tooltip.fixed": "The level cannot be changed for these sets.",
+
+	"page.hall_search.name": "Search Hall Sets",
+	"page.hall_search.tooltip": "Search for what's possible in the Battle Hall.",
+	"page.hall_search.info": "This page allows you to search through Pokémon in the Battle Hall.\nAre you wondering how many can hold a Focus Sash?",
+	"page.hall_search.resultsBox.done": "Search done: {0} sets found."
 }

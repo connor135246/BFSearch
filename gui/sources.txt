@@ -18,3 +18,5 @@ frontier.png
 https://archives.bulbagarden.net/wiki/File:JohtoSinnoh_BF.png
 help.png
 https://archives.bulbagarden.net/wiki/File:Bag_Vs._Recorder_Sprite.png
+hallsearch.png
+https://archives.bulbagarden.net/wiki/File:Bag_Zoom_Lens_Sprite.png
