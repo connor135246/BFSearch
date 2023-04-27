@@ -10,7 +10,6 @@ from bfsearch.tkinter import dialogs
 
 ### help dialogs todo
 # 'about trainer classes' page that generalizes the kinds of pokemon each trainer class uses
-# get icons for arcade board
 # arcade board: possibilities at each streak, possible random items
 # factory starting rentals possibilities depending on # of swaps
 
@@ -268,23 +267,56 @@ def hallLevel(parent):
 def mechanicsArcadeBoard(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
-        wraplength = 450
+        wraplength = 500
         width = 100
+        style = "ArcadeIcons.Treeview"
+        ttk.Style().configure(style, rowheight = 28) # height of arcade icons
 
-        label = ttk.Label(self.mainframe, text = tr("help.mechanics.arcade.board.info"), wraplength = wraplength, padding = (10, 5, 10, 5))
-        label.grid(column = 0, row = 0, sticky = (W, N, E, S))
+        label1 = ttk.Label(self.mainframe, text = tr("help.mechanics.arcade.board.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-        def trEffect(effect):
-            return tr(f"help.mechanics.arcade.board.tree.{effect}")
+        def trEvent(event):
+            return tr(f"help.mechanics.arcade.board.tree.{event}")
+        def iconEvent(event):
+            return PhotoImage(file = "gui/arcade icons/" + event + ".png")
 
-        values = list(map(trEffect, ["lower_hp", "poison", "paralyze", "burn", "sleep", "freeze", "berry", "item", "level_up"]))
-        boardView1 = noColTree(self.mainframe, width, tr("help.mechanics.arcade.board.tree.targeted"), values)
-        boardView1.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
+        colorframe = ttk.Frame(self.mainframe)
+        colorframe.columnconfigure(0, weight = 1)
+        colorframe.columnconfigure(1, weight = 2)
 
-        values = list(map(trEffect, ["sun", "rain", "sandstorm", "hail", "fog", "trick_room"]))
-        colvalues = list(map(trEffect, ["nothing", "swap", "skip", "get_1", "get_3", "speed_up", "speed_down", "random"]))
-        boardView2 = oneColTree(self.mainframe, width, tr("help.mechanics.arcade.board.tree.field"), tr("help.mechanics.arcade.board.tree.other"), values, colvalues)
-        boardView2.grid(column = 0, row = 2, sticky = (W, N, E, S), padx = 10, pady = 5)
+        targetedEvents = ["poison", "paralyze", "burn", "sleep", "freeze", "berry", "item", "lower_hp", "level_up"]
+        targetedDescs = [trEvent(event) for event in targetedEvents]
+        self.targetedIcons = [iconEvent(event) for event in targetedEvents]
+
+        boardView1 = makeIconTree(colorframe, width, targetedDescs[0:5], self.targetedIcons[0:5], style)
+        boardView1.grid(column = 0, row = 0, sticky = (W, N, E, S))
+
+        boardView2 = makeIconTree(colorframe, width, targetedDescs[5:], self.targetedIcons[5:], style)
+        boardView2.grid(column = 1, row = 0, sticky = (W, N, E, S))
+
+        colorframe.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
+
+        label2 = ttk.Label(self.mainframe, text = tr("help.mechanics.arcade.board.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
+
+        grayframe = ttk.Frame(self.mainframe)
+        grayframe.columnconfigure(0, weight = 1)
+        grayframe.columnconfigure(1, weight = 2)
+
+        fieldEvents = ["no_event", "sun", "rain", "sandstorm", "hail", "fog", "trick_room", "speed_up", "speed_down", "random", "pass", "bp", "bp_plus", "swap_teams"]
+        fieldDescs = [trEvent(event) for event in fieldEvents]
+        self.fieldIcons = [iconEvent(event) for event in fieldEvents]
+
+        boardView3 = makeIconTree(grayframe, width, fieldDescs[0:7], self.fieldIcons[0:7], style)
+        boardView3.grid(column = 0, row = 0, sticky = (W, N, E, S))
+
+        boardView4 = makeIconTree(grayframe, width, fieldDescs[7:], self.fieldIcons[7:], style)
+        boardView4.grid(column = 1, row = 0, sticky = (W, N, E, S))
+
+        grayframe.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
+
+        label3 = ttk.Label(self.mainframe, text = tr("help.mechanics.arcade.board.info.3"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label3.grid(column = 0, row = 4, sticky = (W, N, E, S))
 
     dialogs.CustomDialog(parent, tr("help.mechanics.arcade.board"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
@@ -494,5 +526,15 @@ def makeSpendTree(parent, width, height, level_costs, level_values):
     for level, values in enumerate(level_values):
         for option, cost in values:
             tree.insert(level_ids[level], 'end', text = tr(f"help.mechanics.castle.spending_points.tree.{option}"), values = [cost])
+
+    return tree
+
+# returns a tree with the icons and descriptions and no headings
+def makeIconTree(parent, width, descs, icons, style):
+
+    tree = ttk.Treeview(parent, height = len(descs), takefocus = 0, show = 'tree', style = style)
+    tree.column('#0', width = width)
+    for desc, icon in zip(descs, icons):
+        tree.insert('', 'end', text = desc, image = icon)
 
     return tree
