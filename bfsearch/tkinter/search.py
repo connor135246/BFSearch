@@ -345,18 +345,15 @@ class SearchPage(SearchPageBase):
 
         searchResults = searchByStage[-1][2]
         currentResults = data.groupUniquePokemon(searchResults)
+        # sort trainers
         for pswi, trainers in currentResults.items():
             currentResults[pswi] = sorted(trainers, key = str)
-        # alphabetical sort
-        # sort by iv - putting 31 first
-        self.currentResultsA = defaultdict(ndict, sorted(currentResults.items(), key = lambda unique: -1 if unique[0].iv == 31 else unique[0].iv))
-        # sort by name, then set number
-        self.currentResultsA = defaultdict(ndict, sorted(self.currentResultsA.items(), key = lambda unique: attrgetter('pokeset.species.name', 'pokeset.pset')(unique[0])))
-        # dex sort
-        # sort by iv - putting 31 first
-        self.currentResultsD = defaultdict(ndict, sorted(currentResults.items(), key = lambda unique: -1 if unique[0].iv == 31 else unique[0].iv))
-        # sort by dex, then form, then set number
-        self.currentResultsD = defaultdict(ndict, sorted(self.currentResultsD.items(), key = lambda unique: attrgetter('pokeset.species.dex', 'pokeset.species.name', 'pokeset.pset')(unique[0])))
+        # sort by iv, putting 31 first
+        currentResults = defaultdict(ndict, sorted(currentResults.items(), key = lambda unique: -1 if unique[0].iv == 31 else unique[0].iv))
+        # alphabetical sort - sort by name, then set number
+        self.currentResultsA = defaultdict(ndict, sorted(currentResults.items(), key = lambda unique: attrgetter('pokeset.species.name', 'pokeset.pset')(unique[0])))
+        # dex sort - sort by dex, then form, then set number
+        self.currentResultsD = defaultdict(ndict, sorted(currentResults.items(), key = lambda unique: attrgetter('pokeset.species.dex', 'pokeset.species.name', 'pokeset.pset')(unique[0])))
         self.fillResultsCombo()
 
         self.resultsInfo['text'] = tr("page.search.resultsBox.done", len(searchResults), len(currentResults))
@@ -418,8 +415,8 @@ class HallSearchPage(SearchPageBase):
         self.buildResultsBox(1)
         # level spin box
         levelFrame = ttk.Frame(self.resultsBox, padding = (5, 5, 5, 0))
-        for i in range(2):
-            levelFrame.columnconfigure(i, weight = 1)
+        levelFrame.columnconfigure(0, weight = 1)
+        levelFrame.columnconfigure(1, weight = 1)
         levelFrame.rowconfigure(0, weight = 1)
         self.levelLabel = self.addSimpleLabel(levelFrame, tr("page.hall_sets.level"), 0, 0)
         self.level = IntVar(levelFrame, value = 50)
@@ -505,12 +502,11 @@ class HallSearchPage(SearchPageBase):
 
         searchResults = searchByStage[-1][2]
         iv = browsehall.ivFromRank(int(self.rank.get())) if self.rank.get().isdecimal() else 31
+        # turn into pswi's
         currentResults = [core.PokeSetWithIV(hallset, iv) for hallset in searchResults]
-        # alphabetical sort
-        # sort by name
+        # alphabetical sort - sort by name
         self.currentResultsA = sorted(currentResults, key = lambda hswi: attrgetter('pokeset.species.name')(hswi))
-        # dex sort
-        # sort by dex, then form
+        # dex sort - sort by dex, then form
         self.currentResultsD = sorted(currentResults, key = lambda hswi: attrgetter('pokeset.species.dex', 'pokeset.species.name')(hswi))
         self.fillResultsCombo()
 

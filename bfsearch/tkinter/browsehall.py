@@ -206,16 +206,11 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
 
         # initial state
 
-        yourBSTValues = []
-        for hallsetgroup in list(core.HallSetGroup):
-            yourBSTValues.append(hallsetgroup.fullname())
-        self.fillCombobox(self.yourBSTCombo, yourBSTValues, self.yourBST)
+        self.fillCombobox(self.yourBSTCombo, [hallsetgroup.fullname() for hallsetgroup in list(core.HallSetGroup)], self.yourBST)
         self.yourBSTCombo.current(3)
         self.setToolTip(self.yourBSTCombo, self.yourBST.get())
 
-        typeValues = []
-        for key in self.tTRTHS().keys():
-            typeValues.append(key)
+        typeValues = list(self.tTRTHS().keys())
         typeValues.append(self.HALL_BRAIN_SILVER)
         typeValues.append(self.HALL_BRAIN_GOLD)
         self.fillCombobox(self.typeCombo, typeValues, self.type)
@@ -233,10 +228,9 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
 
     # when the your bst combo box updates, if type is a hall brain, updates the poke combo box
     def handleYourBSTCombo(self, event):
+        self.setToolTip(self.yourBSTCombo, self.yourBST.get())
         if self.checkingBrain():
             self.updateCalcSets()
-        # even if we don't updateCalcSets, we still want to update this tooltip
-        self.setToolTip(self.yourBSTCombo, self.yourBST.get())
 
     # when the your level box updates, updates opp level
     def handleYourLevelBox(self):
@@ -294,7 +288,6 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
     def clearCalcSetsResults(self):
         self.fillComboboxKeys(self.pokeCombo, {}, self.poke)
         self.setToolTip(self.typeCombo, "")
-        self.setToolTip(self.yourBSTCombo, "")
 
 def ivFromRank(rank):
     # start at 8 and go up 2 per rank up to 26
