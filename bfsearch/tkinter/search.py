@@ -407,6 +407,7 @@ class HallSearchPage(SearchPageBase):
         self.addSimpleLabel(self.searchBox, tr("page.hall_calc.rank"), 0, 2)
         self.rank = StringVar(self.searchBox)
         self.rankCombo = self.addSearchCombobox(self.rank, self.searchBox, range(1, 11), 0, 3)
+        self.rankCombo['height'] = 11
 
         sortedAlpha = data.allHallPokemonAlpha(self.data.hall_sets)
         sortedDex = data.allHallPokemonDex(self.data.hall_sets)

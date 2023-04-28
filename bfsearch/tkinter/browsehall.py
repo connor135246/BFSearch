@@ -179,7 +179,7 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
         self.rankBox.grid(column = 3, row = 0, sticky = (W, E), padx = 1)
 
         # visited types spin box
-        self.visitedTypesLabel = self.addSimpleLabel(battleSelect, tr("page.hall_calc.visited_types"), 4, 0)
+        self.visitedTypesLabel = self.addSimpleLabel(battleSelect, tr("page.hall_calc.visited_types"), 4, 0, tooltip = tr("page.hall_calc.visited_types.tooltip"))
         self.visitedTypes = IntVar(battleSelect, value = 0)
         self.visitedTypesBox = ttk.Spinbox(battleSelect, from_ = 0, to = 17, textvariable = self.visitedTypes, command = self.handleVisitedTypesBox)
         self.visitedTypesBox.grid(column = 5, row = 0, sticky = (W, E), padx = 1)

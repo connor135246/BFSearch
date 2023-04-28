@@ -416,9 +416,10 @@
 	"page.hall_calc.rank": "Rank:",
 	"page.hall_calc.visited_types": "Number of Types at Rank 2 or higher:",
 	"page.hall_calc.levelBox.tooltip.fixed": "The level cannot be changed for these sets.",
+	"page.hall_calc.visited_types.tooltip": "The level of the opposing Pokémon is affected by how many types you've gotten to rank 2 or higher.",
 
 	"page.hall_search.name": "Search Hall Sets",
 	"page.hall_search.tooltip": "Search for what's possible in the Battle Hall.",
-	"page.hall_search.info": "This page allows you to search through Pokémon in the Battle Hall.\nAre you wondering how many can hold a Focus Sash?",
+	"page.hall_search.info": "This page allows you to search through Pokémon in the Battle Hall.\nProtip: You probably want to know which Pokémon hold a Focus Sash.",
 	"page.hall_search.resultsBox.done": "Search done: {0} sets found."
 }
