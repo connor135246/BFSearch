@@ -341,8 +341,6 @@
 	"page.all_sets.tooltip": "Browse all Battle Tower/Arcade/Castle/Factory Pokémon sets.",
 	"page.all_sets.info": "This page lets you browse all the possible Pokémon sets in the Battle Tower/Arcade/Castle/Factory.\nSelect a Pokémon and a set number from the dropdown menus and have a look at the set!",
 	"page.all_sets.ivs": "IVs:",
-	"page.all_sets.setCombo.tooltip.singular": "{0} possible set",
-	"page.all_sets.setCombo.tooltip.plural": "{0} possible sets",
 	"page.all_sets.ivBox.tooltip.fixed": "The IV cannot be changed for these sets.",
 	"page.all_sets.empty_results": "Nothing doing!",
 
@@ -355,6 +353,8 @@
 	"page.generic.sortToggle.dex": "Sorting Pokémon by Pokédex number.",
 	"page.generic.sortToggle.tooltip": "Toggle Pokémon sorting",
 	"page.generic.pokemon": "Pokémon:",
+	"page.generic.set_number": "Set Number:",
+	"page.generic.set_number.not_available": "This set number is not possible here.",
 	"page.generic.battle_number": "Battle Number:",
 	"page.generic.trainer": "Trainer:",
 	"page.generic.result.speed": "Speed (before items/modifiers/abilities): {0}",

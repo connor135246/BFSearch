@@ -129,6 +129,29 @@ class SharedPageElements(ttk.Frame):
         label.grid(column = column, row = row)
         return label
 
+    # adds a radio button that can be scrolled. valuesGetter is a function that returns the current possible values the radio buttons can have.
+    def addScrollableRadioButton(self, parent, text, var, value, valuesGetter, command, column, row):
+        radio = ttk.Radiobutton(parent, text = text, variable = var, value = value, command = command)
+        radio.bind('<MouseWheel>', lambda event: self.scrollRadio(event, var, valuesGetter, command))
+        radio.grid(column = column, row = row, sticky = (W, E))
+        return radio
+
+    def scrollRadio(self, event, var, valuesGetter, command):
+        if valuesGetter():
+            try:
+                currentIndex = valuesGetter().index(var.get())
+                if event.delta > 0:
+                    if currentIndex > 0:
+                        var.set(valuesGetter()[currentIndex - 1])
+                        command()
+                elif event.delta < 0:
+                    if currentIndex < len(valuesGetter()) - 1:
+                        var.set(valuesGetter()[currentIndex + 1])
+                        command()
+            except ValueError:
+                var.set(valuesGetter()[0])
+                command()
+
     # sets the widget's tooltip
     def setToolTip(self, widget, text, hover_delay = 1000):
         # if the widget was already given a tooltip, we adjust that one instead.
@@ -265,7 +288,7 @@ class BrowseSetsPageBase(SharedPageElements):
 
         ## set selector
         self.setSelect = ttk.Frame(self.mainBox, padding = (5, 5, 5, 0))
-        for i in range(0, 5):
+        for i in range(0, 9):
             self.setSelect.columnconfigure(i, weight = 1)
         self.setSelect.rowconfigure(0, weight = 1)
 
@@ -273,12 +296,21 @@ class BrowseSetsPageBase(SharedPageElements):
         self.pokeLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.pokemon"), 0, 0)
         self.poke = StringVar(self.setSelect)
         self.pokeCombo = self.addSimpleCombobox(self.poke, self.handlePokeCombo, self.setSelect, 1, 0)
+        self.setLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.set_number"), 2, 0)
         self.set = IntVar(self.setSelect)
-        self.setCombo = self.addSimpleCombobox(self.set, self.handleSetCombo, self.setSelect, 2, 0)
+        # possible set numbers for the current pokemon
+        self.possibleSets = []
+        valuesGetter = lambda: self.possibleSets
+        self.setRadio1 = self.addScrollableRadioButton(self.setSelect, 1, self.set, 1, valuesGetter, self.handleSetRadio, 3, 0)
+        self.setRadio2 = self.addScrollableRadioButton(self.setSelect, 2, self.set, 2, valuesGetter, self.handleSetRadio, 4, 0)
+        self.setRadio3 = self.addScrollableRadioButton(self.setSelect, 3, self.set, 3, valuesGetter, self.handleSetRadio, 5, 0)
+        self.setRadio4 = self.addScrollableRadioButton(self.setSelect, 4, self.set, 4, valuesGetter, self.handleSetRadio, 6, 0)
+        # scroll when hovering on the label as well
+        self.setLabel.bind('<MouseWheel>', lambda event: self.scrollRadio(event, self.set, valuesGetter, self.handleSetRadio))
 
         # iv spin box
         self.buildIVBox(self.setSelect)
-        self.gridIVBox(3, 0)
+        self.gridIVBox(7, 0)
 
         # sort toggle
         self.buildSortToggle(self.mainBox)
@@ -299,17 +331,27 @@ class BrowseSetsPageBase(SharedPageElements):
         super().toggleSorting()
         self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
 
-    # when the species combo box updates, tells the set combo box to update
+    # when the species combo box updates, tells the set radio buttons to update
     def handlePokeCombo(self, event = None):
-        setsData = self.getSorted()[self.poke.get()]
-        self.fillComboboxKeys(self.setCombo, setsData, self.set)
-        count = len(self.setCombo['values'])
-        if count == 1:
-            self.setToolTip(self.setCombo, tr("page.all_sets.setCombo.tooltip.singular", count))
+        self.possibleSets = list(self.getSorted()[self.poke.get()].keys())
+        def setRadioState(radio, num):
+            if num in self.possibleSets:
+                radio.state(['!disabled'])
+                self.setToolTip(radio, self.poke.get() + " " + str(num))
+            else:
+                radio.state(['disabled'])
+                self.setToolTip(radio, tr("page.generic.set_number.not_available"))
+        setRadioState(self.setRadio1, 1)
+        setRadioState(self.setRadio2, 2)
+        setRadioState(self.setRadio3, 3)
+        setRadioState(self.setRadio4, 4)
+        if self.possibleSets:
+            self.set.set(self.possibleSets[0])
         else:
-            self.setToolTip(self.setCombo, tr("page.all_sets.setCombo.tooltip.plural", count))
+            self.set.set(self.set._default)
+        self.handleSetRadio()
 
-    def handleSetCombo(self, event = None):
+    def handleSetRadio(self, event = None):
         self.updateSet()
 
     def updateSet(self):
@@ -326,7 +368,6 @@ class BrowseSetsPageBase(SharedPageElements):
         self.setOutputText(tr("page.all_sets.empty_results"))
         self.clipboardButton.state(["disabled"])
         self.setToolTip(self.pokeCombo, "")
-        self.setToolTip(self.setCombo, "")
 
 
 # browse all sets
