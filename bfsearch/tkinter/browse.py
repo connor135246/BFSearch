@@ -463,7 +463,24 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
     # when the facility selection changes, tells the trainer class combo box to update
     def handleFacility(self):
         self.prepFacility()
+        # maintain selections if possible
+        def maintainCombo(var, combo, prevValue):
+            try:
+                var.set(combo['values'][combo['values'].index(prevValue)])
+                combo.event_generate("<<ComboboxSelected>>")
+            except ValueError:
+                pass
+        prevTClass = self.tclass.get()
+        prevTName = self.tname.get()
+        prevPoke = self.poke.get()
+        prevSet = self.set.get()
         self.handleBattlenumCombo()
+        maintainCombo(self.tclass, self.tclassCombo, prevTClass)
+        maintainCombo(self.tname, self.tnameCombo, prevTName)
+        maintainCombo(self.poke, self.pokeCombo, prevPoke)
+        if prevSet in self.possibleSets:
+            self.set.set(prevSet)
+            self.handleSetRadio()
 
     # when the battle number combo box updates, tells the trainer class combo box to update
     def handleBattlenumCombo(self, event = None):
