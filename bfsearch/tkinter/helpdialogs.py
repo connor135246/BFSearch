@@ -103,10 +103,10 @@ def nonhallGroups(parent):
         label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
         groups = ['a', 'b', 'c', 'd']
-        values = list(map(lambda group: tr(f"help.nonhall.groups.{group}.name"), groups))
+        values = [tr(f"help.nonhall.groups.{group}.name") for group in groups]
 
         headings = [tr("help.nonhall.groups.tree.desc"), tr("help.nonhall.groups.tree.examples")]
-        colsvalues = list(map(lambda group: [tr(f"help.nonhall.groups.{group}.desc"), tr(f"help.nonhall.groups.{group}.examples")], groups))
+        colsvalues = [[tr(f"help.nonhall.groups.{group}.desc"), tr(f"help.nonhall.groups.{group}.examples")] for group in groups]
         groupView = multiColTree(self.mainframe, width, tr("help.nonhall.groups.tree.name"), headings, values, colsvalues)
         groupView.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
@@ -114,7 +114,7 @@ def nonhallGroups(parent):
         label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
         headings = [tr("help.nonhall.groups.tree.sets"), tr("help.nonhall.groups.tree.subs")]
-        colsvalues = list(map(lambda group: [tr(f"help.nonhall.groups.{group}.sets"), tr(f"help.nonhall.groups.{group}.subs")], groups))
+        colsvalues = [[tr(f"help.nonhall.groups.{group}.sets"), tr(f"help.nonhall.groups.{group}.subs")] for group in groups]
         groupViewSets = multiColTree(self.mainframe, width, tr("help.nonhall.groups.tree.name"), headings, values, colsvalues)
         groupViewSets.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
@@ -380,7 +380,7 @@ def mechanicsCastleEarn(parent):
 
         values = [3, 3, 2, 1, 1, 8, 6, 4, 7]
         conditions = ["not_fainted", "full_hp", "more_than_half_hp", "less_than_half_hp", "no_status", "5_pp", "10_pp", "15_pp", "leveled_up"]
-        colvalues = list(map(lambda condition: tr(f"help.mechanics.castle.earning_points.tree.{condition}"), conditions))
+        colvalues = [tr(f"help.mechanics.castle.earning_points.tree.{condition}") for condition in conditions]
         earnView = oneColTree(self.mainframe, 50, tr("help.mechanics.castle.earning_points.tree.earned"), tr("help.mechanics.castle.earning_points.tree.condition"), values, colvalues)
         earnView.column('col', width = 250)
         earnView.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
@@ -433,7 +433,7 @@ def mechanicsCastleSpendItems(parent):
         itemViewFrame.columnconfigure(0, weight = 1)
 
         itemView = oneColTree(itemViewFrame, 250, tr("help.mechanics.castle.spending_points.tree.option"), tr("help.mechanics.castle.spending_points.tree.cost"))
-        itemView['height'] = 20
+        itemView['height'] = 15
         itemView.column('col', width = 50)
 
         def insertItemCosts(level, value, *items):
