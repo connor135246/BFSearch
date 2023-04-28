@@ -11,7 +11,7 @@ def tr(key, *args):
     return getTranslation(key).format(*args)
 
 
-settingsKey = "previous_language"
+settingsKey = "language"
 defaultLang = "English (United States)"
 langFiles = {}
 currentLang = defaultLang

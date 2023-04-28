@@ -31,6 +31,9 @@ def launch():
     logging.info("Stopping!")
     sys.exit()
 
+# for settings
+windowKey = "window_size+pos"
+maximizedKey = "window_maximized"
 
 # the root window.
 class Window(Tk):
@@ -40,13 +43,24 @@ class Window(Tk):
 
         self.data = data.DataHolder()
 
-        self.title("BFSearch")
+        self.title("BFSearch (Beta)")
         self.bficon = PhotoImage(file = "gui/frontier.png")
         self.wm_iconphoto(True, self.bficon)
-        self.minsize(750, 633)
+
+        defaultGeometry = "750x640+120+60"
+        try:
+            self.geometry(settings.settings.get(windowKey, defaultGeometry))
+        except TclError:
+            self.geometry(defaultGeometry)
+        self.minsize(350, 350)
+
+        if settings.settings.get(maximizedKey, False):
+            self.state('zoomed')
+
+        self.protocol('WM_DELETE_WINDOW', self.deleteWindow)
+
         self.columnconfigure(0, weight = 1)
         self.rowconfigure(0, weight = 1)
-        #ttk.Style().theme_use("alt")
 
         self.mainframe = ttk.Frame(self)
         self.mainframe.grid(column = 0, row = 0, sticky = (W, N, E, S))
@@ -85,6 +99,16 @@ class Window(Tk):
         self.textLog.delete('1.0', 'end')
         self.textLog.insert('end', text)
         self.textLog['state'] = 'disabled'
+
+    def deleteWindow(self):
+        isMaximized = self.state() == 'zoomed'
+        settings.settings[maximizedKey] = isMaximized
+        if isMaximized:
+            self.state('normal')
+            self.update_idletasks()
+        settings.settings[windowKey] = self.geometry()
+        settings.save()
+        self.quit()
 
     def build(self):
         self.buildButton.state(["disabled"])
