@@ -15,6 +15,8 @@ Click to see a screenshot.
 
   - [Search through all possible sets you can face in the Battle Hall by various metrics.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/hallsearch.png)  
  
+  - [Learn all about the mechanics and quirks of the Battle Frontier in the help topics.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/help.png)  
+
 
 # Data
 
