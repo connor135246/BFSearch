@@ -64,9 +64,9 @@ class SharedPageElements(ttk.Frame):
 
     def buildIVBox(self, parent):
         # iv spin box
-        self.ivLabel = ttk.Label(parent, text = tr("page.all_sets.ivs"))
+        self.ivLabel = self.buildSimpleLabel(parent, tr("page.all_sets.ivs"))
         self.iv = IntVar(parent, value = 31)
-        self.ivBox = ttk.Spinbox(parent, from_ = 0, to = 31, textvariable = self.iv, command = self.handleIVBox)
+        self.ivBox = ttk.Spinbox(parent, from_ = 0, to = 31, textvariable = self.iv, command = self.handleIVBox, width = 5)
 
     def buildOutput(self, parent):
         # output
@@ -121,11 +121,16 @@ class SharedPageElements(ttk.Frame):
         combo.grid(column = column, row = row, sticky = (W, E), padx = padx)
         return combo
 
-    # adds a simple label to the column and row
-    def addSimpleLabel(self, parent, name, column, row, tooltip = None):
-        label = ttk.Label(parent, text = name)
+    # makes a label with an appropriate wraplength
+    def buildSimpleLabel(self, parent, name, tooltip = None):
+        label = ttk.Label(parent, text = name, wraplength = 730)
         if tooltip is not None:
             self.setToolTip(label, tooltip)
+        return label
+
+    # adds a label to the column and row
+    def addSimpleLabel(self, parent, name, column, row, tooltip = None):
+        label = self.buildSimpleLabel(parent, name, tooltip)
         label.grid(column = column, row = row)
         return label
 
@@ -389,7 +394,7 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
         self.mainBox.rowconfigure(3, weight = 1)
 
         # place this tab
-        infoLabel = ttk.Label(self, text = tr("page.all_sets.info"))
+        infoLabel = self.buildSimpleLabel(self, tr("page.all_sets.info"))
         infoLabel.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.mainBox.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.columnconfigure(0, weight = 1)
@@ -426,6 +431,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         self.battlenumLabel = self.addSimpleLabel(trainerSelect, tr("page.generic.battle_number"), 0, 0)
         self.battlenum = StringVar(trainerSelect)
         self.battlenumCombo = self.addSimpleCombobox(self.battlenum, self.handleBattlenumCombo, trainerSelect, 1, 0)
+        self.battlenumCombo['width'] = 11
 
         # trainer class & name combo boxes
         self.trainerLabel = self.addSimpleLabel(trainerSelect, tr("page.generic.trainer"), 2, 0)
@@ -439,12 +445,12 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         self.gridSortToggle(0, 2)
         self.gridSetSelect(0, 3)
         self.gridOutput(0, 4)
-        self.thortonLabel = ttk.Label(self.mainBox, text = tr("page.all_sets_by_trainer.thorton"))
+        self.thortonLabel = self.buildSimpleLabel(self.mainBox, tr("page.all_sets_by_trainer.thorton"))
         self.mainBox.columnconfigure(0, weight = 1)
         self.mainBox.rowconfigure(4, weight = 1)
 
         # place this tab
-        infoLabel = ttk.Label(self, text = tr("page.all_sets_by_trainer.info"))
+        infoLabel = self.buildSimpleLabel(self, tr("page.all_sets_by_trainer.info"))
         infoLabel.grid(column = 0, row = 0, sticky = (N, S, E, W), padx = 5, pady = 5)
         self.mainBox.grid(column = 0, row = 1, sticky = (N, S, E, W), padx = 5, pady = 5)
         self.columnconfigure(0, weight = 1)

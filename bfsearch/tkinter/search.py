@@ -67,7 +67,7 @@ class SearchPageBase(browse.SharedPageElements):
         self.resultsBox.columnconfigure(0, weight = 1)
         self.resultsBox.rowconfigure(3 + outputOffset, weight = 1)
         # results info
-        self.resultsInfo = ttk.Label(self.resultsBox, text = tr("page.search.resultsBox.default"))
+        self.resultsInfo = self.buildSimpleLabel(self.resultsBox, tr("page.search.resultsBox.default"))
         self.resultsInfo.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5)
         # results sorting
         # alphabetically organized results
@@ -206,7 +206,7 @@ class SearchPage(SearchPageBase):
         self.buildResultsBox()
 
         # trainer output
-        self.trainerInfo = ttk.Label(self.resultsBox)
+        self.trainerInfo = self.buildSimpleLabel(self.resultsBox, "")
         self.trainerInfo.grid(column = 0, row = 5, sticky = (W, N, E, S), padx = 5)
         # view and scrollbar contained in a frame
         self.trainerViewFrame = ttk.Frame(self.resultsBox)
@@ -223,7 +223,7 @@ class SearchPage(SearchPageBase):
         self.prepFacility()
 
         # place this tab
-        infoLabel = ttk.Label(self, text = tr("page.search.info"))
+        infoLabel = self.buildSimpleLabel(self, tr("page.search.info"))
         infoLabel.grid(column = 0, row = 0, columnspan = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
         facilityBox = ttk.Labelframe(self)
         facilityBox.columnconfigure(0, weight = 1)
@@ -430,7 +430,7 @@ class HallSearchPage(SearchPageBase):
         self.resultsCombo.state(["disabled"])
 
         # place this tab
-        infoLabel = ttk.Label(self, text = tr("page.hall_search.info"))
+        infoLabel = self.buildSimpleLabel(self, tr("page.hall_search.info"))
         infoLabel.grid(column = 0, row = 0, columnspan = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.searchBox.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.resultsBox.grid(column = 1, row = 1, sticky = (W, N, E, S), padx = 5, pady = 5)

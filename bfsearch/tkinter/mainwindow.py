@@ -82,7 +82,7 @@ class Window(Tk):
         startPage.rowconfigure(2, weight = 1)
         startPage.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-        welcome = ttk.Label(startPage, text = tr("page.welcome.welcome"))
+        welcome = ttk.Label(startPage, text = tr("page.welcome.welcome"), wraplength = 730)
         welcome.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5, pady = 5)
 
         self.buildButton = ttk.Button(startPage, text = tr("page.welcome.buildButton"), command = self.build)

@@ -33,8 +33,8 @@ class BrowseHallSetsPageBase(browse.SharedPageElements):
         # level spin box
         self.levelLabel = self.addSimpleLabel(self.setSelect, tr("page.hall_sets.level"), 2, 0)
         self.level = IntVar(self.setSelect, value = 50)
-        self.levelBox = ttk.Spinbox(self.setSelect, from_ = 14, to = 100, textvariable = self.level, command = self.handleLevelBox)
         self.levelBox.grid(column = 3, row = 0, sticky = (W, E), padx = 1)
+        self.levelBox = ttk.Spinbox(self.setSelect, from_ = 14, to = 100, textvariable = self.level, command = self.handleLevelBox, width = 5)
 
         # iv spin box
         self.buildIVBox(self.setSelect)
@@ -116,7 +116,7 @@ class BrowseAllHallSetsPage(BrowseHallSetsPageBase):
         self.mainBox.rowconfigure(2, weight = 1)
 
         # place this tab
-        infoLabel = ttk.Label(self, text = tr("page.hall_sets.info"))
+        infoLabel = self.buildSimpleLabel(self, tr("page.hall_sets.info"))
         infoLabel.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.mainBox.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.columnconfigure(0, weight = 1)
@@ -153,7 +153,7 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
         # your level spin box
         self.yourLevelLabel = self.addSimpleLabel(pokeInfo, tr("page.hall_calc.your_level"), 0, 0)
         self.yourLevel = IntVar(pokeInfo, value = 50)
-        self.yourLevelBox = ttk.Spinbox(pokeInfo, from_ = 30, to = 100, textvariable = self.yourLevel, command = self.handleYourLevelBox)
+        self.yourLevelBox = ttk.Spinbox(pokeInfo, from_ = 30, to = 100, textvariable = self.yourLevel, command = self.handleYourLevelBox, width = 5)
         self.yourLevelBox.grid(column = 1, row = 0, sticky = (W, E), padx = 1)
 
         # your bst combo box
@@ -175,13 +175,13 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
         # rank spin box
         self.rankLabel = self.addSimpleLabel(battleSelect, tr("page.hall_calc.rank"), 2, 0)
         self.rank = IntVar(battleSelect, value = 1)
-        self.rankBox = ttk.Spinbox(battleSelect, from_ = 1, to = 10, textvariable = self.rank, command = self.handleRankBox)
+        self.rankBox = ttk.Spinbox(battleSelect, from_ = 1, to = 10, textvariable = self.rank, command = self.handleRankBox, width = 5)
         self.rankBox.grid(column = 3, row = 0, sticky = (W, E), padx = 1)
 
         # visited types spin box
         self.visitedTypesLabel = self.addSimpleLabel(battleSelect, tr("page.hall_calc.visited_types"), 4, 0, tooltip = tr("page.hall_calc.visited_types.tooltip"))
         self.visitedTypes = IntVar(battleSelect, value = 0)
-        self.visitedTypesBox = ttk.Spinbox(battleSelect, from_ = 0, to = 17, textvariable = self.visitedTypes, command = self.handleVisitedTypesBox)
+        self.visitedTypesBox = ttk.Spinbox(battleSelect, from_ = 0, to = 17, textvariable = self.visitedTypes, command = self.handleVisitedTypesBox, width = 5)
         self.visitedTypesBox.grid(column = 5, row = 0, sticky = (W, E), padx = 1)
 
         pokeInfo.grid(column = 0, row = 0, sticky = (W, N, E, S))
@@ -194,7 +194,7 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
 
         # place this tab
 
-        infoLabel = ttk.Label(self, text = tr("page.hall_calc.info"))
+        infoLabel = self.buildSimpleLabel(self, tr("page.hall_calc.info"))
         infoLabel.grid(column = 0, row = 0, sticky = (N, S, E, W), padx = 5, pady = 5)
         self.mainBox.grid(column = 0, row = 1, sticky = (N, S, E, W), padx = 5, pady = 5)
         self.columnconfigure(0, weight = 1)
