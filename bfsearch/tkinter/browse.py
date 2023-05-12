@@ -62,6 +62,14 @@ class SharedPageElements(ttk.Frame):
         self.setSortToggleText()
         self.setToolTip(self.sortToggle, tr("page.generic.sortToggle.tooltip"))
 
+    def buildGroupCombo(self, parent):
+        # group combo box
+        self.groupLabel = self.buildSimpleLabel(parent, tr("page.all_sets.group"))
+        self.group = StringVar(parent, value = data.emptyKey)
+        self.groupCombo = ttk.Combobox(parent, textvariable = self.group, width = 7)
+        self.groupCombo.bind('<<ComboboxSelected>>', self.handleGroupCombo)
+        self.groupCombo.state(["readonly"])
+
     def buildIVBox(self, parent):
         # iv spin box
         self.ivLabel = self.buildSimpleLabel(parent, tr("page.all_sets.ivs"))
@@ -100,6 +108,10 @@ class SharedPageElements(ttk.Frame):
 
     def gridSortToggle(self, column, row):
         self.sortToggle.grid(column = column, row = row, sticky = (W, E), padx = 5)
+
+    def gridGroupCombo(self, column, row):
+        self.groupLabel.grid(column = column, row = row)
+        self.groupCombo.grid(column = column + 1, row = row, sticky = (W, E), padx = 1)
 
     def gridIVBox(self, column, row):
         self.ivLabel.grid(column = column, row = row)
@@ -193,6 +205,11 @@ class SharedPageElements(ttk.Frame):
     def fillComboboxKeys(self, combo, adict, var):
         self.fillCombobox(combo, adict.keys(), var)
 
+    # sets the combo box to the contents, plus an empty entry at the start
+    def fillComboboxPlusEmpty(self, combo, contents, var):
+        contents = (data.emptyKey, *contents)
+        self.fillCombobox(combo, contents, var)
+
     def setOutputText(self, text):
         self.output['state'] = 'normal'
         self.output.delete('1.0', 'end')
@@ -211,7 +228,19 @@ class SharedPageElements(ttk.Frame):
             self.sortToggle['text'] = tr("page.generic.sortToggle.dex")
 
     def getSorted(self):
-        return self.sortedAlpha if self.alpha else self.sortedDex
+        return self.filterByGroup(self.sortedAlpha if self.alpha else self.sortedDex)
+
+    ### override if using group combo
+    def filterByGroup(self, sortedData):
+        return sortedData
+
+    # if there's more than one group, adds an empty entry at the start.
+    def fillGroupCombo(self, contents):
+        if len(contents) > 1:
+            filler = self.fillComboboxPlusEmpty
+        else:
+            filler = self.fillCombobox
+        filler(self.groupCombo, contents, self.group)
 
     def setIVBox(self, values):
         oldValues = self.ivBox['values']
@@ -270,6 +299,10 @@ class SharedPageElements(ttk.Frame):
         if self.currentSet:
             self.setOutputText(getSetResultString(self.currentSet, self.getIV(), hideItem = self.getHideItem(), level = self.getLevel()))
 
+    ### override if using group combo
+    def handleGroupCombo(self, event = None):
+        pass
+
     def handleIVBox(self):
         self.updateSet()
 
@@ -293,29 +326,33 @@ class BrowseSetsPageBase(SharedPageElements):
 
         ## set selector
         self.setSelect = ttk.Frame(self.mainBox, padding = (5, 5, 5, 0))
-        for i in range(0, 9):
+        for i in range(0, 11):
             self.setSelect.columnconfigure(i, weight = 1)
         self.setSelect.rowconfigure(0, weight = 1)
 
+        # group combo
+        self.buildGroupCombo(self.setSelect)
+        self.gridGroupCombo(0, 0)
+
         # species & set combo boxes
-        self.pokeLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.pokemon"), 0, 0)
+        self.pokeLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.pokemon"), 2, 0)
         self.poke = StringVar(self.setSelect)
-        self.pokeCombo = self.addSimpleCombobox(self.poke, self.handlePokeCombo, self.setSelect, 1, 0)
-        self.setLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.set_number"), 2, 0)
+        self.pokeCombo = self.addSimpleCombobox(self.poke, self.handlePokeCombo, self.setSelect, 3, 0)
+        self.setLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.set_number"), 4, 0)
         self.set = IntVar(self.setSelect)
         # possible set numbers for the current pokemon
         self.possibleSets = []
         valuesGetter = lambda: self.possibleSets
-        self.setRadio1 = self.addScrollableRadioButton(self.setSelect, 1, self.set, 1, valuesGetter, self.handleSetRadio, 3, 0)
-        self.setRadio2 = self.addScrollableRadioButton(self.setSelect, 2, self.set, 2, valuesGetter, self.handleSetRadio, 4, 0)
-        self.setRadio3 = self.addScrollableRadioButton(self.setSelect, 3, self.set, 3, valuesGetter, self.handleSetRadio, 5, 0)
-        self.setRadio4 = self.addScrollableRadioButton(self.setSelect, 4, self.set, 4, valuesGetter, self.handleSetRadio, 6, 0)
+        self.setRadio1 = self.addScrollableRadioButton(self.setSelect, 1, self.set, 1, valuesGetter, self.handleSetRadio, 5, 0)
+        self.setRadio2 = self.addScrollableRadioButton(self.setSelect, 2, self.set, 2, valuesGetter, self.handleSetRadio, 6, 0)
+        self.setRadio3 = self.addScrollableRadioButton(self.setSelect, 3, self.set, 3, valuesGetter, self.handleSetRadio, 7, 0)
+        self.setRadio4 = self.addScrollableRadioButton(self.setSelect, 4, self.set, 4, valuesGetter, self.handleSetRadio, 8, 0)
         # scroll when hovering on the label as well
         self.setLabel.bind('<MouseWheel>', lambda event: self.scrollRadio(event, self.set, valuesGetter, self.handleSetRadio))
 
         # iv spin box
         self.buildIVBox(self.setSelect)
-        self.gridIVBox(7, 0)
+        self.gridIVBox(9, 0)
 
         # sort toggle
         self.buildSortToggle(self.mainBox)
@@ -334,6 +371,20 @@ class BrowseSetsPageBase(SharedPageElements):
 
     def toggleSorting(self):
         super().toggleSorting()
+        self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
+
+    def filterByGroup(self, sortedData):
+        if self.group.get() == data.emptyKey:
+            return sortedData
+        else:
+            return data.filterSetsByGroup(sortedData, self.group.get())
+
+    # when the group combo box updates, tells the species combo box to update
+    def handleGroupCombo(self, event = None):
+        if self.group.get() == data.emptyKey:
+            self.setToolTip(self.groupCombo, tr("page.generic.tooltip.empty_key"))
+        else:
+            self.setToolTip(self.groupCombo, tr(f"page.all_sets.group.tooltip.{self.group.get().lower()}"))
         self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
 
     # when the species combo box updates, tells the set radio buttons to update
@@ -401,7 +452,7 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
         self.rowconfigure(1, weight = 1)
 
         # set up initial state
-        self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
+        self.fillGroupCombo(sorted({setgroup.mainGroup() for setgroup in self.setProvider.setgroups}))
         self.prepFacility()
 
     def prepFacility(self):
@@ -419,6 +470,12 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
 
         # build
         self.facilities = facilities
+
+        # remove group combo
+        self.groupLabel.grid_forget()
+        self.groupCombo.grid_forget()
+        self.setSelect.columnconfigure(0, weight = 0)
+        self.setSelect.columnconfigure(1, weight = 0)
 
         # place the main box
         ## trainer selector
@@ -514,7 +571,10 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
             # when the trainer selection updates, tells the species combo box to update
             self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
             self.setIVBox([currentProvider.iv])
-            self.setToolTip(self.battlenumCombo, self.battlenum.get())
+            if self.battlenum.get() == data.emptyKey:
+                self.setToolTip(self.battlenumCombo, tr("page.generic.tooltip.empty_key"))
+            else:
+                self.setToolTip(self.battlenumCombo, self.battlenum.get())
             self.setToolTip(self.tclassCombo, self.tclass.get())
             self.setToolTip(self.tnameCombo, self.tname.get())
         else:

@@ -162,6 +162,9 @@ def tclassToTName(trainers):
 def genericSetProvider(sets):
     return core.SetProvider(31, list(core.BattleNum), sets)
 
+def hallSetProvider(hall_sets):
+    return core.HallSetProvider(hall_sets)
+
 # returns a triple dict of {BattleNum.value} to {tclass} to {tname} to Trainer.
 # trainers that appear in more than one BattleNum will appear multiple times.
 def battlenumToTrainers(trainers):
@@ -205,11 +208,15 @@ def battlenumToGroupedSetProviders(trainers):
 # returns a list of every single individual pokemon held by every trainer. there are a lot of duplicates.
 # totals:
 # tower/arcade/castle: 16111 + 6 (palmer) + 6 (dahlia) + 12 (darach)
-# factory (50): 77880
-# factory (open): 105760
+# factory (50): 77880 + 328 (thorton (hgss)) + 272 (thorton (pt))
+# factory (open): 105760 + 328 (thorton (hgss)) + 384 (thorton (pt))
 def everyIndividualPokemon(trainers):
-    # exclude thorton's placeholder pokemon from search
-    return [core.TrainersPokeSet(trainer, aset) for tclass, nextDict in trainers.items() if tclass != 'Factory Head' for tname, trainer in nextDict.items() for aset in setsAlphaSortedList(trainer.sets)]
+    the_list = []
+    for tclass, nextDict in trainers.items():
+        for tname, trainer in nextDict.items():
+            for aset in setsAlphaSortedList(trainer.sets):
+                the_list.append(core.TrainersPokeSet(trainer, aset))
+    return the_list
 
 # returns a dict of {PokeSetWithIV} to {[Trainer,...]} from the list of TrainersPokeSet.
 def groupUniquePokemon(listTrainersPokeSet):
@@ -228,7 +235,7 @@ def groupUniquePokemon(listTrainersPokeSet):
 # totals:
 # tower/arcade/castle: 1585
 # factory (50): 1494
-# factory (open): 2944
+# factory (open): 2944 + 136 (thorton (hgss)) + 56 (thorton (pt))
 def everyUniquePokemon(trainers):
     return [pswi for pswi, _ in groupUniquePokemon(everyIndividualPokemon(trainers))]
 
@@ -258,3 +265,20 @@ def hallSetGroupToHallSets(hall_sets):
     for name, hall_set in hall_sets.items():
         hSGTHS[hall_set.hallsetgroup.fullname()][name] = hall_set
     return hSGTHS
+
+# filter sets by the main setgroup
+def filterSetsByGroup(sets, mainGroup):
+    filteredData = ndict()
+    for name, nextDict in sets.items():
+        for pset, pokeset in nextDict.items():
+            if pokeset.setgroup.mainGroup() == mainGroup:
+                filteredData[name][pset] = pokeset
+    return filteredData
+
+# filter hall sets by the hallsetgroup name
+def filterHallSetsByGroup(hall_sets, groupName):
+    filteredData = ndict()
+    for name, hall_set in hall_sets.items():
+        if hall_set.hallsetgroup.fullname() == groupName:
+            filteredData[name] = hall_set
+    return filteredData

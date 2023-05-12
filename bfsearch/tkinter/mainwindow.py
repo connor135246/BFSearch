@@ -147,7 +147,7 @@ class Window(Tk):
         self.tabs.add(self.searchPage, text = tr("page.search.name"), image = self.searchImage, compound = 'left')
         #tr("page.search.tooltip")
 
-        self.browseHallSetsPage = browsehall.BrowseAllHallSetsPage(self.tabs, data.genericSetProvider(self.data.hall_sets))
+        self.browseHallSetsPage = browsehall.BrowseAllHallSetsPage(self.tabs, data.hallSetProvider(self.data.hall_sets))
         self.hallImage = PhotoImage(file = "gui/hallpokemon.png")
         self.tabs.add(self.browseHallSetsPage, text = tr("page.hall_sets.name"), image = self.hallImage, compound = 'left')
         #tr("page.hall_sets.tooltip")

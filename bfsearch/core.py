@@ -133,53 +133,59 @@ def calculateStat(stat, base, iv, evs, level, nature):
 # set group is a useful way of grouping sets together.
 class SetGroup(Enum):
     # very weak pokemon with only 1 possible set
-    A1 = ('A', 1, range(1, 151))
+    A1 = (0, 'A', 1, range(1, 151))
     # somewhat weak pokemon with 2 possible sets
-    B1 = ('B', 1, range(151, 251))
-    B2 = ('B', 2, range(251, 351))
+    B1 = (1, 'B', 1, range(151, 251))
+    B2 = (2, 'B', 2, range(251, 351))
     # pokemon with 4 possible sets
-    C1 = ('C', 1, range(351, 487))
-    C2 = ('C', 2, range(487, 623))
-    C3 = ('C', 3, range(623, 759))
-    C4 = ('C', 4, range(759, 895))
+    C1 = (3, 'C', 1, range(351, 487))
+    C2 = (4, 'C', 2, range(487, 623))
+    C3 = (5, 'C', 3, range(623, 759))
+    C4 = (6, 'C', 4, range(759, 895))
     # legendaries with 4 possible sets
-    D1 = ('D', 1, range(895, 909))
-    D2 = ('D', 2, range(909, 923))
-    D3 = ('D', 3, range(923, 937))
-    D4 = ('D', 4, range(937, 951))
+    D1 = (7, 'D', 1, range(895, 909))
+    D2 = (8, 'D', 2, range(909, 923))
+    D3 = (9, 'D', 3, range(923, 937))
+    D4 = (10, 'D', 4, range(937, 951))
     # the set number indicates which set number this is for the pokemon.
 
     def fullname(self):
         return self.name
 
-    def group(self):
-        return self.value[0]
-    def setNumber(self):
+    def mainGroup(self):
         return self.value[1]
+    def setNumber(self):
+        return self.value[2]
+
+    def index(self):
+        return self.value[0]
 
     # for reference
     def defaultIDRange(self):
-        return self.value[2]
+        return self.value[3]
 
 # hall set group is a useful way of grouping battle hall sets together.
 # group is determined by bst.
 class HallSetGroup(Enum):
-    sub339 = ("339-", range(1, 6), range(1, 155))
-    from340to439 = ("340 - 439", range(3, 9), range(155, 271))
-    from440to499 = ("440 - 499", range(6, 11), range(271, 376))
-    plus500 = ("500+", range(9, 11), range(376, 478))
+    sub339 = (0, "339-", range(1, 6), range(1, 155))
+    from340to439 = (1, "340 - 439", range(3, 9), range(155, 271))
+    from440to499 = (2, "440 - 499", range(6, 11), range(271, 376))
+    plus500 = (3, "500+", range(9, 11), range(376, 478))
 
     def fullname(self):
-        return self.value[0]
+        return self.value[1]
 
     def ranks(self):
-        return self.value[1]
+        return self.value[2]
     def appearsInRank(self, rank):
         return rank in self.ranks()
 
+    def index(self):
+        return self.value[0]
+
     # for reference
     def defaultIDRange(self):
-        return self.value[2]
+        return self.value[3]
 
     def fromFullName(value):
         for hallsetgroup in list(HallSetGroup):
@@ -254,6 +260,7 @@ class HallPokeSet(PokeSetBase):
 
     def __str__(self):
         return f"{self.species.name} (Hall)"
+
 
 # a trainer.
 
@@ -346,6 +353,11 @@ class SetProvider(object):
         self.iv = iv
         self.battlenums = battlenums
         self.sets = sets
+        aset = set()
+        for name, nextDict in self.sets.items():
+            for pset, pokeset in nextDict.items():
+                aset.add(pokeset.setgroup)
+        self.setgroups = sorted(aset, key = lambda setgroup: setgroup.index())
 
     def isIdenticalProvider(self, other):
         return self.iv == other.iv and self.battlenums == other.battlenums and self.sets == other.sets
@@ -365,6 +377,16 @@ class Trainer(SetProvider):
 
     def asSetProvider(self):
         return SetProvider(self.iv, self.battlenums, self.sets)
+
+# hall sets don't need a trainer.
+class HallSetProvider(object):
+    # hall_sets - a dictionary of '{name}' to PokeSet
+    def __init__(self, hall_sets):
+        self.hall_sets = hall_sets
+        aset = set()
+        for name, hall_set in self.hall_sets.items():
+            aset.add(hall_set.hallsetgroup)
+        self.hallsetgroups = sorted(aset, key = lambda hallsetgroup: hallsetgroup.index())
 
 
 # a pokemon set owned by a trainer.

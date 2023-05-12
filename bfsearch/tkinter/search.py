@@ -96,11 +96,6 @@ class SearchPageBase(browse.SharedPageElements):
         combo.bind('<<ComboboxSelected>>', self.searchChanged)
         return combo
 
-    # sets the combo box to the contents, plus an empty entry at the start
-    def fillComboboxPlusEmpty(self, combo, contents, var):
-        contents = (data.emptyKey, *contents)
-        self.fillCombobox(combo, contents, var)
-
     def toggleSorting(self):
         super().toggleSorting()
         no_selection = self.poke.get() == data.emptyKey

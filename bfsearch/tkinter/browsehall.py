@@ -21,24 +21,29 @@ class BrowseHallSetsPageBase(browse.SharedPageElements):
 
         ## pokemon selector
         self.setSelect = ttk.Frame(self.mainBox, padding = (5, 5, 5, 0))
-        for i in range(0, 6):
+        for i in range(0, 8):
             self.setSelect.columnconfigure(i, weight = 1)
         self.setSelect.rowconfigure(0, weight = 1)
 
+        # group combo
+        self.buildGroupCombo(self.setSelect)
+        self.gridGroupCombo(0, 0)
+        self.groupLabel['text'] = tr("page.hall_sets.group")
+
         # species combo box
-        self.pokeLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.pokemon"), 0, 0)
+        self.pokeLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.pokemon"), 2, 0)
         self.poke = StringVar(self.setSelect)
-        self.pokeCombo = self.addSimpleCombobox(self.poke, self.handlePokeCombo, self.setSelect, 1, 0)
+        self.pokeCombo = self.addSimpleCombobox(self.poke, self.handlePokeCombo, self.setSelect, 3, 0)
 
         # level spin box
-        self.levelLabel = self.addSimpleLabel(self.setSelect, tr("page.hall_sets.level"), 2, 0)
+        self.levelLabel = self.addSimpleLabel(self.setSelect, tr("page.hall_sets.level"), 4, 0)
         self.level = IntVar(self.setSelect, value = 50)
-        self.levelBox.grid(column = 3, row = 0, sticky = (W, E), padx = 1)
         self.levelBox = ttk.Spinbox(self.setSelect, from_ = 14, to = 100, textvariable = self.level, command = self.handleLevelBox, width = 5)
+        self.levelBox.grid(column = 5, row = 0, sticky = (W, E), padx = 1)
 
         # iv spin box
         self.buildIVBox(self.setSelect)
-        self.gridIVBox(4, 0)
+        self.gridIVBox(6, 0)
 
         # sort toggle
         self.buildSortToggle(self.mainBox)
@@ -54,6 +59,20 @@ class BrowseHallSetsPageBase(browse.SharedPageElements):
 
     def toggleSorting(self):
         super().toggleSorting()
+        self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
+
+    def filterByGroup(self, sortedData):
+        if self.group.get() == data.emptyKey:
+            return sortedData
+        else:
+            return data.filterHallSetsByGroup(sortedData, self.group.get())
+
+    # when the group combo box updates, tells the poke combo box to update
+    def handleGroupCombo(self, event = None):
+        if self.group.get() == data.emptyKey:
+            self.setToolTip(self.groupCombo, tr("page.generic.tooltip.empty_key"))
+        else:
+            self.setToolTip(self.groupCombo, self.group.get())
         self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
 
     def setLevelBox(self, minLevel, maxLevel):
@@ -105,8 +124,8 @@ class BrowseAllHallSetsPage(BrowseHallSetsPageBase):
 
         # build
         self.hallSetProvider = hallSetProvider
-        self.sortedAlpha = data.hallSetsAlphaSorted(self.hallSetProvider.sets)
-        self.sortedDex = data.hallSetsDexSorted(self.hallSetProvider.sets)
+        self.sortedAlpha = data.hallSetsAlphaSorted(self.hallSetProvider.hall_sets)
+        self.sortedDex = data.hallSetsDexSorted(self.hallSetProvider.hall_sets)
 
         # place the main box
         self.gridSortToggle(0, 0)
@@ -123,7 +142,7 @@ class BrowseAllHallSetsPage(BrowseHallSetsPageBase):
         self.rowconfigure(1, weight = 1)
 
         # initial state
-        self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
+        self.fillGroupCombo([hallsetgroup.fullname() for hallsetgroup in self.hallSetProvider.hallsetgroups])
         if "Weavile" in self.getSorted().keys():
             self.poke.set("Weavile")
             self.updateSet()
@@ -142,6 +161,12 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
         # build
         self.typeToRankToHallSets = typeToRankToHallSets
         self.hallSetGroupToHallSets = hallSetGroupToHallSets
+
+        # remove group combo
+        self.groupLabel.grid_forget()
+        self.groupCombo.grid_forget()
+        self.setSelect.columnconfigure(0, weight = 0)
+        self.setSelect.columnconfigure(1, weight = 0)
 
         # place the main box
         ## your pokemon's info
