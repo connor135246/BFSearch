@@ -11,6 +11,7 @@ from bfsearch.tkinter import dialogs
 ### help dialogs todo
 # arcade board: possibilities at each streak, possible random items
 # factory starting rentals possibilities depending on # of swaps
+# sets that have return & frustration? how does friendship work?
 
 
 # general dialogs
@@ -28,7 +29,7 @@ def nonhallHelp(parent):
     helpoptions = []
     helpoptions.append((tr("help.nonhall.pokemon"), nonhallPokemon))
     helpoptions.append((tr("help.nonhall.groups"), nonhallGroups))
-    helpoptions.append((tr("help.nonhall.streaks"), nonhallStreaks))
+    helpoptions.append((tr("help.nonhall.trainer_pokemon"), nonhallTrainerPokemon))
     helpoptions.append((tr("help.nonhall.trainer_ivs"), nonhallTrainerIVs))
     helpoptions.append((tr("help.nonhall.trainer_classes"), nonhallTrainerClasses))
     HelpDialog(parent, tr("help.nonhall"), tr("help"), helpoptions).show()
@@ -38,7 +39,8 @@ def hallHelp(parent):
     helpoptions = []
     helpoptions.append((tr("help.nonhall.pokemon"), hallPokemon))
     helpoptions.append((tr("help.nonhall.groups"), hallGroups))
-    helpoptions.append((tr("help.hall.rank"), hallRank))
+    helpoptions.append((tr("help.hall.rank_pokemon"), hallRankPokemon))
+    helpoptions.append((tr("help.hall.rank_ivs"), hallRankIVs))
     helpoptions.append((tr("help.hall.level"), hallLevel))
     HelpDialog(parent, tr("help.hall"), tr("help"), helpoptions).show()
     parent.grab_set()
@@ -124,37 +126,37 @@ def nonhallGroups(parent):
     dialogs.CustomDialog(parent, tr("help.nonhall.groups"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
-def nonhallStreaks(parent):
+def nonhallTrainerPokemon(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
         wraplength = 550
         width = 50
 
-        label1 = ttk.Label(self.mainframe, text = tr("help.nonhall.streaks.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label1 = ttk.Label(self.mainframe, text = tr("help.nonhall.trainer_pokemon.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
         svalues = ["A1", "A1, B1", "B1, B2", "B2, C1", "C1, C2", "C2, C3", "C3, C4"]
-        evalues = ["B1", "B2", tr("help.nonhall.streaks.tree.silver"), "C2", "C3", "C4", tr("help.nonhall.streaks.tree.gold")]
-        streaks = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.streaks.tree.groups"), svalues, evalues)
+        evalues = ["B1", "B2", tr("help.nonhall.trainer_pokemon.tree.silver"), "C2", "C3", "C4", tr("help.nonhall.trainer_pokemon.tree.gold")]
+        streaks = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.groups"), svalues, evalues)
         streaks.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label2 = ttk.Label(self.mainframe, text = tr("help.nonhall.streaks.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label2 = ttk.Label(self.mainframe, text = tr("help.nonhall.trainer_pokemon.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
-        values = [core.BattleNum.s99.value + " " + tr("help.nonhall.streaks.tree.normal"), core.BattleNum.s99.value + " " + tr("help.nonhall.streaks.tree.factory")]
+        values = [core.BattleNum.s99.value + " " + tr("help.nonhall.trainer_pokemon.tree.normal"), core.BattleNum.s99.value + " " + tr("help.nonhall.trainer_pokemon.tree.factory")]
         colvalues = ["B2, C1-C4, D1-D4", "C1-C4, D1-D4"]
-        streak50 = oneColTree(self.mainframe, width, tr("help.nonhall.streaks.tree.battle"), tr("help.nonhall.streaks.tree.groups"), values, colvalues)
+        streak50 = oneColTree(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.battle"), tr("help.nonhall.trainer_pokemon.tree.groups"), values, colvalues)
         streak50.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label3 = ttk.Label(self.mainframe, text = tr("help.nonhall.streaks.info.3"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label3 = ttk.Label(self.mainframe, text = tr("help.nonhall.trainer_pokemon.info.3"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label3.grid(column = 0, row = 4, sticky = (W, N, E, S))
 
         svalues = ["C1", "C1, C2", "C2, C3", "C3, C4", "C1-C4, D1-D4", "C1-C4, D1-D4", "C1-C4, D1-D4"]
-        evalues = ["C2", "C3", tr("help.nonhall.streaks.tree.silver"), "C1-C4, D1-D4", "C1-C4, D1-D4", "C1-C4, D1-D4", tr("help.nonhall.streaks.tree.gold")]
-        streaksOpen = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.streaks.tree.groups"), svalues, evalues)
+        evalues = ["C2", "C3", tr("help.nonhall.trainer_pokemon.tree.silver"), "C1-C4, D1-D4", "C1-C4, D1-D4", "C1-C4, D1-D4", tr("help.nonhall.trainer_pokemon.tree.gold")]
+        streaksOpen = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.groups"), svalues, evalues)
         streaksOpen.grid(column = 0, row = 5, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-    dialogs.CustomDialog(parent, tr("help.nonhall.streaks"), [tr("toolbar.button.ok")], builder).show()
+    dialogs.CustomDialog(parent, tr("help.nonhall.trainer_pokemon"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
 def nonhallTrainerClasses(parent):
@@ -217,7 +219,7 @@ def nonhallTrainerIVs(parent):
         label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
         svalues = ["3", "3, 6", "6, 9", "9, 12", "12, 15", "15, 18", "18, 21", "21, 31"]
-        evalues = ["6", "9", tr("help.nonhall.trainer_ivs.tree.brain"), "15", "18", "21", tr("help.nonhall.trainer_ivs.tree.brain")]
+        evalues = ["6", "9", tr("help.nonhall.trainer_pokemon.tree.silver"), "15", "18", "21", tr("help.nonhall.trainer_pokemon.tree.gold")]
         ivs = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.trainer_ivs.tree.ivs"), svalues, evalues)
         ivs.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
@@ -225,7 +227,7 @@ def nonhallTrainerIVs(parent):
         label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
         svalues = ["0", "0, 4", "4, 8", "8, 12", "12, 16", "16, 20", "20, 24", "24, 31"]
-        evalues = ["4", "8", tr("help.nonhall.trainer_ivs.tree.brain"), "16", "20", "24", tr("help.nonhall.trainer_ivs.tree.brain")]
+        evalues = ["4", "8", tr("help.nonhall.trainer_pokemon.tree.silver"), "16", "20", "24", tr("help.nonhall.trainer_pokemon.tree.gold")]
         ivsFactory = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.trainer_ivs.tree.ivs"), svalues, evalues)
         ivsFactory.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
@@ -260,13 +262,13 @@ def hallGroups(parent):
     dialogs.CustomDialog(parent, tr("help.nonhall.groups"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
-def hallRank(parent):
+def hallRankPokemon(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
         wraplength = 450
         width = 50
 
-        label1 = ttk.Label(self.mainframe, text = tr("help.hall.rank.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label1 = ttk.Label(self.mainframe, text = tr("help.hall.rank_pokemon.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
         values = []
@@ -280,27 +282,36 @@ def hallRank(parent):
         values.append(core.HallSetGroup.from340to439.fullname() + ", " + core.HallSetGroup.from440to499.fullname())
         values.append(core.HallSetGroup.from440to499.fullname() + ", " + core.HallSetGroup.plus500.fullname())
         values.append(core.HallSetGroup.from440to499.fullname() + ", " + core.HallSetGroup.plus500.fullname())
-        rankGroups = makeRankTrees(self.mainframe, width, tr("help.nonhall.streaks.tree.groups"), values)
+        rankGroups = makeRankTrees(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.groups"), values)
         rankGroups.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label2 = ttk.Label(self.mainframe, text = tr("help.hall.rank.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label2 = ttk.Label(self.mainframe, text = tr("help.hall.rank_pokemon.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
-        values = [tr("help.nonhall.streaks.tree.silver"), tr("help.nonhall.streaks.tree.gold")]
-        colsvalues = [[50, tr("help.hall.rank.tree.same")], [170, core.HallSetGroup.plus500.fullname()]]
-        brainTree = multiColTree(self.mainframe, width, "", [tr("help.nonhall.streaks.tree.battle"), tr("help.nonhall.streaks.tree.groups")], values, colsvalues)
+        values = [tr("help.nonhall.trainer_pokemon.tree.silver"), tr("help.nonhall.trainer_pokemon.tree.gold")]
+        colsvalues = [[50, tr("help.hall.rank_pokemon.tree.same")], [170, core.HallSetGroup.plus500.fullname()]]
+        brainTree = multiColTree(self.mainframe, width, "", [tr("help.nonhall.trainer_pokemon.tree.battle"), tr("help.nonhall.trainer_pokemon.tree.groups")], values, colsvalues)
         brainTree.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label3 = ttk.Label(self.mainframe, text = tr("help.hall.rank.info.3"), wraplength = wraplength, padding = (10, 5, 10, 5))
-        label3.grid(column = 0, row = 4, sticky = (W, N, E, S))
+    dialogs.CustomDialog(parent, tr("help.hall.rank_pokemon"), [tr("toolbar.button.ok")], builder).show()
+    parent.grab_set()
 
-        rankIVs = makeRankTrees(self.mainframe, width, tr("help.hall.rank.tree.ivs"), range(8, 28, 2))
-        rankIVs.grid(column = 0, row = 5, sticky = (W, N, E, S), padx = 10, pady = 5)
+def hallRankIVs(parent):
+    def builder(self, **kwargs):
+        self.mainframe.columnconfigure(0, weight = 1)
+        wraplength = 450
+        width = 50
 
-        label4 = ttk.Label(self.mainframe, text = tr("help.hall.rank.info.4"), wraplength = wraplength, padding = (10, 5, 10, 5))
-        label4.grid(column = 0, row = 6, sticky = (W, N, E, S))
+        label1 = ttk.Label(self.mainframe, text = tr("help.hall.rank_ivs.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-    dialogs.CustomDialog(parent, tr("help.hall.rank"), [tr("toolbar.button.ok")], builder).show()
+        rankIVs = makeRankTrees(self.mainframe, width, tr("help.hall.rank_ivs.tree.ivs"), range(8, 28, 2))
+        rankIVs.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
+
+        label2 = ttk.Label(self.mainframe, text = tr("help.hall.rank_ivs.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
+
+    dialogs.CustomDialog(parent, tr("help.hall.rank_ivs"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
 def hallLevel(parent):
@@ -538,11 +549,11 @@ def makeBattleNumTrees(parent, width, heading, svalues, evalues):
     values = [core.BattleNum.s1.value, core.BattleNum.s2.value, core.BattleNum.s3.value, core.BattleNum.s4.value, core.BattleNum.s5.value, core.BattleNum.s6.value, core.BattleNum.s7.value]
     if len(svalues) > 7:
         values.append(core.BattleNum.s99.value)
-    treeS = oneColTree(frame, width, tr("help.nonhall.streaks.tree.battle"), heading, values, svalues)
+    treeS = oneColTree(frame, width, tr("help.nonhall.trainer_pokemon.tree.battle"), heading, values, svalues)
     treeS.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
     values = [core.BattleNum.e1.value, core.BattleNum.e2.value, core.BattleNum.e3.value, core.BattleNum.e4.value, core.BattleNum.e5.value, core.BattleNum.e6.value, core.BattleNum.e7.value]
-    treeE = oneColTree(frame, width, tr("help.nonhall.streaks.tree.battle.ender"), heading, values, evalues)
+    treeE = oneColTree(frame, width, tr("help.nonhall.trainer_pokemon.tree.battle.ender"), heading, values, evalues)
     treeE.grid(column = 1, row = 0, sticky = (W, N, E, S))
 
     return frame
@@ -554,10 +565,10 @@ def makeRankTrees(parent, width, heading, values):
     frame.columnconfigure(0, weight = 1)
     frame.columnconfigure(1, weight = 1)
 
-    tree1 = oneColTree(frame, width, tr("help.hall.rank.tree.rank"), heading, range(1, 6), values[0:5])
+    tree1 = oneColTree(frame, width, tr("help.hall.rank_pokemon.tree.rank"), heading, range(1, 6), values[0:5])
     tree1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-    tree2 = oneColTree(frame, width, tr("help.hall.rank.tree.rank"), heading, range(6, 11), values[5:])
+    tree2 = oneColTree(frame, width, tr("help.hall.rank_pokemon.tree.rank"), heading, range(6, 11), values[5:])
     tree2.grid(column = 1, row = 0, sticky = (W, N, E, S))
 
     return frame
