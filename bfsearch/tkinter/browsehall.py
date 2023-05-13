@@ -7,13 +7,13 @@ from tkinter import *
 from tkinter import ttk
 
 from bfsearch import core, data
-from bfsearch.tkinter import browse
+from bfsearch.tkinter import common
 from bfsearch.translate import tr
 
 
 # base page for single hall set browsing
 # similar to browse.BrowseSetsPageBase
-class BrowseHallSetsPageBase(browse.SharedPageElements):
+class BrowseHallSetsPageBase(common.SharedPageElements):
     def __init__(self, parent, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
 

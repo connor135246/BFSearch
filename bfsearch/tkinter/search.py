@@ -10,12 +10,12 @@ from tkinter import ttk
 
 from bfsearch import core, data
 from bfsearch.data import ndict
-from bfsearch.tkinter import browse, dialogs, browsehall
+from bfsearch.tkinter import common, dialogs, browsehall
 from bfsearch.translate import tr
 
 
 # todo: fix the searchBox changing size when you click the pokeCombo sortToggle
-class SearchPageBase(browse.SharedPageElements):
+class SearchPageBase(common.SharedPageElements):
     def __init__(self, parent, the_data):
         super().__init__(parent)
         self.data = the_data
