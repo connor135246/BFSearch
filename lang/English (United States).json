@@ -67,7 +67,7 @@
 	"help.nonhall.trainer_classes": "About Trainer Classes",
 	"help.nonhall.trainer_classes.info.1": "In the Battle Tower/Arcade/Castle, each trainer has a predefined list of possible sets they can use. For most trainers, their class doesn't really have much relation to the kinds of Pokémon they use. But some do, and they're listed here. Also, some trainer classes change their specialization once you reach battle 50.\n\nTrainer classes that specialize in particular types:",
 	"help.nonhall.trainer_classes.info.2": "Trainer classes that have different ways of specializing:",
-	"help.nonhall.trainer_classes.info.3": "In the Battle Factory, trainers can use any Pokémon in the appropriate groups for when they appear. See the 'About Streaks' topic.",
+	"help.nonhall.trainer_classes.info.3": "In the Battle Factory, trainers can use any Pokémon in the appropriate groups for when they appear. See the 'About Trainer Pokémon' topic.",
 	"help.nonhall.trainer_classes.tree.class": "Class",
 	"help.nonhall.trainer_classes.tree.type_spec.pre50": "Type Specialization (1 - 49)",
 	"help.nonhall.trainer_classes.tree.type_spec.post50": "Type Specialization (50+)",
@@ -132,7 +132,7 @@
 	"help.mechanics.arcade.board": "Battle Arcade: Game Board",
 	"help.mechanics.arcade.board.info.1": "Before each battle, you'll play the game board to see what event happens. If you don't stop the game board in 30 seconds, it stops on its own.\n\nBlack events affect your team, and red events affect the opponent's team.",
 	"help.mechanics.arcade.board.info.2": "Gray events affect the field or have other effects.",
-	"help.mechanics.arcade.board.info.3": "Certain events only appear at higher win streaks. The berries and items received from events also change at higher win streaks. In early rounds, berries are usually status restoring berries. In later rounds, they are usually pinch berries that raise a stat. Finally, it's important to note that some possible items have negative effects, such as Lagging Tail.",
+	"help.mechanics.arcade.board.info.3": "Certain events only appear at higher win streaks. The berries and items received from events also change at higher win streaks. In early rounds, berries are usually status restoring berries. In later rounds, they are usually pinch berries that raise a stat. Note that that some possible items have negative effects, such as Lagging Tail.",
 	"help.mechanics.arcade.board.tree.event": "Event",
 	"help.mechanics.arcade.board.tree.lower_hp": "Lower all Pokémon's HP by 20%",
 	"help.mechanics.arcade.board.tree.poison": "Poison all Pokémon",
@@ -329,7 +329,7 @@
 	"parsing.error.factory_trainers.duplicate.for_class": "Duplicate factory trainer '{0}': '{1}' for class '{2}'",
 
 	"page.welcome.name": "Start Page",
-	"page.welcome.welcome": "Welcome. Click the button below to load data.\nOnce completed, additional tabs will appear on the top.",
+	"page.welcome.welcome": "Welcome. Click the button below to load data.\nOnce completed, additional tabs will appear on the top.\nIf you're confused, click the 'Frontier Help' button at the bottom!",
 	"page.welcome.buildButton": "Click to load data",
 	"page.welcome.status.ready": "Ready.\n",
 	"page.welcome.status.parsing": "Parsing...\n",
@@ -339,7 +339,7 @@
 
 	"page.all_sets.name": "Browse Sets",
 	"page.all_sets.tooltip": "Browse all Battle Tower/Arcade/Castle/Factory Pokémon sets.",
-	"page.all_sets.info": "This page lets you browse all the possible Pokémon sets in the Battle Tower/Arcade/Castle/Factory.\nSelect a Pokémon and a set number from the dropdown menus and have a look at the set!",
+	"page.all_sets.info": "This page lets you browse all the possible Pokémon sets in the Battle Tower/Arcade/Castle/Factory.\nSelect a Pokémon and a set number and have a look at the set!",
 	"page.all_sets.group": "Filter by Group:",
 	"page.all_sets.group.tooltip.a": "Group A - Very weak Pokémon",
 	"page.all_sets.group.tooltip.b": "Group B - Somewhat weak Pokémon",
@@ -360,6 +360,7 @@
 	"page.generic.tooltip.empty_key": "Show all",
 	"page.generic.pokemon": "Pokémon:",
 	"page.generic.set_number": "Set Number:",
+	"page.generic.set_number.tooltip": "You can scroll your mouse wheel to change the set number.",
 	"page.generic.set_number.not_available": "This set number is not possible here.",
 	"page.generic.battle_number": "Battle Number:",
 	"page.generic.trainer": "Trainer:",
@@ -406,7 +407,7 @@
 
 	"page.hall_sets.name": "Browse Hall Sets",
 	"page.hall_sets.tooltip": "Browse all Battle Hall Pokémon sets.",
-	"page.hall_sets.info": "This page lets you browse all the possible Pokémon sets in the Battle Hall.\nSelect a Pokémon from the dropdown menu and have a look at the set!",
+	"page.hall_sets.info": "This page lets you browse all the possible Pokémon sets in the Battle Hall.\nSelect a Pokémon and have a look at the set!",
 	"page.hall_sets.level": "Level:",
 	"page.hall_sets.group": "Filter by BST:",
 

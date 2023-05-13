@@ -338,7 +338,7 @@ class BrowseSetsPageBase(SharedPageElements):
         self.pokeLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.pokemon"), 2, 0)
         self.poke = StringVar(self.setSelect)
         self.pokeCombo = self.addSimpleCombobox(self.poke, self.handlePokeCombo, self.setSelect, 3, 0)
-        self.setLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.set_number"), 4, 0)
+        self.setLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.set_number"), 4, 0, tooltip = tr("page.generic.set_number.tooltip"))
         self.set = IntVar(self.setSelect)
         # possible set numbers for the current pokemon
         self.possibleSets = []
@@ -527,7 +527,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
     def handleFacility(self):
         self.prepFacility()
         # maintain selections if possible
-        def maintainCombo(var, combo, prevValue):
+        def maintainCombo(combo, prevValue, var):
             try:
                 var.set(combo['values'][combo['values'].index(prevValue)])
                 combo.event_generate("<<ComboboxSelected>>")
@@ -538,9 +538,9 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
         prevPoke = self.poke.get()
         prevSet = self.set.get()
         self.handleBattlenumCombo()
-        maintainCombo(self.tclass, self.tclassCombo, prevTClass)
-        maintainCombo(self.tname, self.tnameCombo, prevTName)
-        maintainCombo(self.poke, self.pokeCombo, prevPoke)
+        maintainCombo(self.tclassCombo, prevTClass, self.tclass)
+        maintainCombo(self.tnameCombo, prevTName, self.tname)
+        maintainCombo(self.pokeCombo, prevPoke, self.poke)
         if prevSet in self.possibleSets:
             self.set.set(prevSet)
             self.handleSetRadio()
