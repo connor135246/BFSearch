@@ -97,8 +97,9 @@ class SearchPageBase(common.SharedPageElements):
         return combo
 
     def toggleSorting(self):
-        super().toggleSorting()
         no_selection = self.poke.get() == data.emptyKey
+        self.alpha = not self.alpha
+        self.setSortToggleText()
         self.fillComboboxPlusEmpty(self.pokeCombo, self.getSorted(), self.poke)
         if no_selection:
             # undo the search button text being marked as changed if it didn't change

@@ -28,9 +28,8 @@ class BrowseSetsPageBase(common.SharedPageElements):
         self.gridGroupCombo(0, 0)
 
         # species & set combo boxes
-        self.pokeLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.pokemon"), 2, 0)
-        self.poke = StringVar(self.setSelect)
-        self.pokeCombo = self.addSimpleCombobox(self.poke, self.handlePokeCombo, self.setSelect, 3, 0)
+        self.buildPokeCombo(self.setSelect)
+        self.gridPokeCombo(2, 0)
         self.setLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.set_number"), 4, 0, tooltip = tr("page.generic.set_number.tooltip"))
         self.set = IntVar(self.setSelect)
         # possible set numbers for the current pokemon
@@ -61,10 +60,6 @@ class BrowseSetsPageBase(common.SharedPageElements):
 
     def gridSetSelect(self, column, row):
         self.setSelect.grid(column = column, row = row, sticky = (W, N, E, S))
-
-    def toggleSorting(self):
-        super().toggleSorting()
-        self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
 
     def filterByGroup(self, sortedData):
         if self.group.get() == data.emptyKey:
@@ -274,8 +269,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
             self.clearTrainerResults()
 
     def clearTrainerResults(self):
-        self.sortedAlpha = ndict()
-        self.sortedDex = ndict()
+        self.clearSorted()
         self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
         self.setIVBox([0])
         self.setToolTip(self.battlenumCombo, "")

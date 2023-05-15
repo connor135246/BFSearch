@@ -31,9 +31,8 @@ class BrowseHallSetsPageBase(common.SharedPageElements):
         self.groupLabel['text'] = tr("page.hall_sets.group")
 
         # species combo box
-        self.pokeLabel = self.addSimpleLabel(self.setSelect, tr("page.generic.pokemon"), 2, 0)
-        self.poke = StringVar(self.setSelect)
-        self.pokeCombo = self.addSimpleCombobox(self.poke, self.handlePokeCombo, self.setSelect, 3, 0)
+        self.buildPokeCombo(self.setSelect)
+        self.gridPokeCombo(2, 0)
 
         # level spin box
         self.levelLabel = self.addSimpleLabel(self.setSelect, tr("page.hall_sets.level"), 4, 0)
@@ -56,10 +55,6 @@ class BrowseHallSetsPageBase(common.SharedPageElements):
 
     def gridSetSelect(self, column, row):
         self.setSelect.grid(column = column, row = row, sticky = (W, N, E, S))
-
-    def toggleSorting(self):
-        super().toggleSorting()
-        self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
 
     def filterByGroup(self, sortedData):
         if self.group.get() == data.emptyKey:

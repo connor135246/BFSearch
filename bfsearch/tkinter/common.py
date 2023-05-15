@@ -43,16 +43,19 @@ class SharedPageElements(ttk.Frame):
     def __init__(self, parent, *args, **kwargs):
         ttk.Frame.__init__(self, parent, *args, **kwargs)
 
-        # alphabetically organized sets
-        self.sortedAlpha = ndict()
-        # dex number organized sets
-        self.sortedDex = ndict()
+        self.clearSorted()
 
         # current set (for copy to clipboard)
         self.currentSet = None
 
         # facility
         self.facility = Facility.Tower
+
+    def clearSorted(self):
+        # alphabetically organized sets
+        self.sortedAlpha = ndict()
+        # dex number organized sets
+        self.sortedDex = ndict()
 
     def buildSortToggle(self, parent):
         # sort toggle button
@@ -65,9 +68,14 @@ class SharedPageElements(ttk.Frame):
         # group combo box
         self.groupLabel = self.buildSimpleLabel(parent, tr("page.all_sets.group"))
         self.group = StringVar(parent, value = data.emptyKey)
-        self.groupCombo = ttk.Combobox(parent, textvariable = self.group, width = 7)
-        self.groupCombo.bind('<<ComboboxSelected>>', self.handleGroupCombo)
-        self.groupCombo.state(["readonly"])
+        self.groupCombo = self.buildSimpleCombobox(self.group, self.handleGroupCombo, parent)
+        self.groupCombo['width'] = 7
+
+    def buildPokeCombo(self, parent):
+        # poke combo box
+        self.pokeLabel = self.buildSimpleLabel(parent, tr("page.generic.pokemon"))
+        self.poke = StringVar(parent)
+        self.pokeCombo = self.buildSimpleCombobox(self.poke, self.handlePokeCombo, parent)
 
     def buildIVBox(self, parent):
         # iv spin box
@@ -112,6 +120,10 @@ class SharedPageElements(ttk.Frame):
         self.groupLabel.grid(column = column, row = row)
         self.groupCombo.grid(column = column + 1, row = row, sticky = (W, E), padx = 1)
 
+    def gridPokeCombo(self, column, row):
+        self.pokeLabel.grid(column = column, row = row)
+        self.pokeCombo.grid(column = column + 1, row = row, sticky = (W, E), padx = 1)
+
     def gridIVBox(self, column, row):
         self.ivLabel.grid(column = column, row = row)
         self.ivBox.grid(column = column + 1, row = row, sticky = (W, E), padx = 1)
@@ -123,12 +135,17 @@ class SharedPageElements(ttk.Frame):
     def gridFacility(self, column, row):
         self.facilitySelect.grid(column = column, row = row, sticky = (W, N, E, S))
 
-    # adds a simple combobox with default padx 1
-    def addSimpleCombobox(self, var, command, parent, column, row, padx = 1):
+    # makes a combobox
+    def buildSimpleCombobox(self, var, command, parent):
         combo = ttk.Combobox(parent, textvariable = var)
         if command is not None:
             combo.bind('<<ComboboxSelected>>', command)
         combo.state(["readonly"])
+        return combo
+
+    # adds a combobox with default padx 1
+    def addSimpleCombobox(self, var, command, parent, column, row, padx = 1):
+        combo = self.buildSimpleCombobox(var, command, parent)
         combo.grid(column = column, row = row, sticky = (W, E), padx = padx)
         return combo
 
@@ -215,10 +232,10 @@ class SharedPageElements(ttk.Frame):
         self.output.insert('end', text)
         self.output['state'] = 'disabled'
 
-    ### override and call super to add functionality
     def toggleSorting(self):
         self.alpha = not self.alpha
         self.setSortToggleText()
+        self.fillComboboxKeys(self.pokeCombo, self.getSorted(), self.poke)
 
     def setSortToggleText(self):
         if self.alpha:
