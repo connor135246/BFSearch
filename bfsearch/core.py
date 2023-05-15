@@ -215,7 +215,7 @@ class PokeSetBase(object):
         else:
             return f"{self} w/ {iv} IVs"
 
-    def getShowdownFormat(self, iv, abilitySlot = -1, level = 50, hideItem = False):
+    def getShowdownFormat(self, iv, hideItem = False, level = 50, abilitySlot = -1):
         string = f"{self.getShowdownNickname(iv)} ({self.species.name})"
         if not hideItem:
             string += f" @ {self.item}"
@@ -237,6 +237,15 @@ class PokeSetBase(object):
 
     def getSpeed(self, iv, level = 50):
         return calculateStat(Stat.Spe, self.species.baseSpeed, iv, self.evstats.getEVs(Stat.Spe), level, self.nature)
+
+    def getAdjustedSpeed(self, iv, hideItem = False, level = 50):
+        speed = self.getSpeed(iv, level)
+        if not hideItem:
+            if self.item == "Choice Scarf":
+                speed = math.floor(speed * 1.5)
+            elif self.item == "Iron Ball":
+                speed = math.floor(speed * 0.5)
+        return speed
 
 # your average pokeset
 class PokeSet(PokeSetBase):
@@ -404,11 +413,14 @@ class PokeSetWithIV(object):
     def getShowdownNickname(self):
         return self.pokeset.getShowdownNickname(self.iv)
 
-    def getShowdownFormat(self, abilitySlot = -1, level = 50, hideItem = False):
-        return self.pokeset.getShowdownFormat(self.iv, abilitySlot = abilitySlot, level = level, hideItem = hideItem)
+    def getShowdownFormat(self, hideItem = False, level = 50, abilitySlot = -1):
+        return self.pokeset.getShowdownFormat(self.iv, hideItem = hideItem, level = level, abilitySlot = abilitySlot)
 
     def getSpeed(self, level = 50):
         return self.pokeset.getSpeed(self.iv, level = level)
+
+    def getAdjustedSpeed(self, hideItem = False, level = 50):
+        return self.pokeset.getAdjustedSpeed(self.iv, hideItem = hideItem, level = level)
 
     def isIdenticalSet(self, other):
         return self.pokeset == other.pokeset and self.iv == other.iv

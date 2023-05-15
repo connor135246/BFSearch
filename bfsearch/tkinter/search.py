@@ -14,6 +14,15 @@ from bfsearch.tkinter import common, dialogs, browsehall
 from bfsearch.translate import tr
 
 
+# sorting of search results
+class SortMode(Enum):
+    Alpha = 0
+    Dex = 1
+    Speed = 2
+
+    def next(self):
+        return SortMode((self.value + 1) % len(SortMode))
+
 # todo: fix the searchBox changing size when you click the pokeCombo sortToggle
 class SearchPageBase(common.SharedPageElements):
     def __init__(self, parent, the_data):
@@ -71,12 +80,14 @@ class SearchPageBase(common.SharedPageElements):
         self.resultsInfo.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5)
         # results sorting
         # alphabetically organized results
-        self.currentResultsA = []
+        self.currentResultsA = ndict()
         # dex number organized results
-        self.currentResultsD = []
+        self.currentResultsD = ndict()
+        # speed organized results
+        self.currentResultsS = ndict()
         # sort toggle button
         self.resultSortToggle = ttk.Button(self.resultsBox, command = self.toggleResultSorting)
-        self.resultsAlpha = True
+        self.resultsSort = SortMode.Speed
         self.setResultsToggleText()
         self.setToolTip(self.resultSortToggle, tr("page.search.sortToggle.tooltip"))
         self.resultSortToggle.grid(column = 0, row = 1, sticky = (W, E), padx = 5, pady = 5)
@@ -106,18 +117,25 @@ class SearchPageBase(common.SharedPageElements):
             self.searchButton['text'] = tr("page.search.searchButton")
 
     def toggleResultSorting(self):
-        self.resultsAlpha = not self.resultsAlpha
+        self.resultsSort = self.resultsSort.next()
         self.setResultsToggleText()
         self.fillResultsCombo()
 
     def setResultsToggleText(self):
-        if self.resultsAlpha:
-            self.resultSortToggle['text'] = tr("page.search.sortToggle.alpha")
-        else:
+        if self.resultsSort == SortMode.Speed:
+            self.resultSortToggle['text'] = tr("page.search.sortToggle.speed")
+        elif self.resultsSort == SortMode.Dex:
             self.resultSortToggle['text'] = tr("page.search.sortToggle.dex")
+        else:
+            self.resultSortToggle['text'] = tr("page.search.sortToggle.alpha")
 
     def getResults(self):
-        return self.currentResultsA if self.resultsAlpha else self.currentResultsD
+        if self.resultsSort == SortMode.Speed:
+            return self.currentResultsS
+        elif self.resultsSort == SortMode.Dex:
+            return self.currentResultsD
+        else:
+            return self.currentResultsA
 
     ### override to add functionality
     def fillResultsCombo(self):
@@ -246,6 +264,7 @@ class SearchPage(SearchPageBase):
     def handleFacility(self):
         self.currentResultsA = ndict()
         self.currentResultsD = ndict()
+        self.currentResultsS = ndict()
         self.fillCombobox(self.resultsCombo, tuple(), self.result)
         self.prepFacility()
         self.resultsInfo['text'] = tr("page.search.resultsBox.default")
@@ -350,6 +369,8 @@ class SearchPage(SearchPageBase):
         self.currentResultsA = defaultdict(ndict, sorted(currentResults.items(), key = lambda unique: attrgetter('pokeset.species.name', 'pokeset.pset')(unique[0])))
         # dex sort - sort by dex, then form, then set number
         self.currentResultsD = defaultdict(ndict, sorted(currentResults.items(), key = lambda unique: attrgetter('pokeset.species.dex', 'pokeset.species.name', 'pokeset.pset')(unique[0])))
+        # speed sort - sort by speed, then dex, then form, then set number
+        self.currentResultsS = defaultdict(ndict, sorted(currentResults.items(), key = lambda unique, self = self: (-unique[0].getAdjustedSpeed(hideItem = self.facility.hideItem(), level = self.facility.level()),) + attrgetter('pokeset.species.dex', 'pokeset.species.name', 'pokeset.pset')(unique[0])))
         self.fillResultsCombo()
 
         self.resultsInfo['text'] = tr("page.search.resultsBox.done", len(searchResults), len(currentResults))
@@ -438,6 +459,15 @@ class HallSearchPage(SearchPageBase):
 
     def handleLevelBox(self):
         self.updateSet()
+        # re-sort speed while maintaining selection
+        prevResult = self.result.get()
+        self.speedSort(self.currentResultsS)
+        self.fillResultsCombo()
+        self.result.set(prevResult)
+        self.resultsCombo.event_generate("<<ComboboxSelected>>")
+
+    def speedSort(self, currentResults):
+        self.currentResultsS = sorted(currentResults, key = lambda hswi, self = self: (-hswi.getAdjustedSpeed(hideItem = False, level = self.getLevel()),) + attrgetter('pokeset.species.dex', 'pokeset.species.name')(hswi))
 
     def fillResultsCombo(self):
         self.fillCombobox(self.resultsCombo, [hswi.getShowdownNickname() for hswi in self.getResults()], self.result)
@@ -504,6 +534,8 @@ class HallSearchPage(SearchPageBase):
         self.currentResultsA = sorted(currentResults, key = lambda hswi: attrgetter('pokeset.species.name')(hswi))
         # dex sort - sort by dex, then form
         self.currentResultsD = sorted(currentResults, key = lambda hswi: attrgetter('pokeset.species.dex', 'pokeset.species.name')(hswi))
+        # speed sort - sort by speed, then dex, then form
+        self.speedSort(currentResults)
         self.fillResultsCombo()
 
         self.resultsInfo['text'] = tr("page.hall_search.resultsBox.done", len(currentResults))

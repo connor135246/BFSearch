@@ -403,7 +403,8 @@
 	"page.search.result.option": "{0} sets matched {1} '{2}'",
 	"page.search.sortToggle.alpha": "Sorting results alphabetically.",
 	"page.search.sortToggle.dex": "Sorting results by Pokédex number.",
-	"page.search.sortToggle.tooltip": "Toggle results sorting",
+	"page.search.sortToggle.speed": "Sorting results by speed.",
+	"page.search.sortToggle.tooltip": "Change results sorting",
 
 	"page.hall_sets.name": "Browse Hall Sets",
 	"page.hall_sets.tooltip": "Browse all Battle Hall Pokémon sets.",
