@@ -95,9 +95,9 @@ class EVStats(object):
     def __init__(self, evs):
         self.evs = evs
         if len(self.evs) == 2:
-            self.num = 255
+            self.num = 252
         elif len(self.evs) == 3:
-            self.num = 170
+            self.num = 168
         else:
             self.num = 0
 
