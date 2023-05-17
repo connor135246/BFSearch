@@ -242,7 +242,7 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
     def handleTClassCombo(self, event = None):
         tnameData = self.bTSP()[self.battlenum.get()][self.tclass.get()]
         self.fillComboboxKeys(self.tnameCombo, tnameData, self.tname)
-        # missing thorton data...
+        # thorton note
         if "Factory Head" in self.tclass.get():
             self.thortonLabel.grid(column = 0, row = 6, sticky = (W, N, E, S), padx = 5, pady = 5)
         else:

@@ -6362,32 +6362,78 @@
 		},
 		{
 			"id": 307,
-			"iv": 31,
+			"iv": 12,
 			"class": "Factory Head",
-			"name": "Thorton (Silver Print)",
+			"name": "Thorton (Silver Print) (HGSS)",
 			"battles": [
 				"21"
 			],
 			"set_groups_level_50": [
-				"A1"
+				"C1"
 			],
 			"set_groups_open_level": [
-				"A1"
+				"C1"
 			]
 		},
 		{
 			"id": 308,
 			"iv": 31,
 			"class": "Factory Head",
-			"name": "Thorton (Gold Print)",
+			"name": "Thorton (Gold Print) (HGSS)",
 			"battles": [
 				"49"
 			],
 			"set_groups_level_50": [
-				"A1"
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
 			],
 			"set_groups_open_level": [
-				"A1"
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 309,
+			"iv": 12,
+			"class": "Factory Head",
+			"name": "Thorton (Silver Print) (Pt)",
+			"battles": [
+				"21"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
+			]
+		},
+		{
+			"id": 310,
+			"iv": 31,
+			"class": "Factory Head",
+			"name": "Thorton (Gold Print) (Pt)",
+			"battles": [
+				"49"
+			],
+			"set_groups_level_50": [
+				"C1"
+			],
+			"set_groups_open_level": [
+				"C4",
+				"D1",
+				"D2",
+				"D3",
+				"D4"
 			]
 		}
 	]

@@ -352,7 +352,7 @@
 	"page.all_sets_by_trainer.name": "Sets by Trainer",
 	"page.all_sets_by_trainer.tooltip": "View Pokémon sets organized by opposing trainers for the Battle Tower/Arcade/Castle/Factory.",
 	"page.all_sets_by_trainer.info": "This page groups Pokémon sets by trainer for the Battle Tower/Arcade/Castle/Factory. Each trainer uses a particular selection of Pokémon.\nSelect a battle number, a trainer class, a trainer name, and then have a look at their Pokémon!",
-	"page.all_sets_by_trainer.thorton": "Note:\nMissing data for Factory Head Thorton!\nThe listed Pokémon are placeholders!",
+	"page.all_sets_by_trainer.thorton": "Note:\nFor Thorton, which game you're playing matters.\nThorton's Level 50 Gold Print battle and Open Level Silver Print battle are different in Platinum versus HeartGold/SoulSilver.",
 
 	"page.generic.sortToggle.alpha": "Sorting Pokémon alphabetically.",
 	"page.generic.sortToggle.dex": "Sorting Pokémon by Pokédex number.",
