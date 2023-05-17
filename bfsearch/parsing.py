@@ -212,7 +212,7 @@ def buildData():
         if len(set(moves)) < len(moves):
             raise IDE(datafile, "sets.duplicate_entry", name, 'moves', trSL)
 
-        evs = verifyLenRange(verifyList(getDictKey(set_obj, 'evs', datafile, path), IDE(datafile, "sets.missing", sid, 'evs', trSL)), 2, 3, IDE(datafile, "sets.size", sid, 2, 3, 'evs', trSL))
+        evs = verifyLenRange(verifyList(getDictKey(set_obj, 'evs', datafile, path), IDE(datafile, "sets.missing", sid, 'evs', trSL)), 1, 6, IDE(datafile, "sets.size", sid, 1, 6, 'evs', trSL))
         for i in range(len(evs)):
             evs[i] = verifyEnumName(evs[i], core.Stat, IDE(datafile, "sets.invalid_entry.of", sid, evs[i], 'evs', trSL))
         if len(set(evs)) < len(evs):
@@ -307,13 +307,11 @@ def buildData():
         if len(set(moves)) < len(moves):
             raise IDE(datafile, "hall_sets.duplicate_entry", name, 'moves', trSL)
 
-        evs = verifyLenRange(verifyList(getDictKey(hall_set_obj, 'evs', datafile, path), IDE(datafile, "hall_sets.missing", hid, 'evs', trSL)), 2, 3, IDE(datafile, "hall_sets.size", hid, 2, 3, 'evs', trSL))
+        evs = verifyLenRange(verifyList(getDictKey(hall_set_obj, 'evs', datafile, path), IDE(datafile, "hall_sets.missing", hid, 'evs', trSL)), 1, 6, IDE(datafile, "hall_sets.size", hid, 1, 6, 'evs', trSL))
         for i in range(len(evs)):
             evs[i] = verifyEnumName(evs[i], core.Stat, IDE(datafile, "hall_sets.invalid_entry.of", hid, evs[i], 'evs', trSL))
-        # TODO: Battle Hall Flareon has only 1 EV in the data??? Is this a typo? For now, I've given it SpA twice and made this exception.
-        if name != 'Flareon':
-            if len(set(evs)) < len(evs):
-                raise IDE(datafile, "hall_sets.duplicate_entry", name, 'evs', trSL)
+        if len(set(evs)) < len(evs):
+            raise IDE(datafile, "hall_sets.duplicate_entry", name, 'evs', trSL)
 
         if name in hall_sets.keys():
             raise IDE(datafile, "hall_sets.duplicate", 'species', name)

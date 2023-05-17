@@ -94,16 +94,15 @@ class EVStats(object):
     # evs - a list of Stat
     def __init__(self, evs):
         self.evs = evs
-        if len(self.evs) == 2:
-            self.num = 252
-        elif len(self.evs) == 3:
-            self.num = 168
+        if len(evs) == 0:
+            self.numEVs = 0
         else:
-            self.num = 0
+            num = 510 // len(evs)
+            self.numEVs = min(num - (num % 4), 252)
 
     def getEVs(self, stat):
         if stat in self.evs:
-            return self.num
+            return self.numEVs
         else:
             return 0
 
@@ -114,7 +113,7 @@ class EVStats(object):
             if stat in self.evs:
                 if not first:
                     result += " / "
-                result += str(self.num) + " " + stat.name
+                result += str(self.numEVs) + " " + stat.name
                 first = False
         return result
 
