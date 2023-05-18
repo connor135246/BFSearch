@@ -197,7 +197,7 @@ class Toolbar(ttk.Frame):
         pressed = aboutdialog.show()
         if pressed == 1:
             self.clipboard_clear()
-            self.clipboard_append("https://calc.pokemonshowdown.com/index.html?gen=4")
+            self.clipboard_append("https://eisencalc.com/")
 
     def showLang(self):
         langs = translate.langs()

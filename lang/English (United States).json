@@ -10,7 +10,7 @@
 	"toolbar.button.about.name": "About",
 	"toolbar.button.about.tooltip": "Show this application's About box",
 	"toolbar.button.about.linkButton": "Damage Calculator",
-	"toolbar.button.about.about": "This application allows you to search through the possible Pokémon that you can face in the Battle Frontier in Platinum, HeartGold, and SoulSilver.\nCheck the Help for more info.\n\nIf an error occurs, check the log files in the ‘logs’ folder.\n\nClick the 'Damage Calculator' button to copy the link to Pokémon Showdown's damage calculator to your clipboard.",
+	"toolbar.button.about.about": "This application allows you to search through the possible Pokémon that you can face in the Battle Frontier in Platinum, HeartGold, and SoulSilver.\nCheck the Help for more info.\n\nIf an error occurs, check the log files in the ‘logs’ folder.\n\nClick the 'Damage Calculator' button to copy the link to a damage calculator with all Battle Frontier sets pre-loaded to your clipboard.",
 	"toolbar.button.help.name": "Frontier Help",
 	"toolbar.button.help.tooltip": "Learn the mechanics of the Battle Frontier",
 	"toolbar.button.sources.name": "Sources",
