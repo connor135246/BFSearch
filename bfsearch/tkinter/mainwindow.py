@@ -47,7 +47,7 @@ class Window(Tk):
         self.bficon = PhotoImage(file = "gui/frontier.png")
         self.wm_iconphoto(True, self.bficon)
 
-        defaultGeometry = "750x640+120+60"
+        defaultGeometry = "750x643+120+60"
         try:
             self.geometry(settings.settings.get(windowKey, defaultGeometry))
         except TclError:

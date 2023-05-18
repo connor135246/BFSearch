@@ -170,7 +170,7 @@ def hallSetProvider(hall_sets):
 def battlenumToTrainers(trainers):
     bTT = ndict()
     bTT[emptyKey] = trainersAlphaSorted(trainers)
-    for battlenum in list(core.BattleNum):
+    for battlenum in core.BattleNum:
         for trainer in trainersAlphaSortedList(trainers):
             if battlenum in trainer.battlenums:
                 bTT[battlenum.value][trainer.tclass][trainer.tname] = trainer
@@ -198,7 +198,7 @@ def battlenumToGroupedSetProviders(trainers):
     gSP = groupedSetProviders(trainers)
     bTGSP = ndict()
     bTGSP[emptyKey] = gSP
-    for battlenum in list(core.BattleNum):
+    for battlenum in core.BattleNum:
         for tclass, nextDict in gSP.items():
             for tnames, setProvider in nextDict.items():
                 if battlenum in setProvider.battlenums:
@@ -252,7 +252,7 @@ def rankToHallSets(hall_sets):
 def typeToRankToHallSets(hall_sets):
     rTHS = rankToHallSets(hall_sets)
     tTRTHS = ndict()
-    for atype in list(core.Type):
+    for atype in core.Type:
         for rank, nextDict in rTHS.items():
             for name, hall_set in nextDict.items():
                 if hall_set.species.hasType(atype):

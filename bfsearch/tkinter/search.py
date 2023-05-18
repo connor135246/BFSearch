@@ -201,7 +201,7 @@ class SearchPage(SearchPageBase):
         # battle number
         self.addSimpleLabel(self.searchBox, tr("page.generic.battle_number"), 0, 0)
         self.battlenum = StringVar(self.searchBox)
-        self.battlenumCombo = self.addSearchCombobox(self.battlenum, self.searchBox, [battlenum.value for battlenum in list(core.BattleNum)], 0, 1)
+        self.battlenumCombo = self.addSearchCombobox(self.battlenum, self.searchBox, [battlenum.value for battlenum in core.BattleNum], 0, 1)
 
         # trainer class and name
         # this is the only one that updates as you select it. tclass links to possible tnames.
@@ -352,7 +352,7 @@ class SearchPage(SearchPageBase):
             self.emptyResults(searchByStage)
         else:
             # each searchByStage tuple is: (this SearchOption, boolean of whether this SearchOption was checked, the remaining items after this SearchOption)
-            for searchoption in list(SearchOption):
+            for searchoption in SearchOption:
                 searchByStage = self.checkAndReduce(searchoption, searchByStage)
                 if len(searchByStage[-1][2]) < 1:
                     self.emptyResults(searchByStage)
@@ -415,7 +415,7 @@ class HallSearchPage(SearchPageBase):
         # type
         self.addSimpleLabel(self.searchBox, tr("page.hall_calc.type"), 0, 0)
         self.type = StringVar(self.searchBox)
-        self.typeCombo = self.addSearchCombobox(self.type, self.searchBox, [atype.name for atype in list(core.Type)], 0, 1)
+        self.typeCombo = self.addSearchCombobox(self.type, self.searchBox, [atype.name for atype in core.Type], 0, 1)
 
         # rank
         self.addSimpleLabel(self.searchBox, tr("page.hall_calc.rank"), 0, 2)
@@ -520,7 +520,7 @@ class HallSearchPage(SearchPageBase):
             self.emptyResults(searchByStage)
         else:
             # each searchByStage tuple is: (this SearchOption, boolean of whether this SearchOption was checked, the remaining items after this SearchOption)
-            for searchoption in list(SearchOption):
+            for searchoption in SearchOption:
                 searchByStage = self.checkAndReduce(searchoption, searchByStage)
                 if len(searchByStage[-1][2]) < 1:
                     self.emptyResults(searchByStage)

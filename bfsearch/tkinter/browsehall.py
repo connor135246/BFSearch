@@ -226,7 +226,7 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
 
         # initial state
 
-        self.fillCombobox(self.yourBSTCombo, [hallsetgroup.fullname() for hallsetgroup in list(core.HallSetGroup)], self.yourBST)
+        self.fillCombobox(self.yourBSTCombo, [hallsetgroup.fullname() for hallsetgroup in core.HallSetGroup], self.yourBST)
         self.yourBSTCombo.current(3)
         self.setToolTip(self.yourBSTCombo, self.yourBST.get())
 

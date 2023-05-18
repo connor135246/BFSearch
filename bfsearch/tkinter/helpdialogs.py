@@ -255,7 +255,7 @@ def hallGroups(parent):
 
         groupView = oneColTree(self.mainframe, width, tr("help.nonhall.groups.tree.name"), tr("help.nonhall.groups.tree.examples"))
         groupView['height'] = 4
-        for hallsetgroup in list(core.HallSetGroup):
+        for hallsetgroup in core.HallSetGroup:
             groupView.insert('', 'end', text = hallsetgroup.fullname(), values = [tr(f"help.hall.groups.{hallsetgroup.name}.examples")])
         groupView.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 

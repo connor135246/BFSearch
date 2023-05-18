@@ -109,7 +109,7 @@ class EVStats(object):
     def getShowdownEVs(self):
         result = ""
         first = True
-        for stat in list(Stat):
+        for stat in Stat:
             if stat in self.evs:
                 if not first:
                     result += " / "
@@ -187,13 +187,13 @@ class HallSetGroup(Enum):
         return self.value[3]
 
     def fromFullName(value):
-        for hallsetgroup in list(HallSetGroup):
+        for hallsetgroup in HallSetGroup:
             if value == hallsetgroup.fullname():
                 return hallsetgroup
         raise ValueError(f"Unknown hall set group '{value}'")
 
     def groupsFromRank(rank):
-        return [hallsetgroup for hallsetgroup in list(HallSetGroup) if hallsetgroup.appearsInRank(rank)]
+        return [hallsetgroup for hallsetgroup in HallSetGroup if hallsetgroup.appearsInRank(rank)]
 
 # base class of pokeset
 class PokeSetBase(object):

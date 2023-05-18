@@ -130,7 +130,7 @@ class SharedPageElements(ttk.Frame):
 
     def gridOutput(self, column, row):
         self.output.grid(column = column, row = row, sticky = (W, N, E, S), padx = 5, pady = 5)
-        self.clipboardButton.grid(column = column, row = row + 1, sticky = (W, N, E, S))
+        self.clipboardButton.grid(column = column, row = row + 1, sticky = (W, N, E, S), padx = 5)
 
     def gridFacility(self, column, row):
         self.facilitySelect.grid(column = column, row = row, sticky = (W, N, E, S))
