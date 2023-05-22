@@ -10,8 +10,8 @@ from bfsearch.tkinter import dialogs
 
 ### help dialogs todo
 # arcade board: possibilities at each streak, possible random items
-# factory starting rentals possibilities depending on # of swaps
 # sets that have return & frustration? how does friendship work?
+# allow main window to be used while help dialogs are open
 
 
 # general dialogs
@@ -19,20 +19,54 @@ from bfsearch.tkinter import dialogs
 def mainHelp(parent):
     helpoptions = []
     helpoptions.append((tr("help.basics"), basicHelp))
-    helpoptions.append((tr("help.nonhall"), nonhallHelp))
+    helpoptions.append((tr("help.tower"), towerHelp))
+    helpoptions.append((tr("help.arcade"), arcadeHelp))
+    helpoptions.append((tr("help.castle"), castleHelp))
+    helpoptions.append((tr("help.factory"), factoryHelp))
     helpoptions.append((tr("help.hall"), hallHelp))
-    helpoptions.append((tr("help.mechanics"), mechanicsHelp))
     HelpDialog(parent, tr("toolbar.button.help.name"), tr("help"), helpoptions).show()
     parent.grab_set()
 
-def nonhallHelp(parent):
+def towerHelp(parent):
     helpoptions = []
     helpoptions.append((tr("help.nonhall.pokemon"), nonhallPokemon))
     helpoptions.append((tr("help.nonhall.groups"), nonhallGroups))
-    helpoptions.append((tr("help.nonhall.trainer_pokemon"), nonhallTrainerPokemon))
-    helpoptions.append((tr("help.nonhall.trainer_ivs"), nonhallTrainerIVs))
-    helpoptions.append((tr("help.nonhall.trainer_classes"), nonhallTrainerClasses))
-    HelpDialog(parent, tr("help.nonhall"), tr("help"), helpoptions).show()
+    helpoptions.append((tr("help.normal.trainer_pokemon"), normalTrainerPokemon))
+    helpoptions.append((tr("help.normal.trainer_classes"), normalTrainerClasses))
+    HelpDialog(parent, tr("help.tower"), tr("help_order"), helpoptions).show()
+    parent.grab_set()
+
+def arcadeHelp(parent):
+    helpoptions = []
+    helpoptions.append((tr("help.nonhall.pokemon"), nonhallPokemon))
+    helpoptions.append((tr("help.nonhall.groups"), nonhallGroups))
+    helpoptions.append((tr("help.normal.trainer_pokemon"), normalTrainerPokemon))
+    helpoptions.append((tr("help.normal.trainer_classes"), normalTrainerClasses))
+    helpoptions.append((tr("help.mechanics.arcade.board"), mechanicsArcadeBoard))
+    HelpDialog(parent, tr("help.arcade"), tr("help_order"), helpoptions).show()
+    parent.grab_set()
+
+def castleHelp(parent):
+    helpoptions = []
+    helpoptions.append((tr("help.nonhall.pokemon"), nonhallPokemon))
+    helpoptions.append((tr("help.nonhall.groups"), nonhallGroups))
+    helpoptions.append((tr("help.normal.trainer_pokemon"), normalTrainerPokemon))
+    helpoptions.append((tr("help.normal.trainer_classes"), normalTrainerClasses))
+    helpoptions.append((tr("help.mechanics.castle.earning_points"), mechanicsCastleEarn))
+    helpoptions.append((tr("help.mechanics.castle.spending_points"), mechanicsCastleSpend))
+    helpoptions.append((tr("help.mechanics.castle.spending_points.items"), mechanicsCastleSpendItems))
+    HelpDialog(parent, tr("help.castle"), tr("help_order"), helpoptions).show()
+    parent.grab_set()
+
+def factoryHelp(parent):
+    helpoptions = []
+    helpoptions.append((tr("help.nonhall.pokemon"), nonhallPokemon))
+    helpoptions.append((tr("help.nonhall.groups"), nonhallGroups))
+    helpoptions.append((tr("help.factory.trainer_pokemon_50"), factoryTrainerPokemon50))
+    helpoptions.append((tr("help.factory.trainer_pokemon_open"), factoryTrainerPokemonOpen))
+    helpoptions.append((tr("help.mechanics.factory.starting_rentals"), mechanicsFactoryRentals))
+    helpoptions.append((tr("help.mechanics.factory.clauses"), mechanicsFactoryClauses))
+    HelpDialog(parent, tr("help.factory"), tr("help_order"), helpoptions).show()
     parent.grab_set()
 
 def hallHelp(parent):
@@ -42,17 +76,7 @@ def hallHelp(parent):
     helpoptions.append((tr("help.hall.rank_pokemon"), hallRankPokemon))
     helpoptions.append((tr("help.hall.rank_ivs"), hallRankIVs))
     helpoptions.append((tr("help.hall.level"), hallLevel))
-    HelpDialog(parent, tr("help.hall"), tr("help"), helpoptions).show()
-    parent.grab_set()
-
-def mechanicsHelp(parent):
-    helpoptions = []
-    helpoptions.append((tr("help.mechanics.arcade.board"), mechanicsArcadeBoard))
-    helpoptions.append((tr("help.mechanics.castle.earning_points"), mechanicsCastleEarn))
-    helpoptions.append((tr("help.mechanics.castle.spending_points"), mechanicsCastleSpend))
-    helpoptions.append((tr("help.mechanics.factory.trading"), mechanicsFactorySwap))
-    helpoptions.append((tr("help.mechanics.factory.clauses"), mechanicsFactoryClauses))
-    HelpDialog(parent, tr("help.mechanics"), tr("help"), helpoptions).show()
+    HelpDialog(parent, tr("help.hall"), tr("help_order"), helpoptions).show()
     parent.grab_set()
 
 class HelpDialog(dialogs.InfoDialog):
@@ -126,46 +150,39 @@ def nonhallGroups(parent):
     dialogs.CustomDialog(parent, tr("help.nonhall.groups"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
-def nonhallTrainerPokemon(parent):
+def normalTrainerPokemon(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
         wraplength = 550
-        width = 50
+        width = 75
 
-        label1 = ttk.Label(self.mainframe, text = tr("help.nonhall.trainer_pokemon.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label1 = ttk.Label(self.mainframe, text = tr("help.normal.trainer_pokemon.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-        svalues = ["A1", "A1, B1", "B1, B2", "B2, C1", "C1, C2", "C2, C3", "C3, C4"]
-        evalues = ["B1", "B2", tr("help.nonhall.trainer_pokemon.tree.silver"), "C2", "C3", "C4", tr("help.nonhall.trainer_pokemon.tree.gold")]
+        svalues = ["A1 w/ 3 IVs", "A1 w/ 3 IVs; B1 w/ 6 IVs", "B1 w/ 6 IVs; B2 w/ 9 IVs", "B2 w/ 9 IVs; C1 w/ 12 IVs", "C1 w/ 12 IVs; C2 w/ 15 IVs", "C2 w/ 15 IVs; C3 w/ 18 IVs", "C3 w/ 18 IVs; C4 w/ 21 IVs"]
+        evalues = ["B1 w/ 6 IVs", "B2 w/ 9 IVs", tr("help.nonhall.trainer_pokemon.tree.silver"), "C2 w/ 15 IVs", "C3 w/ 18 IVs", "C4 w/ 21 IVs", tr("help.nonhall.trainer_pokemon.tree.gold")]
         streaks = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.groups"), svalues, evalues)
         streaks.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label2 = ttk.Label(self.mainframe, text = tr("help.nonhall.trainer_pokemon.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label2 = ttk.Label(self.mainframe, text = tr("help.normal.trainer_pokemon.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
-        values = [core.BattleNum.s99.value + " " + tr("help.nonhall.trainer_pokemon.tree.normal"), core.BattleNum.s99.value + " " + tr("help.nonhall.trainer_pokemon.tree.factory")]
-        colvalues = ["B2, C1-C4, D1-D4", "C1-C4, D1-D4"]
-        streak50 = oneColTree(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.battle"), tr("help.nonhall.trainer_pokemon.tree.groups"), values, colvalues)
+        values = [core.BattleNum.s99.value]
+        colvalues = [tr("help.normal.trainer_pokemon.tree.50+")]
+        streak50 = oneColTree(self.mainframe, 350, tr("help.nonhall.trainer_pokemon.tree.battle"), tr("help.nonhall.trainer_pokemon.tree.groups"), values, colvalues)
+        streak50.column('#0', width = 25)
         streak50.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label3 = ttk.Label(self.mainframe, text = tr("help.nonhall.trainer_pokemon.info.3"), wraplength = wraplength, padding = (10, 5, 10, 5))
-        label3.grid(column = 0, row = 4, sticky = (W, N, E, S))
-
-        svalues = ["C1", "C1, C2", "C2, C3", "C3, C4", "C1-C4, D1-D4", "C1-C4, D1-D4", "C1-C4, D1-D4"]
-        evalues = ["C2", "C3", tr("help.nonhall.trainer_pokemon.tree.silver"), "C1-C4, D1-D4", "C1-C4, D1-D4", "C1-C4, D1-D4", tr("help.nonhall.trainer_pokemon.tree.gold")]
-        streaksOpen = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.groups"), svalues, evalues)
-        streaksOpen.grid(column = 0, row = 5, sticky = (W, N, E, S), padx = 10, pady = 5)
-
-    dialogs.CustomDialog(parent, tr("help.nonhall.trainer_pokemon"), [tr("toolbar.button.ok")], builder).show()
+    dialogs.CustomDialog(parent, tr("help.normal.trainer_pokemon"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
-def nonhallTrainerClasses(parent):
+def normalTrainerClasses(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
         wraplength = 650
         width = 150
 
-        label1 = ttk.Label(self.mainframe, text = tr("help.nonhall.trainer_classes.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label1 = ttk.Label(self.mainframe, text = tr("help.normal.trainer_classes.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
         def typeNames(*indexes):
@@ -177,9 +194,9 @@ def nonhallTrainerClasses(parent):
 
         typeClasses = ["ace_trainer_f_snow", "ace_trainer_m_snow", "aroma_lady", "battle_girl", "black_belt", "bird_keeper", "bug_catcher", "cameraman", "clown", "cyclist_f", "cyclist_m", "fisherman", "hiker", "guitarist", "policeman", "psychic_f", "psychic_m", "roughneck", "ruin_maniac", "sailor", "tuber_f", "tuber_m", "worker"]
         values = [tr(f"trainer_class.{tclass}") for tclass in typeClasses]
-        no_spec = tr("help.nonhall.trainer_classes.tree.no_spec")
+        no_spec = tr("help.normal.trainer_classes.tree.no_spec")
         colsvalues = [[typeNames(0, 10, 14), typeNames(14)], [typeNames(0, 10, 14), typeNames(14)], [typeNames(0, 11), typeNames(11)], [no_spec, typeNames(1, 9)], [no_spec, typeNames(1, 9)], [typeNames(2), typeNames(2)], [typeNames(6, 11), "---"], [no_spec, typeNames(12, 13)], [no_spec, typeNames(7, 13)], [no_spec, typeNames(1, 2)], [no_spec, typeNames(1, 2)], [typeNames(10), typeNames(10)], [typeNames(1, 4, 5, 8), typeNames(4, 5)], [typeNames(1, 7, 12, 13, 16), typeNames(7, 12)], [typeNames(0, 1, 8), typeNames(1, 8)], [no_spec, typeNames(13)], [no_spec, typeNames(13)], [typeNames(1, 5, 7, 12, 16), typeNames(3, 7, 16)], [typeNames(4, 5, 8), typeNames(5, 8)], [typeNames(0, 1, 2, 10), typeNames(1, 10)], [typeNames(0, 10), "---"], [typeNames(0, 10), "---"], [typeNames(1, 4, 5), typeNames(4, 5)]]
-        trainerView1 = multiColTree(typeFrame, width, tr("help.nonhall.trainer_classes.tree.class"), [tr("help.nonhall.trainer_classes.tree.type_spec.pre50"), tr("help.nonhall.trainer_classes.tree.type_spec.post50")], values, colsvalues)
+        trainerView1 = multiColTree(typeFrame, width, tr("help.normal.trainer_classes.tree.class"), [tr("help.normal.trainer_classes.tree.type_spec.pre50"), tr("help.normal.trainer_classes.tree.type_spec.post50")], values, colsvalues)
         trainerView1.column('#0', width = 25)
         trainerView1.column(0, width = 80)
         trainerView1['height'] = 10
@@ -192,46 +209,61 @@ def nonhallTrainerClasses(parent):
 
         typeFrame.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label2 = ttk.Label(self.mainframe, text = tr("help.nonhall.trainer_classes.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label2 = ttk.Label(self.mainframe, text = tr("help.normal.trainer_classes.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
         specClasses = ["dragon_tamer", "idol", "pi"]
         values = [tr(f"trainer_class.{tclass}") for tclass in specClasses]
-        colsvalues = [[tr("help.nonhall.trainer_classes.tree.spec.dragon_tamer"), tr("help.nonhall.trainer_classes.tree.spec.dragon_tamer")], [tr("help.nonhall.trainer_classes.tree.spec.pre50.idol"), tr("help.nonhall.trainer_classes.tree.spec.post50.idol")], [tr("help.nonhall.trainer_classes.tree.spec.pre50.pi"), tr("help.nonhall.trainer_classes.tree.spec.post50.pi")]]
-        trainerView2 = multiColTree(self.mainframe, width, tr("help.nonhall.trainer_classes.tree.class"), [tr("help.nonhall.trainer_classes.tree.spec.pre50"), tr("help.nonhall.trainer_classes.tree.spec.post50")], values, colsvalues)
+        colsvalues = [[tr("help.normal.trainer_classes.tree.spec.dragon_tamer"), tr("help.normal.trainer_classes.tree.spec.dragon_tamer")], [tr("help.normal.trainer_classes.tree.spec.pre50.idol"), tr("help.normal.trainer_classes.tree.spec.post50.idol")], [tr("help.normal.trainer_classes.tree.spec.pre50.pi"), tr("help.normal.trainer_classes.tree.spec.post50.pi")]]
+        trainerView2 = multiColTree(self.mainframe, width, tr("help.normal.trainer_classes.tree.class"), [tr("help.normal.trainer_classes.tree.spec.pre50"), tr("help.normal.trainer_classes.tree.spec.post50")], values, colsvalues)
         trainerView2.column('#0', width = 20)
         trainerView2.column(0, width = 60)
         trainerView2.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label3 = ttk.Label(self.mainframe, text = tr("help.nonhall.trainer_classes.info.3"), wraplength = wraplength, padding = (10, 5, 10, 5))
-        label3.grid(column = 0, row = 4, sticky = (W, N, E, S))
-
-    dialogs.CustomDialog(parent, tr("help.nonhall.trainer_classes"), [tr("toolbar.button.ok")], builder).show()
+    dialogs.CustomDialog(parent, tr("help.normal.trainer_classes"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
-def nonhallTrainerIVs(parent):
+def factoryTrainerPokemon50(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
         wraplength = 550
-        width = 50
+        width = 75
 
-        label1 = ttk.Label(self.mainframe, text = tr("help.nonhall.trainer_ivs.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label1 = ttk.Label(self.mainframe, text = tr("help.factory.trainer_pokemon_50.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-        svalues = ["3", "3, 6", "6, 9", "9, 12", "12, 15", "15, 18", "18, 21", "21, 31"]
-        evalues = ["6", "9", tr("help.nonhall.trainer_pokemon.tree.silver"), "15", "18", "21", tr("help.nonhall.trainer_pokemon.tree.gold")]
-        ivs = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.trainer_ivs.tree.ivs"), svalues, evalues)
-        ivs.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
+        svalues = ["A1 w/ 0 IVs", "A1 w/ 0 IVs; B1 w/ 4 IVs", "B1 w/ 4 IVs; B2 w/ 8 IVs", "B2 w/ 8 IVs; C1 w/ 12 IVs", "C1 w/ 12 IVs; C2 w/ 16 IVs", "C2 w/ 16 IVs; C3 w/ 20 IVs", "C3 w/ 20 IVs; C4 w/ 24 IVs"]
+        evalues = ["B1 w/ 4 IVs", "B2 w/ 8 IVs", tr("help.nonhall.trainer_pokemon.tree.silver"), "C2 w/ 16 IVs", "C3 w/ 20 IVs", "C4 w/ 24 IVs", tr("help.nonhall.trainer_pokemon.tree.gold")]
+        streaks = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.groups"), svalues, evalues)
+        streaks.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label2 = ttk.Label(self.mainframe, text = tr("help.nonhall.trainer_ivs.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label2 = ttk.Label(self.mainframe, text = tr("help.factory.trainer_pokemon_50.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
-        svalues = ["0", "0, 4", "4, 8", "8, 12", "12, 16", "16, 20", "20, 24", "24, 31"]
-        evalues = ["4", "8", tr("help.nonhall.trainer_pokemon.tree.silver"), "16", "20", "24", tr("help.nonhall.trainer_pokemon.tree.gold")]
-        ivsFactory = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.trainer_ivs.tree.ivs"), svalues, evalues)
-        ivsFactory.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
+        values = [core.BattleNum.s99.value]
+        colvalues = ["C4 w/ 24 IVs; C/D w/ 31 IVs"]
+        streak50 = oneColTree(self.mainframe, 350, tr("help.nonhall.trainer_pokemon.tree.battle"), tr("help.nonhall.trainer_pokemon.tree.groups"), values, colvalues)
+        streak50.column('#0', width = 25)
+        streak50.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-    dialogs.CustomDialog(parent, tr("help.nonhall.trainer_ivs"), [tr("toolbar.button.ok")], builder).show()
+    dialogs.CustomDialog(parent, tr("help.factory.trainer_pokemon_50"), [tr("toolbar.button.ok")], builder).show()
+    parent.grab_set()
+
+def factoryTrainerPokemonOpen(parent):
+    def builder(self, **kwargs):
+        self.mainframe.columnconfigure(0, weight = 1)
+        wraplength = 550
+        width = 75
+
+        label1 = ttk.Label(self.mainframe, text = tr("help.factory.trainer_pokemon_open.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
+
+        svalues = ["C1 w/ 0 IVs", "C1 w/ 0 IVs; C2 w/ 4 IVs", "C2 w/ 4 IVs; C3 w/ 8 IVs", "C3 w/ 8 IVs; C4 w/ 12 IVs", "C4 w/ 12 IVs; C/D w/ 16 IVs", "C/D w/ 16 IVs; C/D w/ 20 IVs", "C/D w/ 20 IVs; C/D w/ 24 IVs", "C/D w/ 24 IVs; C/D w/ 31 IVs"]
+        evalues = ["C2 w/ 4 IVs", "C3 w/ 8 IVs", tr("help.nonhall.trainer_pokemon.tree.silver"), "C/D w/ 16 IVs", "C/D w/ 20 IVs", "C/D w/ 24 IVs", tr("help.nonhall.trainer_pokemon.tree.gold")]
+        streaks = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.groups"), svalues, evalues)
+        streaks.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
+
+    dialogs.CustomDialog(parent, tr("help.factory.trainer_pokemon_open"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
 def hallPokemon(parent):
@@ -424,12 +456,7 @@ def mechanicsCastleSpend(parent):
         passView.column('col', width = 25)
         passView.grid(column = 0, row = 5, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label4 = ttk.Label(self.mainframe, text = tr("help.mechanics.castle.spending_points.info.4"), wraplength = wraplength, padding = (10, 5, 10, 5))
-        label4.grid(column = 0, row = 6, sticky = (W, N, E, S))
-
-    pressed = dialogs.CustomDialog(parent, tr("help.mechanics.castle.spending_points"), [tr("toolbar.button.next"), tr("toolbar.button.ok")], builder).show()
-    if pressed == 0:
-        parent._root().after_idle(mechanicsCastleSpendItems, parent)
+    dialogs.CustomDialog(parent, tr("help.mechanics.castle.spending_points"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
 def mechanicsCastleSpendItems(parent):
@@ -480,22 +507,28 @@ def mechanicsCastleSpendItems(parent):
 
         itemViewFrame.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
-        label2 = ttk.Label(self.mainframe, text = tr("help.mechanics.castle.spending_points.items.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
-        label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
-
-    pressed = dialogs.CustomDialog(parent, tr("help.mechanics.castle.spending_points.items"), [tr("toolbar.button.prev"), tr("toolbar.button.ok")], builder).show()
-    if pressed == 0:
-        parent._root().after_idle(mechanicsCastleSpend, parent)
+    dialogs.CustomDialog(parent, tr("help.mechanics.castle.spending_points.items"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
-def mechanicsFactorySwap(parent):
+def mechanicsFactoryRentals(parent):
     def builder(self, **kwargs):
         self.mainframe.columnconfigure(0, weight = 1)
+        wraplength = 450
+        width = 50
 
-        label = ttk.Label(self.mainframe, text = tr("help.mechanics.factory.trading.info"), wraplength = 450, padding = (10, 5, 10, 5))
-        label.grid(column = 0, row = 0, sticky = (W, N, E, S))
+        label1 = ttk.Label(self.mainframe, text = tr("help.mechanics.factory.starting_rentals.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-    dialogs.CustomDialog(parent, tr("help.mechanics.factory.trading"), [tr("toolbar.button.ok")], builder).show()
+        values = [1, 2, 3, 4, 5, 6, 7, "8+"]
+        colsvalues = [["A1 w/ 0 IVs", "C1 w/ 0 IVs"], ["B1 w/ 4 IVs", "C2 w/ 4 IVs"], ["B2 w/ 8 IVs", "C3 w/ 8 IVs"], ["C1 w/ 12 IVs", "C4 w/ 12 IVs"], ["C2 w/ 16 IVs", "C/D w/ 16 IVs"], ["C3 w/ 20 IVs", "C/D w/ 20 IVs"], ["C4 w/ 24 IVs", "C/D w/ 24 IVs"], ["C/D w/ 31 IVs", "C/D w/ 31 IVs"]]
+        starting = multiColTree(self.mainframe, width, tr("help.mechanics.factory.starting_rentals.round"), [tr("help.mechanics.factory.starting_rentals.50"), tr("help.mechanics.factory.starting_rentals.open")], values, colsvalues)
+        #starting.column('#0', width = 25)
+        starting.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
+
+        label2 = ttk.Label(self.mainframe, text = tr("help.mechanics.factory.starting_rentals.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
+
+    dialogs.CustomDialog(parent, tr("help.mechanics.factory.starting_rentals"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
 
 def mechanicsFactoryClauses(parent):
@@ -550,10 +583,12 @@ def makeBattleNumTrees(parent, width, heading, svalues, evalues):
     if len(svalues) > 7:
         values.append(core.BattleNum.s99.value)
     treeS = oneColTree(frame, width, tr("help.nonhall.trainer_pokemon.tree.battle"), heading, values, svalues)
+    treeS.column('#0', width = 25)
     treeS.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
     values = [core.BattleNum.e1.value, core.BattleNum.e2.value, core.BattleNum.e3.value, core.BattleNum.e4.value, core.BattleNum.e5.value, core.BattleNum.e6.value, core.BattleNum.e7.value]
     treeE = oneColTree(frame, width, tr("help.nonhall.trainer_pokemon.tree.battle.ender"), heading, values, evalues)
+    treeE.column('#0', width = 25)
     treeE.grid(column = 1, row = 0, sticky = (W, N, E, S))
 
     return frame
