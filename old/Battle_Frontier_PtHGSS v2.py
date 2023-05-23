@@ -484,7 +484,7 @@ def main():
     #print (merged_data[0])
     #print (merged_data[1000])
     #print (merged_data[-1])
-    #print ("total individual pokemon held by all trainers: " + str(len(merged_data))) # 16117 pokemon! there are, of course, many duplicates.
+    #print ("total individual pokemon held by all trainers: " + str(len(merged_data))) # over 16000 pokemon! there are, of course, many duplicates.
 
     print ("-Ready!")
     

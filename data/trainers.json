@@ -9712,9 +9712,6 @@
 				"Lombre": [
 					1
 				],
-				"Loudred": [
-					1
-				],
 				"Carvanha": [
 					1
 				],
@@ -9809,9 +9806,6 @@
 					1
 				],
 				"Lombre": [
-					1
-				],
-				"Loudred": [
 					1
 				],
 				"Carvanha": [
@@ -12217,9 +12211,6 @@
 				"Krabby": [
 					1
 				],
-				"Lickitung": [
-					1
-				],
 				"Goldeen": [
 					1
 				],
@@ -12353,9 +12344,6 @@
 					1
 				],
 				"Krabby": [
-					1
-				],
-				"Lickitung": [
 					1
 				],
 				"Goldeen": [
@@ -18745,6 +18733,9 @@
 				"Gorebyss": [
 					2
 				],
+				"Metang": [
+					2
+				],
 				"Luxio": [
 					2
 				],
@@ -18858,6 +18849,9 @@
 					2
 				],
 				"Gorebyss": [
+					2
+				],
+				"Metang": [
 					2
 				],
 				"Luxio": [
@@ -18975,6 +18969,9 @@
 				"Gorebyss": [
 					2
 				],
+				"Metang": [
+					2
+				],
 				"Luxio": [
 					2
 				],
@@ -19088,6 +19085,9 @@
 					2
 				],
 				"Gorebyss": [
+					2
+				],
+				"Metang": [
 					2
 				],
 				"Luxio": [
@@ -19205,6 +19205,9 @@
 				"Gorebyss": [
 					2
 				],
+				"Metang": [
+					2
+				],
 				"Luxio": [
 					2
 				],
@@ -19318,6 +19321,9 @@
 					2
 				],
 				"Gorebyss": [
+					2
+				],
+				"Metang": [
 					2
 				],
 				"Luxio": [
@@ -20685,6 +20691,9 @@
 				"Magcargo": [
 					2
 				],
+				"Hitmontop": [
+					2
+				],
 				"Pupitar": [
 					2
 				],
@@ -20777,6 +20786,9 @@
 					2
 				],
 				"Magcargo": [
+					2
+				],
+				"Hitmontop": [
 					2
 				],
 				"Pupitar": [
@@ -22775,10 +22787,25 @@
 				"Raichu": [
 					1
 				],
+				"Nidoqueen": [
+					1
+				],
+				"Nidoking": [
+					1
+				],
 				"Vileplume": [
 					1
 				],
 				"Dugtrio": [
+					1
+				],
+				"Golduck": [
+					1
+				],
+				"Poliwrath": [
+					1
+				],
+				"Alakazam": [
 					1
 				],
 				"Victreebel": [
@@ -22787,10 +22814,16 @@
 				"Golem": [
 					1
 				],
+				"Rapidash": [
+					1
+				],
 				"Slowbro": [
 					1
 				],
 				"Dewgong": [
+					1
+				],
+				"Muk": [
 					1
 				],
 				"Hypno": [
@@ -22835,6 +22868,9 @@
 				"Quagsire": [
 					1
 				],
+				"Slowking": [
+					1
+				],
 				"Forretress": [
 					1
 				],
@@ -22842,6 +22878,9 @@
 					1
 				],
 				"Skarmory": [
+					1
+				],
+				"Miltank": [
 					1
 				],
 				"Sceptile": [
@@ -22874,7 +22913,16 @@
 				"Manectric": [
 					1
 				],
+				"Altaria": [
+					1
+				],
 				"Whiscash": [
+					1
+				],
+				"Cradily": [
+					1
+				],
+				"Armaldo": [
 					1
 				],
 				"Absol": [
@@ -22895,7 +22943,13 @@
 				"Staraptor": [
 					1
 				],
+				"Bastiodon": [
+					1
+				],
 				"Vespiquen": [
+					1
+				],
+				"Floatzel": [
 					1
 				],
 				"Gastrodon": [
@@ -22904,10 +22958,22 @@
 				"Ambipom": [
 					1
 				],
+				"Drifblim": [
+					1
+				],
 				"Lopunny": [
 					1
 				],
+				"Mismagius": [
+					1
+				],
 				"Skuntank": [
+					1
+				],
+				"Toxicroak": [
+					1
+				],
+				"Abomasnow": [
 					1
 				],
 				"Froslass": [
@@ -22937,10 +23003,25 @@
 				"Raichu": [
 					1
 				],
+				"Nidoqueen": [
+					1
+				],
+				"Nidoking": [
+					1
+				],
 				"Vileplume": [
 					1
 				],
 				"Dugtrio": [
+					1
+				],
+				"Golduck": [
+					1
+				],
+				"Poliwrath": [
+					1
+				],
+				"Alakazam": [
 					1
 				],
 				"Victreebel": [
@@ -22949,10 +23030,16 @@
 				"Golem": [
 					1
 				],
+				"Rapidash": [
+					1
+				],
 				"Slowbro": [
 					1
 				],
 				"Dewgong": [
+					1
+				],
+				"Muk": [
 					1
 				],
 				"Hypno": [
@@ -22997,6 +23084,9 @@
 				"Quagsire": [
 					1
 				],
+				"Slowking": [
+					1
+				],
 				"Forretress": [
 					1
 				],
@@ -23004,6 +23094,9 @@
 					1
 				],
 				"Skarmory": [
+					1
+				],
+				"Miltank": [
 					1
 				],
 				"Sceptile": [
@@ -23036,7 +23129,16 @@
 				"Manectric": [
 					1
 				],
+				"Altaria": [
+					1
+				],
 				"Whiscash": [
+					1
+				],
+				"Cradily": [
+					1
+				],
+				"Armaldo": [
 					1
 				],
 				"Absol": [
@@ -23057,7 +23159,13 @@
 				"Staraptor": [
 					1
 				],
+				"Bastiodon": [
+					1
+				],
 				"Vespiquen": [
+					1
+				],
+				"Floatzel": [
 					1
 				],
 				"Gastrodon": [
@@ -23066,10 +23174,22 @@
 				"Ambipom": [
 					1
 				],
+				"Drifblim": [
+					1
+				],
 				"Lopunny": [
 					1
 				],
+				"Mismagius": [
+					1
+				],
 				"Skuntank": [
+					1
+				],
+				"Toxicroak": [
+					1
+				],
+				"Abomasnow": [
 					1
 				],
 				"Froslass": [
@@ -23099,10 +23219,25 @@
 				"Raichu": [
 					1
 				],
+				"Nidoqueen": [
+					1
+				],
+				"Nidoking": [
+					1
+				],
 				"Vileplume": [
 					1
 				],
 				"Dugtrio": [
+					1
+				],
+				"Golduck": [
+					1
+				],
+				"Poliwrath": [
+					1
+				],
+				"Alakazam": [
 					1
 				],
 				"Victreebel": [
@@ -23111,10 +23246,16 @@
 				"Golem": [
 					1
 				],
+				"Rapidash": [
+					1
+				],
 				"Slowbro": [
 					1
 				],
 				"Dewgong": [
+					1
+				],
+				"Muk": [
 					1
 				],
 				"Hypno": [
@@ -23159,6 +23300,9 @@
 				"Quagsire": [
 					1
 				],
+				"Slowking": [
+					1
+				],
 				"Forretress": [
 					1
 				],
@@ -23166,6 +23310,9 @@
 					1
 				],
 				"Skarmory": [
+					1
+				],
+				"Miltank": [
 					1
 				],
 				"Sceptile": [
@@ -23198,7 +23345,16 @@
 				"Manectric": [
 					1
 				],
+				"Altaria": [
+					1
+				],
 				"Whiscash": [
+					1
+				],
+				"Cradily": [
+					1
+				],
+				"Armaldo": [
 					1
 				],
 				"Absol": [
@@ -23219,7 +23375,13 @@
 				"Staraptor": [
 					1
 				],
+				"Bastiodon": [
+					1
+				],
 				"Vespiquen": [
+					1
+				],
+				"Floatzel": [
 					1
 				],
 				"Gastrodon": [
@@ -23228,10 +23390,22 @@
 				"Ambipom": [
 					1
 				],
+				"Drifblim": [
+					1
+				],
 				"Lopunny": [
 					1
 				],
+				"Mismagius": [
+					1
+				],
 				"Skuntank": [
+					1
+				],
+				"Toxicroak": [
+					1
+				],
+				"Abomasnow": [
 					1
 				],
 				"Froslass": [
@@ -23261,10 +23435,25 @@
 				"Raichu": [
 					1
 				],
+				"Nidoqueen": [
+					1
+				],
+				"Nidoking": [
+					1
+				],
 				"Vileplume": [
 					1
 				],
 				"Dugtrio": [
+					1
+				],
+				"Golduck": [
+					1
+				],
+				"Poliwrath": [
+					1
+				],
+				"Alakazam": [
 					1
 				],
 				"Victreebel": [
@@ -23273,10 +23462,16 @@
 				"Golem": [
 					1
 				],
+				"Rapidash": [
+					1
+				],
 				"Slowbro": [
 					1
 				],
 				"Dewgong": [
+					1
+				],
+				"Muk": [
 					1
 				],
 				"Hypno": [
@@ -23321,6 +23516,9 @@
 				"Quagsire": [
 					1
 				],
+				"Slowking": [
+					1
+				],
 				"Forretress": [
 					1
 				],
@@ -23328,6 +23526,9 @@
 					1
 				],
 				"Skarmory": [
+					1
+				],
+				"Miltank": [
 					1
 				],
 				"Sceptile": [
@@ -23360,7 +23561,16 @@
 				"Manectric": [
 					1
 				],
+				"Altaria": [
+					1
+				],
 				"Whiscash": [
+					1
+				],
+				"Cradily": [
+					1
+				],
+				"Armaldo": [
 					1
 				],
 				"Absol": [
@@ -23381,7 +23591,13 @@
 				"Staraptor": [
 					1
 				],
+				"Bastiodon": [
+					1
+				],
 				"Vespiquen": [
+					1
+				],
+				"Floatzel": [
 					1
 				],
 				"Gastrodon": [
@@ -23390,10 +23606,22 @@
 				"Ambipom": [
 					1
 				],
+				"Drifblim": [
+					1
+				],
 				"Lopunny": [
 					1
 				],
+				"Mismagius": [
+					1
+				],
 				"Skuntank": [
+					1
+				],
+				"Toxicroak": [
+					1
+				],
+				"Abomasnow": [
 					1
 				],
 				"Froslass": [
@@ -23423,10 +23651,25 @@
 				"Raichu": [
 					1
 				],
+				"Nidoqueen": [
+					1
+				],
+				"Nidoking": [
+					1
+				],
 				"Vileplume": [
 					1
 				],
 				"Dugtrio": [
+					1
+				],
+				"Golduck": [
+					1
+				],
+				"Poliwrath": [
+					1
+				],
+				"Alakazam": [
 					1
 				],
 				"Victreebel": [
@@ -23435,10 +23678,16 @@
 				"Golem": [
 					1
 				],
+				"Rapidash": [
+					1
+				],
 				"Slowbro": [
 					1
 				],
 				"Dewgong": [
+					1
+				],
+				"Muk": [
 					1
 				],
 				"Hypno": [
@@ -23483,6 +23732,9 @@
 				"Quagsire": [
 					1
 				],
+				"Slowking": [
+					1
+				],
 				"Forretress": [
 					1
 				],
@@ -23490,6 +23742,9 @@
 					1
 				],
 				"Skarmory": [
+					1
+				],
+				"Miltank": [
 					1
 				],
 				"Sceptile": [
@@ -23522,7 +23777,16 @@
 				"Manectric": [
 					1
 				],
+				"Altaria": [
+					1
+				],
 				"Whiscash": [
+					1
+				],
+				"Cradily": [
+					1
+				],
+				"Armaldo": [
 					1
 				],
 				"Absol": [
@@ -23543,7 +23807,13 @@
 				"Staraptor": [
 					1
 				],
+				"Bastiodon": [
+					1
+				],
 				"Vespiquen": [
+					1
+				],
+				"Floatzel": [
 					1
 				],
 				"Gastrodon": [
@@ -23552,10 +23822,22 @@
 				"Ambipom": [
 					1
 				],
+				"Drifblim": [
+					1
+				],
 				"Lopunny": [
 					1
 				],
+				"Mismagius": [
+					1
+				],
 				"Skuntank": [
+					1
+				],
+				"Toxicroak": [
+					1
+				],
+				"Abomasnow": [
 					1
 				],
 				"Froslass": [
@@ -23585,10 +23867,25 @@
 				"Raichu": [
 					1
 				],
+				"Nidoqueen": [
+					1
+				],
+				"Nidoking": [
+					1
+				],
 				"Vileplume": [
 					1
 				],
 				"Dugtrio": [
+					1
+				],
+				"Golduck": [
+					1
+				],
+				"Poliwrath": [
+					1
+				],
+				"Alakazam": [
 					1
 				],
 				"Victreebel": [
@@ -23597,10 +23894,16 @@
 				"Golem": [
 					1
 				],
+				"Rapidash": [
+					1
+				],
 				"Slowbro": [
 					1
 				],
 				"Dewgong": [
+					1
+				],
+				"Muk": [
 					1
 				],
 				"Hypno": [
@@ -23645,6 +23948,9 @@
 				"Quagsire": [
 					1
 				],
+				"Slowking": [
+					1
+				],
 				"Forretress": [
 					1
 				],
@@ -23652,6 +23958,9 @@
 					1
 				],
 				"Skarmory": [
+					1
+				],
+				"Miltank": [
 					1
 				],
 				"Sceptile": [
@@ -23684,7 +23993,16 @@
 				"Manectric": [
 					1
 				],
+				"Altaria": [
+					1
+				],
 				"Whiscash": [
+					1
+				],
+				"Cradily": [
+					1
+				],
+				"Armaldo": [
 					1
 				],
 				"Absol": [
@@ -23705,7 +24023,13 @@
 				"Staraptor": [
 					1
 				],
+				"Bastiodon": [
+					1
+				],
 				"Vespiquen": [
+					1
+				],
+				"Floatzel": [
 					1
 				],
 				"Gastrodon": [
@@ -23714,10 +24038,22 @@
 				"Ambipom": [
 					1
 				],
+				"Drifblim": [
+					1
+				],
 				"Lopunny": [
 					1
 				],
+				"Mismagius": [
+					1
+				],
 				"Skuntank": [
+					1
+				],
+				"Toxicroak": [
+					1
+				],
+				"Abomasnow": [
 					1
 				],
 				"Froslass": [
@@ -39248,6 +39584,18 @@
 					3,
 					4
 				],
+				"Crobat": [
+					1,
+					2,
+					3,
+					4
+				],
+				"Heracross": [
+					1,
+					2,
+					3,
+					4
+				],
 				"Skarmory": [
 					1,
 					2,
@@ -39392,6 +39740,18 @@
 					4
 				],
 				"Dragonite": [
+					1,
+					2,
+					3,
+					4
+				],
+				"Crobat": [
+					1,
+					2,
+					3,
+					4
+				],
+				"Heracross": [
 					1,
 					2,
 					3,
@@ -39546,6 +39906,18 @@
 					3,
 					4
 				],
+				"Crobat": [
+					1,
+					2,
+					3,
+					4
+				],
+				"Heracross": [
+					1,
+					2,
+					3,
+					4
+				],
 				"Skarmory": [
 					1,
 					2,
@@ -39690,6 +40062,18 @@
 					4
 				],
 				"Dragonite": [
+					1,
+					2,
+					3,
+					4
+				],
+				"Crobat": [
+					1,
+					2,
+					3,
+					4
+				],
+				"Heracross": [
 					1,
 					2,
 					3,
@@ -41556,6 +41940,7 @@
 				"Steelix": [
 					1,
 					2,
+					3,
 					4
 				],
 				"Scizor": [
@@ -41716,6 +42101,7 @@
 				"Steelix": [
 					1,
 					2,
+					3,
 					4
 				],
 				"Scizor": [
@@ -44665,18 +45051,6 @@
 					3,
 					4
 				],
-				"Porygon2": [
-					1,
-					2,
-					3,
-					4
-				],
-				"Flygon": [
-					1,
-					2,
-					3,
-					4
-				],
 				"Altaria": [
 					1,
 					2,
@@ -44794,18 +45168,6 @@
 					2
 				],
 				"Skarmory": [
-					1,
-					2,
-					3,
-					4
-				],
-				"Porygon2": [
-					1,
-					2,
-					3,
-					4
-				],
-				"Flygon": [
 					1,
 					2,
 					3,

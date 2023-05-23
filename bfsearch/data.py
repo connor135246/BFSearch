@@ -133,6 +133,9 @@ def allItems(sets):
 def allTrainerClasses(trainers):
     return trainersAlphaSorted(trainers).keys()
 
+# there are two sets of trainers that have the same name.
+# Socialite Isabel and Lady Isabel
+# Waitress Leslie and Cowgirl Leslie
 def allTrainerNames(trainers):
     return sorted({trainer.tname for trainer in trainersAlphaSortedList(trainers)})
 
@@ -207,7 +210,7 @@ def battlenumToGroupedSetProviders(trainers):
 
 # returns a list of every single individual pokemon held by every trainer. there are a lot of duplicates.
 # totals:
-# tower/arcade/castle: 16111 + 6 (palmer) + 6 (dahlia) + 12 (darach)
+# tower/arcade/castle: 16241 + 6 (palmer) + 6 (dahlia) + 12 (darach)
 # factory (50): 77880 + 328 (thorton (hgss)) + 272 (thorton (pt))
 # factory (open): 105760 + 328 (thorton (hgss)) + 384 (thorton (pt))
 def everyIndividualPokemon(trainers):
@@ -233,7 +236,7 @@ def groupUniquePokemon(listTrainersPokeSet):
 
 # returns a list of every unique pokemon held by trainers. a unique pokemon is a particular set with a particular iv.
 # totals:
-# tower/arcade/castle: 1585
+# tower/arcade/castle: 1594
 # factory (50): 1494
 # factory (open): 2944 + 136 (thorton (hgss)) + 56 (thorton (pt))
 def everyUniquePokemon(trainers):

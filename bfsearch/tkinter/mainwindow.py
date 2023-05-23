@@ -13,7 +13,7 @@ from bfsearch.tkinter import browse, search, browsehall, dialogs, helpdialogs
 
 
 # code for recreating the main window. if CURRENT_CODE is this when the application exits code, the main window will be recreated.
-RECREATE_CODE = 0x16111
+RECREATE_CODE = 0x16241
 # the current code
 CURRENT_CODE = [RECREATE_CODE]
 
@@ -22,7 +22,7 @@ def launch():
     logging.info("Starting!")
     CURRENT_CODE[0] = RECREATE_CODE
     while CURRENT_CODE[0] == RECREATE_CODE:
-        CURRENT_CODE[0] = 0x1585
+        CURRENT_CODE[0] = 0x1594
         window = Window()
         window.mainloop()
         del window
