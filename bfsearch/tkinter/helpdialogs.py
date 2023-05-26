@@ -11,7 +11,9 @@ from bfsearch.tkinter import dialogs
 ### help dialogs todo
 # arcade board: possibilities at each streak, possible random items
 # sets that have return & frustration? how does friendship work?
+# all about trainer ai
 # allow main window to be used while help dialogs are open
+# fix dialog boxes appearing in the wrong place if window is on your second screen...
 
 
 # general dialogs
@@ -168,9 +170,9 @@ def normalTrainerPokemon(parent):
         label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
         values = [core.BattleNum.s99.value]
-        colvalues = [tr("help.normal.trainer_pokemon.tree.50+")]
-        streak50 = oneColTree(self.mainframe, 350, tr("help.nonhall.trainer_pokemon.tree.battle"), tr("help.nonhall.trainer_pokemon.tree.groups"), values, colvalues)
-        streak50.column('#0', width = 25)
+        depends = tr("help.normal.trainer_pokemon.tree.depends")
+        colvalues = [f"C4 w/ 21 IVs; {depends} w/ 31 IVs"]
+        streak50 = oneColTree(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.battle"), tr("help.nonhall.trainer_pokemon.tree.groups"), values, colvalues)
         streak50.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
     dialogs.CustomDialog(parent, tr("help.normal.trainer_pokemon"), [tr("toolbar.button.ok")], builder).show()
@@ -242,8 +244,7 @@ def factoryTrainerPokemon50(parent):
 
         values = [core.BattleNum.s99.value]
         colvalues = ["C4 w/ 24 IVs; C/D w/ 31 IVs"]
-        streak50 = oneColTree(self.mainframe, 350, tr("help.nonhall.trainer_pokemon.tree.battle"), tr("help.nonhall.trainer_pokemon.tree.groups"), values, colvalues)
-        streak50.column('#0', width = 25)
+        streak50 = oneColTree(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.battle"), tr("help.nonhall.trainer_pokemon.tree.groups"), values, colvalues)
         streak50.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
     dialogs.CustomDialog(parent, tr("help.factory.trainer_pokemon_50"), [tr("toolbar.button.ok")], builder).show()
@@ -258,10 +259,18 @@ def factoryTrainerPokemonOpen(parent):
         label1 = ttk.Label(self.mainframe, text = tr("help.factory.trainer_pokemon_open.info.1"), wraplength = wraplength, padding = (10, 5, 10, 5))
         label1.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
-        svalues = ["C1 w/ 0 IVs", "C1 w/ 0 IVs; C2 w/ 4 IVs", "C2 w/ 4 IVs; C3 w/ 8 IVs", "C3 w/ 8 IVs; C4 w/ 12 IVs", "C4 w/ 12 IVs; C/D w/ 16 IVs", "C/D w/ 16 IVs; C/D w/ 20 IVs", "C/D w/ 20 IVs; C/D w/ 24 IVs", "C/D w/ 24 IVs; C/D w/ 31 IVs"]
+        svalues = ["C1 w/ 0 IVs", "C1 w/ 0 IVs; C2 w/ 4 IVs", "C2 w/ 4 IVs; C3 w/ 8 IVs", "C3 w/ 8 IVs; C4 w/ 12 IVs", "C4 w/ 12 IVs; C/D w/ 16 IVs", "C/D w/ 16 IVs; C/D w/ 20 IVs", "C/D w/ 20 IVs; C/D w/ 24 IVs"]
         evalues = ["C2 w/ 4 IVs", "C3 w/ 8 IVs", tr("help.nonhall.trainer_pokemon.tree.silver"), "C/D w/ 16 IVs", "C/D w/ 20 IVs", "C/D w/ 24 IVs", tr("help.nonhall.trainer_pokemon.tree.gold")]
         streaks = makeBattleNumTrees(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.groups"), svalues, evalues)
         streaks.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
+
+        label2 = ttk.Label(self.mainframe, text = tr("help.factory.trainer_pokemon_open.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))
+        label2.grid(column = 0, row = 2, sticky = (W, N, E, S))
+
+        values = [core.BattleNum.s99.value]
+        colvalues = ["C/D w/ 24 IVs; C/D w/ 31 IVs"]
+        streak50 = oneColTree(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.battle"), tr("help.nonhall.trainer_pokemon.tree.groups"), values, colvalues)
+        streak50.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
     dialogs.CustomDialog(parent, tr("help.factory.trainer_pokemon_open"), [tr("toolbar.button.ok")], builder).show()
     parent.grab_set()
@@ -322,7 +331,7 @@ def hallRankPokemon(parent):
 
         values = [tr("help.nonhall.trainer_pokemon.tree.silver"), tr("help.nonhall.trainer_pokemon.tree.gold")]
         colsvalues = [[50, tr("help.hall.rank_pokemon.tree.same")], [170, core.HallSetGroup.plus500.fullname()]]
-        brainTree = multiColTree(self.mainframe, width, "", [tr("help.nonhall.trainer_pokemon.tree.battle"), tr("help.nonhall.trainer_pokemon.tree.groups")], values, colsvalues)
+        brainTree = multiColTree(self.mainframe, width, "", [tr("help.nonhall.trainer_pokemon.tree.battle"), tr("help.hall.rank_pokemon.tree.groups")], values, colsvalues)
         brainTree.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 10, pady = 5)
 
     dialogs.CustomDialog(parent, tr("help.hall.rank_pokemon"), [tr("toolbar.button.ok")], builder).show()
