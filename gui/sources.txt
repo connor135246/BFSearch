@@ -20,3 +20,5 @@ help.png
 https://archives.bulbagarden.net/wiki/File:Bag_Vs._Recorder_Sprite.png
 hallsearch.png
 https://archives.bulbagarden.net/wiki/File:Bag_Zoom_Lens_Sprite.png
+links.png
+https://archives.bulbagarden.net/wiki/File:Bag_Exp._Share_Sprite.png

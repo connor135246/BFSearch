@@ -139,6 +139,39 @@ class ComboboxDialog(InfoDialog):
         return self.pressed, self.combo.get()
 
 
+# info dialog that has a series of labels and links for copying to the clipboard.
+class LinksDialog(InfoDialog):
+    def __init__(self, parent, title, buttons, text, imagepath, labels, links, copytext, copiedtext, **kwargs):
+        InfoDialog.__init__(self, parent, title, buttons, text, imagepath, labels = labels, links = links, copytext = copytext, copiedtext = copiedtext, **kwargs)
+
+    def buildDialog(self, **kwargs):
+        super().buildDialog(**kwargs)
+
+        self.contentframe = ttk.Frame(self.mainframe, padding = (15, 0, 15, 0))
+        self.contentframe.columnconfigure(0, weight = 1)
+        self.contentframe.grid(column = 0, row = 1, columnspan = 2, sticky = (W, N, E, S), padx = 30, pady = 5)
+        index = 0
+        for label, link in zip(kwargs['labels'], kwargs['links']):
+            mlabel = ttk.Label(self.contentframe, text = label, padding = (0, 5, 10, 5))
+            mlabel.grid(column = 0, row = index, sticky = (W, N, E, S))
+            linkframe = ttk.Frame(self.contentframe)
+            linkframe.columnconfigure(0, weight = 1)
+            linkframe.grid(column = 0, row = index + 1, sticky = (W, N, E, S), padx = 5, pady = 5)
+            mentry = Text(linkframe, width = 1, height = 1, wrap = 'none')
+            mentry.insert('end', link)
+            mentry['state'] = 'disabled'
+            mentry.grid(column = 0, row = 0, sticky = (W, E))
+            mbutton = ttk.Button(linkframe, text = kwargs['copytext'])
+            mbutton['command'] = lambda link = link, mbutton = mbutton, copiedtext = kwargs['copiedtext']: self.copyLink(link, mbutton, copiedtext)
+            mbutton.grid(column = 1, row = 0, sticky = (W, N, E, S))
+            index += 2
+
+    def copyLink(self, link, button, text):
+        self.top.clipboard_clear()
+        self.top.clipboard_append(link)
+        button['text'] = text
+
+
 # a custom dialog.
 class CustomDialog(Dialog):
     # builder is a method to call that adds widgets to the dialog.

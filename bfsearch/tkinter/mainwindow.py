@@ -187,17 +187,23 @@ class Toolbar(ttk.Frame):
         Hovertip(self.about, tr("toolbar.button.about.tooltip"), hover_delay = 1000)
         self.about.pack(side = LEFT, padx = 5)
 
+        self.linksImage = PhotoImage(file = "gui/links.png")
+        self.links = ttk.Button(self, text = tr("toolbar.button.links.name"), image = self.linksImage, compound = 'top', command = self.showLinks, takefocus = 0)
+        Hovertip(self.links, tr("toolbar.button.links.tooltip"), hover_delay = 1000)
+        self.links.pack(side = LEFT, padx = 5)
+
         self.helpImage = PhotoImage(file = "gui/help.png")
         self.help = ttk.Button(self, text = tr("toolbar.button.help.name"), image = self.helpImage, compound = 'top', command = self.showHelp, takefocus = 0)
         Hovertip(self.help, tr("toolbar.button.help.tooltip"), hover_delay = 1000)
         self.help.pack(side = LEFT, padx = 5)
 
     def showAbout(self):
-        aboutdialog = dialogs.InfoDialog(self._root(), tr("toolbar.button.about.name"), [tr("toolbar.button.ok"), tr("toolbar.button.about.linkButton")], tr("toolbar.button.about.about"), "gui/about.png")
-        pressed = aboutdialog.show()
-        if pressed == 1:
-            self.clipboard_clear()
-            self.clipboard_append("https://eisencalc.com/")
+        dialogs.InfoDialog(self._root(), tr("toolbar.button.about.name"), [tr("toolbar.button.ok")], tr("toolbar.button.about.about"), "gui/about.png").show()
+
+    def showLinks(self):
+        labels = [tr("toolbar.button.links.eisencalc"), tr("toolbar.button.links.smogon"), tr("toolbar.button.links.github")]
+        links = ["https://eisencalc.com/", "https://www.smogon.com/forums/threads/4th-generation-battle-facilities-discussion-and-records.3663294/", "https://github.com/connor135246/BFSearch"]
+        dialogs.LinksDialog(self._root(), tr("toolbar.button.links.name"), [tr("toolbar.button.ok")], tr("toolbar.button.links.links"), "gui/links.png", labels, links, tr("toolbar.button.links.copy"), tr("toolbar.button.links.copied")).show()
 
     def showLang(self):
         langs = translate.langs()
