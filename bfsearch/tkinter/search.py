@@ -368,9 +368,9 @@ class SearchPage(SearchPageBase):
         # alphabetical sort - sort by name, then set number
         self.currentResultsA = defaultdict(ndict, sorted(currentResults.items(), key = lambda unique: attrgetter('pokeset.species.name', 'pokeset.pset')(unique[0])))
         # dex sort - sort by dex, then form, then set number
-        self.currentResultsD = defaultdict(ndict, sorted(currentResults.items(), key = lambda unique: attrgetter('pokeset.species.dex', 'pokeset.species.name', 'pokeset.pset')(unique[0])))
-        # speed sort - sort by speed, then dex, then form, then set number
-        self.currentResultsS = defaultdict(ndict, sorted(currentResults.items(), key = lambda unique, self = self: (-unique[0].getAdjustedSpeed(hideItem = self.facility.hideItem(), level = self.facility.level()),) + attrgetter('pokeset.species.dex', 'pokeset.species.name', 'pokeset.pset')(unique[0])))
+        self.currentResultsD = defaultdict(ndict, sorted(self.currentResultsA.items(), key = lambda unique: attrgetter('pokeset.species.dex')(unique[0])))
+        # speed sort - sort by speed, then name, then set number
+        self.currentResultsS = defaultdict(ndict, sorted(self.currentResultsA.items(), key = lambda unique, self = self: -unique[0].getAdjustedSpeed(hideItem = self.facility.hideItem(), level = self.facility.level())))
         self.fillResultsCombo()
 
         self.resultsInfo['text'] = tr("page.search.resultsBox.done", len(searchResults), len(currentResults))
@@ -461,13 +461,13 @@ class HallSearchPage(SearchPageBase):
         self.updateSet()
         # re-sort speed while maintaining selection
         prevResult = self.result.get()
-        self.speedSort(self.currentResultsS)
+        self.speedSort()
         self.fillResultsCombo()
         self.result.set(prevResult)
         self.resultsCombo.event_generate("<<ComboboxSelected>>")
 
-    def speedSort(self, currentResults):
-        self.currentResultsS = sorted(currentResults, key = lambda hswi, self = self: (-hswi.getAdjustedSpeed(hideItem = False, level = self.getLevel()),) + attrgetter('pokeset.species.dex', 'pokeset.species.name')(hswi))
+    def speedSort(self):
+        self.currentResultsS = sorted(self.currentResultsA, key = lambda hswi, self = self: -hswi.getAdjustedSpeed(hideItem = False, level = self.getLevel()))
 
     def fillResultsCombo(self):
         self.fillCombobox(self.resultsCombo, [hswi.getShowdownNickname() for hswi in self.getResults()], self.result)
@@ -533,9 +533,9 @@ class HallSearchPage(SearchPageBase):
         # alphabetical sort - sort by name
         self.currentResultsA = sorted(currentResults, key = lambda hswi: attrgetter('pokeset.species.name')(hswi))
         # dex sort - sort by dex, then form
-        self.currentResultsD = sorted(currentResults, key = lambda hswi: attrgetter('pokeset.species.dex', 'pokeset.species.name')(hswi))
+        self.currentResultsD = sorted(self.currentResultsA, key = lambda hswi: attrgetter('pokeset.species.dex')(hswi))
         # speed sort - sort by speed, then dex, then form
-        self.speedSort(currentResults)
+        self.speedSort()
         self.fillResultsCombo()
 
         self.resultsInfo['text'] = tr("page.hall_search.resultsBox.done", len(currentResults))
