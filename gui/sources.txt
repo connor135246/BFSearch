@@ -22,3 +22,9 @@ hallsearch.png
 https://archives.bulbagarden.net/wiki/File:Bag_Zoom_Lens_Sprite.png
 links.png
 https://archives.bulbagarden.net/wiki/File:Bag_Exp._Share_Sprite.png
+coverage.png
+https://archives.bulbagarden.net/wiki/File:PhysicalIC_HGSS.png
+https://archives.bulbagarden.net/wiki/File:SpecialIC_HGSS.png
+hallcoverage.png
+https://archives.bulbagarden.net/wiki/File:PhysicalIC_IV.png
+https://archives.bulbagarden.net/wiki/File:SpecialIC_IV.png

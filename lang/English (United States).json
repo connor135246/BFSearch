@@ -419,6 +419,25 @@
 	"page.search.sortToggle.speed": "Sorting results by speed.",
 	"page.search.sortToggle.tooltip": "Change results sorting",
 
+	"page.coverage.name": "Type Coverage Calculator",
+	"page.coverage.tooltip": "Calculate your type coverage in the Battle Tower/Arcade/Castle/Factory.",
+	"page.coverage.info": "This page allows you to calculate type coverage for the Battle Tower/Arcade/Castle/Factory.\nSelect some types, and see how many individual Pokémon resist that combination.",
+	"page.coverage.coverageBox": "Calculator Options",
+	"page.coverage.move_types": "Move Types:",
+	"page.coverage.ability": "Ability:",
+	"page.coverage.calcButton": "Calculate...",
+	"page.coverage.calcButton.changed": "Calculate...*",
+	"page.coverage.calcButton.sure": "You haven't selected a battle number.\nThe search will gather every possible set, which may cause the program to stop responding for a short time.\nClick 'OK' or press 'Space' if you want to continue.",
+	"page.coverage.clearCalcButton": "Clear Calculator Options",
+	"page.coverage.immunePage.default": "No Effect",
+	"page.coverage.immunePage.count": "No Effect - {1} ({0})",
+	"page.coverage.resistPage.default": "Not Very Effective",
+	"page.coverage.resistPage.count": "Not Very Effective - {1} ({0})",
+	"page.coverage.normalPage.default": "Normal Damage",
+	"page.coverage.normalPage.count": "Normal Damage - {1} ({0})",
+	"page.coverage.superPage.default": "Super Effective",
+	"page.coverage.superPage.count": "Super Effective - {1} ({0})",
+
 	"page.hall_sets.name": "Browse Hall Sets",
 	"page.hall_sets.tooltip": "Browse all Battle Hall Pokémon sets.",
 	"page.hall_sets.info": "This page lets you browse all the possible Pokémon sets in the Battle Hall.\nSelect a Pokémon and have a look at the set!",
@@ -443,5 +462,9 @@
 	"page.hall_search.name": "Search Hall Sets",
 	"page.hall_search.tooltip": "Search for what's possible in the Battle Hall.",
 	"page.hall_search.info": "This page allows you to search through Pokémon in the Battle Hall.\nProtip: You probably want to know which Pokémon hold a Focus Sash.",
-	"page.hall_search.resultsBox.done": "Search done: {0} sets found."
+	"page.hall_search.resultsBox.done": "Search done: {0} sets found.",
+
+	"page.hall_coverage.name": "Hall Type Coverage Calculator",
+	"page.hall_coverage.tooltip": "Calculate your type coverage in the Battle Hall.",
+	"page.hall_coverage.info": "This page allows you to calculate type coverage for the Battle Hall.\nSelect some types, and see how many Pokémon resist that combination."
 }
