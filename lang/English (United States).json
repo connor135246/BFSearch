@@ -403,7 +403,7 @@
 
 	"page.search.name": "Search Sets",
 	"page.search.tooltip": "Search for what's possible in the Battle Tower/Arcade/Castle/Factory.",
-	"page.search.info": "This page allows you to search through each individual Pokémon owned by each trainer in the Battle Tower/Arcade/Castle/Factory.\nMany trainers have the exact same sets, so only unique results are shown.",
+	"page.search.info": "This page allows you to search through each individual Pokémon owned by each trainer in the Battle Tower/Arcade/Castle/Factory.\nMany trainers have the exact same sets, so only unique results are shown. You can sort results by speed tier.",
 	"page.search.searchBox": "Search Options",
 	"page.search.item": "Item:",
 	"page.search.moves": "Moves:",
@@ -467,7 +467,7 @@
 
 	"page.hall_search.name": "Search Hall Sets",
 	"page.hall_search.tooltip": "Search for what's possible in the Battle Hall.",
-	"page.hall_search.info": "This page allows you to search through Pokémon in the Battle Hall.\nProtip: You probably want to know which Pokémon hold a Focus Sash.",
+	"page.hall_search.info": "This page allows you to search through Pokémon in the Battle Hall.\nYou can sort results by speed tier. Protip: You probably want to know which Pokémon hold a Focus Sash.",
 	"page.hall_search.resultsBox.done": "Search done: {0} sets found.",
 
 	"page.hall_coverage.name": "Hall Type Coverage Calculator",

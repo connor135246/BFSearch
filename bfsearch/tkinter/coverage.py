@@ -66,7 +66,7 @@ class CoveragePageBase(common.SharedPageElements):
     def buildResultsNotebook(self, clazz):
         ## results pages
         # results pages share a sort
-        self.resultsSort = SortMode.Speed
+        self.resultsSort = SortMode.Alpha
         # make results pages
         self.resultsNotebook = ttk.Notebook(self)
         self.resultsNotebook.enable_traversal()

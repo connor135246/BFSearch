@@ -87,7 +87,7 @@ class SearchPageBase(common.SharedPageElements):
         self.currentResultsS = ndict()
         # sort toggle button
         self.resultSortToggle = ttk.Button(self.resultsBox, command = self.toggleResultSorting)
-        self.resultsSort = SortMode.Speed
+        self.resultsSort = SortMode.Alpha
         self.setResultsToggleText()
         self.setToolTip(self.resultSortToggle, tr("page.search.sortToggle.tooltip"))
         self.resultSortToggle.grid(column = 0, row = 1, sticky = (W, E), padx = 5, pady = 5)
