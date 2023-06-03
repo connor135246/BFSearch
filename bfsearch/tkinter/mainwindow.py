@@ -9,7 +9,7 @@ from idlelib.tooltip import Hovertip
 
 from bfsearch import data, translate, settings
 from bfsearch.translate import tr
-from bfsearch.tkinter import browse, search, browsehall, dialogs, helpdialogs
+from bfsearch.tkinter import browse, search, browsehall, dialogs, helpdialogs, coverage
 
 
 # code for recreating the main window. if CURRENT_CODE is this when the application exits code, the main window will be recreated.
@@ -132,35 +132,58 @@ class Window(Tk):
         self.buildButton.state(["!disabled"])
 
     def addOtherPages(self):
-        self.browseSetsPage = browse.BrowseAllSetsPage(self.tabs, data.genericSetProvider(self.data.sets))
+
+        self.nonhallTabs = ttk.Notebook(self.mainframe)
+        self.nonhallTabs.enable_traversal()
+        self.bfnh = PhotoImage(file = "gui/bfnh.png")
+        self.tabs.add(self.nonhallTabs, text = tr("page.nonhall.name"), image = self.bfnh, compound = 'left')
+        #tr("page.nonhall.tooltip")
+
+        self.browseSetsPage = browse.BrowseAllSetsPage(self.nonhallTabs, data.genericSetProvider(self.data.sets))
         self.browseImage = PhotoImage(file = "gui/pokemon.png")
-        self.tabs.add(self.browseSetsPage, text = tr("page.all_sets.name"), image = self.browseImage, compound = 'left')
+        self.nonhallTabs.add(self.browseSetsPage, text = tr("page.all_sets.name"), image = self.browseImage, compound = 'left')
         #tr("page.all_sets.tooltip")
 
-        self.browseTrainerSetsPage = browse.BrowseTrainerSetsPage(self.tabs, self.data.facilities)
+        self.browseTrainerSetsPage = browse.BrowseTrainerSetsPage(self.nonhallTabs, self.data.facilities)
         self.trainerImage = PhotoImage(file = "gui/trainers.png")
-        self.tabs.add(self.browseTrainerSetsPage, text = tr("page.all_sets_by_trainer.name"), image = self.trainerImage, compound = 'left')
+        self.nonhallTabs.add(self.browseTrainerSetsPage, text = tr("page.all_sets_by_trainer.name"), image = self.trainerImage, compound = 'left')
         #tr("page.all_sets_by_trainer.tooltip")
 
-        self.searchPage = search.SearchPage(self.tabs, self.data)
+        self.searchPage = search.SearchPage(self.nonhallTabs, self.data)
         self.searchImage = PhotoImage(file = "gui/search.png")
-        self.tabs.add(self.searchPage, text = tr("page.search.name"), image = self.searchImage, compound = 'left')
+        self.nonhallTabs.add(self.searchPage, text = tr("page.search.name"), image = self.searchImage, compound = 'left')
         #tr("page.search.tooltip")
 
-        self.browseHallSetsPage = browsehall.BrowseAllHallSetsPage(self.tabs, data.hallSetProvider(self.data.hall_sets))
+        self.coveragePage = coverage.CoveragePage(self.nonhallTabs, self.data)
+        self.coverageImage = PhotoImage(file = "gui/coverage.png")
+        self.nonhallTabs.add(self.coveragePage, text = tr("page.coverage.name"), image = self.coverageImage, compound = 'left')
+        #tr("page.coverage.tooltip")
+
+        self.hallTabs = ttk.Notebook(self.mainframe)
+        self.hallTabs.enable_traversal()
+        self.bfh = PhotoImage(file = "gui/bfh.png")
+        self.tabs.add(self.hallTabs, text = tr("page.hall.name"), image = self.bfh, compound = 'left')
+        #tr("page.hall.tooltip")
+
+        self.browseHallSetsPage = browsehall.BrowseAllHallSetsPage(self.hallTabs, data.hallSetProvider(self.data.hall_sets))
         self.hallImage = PhotoImage(file = "gui/hallpokemon.png")
-        self.tabs.add(self.browseHallSetsPage, text = tr("page.hall_sets.name"), image = self.hallImage, compound = 'left')
+        self.hallTabs.add(self.browseHallSetsPage, text = tr("page.hall_sets.name"), image = self.hallImage, compound = 'left')
         #tr("page.hall_sets.tooltip")
 
-        self.calcHallSetsPage = browsehall.CalcHallSetsPage(self.tabs, data.typeToRankToHallSets(self.data.hall_sets), data.hallSetGroupToHallSets(self.data.hall_sets))
+        self.calcHallSetsPage = browsehall.CalcHallSetsPage(self.hallTabs, data.typeToRankToHallSets(self.data.hall_sets), data.hallSetGroupToHallSets(self.data.hall_sets))
         self.hallcalcImage = PhotoImage(file = "gui/hallcalc.png")
-        self.tabs.add(self.calcHallSetsPage, text = tr("page.hall_calc.name"), image = self.hallcalcImage, compound = 'left')
+        self.hallTabs.add(self.calcHallSetsPage, text = tr("page.hall_calc.name"), image = self.hallcalcImage, compound = 'left')
         #tr("page.hall_calc.tooltip")
 
-        self.hallSearchPage = search.HallSearchPage(self.tabs, self.data)
+        self.hallSearchPage = search.HallSearchPage(self.hallTabs, self.data)
         self.hallSearchImage = PhotoImage(file = "gui/hallsearch.png")
-        self.tabs.add(self.hallSearchPage, text = tr("page.hall_search.name"), image = self.hallSearchImage, compound = 'left')
+        self.hallTabs.add(self.hallSearchPage, text = tr("page.hall_search.name"), image = self.hallSearchImage, compound = 'left')
         #tr("page.hall_search.tooltip")
+
+        self.hallCoveragePage = coverage.HallCoveragePage(self.hallTabs, self.data)
+        self.hallCoverageImage = PhotoImage(file = "gui/hallcoverage.png")
+        self.hallTabs.add(self.hallCoveragePage, text = tr("page.hall_coverage.name"), image = self.hallCoverageImage, compound = 'left')
+        #tr("page.hall_coverage.tooltip")
 
         logging.info("Built data!")
 

@@ -350,6 +350,12 @@
 	"page.welcome.status.done": "Loading complete.\n",
 	"page.welcome.status.error": "Encountered an error while parsing data!\n    {0}\n\nPlease fix the error and try again.\n",
 
+	"page.hall.name": "Battle Hall",
+	"page.hall.tooltip": "Battle Hall pages",
+
+	"page.nonhall.name": "Battle Tower/Arcade/Castle/Factory",
+	"page.nonhall.tooltip": "Battle Tower/Arcade/Castle/Factory pages",
+
 	"page.all_sets.name": "Browse Sets",
 	"page.all_sets.tooltip": "Browse all Battle Tower/Arcade/Castle/Factory Pokémon sets.",
 	"page.all_sets.info": "This page lets you browse all the possible Pokémon sets in the Battle Tower/Arcade/Castle/Factory.\nSelect a Pokémon and a set number and have a look at the set!",
