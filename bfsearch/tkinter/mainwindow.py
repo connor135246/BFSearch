@@ -47,7 +47,7 @@ class Window(Tk):
         self.bficon = PhotoImage(file = "gui/frontier.png")
         self.wm_iconphoto(True, self.bficon)
 
-        defaultGeometry = "750x643+120+60"
+        defaultGeometry = "750x625+120+60"
         try:
             self.geometry(settings.settings.get(windowKey, defaultGeometry))
         except TclError:
@@ -73,9 +73,6 @@ class Window(Tk):
         self.starticon = PhotoImage(file = "gui/icon.png")
         self.tabs.add(self.createStartPage(), text = tr("page.welcome.name"), image = self.starticon, compound = 'left')
 
-        self.toolbar = Toolbar(self.mainframe)
-        self.toolbar.grid(column = 0, row = 1, sticky = (W, N, E, S))
-
     def createStartPage(self):
         startPage = ttk.Frame(self.tabs)
         startPage.columnconfigure(0, weight = 1)
@@ -91,6 +88,9 @@ class Window(Tk):
         self.textLog = Text(startPage, width = 1, height = 1, wrap = 'word', state = 'disabled')
         self.textLog.grid(column = 0, row = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.setLogText(tr("page.welcome.status.ready"))
+
+        self.toolbar = Toolbar(startPage)
+        self.toolbar.grid(column = 0, row = 3, sticky = (W, N, E, S))
 
         return startPage
 
@@ -191,7 +191,7 @@ class Window(Tk):
 # the toolbar at the bottom of the window.
 class Toolbar(ttk.Frame):
     def __init__(self, parent):
-        ttk.Frame.__init__(self, parent, borderwidth = 2, relief = 'solid', padding = (5, 10))
+        ttk.Frame.__init__(self, parent, padding = (5, 5))
 
         self.columnconfigure(0, weight = 1)
         self.columnconfigure(1, weight = 1)
