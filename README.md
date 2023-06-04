@@ -7,15 +7,15 @@ Click to see a screenshot.
  
  - [View individual Pokemon you can face in the Battle Tower/Arcade/Castle/Factory organized by battle number and trainer.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/trainers.png)  
  
- - [Search through each individual Pokemon you can face in the Battle Tower/Arcade/Castle/Factory by various metrics.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/search.png)  
- 
  - [Browse through all possible sets you can face in the Battle Hall.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/browsehall.png)  
  
  - [View individual Pokemon you can face in the Battle Hall organized by the Type and Rank they appear at.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/hallcalc.png)  
-
-  - [Search through all possible sets you can face in the Battle Hall by various metrics.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/hallsearch.png)  
  
-  - [Learn all about the mechanics and quirks of the Battle Frontier in the help topics.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/help.png)  
+ - [Search through each individual Pokemon by various metrics across each facility.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/search.png)  
+ 
+ - [Check your type coverage across each facility.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/coverage.png)  
+ 
+ - [Learn all about the mechanics and quirks of the Battle Frontier in the help topics.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/help.png)  
 
 
 # Data
