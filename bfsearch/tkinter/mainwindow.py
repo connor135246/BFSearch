@@ -138,7 +138,7 @@ class Window(Tk):
 
     def addOtherPages(self):
 
-        self.nonhallTabs = ttk.Notebook(self.mainframe)
+        self.nonhallTabs = ttk.Notebook(self.tabs)
         self.nonhallTabs.enable_traversal()
         self.bfnh = PhotoImage(file = "gui/bfnh.png")
         self.tabs.add(self.nonhallTabs, text = tr("page.nonhall.name"), image = self.bfnh, compound = 'left')
@@ -164,7 +164,7 @@ class Window(Tk):
         self.nonhallTabs.add(self.coveragePage, text = tr("page.coverage.name"), image = self.coverageImage, compound = 'left')
         #tr("page.coverage.tooltip")
 
-        self.hallTabs = ttk.Notebook(self.mainframe)
+        self.hallTabs = ttk.Notebook(self.tabs)
         self.hallTabs.enable_traversal()
         self.bfh = PhotoImage(file = "gui/bfh.png")
         self.tabs.add(self.hallTabs, text = tr("page.hall.name"), image = self.bfh, compound = 'left')
