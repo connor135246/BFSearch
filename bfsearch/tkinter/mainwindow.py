@@ -73,6 +73,10 @@ class Window(Tk):
         self.starticon = PhotoImage(file = "gui/icon.png")
         self.tabs.add(self.createStartPage(), text = tr("page.welcome.name"), image = self.starticon, compound = 'left')
 
+        self.update_idletasks()
+        # build!
+        self.after_idle(Window.build, self)
+
     def createStartPage(self):
         startPage = ttk.Frame(self.tabs)
         startPage.columnconfigure(0, weight = 1)
@@ -83,6 +87,7 @@ class Window(Tk):
         welcome.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5, pady = 5)
 
         self.buildButton = ttk.Button(startPage, text = tr("page.welcome.buildButton"), command = self.build)
+        self.buildButton.state(["disabled"])
         self.buildButton.grid(column = 0, row = 1, sticky = (W, E), padx = 5)
 
         self.textLog = Text(startPage, width = 1, height = 1, wrap = 'word', state = 'disabled')
@@ -205,11 +210,6 @@ class Toolbar(ttk.Frame):
         Hovertip(self.language, tr("toolbar.button.language.tooltip"), hover_delay = 1000)
         self.language.pack(side = LEFT, padx = 5)
 
-        self.aboutImage = PhotoImage(file = "gui/about.png")
-        self.about = ttk.Button(self, text = tr("toolbar.button.about.name"), image = self.aboutImage, compound = 'top', command = self.showAbout, takefocus = 0)
-        Hovertip(self.about, tr("toolbar.button.about.tooltip"), hover_delay = 1000)
-        self.about.pack(side = LEFT, padx = 5)
-
         self.linksImage = PhotoImage(file = "gui/links.png")
         self.links = ttk.Button(self, text = tr("toolbar.button.links.name"), image = self.linksImage, compound = 'top', command = self.showLinks, takefocus = 0)
         Hovertip(self.links, tr("toolbar.button.links.tooltip"), hover_delay = 1000)
@@ -219,9 +219,6 @@ class Toolbar(ttk.Frame):
         self.help = ttk.Button(self, text = tr("toolbar.button.help.name"), image = self.helpImage, compound = 'top', command = self.showHelp, takefocus = 0)
         Hovertip(self.help, tr("toolbar.button.help.tooltip"), hover_delay = 1000)
         self.help.pack(side = LEFT, padx = 5)
-
-    def showAbout(self):
-        dialogs.InfoDialog(self._root(), tr("toolbar.button.about.name"), [tr("toolbar.button.ok")], tr("toolbar.button.about.about"), "gui/about.png").show()
 
     def showLinks(self):
         labels = [tr("toolbar.button.links.eisencalc"), tr("toolbar.button.links.smogon"), tr("toolbar.button.links.github")]

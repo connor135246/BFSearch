@@ -6,8 +6,6 @@ trainers.png
 https://archives.bulbagarden.net/wiki/File:Spr_HGSS_Ace_Trainer_F.png
 language.png
 https://archives.bulbagarden.net/wiki/File:Globe_Sprite_DPPt.png
-about.png
-https://archives.bulbagarden.net/wiki/File:HGSS_Question_Mark_Sprite.png
 search.png
 https://archives.bulbagarden.net/wiki/File:Bag_Wide_Lens_Sprite.png
 hallpokemon.png
