@@ -13,7 +13,6 @@ from bfsearch.tkinter import dialogs
 # sets that have return & frustration? how does friendship work?
 # all about trainer ai
 # allow main window to be used while help dialogs are open
-# fix dialog boxes appearing in the wrong place if window is on your second screen...
 
 
 # general dialogs
@@ -323,7 +322,7 @@ def hallRankPokemon(parent):
         values.append(core.HallSetGroup.from340to439.fullname() + ", " + core.HallSetGroup.from440to499.fullname())
         values.append(core.HallSetGroup.from440to499.fullname() + ", " + core.HallSetGroup.plus500.fullname())
         values.append(core.HallSetGroup.from440to499.fullname() + ", " + core.HallSetGroup.plus500.fullname())
-        rankGroups = makeRankTrees(self.mainframe, width, tr("help.nonhall.trainer_pokemon.tree.groups"), values)
+        rankGroups = makeRankTrees(self.mainframe, width, tr("help.hall.rank_pokemon.tree.groups"), values)
         rankGroups.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 10, pady = 5)
 
         label2 = ttk.Label(self.mainframe, text = tr("help.hall.rank_pokemon.info.2"), wraplength = wraplength, padding = (10, 5, 10, 5))

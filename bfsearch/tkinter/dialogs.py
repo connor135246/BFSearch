@@ -60,13 +60,14 @@ class Dialog(object):
         w_height = widget.winfo_reqheight()
         x = m_x + (m_width - w_width) * relx
         y = m_y + (m_height - w_height) * rely
-        if x+w_width > parent.winfo_screenwidth():
-            x = parent.winfo_screenwidth() - w_width
-        elif x < 0:
+        # if the parent window is on your second monitor, the dialog will end up at the edge of your first monitor...
+        #if x+w_width > parent.winfo_screenwidth():
+            #x = parent.winfo_screenwidth() - w_width
+        if x < 0:
             x = 0
-        if y+w_height > parent.winfo_screenheight():
-            y = parent.winfo_screenheight() - w_height
-        elif y < 0:
+        #if y+w_height > parent.winfo_screenheight():
+            #y = parent.winfo_screenheight() - w_height
+        if y < 0:
             y = 0
         widget.geometry("+%d+%d" % (x, y))
         widget.deiconify() # Become visible at the desired location
