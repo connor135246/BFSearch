@@ -267,7 +267,7 @@ class HallPokeSet(PokeSetBase):
         self.hallsetgroup = hallsetgroup
 
     def __str__(self):
-        return f"{self.species.name} (Hall)"
+        return f"{self.species.name} H"
 
 
 # a trainer.
