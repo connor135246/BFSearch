@@ -466,6 +466,7 @@
 	"page.hall_search.tooltip": "Search for what's possible in the Battle Hall.",
 	"page.hall_search.info": "This page allows you to search through Pokémon in the Battle Hall. Additionally, results can be sorted by speed.\nProtip: You probably want to know which Pokémon hold a Focus Sash.",
 	"page.hall_search.resultsBox.done": "Search done: {0} sets found.",
+	"page.hall_search.bst": "BST:",
 
 	"page.hall_coverage.name": "Hall Type Coverage Calculator",
 	"page.hall_coverage.tooltip": "Calculate your type coverage in the Battle Hall.",

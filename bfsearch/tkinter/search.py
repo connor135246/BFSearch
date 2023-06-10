@@ -410,7 +410,7 @@ class HallSearchPage(SearchPageBase):
     def __init__(self, parent, the_data):
         super().__init__(parent, the_data)
 
-        self.buildSearchBox(14)
+        self.buildSearchBox(16)
 
         # type
         self.addSimpleLabel(self.searchBox, tr("page.hall_calc.type"), 0, 0)
@@ -423,11 +423,16 @@ class HallSearchPage(SearchPageBase):
         self.rankCombo = self.addSearchCombobox(self.rank, self.searchBox, range(1, 11), 0, 3)
         self.rankCombo['height'] = 11
 
+        # bst
+        self.addSimpleLabel(self.searchBox, tr("page.hall_search.bst"), 0, 4)
+        self.bst = StringVar(self.searchBox)
+        self.bstCombo = self.addSearchCombobox(self.bst, self.searchBox, [hallsetgroup.fullname() for hallsetgroup in core.HallSetGroup], 0, 5)
+
         sortedAlpha = data.allHallPokemonAlpha(self.data.hall_sets)
         sortedDex = data.allHallPokemonDex(self.data.hall_sets)
         items = data.allHallItems(self.data.hall_sets)
         moves = data.allHallMoves(self.data.hall_sets)
-        self.buildPokeSelect(4, sortedAlpha, sortedDex, items, moves)
+        self.buildPokeSelect(6, sortedAlpha, sortedDex, items, moves)
 
         self.buildResultsBox(1)
         # level spin box
@@ -491,6 +496,7 @@ class HallSearchPage(SearchPageBase):
     def clearSearch(self):
         self.typeCombo.current(0)
         self.rankCombo.current(0)
+        self.bstCombo.current(0)
         super().clearSearch()
 
     def search(self):
@@ -500,6 +506,7 @@ class HallSearchPage(SearchPageBase):
         class SearchOption(Enum):
             Type = (self.type, self.reduceType, "Type")
             Rank = (self.rank, self.reduceRank, "Rank")
+            BST = (self.bst, self.reduceBST, "BST")
             Species = (self.poke, self.reducePoke, "Pokemon")
             Item = (self.item, self.reduceItem, "Item")
             Move1 = (self.move1, self.reduceMove1, "Move")
@@ -555,6 +562,13 @@ class HallSearchPage(SearchPageBase):
             return search_list
         else:
             return [hallset for hallset in search_list if hallset.hallsetgroup in groups]
+
+    def reduceBST(self, search_list):
+        try:
+            bst = core.HallSetGroup.fromFullName(self.bst.get())
+            return [hallset for hallset in search_list if hallset.hallsetgroup == bst]
+        except ValueError:
+            return search_list
 
     def reducePoke(self, search_list):
         return [hallset for hallset in search_list if self.poke.get() == hallset.species.name]
