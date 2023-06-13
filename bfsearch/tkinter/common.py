@@ -22,9 +22,12 @@ def getSetResultString(the_set, iv, hideItem = False, level = 50):
         if the_set.item == "Choice Scarf":
             speed = math.floor(speed * 1.5)
             string += "\n" + tr("page.generic.result.speed.item", "Choice Scarf", speed)
-        if the_set.item == "Iron Ball":
+        elif the_set.item == "Iron Ball":
             speed = math.floor(speed * 0.5)
             string += "\n" + tr("page.generic.result.speed.item", "Iron Ball", speed)
+        elif the_set.item == "Quick Powder" and the_set.species.name == "Ditto":
+            speed = math.floor(speed * 2)
+            string += "\n" + tr("page.generic.result.speed.item", "Quick Powder", speed)
     if "Slow Start" in the_set.species.abilities:
         string += "\n" + tr("page.generic.result.speed.ability", "Slow Start", math.floor(speed * 0.5))
     if "Unburden" in the_set.species.abilities:

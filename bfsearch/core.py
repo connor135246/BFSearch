@@ -244,6 +244,8 @@ class PokeSetBase(object):
                 speed = math.floor(speed * 1.5)
             elif self.item == "Iron Ball":
                 speed = math.floor(speed * 0.5)
+            elif self.item == "Quick Powder" and self.species.name == "Ditto":
+                speed = math.floor(speed * 2)
         return speed
 
 # your average pokeset
