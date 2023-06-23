@@ -164,6 +164,20 @@ class SearchPageBase(common.SharedPageElements):
     def search(self):
         pass
 
+    # the_list is data. searchoptions is an iterable of things that have .var(), .reducer(), and .nicename().
+    def doSearchByStage(self, the_list, searchoptions):
+        searchByStage = [(None, len(the_list) > 0, the_list)]
+        if not searchByStage[-1][1]:
+            self.emptyResults(searchByStage)
+        else:
+            # each searchByStage tuple is: (this SearchOption, boolean of whether this SearchOption was checked, the remaining items after this SearchOption)
+            for searchoption in searchoptions:
+                searchByStage = self.checkAndReduce(searchoption, searchByStage)
+                if len(searchByStage[-1][2]) < 1:
+                    self.emptyResults(searchByStage)
+                    break
+        return searchByStage
+
     def checkAndReduce(self, searchoption, searchByStage):
         previousResult = searchByStage[-1][2]
         this_check = len(previousResult) > 0 and self.shouldCheck(searchoption.var().get())
@@ -346,17 +360,7 @@ class SearchPage(SearchPageBase):
             def nicename(self):
                 return self.value[2]
 
-        the_list = data.everyIndividualPokemon(self.data.facilities[self.facility])
-        searchByStage = [(None, len(the_list) > 0, the_list)]
-        if not searchByStage[-1][1]:
-            self.emptyResults(searchByStage)
-        else:
-            # each searchByStage tuple is: (this SearchOption, boolean of whether this SearchOption was checked, the remaining items after this SearchOption)
-            for searchoption in SearchOption:
-                searchByStage = self.checkAndReduce(searchoption, searchByStage)
-                if len(searchByStage[-1][2]) < 1:
-                    self.emptyResults(searchByStage)
-                    break
+        searchByStage = self.doSearchByStage(data.everyIndividualPokemon(self.data.facilities[self.facility]), SearchOption)
 
         searchResults = searchByStage[-1][2]
         currentResults = data.groupUniquePokemon(searchResults)
@@ -521,17 +525,7 @@ class HallSearchPage(SearchPageBase):
             def nicename(self):
                 return self.value[2]
 
-        the_list = data.hallSetsAlphaSortedList(self.data.hall_sets)
-        searchByStage = [(None, len(the_list) > 0, the_list)]
-        if not searchByStage[-1][1]:
-            self.emptyResults(searchByStage)
-        else:
-            # each searchByStage tuple is: (this SearchOption, boolean of whether this SearchOption was checked, the remaining items after this SearchOption)
-            for searchoption in SearchOption:
-                searchByStage = self.checkAndReduce(searchoption, searchByStage)
-                if len(searchByStage[-1][2]) < 1:
-                    self.emptyResults(searchByStage)
-                    break
+        searchByStage = self.doSearchByStage(data.hallSetsAlphaSortedList(self.data.hall_sets), SearchOption)
 
         searchResults = searchByStage[-1][2]
         iv = browsehall.ivFromRank(int(self.rank.get())) if self.rank.get().isdecimal() else 31

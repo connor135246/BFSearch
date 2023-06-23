@@ -70,11 +70,13 @@ class CoveragePageBase(common.SharedPageElements):
         # make results pages
         self.resultsNotebook = ttk.Notebook(self)
         self.resultsNotebook.enable_traversal()
-        self.immunePage = clazz(self.resultsNotebook, self)
-        self.resistPage = clazz(self.resultsNotebook, self)
+        self.zeroPage = clazz(self.resultsNotebook, self)
+        self.quarterPage = clazz(self.resultsNotebook, self)
+        self.halfPage = clazz(self.resultsNotebook, self)
         self.normalPage = clazz(self.resultsNotebook, self)
-        self.superPage = clazz(self.resultsNotebook, self)
-        self.resultsPages = [self.immunePage, self.resistPage, self.normalPage, self.superPage]
+        self.doublePage = clazz(self.resultsNotebook, self)
+        self.quadPage = clazz(self.resultsNotebook, self)
+        self.resultsPages = [self.zeroPage, self.quarterPage, self.halfPage, self.normalPage, self.doublePage, self.quadPage]
         for page in self.resultsPages:
             self.resultsNotebook.add(page)
 
@@ -87,10 +89,12 @@ class CoveragePageBase(common.SharedPageElements):
         return combo
 
     def prepFacility(self):
-        self.resultsNotebook.tab(0, text = tr("page.coverage.immunePage.default"))
-        self.resultsNotebook.tab(1, text = tr("page.coverage.resistPage.default"))
-        self.resultsNotebook.tab(2, text = tr("page.coverage.normalPage.default"))
-        self.resultsNotebook.tab(3, text = tr("page.coverage.superPage.default"))
+        self.resultsNotebook.tab(0, text = tr("page.coverage.zeroPage.default"))
+        self.resultsNotebook.tab(1, text = tr("page.coverage.quarterPage.default"))
+        self.resultsNotebook.tab(2, text = tr("page.coverage.halfPage.default"))
+        self.resultsNotebook.tab(3, text = tr("page.coverage.normalPage.default"))
+        self.resultsNotebook.tab(4, text = tr("page.coverage.doublePage.default"))
+        self.resultsNotebook.tab(5, text = tr("page.coverage.quadPage.default"))
 
     # when the facility selection changes, tells everything to update
     def handleFacility(self):
@@ -130,8 +134,46 @@ class CoveragePageBase(common.SharedPageElements):
     def calc(self):
         pass
 
+    # the_list is data. searchoptions is an iterable of things that have .var(), .reducer(), and .nicename().
+    def doSearchByStage(self, the_list, searchoptions):
+        self.emptyResultsString = None
+        searchByStage = [(None, len(the_list) > 0, the_list)]
+        if not searchByStage[-1][1]:
+            self.emptyResults(searchByStage)
+        else:
+            # each searchByStage tuple is: (this SearchOption, boolean of whether this SearchOption was checked, the remaining items after this SearchOption)
+            for searchoption in searchoptions:
+                searchByStage = self.checkAndReduce(searchoption, searchByStage)
+                if len(searchByStage[-1][2]) < 1:
+                    self.emptyResults(searchByStage)
+                    break
+        return searchByStage
+
+    def checkAndReduce(self, searchoption, searchByStage):
+        previousResult = searchByStage[-1][2]
+        this_check = len(previousResult) > 0 and self.shouldCheck(searchoption.var().get())
+        if this_check:
+            this_result = searchoption.reducer()(previousResult)
+        else:
+            this_result = previousResult
+        return searchByStage + [(searchoption, this_check, this_result)]
+
     def shouldCheck(self, value):
         return value != '' and value != data.emptyKey
+
+    def emptyResults(self, searchByStage):
+        string = tr("page.search.result.none") + "\n\n"
+        count = 1
+        for searchoption, check, result in searchByStage:
+            if searchoption is None:
+                string += tr("page.search.result.initial", len(result)) + "\n"
+                if not check:
+                    string += "  "*count + "-> " + tr("page.search.result.initial.none") + "\n"
+                    count += 1
+            elif check:
+                string += "  "*count + "-> " + tr("page.search.result.option", len(result), searchoption.nicename(), searchoption.var().get()) + "\n"
+                count += 1
+        self.emptyResultsString = string
 
 
 # each tab in the results
@@ -253,47 +295,54 @@ class CoveragePage(CoveragePageBase):
             if pressed != 0:
                 return
 
-        the_list = data.everyIndividualPokemon(self.data.facilities[self.facility])
-        if self.shouldCheck(self.battlenum.get()):
-            the_list = self.reduceBattleNum(the_list)
-        uniques = data.groupUniquePokemon(the_list)
+        # grouping of combobox var, reducer, and nice name
+        class SearchOption(Enum):
+            BattleNum = (self.battlenum, self.reduceBattleNum, "Battle Number")
 
-        immunes = ndict()
-        immuneCount = 0
-        resists = ndict()
-        resistCount = 0
-        normals = ndict()
-        normalCount = 0
-        supers = ndict()
-        superCount = 0
+            def var(self):
+                return self.value[0]
+            def reducer(self):
+                return self.value[1]
+            def nicename(self):
+                return self.value[2]
+
+        searchByStage = self.doSearchByStage(data.everyIndividualPokemon(self.data.facilities[self.facility]), SearchOption)
+
+        searchResults = searchByStage[-1][2]
+        currentResults = data.groupUniquePokemon(searchResults)
+
+        tabresults = []
+        for _ in range(6): # 6 pages
+            tabresults.append([ndict(), 0]) # results and counter
         attackingTypes = self.getAttackingTypes()
         abilitymode = AbilityMode(self.abilityCombo.current())
-        for pswi, trainers in uniques.items():
+        for pswi, trainers in currentResults.items():
             final_multiplier = getFinalMultiplier(attackingTypes, pswi.pokeset.species.types, abilitymode, pswi.pokeset.species.abilities)
-            if final_multiplier <= 0:
-                immunes[pswi] = trainers
-                immuneCount += len(trainers)
-            elif final_multiplier < 1:
-                resists[pswi] = trainers
-                resistCount += len(trainers)
-            elif final_multiplier == 1:
-                normals[pswi] = trainers
-                normalCount += len(trainers)
-            else:
-                supers[pswi] = trainers
-                superCount += len(trainers)
+            fm_index = getFinalMultiplierIndex(final_multiplier)
+            tabresults[fm_index][0][pswi] = trainers
+            tabresults[fm_index][1] += len(trainers)
 
-        def getPercent(count):
-            return "{:.0%}".format(count / len(the_list))
+        self.zeroPage.applyCurrentResults(tabresults[0][0], tabresults[0][1])
+        self.quarterPage.applyCurrentResults(tabresults[1][0], tabresults[1][1])
+        self.halfPage.applyCurrentResults(tabresults[2][0], tabresults[2][1])
+        self.normalPage.applyCurrentResults(tabresults[3][0], tabresults[3][1])
+        self.doublePage.applyCurrentResults(tabresults[4][0], tabresults[4][1])
+        self.quadPage.applyCurrentResults(tabresults[5][0], tabresults[5][1])
 
-        self.immunePage.applyCurrentResults(immunes, immuneCount)
-        self.resultsNotebook.tab(0, text = tr("page.coverage.immunePage.count", immuneCount, getPercent(immuneCount)))
-        self.resistPage.applyCurrentResults(resists, resistCount)
-        self.resultsNotebook.tab(1, text = tr("page.coverage.resistPage.count", resistCount, getPercent(resistCount)))
-        self.normalPage.applyCurrentResults(normals, normalCount)
-        self.resultsNotebook.tab(2, text = tr("page.coverage.normalPage.count", normalCount, getPercent(normalCount)))
-        self.superPage.applyCurrentResults(supers, superCount)
-        self.resultsNotebook.tab(3, text = tr("page.coverage.superPage.count", superCount, getPercent(superCount)))
+        if len(searchResults) > 0:
+            def getPercent(count):
+                return f"{round(count / len(searchResults) * 100)}%"
+            self.resultsNotebook.tab(0, text = tr("page.coverage.zeroPage.count", tabresults[0][1], getPercent(tabresults[0][1])))
+            self.resultsNotebook.tab(1, text = tr("page.coverage.quarterPage.count", tabresults[1][1], getPercent(tabresults[1][1])))
+            self.resultsNotebook.tab(2, text = tr("page.coverage.halfPage.count", tabresults[2][1], getPercent(tabresults[2][1])))
+            self.resultsNotebook.tab(3, text = tr("page.coverage.normalPage.count", tabresults[3][1], getPercent(tabresults[3][1])))
+            self.resultsNotebook.tab(4, text = tr("page.coverage.doublePage.count", tabresults[4][1], getPercent(tabresults[4][1])))
+            self.resultsNotebook.tab(5, text = tr("page.coverage.quadPage.count", tabresults[5][1], getPercent(tabresults[5][1])))
+        else:
+            self.prepFacility()
+            if self.emptyResultsString:
+                for page in self.resultsPages:
+                    page.setOutputText(self.emptyResultsString)
 
         self.calcButton['text'] = tr("page.coverage.calcButton")
 
@@ -375,7 +424,7 @@ class ResultsTabPage(ResultsTabPageBase):
         self.fillTrainerView([])
         self.trainerInfo['text'] = tr("page.search.resultsBox.trainerInfo.plural", 0)
 
-    def applyCurrentResults(self, currentResults, searchResultsCount):
+    def applyCurrentResults(self, currentResults, currentResultsCount):
         # sort trainers
         for pswi, trainers in currentResults.items():
             currentResults[pswi] = sorted(trainers, key = str)
@@ -389,7 +438,7 @@ class ResultsTabPage(ResultsTabPageBase):
         self.currentResultsS = defaultdict(ndict, sorted(self.currentResultsA.items(), key = lambda unique, self = self: -unique[0].getAdjustedSpeed(hideItem = self.facility.hideItem(), level = self.facility.level())))
         self.fillResultsCombo()
 
-        self.resultsInfo['text'] = tr("page.search.resultsBox.done", searchResultsCount, len(currentResults))
+        self.resultsInfo['text'] = tr("page.search.resultsBox.done", currentResultsCount, len(currentResults))
 
 
 # coverage page for hall sets
@@ -397,7 +446,7 @@ class HallCoveragePage(CoveragePageBase):
     def __init__(self, parent, the_data):
         super().__init__(parent, the_data)
 
-        self.buildCoverageBox(11)
+        self.buildCoverageBox(13)
 
         # type
         self.addSimpleLabel(self.coverageBox, tr("page.hall_calc.type"), 0, 0)
@@ -410,7 +459,12 @@ class HallCoveragePage(CoveragePageBase):
         self.rankCombo = self.addCalcCombobox(self.rank, self.coverageBox, range(1, 11), 0, 3)
         self.rankCombo['height'] = 11
 
-        self.buildCoverageSelect(4)
+        # bst
+        self.addSimpleLabel(self.coverageBox, tr("page.hall_search.bst"), 0, 4)
+        self.bst = StringVar(self.coverageBox)
+        self.bstCombo = self.addCalcCombobox(self.bst, self.coverageBox, [hallsetgroup.fullname() for hallsetgroup in core.HallSetGroup], 0, 5)
+
+        self.buildCoverageSelect(6)
 
         # results pages share level
         self.level = IntVar(self, value = 50)
@@ -441,47 +495,62 @@ class HallCoveragePage(CoveragePageBase):
     def clearCalc(self):
         self.typeCombo.current(0)
         self.rankCombo.current(0)
+        self.bstCombo.current(0)
         super().clearCalc()
 
     def calc(self):
-        the_list = data.hallSetsAlphaSortedList(self.data.hall_sets)
-        if self.shouldCheck(self.type.get()):
-            the_list = self.reduceType(the_list)
-        if self.shouldCheck(self.rank.get()):
-            the_list = self.reduceRank(the_list)
 
+        # grouping of combobox var, reducer, and nice name
+        class SearchOption(Enum):
+            Type = (self.type, self.reduceType, "Type")
+            Rank = (self.rank, self.reduceRank, "Rank")
+            BST = (self.bst, self.reduceBST, "BST")
+
+            def var(self):
+                return self.value[0]
+            def reducer(self):
+                return self.value[1]
+            def nicename(self):
+                return self.value[2]
+
+        searchByStage = self.doSearchByStage(data.hallSetsAlphaSortedList(self.data.hall_sets), SearchOption)
+
+        searchResults = searchByStage[-1][2]
         iv = browsehall.ivFromRank(int(self.rank.get())) if self.rank.get().isdecimal() else 31
         # turn into pswi's
-        hswis = [core.PokeSetWithIV(hallset, iv) for hallset in the_list]
+        currentResults = [core.PokeSetWithIV(hallset, iv) for hallset in searchResults]
 
-        immunes = []
-        resists = []
-        normals = []
-        supers = []
+        tabresults = []
+        for _ in range(6): # 6 pages
+            tabresults.append([]) # results
         attackingTypes = self.getAttackingTypes()
         abilitymode = AbilityMode(self.abilityCombo.current())
-        for hswi in hswis:
-            final_multiplier = getFinalMultiplier(attackingTypes, hswi.pokeset.species.types, abilitymode, hswi.pokeset.species.abilities)
-            if final_multiplier <= 0:
-                immunes.append(hswi)
-            elif final_multiplier < 1:
-                resists.append(hswi)
-            elif final_multiplier == 1:
-                normals.append(hswi)
-            else:
-                supers.append(hswi)
+        for pswi in currentResults:
+            final_multiplier = getFinalMultiplier(attackingTypes, pswi.pokeset.species.types, abilitymode, pswi.pokeset.species.abilities)
+            fm_index = getFinalMultiplierIndex(final_multiplier)
+            tabresults[fm_index].append(pswi)
 
-        def getPercent(alist):
-            return "{:.0%}".format(len(alist) / len(hswis))
+        self.zeroPage.applyCurrentResults(tabresults[0])
+        self.quarterPage.applyCurrentResults(tabresults[1])
+        self.halfPage.applyCurrentResults(tabresults[2])
+        self.normalPage.applyCurrentResults(tabresults[3])
+        self.doublePage.applyCurrentResults(tabresults[4])
+        self.quadPage.applyCurrentResults(tabresults[5])
 
-        self.immunePage.applyCurrentResults(immunes)
-        self.resultsNotebook.tab(0, text = tr("page.coverage.immunePage.count", len(immunes), getPercent(immunes)))
-        self.resistPage.applyCurrentResults(resists)
-        self.resultsNotebook.tab(1, text = tr("page.coverage.resistPage.count", len(resists), getPercent(resists)))
-        self.normalPage.applyCurrentResults(normals)
-        self.resultsNotebook.tab(2, text = tr("page.coverage.normalPage.count", len(normals), getPercent(normals)))
-        self.superPage.applyCurrentResults(supers)
-        self.resultsNotebook.tab(3, text = tr("page.coverage.superPage.count", len(supers), getPercent(supers)))
+        if len(searchResults) > 0:
+            def getPercent(alist):
+                return f"{round(len(alist) / len(searchResults) * 100)}%"
+            self.resultsNotebook.tab(0, text = tr("page.coverage.zeroPage.count", len(tabresults[0]), getPercent(tabresults[0])))
+            self.resultsNotebook.tab(1, text = tr("page.coverage.quarterPage.count", len(tabresults[1]), getPercent(tabresults[1])))
+            self.resultsNotebook.tab(2, text = tr("page.coverage.halfPage.count", len(tabresults[2]), getPercent(tabresults[2])))
+            self.resultsNotebook.tab(3, text = tr("page.coverage.normalPage.count", len(tabresults[3]), getPercent(tabresults[3])))
+            self.resultsNotebook.tab(4, text = tr("page.coverage.doublePage.count", len(tabresults[4]), getPercent(tabresults[4])))
+            self.resultsNotebook.tab(5, text = tr("page.coverage.quadPage.count", len(tabresults[5]), getPercent(tabresults[5])))
+        else:
+            self.prepFacility()
+            if self.emptyResultsString:
+                for page in self.resultsPages:
+                    page.setOutputText(self.emptyResultsString)
 
         self.calcButton['text'] = tr("page.coverage.calcButton")
 
@@ -499,6 +568,13 @@ class HallCoveragePage(CoveragePageBase):
             return search_list
         else:
             return [hallset for hallset in search_list if hallset.hallsetgroup in groups]
+
+    def reduceBST(self, search_list):
+        try:
+            bst = core.HallSetGroup.fromFullName(self.bst.get())
+            return [hallset for hallset in search_list if hallset.hallsetgroup == bst]
+        except ValueError:
+            return search_list
 
 # results tab for hall sets
 class HallResultsTabPage(ResultsTabPageBase):
@@ -562,6 +638,20 @@ class HallResultsTabPage(ResultsTabPageBase):
         self.resultsInfo['text'] = tr("page.hall_search.resultsBox.done", len(currentResults))
 
 
+# which page number the final multiplier corresponds to
+def getFinalMultiplierIndex(final_multiplier):
+    if final_multiplier <= 0:
+        return 0 # immune
+    elif final_multiplier < 0.375:
+        return 1 # quarter
+    elif final_multiplier < 0.75:
+        return 2 # half
+    elif final_multiplier < 1.5:
+        return 3 # normal
+    elif final_multiplier < 3:
+        return 4 # double
+    else:
+        return 5 # quad
 
 def getFinalMultiplier(attackingTypes, defendingTypes, abilitymode, defendingAbilities):
     multipliers = []
