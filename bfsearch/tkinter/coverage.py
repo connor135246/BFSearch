@@ -135,6 +135,7 @@ class CoveragePageBase(common.SharedPageElements):
         pass
 
     # the_list is data. searchoptions is an iterable of things that have .var(), .reducer(), and .nicename().
+    # the difference between this and the one from search is that emptyResults doesn't immediately set the output text, it just saves the value for later
     def doSearchByStage(self, the_list, searchoptions):
         self.emptyResultsString = None
         searchByStage = [(None, len(the_list) > 0, the_list)]
@@ -312,8 +313,8 @@ class CoveragePage(CoveragePageBase):
         currentResults = data.groupUniquePokemon(searchResults)
 
         tabresults = []
-        for _ in range(6): # 6 pages
-            tabresults.append([ndict(), 0]) # results and counter
+        for _ in range(6):  # 6 pages
+            tabresults.append([ndict(), 0])  # results and counter
         attackingTypes = self.getAttackingTypes()
         abilitymode = AbilityMode(self.abilityCombo.current())
         for pswi, trainers in currentResults.items():
@@ -521,8 +522,8 @@ class HallCoveragePage(CoveragePageBase):
         currentResults = [core.PokeSetWithIV(hallset, iv) for hallset in searchResults]
 
         tabresults = []
-        for _ in range(6): # 6 pages
-            tabresults.append([]) # results
+        for _ in range(6):  # 6 pages
+            tabresults.append([])  # results
         attackingTypes = self.getAttackingTypes()
         abilitymode = AbilityMode(self.abilityCombo.current())
         for pswi in currentResults:
@@ -641,17 +642,17 @@ class HallResultsTabPage(ResultsTabPageBase):
 # which page number the final multiplier corresponds to
 def getFinalMultiplierIndex(final_multiplier):
     if final_multiplier <= 0:
-        return 0 # immune
+        return 0  # immune
     elif final_multiplier < 0.375:
-        return 1 # quarter
+        return 1  # quarter
     elif final_multiplier < 0.75:
-        return 2 # half
+        return 2  # half
     elif final_multiplier < 1.5:
-        return 3 # normal
+        return 3  # normal
     elif final_multiplier < 3:
-        return 4 # double
+        return 4  # double
     else:
-        return 5 # quad
+        return 5  # quad
 
 def getFinalMultiplier(attackingTypes, defendingTypes, abilitymode, defendingAbilities):
     multipliers = []
@@ -660,15 +661,16 @@ def getFinalMultiplier(attackingTypes, defendingTypes, abilitymode, defendingAbi
         for defendingType in defendingTypes:
             multiplier *= multiplierFromTypeChart(attackingType, defendingType, abilitymode)
         if abilitymode != AbilityMode.MoldBreaker:
-            abilityMultipliers = []
+            abilityMultipliers = [1]
             for ability in defendingAbilities:
                 if ability == "Wonder Guard":
                     abilityMultipliers.append(0 if multiplier <= 1 else multiplier)
                 else:
                     abilityMultipliers.append(multiplierFromAbility(ability, attackingType))
-            multiplier *= min(abilityMultipliers) # assume worst case for opponent's ability
+            multiplier *= min(abilityMultipliers)  # assume worst case for opponent's ability
+            # example: if your attacking types are fire and ground, bronzong will be in x1 not x2
         multipliers.append(multiplier)
-    return max(multipliers) # assume player chooses the best move
+    return max(multipliers)  # assume player chooses the best move
 
 from bfsearch.core import Type
 
