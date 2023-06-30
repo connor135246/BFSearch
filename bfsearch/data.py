@@ -240,7 +240,7 @@ def groupUniquePokemon(listTrainersPokeSet):
 # factory (50): 1494
 # factory (open): 2944 + 136 (thorton (hgss)) + 56 (thorton (pt))
 def everyUniquePokemon(trainers):
-    return [pswi for pswi, _ in groupUniquePokemon(everyIndividualPokemon(trainers))]
+    return [pswi for pswi, _ in groupUniquePokemon(everyIndividualPokemon(trainers)).items()]
 
 # returns a dict of {rank} to {name} to HallPokeSet
 def rankToHallSets(hall_sets):
