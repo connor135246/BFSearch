@@ -9,9 +9,12 @@ from tkinter import ttk
 # returns the index of the button pressed, or -1 if the window was closed with the X button or by pressing escape.
 class Dialog(object):
     # buttons is a list of names of buttons.
-    def __init__(self, parent, title, buttons, **kwargs):
+    def __init__(self, parent, title, buttons, shouldGrabSet = True, **kwargs):
         self.top = Toplevel(parent)
         self.top.title(title)
+
+        # if true, prevents the parent windows from being interacted with while this is open.
+        self.shouldGrabSet = shouldGrabSet
 
         self.pressed = -1
 
@@ -73,11 +76,12 @@ class Dialog(object):
         widget.deiconify() # Become visible at the desired location
 
     def check_outside(self, event = None):
-        self.top.update_idletasks()
-        width = self.top.winfo_width()
-        height = self.top.winfo_height()
-        if event.x < 0 or event.x > width or event.y < 0 or event.y > height:
-            self.top.bell()
+        if self.shouldGrabSet:
+            self.top.update_idletasks()
+            width = self.top.winfo_width()
+            height = self.top.winfo_height()
+            if event.x < 0 or event.x > width or event.y < 0 or event.y > height:
+                self.top.bell()
 
     def cancel_window(self, event = None):
         self.finish(-1)
@@ -88,7 +92,8 @@ class Dialog(object):
 
     def show(self):
         self.top.wait_visibility()
-        self.top.grab_set()
+        if self.shouldGrabSet:
+            self.top.grab_set()
         self.top.mainloop()
         self.top.destroy()
         return self.output()
