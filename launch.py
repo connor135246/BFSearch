@@ -1,7 +1,7 @@
 # launch
 
 
-import logging, datetime, os
+import logging, datetime, os, sys
 
 from bfsearch.tkinter import mainwindow
 from bfsearch import translate, settings
@@ -26,6 +26,7 @@ def main():
         mainwindow.launch()
     except Exception:
         logging.exception("An exception occurred that forced the application to close")
+        logging.exception(f"Python version: {sys.version}")
         raise
 
 if __name__ == "__main__":

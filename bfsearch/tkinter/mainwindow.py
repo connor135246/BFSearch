@@ -19,6 +19,7 @@ CURRENT_CODE = [RECREATE_CODE]
 
 def launch():
     # todo: command line arguments? (insta build, language)
+    logging.info(f"Launching with Python version: {sys.version}")
     logging.info("Starting!")
     CURRENT_CODE[0] = RECREATE_CODE
     while CURRENT_CODE[0] == RECREATE_CODE:
