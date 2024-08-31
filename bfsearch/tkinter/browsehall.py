@@ -258,11 +258,13 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
 
     # when the type combo box updates, tells the poke combo box to update
     def handleTypeCombo(self, event):
-        # brain doesn't have rank
+        # brain doesn't have rank and level is set
         if self.checkingBrain():
             self.rankBox.state(["disabled"])
+            self.visitedTypesBox.state(["disabled"])
         else:
             self.rankBox.state(["!disabled"])
+            self.visitedTypesBox.state(["!disabled"])
         self.updateCalcSets()
 
     # when the rank box updates, tells the poke combo box to update
