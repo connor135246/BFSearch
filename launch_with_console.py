@@ -13,7 +13,7 @@ def main():
     streamlog.setLevel(logging.INFO)
     # write warning logs and above to the log file
     os.makedirs("logs", exist_ok = True)
-    filelog = logging.FileHandler("logs/" + datetime.datetime.today().strftime("%Y-%m") + ".log", encoding = "UTF-8")
+    filelog = logging.FileHandler("logs/" + datetime.datetime.today().strftime("%Y-%m") + ".log", encoding = "UTF-8", delay = True)
     filelog.setLevel(logging.WARNING)
     logging.basicConfig(format = '--- %(asctime)s : [%(levelname)s] %(message)s', level = logging.NOTSET, handlers = [streamlog, filelog])
 
