@@ -462,9 +462,9 @@
 	"page.hall_calc.type": "Type:",
 	"page.hall_calc.type.tooltip": "You can also select Hall Matron Argenta here.",
 	"page.hall_calc.rank": "Rank:",
-	"page.hall_calc.visited_types": "Number of Types at Rank 2 or higher:",
+	"page.hall_calc.visited_types": "Number of Types NOT at Rank 1:",
 	"page.hall_calc.levelBox.tooltip.fixed": "The level cannot be changed for these sets.",
-	"page.hall_calc.visited_types.tooltip": "The level of the opposing Pokémon is affected by how many types you've gotten to rank 2 or higher.",
+	"page.hall_calc.visited_types.tooltip": "The level of the opposing Pokémon increases as fewer types remain at rank 1.",
 
 	"page.hall_search.name": "Search Hall Sets",
 	"page.hall_search.tooltip": "Search for what's possible in the Battle Hall.",
