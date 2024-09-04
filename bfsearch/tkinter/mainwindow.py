@@ -44,7 +44,7 @@ class Window(Tk):
 
         self.data = data.DataHolder()
 
-        self.title("BFSearch (Beta)")
+        self.title("BFSearch (Beta) - " + tr("page.welcome.status.launching"))
         self.bficon = PhotoImage(file = "gui/frontier.png")
         self.wm_iconphoto(True, self.bficon)
 
@@ -81,22 +81,28 @@ class Window(Tk):
     def createStartPage(self):
         startPage = ttk.Frame(self.tabs)
         startPage.columnconfigure(0, weight = 1)
-        startPage.rowconfigure(2, weight = 1)
+        startPage.rowconfigure(3, weight = 1)
         startPage.grid(column = 0, row = 0, sticky = (W, N, E, S))
 
         welcome = ttk.Label(startPage, text = tr("page.welcome.welcome"), wraplength = 730)
         welcome.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5, pady = 5)
 
-        self.buildButton = ttk.Button(startPage, text = tr("page.welcome.buildButton"), command = self.build)
-        self.buildButton.state(["disabled"])
-        self.buildButton.grid(column = 0, row = 1, sticky = (W, E), padx = 5)
-
-        self.textLog = Text(startPage, width = 1, height = 1, wrap = 'word', state = 'disabled')
-        self.textLog.grid(column = 0, row = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
-        self.setLogText(tr("page.welcome.status.ready"))
+        # why does the end user need this? they don't. this was purely a testing convenience.
+        #self.buildButton = ttk.Button(startPage, text = tr("page.welcome.buildButton"), command = self.build)
+        #self.buildButton.state(["disabled"])
+        #self.buildButton.grid(column = 0, row = 1, sticky = (W, E), padx = 5)
 
         self.toolbar = Toolbar(startPage)
-        self.toolbar.grid(column = 0, row = 3, sticky = (W, N, E, S))
+        self.toolbar.grid(column = 0, row = 2, sticky = (W, N, E, S))
+
+        self.textLogBox = ttk.Labelframe(startPage, text = tr("page.welcome.status"))
+        self.textLogBox.columnconfigure(0, weight = 1)
+        self.textLogBox.rowconfigure(0, weight = 1)
+        self.textLogBox.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 5, pady = 5)
+
+        self.textLog = Text(self.textLogBox, width = 1, height = 1, wrap = 'word', state = 'disabled')
+        self.textLog.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5, pady = 5)
+        self.setLogText(tr("page.welcome.status.ready"))
 
         return startPage
 
@@ -117,25 +123,29 @@ class Window(Tk):
         self.quit()
 
     def build(self):
-        self.buildButton.state(["disabled"])
+        #self.buildButton.state(["disabled"])
 
         # clear other tabs
         for _ in range(1, len(self.tabs.tabs())):
             self.tabs.forget(1)
 
         # parses and builds data
+        self.title("BFSearch (Beta) - " + tr("page.welcome.status.parsing"))
         self.setLogText(tr("page.welcome.status.parsing"))
         self.update_idletasks()
         result = self.data.fillerup()
         if self.data.isEmpty:
+            self.title("BFSearch (Beta) - " + tr("page.welcome.status.errored"))
             self.setLogText(tr("page.welcome.status.error", result))
         else:
+            self.title("BFSearch (Beta) - " + tr("page.welcome.status.building"))
             self.setLogText(tr("page.welcome.status.building"))
             self.update_idletasks()
             self.addOtherPages()
+            self.title("BFSearch (Beta)")
             self.setLogText(tr("page.welcome.status.done"))
 
-        self.buildButton.state(["!disabled"])
+        #self.buildButton.state(["!disabled"])
 
     def addOtherPages(self):
 
@@ -206,20 +216,20 @@ class Toolbar(ttk.Frame):
         self.separator = ttk.Separator(self, orient = 'vertical')
         self.separator.pack(side = LEFT, fill = 'y', pady = 5)
 
-        self.languageImage = PhotoImage(file = "gui/language.png")
-        self.language = ttk.Button(self, text = tr("toolbar.button.language.name"), image = self.languageImage, compound = 'top', command = self.showLang, takefocus = 0)
-        Hovertip(self.language, tr("toolbar.button.language.tooltip"), hover_delay = 1000)
-        self.language.pack(side = LEFT, padx = 5)
+        self.helpImage = PhotoImage(file = "gui/help.png")
+        self.help = ttk.Button(self, text = tr("toolbar.button.help.name"), image = self.helpImage, compound = 'top', command = self.showHelp, takefocus = 0)
+        Hovertip(self.help, tr("toolbar.button.help.tooltip"), hover_delay = 1000)
+        self.help.pack(side = LEFT, padx = 5)
 
         self.linksImage = PhotoImage(file = "gui/links.png")
         self.links = ttk.Button(self, text = tr("toolbar.button.links.name"), image = self.linksImage, compound = 'top', command = self.showLinks, takefocus = 0)
         Hovertip(self.links, tr("toolbar.button.links.tooltip"), hover_delay = 1000)
         self.links.pack(side = LEFT, padx = 5)
 
-        self.helpImage = PhotoImage(file = "gui/help.png")
-        self.help = ttk.Button(self, text = tr("toolbar.button.help.name"), image = self.helpImage, compound = 'top', command = self.showHelp, takefocus = 0)
-        Hovertip(self.help, tr("toolbar.button.help.tooltip"), hover_delay = 1000)
-        self.help.pack(side = LEFT, padx = 5)
+        self.languageImage = PhotoImage(file = "gui/language.png")
+        self.language = ttk.Button(self, text = tr("toolbar.button.language.name"), image = self.languageImage, compound = 'top', command = self.showLang, takefocus = 0)
+        Hovertip(self.language, tr("toolbar.button.language.tooltip"), hover_delay = 1000)
+        self.language.pack(side = LEFT, padx = 5)
 
     def showLinks(self):
         labels = [tr("toolbar.button.links.eisencalc"), tr("toolbar.button.links.smogon"), tr("toolbar.button.links.github")]
