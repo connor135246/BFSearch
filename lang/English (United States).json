@@ -339,7 +339,7 @@
 	"parsing.error.factory_trainers.duplicate.for_class": "Duplicate factory trainer '{0}': '{1}' for class '{2}'",
 
 	"page.welcome.name": "Start Page",
-	"page.welcome.welcome": "Welcome.\nThis application allows you to view the Pokémon you can face in the Battle Frontier in Pokémon Platinum, HeartGold, and SoulSilver.\nOnce loading is completed, additional tabs will appear on the top.\nIf you're confused, click the 'Frontier Help' button at the bottom!\nIf an error occurs, check the log files in the ‘logs’ folder.",
+	"page.welcome.welcome": "Welcome.\nThis application allows you to view the Pokémon you can face in the Battle Frontier in Pokémon Platinum, HeartGold, and SoulSilver.\nOnce loading is completed, additional tabs will appear on the top.\nIf you're confused, click the 'Frontier Help' button below!\nIf an error occurs, check the log files in the ‘logs’ folder.",
 	"page.welcome.buildButton": "Click to reload data",
 	"page.welcome.status": "Status",
 	"page.welcome.status.ready": "Ready.\n",

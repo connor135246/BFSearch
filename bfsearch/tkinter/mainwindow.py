@@ -87,15 +87,10 @@ class Window(Tk):
         welcome = ttk.Label(startPage, text = tr("page.welcome.welcome"), wraplength = 730)
         welcome.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5, pady = 5)
 
-        # why does the end user need this? they don't. this was purely a testing convenience.
-        #self.buildButton = ttk.Button(startPage, text = tr("page.welcome.buildButton"), command = self.build)
-        #self.buildButton.state(["disabled"])
-        #self.buildButton.grid(column = 0, row = 1, sticky = (W, E), padx = 5)
-
         self.toolbar = Toolbar(startPage)
         self.toolbar.grid(column = 0, row = 2, sticky = (W, N, E, S))
 
-        self.textLogBox = ttk.Labelframe(startPage, text = tr("page.welcome.status"))
+        self.textLogBox = ttk.Labelframe(startPage, text = tr("page.welcome.status"), padding = (0, 0, 0, 5))
         self.textLogBox.columnconfigure(0, weight = 1)
         self.textLogBox.rowconfigure(0, weight = 1)
         self.textLogBox.grid(column = 0, row = 3, sticky = (W, N, E, S), padx = 5, pady = 5)
@@ -103,6 +98,10 @@ class Window(Tk):
         self.textLog = Text(self.textLogBox, width = 1, height = 1, wrap = 'word', state = 'disabled')
         self.textLog.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.setLogText(tr("page.welcome.status.ready"))
+
+        self.buildButton = ttk.Button(self.textLogBox, text = tr("page.welcome.buildButton"), command = self.build)
+        self.buildButton.state(["disabled"])
+        self.buildButton.grid(column = 0, row = 1, sticky = (W, E), padx = 5)
 
         return startPage
 
@@ -123,7 +122,7 @@ class Window(Tk):
         self.quit()
 
     def build(self):
-        #self.buildButton.state(["disabled"])
+        self.buildButton.state(["disabled"])
 
         # clear other tabs
         for _ in range(1, len(self.tabs.tabs())):
@@ -145,7 +144,7 @@ class Window(Tk):
             self.title("BFSearch")
             self.setLogText(tr("page.welcome.status.done"))
 
-        #self.buildButton.state(["!disabled"])
+        self.buildButton.state(["!disabled"])
 
     def addOtherPages(self):
 
@@ -214,7 +213,7 @@ class Toolbar(ttk.Frame):
         self.columnconfigure(2, weight = 1)
 
         self.separator = ttk.Separator(self, orient = 'vertical')
-        self.separator.pack(side = LEFT, fill = 'y', pady = 5)
+        self.separator.pack(side = LEFT, fill = 'y', padx = 5, pady = 5)
 
         self.helpImage = PhotoImage(file = "gui/help.png")
         self.help = ttk.Button(self, text = tr("toolbar.button.help.name"), image = self.helpImage, compound = 'top', command = self.showHelp, takefocus = 0)
