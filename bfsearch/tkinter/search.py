@@ -69,7 +69,7 @@ class SearchPageBase(common.SharedPageElements):
         self.move4 = StringVar(self.searchBox)
         self.moveCombo4 = self.addSearchCombobox(self.move4, self.searchBox, moves, 0, row + 9)
 
-    # makes the results info, results sort toggle, results combobox, and output 
+    # makes the results info, results sort toggle, results combobox, and output
     def buildResultsBox(self, outputOffset = 0):
         ## results box
         self.resultsBox = ttk.Labelframe(self, text = tr("page.search.resultsBox"))
@@ -439,6 +439,7 @@ class HallSearchPage(SearchPageBase):
         self.buildPokeSelect(6, sortedAlpha, sortedDex, items, moves)
 
         self.buildResultsBox(1)
+        self.resultsBox['padding'] = (0, 0, 0, 5)
         # level spin box
         levelFrame = ttk.Frame(self.resultsBox, padding = (5, 5, 5, 0))
         levelFrame.columnconfigure(0, weight = 1)

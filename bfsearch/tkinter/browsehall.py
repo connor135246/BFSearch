@@ -17,7 +17,7 @@ class BrowseHallSetsPageBase(common.SharedPageElements):
     def __init__(self, parent, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
 
-        self.mainBox = ttk.Labelframe(self, text = "")
+        self.mainBox = ttk.Labelframe(self, text = "", padding = (0, 0, 0, 5))
 
         ## pokemon selector
         self.setSelect = ttk.Frame(self.mainBox, padding = (5, 5, 5, 0))
