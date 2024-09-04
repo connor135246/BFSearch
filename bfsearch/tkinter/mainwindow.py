@@ -44,7 +44,7 @@ class Window(Tk):
 
         self.data = data.DataHolder()
 
-        self.title("BFSearch (Beta) - " + tr("page.welcome.status.launching"))
+        self.title("BFSearch - " + tr("page.welcome.status.launching"))
         self.bficon = PhotoImage(file = "gui/frontier.png")
         self.wm_iconphoto(True, self.bficon)
 
@@ -130,19 +130,19 @@ class Window(Tk):
             self.tabs.forget(1)
 
         # parses and builds data
-        self.title("BFSearch (Beta) - " + tr("page.welcome.status.parsing"))
+        self.title("BFSearch - " + tr("page.welcome.status.parsing"))
         self.setLogText(tr("page.welcome.status.parsing"))
         self.update_idletasks()
         result = self.data.fillerup()
         if self.data.isEmpty:
-            self.title("BFSearch (Beta) - " + tr("page.welcome.status.errored"))
+            self.title("BFSearch - " + tr("page.welcome.status.errored"))
             self.setLogText(tr("page.welcome.status.error", result))
         else:
-            self.title("BFSearch (Beta) - " + tr("page.welcome.status.building"))
+            self.title("BFSearch - " + tr("page.welcome.status.building"))
             self.setLogText(tr("page.welcome.status.building"))
             self.update_idletasks()
             self.addOtherPages()
-            self.title("BFSearch (Beta)")
+            self.title("BFSearch")
             self.setLogText(tr("page.welcome.status.done"))
 
         #self.buildButton.state(["!disabled"])

@@ -1,5 +1,5 @@
 # BFSearch
- Tool for searching Pokemon in the Gen 4 Battle Frontier. Not yet complete.
+ Tool for searching Pokemon in the Gen 4 Battle Frontier.
 
 # Features
 Click to see a screenshot.  
@@ -35,6 +35,7 @@ Click to see a screenshot.
  - [Battle Hall type/rank info](https://bulbapedia.bulbagarden.net/wiki/Battle_Hall)  
  - [Battle Arcade roulette info](https://bulbapedia.bulbagarden.net/wiki/Battle_Arcade)  
  - [Battle Castle point info](https://bulbapedia.bulbagarden.net/wiki/Battle_Castle)  
+ 
 And thanks to SadisticMystic on the Battle Facilities Discord for answering my questions.
 
 ## Misc Links
