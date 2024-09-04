@@ -334,3 +334,10 @@ class SharedPageElements(ttk.Frame):
             self.clipboard_clear()
             self.clipboard_append(self.currentSet.getShowdownFormat(self.getIV(), hideItem = self.getHideItem(), level = self.getLevel()))
             self.clipboardButton['text'] = tr("page.generic.clipboardButton.copied")
+
+    def setMainWindowTitleInfo(self, info):
+        if info:
+            self._root().title(f"BFSearch - {info}")
+        else:
+            self._root().title("BFSearch")       
+

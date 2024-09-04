@@ -296,6 +296,9 @@ class CoveragePage(CoveragePageBase):
             if pressed != 0:
                 return
 
+        self.setMainWindowTitleInfo(tr("page.welcome.status.searching"))
+        self.update_idletasks()
+
         # grouping of combobox var, reducer, and nice name
         class SearchOption(Enum):
             BattleNum = (self.battlenum, self.reduceBattleNum, "Battle Number")
@@ -346,6 +349,9 @@ class CoveragePage(CoveragePageBase):
                     page.setOutputText(self.emptyResultsString)
 
         self.calcButton['text'] = tr("page.coverage.calcButton")
+
+        self.setMainWindowTitleInfo(None)
+        self.update_idletasks()
 
     def reduceBattleNum(self, search_list):
         try:
@@ -501,6 +507,9 @@ class HallCoveragePage(CoveragePageBase):
 
     def calc(self):
 
+        self.setMainWindowTitleInfo(tr("page.welcome.status.searching"))
+        self.update_idletasks()
+
         # grouping of combobox var, reducer, and nice name
         class SearchOption(Enum):
             Type = (self.type, self.reduceType, "Type")
@@ -554,6 +563,9 @@ class HallCoveragePage(CoveragePageBase):
                     page.setOutputText(self.emptyResultsString)
 
         self.calcButton['text'] = tr("page.coverage.calcButton")
+
+        self.setMainWindowTitleInfo(None)
+        self.update_idletasks()
 
     def reduceType(self, search_list):
         try:
