@@ -9,7 +9,7 @@ from idlelib.tooltip import Hovertip
 
 from bfsearch import data, translate, settings
 from bfsearch.translate import tr
-from bfsearch.tkinter import browse, search, browsehall, dialogs, helpdialogs, coverage
+from bfsearch.tkinter import browse, search, browsehall, dialogs, helpdialogs, coverage, teammates
 
 
 # code for recreating the main window. if CURRENT_CODE is this when the application exits code, the main window will be recreated.
@@ -53,7 +53,7 @@ class Window(Tk):
             self.geometry(settings.settings.get(windowKey, defaultGeometry))
         except TclError:
             self.geometry(defaultGeometry)
-        self.minsize(350, 350)
+        self.minsize(500, 500)
 
         if settings.settings.get(maximizedKey, False):
             self.state('zoomed')
@@ -173,6 +173,11 @@ class Window(Tk):
         self.coverageImage = PhotoImage(file = "gui/coverage.png")
         self.nonhallTabs.add(self.coveragePage, text = tr("page.coverage.name"), image = self.coverageImage, compound = 'left')
         #tr("page.coverage.tooltip")
+
+        self.teammateMatchingPage = teammates.TeammateMatchingPage(self.nonhallTabs, self.data)
+        self.teammateMatchingImage = PhotoImage(file = "gui/matching.png")
+        self.nonhallTabs.add(self.teammateMatchingPage, text = tr("page.teammate_matching.name"), image = self.teammateMatchingImage, compound = 'left')
+        #tr("page.teammate_mathcing.tooltip")
 
         self.hallTabs = ttk.Notebook(self.tabs)
         self.hallTabs.enable_traversal()
