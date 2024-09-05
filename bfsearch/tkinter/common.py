@@ -144,7 +144,7 @@ class SharedPageElements(ttk.Frame):
 
     # adds a simple spinbox with padx 1
     def addSimpleSpinbox(self, var, command, parent, from_, to_, column, row, width = 0):
-        spinbox = buildSimpleSpinbox(var, command, parent, from_, to_, width = width)
+        spinbox = self.buildSimpleSpinbox(var, command, parent, from_, to_, width = width)
         spinbox.grid(column = column, row = row, sticky = (W, E), padx = 1)
         return spinbox
 

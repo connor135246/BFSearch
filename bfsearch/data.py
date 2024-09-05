@@ -230,7 +230,7 @@ def groupUniquePokemon(listTrainersPokeSet):
             if pswi.isIdenticalSet(tps):
                 uniques[pswi].append(tps.trainer)
                 break
-        else:
+        else:  # what the fuck
             uniques[tps.asPokeSetWithIV()] = [tps.trainer]
     return uniques
 
@@ -268,6 +268,14 @@ def hallSetGroupToHallSets(hall_sets):
     for name, hall_set in hall_sets.items():
         hSGTHS[hall_set.hallsetgroup.fullname()][name] = hall_set
     return hSGTHS
+
+# returns a dict of {SetGroup.fullname()} to {name} to {pset} to PokeSet
+def setGroupToSets(sets):
+    sGTS = ndict()
+    for name, nextDict in sets.items():
+        for pset, pokeset in nextDict.items():
+            sGTS[pokeset.setgroup.fullname()][name][pset] = pokeset
+    return sGTS
 
 # filter sets by the main setgroup
 def filterSetsByGroup(sets, mainGroup):

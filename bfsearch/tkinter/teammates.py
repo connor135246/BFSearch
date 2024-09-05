@@ -1,17 +1,14 @@
 # teammates
 
 
-from enum import Enum
 from operator import attrgetter
-from collections import defaultdict
 
 from tkinter import *
 from tkinter import ttk
 
 from bfsearch import core, data
 from bfsearch.data import ndict
-from bfsearch.tkinter import common, dialogs, browsehall
-from bfsearch.tkinter.search import SortMode
+from bfsearch.tkinter import common
 from bfsearch.translate import tr
 
 
@@ -281,7 +278,7 @@ class TeammateMatchingPage(common.SharedPageElements):
         self.matchButton['text'] = tr("page.teammate_matching.matchButton")
         if tnameCount > 0:
             self.trainerResultInfo['text'] = tr("page.teammate_matching.resultsBox.done", tnameCount, tclassCount)
-        else: 
+        else:
             self.trainerResultInfo['text'] = tr("page.teammate_matching.empty_results")
 
         self.setMainWindowTitleInfo(None)
@@ -428,4 +425,3 @@ class TeammateResultFrame(ttk.Labelframe):
         else:
             self.jumpButton.state(["disabled"])
             self.parentpage.setToolTip(self.jumpButton, "")
-
