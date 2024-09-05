@@ -84,7 +84,7 @@ class SharedPageElements(ttk.Frame):
         # iv spin box
         self.ivLabel = self.buildSimpleLabel(parent, tr("page.all_sets.ivs"))
         self.iv = IntVar(parent, value = 31)
-        self.ivBox = ttk.Spinbox(parent, from_ = 0, to = 31, textvariable = self.iv, command = self.handleIVBox, width = 5)
+        self.ivBox = self.buildSimpleSpinbox(self.iv, self.handleIVBox, parent, 0, 31, width = 5)
 
     def buildOutput(self, parent):
         # output
@@ -137,6 +137,43 @@ class SharedPageElements(ttk.Frame):
 
     def gridFacility(self, column, row):
         self.facilitySelect.grid(column = column, row = row, sticky = (W, N, E, S))
+
+    # makes a simple spinbox that has no validation
+    def buildSimpleSpinbox(self, var, command, parent, from_, to_, width = 0):
+        return ttk.Spinbox(parent, from_ = from_, to = to_, textvariable = var, command = command, width = width)
+
+    # adds a simple spinbox with padx 1
+    def addSimpleSpinbox(self, var, command, parent, from_, to_, column, row, width = 0):
+        spinbox = buildSimpleSpinbox(var, command, parent, from_, to_, width = width)
+        spinbox.grid(column = column, row = row, sticky = (W, E), padx = 1)
+        return spinbox
+
+    # makes a spinbox that validates values between from and to
+    def buildContinuousSpinbox(self, var, command, parent, from_, to_, width = 0):
+        validate = "focus"
+        def validatecommand(newvalue):
+            valid = True
+            try:
+                newvalue = int(newvalue)
+                if newvalue < from_:
+                    valid = False
+                    var.set(from_)
+                elif newvalue > to_:
+                    valid = False
+                    var.set(to_)
+            except ValueError:
+                valid = False
+                var.set(from_)
+            command.__call__()
+            return valid
+        validatecommand_wrapper = (self.register(validatecommand), '%P')
+        return ttk.Spinbox(parent, from_ = from_, to = to_, textvariable = var, command = command, validate = validate, validatecommand = validatecommand_wrapper, width = width)
+
+    # adds a continuous spinbox with padx 1
+    def addContinuousSpinbox(self, var, command, parent, from_, to_, column, row, width = 0):
+        spinbox = self.buildContinuousSpinbox(var, command, parent, from_, to_, width = width)
+        spinbox.grid(column = column, row = row, sticky = (W, E), padx = 1)
+        return spinbox
 
     # makes a combobox
     def buildSimpleCombobox(self, var, command, parent):
@@ -264,6 +301,23 @@ class SharedPageElements(ttk.Frame):
     def setIVBox(self, values):
         oldValues = self.ivBox['values']
         self.ivBox['values'] = values
+        # validation
+        self.ivBox['validate'] = "focus"
+        def validatecommand(newvalue):
+            try:
+                newvalue = int(newvalue)
+                valid = newvalue in values
+            except ValueError:
+                valid = False
+            if not valid:
+                if len(values) > 0:
+                    self.iv.set(values[-1])
+                else:
+                    self.iv.set(31)
+            self.handleIVBox()
+            return valid
+        self.ivBox['validatecommand'] = (self.register(validatecommand), '%P')
+        # tooltip, state, and var
         if len(values) > 1:
             # tooltip
             self.setToolTip(self.ivBox, ", ".join(self.ivBox['values']))

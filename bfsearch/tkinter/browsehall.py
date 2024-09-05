@@ -39,8 +39,7 @@ class BrowseHallSetsPageBase(common.SharedPageElements):
         # level spin box
         self.levelLabel = self.addSimpleLabel(self.setSelect, tr("page.hall_sets.level"), 4, 0)
         self.level = IntVar(self.setSelect, value = 50)
-        self.levelBox = ttk.Spinbox(self.setSelect, from_ = 14, to = 100, textvariable = self.level, command = self.handleLevelBox, width = 5)
-        self.levelBox.grid(column = 5, row = 0, sticky = (W, E), padx = 1)
+        self.levelBox = self.addContinuousSpinbox(self.level, self.handleLevelBox, self.setSelect, 14, 100, 5, 0, width = 5)
 
         # iv spin box
         self.buildIVBox(self.setSelect)
@@ -175,8 +174,7 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
         # your level spin box
         self.yourLevelLabel = self.addSimpleLabel(pokeInfo, tr("page.hall_calc.your_level"), 0, 0)
         self.yourLevel = IntVar(pokeInfo, value = 50)
-        self.yourLevelBox = ttk.Spinbox(pokeInfo, from_ = 30, to = 100, textvariable = self.yourLevel, command = self.handleYourLevelBox, width = 5)
-        self.yourLevelBox.grid(column = 1, row = 0, sticky = (W, E), padx = 1)
+        self.yourLevelBox = self.addContinuousSpinbox(self.yourLevel, self.handleYourLevelBox, pokeInfo, 30, 100, 1, 0, width = 5)
 
         # your bst combo box
         self.yourBSTLabel = self.addSimpleLabel(pokeInfo, tr("page.hall_calc.your_bst"), 2, 0, tooltip = tr("page.hall_calc.your_bst.tooltip"))
@@ -197,14 +195,12 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
         # rank spin box
         self.rankLabel = self.addSimpleLabel(battleSelect, tr("page.hall_calc.rank"), 2, 0)
         self.rank = IntVar(battleSelect, value = 1)
-        self.rankBox = ttk.Spinbox(battleSelect, from_ = 1, to = 10, textvariable = self.rank, command = self.handleRankBox, width = 5)
-        self.rankBox.grid(column = 3, row = 0, sticky = (W, E), padx = 1)
+        self.rankBox = self.addContinuousSpinbox(self.rank, self.handleRankBox, battleSelect, 1, 10, 3, 0, width = 5)
 
         # visited types spin box
         self.visitedTypesLabel = self.addSimpleLabel(battleSelect, tr("page.hall_calc.visited_types"), 4, 0, tooltip = tr("page.hall_calc.visited_types.tooltip"))
         self.visitedTypes = IntVar(battleSelect, value = 0)
-        self.visitedTypesBox = ttk.Spinbox(battleSelect, from_ = 0, to = 17, textvariable = self.visitedTypes, command = self.handleVisitedTypesBox, width = 5)
-        self.visitedTypesBox.grid(column = 5, row = 0, sticky = (W, E), padx = 1)
+        self.visitedTypesBox = self.addContinuousSpinbox(self.visitedTypes, self.handleVisitedTypesBox, battleSelect, 0, 17, 5, 0, width = 5)
 
         pokeInfo.grid(column = 0, row = 0, sticky = (W, N, E, S))
         battleSelect.grid(column = 0, row = 1, sticky = (W, N, E, S))

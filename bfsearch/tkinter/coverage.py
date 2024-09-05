@@ -603,8 +603,7 @@ class HallResultsTabPage(ResultsTabPageBase):
         levelFrame.columnconfigure(1, weight = 1)
         levelFrame.rowconfigure(0, weight = 1)
         self.levelLabel = self.addSimpleLabel(levelFrame, tr("page.hall_sets.level"), 0, 0)
-        self.levelBox = ttk.Spinbox(levelFrame, from_ = 14, to = 100, textvariable = self.parentpage.level, command = self.handleLevelBox)
-        self.levelBox.grid(column = 1, row = 0, sticky = (W, E), padx = 1)
+        self.levelBox = self.addContinuousSpinbox(self.parentpage.level, self.handleLevelBox, levelFrame, 14, 100, 1, 0)
         levelFrame.grid(column = 0, row = 3, sticky = (W, N, E, S))
 
         # set up initial state
