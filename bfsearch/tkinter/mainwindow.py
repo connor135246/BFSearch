@@ -202,6 +202,10 @@ class Window(Tk):
 
         logging.info("Built data!")
 
+    # override default silent exceptions
+    def report_callback_exception(self, exc, val, tb):
+        raise
+
 
 # the toolbar at the bottom of the window.
 class Toolbar(ttk.Frame):

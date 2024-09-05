@@ -26,7 +26,6 @@ def main():
         mainwindow.launch()
     except Exception:
         logging.exception("An exception occurred that forced the application to close")
-        logging.exception(f"Python version: {sys.version}")
         raise
 
 if __name__ == "__main__":
