@@ -29,6 +29,8 @@ class SearchPageBase(common.SharedPageElements):
         super().__init__(parent)
         self.data = the_data
 
+        self['padding'] = (0, 5, 0, 0)
+
     # makes the search box + search buttons - uses 3 rows
     def buildSearchBox(self, row):
         ## search box
@@ -245,20 +247,20 @@ class SearchPage(SearchPageBase):
         self.trainerView['yscrollcommand'] = trainerViewScrollbar.set
         self.trainerView.grid(column = 0, row = 0, sticky = (W, N, E, S), pady = 5)
         trainerViewScrollbar.grid(column = 1, row = 0, sticky = (W, N, E, S), pady = 5)
-        self.trainerViewFrame.grid(column = 0, row = 6, sticky = (W, N, E, S), padx= 5)
+        self.trainerViewFrame.grid(column = 0, row = 6, sticky = (W, N, E, S), padx = 5)
 
         # set up initial state
         self.prepFacility()
 
         # place this tab
         infoLabel = self.buildSimpleLabel(self, tr("page.search.info"))
-        infoLabel.grid(column = 0, row = 0, columnspan = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
+        infoLabel.grid(column = 0, row = 0, columnspan = 2, sticky = (W, N, E, S), padx = 5)
         facilityBox = ttk.Labelframe(self)
         facilityBox.columnconfigure(0, weight = 1)
         facilityBox.rowconfigure(0, weight = 1)
         self.buildFacility(facilityBox)
         self.gridFacility(0, 0)
-        facilityBox.grid(column = 0, row = 1, columnspan = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
+        facilityBox.grid(column = 0, row = 1, columnspan = 2, sticky = (W, N, E, S), padx = 5)
         self.searchBox.grid(column = 0, row = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.resultsBox.grid(column = 1, row = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.columnconfigure(1, weight = 1)
@@ -464,7 +466,7 @@ class HallSearchPage(SearchPageBase):
 
         # place this tab
         infoLabel = self.buildSimpleLabel(self, tr("page.hall_search.info"))
-        infoLabel.grid(column = 0, row = 0, columnspan = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
+        infoLabel.grid(column = 0, row = 0, columnspan = 2, sticky = (W, N, E, S), padx = 5)
         self.searchBox.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.resultsBox.grid(column = 1, row = 1, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.columnconfigure(1, weight = 1)

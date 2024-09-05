@@ -147,9 +147,9 @@ class SharedPageElements(ttk.Frame):
         return combo
 
     # adds a combobox with default padx 1
-    def addSimpleCombobox(self, var, command, parent, column, row, padx = 1):
+    def addSimpleCombobox(self, var, command, parent, column, row, padx = 1, pady = 0):
         combo = self.buildSimpleCombobox(var, command, parent)
-        combo.grid(column = column, row = row, sticky = (W, E), padx = padx)
+        combo.grid(column = column, row = row, sticky = (W, E), padx = padx, pady = pady)
         return combo
 
     # makes a label with an appropriate wraplength

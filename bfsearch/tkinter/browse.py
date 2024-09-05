@@ -15,6 +15,8 @@ class BrowseSetsPageBase(common.SharedPageElements):
     def __init__(self, parent, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
 
+        self['padding'] = (0, 5, 0, 5)
+
         self.mainBox = ttk.Labelframe(self, text = "", padding = (0, 0, 0, 5))
 
         ## set selector
@@ -134,8 +136,8 @@ class BrowseAllSetsPage(BrowseSetsPageBase):
 
         # place this tab
         infoLabel = self.buildSimpleLabel(self, tr("page.all_sets.info"))
-        infoLabel.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5, pady = 5)
-        self.mainBox.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 5, pady = 5)
+        infoLabel.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5)
+        self.mainBox.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 5)
         self.columnconfigure(0, weight = 1)
         self.rowconfigure(1, weight = 1)
 
@@ -196,8 +198,8 @@ class BrowseTrainerSetsPage(BrowseSetsPageBase):
 
         # place this tab
         infoLabel = self.buildSimpleLabel(self, tr("page.all_sets_by_trainer.info"))
-        infoLabel.grid(column = 0, row = 0, sticky = (N, S, E, W), padx = 5, pady = 5)
-        self.mainBox.grid(column = 0, row = 1, sticky = (N, S, E, W), padx = 5, pady = 5)
+        infoLabel.grid(column = 0, row = 0, sticky = (N, S, E, W), padx = 5)
+        self.mainBox.grid(column = 0, row = 1, sticky = (N, S, E, W), padx = 5)
         self.columnconfigure(0, weight = 1)
         self.rowconfigure(1, weight = 1)
 

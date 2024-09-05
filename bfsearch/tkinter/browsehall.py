@@ -17,6 +17,8 @@ class BrowseHallSetsPageBase(common.SharedPageElements):
     def __init__(self, parent, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
 
+        self['padding'] = (0, 5, 0, 5)
+
         self.mainBox = ttk.Labelframe(self, text = "", padding = (0, 0, 0, 5))
 
         ## pokemon selector
@@ -131,8 +133,8 @@ class BrowseAllHallSetsPage(BrowseHallSetsPageBase):
 
         # place this tab
         infoLabel = self.buildSimpleLabel(self, tr("page.hall_sets.info"))
-        infoLabel.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5, pady = 5)
-        self.mainBox.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 5, pady = 5)
+        infoLabel.grid(column = 0, row = 0, sticky = (W, N, E, S), padx = 5)
+        self.mainBox.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 5)
         self.columnconfigure(0, weight = 1)
         self.rowconfigure(1, weight = 1)
 
@@ -213,10 +215,9 @@ class CalcHallSetsPage(BrowseHallSetsPageBase):
         self.mainBox.rowconfigure(4, weight = 1)
 
         # place this tab
-
         infoLabel = self.buildSimpleLabel(self, tr("page.hall_calc.info"))
-        infoLabel.grid(column = 0, row = 0, sticky = (N, S, E, W), padx = 5, pady = 5)
-        self.mainBox.grid(column = 0, row = 1, sticky = (N, S, E, W), padx = 5, pady = 5)
+        infoLabel.grid(column = 0, row = 0, sticky = (N, S, E, W), padx = 5)
+        self.mainBox.grid(column = 0, row = 1, sticky = (N, S, E, W), padx = 5)
         self.columnconfigure(0, weight = 1)
         self.rowconfigure(1, weight = 1)
 

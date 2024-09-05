@@ -28,6 +28,8 @@ class CoveragePageBase(common.SharedPageElements):
         super().__init__(parent)
         self.data = the_data
 
+        self['padding'] = (0, 5, 0, 0)
+
     # makes the coverage box + calc buttons - uses 3 rows
     def buildCoverageBox(self, row):
         ## coverage box
@@ -271,13 +273,13 @@ class CoveragePage(CoveragePageBase):
 
         # place this tab
         infoLabel = self.buildSimpleLabel(self, tr("page.coverage.info"))
-        infoLabel.grid(column = 0, row = 0, columnspan = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
+        infoLabel.grid(column = 0, row = 0, columnspan = 2, sticky = (W, N, E, S), padx = 5)
         facilityBox = ttk.Labelframe(self)
         facilityBox.columnconfigure(0, weight = 1)
         facilityBox.rowconfigure(0, weight = 1)
         self.buildFacility(facilityBox)
         self.gridFacility(0, 0)
-        facilityBox.grid(column = 0, row = 1, columnspan = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
+        facilityBox.grid(column = 0, row = 1, columnspan = 2, sticky = (W, N, E, S), padx = 5)
         self.coverageBox.grid(column = 0, row = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.resultsNotebook.grid(column = 1, row = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.columnconfigure(1, weight = 1)
@@ -482,7 +484,7 @@ class HallCoveragePage(CoveragePageBase):
 
         # place this tab
         infoLabel = self.buildSimpleLabel(self, tr("page.hall_coverage.info"))
-        infoLabel.grid(column = 0, row = 0, columnspan = 2, sticky = (W, N, E, S), padx = 5, pady = 5)
+        infoLabel.grid(column = 0, row = 0, columnspan = 2, sticky = (W, N, E, S), padx = 5)
         self.coverageBox.grid(column = 0, row = 1, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.resultsNotebook.grid(column = 1, row = 1, sticky = (W, N, E, S), padx = 5, pady = 5)
         self.columnconfigure(1, weight = 1)
