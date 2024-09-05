@@ -292,6 +292,11 @@ class SearchPage(SearchPageBase):
         tnameData = self.trainerDict[self.tclass.get()]
         self.fillComboboxPlusEmpty(self.tnameCombo, tnameData, self.tname)
 
+    def toggleResultSorting(self):
+        super().toggleResultSorting()
+        if len(self.trainerView.get_children()) < 1:
+            self.trainerInfo['text'] = tr("page.search.resultsBox.default")
+
     def fillResultsCombo(self):
         self.fillCombobox(self.resultsCombo, [pswi.getShowdownNickname() for pswi in self.getResults().keys()], self.result)
 

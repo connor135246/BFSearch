@@ -285,6 +285,13 @@ class CoveragePage(CoveragePageBase):
         self.columnconfigure(1, weight = 1)
         self.rowconfigure(2, weight = 1)
 
+    # results pages share a sort
+    def toggleResultSorting(self):
+        super().toggleResultSorting()
+        for page in self.resultsPages:
+            if len(page.trainerView.get_children()) < 1:
+                page.trainerInfo['text'] = tr("page.search.resultsBox.default")
+
     def clearCalc(self):
         self.battlenumCombo.current(0)
         super().clearCalc()

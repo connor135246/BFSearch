@@ -428,7 +428,7 @@
 
 	"page.coverage.name": "Type Coverage Calculator",
 	"page.coverage.tooltip": "Calculate your type coverage in the Battle Tower/Arcade/Castle/Factory.",
-	"page.coverage.info": "This page allows you to calculate type coverage for the Battle Tower/Arcade/Castle/Factory.\nSelect some types, and see how many individual Pokémon resist that combination.",
+	"page.coverage.info": "This page allows you to calculate type coverage for the Battle Tower/Arcade/Castle/Factory.\nSelect some types, and see how many individual Pokémon resist that combination. Additionally, results can be sorted by speed.",
 	"page.coverage.coverageBox": "Calculator Options",
 	"page.coverage.move_types": "Move Types:",
 	"page.coverage.ability": "Ability:",
@@ -497,5 +497,5 @@
 
 	"page.hall_coverage.name": "Hall Type Coverage Calculator",
 	"page.hall_coverage.tooltip": "Calculate your type coverage in the Battle Hall.",
-	"page.hall_coverage.info": "This page allows you to calculate type coverage for the Battle Hall.\nSelect some types, and see how many Pokémon resist that combination."
+	"page.hall_coverage.info": "This page allows you to calculate type coverage for the Battle Hall.\nSelect some types, and see how many Pokémon resist that combination. Additionally, results can be sorted by speed."
 }
