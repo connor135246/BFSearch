@@ -348,7 +348,7 @@ class SearchPage(SearchPageBase):
             if pressed != 0:
                 return
 
-        self.setMainWindowTitleInfo(tr("page.welcome.status.searching"))
+        self._root().setMainWindowTitleInfo(tr("page.welcome.status.searching"))
         self.update_idletasks()
 
         # grouping of combobox var, reducer, and nice name
@@ -390,7 +390,7 @@ class SearchPage(SearchPageBase):
         self.resultsInfo['text'] = tr("page.search.resultsBox.done", len(searchResults), len(currentResults))
         self.searchButton['text'] = tr("page.search.searchButton")
 
-        self.setMainWindowTitleInfo(None)
+        self._root().setMainWindowTitleInfo(None)
         self.update_idletasks()
 
     def reduceBattleNum(self, search_list):
@@ -519,7 +519,7 @@ class HallSearchPage(SearchPageBase):
     def search(self):
         # for hall search, we reduce by hallset and afterward turn them into pswi's for display.
 
-        self.setMainWindowTitleInfo(tr("page.welcome.status.searching"))
+        self._root().setMainWindowTitleInfo(tr("page.welcome.status.searching"))
         self.update_idletasks()
 
         # grouping of combobox var, reducer, and nice name
@@ -558,7 +558,7 @@ class HallSearchPage(SearchPageBase):
         self.resultsInfo['text'] = tr("page.hall_search.resultsBox.done", len(currentResults))
         self.searchButton['text'] = tr("page.search.searchButton")
 
-        self.setMainWindowTitleInfo(None)
+        self._root().setMainWindowTitleInfo(None)
         self.update_idletasks()
 
     def reduceType(self, search_list):

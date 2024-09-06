@@ -189,7 +189,7 @@ class TeammateMatchingPage(common.SharedPageElements):
                 teammateResultBox.teammateResultInfo['text'] = tr("page.search.resultsBox.default")
             return
 
-        self.setMainWindowTitleInfo(tr("page.welcome.status.searching"))
+        self._root().setMainWindowTitleInfo(tr("page.welcome.status.searching"))
         self.update_idletasks()
 
         self.battlenumAtMatchTime = self.battlenum.get()
@@ -281,7 +281,7 @@ class TeammateMatchingPage(common.SharedPageElements):
         else:
             self.trainerResultInfo['text'] = tr("page.teammate_matching.empty_results")
 
-        self.setMainWindowTitleInfo(None)
+        self._root().setMainWindowTitleInfo(None)
         self.update_idletasks()
 
     def shouldCheck(self, value):

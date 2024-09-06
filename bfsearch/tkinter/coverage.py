@@ -305,7 +305,7 @@ class CoveragePage(CoveragePageBase):
             if pressed != 0:
                 return
 
-        self.setMainWindowTitleInfo(tr("page.welcome.status.searching"))
+        self._root().setMainWindowTitleInfo(tr("page.welcome.status.searching"))
         self.update_idletasks()
 
         # grouping of combobox var, reducer, and nice name
@@ -359,7 +359,7 @@ class CoveragePage(CoveragePageBase):
 
         self.calcButton['text'] = tr("page.coverage.calcButton")
 
-        self.setMainWindowTitleInfo(None)
+        self._root().setMainWindowTitleInfo(None)
         self.update_idletasks()
 
     def reduceBattleNum(self, search_list):
@@ -516,7 +516,7 @@ class HallCoveragePage(CoveragePageBase):
 
     def calc(self):
 
-        self.setMainWindowTitleInfo(tr("page.welcome.status.searching"))
+        self._root().setMainWindowTitleInfo(tr("page.welcome.status.searching"))
         self.update_idletasks()
 
         # grouping of combobox var, reducer, and nice name
@@ -573,7 +573,7 @@ class HallCoveragePage(CoveragePageBase):
 
         self.calcButton['text'] = tr("page.coverage.calcButton")
 
-        self.setMainWindowTitleInfo(None)
+        self._root().setMainWindowTitleInfo(None)
         self.update_idletasks()
 
     def reduceType(self, search_list):

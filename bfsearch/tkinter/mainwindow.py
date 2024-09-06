@@ -12,15 +12,16 @@ from bfsearch.translate import tr
 from bfsearch.tkinter import browse, search, browsehall, dialogs, helpdialogs, coverage, teammates
 
 
+PROGRAM_VERSION = "v1.0"
+
 # code for recreating the main window. if CURRENT_CODE is this when the application exits code, the main window will be recreated.
 RECREATE_CODE = 0x16241
 # the current code
 CURRENT_CODE = [RECREATE_CODE]
 
 def launch():
-    # todo: command line arguments? (insta build, language)
-    logging.info(f"Launching with Python version: {sys.version}")
-    logging.info("Starting!")
+    # todo: command line arguments? (language, etc)
+    logging.info(f"Launching BFSearch {PROGRAM_VERSION} with Python {sys.version}")
     CURRENT_CODE[0] = RECREATE_CODE
     while CURRENT_CODE[0] == RECREATE_CODE:
         CURRENT_CODE[0] = 0x1594
@@ -33,6 +34,7 @@ def launch():
     sys.exit()
 
 # for settings
+prevVersionKey = "previous_launch_version"
 windowKey = "window_size+pos"
 maximizedKey = "window_maximized"
 
@@ -44,7 +46,7 @@ class Window(Tk):
 
         self.data = data.DataHolder()
 
-        self.title("BFSearch - " + tr("page.welcome.status.launching"))
+        self.setMainWindowTitleInfo(tr("page.welcome.status.launching"))
         self.bficon = PhotoImage(file = "gui/frontier.png")
         self.wm_iconphoto(True, self.bficon)
 
@@ -129,22 +131,28 @@ class Window(Tk):
             self.tabs.forget(1)
 
         # parses and builds data
-        self.title("BFSearch - " + tr("page.welcome.status.parsing"))
+        self.setMainWindowTitleInfo(tr("page.welcome.status.parsing"))
         self.setLogText(tr("page.welcome.status.parsing"))
         self.update_idletasks()
         result = self.data.fillerup()
         if self.data.isEmpty:
-            self.title("BFSearch - " + tr("page.welcome.status.errored"))
+            self.setMainWindowTitleInfo(tr("page.welcome.status.errored"))
             self.setLogText(tr("page.welcome.status.error", result))
         else:
-            self.title("BFSearch - " + tr("page.welcome.status.building"))
+            self.setMainWindowTitleInfo(tr("page.welcome.status.building"))
             self.setLogText(tr("page.welcome.status.building"))
             self.update_idletasks()
             self.addOtherPages()
-            self.title("BFSearch")
+            self.setMainWindowTitleInfo(None)
             self.setLogText(tr("page.welcome.status.done"))
 
         self.buildButton.state(["!disabled"])
+
+        # build complete!
+        def succesfulLaunch():
+            settings.settings[prevVersionKey] = PROGRAM_VERSION
+            settings.save()
+        self.after_idle(succesfulLaunch)
 
     def addOtherPages(self):
 
@@ -210,6 +218,12 @@ class Window(Tk):
     # override default silent exceptions
     def report_callback_exception(self, exc, val, tb):
         raise
+
+    def setMainWindowTitleInfo(self, info):
+        if info:
+            self._root().title(f"BFSearch {PROGRAM_VERSION} - {info}")
+        else:
+            self._root().title(f"BFSearch {PROGRAM_VERSION}")
 
 
 # the toolbar at the bottom of the window.
