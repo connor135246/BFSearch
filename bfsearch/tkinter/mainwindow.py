@@ -76,6 +76,32 @@ class Window(Tk):
         self.starticon = PhotoImage(file = "gui/icon.png")
         self.tabs.add(self.createStartPage(), text = tr("page.welcome.name"), image = self.starticon, compound = 'left')
 
+        # characters to check for combobox scrolling
+        scrolls = 'abcdefghijklmnopqrstuvwxyz-0123456789'
+        # scroll to first entry matching letter in a combobox
+        # this only applies when the combobox itself is focused, not the dropdown.
+        def letterScroll(event):
+            combo = self.nametowidget(event.widget)
+            if len(event.char) == 1 and event.char.lower() in scrolls:
+                for index, entry in enumerate(combo['values']):
+                    if len(entry) > 0 and entry[0].lower() == event.char.lower():
+                        combo.current(index)
+                        combo.event_generate('<<ComboboxSelected>>')
+                        break
+        self.bind_class('TCombobox', '<KeyPress>', letterScroll)
+        # scroll to first entry matching letter in a combobox dropdown
+        # this only applies when the dropdown is focused, not the combobox itself.
+        def letterScrollDropdown(event):
+            # can't access this one via nametowidget for some reason... just called tcl directly.
+            if len(event.char) == 1 and event.char.lower() in scrolls:
+                for index, entry in enumerate(self.call(event.widget, 'get', 0, 'end')):
+                    if len(entry) > 0 and entry[0].lower() == event.char.lower():
+                        self.call(event.widget, 'selection', 'clear', 0, 'end')
+                        self.call(event.widget, 'see', index)
+                        self.call(event.widget, 'selection', 'set', index)
+                        break
+        self.bind_class('ComboboxListbox', '<KeyPress>', letterScrollDropdown)
+
         self.update_idletasks()
         # build!
         self.after_idle(Window.build, self)
