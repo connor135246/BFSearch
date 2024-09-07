@@ -316,7 +316,7 @@ class TeammateFrame(ttk.Labelframe):
     def __init__(self, parent, parentpage, number):
         self.parentpage = parentpage
         self.number = number
-        super().__init__(parent, text = tr("page.teammate_matching.teammate_num", self.number), padding = 5)
+        super().__init__(parent, text = tr("page.teammate_matching.teammate_num", self.number), padding = (0, 0, 0, 5))
 
         self.columnconfigure(0, weight = 1)
         for i in range(0, 10):
@@ -384,7 +384,7 @@ class TeammateResultFrame(ttk.Labelframe):
     def __init__(self, parent, parentpage, number):
         self.parentpage = parentpage
         self.number = number
-        super().__init__(parent, text = tr("page.teammate_matching.teammate_num_match", self.number), padding = 5)
+        super().__init__(parent, text = tr("page.teammate_matching.teammate_num_match", self.number), padding = (0, 0, 0, 5))
 
         self.columnconfigure(0, weight = 1)
         for i in range(0, 3):
