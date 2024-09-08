@@ -164,6 +164,7 @@ class Window(Tk):
         if self.data.isEmpty:
             self.setMainWindowTitleInfo(tr("page.welcome.status.errored"))
             self.setLogText(tr("page.welcome.status.error", result))
+            self.buildButton.state(["!disabled"])
         else:
             self.setMainWindowTitleInfo(tr("page.welcome.status.building"))
             self.setLogText(tr("page.welcome.status.building"))
@@ -172,13 +173,11 @@ class Window(Tk):
             self.setMainWindowTitleInfo(None)
             self.setLogText(tr("page.welcome.status.done"))
 
-        self.buildButton.state(["!disabled"])
-
-        # build complete!
-        def succesfulLaunch():
+            # build complete!
             settings.settings[prevVersionKey] = PROGRAM_VERSION
             settings.save()
-        self.after_idle(succesfulLaunch)
+
+            self.buildButton.state(["!disabled"])
 
     def addOtherPages(self):
 
