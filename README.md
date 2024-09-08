@@ -14,9 +14,14 @@ Click to see a screenshot.
  - [Search through each individual Pokemon by various metrics across each facility.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/search.png)  
  
  - [Check your type coverage across each facility.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/coverage.png)  
+
+ - [Match the set of an opposing Pokemon based on what you know about its teammates.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/matching.png)  
  
  - [Learn all about the mechanics and quirks of the Battle Frontier in the help topics.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/help.png)  
 
+# Versions
+ Should work in any recent Python version. I've tested with 3.8 and 3.11.
+ No dependencies required.
 
 # Data
 
@@ -42,7 +47,3 @@ And thanks to SadisticMystic on the Battle Facilities Discord for answering my q
  - [Smogon's current Gen 4 Battle Frontier thread](https://www.smogon.com/forums/threads/4th-generation-battle-facilities-discussion-and-records.3663294/) - has many useful resources
  - [Damage calculator with all battle facility sets pre-loaded](https://eisencalc.com/)
  - [Werster's Gen 4 Battle Frontier pastes](https://pastebin.com/ZjaFtEkj)
-
-# Versions
- Python 3.8.2  
- [pipreqs.txt](pipreqs.txt)
