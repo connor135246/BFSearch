@@ -388,7 +388,7 @@ class ResultsTabPage(ResultsTabPageBase):
         self.trainerView['yscrollcommand'] = trainerViewScrollbar.set
         self.trainerView.grid(column = 0, row = 0, sticky = (W, N, E, S), pady = 5)
         trainerViewScrollbar.grid(column = 1, row = 0, sticky = (W, N, E, S), pady = 5)
-        self.trainerViewFrame.grid(column = 0, row = 6, sticky = (W, N, E, S), padx= 5)
+        self.trainerViewFrame.grid(column = 0, row = 6, sticky = (W, N, E, S), padx = 5)
 
         # set up initial state
         self.prepFacility()
@@ -602,6 +602,8 @@ class HallCoveragePage(CoveragePageBase):
 class HallResultsTabPage(ResultsTabPageBase):
     def __init__(self, parent, parentpage):
         super().__init__(parent, parentpage)
+
+        self['padding'] = (0, 0, 0, 5)
 
         self.buildResultsBox(1)
         # level spin box
