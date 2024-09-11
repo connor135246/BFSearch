@@ -455,7 +455,6 @@
 	"page.teammate_matching.matchBox": "Matching Options",
 	"page.teammate_matching.matchButton": "Match...",
 	"page.teammate_matching.matchButton.changed": "Match...*",
-	"page.teammate_matching.matchButton.sure": "You haven't selected a battle number.\nThe search will gather every possible set, which may cause the program to stop responding for a short time.\nClick 'OK' to continue.",
 	"page.teammate_matching.clearMatchButton": "Clear Matching Options",
 	"page.teammate_matching.resultsBox": "Matching Results",
 	"page.teammate_matching.teammate_num": "Teammate {0}",
@@ -488,7 +487,7 @@
 	"page.hall_calc.rank": "Rank:",
 	"page.hall_calc.visited_types": "Number of Types NOT at Rank 1:",
 	"page.hall_calc.levelBox.tooltip.fixed": "The level cannot be changed for these sets.",
-	"page.hall_calc.visited_types.tooltip": "The level of the opposing Pokémon increases as fewer types remain at rank 1.",
+	"page.hall_calc.visited_types.tooltip": "The level of opposing Pokémon increases as fewer types remain at rank 1.",
 
 	"page.hall_search.name": "Search Hall Sets",
 	"page.hall_search.tooltip": "Search for what's possible in the Battle Hall.",
