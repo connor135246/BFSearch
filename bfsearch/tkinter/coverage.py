@@ -1,6 +1,7 @@
 # coverage
 
 
+import os
 from enum import Enum
 from operator import attrgetter
 from collections import defaultdict
@@ -300,7 +301,7 @@ class CoveragePage(CoveragePageBase):
         # clicking calc with no selection can cause the program to hang - especially for battle factory.
         # so first ask if you're sure.
         if self.battlenumCombo.current() == 0:
-            suredialog = dialogs.InfoDialog(self._root(), tr("page.coverage.name"), [tr("toolbar.button.ok"), tr("toolbar.button.cancel")], tr("page.coverage.calcButton.sure"), "gui/coverage.png")
+            suredialog = dialogs.InfoDialog(self._root(), tr("page.coverage.name"), [tr("toolbar.button.ok"), tr("toolbar.button.cancel")], tr("page.coverage.calcButton.sure"), os.path.join("gui", "coverage.png"))
             pressed = suredialog.show()
             if pressed != 0:
                 return

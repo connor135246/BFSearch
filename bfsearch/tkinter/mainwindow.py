@@ -1,7 +1,7 @@
 # mainwindow
 
 
-import sys, logging
+import sys, logging, os
 
 from tkinter import *
 from tkinter import ttk
@@ -47,7 +47,7 @@ class Window(Tk):
         self.data = data.DataHolder()
 
         self.setMainWindowTitleInfo(tr("page.welcome.status.launching"))
-        self.bficon = PhotoImage(file = "gui/frontier.png")
+        self.bficon = PhotoImage(file = os.path.join("gui", "frontier.png"))
         self.wm_iconphoto(True, self.bficon)
 
         defaultGeometry = "750x625+120+60"
@@ -73,7 +73,7 @@ class Window(Tk):
         self.tabs = ttk.Notebook(self.mainframe)
         self.tabs.enable_traversal()
         self.tabs.grid(column = 0, row = 0, sticky = (W, N, E, S))
-        self.starticon = PhotoImage(file = "gui/icon.png")
+        self.starticon = PhotoImage(file = os.path.join("gui", "icon.png"))
         self.tabs.add(self.createStartPage(), text = tr("page.welcome.name"), image = self.starticon, compound = 'left')
 
         # characters to check for combobox scrolling
@@ -183,58 +183,58 @@ class Window(Tk):
 
         self.nonhallTabs = ttk.Notebook(self.tabs)
         self.nonhallTabs.enable_traversal()
-        self.bfnh = PhotoImage(file = "gui/bfnh.png")
+        self.bfnh = PhotoImage(file = os.path.join("gui", "bfnh.png"))
         self.tabs.add(self.nonhallTabs, text = tr("page.nonhall.name"), image = self.bfnh, compound = 'left')
         #tr("page.nonhall.tooltip")
 
         self.browseSetsPage = browse.BrowseAllSetsPage(self.nonhallTabs, data.genericSetProvider(self.data.sets))
-        self.browseImage = PhotoImage(file = "gui/pokemon.png")
+        self.browseImage = PhotoImage(file = os.path.join("gui", "pokemon.png"))
         self.nonhallTabs.add(self.browseSetsPage, text = tr("page.all_sets.name"), image = self.browseImage, compound = 'left')
         #tr("page.all_sets.tooltip")
 
         self.browseTrainerSetsPage = browse.BrowseTrainerSetsPage(self.nonhallTabs, self.data.facilities)
-        self.trainerImage = PhotoImage(file = "gui/trainers.png")
+        self.trainerImage = PhotoImage(file = os.path.join("gui", "trainers.png"))
         self.nonhallTabs.add(self.browseTrainerSetsPage, text = tr("page.all_sets_by_trainer.name"), image = self.trainerImage, compound = 'left')
         #tr("page.all_sets_by_trainer.tooltip")
 
         self.searchPage = search.SearchPage(self.nonhallTabs, self.data)
-        self.searchImage = PhotoImage(file = "gui/search.png")
+        self.searchImage = PhotoImage(file = os.path.join("gui", "search.png"))
         self.nonhallTabs.add(self.searchPage, text = tr("page.search.name"), image = self.searchImage, compound = 'left')
         #tr("page.search.tooltip")
 
         self.coveragePage = coverage.CoveragePage(self.nonhallTabs, self.data)
-        self.coverageImage = PhotoImage(file = "gui/coverage.png")
+        self.coverageImage = PhotoImage(file = os.path.join("gui", "coverage.png"))
         self.nonhallTabs.add(self.coveragePage, text = tr("page.coverage.name"), image = self.coverageImage, compound = 'left')
         #tr("page.coverage.tooltip")
 
         self.teammateMatchingPage = teammates.TeammateMatchingPage(self.nonhallTabs, self.data)
-        self.teammateMatchingImage = PhotoImage(file = "gui/matching.png")
+        self.teammateMatchingImage = PhotoImage(file = os.path.join("gui", "matching.png"))
         self.nonhallTabs.add(self.teammateMatchingPage, text = tr("page.teammate_matching.name"), image = self.teammateMatchingImage, compound = 'left')
         #tr("page.teammate_mathcing.tooltip")
 
         self.hallTabs = ttk.Notebook(self.tabs)
         self.hallTabs.enable_traversal()
-        self.bfh = PhotoImage(file = "gui/bfh.png")
+        self.bfh = PhotoImage(file = os.path.join("gui", "bfh.png"))
         self.tabs.add(self.hallTabs, text = tr("page.hall.name"), image = self.bfh, compound = 'left')
         #tr("page.hall.tooltip")
 
         self.browseHallSetsPage = browsehall.BrowseAllHallSetsPage(self.hallTabs, data.hallSetProvider(self.data.hall_sets))
-        self.hallImage = PhotoImage(file = "gui/hallpokemon.png")
+        self.hallImage = PhotoImage(file = os.path.join("gui", "hallpokemon.png"))
         self.hallTabs.add(self.browseHallSetsPage, text = tr("page.hall_sets.name"), image = self.hallImage, compound = 'left')
         #tr("page.hall_sets.tooltip")
 
         self.calcHallSetsPage = browsehall.CalcHallSetsPage(self.hallTabs, data.typeToRankToHallSets(self.data.hall_sets), data.hallSetGroupToHallSets(self.data.hall_sets))
-        self.hallcalcImage = PhotoImage(file = "gui/hallcalc.png")
+        self.hallcalcImage = PhotoImage(file = os.path.join("gui", "hallcalc.png"))
         self.hallTabs.add(self.calcHallSetsPage, text = tr("page.hall_calc.name"), image = self.hallcalcImage, compound = 'left')
         #tr("page.hall_calc.tooltip")
 
         self.hallSearchPage = search.HallSearchPage(self.hallTabs, self.data)
-        self.hallSearchImage = PhotoImage(file = "gui/hallsearch.png")
+        self.hallSearchImage = PhotoImage(file = os.path.join("gui", "hallsearch.png"))
         self.hallTabs.add(self.hallSearchPage, text = tr("page.hall_search.name"), image = self.hallSearchImage, compound = 'left')
         #tr("page.hall_search.tooltip")
 
         self.hallCoveragePage = coverage.HallCoveragePage(self.hallTabs, self.data)
-        self.hallCoverageImage = PhotoImage(file = "gui/hallcoverage.png")
+        self.hallCoverageImage = PhotoImage(file = os.path.join("gui", "hallcoverage.png"))
         self.hallTabs.add(self.hallCoveragePage, text = tr("page.hall_coverage.name"), image = self.hallCoverageImage, compound = 'left')
         #tr("page.hall_coverage.tooltip")
 
@@ -263,17 +263,17 @@ class Toolbar(ttk.Frame):
         self.separator = ttk.Separator(self, orient = 'vertical')
         self.separator.pack(side = LEFT, fill = 'y', padx = 5, pady = 5)
 
-        self.helpImage = PhotoImage(file = "gui/help.png")
+        self.helpImage = PhotoImage(file = os.path.join("gui", "help.png"))
         self.help = ttk.Button(self, text = tr("toolbar.button.help.name"), image = self.helpImage, compound = 'top', command = self.showHelp, takefocus = 0)
         Hovertip(self.help, tr("toolbar.button.help.tooltip"), hover_delay = 1000)
         self.help.pack(side = LEFT, padx = 5)
 
-        self.linksImage = PhotoImage(file = "gui/links.png")
+        self.linksImage = PhotoImage(file = os.path.join("gui", "links.png"))
         self.links = ttk.Button(self, text = tr("toolbar.button.links.name"), image = self.linksImage, compound = 'top', command = self.showLinks, takefocus = 0)
         Hovertip(self.links, tr("toolbar.button.links.tooltip"), hover_delay = 1000)
         self.links.pack(side = LEFT, padx = 5)
 
-        self.languageImage = PhotoImage(file = "gui/language.png")
+        self.languageImage = PhotoImage(file = os.path.join("gui", "language.png"))
         self.language = ttk.Button(self, text = tr("toolbar.button.language.name"), image = self.languageImage, compound = 'top', command = self.showLang, takefocus = 0)
         Hovertip(self.language, tr("toolbar.button.language.tooltip"), hover_delay = 1000)
         self.language.pack(side = LEFT, padx = 5)
@@ -281,14 +281,14 @@ class Toolbar(ttk.Frame):
     def showLinks(self):
         labels = [tr("toolbar.button.links.eisencalc"), tr("toolbar.button.links.smogon"), tr("toolbar.button.links.github")]
         links = ["https://eisencalc.com/", "https://www.smogon.com/forums/threads/4th-generation-battle-facilities-discussion-and-records.3663294/", "https://github.com/connor135246/BFSearch"]
-        dialogs.LinksDialog(self._root(), tr("toolbar.button.links.name"), [tr("toolbar.button.ok")], tr("toolbar.button.links.links"), "gui/links.png", labels, links, tr("toolbar.button.links.copy"), tr("toolbar.button.links.copied")).show()
+        dialogs.LinksDialog(self._root(), tr("toolbar.button.links.name"), [tr("toolbar.button.ok")], tr("toolbar.button.links.links"), os.path.join("gui", "links.png"), labels, links, tr("toolbar.button.links.copy"), tr("toolbar.button.links.copied")).show()
 
     def showLang(self):
         langs = translate.langs()
         note = tr("toolbar.button.language.note")
         if len(langs) <= 1:
             note += "\n" + tr("toolbar.button.language.note.single")
-        langdialog = dialogs.ComboboxDialog(self._root(), tr("toolbar.button.language.name"), [tr("toolbar.button.ok"), tr("toolbar.button.cancel")], note, "gui/language.png", contents = langs, default = translate.currentLangIndex())
+        langdialog = dialogs.ComboboxDialog(self._root(), tr("toolbar.button.language.name"), [tr("toolbar.button.ok"), tr("toolbar.button.cancel")], note, os.path.join("gui", "language.png"), contents = langs, default = translate.currentLangIndex())
         pressed, combo = langdialog.show()
         if pressed == 0:
             if combo in langs:

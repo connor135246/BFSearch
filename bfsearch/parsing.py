@@ -2,7 +2,7 @@
 
 
 from enum import IntEnum
-import json
+import json, os
 from json.decoder import JSONDecodeError
 
 from bfsearch import core, data
@@ -42,7 +42,7 @@ class JsonException(DataException):
 
 def getFileJson(datafile):
     try:
-        with open("data/" + datafile.name + '.json', 'r', encoding = 'UTF-8') as file:
+        with open(os.path.join("data", datafile.name + '.json'), 'r', encoding = 'UTF-8') as file:
             return json.load(file)
     except OSError as e:
         raise FileException(datafile, "file", e)

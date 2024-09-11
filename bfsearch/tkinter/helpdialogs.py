@@ -1,6 +1,8 @@
 # helpdialogs
 
 
+import os
+
 from tkinter import *
 from tkinter import ttk
 
@@ -83,7 +85,7 @@ def hallHelp(parent):
 class HelpDialog(dialogs.InfoDialog):
     # helpoptions is a list of tuples (button name, method to call).
     def __init__(self, parent, title, text, helpoptions):
-        dialogs.InfoDialog.__init__(self, parent, title, [tr("toolbar.button.cancel")], text, "gui/help.png", helpoptions = helpoptions)
+        dialogs.InfoDialog.__init__(self, parent, title, [tr("toolbar.button.cancel")], text, os.path.join("gui", "help.png"), helpoptions = helpoptions)
 
     def buildDialog(self, **kwargs):
         super().buildDialog(**kwargs)
@@ -378,7 +380,7 @@ def mechanicsArcadeBoard(parent):
         def trEvent(event):
             return tr(f"help.mechanics.arcade.board.tree.{event}")
         def iconEvent(event):
-            return PhotoImage(file = "gui/arcade icons/" + event + ".png")
+            return PhotoImage(file = os.path.join("gui", "arcade icons", event + ".png"))
 
         colorframe = ttk.Frame(self.mainframe)
         colorframe.columnconfigure(0, weight = 1)
