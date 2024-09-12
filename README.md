@@ -19,9 +19,13 @@ Click to see a screenshot.
  
  - [Learn all about the mechanics and quirks of the Battle Frontier in the help topics.](https://raw.githubusercontent.com/connor135246/BFSearch/tkinter/manual/help.png)  
 
-# Versions
- Should work in any recent Python version. I've tested with 3.8 and 3.11.
- No dependencies required.
+# How to Use
+ 1. **Install [Python](https://www.python.org/).**  
+ I'd recommend Python 3.12, but it will work in any recent Python version from 3.8 onwards. Make sure to check the "py launcher" checkbox when installing.  
+ 2. **Download the release zip from the [latest release](https://github.com/connor135246/BFSearch/releases/latest) and extract it.**  
+ The whole program is contained in this folder. You may move it wherever you'd like.
+ 3. **Run `launch.pyw`.**  
+ The first launch may take a little longer. If any errors occur, check the logs in the `logs` folder.  
 
 # Data
 
