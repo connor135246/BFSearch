@@ -239,13 +239,16 @@ class PokeSetBase(object):
 
     def getAdjustedSpeed(self, iv, hideItem = False, level = 50):
         speed = self.getSpeed(iv, level)
+        # no Slow Start and Iron Ball here - we want to sort by the "highest possible" speed that an opponent could have.
         if not hideItem:
             if self.item == "Choice Scarf":
                 speed = math.floor(speed * 1.5)
-            elif self.item == "Iron Ball":
-                speed = math.floor(speed * 0.5)
             elif self.item == "Quick Powder" and self.species.name == "Ditto":
                 speed = math.floor(speed * 2)
+            elif self.item == "Salac Berry":
+                speed = math.floor(speed * 1.5)
+        if "Unburden" in self.species.abilities:
+            return math.floor(speed * 2.0)
         return speed
 
 # your average pokeset
