@@ -451,7 +451,7 @@
 
 	"page.teammate_matching.name": "Teammate Matching",
 	"page.teammate_matching.tooltip": "Match teammates to determine the trainer you're facing and view possible sets.",
-	"page.teammate_matching.info": "This page can match a Pokémon's set based on the sets of its teammates. Enter at least two species on the opponent's team to try it out.\nThis tends to be less useful after battle 49. At that point, some trainers will start to use all of a Pokémon's sets.",
+	"page.teammate_matching.info": "This page can match a Pokémon's set based on the sets of its teammates. Enter at least two species on the opponent's team to try it out.\nThis page tends to be less useful after battle 49. At that point, some trainers will start to use all of a Pokémon's sets.",
 	"page.teammate_matching.matchBox": "Matching Options",
 	"page.teammate_matching.matchButton": "Match...",
 	"page.teammate_matching.matchButton.changed": "Match...*",
